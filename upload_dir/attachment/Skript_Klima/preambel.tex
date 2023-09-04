@@ -1,0 +1,59 @@
+
+\usepackage{makeidx}
+\usepackage{babel}            % Sprachunterstuetzung
+\usepackage{amsmath}          % AMS "Grundpaket"
+\usepackage{amssymb,amsfonts,amsthm,amscd} 
+\usepackage{mathrsfs}
+\usepackage{rotating}
+\usepackage{sidecap}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{fancybox}
+\usepackage{tikz}
+\usetikzlibrary{arrows,snakes,backgrounds}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+                    linkcolor=blue,
+                    filecolor=magenta,
+                    urlcolor=cyan,
+                    pdftitle={Overleaf Example},
+                    pdfpagemode=FullScreen,}
+%\newcommand{\hyperref}[1]{\ref{#1}}
+%
+\definecolor{Gray}{gray}{0.80}
+\DeclareMathSymbol{,}{\mathord}{letters}{"3B}
+%
+\newcounter{num}
+\renewcommand{\thenum}{\arabic{num}}
+\newenvironment{anmerkungen}
+   {\begin{list}{(\thenum)}{%
+   \usecounter{num}%
+   \leftmargin0pt
+   \itemindent5pt
+   \topsep0pt
+   \labelwidth0pt}%
+   }{\end{list}}
+%
+\renewcommand{\arraystretch}{1.15}                % in Formeln und Tabellen   
+\renewcommand{\baselinestretch}{1.15}                 % 1.15 facher
+                                                      % Zeilenabst.
+\newcommand{\Anmerkung}[1]{{\begin{footnotesize}#1 \end{footnotesize}}\\[0.2cm]}
+\newcommand{\comment}[1]{}
+\setlength{\parindent}{0em}           % Nicht einruecken am Anfang der Zeile 
+
+\setlength{\textwidth}{15.4cm}
+\setlength{\textheight}{23.0cm}
+\setlength{\oddsidemargin}{1.0mm} 
+\setlength{\evensidemargin}{-6.5mm}
+\setlength{\topmargin}{-10mm} 
+\setlength{\headheight}{0mm}
+\newcommand{\identity}{{\bf 1}}
+%
+\newcommand{\vs}{\vspace{0.3cm}}
+\newcommand{\noi}{\noindent}
+\newcommand{\leer}{}
+
+\newcommand{\engl}[1]{[\textit{#1}]}
+\parindent 1.2cm
+\sloppy
+

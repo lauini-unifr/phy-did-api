@@ -1,0 +1,37 @@
+\documentclass[german,10pt]{book}
+
+\input{../preambel}
+
+\makeindex
+
+\begin{document}
+
+\begin{center}
+{\bf\Large Spezielle Relativit\"atstheorie}\\[0.3cm] 
+{\large Thomas Filk}\\[1cm]
+Skript zur Vorlesung\\[1cm]
+{\bf\large Ausgew\"ahlte Kapitel der Theoretischen Physik f\"ur
+Lehramtsstudierende}\\[1cm]
+(Version vom 19.\,05.\,2023)
+\end{center}
+\thispagestyle{empty}
+
+\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+\tableofcontents
+\input{SRT01_Grundlagen}
+\input{SRT02_Geometrie}
+\input{SRT03_Kette}
+\input{SRT04_Anwendungen}
+\input{SRT05_Zwillingsparadoxon}
+\input{SRT06_Beschleunigung}
+\setcounter{chapter}{0}
+\renewcommand{\thechapter}{A\arabic{chapter}}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\newpage
+%
+%\input{Anhang_A_Kasten}
+
+\input{Literatur}
+\printindex
+
+\end{document}

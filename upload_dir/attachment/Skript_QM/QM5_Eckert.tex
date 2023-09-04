@@ -1,0 +1,35 @@
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
+\newcommand{\solution}[1]{#1}
+%\newcommand{\solution}[1]{}
+
+\chapter{Quantenkryptographie - Das Eckert-Protokoll}
+% Kap x
+\label{chap_Eckert}
+
+Das Eckert-Protokoll ist neben dem BB84-Protokoll eines der bekanntesten
+Quantenkryptographieprotokolle. In diesem Kapitel wird vorausgesetzt, dass
+eine zuf\"allige Folge von klassischen Bits als Schl\"ussel ein sicheres
+Verschl\"usselungsverfahren ist (siehe Kap.\ \ref{chap_BB84}), sofern nur
+der Sender und Empf\"anger diesen Schl\"ussel kennen. Ebenso wie BB84
+handelt es sich bei dem Eckert-Protokoll um einen quantenbasierten
+Schl\"usselaustausch. Im Gegensatz zum BB84-Protokoll werden hierbei
+verschr\"ankte Photonen verwendet. Das hat den Vorteil, dass die Folge
+der Zufallszahlen wirklich zufallsverteilt ist und dass die Bits, die wegen
+der ungleichen Wahl der Basen von Alice und Bob verworfen werden zum
+Nachweis verwendet werden k\"onnen, dass die Folge nicht abgelauscht
+wurde.  
+
+
+
+\end{enumerate}
+
+
+\begin{thebibliography}{99}
+\bibitem{Bennett} Bennett, C.H., Brassard, G., \textit{Quantum cryptography: Public
+        key distribution and coin tossing}; in \textit{Proceedings of IEEE International
+        Conference on Computers, Systems and Signal Processing}, Vol.\ 175 (1984).       
+\end{thebibliography}
+
+
+\end{document}
+

@@ -1,0 +1,334 @@
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{0}
+
+
+\chapter{Axiomatischer Zugang zur Physik}
+% Kap x
+\label{chap_Axiom}
+
+In der Mathematik ist ein Axiomensystem ein minimaler Satz von Aussagen,\footnote{Ich setze hier
+voraus, dass man entscheiden kann, ob eine Folge von Symbolen eine wohl definierte Aussage
+bildet oder nicht. In der Mathematik wird dies im Rahmen der Symbollogik gekl\"art.} die
+als wahr definiert werden und aus denen durch festgelegte Schlussfolgerungsregeln
+weitere Aussagen als wahr oder falsch bewiesen werden k\"onnen. Die wesentlichen
+Bedingungen an ein Axiomensystem sind 
+\begin{itemize}
+\item[(a)]
+die Widerspruchsfreiheit, d.h., es soll keine
+Aussage geben, von der man beweisen kann, dass sie sowohl wahr als auch
+falsch ist, und 
+\item[(b)] 
+die Unabh\"angigkeit der Axiome, d.h., es soll nicht m\"oglich sein, f\"ur eines
+oder mehrere der Axiome unter Verwendung der anderen Axiome beweisen zu k\"onnen, 
+dass sie richtig sind. 
+\end{itemize}
+Eine dritte Eigenschaft, die
+Vollst\"andigkeit, kann nach den Unvollst\"andigkeitss\"atzen von G\"odel nicht immer garantiert werden.
+\glqq Vollst\"andig\grqq\ bedeutet dabei, dass von jeder formulierbaren Aussage bewiesen
+werden kann, ob sie richtig oder falsch ist. Dar\"uber hinaus spielt gelegentlich in der Praxis
+eine Rolle, ob ein Axiomensystem reichhaltig bzw.\ interessant ist, d.h., ob sich viele
+nicht selbstverst\"andliche Aussagen daraus ableiten lassen und ob diese Aussagen
+zur Definition von interessanten Strukturen Anlass geben. 
+
+Es gibt  viele Axiomensysteme in der Physik: die drei Newton'schen Postulate der Newton'schen
+Mechanik, die Maxwell-Gleichungen zusammen mit der Lorentz-Kraft in der Elektrodynamik,
+die Axiome der speziellen Relativit\"atstheorie (insbesondere die Konstanz der Lichtgeschwindigkeit
+in allen Inertialsystemen unabh\"angig vom Bewegungszustand der Quelle) und der allgemeinen
+Relativit\"atstheorie, die Haupts\"atze der Thermodynamik etc. Oft spricht man in der Physik
+eher von Postulaten als von Axiomen, obwohl die Bedeutungen dieser beiden Terme kaum
+zu trennen sind. 
+
+Allgemein sind Postulate Aussagen, die man nicht mehr auf einfachere Aussagen
+zur\"uckf\"uhren kann und die man als gegeben und richtig annimmt. In der Physik sollen
+diese Aussagen und die aus ihnen ableitbaren Schlussfolgerungen nicht im Widerspruch
+zum Experiment stehen. Oftmals handelt es sich sogar um Erfahrungstatsachen (z.B.\
+die Konstanz der Lichtgeschwindigkeit in der SRT oder die Existenz einer Zustandsgr\"o\ss e
+\glq Temperatur\grq\ in der Thermodynamik), die nicht unbedingt in jeder denkbaren Welt
+gelten m\"ussten.   
+Au\ss erdem sollen diese Aussagen untereinander nicht widerspr\"uchlich sein. 
+
+In dieser Form k\"onnen Aussagen im Laufe der Zeit durchaus ihren Charakter als
+Postulate verlieren: Aus heutiger Sicht k\"onnte man sagen, dass zu Keplers Zeit 
+die Kepler'schen Gesetze den Charakter von Postulaten hatten - aus der Empirie gewonnenen 
+Regelm\"a\ss igkeiten, die sich nicht weiter begr\"unden lassen. Nachdem Newton seine
+Gesetze formuliert hatte (die nun den Charakter von Postulaten hatten), konnte man die
+Kepler'schen Gesetze aus den Newton'schen Gesetzen sowie dem Newton'schen 
+Gravitationsgesetz ableiten. Das Newton'sche Gravitationsgesetz l\"asst sich wiederum aus den
+Grundgleichungen der Relativit\"atstheorie ableiten.
+
+Ganz allgemein wird man in der Physik zwei Arten von Postulaten unterscheiden: Zum Einen
+sind dies die Anforderungen, die man \"uberhaupt an eine physikalische Theorie bzw.\ ein
+physikalisches Modell stellen muss, damit man diese Theorie als widerspruchsfreie Theorie
+bezeichnen und in dieser Form akzeptieren kann. In Anlehnung an die Philosophie (und die
+Kategorientheorie der Mathematik) k\"onnte man hier auch von Kategorien sprechen, die
+erf\"ullt sein m\"ussen, damit wir \"uberhaupt von Physik sprechen k\"onnen. 
+Zum anderen sind das Beobachtungstatsachen, die man nicht mehr weiter
+erkl\"aren kann und daher einer Theorie als Postulat zugrunde legt. Zur ersten Gruppe kann
+man beispielsweise das Postulat z\"ahlen, was \"uberhaupt (reine) physikalische
+Zust\"ande sind, zur zweiten Klasse
+kann man das Postulat der Speziellen Relativit\"atstheorie z\"ahlen, dass sich Licht f\"ur
+jeden inertialen Beobachter unabh\"angig vom Bewegungszustand der Quelle mit Lichtgeschwindigkeit
+ausbreitet. 
+
+In diesem Kapitel geht es haupts\"achlich um die erste Klasse von Postulaten, die allen
+Theorien in der Physik gemein sind bzw., die jede Theorie spezifizieren muss, damit man sie
+als Theorie bezeichnen kann. 
+
+\section{Allgemeiner Formalismus}
+
+In jeder physikalischen Theorie gibt es zwei Konzepte, auf denen die Theorie beruht:
+(1) das Konzept der Observablen und (2) das Konzept des Zustands. Neben der Spezifizierung
+dieser Konzepte muss ein allgemeiner Formalismus angeben, wie man aus diesen beiden
+Objekten zu physikalischen Vorhersagen gelangt, und wie man ein System in einem 
+bestimmten Zustand pr\"apariert bzw.\ woher man wei\ss, durch welchen Zustand ein System
+zu beschreiben ist. Schlie\ss lich muss eine Theorie noch angeben, wie die
+zeitliche Entwicklung des Systems beschrieben werden kann.
+
+\subsection{Observable}
+
+\textbf{Definition:} \textit{Observable sind physikalische Gr\"o\ss en, 
+die man an einem physikalischen System messen kann.}
+
+ John von Neumann
+definiert ein physikalisches System durch die Menge der Observablen, die an diesem
+System beobachtet werden k\"onnen \cite{Neumann}. Welche Observablen das sind,
+ist eine Erfahrungstatsache. Erst durch das Ergebnis des Stern-Gerlach-Experiments 1922
+erkannte man, dass es neben Ort und Impuls noch einen weiteren Freiheitsgrad gibt, den man an einem
+Elektron messen kann, n\"amlich seine Spin\-orien\-tierung entlang einer vorgegebenen Achse. 
+Man kann daher nie behaupten, s\"amtliche an einem System messbaren Observablen zu kennen, bzw.\ es 
+kann nie ausgeschlossen werden, dass in Zukunft noch weitere Observablen bekannt werden.
+Ein allgemeiner physikalischer Formalismus muss f\"ur eine Theorie zun\"achst
+kl\"aren, welche Observablen es gibt bzw.\ bekannt sind und wie diese Observablen mathematisch repr\"asentiert
+werden sollen. Observablen bilden jedoch nicht einfach nur eine strukturlose Menge, sondern es gibt auch 
+Beziehungen zwischen den Observablen, die bekannt sein sollten und sich in der mathematischen Darstellung
+widerspiegeln m\"ussen.
+
+Die physikalische Realisierung einer Observablen erfolgt durch die Angabe des Messprotokolls, wie
+eine Messung dieser Observablen durchzuf\"uhren ist. Es ist eine Abfolge von Schritten, die angeben, in
+welcher Form ein System mit einer Messapparatur in Wechselwirkung tritt und wie die 
+Ver\"anderungen an der Messapparatur (z.B.\ die Zeigerstellung) abgelesen wird. Aus diesen
+Ver\"anderungen muss sich eine Zahl bestimmen lassen, die man als das Ergebnis der Messung bezeichnet,
+und die eine Aussage \"uber den Zustand eines Systems - wie es pr\"apariert wurde - macht.
+In diesem Kapitel bezeichne ich die physikalische Observable
+als Messvorschrift in Anlehnung an von Neumann \cite{Neumann} mit gotischen Buchstaben, z.B.\
+${\cal R}$, die zugeh\"orige mathematische Darstellung dieser Observablen kennzeichne ich 
+durch $R$. Sehr oft wird aber nicht zwischen diesen beiden Objekten unterschieden und es wird
+erwartet, dass man im Einzelfall entscheiden kann, ob die physikalische Messvorschrift oder
+die mathematische Darstellung gemeint ist.
+
+Kennt man eine Observable ${\cal R}$, also die Vorschrift, wie man diese Observable an einem System 
+messen kann, so kennt man auch die Observable $f({\cal R})$ f\"ur eine Funktion $f$: Man misst die
+Observable ${\cal R}$ an einem physikalischen System und bildet von dem erhaltenen Messwert $r$ die
+Funktion $f(r)$. Insbesondere ist die Observable $\alpha {\cal R}$ (f\"ur eine beliebige reelle Zahl $\alpha$)
+durch die Messvorschrift von ${\cal R}$ gegeben, wobei jeder gemessene (an einer Zeigerstellung
+abgelesene Messwert) mit $\alpha$ multipliziert wird. Lassen sich zwei Observable ${\cal R}$ und ${\cal S}$
+gleichzeitig an einem System messen (das bedeutet, es gibt ein Protokoll, bei dem man gleichzeitig
+einen Messwert sowohl f\"ur ${\cal R}$ als auch f\"ur ${\cal S}$ erh\"alt - diese Werte seien $r$ und $s$), 
+dann ist 
+die Observable $f({\cal R},{\cal S})$ definiert als die  Messvorschrift, bei der von den Messwerten die Funktion
+$f(r,s)$ gebildet wird. 
+
+Bei Observablen ${\cal R}$ und ${\cal S}$, die sich nicht gleichzeitig an einem System messen lassen - solche
+Observable bezeichnet man als nicht kompatibel -, sind
+allgemeine Funktionen $f({\cal R},{\cal S})$ zun\"achst nicht definiert. Insbesondere sind auch Ausdr\"ucke der Art
+${\cal R}+{\cal S}$ oder ${\cal R}\cdot {\cal S}$ als Messvorschriften nicht definiert.   
+
+Die mathematische Darstellung (Repr\"asentation) einer Observablen h\"angt von der Theorie
+ab, die wir verwenden. In der klassischen Mechanik handelt es sich bei Observablen um 
+Funktionen von Ort und Impuls (bzw.\ Geschwindigkeit), d.h.\ Funktionen auf dem
+Phasenraum. In der Quantenmechanik
+werden Observable durch sogenannte selbst-adjungierte bzw.\ hermitesche Operatoren auf einem
+Hilbert-Raum - einem Vektorraum mit einem Skalarprodukt - dargestellt. 
+
+An dieser Stelle sollte man betonen,
+dass die mathematische Darstellung einer Observablen nicht den Messprozess repr\"asentiert, also
+den dynamischen Vorgang der Messung, sondern eher die Informationen, die man durch solche
+Messungen erlangen kann: die Menge der m\"oglichen Messwerte sowie die Zust\"ande, die mit
+diesen Messwerten verbunden sind. In diesem Sinne (und in Anlehnung an einen Ausdruck von
+Schr\"odinger \cite{Schroedinger} zum Begriff der Wellenfunktion) 
+kann man von einer Observablen als einem \glqq Katalog von
+m\"oglichen Ergebnissen\grqq\ sprechen. 
+
+
+\subsection{Zustand}
+
+Auch bei den Zust\"anden sollte man zwischen der physikalischen Realisierung und der
+mathematischen Darstellung unterscheiden. Sehr oft definiert man einen Zustand als
+ein \glqq Erwartungswertfunktional auf der Menge der Observablen\grqq. Diese zun\"achst
+mathematische Definition kann man durchaus w\"ortlich interpretieren: Wenn wir ein System
+durch einen Zustand beschreiben, erlaubt es dieser Zustand, jeder Observablen eine Zahl - ihren
+Erwartungswert in diesem Zustand - zuzuordnen. Ein Zustand beschreibt also unsere Erwartungen
+in Bezug auf die Ergebnisse, die bei einer Messung an einem System auftreten. 
+Schr\"odinger bezeichnet einen Zustand als einen \glqq Katalog von Erwartungen\grqq\ \cite{Schroedinger}. 
+
+Dieser Katalog von Erwartungen beruht auf unserem Wissen 
+\"uber die Vergangenheit eines Systems bzw.\ eines Ensembles von Systemen. 
+Im Wesentlichen bezieht sich dieses Wissen auf die Art, wie diese Systeme pr\"apariert wurden. 
+Unsere Erwartungen in Bezug auf m\"ogliche Messergebnisse k\"onnen nur auf diesem Wissen
+beruhen, und wenn uns bewusst ist, dass unser Wissen unvollst\"andig ist, verwenden
+wir sogenannte gemischte Zust\"ande (in der klassischen Mechanik sind das Wahrscheinlichkeitsverteilungen
+\"uber einem Zustandsraum, beispielsweise dem Phasenraum; in der Quantentheorie sind das
+sogenannte Dichtematrizen). Unser Wissen \"uber die Vergangenheit
+eines Sys\-tems muss nicht beliebig weit zur\"uckreichen: Es reicht das Wissen \"uber solche Aspekte, die
+f\"ur die Vorhersagen zuk\"unftiger Messungen von Bedeutung sind. Das sind meist die letzten
+Pr\"aparationen, die an einem System vorgenommen wurden.\footnote{Die Physik ist hier in einer
+gl\"ucklichen Lage. M\"ochte man in der Psychologie den mentalen Zustand einer Person beschreiben,
+k\"onnen beliebig weit zur\"uckliegende Ereignisse oder Erfahrungen f\"ur die Vorhersage des
+zuk\"unftigen Verhaltens wesentlich sein.} Es gibt aber auch physikalische Systeme mit 
+einem \glqq Ged\"achtnis\grqq, beispielsweise Spinglassysteme oder neuronale Netzwerke. 
+
+Die physikalische Realisierung eines Zustands erfolgt durch ein im Prinzip beliebig gro\ss es
+Ensemble gleichartig pr\"aparierter Systeme. Gew\"ohnlich f\"uhren wir ein Experiment nicht nur
+einmal durch sondern nach M\"oglichkeit unter denselben Ausgangsbedingungen gen\"ugend oft,
+sodass wir statistische Auswerteverfahren verwenden k\"onnen. Au\ss erdem k\"onnen wir auf diese
+Weise an demselben Zustand verschiedene Observable messen, die sich an demselben System
+nicht gleichzeitig bestimmen lassen (beispielsweise Ort und Impuls bei quantenmechanischen
+Systemen oder zwei nicht kompatible Observable ${\cal R}$ und ${\cal S}$). 
+Man unterteilt dazu das Ensemble gleichartig pr\"aparierter Systeme in zwei
+ebenfalls gro\ss e Teilensembles und misst an dem einen Teilensemble die Observable
+${\cal R}$ und an dem anderen Teilensemble die Observable ${\cal S}$. Auf diese Weise erh\"alt man f\"ur
+einen Zustand - das Ensemble gleichartig pr\"aparierter Systeme - die Erwartungswerte von
+nicht kompatiblen Observablen in diesem Zustand.
+
+Man bezeichnet einen Zustand -
+realisiert als Ensemble - als rein, wenn es keine Unterteilung dieses Ensembles in (f\"ur statistische Auswertungen
+ebenfalls gen\"ugend gro\ss e) Subensembles gibt, die andere
+Erwartungswerte liefert als das gesamte Ensemble. Diese Vorstellung von reinen Zust\"anden entspricht
+auch unserer \"ublichen Vorstellung von reinen
+Zust\"anden als maximales bzw.\ nicht mehr erweiterbares Wissen \"uber ein System. Entspricht
+ein Ensemble von Systemen einem Gemisch, so l\"asst es sich in Subensembles aufteilen, die
+weniger gemischten Zust\"anden (oder sogar reinen Zust\"anden) entsprechen. Reine Zust\"ande
+lassen sich nicht mehr in noch reinere Zust\"ande aufteilen.
+ 
+Mathematisch wird ein Zustand repr\"asentiert durch die Angabe einer Abbildung, die
+jeder Observablen eine Zahl - ihren Erwartungswert in diesem Zustand - zuordnet. 
+Ein Zustand ist somit eine mathematische Kodierung unseres Wissens \"uber die Art, wie ein
+System pr\"apariert wurde, sodass wir dieses Wissen f\"ur die Vorhersage zuk\"unftiger
+Messungen - die Vorhersage eines Erwartungswerts f\"ur beliebige Observable - an diesem 
+System nutzen k\"onnen. 
+
+Elementare Eigenschaften dieser Abbildung sind: 
+\begin{enumerate}
+\item 
+Die Identit\"atsobservable, die immer nur
+den Messwert 1 als Ergebnis liefert, soll den Erwartungswert 1 haben, 
+\item 
+eine positive Observable,
+die immer nur positive Ergebnisse als Messwerte liefert, soll auch einen positiven Erwartungswert
+haben, und 
+\item
+das $\lambda$-fache einer Observablen ${\cal R}$, die immer das $\lambda$-fache eines
+Messwerts von einer Messung von ${\cal R}$ liefert, soll auch das $\lambda$-fache des Erwartungswerts
+haben. 
+\end{enumerate}
+Weitere Eigenschaften h\"angen davon ab, welche Strukturen auf der Menge der
+Observablen definiert sind. 
+
+Oft unterscheidet man (insbesondere in der Quantentheorie) den Zustand von dem Erwartungswertfunktional, 
+das dieser Zustand definiert. Der Zustand wird in der Quantentheorie z.B.\ durch einen normierten
+Vektor $|\psi\rangle$ in einem Hilbert-Raum dargestellt, wohingegen die Abbildung 
+${\cal R} \rightarrow {\rm Erw}({\cal R})$
+durch ${\rm Erw}({\cal R})=\langle \psi|R|\psi\rangle$ gegeben ist. 
+
+\subsection{Vorhersage und Pr\"aparation}
+
+Der Begriff des Zustands als eine Abbildung, die jeder Observablen einen
+Erwartungswert zuordnet, beinhaltet schon die Vorschrift, wie man aus einer Theorie
+zu experimentell \"uberpr\"ufbaren Vorhersagen kommt. Wenn auf Seiten der Theorie
+der Zustand eines Systems bekannt ist, kann man auch angeben, was man bei der
+Messung einer bestimmten Observablen f\"ur einen Erwartungswert erh\"alt. Der
+Erwartungswert ist dann der Mittelwert, den man bei der Messung einer Observablen an sehr vielen
+Systemen erh\"alt. 
+Hierbei ist wichtig, dass der Zustand physikalisch durch ein Ensemble von Systemen
+repr\"asentiert wird und nicht nur durch ein Einzelsystem. 
+
+Diese Bedingung ist andererseits aber auch problematisch: Der Kosmos als Ganzes l\"asst
+ sich nicht als Ensemble realisieren, das Gleiche gilt auch f\"ur komplexere Systeme wie
+ beispielsweise einen menschlichen Organismus oder ein menschliches Gehirn. Zumindest
+ reine Zust\"ande sind bei solchen Systemen nicht mehr realisierbar (das gilt schon f\"ur
+ einfache thermodynamische Systeme). 
+ 
+ Etwas problematischer ist die Frage, woher wir wissen, durch welchen Zustand ein 
+ physikalisches System zu repr\"asentieren ist. Wir haben oben gesagt, dass wir die
+ Vergangenheit eines Systems - die Art wie es pr\"apariert wurde - kennen m\"ussen. 
+ Wir ben\"otigen somit eine Vorschrift, wie wir aus der Kenntnis der Pr\"aparation eines
+ Systems den Zustand erhalten, durch den wir das System beschreiben. Diese Vorschrift
+ ist oftmals ein eigenes Postulat (in der Quantentheorie beispielsweise das sogenannte
+ Kollaps- oder Projektionspostulat).
+
+\subsection{Die zeitliche Entwicklung eines Systems}
+
+Die bisherigen Axiome sind allgemeiner Natur und enthalten noch keinerlei Aussagen
+dar\"uber, wie sich ein physikalisches System im Verlauf der Zeit ver\"andert. 
+Zun\"achst einmal muss \"uberhaupt gekl\"art werden, was \glqq zeitliche Entwicklung\grqq\
+bedeutet. In fast allen physikalischen Theorien (eine Ausnahme bilden manche 
+Modelle der Quantenkosmologie) wird die Zeit durch einen Parameter $t$ dargestellt
+und als eindimensionales geordnetes Kontinuum gedacht. In solchen F\"allen bedeutet
+\glqq zeitliche Entwicklung\grqq\ meist die Angabe einer Bewegungsgleichung, entweder f\"ur
+die Zust\"ande (in der Quantenmechanik spricht man dann vom Schr\"odinger-Bild) oder
+f\"ur die Observablen (das Heisenberg-Bild) eines Systems. In vielen F\"allen hat die
+Bewegungsgleichung die Form einer Differentialgleichung, es gibt aber auch Systeme,
+bei denen es sich um eine Integralgleichung handelt (meist Systeme mit einem Ged\"achtnis).
+
+
+
+\section{Die Postulate der Klassischen Mechanik}
+
+In der klassischen Mechanik beschreiben wir einen (reinen Zustand) durch einen Punkt $(x,p)\in P$ im
+Phasenraum $P$, also die Angabe eines Ortes $x$ und eines Impulses $p$. Eine Observable ist eine
+Funktion $F:P\rightarrow \mathbb{R}$ \"uber dem Phasenraum, also eine Funktion von Ort und Impuls.
+Der Erwartungswert einer Observablen $F$ in einem Zustand $(x,p)$ ist einfach der Wert $F(x,p)$ dieser
+Observablen an dem Punkt im Phasenraum, der den Zustand beschreibt. Dieser Wert ist eindeutig
+und sollte (innerhalb der Fehlertoleranz der Messger\"ate) immer derselbe sein.  
+
+Haben wir umgekehrt an einem System eine Observable $F$ gemessen und einen Wert $f$ erhalten, 
+wissen wir, dass der Zustand ein Punkt im Phasenraum sein muss, der der Bedingung $F(x,p)=f$
+gen\"ugen muss. Ein vollst\"andiger Satz von Observablen $\{F_1,..., F_n\}$ legt einen Punkt
+im Phasenraum eindeutig fest. Misst man also diese Observablen und erh\"alt Messwerte
+$\{ f_1,...,f_n\}$, so ist der Punkt $(x,p)$ durch die Bedingungen $\{F_1(x,p)=f_1,...,F_n(x,p)=f_n\}$
+festgelegt und somit der reine Zustand des Systems bekannt. In einem minimalen vollst\"andigen
+Satz von Observablen l\"asst sich auch keine Observable als Funktion der anderen Observablen
+ausdr\"ucken. Hat der Phasenraum die Dimension $6N$ (f\"ur $N$ Punktteilchen in 3 Raumdimensionen),
+so ben\"otigt man auch $6N$ Observable, um einen Zustand eindeutig festzulegen. 
+
+
+\section{Die Postulate der Quantenmechanik}
+
+Observable werden in der Quantenmechanik durch selbst-adjungierte bzw.\ hermitesche
+Operatoren auf einem Hilbert-Raum dargestellt. Ein Zustand wird mathematisch durch einen Strahl
+(einen eindimensionalen Unterraum) in diesem Hilbert-Raum beschrieben. Meist w\"ahlen wir zur einfacheren
+Beschreibung einen auf eins normierten Vektor $|\psi\rangle$ auf diesem Strahl als Repr\"asentanten, wir
+k\"onnen einen Zustand aber auch durch die Angabe eines eindimensionalen Projektionsoperators $P_\psi$
+(der jeden Vektor in dem Hilbert-Raum auf diesen eindimensionalen Unterraum projiziert)
+darstellen. In der Quantenmechanik von Punktteilen verwenden wir zur Beschreibung eines
+Zustands oft eine sogenannte Wellenfunktion $\psi(x)$, die man aber als Vektor eines unendlich dimensionalen
+Hilbert-Raums (dem Raum der quadratintegrierbaren Funktionen) auffassen kann. 
+Das Erwartungswertfunktional, d.h.\ die Vorschrift, nach der
+wir einer Observablen $A$ eine Zahl $\langle A \rangle_\psi$ - ihren Erwartungswert in dem Zustand $\psi$ - zuordnen, ist
+dann 
+\begin{equation}
+       \langle A \rangle_\psi = \langle \psi | A |  \psi \rangle  = {\rm Spur}\,(P_\psi A) =
+                \int_V \psi(x)^* A \psi(x)\,{\rm d} x \, .  
+\end{equation}
+Dies sind drei Darstellungen des Erwartungswertfunktionals, je nachdem, ob man einen Zustand durch
+einen normierten Vektor, einen Projektionsoperator oder eine normierte Wellenfunktion \"uber einem Volumen 
+$V$ repr\"asentiert. 
+%Da dieses Erwartungswertfunktional f\"ur alle selbst-adjungierten Operatoren ihren Erwartungswert
+
+Das Kollapspostulat bzw.\ das von Neumann-L\"uders'sche Projektionspostulat gibt an, wie wir in der
+Quantenmechanik ein System in einem bestimmten Zustand pr\"aparieren k\"onnen. Wurde eine Observable
+${\cal R}$ an einem System gemessen und hat man den Messwert $r$ erhalten, so ist das System durch
+einen Strahl zu beschreiben, der dem Eigenraum von $R$ zu dem Eigenwert $r$ entspricht. Ein 
+vollst\"andiger Satz kompatibler Observabler legt durch ihre Messwerte diesen Eigenraum auf einen
+eindimensionalen Strahl und damit einen reinen Zustand fest.
+
+
+\section{Die Postulate in anderen Bereichen der Physik}
+
+\begin{thebibliography}{99}
+\bibitem{Neumann} von Neumann, John; \textit{Mathematische Grundlagen der
+     Quantenmechanik}, Springer ??? 1935. 
+\bibitem{Schroedinger} Schr\"odinger, Erwin; \textit{???};      
+\end{thebibliography}
+
+\end{document}
+

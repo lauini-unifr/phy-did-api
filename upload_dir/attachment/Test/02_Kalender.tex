@@ -1,0 +1,443 @@
+%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{1}
+%\documentclass[german,10pt]{article}      \input{../preambel}         \begin{document} 
+
+\setcounter{page}{1}
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{equation}{0}
+\setcounter{table}{0}
+\setcounter{footnote}{0}
+
+\section*{Kalendersysteme}
+\vspace{0.2cm}
+\noindent
+{\bf Thomas Filk, Universit\"at Freiburg}
+\vspace{1cm}
+
+% Kap x
+\label{chap_Kalender}
+
+\noindent
+Der (Sonnen-)Tag als die Zeitdauer zwischen zwei aufeinanderfolgenden Sonnenh\"ochstst\"anden, der 
+(synodische) Monat als die Zeitdauer zwischen zwei aufeinanderfolgenden Voll- oder Neumonden und das 
+(tropische) Jahr als die Zeitdauer zwischen zwei Sonnendurchg\"angen durch den Fr\"uhlingspunkt
+gaben insbesondere in der Antike die wichtigen Perioden der Zeitrechnung vor. Dabei hat
+die Tatsache, dass weder die Mondphasen noch ein ganzzahliges Vielfaches eines Sonnentages 
+\"uber einen l\"angeren Zeitraum mit den Jahreszeiten und den damit zusammenh\"angenden 
+Erscheinungen (z.B.\ die regelm\"a\ss ig im Juli bis September auftretenden Nilschwemmen in \"Agypten)
+\"ubereinstimmen, zu teilweise sehr komplizierten Kalendersystemen gef\"uhrt. 
+Tabelle \ref{tab_Kal} enth\"alt die wichtigsten Zahlen, die in diesem Kapitel ben\"otigt werden.
+
+\begin{table}[htb]
+\begin{tabular}{r|l}
+tropisches Jahr in Tagen &  $365, 24219$\,d   \\
+Julianisches Jahr in Tagen &  $365,25$\,d \\
+Gregorianisches Jahr in Tagen & $ 365,2425$\,d \\
+synodischer Monat &  $29,5306$\,d \\
+\end{tabular}
+\caption{\label{tab_Kal}%
+Die wichtigsten physikalischen Gr\"o\ss en im Zusammenhang mit den
+Kalendersystemen.}
+\end{table}
+
+Au\ss erdem ben\"otigen wir noch die folgenden Begriffe, die ausf\"uhrlicher in
+Kapitel \hyperref[chap_Nachthimmel]{Nachthimmel} erl\"autert werden:
+
+Unter der \textit{Ekliptik}\index{Ekliptik}\index{Ekliptikebene} 
+versteht man einen Gro\ss kreis am Nachthimmel, den man erh\"alt,
+wenn man die Sonne von der Erde aus an den Himmel projiziert. Umgekehrt kann man auch
+die Projektion der Erde vom Mittelpunkt der Sonne aus an den Nachthimmel als Ekliptik 
+definieren. Die Umlaufbahn der Erde um die Sonne liegt dann in der Ekliptikebene.
+Der \textit{Himmels\"aquator} ist die Projektion des Erd\"aquators an den Himmel vom Mittelpunkt 
+der Erde aus betrachtet.\index{Himmels\"aquator}
+Man kann ihn auch als den Gro\ss kreis am Himmel definieren, der senkrecht zum
+Himmelsnordpol (der Projektion der Erdachse an den Himmel) steht. Diese beiden
+Gro\ss kreise (Ekliptik und Himmels\"aquator) schneiden sich in zwei Punkten:
+dem \textit{Fr\"uhlingspunkt}\index{Fruehlingspunkt@Fr\"uhlingspunkt}
+und dem \textit{Herbstpunkt}.\index{Herbstpunkt}
+Befindet sich die Sonne im Fr\"uhlings- oder Herbstpunkt, sind Nacht und Tag
+gleich lang, daher spricht man auch von den \textit{\"Aquinoktien}.\index{Aequinoktien@\"Aquinoktien}
+
+\section{Tage, Monate und Jahre}
+
+Wir alle wissen, was im Alltag gemeint ist, wenn wir von \glqq Tag\grqq,  \glqq Monat\grqq, oder
+\glqq Jahr\grqq\ sprechen, und doch erweisen sich diese Begriffe als recht komplex und vieldeutig,
+wenn man versucht, sie pr\"aziser zu definieren. 
+
+\subsection{Tage}
+
+Unter einem Tag\index{Tag} 
+verstehen wir im Allgemeinen den Zeitraum zwischen zwei gleichen 
+Sonnenst\"anden, z.B.\ zwei Sonnenh\"ochstst\"anden,
+also von Mittag bis zum Mittag des n\"achsten Tages. Bei Sonnenh\"ochststand steht die Sonne
+f\"ur jeden Beobachter n\"ordlich des n\"ordlichen Wendekreises (dem Breitengrad bei $23,4^\circ$)
+exakt im S\"uden, f\"ur einen Beobachter s\"udlich des s\"udlichen Wendekreises exakt im Norden.
+F\"ur Beobachter zwischen diesen beiden Wendekreisen h\"angt der Sonnenh\"ochststand von der
+Jahreszeit ab. In jedem Fall befindet sich die Sonne zum Zeitpunkt \glqq 12 Uhr mittags (wahre Zeit)\grqq\
+auf einer gedachten Linie, die den L\"angengrad des Beobachters
+(also den Nord-S\"ud-Meridian, der durch den Ort des Beobachters verl\"auft) vom Erdmittelpunkt
+aus an den Himmel projiziert. Ein solcher Tag hei\ss t \textit{wahrer Sonnentag}.\index{Sonnentag!wahrer} 
+
+Da der wahre Sonnentag aus verschiedenen Gr\"unden im Laufe eines Jahres in seiner L\"ange
+schwanken kann (siehe das Kapitel zur \hyperref[chap_Zeitgleichung]{Zeitgleichung}), 
+definiert man einen sogenannten \textit{mittleren\index{Sonnentag!mittlerer}
+Sonnentag}, das ist ein \"uber das Jahr genommenes Mittel der wahren Sonnentage. Dieser
+mittlere Sonnentag wird in 24 Stunden bzw.\ 86\,400\,Sekunden unterteilt. 
+
+Versteht man unter einem Tag, dass sich die Erde einmal um ihre Achse gedreht hat, muss man
+einen Bezugspunkt angeben, der \glqq einmal rum\grqq\ spezifiziert. Ist dieser Bezugspunkt die
+Sonne, erhalten wir den oben beschriebenen Sonnentag.\index{Sonnentag} 
+Handelt es sich bei diesem Bezugspunkt
+aber um den Sternenhimmel, also z.B.\ einen bestimmten Fixstern, dessen Eigenbewegung wir
+vernachl\"assigen k\"onnen,\index{Sternentag}\index{Tag!siderischer} 
+erhalten wir einen \textit{Sternentag} oder \textit{siderischen Tag}. 
+
+\begin{SCfigure}[30][htb]
+\begin{picture}(220,100)(-20,0)
+\put(90,80){\circle{40}}
+\put(5,80){\circle{20}}
+\put(30,20){\circle{20}}
+\put(120,80){\vector(1,0){60}}
+\put(120,50){\vector(1,0){60}}
+\put(120,20){\vector(1,0){60}}
+\put(15,80){\line(1,0){73}}
+\put(37,27){\line(1,1){52}}
+\put(180,40){\makebox(0,0){Fixstern}}
+\put(90,90){\makebox(0,0){Sonne}}
+\put(90,80){\makebox(0,0){$\bullet$}}
+\put(78,75){\makebox(0,0){$\alpha$}}
+\put(45,27){\makebox(0,0){$\alpha$}}
+\qbezier(5,70)(5,45)(23,27)
+\thicklines
+\put(15,80){\vector(1,0){20}}
+\put(40,20){\vector(1,0){20}}
+\put(37,27){\vector(1,1){14}}
+\end{picture}
+\caption{\label{fig_SiderischerTag}%
+Siderischer Tag und Sonnentag. Da sich die Erde im Verlauf eines Tages um den Winkel
+$\alpha$ weiterbewegt hat (hier \"ubertrieben dargestellt), muss sie sich relativ zum Fixsternhimmel
+um diesen Winkel weiter drehen, damit ein bestimmter Punkt wieder in Richtung Sonne zeigt.}
+\end{SCfigure}
+
+Siderischer Tag und (mittlerer) Sonnentag unterscheiden sich um ein paar Minuten. 
+Grund ist, dass sich die Erde im Laufe eines Tages etwas weiter um die Sonne bewegt hat
+und daher die Sonne nach einem Tag nicht mehr exakt unter derselben Richtung steht
+(im Vergleich zum Fixsternhimmel) wie vorher. Ganz grob kann man den Unterschied folgenderma\ss en
+absch\"atzen: Die Erde bewegt sich in rund 365 Tagen einmal um die Sonne, d.h.\ an einem Tag
+bewegt sie sich um den Winkel $\alpha = 365/360\approx 1$\,Grad weiter. Da der Tag $24\times 60$
+Minuten hat, dreht sich die Erde in 4\,Minuten um ein Grad weiter. Der Sonnentag (24h) ist somit im
+Mittel um rund 4 Minuten l\"anger als der siderische Tag (23h56m). Eine genauere Rechnung
+ergibt als Differenz 3 Minuten und 56,6 Sekunden. 
+
+\subsection{Monate}
+
+F\"ur den Monat gibt es gleich mehrere Definitionen (die Zahlenangaben beziehen sich auf
+die Bewegung des Mondes am 1.\ Januar des Jahres 2000):\index{Monat}
+\begin{enumerate}
+\item
+\textit{Synodischer Monat}:\index{Monat!synodischer} 
+Der synodische Monat ist die Zeitspanne zwischen zwei
+gleichen Stellungen des Monds relativ zu Erde und Sonne, also beispielsweise die Zeitspanne
+zwischen zwei Vollmonden oder Neumonden. Bei Vollmond spricht man auch von 
+Opposition,\index{Opposition}\index{Konjunktion}
+bei Neumond von Konjunktion. Dieser Monat ist am l\"angsten, da sich im Verlauf eines Monats
+das Erde-Mond-System weiter um die Sonne bewegt hat. Ein synodischer Monat dauert rund
+29,5306 Tage oder 29 Tage, 12 Stunden, 44 Minuten und 3 Sekunden. 
+\item
+\textit{Siderischer Monat}:\index{Monat!siderischer}
+Beim siderischen Monat hat sich der Mond relativ zum Fixsternhimmel einmal um die
+Erde gedreht. Der siderische Monat ist deutlich k\"urzer als der synodische Monat: In einem Monat
+dreht sich das Erde-Mond-System um etwas weniger als 30 Grad um die Sonne. Das Verh\"altnis
+von synodischem zu siderischem Monat ist somit ungef\"ahr $(360+30)/360=13/12$. Genauer
+erh\"alt man f\"ur den siderischen Monat 27,3217 Tage oder 27 Tage, 7 Stunden, 43 Minuten und
+12 Sekunden. 
+\item
+\textit{Tropischer Monat}:\index{Monat!tropischer}
+Beim tropischen Monat bezieht sich \glqq einmal rum\grqq\ nicht auf den Fixsternhimmel
+sondern auf den Fr\"uhlingspunkt der Erde. Wegen der\index{Praezession@Pr\"azession} 
+Pr\"azession - der langsamen Drehung der Rotationsachse der Erde - verschiebt sich dieser
+Fr\"uhlingspunkt im Vergleich zum Fixsternhimmel um rund 7 Sekunden im Monat. Um diese
+7 Sekunden ist ein tropischer Monat k\"urzer als ein siderischer Monat.
+\item
+\textit{Anomalistischer Monat}:\index{Monat!anomalistischer}
+Die Mondbahn um die Erde (genauer um den gemeinsamen Schwerpunkt) ist eine Ellipse.
+Bei einem idealen gravitativen Zwei-K\"orper-Problem (ohne relativistische Korrekturen)
+w\"are diese Ellipse stabil, d.h., das Perig\"aum (der erdn\"achste Punkt dieser Bahn) w\"are
+relativ zum Fixsternhimmel immer derselbe. Durch verschiedene St\"orfaktoren (insbesondere
+den Einfluss der Sonne aber auch relativistische Korrekturen) verschiebt sich dieser Punkt
+jedoch im Laufe der Zeit relativ zum Fixsternhimmel. Als anomalistischen Monat bezeichnet man
+die Zeitdauer zwischen zwei aufeinanderfolgenden Durchl\"aufen des Mondes durch das
+Perig\"aum. Diese Definition bezieht sich somit ausschlie\ss lich auf die Bahnperiode der
+Mondbahn um die Erde und bedarf keines \"au\ss eren Fixpunkts. 
+Ein anomalistischer Monat dauert 27,55455 Tage oder 27 Tage, 13 Stunden, 18
+Minuten und 33 Sekunden. 
+\item
+\textit{Drakonitischer Monat:}\index{Monat!drakonitischer}
+Die Mondbahn liegt in einer Bahnebene, die relativ zur Ekliptik (also der Bahnebene der
+Erde um die Sonne) um ungef\"ahr 5 Grad geneigt ist. Als Mondknoten bezeichnet man
+die beiden Punkte der Mondbahn, die in der Ebene der Ekliptik liegen. Die Zeitspanne
+zwischen zwei Durchg\"angen (von S\"ud nach Nord) des Mondes durch einen Mondknoten
+bezeichnet man als drakonitischen Monat. Eine Sonnen- bzw.\ Mondfinsternis kann nur
+dann von einem Punkt der Erde aus beobachtet werden, wenn dieser Punkt auf der Erde, der 
+Mond und die\index{Sonnenfinsternis}\index{Mondfinsternis}
+Sonne auf einer Linie liegen. Dazu muss sich der Mond in diesem Augenblick in der
+N\"ahe eines Mondknoten befinden, da sonst der Mond ober- bzw.\ unterhalb der Sonne
+(bzw.\ des Erdschattens der Sonne bei einer Mondfinsternis) vorbeizieht. Der 
+drakonitische Monat ist somit f\"ur die Berechnung von Sonnen- und Mondfinsternissen von
+Bedeutung. Ein drakonitischer Monat dauert 27,21222 Tage oder 27 Tage, 5 Stunden, 5
+Minuten und 36 Sekunden. 
+\end{enumerate}
+
+\subsection{Jahre}
+
+Auch beim Jahr kann man wieder mehrere Definitionen unterscheiden (auch hier beziehen sich
+die Zahlenangaben auf die Bewegung der Erde um die Sonne am 1.\ Januar 2000; die Dauer
+eines Jahres ist aus dieser Bewegung rechnerisch extrapoliert):
+\begin{enumerate}
+\item
+\textit{Siderisches Jahr}:\index{Jahr!siderisches}
+Ein siderisches Jahr bezeichnet die Zeitdauer, in der sich die Erde relativ zum Fixsternhimmel
+einmal um die Sonne bewegt hat. Es dauert 365 Tage, 6 Stunden, 9 Minuten und 9,54
+Sekunden oder 365,2563604167 Tage. 
+\item
+\textit{Tropisches Jahr}:\index{Jahr!tropisches}
+F\"ur das tropische Jahr gibt es zwei Definitionen. Die \"altere Definition bezieht sich auf den
+Durchgang der Erde durch den Fr\"uhlingspunkt. Der Fr\"uhlingspunkt ist
+dabei der Zeitpunkt, bei dem die Sonne vom Erdmittelpunkt aus betrachtet genau \"uber
+dem \"Aquator steht.\footnote{Es gibt zwei solche Punkte im Jahr: der Fr\"uhlingspunkt und
+der Herbstpunkt. Man sollte daher spezifizieren, dass die Sonne vom Erdmittelpunkt aus
+betrachtet in diesem Augenblick den \"Aquator von S\"ud nach Nord durchl\"auft.} 
+Zu diesem Zeitpunkt sind an einem idealisierten Tag die Sonnenstunden
+(der helle Tag) und die Nachtstunden gleich lang. Daher spricht man auch von der
+Tagundnachtgleiche bzw.\ dem \"Aquinoktium. Eine zweite Interpretation 
+(dieser ersten Definition) ist: Zu diesem Zeitpunkt befindet sich die
+Erde in einem der beiden Schnittpunkte ihrer Bahnebene (der Ekliptik) mit ihrer \"Aquatorebene,
+d.h.\ die Rotationsachse der Erde steht senkrecht zur Verbindungslinie Erde-Sonne.  
+Das so definierte tropische Jahr kann sich in unterschiedlichen Jahren um mehrere Minuten
+(bis zu einer Viertelstunde) unterscheiden. Die Einfl\"usse anderer Planeten auf die Pr\"azession der
+Erde oder auch die Tatsache, dass der Fr\"uhlingspunkt (wegen der Pr\"azession) immer an einem
+anderen Punkt der elliptischen Bahn der Erde ist, spielen hier eine wesentliche Rolle.
+
+Die Internationale Astronomische Union (IAU) hat daher 1955 beschlossen, diese zwar sehr
+anschauliche aber durch keine pr\"azisen Wert angebbare Definition der L\"ange eines tropischen
+Jahres durch eine zweite Definition zu ersetzen. Danach bestimmt man die L\"ange eines tropischen
+Jahres in Bezug auf einen bestimmten Augenblick. In diesem Augenblick wird die Winkelgeschwindigkeit
+einer mittleren Sonne - die periodische Schwankung der Winkelgeschwindigkeit der Sonne aufgrund
+der elliptischen Bahn der Erde wird hierbei durch den Bezug auf eine mittlere Sonne ausgeglichen - bestimmt
+und extrapoliert, wie lange es dauert, bis bei dieser Winkelgeschwindigkeit $360^\circ$ zur\"uckgelegt
+werden. Dies bezeichnet man dann als momentanes tropisches Jahr. Diese Winkelgeschwindigkeit 
+der mittleren Sonne wird auf die Drehachse der Erde, ein sogenanntes \glqq mittleres \"Aquinoktium
+des Datums\grqq, bezogen. Diese Definition ist zwar unanschaulich, hat aber den Vorteil, dass man
+einem tropischen Jahr zu jedem Augenblick einen pr\"azisen Wert zuordnen kann.   
+
+Am 1.\ Januar 2000 dauerte ein tropisches Jahr nach dieser Definition $365,24219052$ SI-Tage. 
+\item
+\textit{Anomalistisches Jahr}:\index{Jahr!anomalistisches}
+\"Ahnlich wie beim anomalistischen Monat bezeichnet ein anomalistisches Jahr die Zeitdauer
+zwischen zwei Periheldurchg\"angen der Erde, wobei das Perihel der sonnenn\"achste Punkt der
+Erdbahn ist. Aufgrund des Einflusses anderer Planeten sowie relativistischer Korrekturen
+verschiebt sich das Perihel jedes Jahr um ungef\"ahr 5 Minuten relativ zum siderischen Jahr.
+Das anomalistische Jahr (1.\ Januar 2000) dauert $365,259635864$ Tage oder 365 Tage,
+6 Stunden, 13 Minuten und 52,54 Sekunden.
+\end{enumerate}
+
+\section{Der Menton-Zyklus und die Struktur von Mondkalendern}
+
+Viele antike Kalendersysteme sind\index{Mondkalender} 
+Mondkalender, d.h.\ bei ihnen ist der Monat die nat\"urliche
+Einheit und zur ungef\"ahren Anpassung an die Jahresl\"ange wurden gelegentlich zus\"atzliche Tage oder gar
+zus\"atzliche Monate eingef\"ugt. Schon im antiken Babylon war bekannt, dass 19 Jahre ziemlich genau
+235 Monaten entsprechen. W\"ahlt man die Julianische Schaltjahrregelung, nach der ein Jahr
+$365,25$ Tage hat, entsprechen 19 Jahren $6939,75$ Tage. Andererseits entsprechen 235 synodische
+Monate $6939,691$ Tagen. Auf 19 Jahre ein Fehler von $0,059$ Tagen (oder 1 Stunde, 24 Minuten und
+58 Sekunden) bedeutet, dass sich in $19 \times 1/0,059 = 322$ 
+(Julianischen) Jahren die Beziehung zwischen Mondphasen und Sonnenjahr um einen Tag verschiebt. 
+Definiert man andererseits die L\"ange eines Jahres als 1/19.tel von 235 Monaten (das entspricht $365,2469$ Tagen), 
+so liegt diese Zeitdauer zwischen dem tropischen Jahr und dem Jahr nach dem 
+Julianischen Kalender.\index{Julianischer Kalender}\index{Kalender!Julianischer} 
+Die Dauer von 235 (synodischen) Monaten 
+bezeichnet man auch als Menton-Zyklus.\index{Menton-Zyklus} 
+
+Im Folgenden geht es meist nur um die gr\"obsten Regeln eines Kalenders, sodass Jahre in Monate und Monate in 
+Tage unterteilt werden k\"onnen. Die meisten Kalender enthalten weitere Ausnahmeregelungen, auf die hier
+nicht eingegangen wird. 
+
+\subsection{Der J\"udische Kalender}
+
+Der J\"udische Kalender\index{Kalender!j\"udischer}
+ist ein reiner Mondkalender. Monate mit 29 und 30 Tagen wechseln sich im
+Wesentlichen ab. Ein Jahr besteht aus 12 Monaten. Damit hat ein Jahr rund 354 Tage. Da dies etwas zu
+kurz ist, werden gelegentlich Schaltmonate\index{Schaltmonat} 
+mit meist 30 Tagen eingef\"ugt. Insgesamt richtet sich diese
+Einteilung nach dem Menton-Zyklus, d.h.\ 19 Jahre bestehen aus 235 Monaten. Da 19 Jahre mit 12 Monaten
+nur 228 Monaten entsprechen, werden in den 19 Jahren insgesamt 7 Monate als Schaltmonate eingef\"ugt, 
+und zwar in den Jahren 3, 6, 8, 11, 14, 17 und 19. Auf diese Weise erreicht man, dass der Jahresanfang
+mehr oder weniger gleich bleibt; im J\"udischen Kalender im September oder Oktober. 
+
+\subsection{Der Islamische Kalender}
+
+Es gibt mehrere\index{Kalender!islamischer} 
+verschiedene islamische Kalender, aber der Kalender, nachdem sich auch heute noch
+die Festtage (oder beispielsweise der Beginn des Monats Ramadan) bestimmen, umfasst 12 Monate
+mit jeweils 29 oder 30 Tagen. W\"ahrend im altarabischen Kalender alle zwei oder drei Jahre ein Schaltmonat
+eingef\"ugt wurde (dieser Kalender also dem J\"udischen Kalender \"ahnelte), wurde im Islam dieser Schaltmonat
+abgeschafft. Ein Jahr hat nun also rund 354 Tage. Damit verschieben sich der Jahresanfang und auch die
+wichtigsten Feiertage j\"ahrlich um rund 10-12 Tage nach vorne und wandern im Verlauf der Zeit durch das
+ganze Jahr. 
+
+\section{Die Wochentage}
+
+Schon in der Sch\"opfungsgeschichte (Genesis) des alten Testaments, die vermutlich auf das 5.\ bis 6.\ Jahrhundert
+vor Christus zur\"uckgeht, ist davon die Rede, dass Gott die Welt in sechs Tagen erschuf und am siebten
+Tage ruhte.\index{Woche} 
+Die Zeiteinheit \glqq Woche\grqq\ als sieben Tage war schon in Babylon in Gebrauch und
+vermutlich hat die j\"udische Tradition diese Einheit w\"ahrend des babylonischen Exils
+\"ubernommen. 
+
+Die Zahl sieben f\"ur die Anzahl der Tage in einer Woche geht vermutlich auf astronomische 
+Beobachtungen zur\"uck: Die damals bekannten sieben beweglichen Himmelsk\"orper waren
+(in aufsteigender Reihenfolge ihrer Umlaufzeiten): Mond (1 Monat), Merkur (3 Monate), Venus (7 Monate),
+Sonne (1 Jahr), Mars (2 Jahre), Jupiter (12 Jahre) und Saturn (30 Jahre). Wie man heute noch an
+den Bezeichnungen in einigen europ\"aischen Sprachen ablesen kann, wurden die 
+Wochentage\index{Wochentage, Bezeichnungen}
+urspr\"unglich nach diesen sieben Himmelsk\"orpern benannt (Tab.\ \ref{tab_Wochentage})
+
+\begin{table}[htb]
+\begin{tabular}{l|l|l|l|l}
+Deutsch      &  Englisch      & Franz\"osisch & Lateinisch & Himmelsk\"orper   \\ \hline
+Sonntag      &  Sunday       &  dimanche  & Solis dies &  Sonne      \\
+Montag       &  Monday       &  lundi         & Lunae dies &  Mond       \\
+Dienstag     &  Tuesday      &  mardi        & Martis dies &  Mars      \\
+Mittwoch     &  Wednesday &  mercredi    & Mercurii dies &  Merkur    \\
+Donnerstag &  Thursday     &  jeudi         & Iovis dies & Jupiter    \\
+Freitag        &  Friday          &  vendredi   & Veneris dies  & Venus  \\
+Samstag     &  Saturday     &  samedi   & Saturni dies  &  Saturn   \\
+\end{tabular}
+\caption{\label{tab_Wochentage}%
+Die Wochentage in verschiedenen europ\"aischen Sprachen und die zugeh\"origen Planeten.}
+\end{table}
+
+Auch in den germanischen Sprachen sind diese Urspr\"unge teilweise erkennbar.
+Der Donnerstag ist der Tag des Donnergottes Thor (im Englischen Thursday erkennbar),
+der wiederum dem r\"omischen Gott Jupiter entsprach. Und der Freitag ist vermutlich
+der Freyastag, der Tag der G\"otting Freya, die wiederum der r\"omischen Gottheit
+Venus entsprach. Hier gibt es aber unterschiedliche Theorien.
+
+\section{Die Kalenderreform von 1582}
+% Kap 1
+\label{sec_Kalender1582}
+
+Einen relativ genauen\index{Kalenderreform}\index{Kalender!Julianischer} 
+Sonnenkalender hat Julius C\"asar um 45 v.\ Chr.\ eingef\"uhrt:
+Er sah vor, dass ein Jahr 365 Tage hat und dass alle vier Jahre ein sogenanntes Schaltjahr
+eingef\"ugt wird, bei dem ein Jahr 366 Tage hat. Der zus\"atzliche Tag ist der 29.\ Februar.
+Diese Schaltjahrregelung war schon vorher in \"Agypten in Gebrauch, und C\"asar hat sie
+f\"ur das r\"omische Reich \"ubernommen und angepasst.
+
+Damit ergibt sich f\"ur die Jahresl\"ange im Julianischen Kalender
+\begin{equation}
+          (4 \cdot 365 + 1)/4 = 365,25  \,  {\rm Tage}\, .
+\end{equation}
+Diese Formel folgt aus folgender \"Uberlegung: Ein Zeitraum von 4 Jahren bildet eine
+Periode des Julianischen Kalenders, d.h.\ nach vier Jahren wiederholt sich das Schema.
+Diese vier Jahre haben 4$\times$365 Tage plus einen weiteren Tag wegen des Schaltjahrs.
+Teilt man diese Anzahl von Tagen wieder durch die Anzahl der Jahre einer Periode (also 4)
+so erh\"alt man die mittlere Dauer eines Jahres in Tagen.
+
+Unsere Jahreszeiten werden durch das tropische Jahr bestimmt, d.h.\ durch den
+Zeitraum zwischen zwei aufeinanderfolgenden Fr\"ulingspunkten.\index{Jahr!tropisches}
+Ein tropisches Jahr dauert $365,24219$ (Sonnen)\-Tage (genau gilt dies f\"ur ein von der Bewegung
+der Sonne am 1.\ Januar 2000 extrapoliertes Jahr). Die Differenz zum Julianischen Kalender
+sind $0,00781$\,Tage (oder 11 Minuten und 14,8 Sekunden) pro tropischem Jahr, bzw.\ alle 128 Jahre verschiebt sich
+im Julianischen Kalender der Fr\"uhlingspunkt um einen Tag (nach vorne). Diese Differenz war
+bereits im 9.\ Jahrhundert bekannt.\footnote{Bereits Mitte des 8.\ Jahrhunderts wusste man, dass
+sich die Mondphasen relativ zu den theoretischen \"Uberlegungen (nach denen sich die
+Mondphasen alle 235 Jahre wiederholen - dies wusste man schon im alten Babylonien) 
+verschoben hatten.} 
+Da der Fr\"uhlingspunkt, d.h.\ der Beginn des Fr\"uhjahrs, 
+im christlichen Jahr eine besondere Bedeutung hat - Ostern (und damit viele beweglichen Feiertage
+im Kirchenjahr) bestimmt sich aus dem ersten\index{Ostern}
+Vollmond im Fr\"uhjahr - wollte man nat\"urlich nicht, dass beispielsweise Ostern irgendwann
+im Herbst stattfindet und Weihnachten im Hochsommer. Daher gab Papst Gregor XIII.\ die Ausarbeitung einer 
+Kalenderreform in Auftrag, die er dann im Jahre 1582 per p\"apstlichem Dekret verk\"undete.
+
+Die Kalenderreform bestand aus zwei Anteilen:\index{Kalender!Gregorianischer}
+\begin{enumerate}
+\item
+Die 10 Tage zwischen dem 4.\ Oktober und dem 15.\ Oktober 1582 wurden ausgelassen, d.h.\ Donnerstag, 
+dem 4.\ Oktober 1582, folgte Freitag, der 15.\ Oktober 1582. Die dazwischenliegenden Tage gibt es im 
+Gregorianischen Kalender nicht. Damit wurde der Fr\"uhlingsanfang wieder auf den 21.\ M\"arz gelegt, 
+wie im Jahr 325, als auf dem Konzil von Nic\"aa die Bestimmung des Osterfestes in Abh\"angigkeit vom 
+Fr\"uhlingsanfang festgelegt wurde.  
+\item
+Die Schaltjahrregelung\index{Schaltjahr} 
+wurde leicht abge\"andert: Alle vier Jahre (in den Jahren, die glatt durch 4
+teilbar sind) gibt es ein Schaltjahr mit 366 Tagen, allerdings gibt es alle hundert Jahre (in den Jahren, die
+glatt durch 100 teilbar sind) kein Schaltjahr, jedoch gibt es alle 400 Jahre (in den Jahren, die glatt
+durch 400 teilbar sind) trotzdem ein Schaltjahr. Somit gab es im Jahr 1600 und 2000 ein Schaltjahr,
+in den Jahren 1700, 1800 und 1900 jedoch nicht.   
+\end{enumerate}
+Damit ergibt sich f\"ur die Jahresl\"ange im Gregorianischen Kalender:
+\begin{equation}
+          (400 \cdot 365 + 100 - 4 + 1)/400 =  365,2425  \, {\rm Tage} \, .
+\end{equation}
+Hier gilt wieder: Eine Periode des Gregorianischen Kalenders dauert 400 Jahre, in diesen 400 Jahren
+finden $100 - 4 + 1=97$ Schaltjahre mit 366 Tagen statt, alle anderen Jahre haben 365 Tage. Die 
+Differenz zwischen gregorianischem Jahr und tropischem Jahr betr\"agt nun $0,00031$ Tage (oder
+26,8 Sekunden). Das hei\ss t,
+alle 3226 Jahre verschiebt sich dieser Kalender relativ zum tropischen Jahr (des Jahres 2000) um einen
+Tag. Damit kann man zun\"achst einmal leben. Weitere Kalenderreformen sind in die ferne Zukunft verschoben.
+
+Vom Kalendersystem unabh\"angig ist die Festlegung des Jahresbeginns. Obwohl schon der Kalender
+von Julius Caesar den Jahresbeginn auf den 1.\ Januar festgelegt hatte, waren unterschiedliche
+Konventionen in Gebrauch. Erst im 16.\ und 17.\ Jahrhundert setzte sich der 1.\ Januar als Jahresbeginn
+weitgehend durch.
+
+
+\section{Kuriosit\"aten der Kalenderreform}
+
+Die Kalenderreform von Papst Gregor XIII.\ wurde nicht \"uberall gleich angenommen. Selbst katholische
+Gebiete str\"aubten sich teilweise, und protestantische bzw.\ reformierte Gebiete verweigerten sich der
+Reform schon alleine deshalb, weil sie vom Papst ausging. So wurde der Kalender in England erst 1752 
+\"ubernommen (zu diesem Zeitpunkt mussten bereits 11 Tage ausfallen), in Sowjetrussland erst 1918
+(hier wurden 13 Tage gestrichen) und beispielsweise in Griechenland erst 1923. In manchen 
+orthodoxen Ostkirchen gilt heute noch der Julianische Kalender. Mit diesen unterschiedlichen
+Daten der \"Ubernahme des Gregorianischen Kalenders sind einige Kurosit\"aten verbunden.
+\begin{enumerate}
+\item
+William Shakespeare\index{Shakespeare, William}\index{Cervantes, Miguel de} 
+und Miguel de Cervantes starben offiziell beide am 23.\ April 1616. 
+Allerdings liegt der Todestag der beiden Dichter 10 Tage auseinander: In England verwendete man Anfang
+des 17.\ Jahrhunderts noch den Julianischen Kalender, in Spanien bereits den Gregorianischen. 
+Das bedeutet, Cervantes starb tats\"achlich 10 Tage vor Shakespeare. 
+\item
+F\"ur die Lebensdaten von Newton\index{Newton, Isaac} 
+findet man zwei Versionen: 25.\,12.\,1642 bis 20.\ 3.\,1726
+und 4.\,01.\,1643 bis 31.\,03.\,1727. Der Unterschied im Geburtsdatum ist offensichtlich: Das eine
+Geburtsdatum (Dezember 1642) bezieht sich auf den Julianischen Kalender, der zu diesem Zeitpunkt in England
+noch g\"ultig war, das andere Datum (Januar 1643) auf den Gregorianischen Kalender. \"Uberraschend am
+Todesdatum ist weniger der Tag (20.3.\ bzw.\ 31.3.), der sich durch die Differenz zwischen Julianischem
+und Gregorianischem Kalender ergibt, als vielmehr das Jahr: 1726 bzw.\ 1727. In England war Neujahr 1727 
+(der Tag es Jahreswechsels) der 25.\ M\"arz und nicht der 1.\ Januar (diese Konvention bezeichnet man
+als \textit{Annuntiationsstil}, weil der 25.\ M\"arz als die Verk\"undigung (Annuntiation) der
+Empf\"angnis von Maria galt). Das bedeutet, nach dem damals in England g\"ultigen
+Kalender starb Newton noch vor dem Jahreswechsel (also im Jahr 1726), nach
+dem Gregorianischen Kalender nach dem Jahreswechsel (also im Jahr 1727).  
+\item
+Ebenfalls kurios ist Newtons Beerdigung, die nach dem Julianischen Kalender am 28.\ M\"arz 1727
+stattfand. Das bedeutet, Newton ist nach dem Julianischen Kalender am 20.\ M\"arz 1726 gestorben
+und am 28.\ M\"arz 1727 beerdigt worden. Das klingt zun\"achst so, als ob zwischen dem Sterbedatum
+und der Beerdigung \"uber ein Jahr liegt. Doch wie schon erw\"ahnt fand in England damals der 
+Jahreswechsel am 25.\ M\"arz statt. 
+\item
+Die sogenannte Oktoberrevolution\index{Oktoberrevolution} 
+in Russland fand nach dem Julianischen Kalender am 25.\ Oktober
+1917 statt, nach dem Gregorianischen Kalender am 7.\ November 1917. Im Jahre 1917 galt in Russland
+jedoch noch der Julianische Kalender, daher \glqq Oktober-\grqq Revolution. Nach dem heutigen in Russland 
+(bzw.\ der fr\"uheren Sowjetunion) g\"ultigen Kalender
+handelte es sich eigentlich um eine Novemberrevolution. In der Sowjetunion wurde der
+Jahrestag der Oktoberrevolution immer am 7.\ November gefeiert. 
+\end{enumerate}  
+
+%\end{document}
+

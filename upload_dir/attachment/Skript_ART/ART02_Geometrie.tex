@@ -1,0 +1,1600 @@
+\documentclass[german,10pt]{book}   \input{../preambel}      \begin{document}   \setcounter{chapter}{1} 
+ 
+\chapter{Differentialgeometrische\\ 
+Grundlagen der ART}
+
+In diesem Kapitel behandeln wir die mathematischen
+Grundlagen der allgemeinen Relativit\"atstheorie. Damit
+sind insbesondere die differentialgeometrischen
+Konzepte gemeint, die in die Einstein'schen
+Feldgleichungen eingehen bzw.\ zur Formulierung
+der Theorie ben\"otigt werden. Es geht mir dabei weder
+um mathematische Vollst\"andigkeit noch um
+mathematische Strenge. Der Schwerpunkt
+soll in einer Veranschaulichung der Konzepte
+bestehen. Wie so oft, ist gerade der Einstieg
+-- das bedeutet die Definition von Mannigfaltigkeiten
+und ihren Tangentialr\"aumen, insbesondere wenn
+man keinen Bezug auf eine Einbettung dieser
+Mannigfaltigkeit nehmen m\"ochte --
+am schwierigsten.
+
+\section{Mannigfaltigkeiten}
+
+Etwas vereinfacht ist eine Mannigfaltigkeit $M$ 
+ein\index{Mannigfaltigkeit}
+topologischer Raum (also eine Menge mit einer
+Topologie, f\"ur die wir im Folgenden immer eine
+gew\"ohnliche Hausdorff-Topologie nehmen wollen),
+der lokal (also in offenen Umgebungen von jedem Punkt)
+isomorph zu offenen Umgebungen im
+$\mathbb{R}^n$ ist. Eine solche Isomorphie bezeichnet
+man als {\em Karte} und die Menge aller
+Karten als einen {\em Atlas}. Dies wird im
+Folgenden etwas genauer behandelt.
+
+Zu einer Mannigfaltigkeit k\"onnen wir
+an jedem Punkt ihren Tangentialraum
+definieren als \glqq Raum der
+Geschwindigkeiten von parametrisierten
+Bahnkurven durch diesen Punkt\grqq. 
+
+\subsection{Karten und Atlanten}
+
+Die Metapher von Karten in einem Atlas werden wir oft
+zur Veranschaulichung verwenden, da sie den
+Sachverhalt sehr gut trifft. S\"amtliche geometrischen
+Eigenschaften von $M$ werden \"uber diese
+Karten definiert, und letztendlich werden wir es
+immer nur mit offenen Umgebungen im $\mathbb{R}^n$
+zu tun haben, aus denen wir die geometrischen
+Eigenschaften von $M$ ablesen k\"onnen.
+
+Etwas genauer definieren wir eine Karte
+$(U,\phi)$ als\index{Karte} 
+eine offene Teilmenge $U$
+der Mannigfaltigkeit $M$
+und eine stetige, injektive Abbildung (also
+einen lokalen Isomorphismus)
+\begin{equation}
+         \phi : U\subset M \rightarrow \mathbb{R}^n  \, .
+\end{equation}
+Da $\phi$ injektiv (lokal bijektiv) sein soll, gibt es auch
+eine Umkehrabbildung $\phi^{-1}$ 
+von dem Bild von $\phi$
+im $\mathbb{R}^n$ zur\"uck in die Mannigfaltigkeit.
+Wir k\"onnen also bei einer Karte nahezu beliebig 
+zwischen offenen Umgebungen in $M$ und den
+zugeh\"origen offenen Umgebungen im $\mathbb{R}^n$ 
+-- den eigentlichen Karten -- wechseln. 
+
+Eine Menge von Karten $\{U_i,\phi_i\}$ bezeichnen
+wir als\index{Atlas (Differentialgeometrie)} 
+{\em Atlas}, sofern $\bigcup U_i = M$ und
+f\"ur je zwei Abbildungen 
+$\phi_1: U_1 \rightarrow \mathbb{R}^n$ und
+$\phi_2: U_2 \rightarrow \mathbb{R}^n$, 
+sodass $U_1 \cap U_2$ nicht leer ist,
+die Abbildung 
+\begin{equation}
+  \phi_2 \circ \phi_1 ^{-1}:
+     \phi_1(U_1\cap U_2) \rightarrow \mathbb{R}^n 
+\end{equation}
+eine beliebig oft differenzierbare Abbildung
+von der offenen Teilmenge 
+$\phi_1(U_1\cap U_2)\subset \mathbb{R}^n$
+in den $\mathbb{R}^n$ ist. Diese Eigenschaft
+ist sehr intuitiv: In einem Atlas findet man m\"oglicherweise
+mehrere Karten, auf denen dasselbe Gebiet (Land
+oder Gegend) dargestellt ist. Diese beiden Darstellungen
+sollen nat\"urlich \glqq isomorph\grqq\ sein und zwar
+beliebig oft ableitbar.% 
+%Man bezeichnet solche Abbildungen auch als\index{Diffeomorphismus} {\em Diffeomorphismen}.
+\footnote{In der Mathematik
+schr\"ankt man den Grad der Ableitbarkeit manchmal
+ein und verlangt nur $r$-mal stetig differenzierbar etc.
+Umgekehrt kann man noch st\"arker auch Formen von
+Analytizit\"at fordern, beispielsweise dass sich die 
+Abbildungen beliebig genau durch ihre Taylor-Reihen 
+ann\"ahern lassen. Im
+Folgenden setzen wir immer alle notwendigen 
+Ableitbarkeitseigenschaften voraus.}
+
+\"Uber die Karten sind wir also in der Lage, 
+auf der Mannigfaltigkeit so etwas wie
+Differential- und Integralrechnung zu betreiben. 
+Dies w\"are auf einem einfachen topologischen Raum 
+nicht m\"oglich (dort ist nur der Begriff der Stetigkeit
+definiert). In der Mathematik spricht man daher
+auch schon mal von einer {\em differenzierbaren
+Struktur}, die auf $M$ definiert wurde (es
+m\"ussen noch bestimmte Konsistenzbedingungen
+erf\"ullt sein, auf die ich hier nicht eingehe). 
+
+Haben s\"amtliche Abbildungen 
+$\phi_i\circ \phi_j^{-1}$, die sich konstruieren
+lassen, die Eigenschaft, dass ihre Jacobi-Determinante
+positiv ist 
+(wegen der lokalen Bijektivit\"at kann die Jacobi-Determinate
+an keinem Punkt verschwinden, sodass sie im gesamten 
+Definitionsbereich entweder positiv oder negativ sein muss),
+dann spricht man auch von einem\index{orientierbar} 
+{\em orientierungserhaltenden Atlas}. Gibt es einen
+solchen Atlas, so nennt man die Mannigfaltigkeit
+$M$ {orientierbar}. Bekannt ist das M\"obius-Band, das 
+in diesem Sinne nicht orientierbar ist.
+
+\subsection{Der Tangentialraum}
+
+An jedem Punkt $p$ einer Mannigfaltigkeit $M$ k\"onnen
+wir den Tangentialraum $T_pM$ definieren. Auch 
+diese Konstruktion ist eigentlich sehr anschaulich:
+Der Tangentialraum\index{Tangentialraum} 
+ist der Raum aller Geschwindigkeiten,
+die Bahnkurven durch den Punkt $p$ haben k\"onnen.
+
+Ein parametrisierter\index{Weg, parametrisierter} 
+Weg $\gamma: I\rightarrow M$ 
+ist eine stetige Abbildung von einem Intervall $I\subset \mathbb{R}$ 
+in die Mannigfaltigkeit $M$, oft schreiben wir
+$t \mapsto \gamma(t)\in M$. 
+Im Folgenden soll das Intervall $I$ den Punkt $0$ enthalten
+und wir betrachten parametrisierte
+Wege $\gamma$, f\"ur die $\gamma(0)=p$, die also bei
+$t=0$ durch den Punkt $p$ gehen. 
+
+Wir w\"urden nun gerne die Ableitung des Weges nach
+$t$ an der Stelle $t=0$ als eine Tangente an die
+Mannigfaltigkeit $M$ im Punkte $p$ definieren, doch
+wir k\"onnen auf $M$ nicht ableiten. Daher bedient
+man sich eines Tricks: Wir betrachten s\"amtliche 
+beliebig oft ableitbaren\footnote{Streng genommen k\"onnen wir von
+Funktionen von einem topoligschen Raum $M$ 
+nach $\mathbb{R}$ nur  entscheiden, ob sie stetig sind. 
+Ableitbarkeit bezieht sich immer auf die differenzierbar
+Stuktur auf $M$, die durch die Karten gegeben ist,
+sie bezieht sich also auf Funktionen $f\circ \phi^{-1}$,
+die Abbildungen von $\mathbb{R}^n$ 
+nach $\mathbb{R}$ sind.} Funktionen 
+$f:U \rightarrow \mathbb{R}$ (wobei $U$ eine
+Umgebung von $p$ sein soll; man beachte, dass auch die
+Kartenabbildungen $\phi$, eingeschr\"ankt auf eine ihrer
+Komponenten im Bildraum, solche Funktionen 
+definieren).  Jeder Weg $\gamma$ und
+jede solche Funktion $f$ definiert eine Funktion
+$f \circ \gamma: I \rightarrow \mathbb{R}$. Diese
+Funktion k\"onnen wir nach dem Argument $t$ ableiten. 
+Nun definieren wir auf der Menge aller
+Wege (durch $p$) eine \"Aquivalenzrelation:
+Zwei Wege $\gamma_1$ und $\gamma_2$ bezeichnen
+wir als \"aquivalent, wenn 
+f\"ur alle stetigen Funktionen $f:U\rightarrow
+\mathbb{R}$ gilt: 
+\begin{equation}
+     \left.    \frac{{\rm d}}{{\rm d}t} f(\gamma_1(t)) \right|_{t=0}
+     =
+     \left.    \frac{{\rm d}}{{\rm d}t} f(\gamma_2(t)) \right|_{t=0} \, .
+\end{equation}
+Eine solche \"Aquivalenzklasse definiert einen
+Tangentialvektor\index{Tangentialvektor} 
+in $p$ und die Menge aller solcher 
+\"Aquivalenzklassen ist der Tangentialraum $T_pM$
+an $M$ im Punkte $p$.
+
+Das Verfahren erscheint nur auf den ersten Blick
+unn\"otig kompliziert. Der Vorteil der skizzierten
+Vorgehensweise liegt darin, dass die Mannigfaltigkeit
+$M$ nicht in einen $\mathbb{R}^m$ (mit $m\geq n$)
+eingebettet sein muss; diesen Fall betrachten wir
+im n\"achsten Abschnitt als Beispiel. Die obigen Definitionen
+(wie auch die weiteren geometrischen Konzepte,
+insbesondere die Metrik) sind rein intrinsisch.
+Mathematisch kann man daher von
+\glqq gekr\"ummten R\"aumen\grqq\ sprechen,
+ohne dass es einen (euklidischen) Raum geben
+muss, {\em in} dem die Mannigfaltigkeit gekr\"ummt
+ist. 
+
+Noch ein Wort zur Notation: Das Bild eines Punktes 
+$p\in M$ in einer bestimmten Karte ist $\phi(p)$,
+die dadurch induzierten {\em Koordinaten} von $p$
+bezeichnen wir aber meist mit $x^\mu$ bzw.\
+$x^\mu(p)$. Ein Weg in $M$ wird durch
+$\gamma(t)$ gekennzeichnet, sein Bild in einer
+Karte meist kurz durch $x(t)$. Die Ableitung
+eines solchen Weges, $\frac{{\rm d}x(t)}{{\rm d}t}$
+ist damit ein Element des Tangentialraums.
+Allgemeine Elemente des Tangentialraums 
+bezeichne ich
+oftmals mit Gro\ss buchstaben, also $X$ mit
+Komponenten $X^\mu$ oder $X(p)$ mit 
+Komponenten $X(p)^\mu$, da die Kleinbuchstaben
+schon f\"ur die Koordinaten von Punkten
+verwendet werden. 
+
+\subsection{Eingebettete Mannigfaltigkeiten}
+\label{sec_Einbett}
+
+Wir betrachten nun den Spezialfall, dass die
+Mannigfaltigkeit\index{Mannigfaltigkeit!eingebettete} 
+$M$ eine Untermenge
+eines euklidischen Raumes ist, beispielsweise
+eine 2-dimensionale Kugeloberfl\"ache, die
+als Teilmenge des $\mathbb{R}^3$ aufgefasst
+wird und durch die Bedingung
+\begin{equation}
+          x^2 + y^2 + z^2 = R^2
+\end{equation}
+definiert ist.\index{Kugeloberfl\"ache!Koordinaten} 
+Die \"ubliche Karte f\"ur\index{Kugeloberfl\"ache}
+die Kugeloberfl\"ache f\"uhrt zur
+Parametrisierung Winkel ein:
+\begin{equation}
+     x= R \cos \varphi \cos \theta  ~~~ 
+     y= R  \sin \varphi \cos \theta ~~~ 
+     z= R \sin \theta  \, .
+\end{equation}
+Ein Vergleich mit einer Weltkarte zeigt, dass
+$\varphi\in [0,2\pi)$ dem L\"angengrad und 
+$\theta \in (-\pi/2,+\pi/2)$ dem Breitengrad 
+entspricht.\footnote{Gew\"ohnlich definiert man 
+$\theta\in (0,\pi)$,
+wobei $\theta=0$ dem Nord- und $\theta=\pi$
+dem S\"udpol entspricht; daher unterscheiden
+sich die Formeln hier von denen in den
+\"ublichen Formelsammlung dadurch, dass
+$\cos \theta$ durch $\sin \theta$ etc.\ zu
+ersetzen ist.}
+Die Karte verliert ihre G\"ultigkeit am Nord- und 
+S\"udpol (dort br\"auchte man andere Karten),
+da f\"ur $\theta = \pm \pi /2$  
+die Punkte unabh\"angig vom Winkel $\varphi$ 
+bereits festliegen. Anders ausgedr\"uckt, alle
+Punkte $(\varphi,\pm \pi /2)$ haben als Bild
+den Nord- bzw.\ S\"udpol, damit w\"are hier die Beziehung 
+zwischen den Punkten auf der Kugel und den
+Punkten auf der Karte (w\"urde man die Werte
+$\theta=\pm \pi /2$ zulassen)
+nicht mehr bijektiv.
+
+Unsere Kartenabbildung lautet somit
+\begin{equation}
+   \phi~:~ (x,y,z) \rightarrow (\varphi,\theta) 
+\end{equation} 
+mit
+\begin{equation}
+   \varphi = \arctan \frac{y}{x}  \hspace{1cm}
+    \theta = \arctan \frac{z}{\sqrt{x^2+y^2}}  \, .  
+\end{equation}
+(Die genauen Definitionsbereiche
+und \glqq \"Aste\grqq, die man beim inversen
+Tangens zu nehmen hat, sind
+technische Details.)
+
+Da die Kugeloberfl\"ache in den $\mathbb{R}^3$ 
+eingebettet ist, liegen die Ableitungsvektoren,
+die man von Bahnkurven auf der Kugeloberfl\"ache
+erh\"alt, ebenfalls im $\mathbb{R}^3$. Man kann
+auf diese Weise den Tangentialraum an einen
+Punkt der Kugeloberfl\"ache als affinen
+Teilraum des $\mathbb{R}^3$ konstruieren.
+Das ist allerdings etwas irref\"uhrend, denn
+der Tangentenraum an einem Punkt ist
+ein Vektorraum (und nicht ein affiner
+Vektorraum), d.h., der Nullpunkt des Tangentenraums
+ist im Allgemeinen nicht der Nullpunkt des
+einbettenden $\mathbb{R}^3$. Streng genommen
+handelt es sich um einen anderen Raum:
+Die Kugeloberfl\"ache mit all ihren 
+Tangentenr\"aumen ist ein 4-dimensionaler
+Raum und nicht der einbettende 3-dimensionale
+Raum. 
+
+Statt nun s\"amtliche Bahnkurven durch einen
+Punkt zu betrachten, kann man einfach
+die beiden Kurven durch einen Punkt $p$
+(parametrisiert durch $(\varphi_p,\theta_p)$) betrachten, 
+bei einen eine der Koordinaten festgehalten wird,
+d.h.\ man betrachtet die beiden Kurven, die
+den Koordinatenlinien durch $p$ entsprechen.
+Die Ableitungsvektoren sind dann
+(bei der Kugeloberfl\"ache):
+\begin{eqnarray}
+\label{eq_Basphi}
+  \vec{e}_\varphi &=& \left.  \frac{\partial}{\partial \varphi} \vec{x}(\varphi,\theta_p)
+   \right|_{\varphi=\varphi_p}  =
+   R(-\sin \varphi_p \cos \theta_p, \cos \varphi_p \cos \theta_p, 0) \\
+\label{eq_Bastheta}   
+  \vec{e}_\theta &=&  \left.  \frac{\partial}{\partial \theta} \vec{x}(\varphi_p,\theta)
+   \right|_{\theta=\theta_p}  =
+   R(-\cos \varphi_p \sin \theta_p, -\sin \varphi_p \sin \theta_p,
+   \cos \theta )  \,  .
+\end{eqnarray}
+Diese beiden speziellen Tangentialvektoren spannen
+den Tangentialraum am Punkte $p$ auf. Die
+Ableitung von einem beliebigen Weg durch $p$
+am diesem Punkt (also ein beliebiger Tangentialvektor)
+l\"asst sich immer als Linearkombination dieser beiden
+Vektoren schreiben.
+
+Wir k\"onnen das oben Gesagte nun leicht
+verallgemeinern. Sei der einbettende Raum
+$\mathbb{R}^m$ und die Mannigfaltigkeit
+$M$ durch eine Abbildung
+\begin{equation}
+     \phi^{-1} : (u_1, ..., u_n) \mapsto \vec{x}(u_1,...,u_n)
+\end{equation}
+gegeben. Die Koordinaten $\{(u_1,...,u_n)\}$ parametrisieren
+also die Mannigfaltigkeit $M$ als Unterraum des 
+$\mathbb{R}^m$. An jedem Punkt definieren die
+Tangentialvektoren
+\begin{equation}
+\label{eq_TangBas}
+      \vec{e}_i = \frac{\partial \vec{x}(u_1,...,u_n)}{\partial u_i}
+      \hspace{2cm} (i=1,...,n)
+\end{equation}
+eine Basis, welche den Tangentialraum aufspannen.
+
+Man beachte, dass diese Basis im Allgemeinen
+keine normierte oder orthogonale Basis sein muss
+(siehe Abschnitt \ref{sec_InduzMet}).
+
+\section{Die Metrik}
+
+Die fundamentale Struktur der Allgemeinen Relativit\"atstheorie ist
+\index{Metrik}%
+das metrische Feld $g_{\mu \nu}(x)$, wobei $x$ eine beliebige
+Parametrisierung der Raumzeit darstellt. 
+Ein solches Feld ordnet somit
+jedem Punkte $p$ der Raumzeit (also jedem Ereignis) -- 
+dargestellt durch seine Koordinaten
+$x=\phi(p)$ -- einen Tensor $g_{ \mu \nu}$ zu, 
+mit dem wir \glqq Abst\"ande\grqq\ bestimmen k\"onnen. 
+Technisch gesprochen ist $g_{\mu \nu}(x)$ eine 
+(nicht-entartete) symmetrische Bilinearform 
+auf dem Tangentenraum (der nat\"urlich ein Vektorraum ist)
+am Punkte $p$. Das bedeutet, $g_{\mu \nu}$ ist auf zwei
+Vektoren (Tangentialvektoren, also $\frac{{\rm d}x}{{\rm d}t}$
+bez\"uglich eines Weges $x(t)$) anzuwenden, m\"ochte
+man einen
+invarianten, also vom Koordinatensystem unabh\"angigen
+Ausdruck erhalten. 
+
+Es gibt aber auch eine sehr 
+anschauliche Beziehung: Seien $p$ und $p'$
+zwei \glqq infinitesimal\grqq\ benachbarte Punkte der
+Mannigfaltigkeit mit den Koordinaten $x^\mu$ und 
+$x^{\prime \,\mu}$. Da die
+Punkte sehr eng beieinander liegen, unterscheiden sich
+auch die Koordinaten nur um infinitesimale 
+Ausdr\"ucke ${\rm d}x^\mu$. Der Abstand ${\rm d}s$ zwischen
+$p$ und $p'$ -- hier handelt es sich um einen 
+Abstand auf der Mannigfaltigkeit --
+ist dann gegeben durch
+\begin{equation}
+\label{eq_ds2}
+     {\rm d}s^2 = g_{\mu \nu} \,{\rm d}x^\mu \,{\rm d}x^\nu
+\end{equation} 
+bzw.
+\begin{equation}
+     {\rm d}s = \sqrt{g_{\mu \nu} {\rm d}x^\mu {\rm d}x^\nu} \, .
+\end{equation} 
+In diesen Ausdr\"ucken wurde die Einstein'sche
+Summenkonvention\index{Summenkonvention, Einstein'sche} 
+angewand, d.h.\ \"uber doppelt
+auftretende Indizes (einer oben und einer unten) ist
+zu summieren. Wir werden diese Beziehung in Zukunft
+h\"aufiger verwenden und auch noch genauer
+untersuchen. Falls es irritiert, dass die Metrix $g_{\mu \nu}$,
+die eigentlich auf Vektoren des Tangentialraums
+angewandt wird, hier auf infinitesimale Koordinatendifferenzen
+angewandt wird, kann man diese Gleichung f\"ur
+eine beliebige Kurve $x(t)$ durch den Punkt $p$
+(bei $t=0$) und den Punkt $p'$ (bei $t={\rm d}t$) auch in der Form
+\begin{equation}
+         {\rm d}s = \sqrt{g_{\mu \nu}\frac{{\rm d}x^\mu}{{\rm d}t}
+         \frac{{\rm d}x^\nu}{{\rm d}t} } ~{\rm d}t =
+         \sqrt{g_{\mu \nu} \dot{x}^\mu \dot{x}^\nu}~ {\rm d}t
+\end{equation}
+lesen. 
+
+Die Raumzeit hat 
+lokal die Struktur eines Minkowski-Raums, das bedeutet, auch
+die Metrik hat die
+Signatur der Minkowski-Metrik: sgn$(g)=(1,-1,-1,-1)$. Man spricht
+in der Relativit\"atstheorie daher
+auch manchmal von einer 
+Pseudometrik\index{Pseudometrik}. 
+Bei der angegebenen Wahl der Vorzeichen hat ein
+raumartiger Vektor (der also au\ss erhalb des zuk\"unftigen
+bzw.\ auf die Vergangenheit bezogenen Lichtkegels liegt)
+eine \glqq negative Norm\grqq, d.h.\ der Ausdruck in Gl.\ \ref{eq_ds2}
+wird negativ. Wollen wir einen sinnvollen 
+r\"aumlichen Abstand
+erhalten, m\"ussen wir daher bei raumartigen Ereignissen
+das Negative dieses Ausdrucks w\"ahlen:
+\begin{equation}
+     {\rm d}l = \sqrt{-g_{\mu \nu} {\rm d}x^\mu {\rm d}x^\nu} \, .
+\end{equation} 
+Diese Problematik (dass es sich bei $g_{\mu \nu}$ nicht
+wirklich um eine Metrik im mathematischen Sinne handelt)
+spielt zwar in der Relativit\"atstheorie eine wichtige Rolle --
+sie definiert insbesondere die kausale Lichtkegelstruktur --
+ist aber vom differentialgeometrischen Standpunkt zum
+Gl\"uck nicht so einschneidend, und die meisten Konzepte der
+gew\"ohnlichen Differentialgeometrie lassen sich auf die
+\glqq Pseudo-Riemann'sche Geometrie\grqq\ \"ubertragen.
+
+Die Metrik erlaubt es, die (Pseudo)-L\"ange von Wegen anzugeben. F\"ur
+einen zeitartigen Weg $x^\mu(t)$ 
+ergibt sich beispielsweise als Eigenzeit\index{Eigenzeit}
+\[  T ~=~  \int {\rm d}\tau = \int 
+    \sqrt{g_{\mu \nu} \dot{x}^\mu \dot{x}^\nu}\,  {\rm d} t \;.\]   
+Geod\"aten sind station\"are Punkte dieses Funktionals. Ein
+Einfluss der Minkwoski-Struktur der Raumzeit ist,
+dass es sich bei Geod\"aten
+um Wege mit einer {\em maximalen} Eigenzeit (im Gegensatz
+zu den Geod\"aten der ge\-w\"ohn\-lichen Geometrie, die
+eine {\em minimale} L\"ange haben) handelt. 
+
+In der Relativit\"atstheorie legt die Metrik auch die kausale
+Struktur fest\index{kausale Struktur} 
+(im Augenblick lassen wir globale topologische
+Eigenschaften mal beiseite): Zu jedem Ereignis $p$ gibt es
+den Zukunfts- und den\index{Lichtkegel} 
+Vergangenheitslichtkegel.
+Diese trennen Ereignisse, die mit $p$ durch
+physikalische Weltlinien (mit zeitartigen Tangenten, also
+$g_{\mu \nu}\dot{x}^\mu \dot{x}^\nu > 0$) verbunden 
+werden k\"onnen, von
+solchen Ereignissen, f\"ur die es solche Wege nicht gibt.
+Zukunfts- und Vergangenheitslichtkegel unterscheiden
+sich nochmals durch die Vorzeichen der 0-Komponente
+solcher Wege. Innerhalb des Zukunftslichtkegels
+befinden sich die Ereignisse, die von $p$ kausal beeinflusst
+werden k\"onnen (zu diesen Ereignissen gibt es von $p$
+aus Weltlinien mit nicht raumartigen Tangentenvektoren).
+Umgekehrt liegen innerhalb des Vergangenheitslichtkegels
+die Ereignisse, die $p$ kausal beeinflussen k\"onnen. 
+Zu den Ereignissen au\ss erhalb des Lichtkegels gibt
+es keine kausale Beziehung. Die kausale Struktur zwischen 
+den Ereignissen einer Mannigfaltigkeit legt die Metrik schon
+weitgehend fest: Die Freiheit besteht lediglich in einem
+Skalarfeld, das die Metrik lokal mit einem Faktor multipliziert.
+Allgemein wird in einer Karte der
+Lichtkegel nun nicht mehr unbedingt durch gerade Linien
+dargestellt. 
+
+\subsection{Induzierte Metrik bei Einbettungen}
+\label{sec_InduzMet}
+
+Handelt es sich bei der Mannigfaltigkeit $M$
+um eine in den $\mathbb{R}^m$ eingebettete
+Untermannigfaltigkeit (vgl.\ Abschnitt \ref{sec_Einbett}),
+die durch eine Parameterdarstellung definiert ist,
+so bilden die Vektoren $\vec{e}_i$
+(Gl.\ \ref{eq_TangBas}) eine Basis des Tangentialraums. 
+Wie schon erw\"ahnt, handelt es sich im Allgemeinen
+nicht um eine Orthonormalbasis. 
+Daher definiert man eine symmetrische
+Bilinearform
+\begin{equation}
+            g_{ij} = \vec{e}_i \cdot \vec{e}_j =
+          \frac{\partial \vec{x}(u_1,...,u_n)}{\partial u_i} \cdot 
+          \frac{\partial \vec{x}(u_1,...,u_n)}{\partial u_j} \, .
+\end{equation}
+Diese Gr\"o\ss e ist die durch die Einbettung in den
+$\mathbb{R}^m$\index{Metrik!induzierte} 
+{\em induzierte} Metrik im Tangentialraum
+an jedem Punkt. 
+
+Betrachten wir als Beispiel nochmals die
+Kugel\index{Kugeloberfl\"ache!induzierte Metriken} 
+und ihre Parametrisierung durch
+L\"angengrad- und Breitengradwinkel
+$(\varphi, \theta)$. Wir hatten die zugeh\"origen
+Basisvektoren im Tangentialraum (an einem
+Punkt, parametrisiert durch $(\varphi,\theta)$)
+bereits berechnet (Gl.en \ref{eq_Basphi} und
+\ref{eq_Bastheta}) und erhalten daraus f\"ur
+die Metrik:
+\begin{eqnarray}
+   g_{\varphi \varphi} = \vec{e}_\varphi \cdot \vec{e}_\varphi
+  = R^2 \cos^2 \theta   & &
+  \hspace{2cm}  g_{\varphi \theta}=  \vec{e}_\varphi \cdot \vec{e}_\theta = 0 \\ 
+    g_{\theta \varphi}=  \vec{e}_\theta \cdot \vec{e}_\varphi = 0  
+    \hspace{1.3cm} \mbox{~} & & \hspace{2cm}
+   g_{\theta \theta} = \vec{e}_\theta \cdot \vec{e}_\theta
+  = R^2      
+  \end{eqnarray}
+oder
+\begin{equation}
+     g = R^2 \left( \begin{array}{cc}  \cos^2 \theta & 0 \\
+     0 &  1 \end{array} \right)  \, .
+\end{equation}
+Statt dessen k\"onnen wir auch schreiben:
+\begin{equation}
+\label{eq_Kugelmetrik}
+      {\rm d}s^2 =  R^2 \cos^2 \theta \, ({\rm d}\varphi)^2 +
+         R^2 \, ({\rm d}\theta)^2  \, .
+\end{equation}
+
+
+\subsection{Projektionen und die Metrik von Landkarten}
+
+Die Bedeutung der Metrik kann man sich sehr gut anhand einer
+Landkarte verdeutlichen. Jede\index{Metrik!Ma\ss stabfaktor} 
+Landkarte hat einen
+Ma\ss stab, der angibt, wie gro\ss\ der Abstand
+zwischen zwei Punkten in Wirklichkeit -- d.h.\ auf der
+Erdoberfl\"ache -- ist, wenn der Abstand der zugeh\"origen
+Punkte auf der Landkarte bekannt ist. Eine Angabe von
+1:30\,000 besagt, dass 1 Zentimeter auf der Landkarte
+in Wirklichkeit 30\,000 Zentimetern oder 300 Metern
+entspricht. In gewisser Hinsicht entspricht die Metrik
+einem solchen Ma\ss stabsfaktor.
+
+Als Koordinaten w\"ahlt man auf der Erdoberfl\"ache
+meist die L\"angen- und Breitengrade. In einer
+Landkarte entsprechen die L\"angen- und Breitengrade
+Linien, die oft horizontal und vertikal verlaufen, insbesondere
+also senkrecht aufeinander stehen. Seien $\Delta x$ 
+und $\Delta y$ die \glqq Koordinatenabst\"ande\grqq\
+zwischen zwei nicht zu weit voneinander entfernten
+Punkten auf der Landkarte, also die Abst\"ande 
+entlang der Breiten- und L\"angengrade, dann ist
+der physikalische (wirkliche) Abstand zwischen den beiden
+Punkten gleich
+\begin{equation}
+         \Delta s^2 = m^2 \Big(  (\Delta x)^2 + (\Delta y)^2 \Big)
+\end{equation}
+wobei $m$ der oben genannte Ma\ss stabsfaktor ist.
+In diesem Fall w\"are $g_{\mu \nu}= m^2 \delta_{\mu \nu}$,
+das hei\ss t, die Metrik ist eine Diagonalmatrix und
+die Diagonalelemente sind alle gleich und konstant
+(gleich dem Quadrat des Ma\ss stabfaktors).
+ 
+Bei Landkarten, die ein gr\"o\ss eres Gebiet
+darstellen, reicht die Angabe eines festen Ma\ss stabs
+nicht mehr aus. Die Erdoberfl\"ache
+ist n\"aherungsweise eine Kugel, die nicht 
+verzerrungsfrei (und, wie wir noch diskutieren 
+werden, auch nicht \glqq singularit\"atenfrei\grqq) in 
+einer Ebene dargestellt werden
+kann. Das bedeutet, an unterschiedlichen Punkten
+der Karte muss ein unterschiedlicher Ma\ss stab
+angesetzt werden. Bei Karten, bei denen es auf
+eine genaue Ortsangabe ankommt, beispielsweise
+bei See- oder Flugkarten, sind daher manchmal 
+Korrekturterme angegeben, denen man entnehmen
+kann, wie sich der Ma\ss stab ver\"andert, wenn
+man sich beispielsweise vom Zentrum der Karte
+entfernt. Au\ss erdem kann der Ma\ss stab
+noch von der Richtung abh\"angen. Bei vielen
+Weltkarten ist der Ma\ss stab in Nord-S\"udrichtung
+nahezu konstant, wohingegen der Ma\ss stab in
+Ost-West-Richtung gerade in der N\"ahe der Pole
+sehr variieren kann. Und w\"ahlt man schlie\ss lich
+noch eine Kartendarstellung, bei der die
+L\"angen- und Breitengrade nicht senkrecht
+aufeinander stehen, muss man den allgemeinen
+Kosinus-Satz anwenden, um aus den 
+Koordinatendifferenzen den tats\"achlichen
+Abstand berechnen zu k\"onnen, und damit
+erh\"alt man in der Formel f\"ur $\Delta s^2$
+auch Produktterme  der Form $\Delta x \Delta y$.
+
+\subsection{Koordinatensingularit\"aten}
+
+Koordinatensingularit\"aten 
+sind\index{Koordinatensingularit\"aten}
+singul\"are Bereiche einer Karte, die aber
+keine Singularit\"at der Mannigfaltikeit
+sind. Ein singul\"arer Kartenbereich
+tritt auf, wenn die Metrik entweder einen
+Nullmod oder aber einen singul\"aren
+Mod (also eine Unendlichkeit) hat.
+
+Ein Beispiel haben wir schon
+bei der L\"angen- und Breitengradbeschreibung
+einer Kugel kennengelernt: Die Metrik
+wird am Nord- und S\"udpol singul\"ar,
+da dort einer der beiden Eigenwerte
+verschwindet. Anschaulich bedeutet dies,
+dass am Nord- und S\"udpol ein endlicher
+Kartenabstand (also endliche
+${\rm d}x^\mu$) zu einem verschwindenen
+tats\"achlichen Abstand ${\rm d}s$ 
+geh\"ort. Bei den Punkten $\theta=\pm \pi/2$ 
+verschwindet offensichtlich ein
+Eigenwert der Metrik
+\begin{equation}
+    {\rm d}s^2 = \cos \theta \, {\rm d}\varphi^2
+      + {\rm d}\theta^2  \, .
+\end{equation}
+Selbstverst\"andlich sind diese
+singul\"aren Stellen der Metrik in Wirklichkeit
+keine Singularit\"aten: Der Nord- und
+S\"udpol sind ebenso regul\"ar auf
+der Kugel wie jeder andere Punkt.
+
+Es gibt auch noch \glqq schlimmere\grqq\
+Koordinatensingularit\"aten. Betrachten
+wir dazu als Beispiel eine horizontale
+Zylinderprojektion der Kugel bzw.\ die
+Zylinderkoordinaten einer Kugel. Das
+bedeutet, jeder L\"angengrad wird wieder
+auf eine Gerade zu einem Winkel
+$\varphi$ abgebildet, aber statt des
+Breitengrads verwenden wir nun einfach
+die $z$-Koordinate. Wir k\"onnen also
+jeden Punkt auf der Kugel durch die
+Koordinaten $\varphi$ und $z$
+ausdr\"ucken:\index{Kugeloberfl\"ache!Zylinderprojektion} 
+\begin{equation}
+    \vec{x} = 
+    (\sqrt{R^2-z^2} \cos \varphi, \sqrt{R^2-z^2} \sin \varphi, z) \, .
+\end{equation}
+Die Tangentialvektoren zu den Koordinatenlinien
+sind nun
+\begin{eqnarray}
+  \vec{e}_\varphi &=& \sqrt{R^2-z^2} (-\sin \varphi, \cos \varphi, 0) \\
+  \vec{e}_z &=& \left( -\frac{z}{\sqrt{R^2-z^2}} \cos \varphi, 
+     - \frac{z}{\sqrt{R^2-z^2}} \sin \varphi , 1 \right) \, ,
+\end{eqnarray}
+womit wir f\"ur die Metrik erhalten:
+\begin{equation}
+\label{eq_Kugelsingularitaet}
+   {\rm d}s^2 = (R^2- z^2) {\rm d}\varphi^2 +
+       \frac{R^2}{R^2-z^2} {\rm d}z^2 \, .
+\end{equation}
+In diesem Fall verschwindet ein
+Eigenwert der Metrik bei $z=\pm R$ (also am
+Nord- und S\"udpol) und der andere
+Eigenwert wird unendlich. Das Produkt
+der beiden Eigenwerte bleibt in diesem
+Fall allerdings konstant. Eine ganz
+\"ahnliche Situation werden wir sp\"ater
+am Horizont eines Schwarzen Loches
+wiederfinden. 
+
+\begin{figure}[htb]
+\begin{picture}(120,150)(0,0)
+\qbezier(0,70)(0,90.7)(14.65,105.36)
+\qbezier(14.65,105.36)(29.3,120)(50,120)
+\qbezier(50,120)(70.7,120)(85.36,105.36)
+\qbezier(85.36,105.36)(100,90.7)(100,70)
+\qbezier(0,70)(0,49.3)(14.65,34.65)
+\qbezier(14.65,34.65)(29.3,20)(50,20)
+\qbezier(50,20)(70.7,20)(85.36,34.65)
+\qbezier(85.36,34.65)(100,49.3)(100,70)
+%
+\qbezier(0,130)(0,135)(50,135)
+\qbezier(50,135)(100,135)(100,130)
+\qbezier(0,130)(0,125)(50,125)
+\qbezier(50,125)(100,125)(100,130)
+\qbezier(0,10)(0,15)(50,15)
+\qbezier(50,15)(100,15)(100,10)
+\qbezier(0,10)(0,5)(50,5)
+\qbezier(50,5)(100,5)(100,10)
+%
+\qbezier(0,70)(0,75)(50,75)
+\qbezier(50,75)(100,75)(100,70)
+\qbezier(0,70)(0,65)(50,65)
+\qbezier(50,65)(100,65)(100,70)
+%
+\multiput(50,0)(0,6){22}{\line(0,1){4}}
+\put(50,132){\vector(0,1){15}}
+\put(0,10){\line(0,1){120}}
+\put(100,10){\line(0,1){120}}
+\put(50,70){\line(1,0){50}}
+\put(50,105.36){\line(1,0){50}}
+\put(75,80){\makebox(0,0){${\scriptstyle R}$}}
+\put(83,99){\makebox(0,0){${\scriptstyle P}$}}
+\put(106,105){\makebox(0,0){${\scriptstyle P'}$}}
+\put(85.36,105.36){\makebox(0,0){${\scriptstyle \bullet}$}}
+\put(100,105.36){\makebox(0,0){${\scriptstyle \bullet}$}}
+\end{picture}
+\begin{picture}(280,150)(0,0)
+\thicklines
+\put(0,20){\line(1,0){240}}
+\put(255,65){\makebox(0,0){${\scriptstyle \varphi}$}}
+\put(0,120){\line(1,0){240}}
+\put(0,20){\line(0,1){100}}
+\put(240,20){\line(0,1){100}}
+\thinlines
+\put(0,70){\vector(1,0){260}}
+\multiput(13.33,20)(13.33,0){17}{\line(0,1){100}}
+%
+\put(0,78.7){\line(1,0){240}}
+\put(0,87.1){\line(1,0){240}}
+\put(0,95){\line(1,0){240}}
+\put(0,102.1){\line(1,0){240}}
+\put(0,108.3){\line(1,0){240}}
+\put(0,113.3){\line(1,0){240}}
+\put(0,117){\line(1,0){240}}
+\put(0,119.0){\line(1,0){240}}
+%
+\end{picture}
+\caption{\label{fig_karte}%
+Spezielle Projektion einer Kugelfl\"ache auf einen
+Zylinder. (links) Jeder Punkt wird von der $z$-Achse aus
+senkrecht in radialer Richtung auf die Zylinderfl\"ache
+projiziert, z.B.\ der Punkt $P$ auf den Punkt $P'$. 
+(rechts) L\"angen- und Breitengrade in dieser
+Karte.} 
+\end{figure}
+
+Abbildung \ref{fig_karte} zeigt die angegebene Projektion
+der Kugelfl\"ache auf eine Ebene sowie die resultierende
+Karte mit einigen L\"angen- und Breitengraden. Man erkennt,
+dass die L\"angengraden in der Karte parallel sind (also
+einen konstanten Abstand voneinander haben), wohingegen
+die Abst\"ande zwischen den \glqq tats\"achlichen\grqq\ 
+L\"angengraden auf der Kugelfl\"ache Richtung Nord- oder
+S\"udpol immer kleiner werden. Der obere und untere Rand der
+Karte sind singul\"ar, insofern die gesamte Linie nur einem
+Punkt entspricht, das horizontale Ma\ss\ dort somit null wird.
+Die Breitengrade hingegen haben auf der Kugeloberfl\"ache
+immer denselben Abstand voneinander, werden in der
+Karte aber zum Nord- bzw.\ S\"udpol hin immer dichter.
+Das vertikale Ma\ss\ wird dort beliebig gro\ss. 
+
+Selbstverst\"andlich gilt 
+nach wie vor, dass die Kugel am Nord- und
+S\"udpol nicht singul\"ar ist, sondern
+lediglich eine schlechte Karte gew\"ahlt
+wurde. Es gibt nat\"urlich auch 
+Karten, die am Nord- und S\"udpol
+singularit\"atenfrei sind (siehe jeden
+Weltatlas). 
+
+Es gibt nat\"urlich auch tats\"achliche
+Singularit\"aten bei Mannigfaltigkeiten,
+beispielsweise im Zentrum eines
+Schwarzen Loches. Bei solchen
+Singularit\"aten wird auch die
+Metrik bzw.\ die Karte singul\"ar,
+allerdings l\"asst sich diese
+Singularit\"at nicht durch die Wahl
+einer anderen Karte beheben.
+Den Komponenten der Metrik sieht
+man nicht sofort an, ob es sich um
+eine Koordinatensingularit\"at oder
+eine echte Singularit\"at handelt.
+Dazu muss man geometrische
+Gr\"o\ss en betrachten, die nicht von
+der Wahl des Koordinatensystems
+abh\"angen, beispielsweise die
+skalare Kr\"ummung, die wir in
+Abschnitt \ref{sec_curvature}
+kennen lernen werden.
+
+\section{Der Levi-Civita-Zusammenhang}
+
+Der n\"achste Schritt beschreibt, 
+wie man einen Vektor (also
+ein Element eines Tangentialraums)
+entlang eines Weges auf der Mannigfaltigkeit
+parallel verschiebt.\index{Parallelverschiebung}
+Eine solche Parallelverschiebung ist
+aus zwei Gr\"unden wichtig: (1) Wir
+werden im n\"achsten Abschnitt die 
+Kr\"ummung \"uber 
+infinitesimale Parallelverschiebungen
+entlang geschlossener Wege definieren,
+und (2) m\"ochten wir die kr\"aftefreie 
+Bewegung definieren als eine 
+Bahnkurve, deren Tangentialvektor
+(also die Geschwindigkeit) 
+im Sinne einer Parallelverschiebung
+konstant bleibt.  
+
+\subsection{Die Christoffel-Symbole}
+
+In einem flachen euklidischen Raum mit 
+kartesischen Koordinaten k\"onnen wir 
+einfach sagen, zwei Vektoren sind
+parallel, wenn sie dieselben Komponenten
+haben. Bei einer parallelen Verschiebung
+in eine beliebige Richtung ${\rm d}x^\mu$ 
+\"andert der Vektor $X^\nu$ also seine 
+Komponenten nicht, oder
+\begin{equation}
+      \frac{\partial}{\partial x^\nu} X^\mu = 0 \, .
+\end{equation} 
+Anders ausgedr\"uckt \"andern sich die
+Komponenten eines Vektors nicht, wenn
+man ihn in eine Richtung ${\rm d}x^\nu$
+verschiebt, d.h.:
+\begin{equation}
+    \delta X^\mu(p) = X^\mu(p+{\rm d}x^\nu)-
+            X^\mu(p) = 0 \, . 
+\end{equation}
+Die etwas unmathematische Notation
+$p+{\rm d}x^\nu$ soll Folgendes andeuten:
+Der Punkt $p$ habe die Koordinaten $x^\mu(p)$
+und der infinitesimal benachbarte Punkt
+$q$ die Koordinaten $x^\mu(q)$. Die 
+Koordinaten dieser beiden Punkte unterscheiden
+sich um ${\rm d}x^\nu$.
+
+Auf einer allgemeinen Mannigfaltigkeit
+werden sich die Komponenten von einem
+Vektor $X^\mu$ ver\"andern, wenn er
+parallel zu einem Nachbarpunkt verschoben
+wird. Seien nun $p$ und $q$ zwei infinitesimal
+benachbarte Punkte, sodass f\"ur die Koordinaten
+gilt: $x^\mu(p)-x^\mu(q)={\rm d}x^\mu$. Die
+Komponenten des 
+Vektorfelds am Punkte $p$ seien $X^\mu(p)$
+und die am Punkte $q$ entsprechend
+$X^\mu(q)$. Wir wollen nun definieren, 
+unter welcher Bedingung die beiden Vektoren,
+ausgedr\"uckt durch ihre Komponenten, 
+parallel sind. Diese Vorschrift l\"asst sich 
+durch eine lineare Abbildung angeben, die
+nicht nur vom Punkte $p$ sondern auch noch
+von der Richtung abh\"angt, in
+welche die parallele Verschiebung erfolgt.
+Diese Gr\"o\ss e hat somit drei Indizes
+und man bezeichnet sie mit $\Gamma^\mu_{\nu \lambda}(p)$.
+
+Die folgende Gleichung definiert nun eine
+Parallelverschiebung: 
+\begin{equation}
+\label{eq_parallel}
+       \delta X^\mu = \Gamma^\mu_{\nu \lambda}
+                  X^\nu {\rm d}x^\lambda \, .
+\end{equation}
+Sie bedeutet Folgendes: $\delta X^\mu$ ist die
+Differenz zwischen der $\mu$-Koordinate des
+Vektors am Punkte $p$ und der $\mu$-Koordinate
+des zweiten Vektors am Punkte $q=p+{\rm d}x^\lambda$, 
+also $\delta X^\mu=X^\mu(p+{\rm d}x^\lambda) -
+X^\mu(p)$. Diese Differenz soll eine lineare
+Funktion der Komponenten von $X^\mu$ sein
+und ebenfalls linear von der Verschiebung
+${\rm d}x^\lambda$ abh\"angen. Wenn die
+obige Bedingung erf\"ullt ist, bezeichnet man die
+beiden Vektoren, deren Komponenten sich
+um $\delta X^\mu$ unterscheiden, als parallel.
+
+Wir m\"ussen uns nun \"uberlegen, welche
+Bedingungen wir an diese Abbildung, die man
+auch als\index{Zusammenhang} 
+{\em Zusammenhang} bezeichnet, stellen.
+Bei allgemeinen Vektorr\"aumen ist man hier
+vollkommen frei, d.h., es kann sich um eine
+vollkommen beliebige (allerdings umkehrbare)
+lineare Abbildung handeln. Sind jedoch auf
+dem Vektorraum zus\"atzliche Strukturen 
+definiert, sollte die Parallelverschiebung diese
+Strukturen nach M\"oglichkeit erhalten.
+In unserem Fall ist auf der Mannigfaltigkeit
+eine Metrik definiert und man wird von einer
+Parallelverschiebung erwarten, dass sie das
+Skalarprodukt von Vektoren nicht ver\"andert.
+Einen solchen Zusammenhang bezeichnet
+man auch als\index{Zusammenhang!metrischer} 
+{\em metrischen Zusammenhang}.
+Wenn also {\em zwei} Vektoren $X$ und $Y$
+definiert sind, dann soll ihr Skalarprodukt
+am Punkte $p$ dasselbe sein, wie das
+Skalarprodukt ihrer Parallelverschiebungen
+am Punkte $q$. Das f\"uhrt auf folgende
+Bedingung:
+\begin{equation}
+  g_{\mu \nu}(p) X^\mu(p) Y^\nu(p) =
+  g_{\mu \nu}(q) )X^\mu(q)Y^\mu(q)  \, .
+  \end{equation} 
+Diese Gleichung ist zun\"achst nur
+f\"ur infinitesimal benachbarte Punkte
+(mit der Verschiebungsrichtung
+${\rm d}x^\mu$) sinnvoll, da im allgemeinen
+eine Parallelverschiebung von dem
+Weg abh\"angt, entlang dem die
+Vektoren verschoben wurden (siehe auch 
+den Anhang zu Faserb\"undeln in
+dem Skript zur QFT).   
+  
+Wir schreiben nun f\"ur die Koordinaten von 
+$q$: $x^\lambda(q)=x^\lambda(p)+{\rm d}x^\lambda$
+und entwickeln den Ausdruck auf der rechten Seite
+bis zu linearen Termen in ${\rm d}x^\lambda$. Die
+f\"uhrende Ordnung hebt sich nat\"urlich auf der
+linken und rechten Seite weg.
+\begin{equation}
+ 0 = \frac{\partial g_{\mu \nu}}{\partial x^\lambda}
+     {\rm d}x^\lambda X^\mu Y^\nu +
+   g_{\mu \nu} \Gamma^{\mu}_{\alpha \lambda}X^\alpha
+      {\rm d}x^\lambda Y^\nu + g_{\mu \nu}
+     X^\mu \Gamma^{\nu}_{\alpha \lambda} Y^\alpha
+      {\rm d}x^\lambda \, .    
+\end{equation}
+S\"amtliche Terme in diesem Ausdruck sind nun
+als Ausdr\"ucke am Punkt $p$ zu verstehen.
+In der folgenden Gleichung sind lediglich die
+Summationsindizes umbenannt und die gleichen
+Terme ausgeklammert worden:
+\begin{equation}
+ 0 = \left( \frac{\partial g_{\mu \nu}}{\partial x^\lambda} +
+   g_{\alpha \nu} \Gamma^{\alpha}_{\mu \lambda}
+       + g_{\mu \alpha}
+      \Gamma^{\alpha}_{\nu \lambda}
+       \right) {\rm d}x^\lambda X^\mu Y^\nu\, .    
+\end{equation}
+Da diese Bedingungsgleichung f\"ur eine
+Parallelverschiebung f\"ur beliebige Vektorfelder
+$X$ und $Y$ sowie beliebige Verschiebungsrichtungen
+${\rm d}x^\lambda$ gelten soll, muss der Ausdruck in
+der Klammer verschwinden:
+\begin{equation}
+\label{eq_kovg}
+ 0 =  \frac{\partial g_{\mu \nu}}{\partial x^\lambda} +
+   g_{\alpha \nu} \Gamma^{\alpha}_{\mu \lambda}
+     + g_{\mu \alpha} \Gamma^{\alpha}_{\nu \lambda}
+        \, .    
+\end{equation}
+Diese Gleichung ist noch nicht eindeutig nach den
+$\Gamma$-Symbolen, die man auch als
+{\em Christoffel-Symbole}\index{Christoffel-Symbole} 
+bezeichnet, aufl\"osbar.
+Man fordert f\"ur den so genannten\index{Levi-Civita-Zusammenhang} 
+Levi-Civita-Zusammenhang
+noch die\index{Torsionsfreiheit} 
+{\em Torsionsfreiheit}, d.h., die $\Gamma$-Symbole
+sollen in den beiden unteren Indizes symmetrisch sein.
+Anschaulich bedeutet dies, dass die Ableitung der
+$\mu$-Komponente eins Vektorfeldes in $\nu$-Richtung
+gleich der Ableitung der $\nu$-Komponente in
+$\mu$-Richtung sein soll. Diese beiden Forderungen --
+es soll sich um einen metrischen und torsionsfreien
+Zusammenhang handeln -- legen den
+Levi-Civita-Zusammenhang und damit die
+Christoffel-Symbole als Funktion der Metrik
+fest:
+\[  \Gamma^\lambda_{\mu \nu} ~=~ \frac{1}{2} g^{\lambda \kappa} \left[ 
+    \frac{\partial g_{\kappa \nu}}{\partial x^\mu} +
+    \frac{\partial g_{\kappa \mu}}{\partial x^\nu} -
+    \frac{\partial g_{\mu \nu}}{\partial x^\kappa} \right]  \;.  \]
+
+\subsection{Ein paar mathematische Zwischenbemerkungen}
+
+Der Mathematiker versucht, geometrische Konstruktionen
+m\"oglichst unabh\"angig von einer Wahl der Koordinaten
+zu definieren. Ausgangspunkt ist meist ein Vektorfeld $X$,
+das entlang bestimmter Richtungen abgeleitet werden soll.
+Diese Richtungen werden wiederum koordinatenunabh\"angig
+durch ein zweites Vektorfeld $Y$ definiert. Dazu muss 
+zun\"achst gezeigt werden, dass jedes Vektorfeld $Y$
+(zumindest in einer offenen Umgebung, also einer Karte)
+Integralkurven besitzt, also eine L\"osungsschar von Wegen
+$\gamma(t)$, deren Tangentialvektoren an jedem Punkt
+$p$ gleich $Y(p)$ sind. Dann kann man ein
+Vektorfeld $X$ nach dem Vektorfeld $Y$ ableiten.
+
+Eine spezielle Ableitung, die so genannte\index{kovariante Ableitung} 
+{\em kovariante
+Ableitung}, gibt nun an, unter welchen Bedingungen ein
+Vektorfeld $X$, abgeleitet nach einem Vektorfeld $Y$
+\glqq konstant\grqq\ ist, also in Richtung der Integralkurven
+von $Y$ eine Parallelverschiebung von Vektoren darstellt. 
+Diese kovariante Ableitung bezeichnet man oft als
+$\nabla_Y$. Die Bedingung einer Parallelverschiebung
+lautet dann
+\begin{equation}
+             \nabla_Y X = 0 \, .
+\end{equation}  
+
+Zum Vergleich mit unserer Notation betrachten wir
+einen speziellen Weg $\gamma(t)$ durch den
+Punkt $p$, also $\gamma(0)=p$. In einer Karte
+werde dieser Weg durch $y^\mu(t)$ beschrieben. 
+Der Tangentialvektor in dieser Karte am Punkte
+$p$ ist somit 
+\begin{equation}
+        Y^\mu(p) = \left. \frac{{\rm d}y^\mu(t)}{{\rm d}t} \right|_{t=0}\,  .
+\end{equation}
+Nun betrachten wir das Vektorfeld $X$, das entlang des
+Weges $\gamma(t)$ die Koordinaten $X^\mu(t)$ haben soll.
+Wir sagen, dieses Vektorfeld ist entlang des Weges
+$\gamma(t)$ (am Punkte $p$) eine Parallelverschiebung,
+wenn
+\begin{equation}
+          \frac{{\rm d}X^\mu(t)}{{\rm d}t} =
+          \frac{\partial X^\mu}{\partial y^\lambda}
+          \frac{{\rm d}y^\lambda(t)}{{\rm d}t} 
+             = \Gamma^{\mu}_{\nu \lambda} X^\nu(t) 
+             \frac{{\rm d}y^\lambda(t)}{{\rm d}t} 
+ \end{equation}            
+ist, bzw.
+\begin{equation}
+    \frac{\partial X^\mu}{\partial y^\lambda} =
+          \Gamma^{\mu}_{\nu \lambda} X^\nu \, .
+\end{equation}
+Die kovariante Ableitung in Richtung der
+Koordinate $\lambda$ ist somit:
+\begin{equation}
+     \nabla_\lambda X^\mu :=  
+      \partial_\lambda X^\mu - \Gamma^\mu_{\nu \lambda} X^\nu \, ,
+\end{equation}
+und das Verschwinden der kovarianten Ableitung
+ist die Bedingung, dass es sich bei dem Vektorfeld
+$X^\mu$ um eine Parallelverschiebung in 
+Koordinatenrichtung $\lambda$ handelt.
+
+Abschlie\ss end m\"ochte ich noch anmerken,
+dass man auch f\"ur Tensoren eine kovariante
+Ableitung definieren kann. Gleichung \ref{eq_kovg}
+bedeutet dann, dass die kovariante Ableitung
+der Metrik verschwindet. Dies ist eine alternative
+Definition f\"ur einen metrischen Zusammenhang.
+
+\subsection{Ein Beispiel aus der klassischen Mechanik -- konstant 
+rotierende Bezugssysteme}
+
+In diesem Zwischenabschnitt m\"ochte ich darauf
+hinweisen, dass das Konzept der kovarianten
+Ableitung schon aus der Mechanik bekannt ist,
+allerdings meist nicht unter diesem Namen.
+Bei der Herleitung der Coriolis-Kraft betrachtet
+man ein ruhendes Inertialsystem und ein
+konstant rotierendes zweites Bezugssystem,
+dessen Ursprung mit dem ruhenden System
+zusammenfallen soll.
+
+Ein Bahnkurve $x^i(t)$ (hier verwende ich lateinische
+Indizes, da es sich um rein r\"aumliche Indizes
+handelt) im ruhenden System ist eine
+Gerade, wenn die zeitliche Ableitung 
+$v^i(t)=\frac{{\rm d}x^i(t)}{{\rm d}t}$ konstant 
+ist. Im rotierenden\index{kovariante Ableitung!rotierendes Bezugssystem} 
+System hingegen
+\"andern sich die Komponenten des 
+Geschwindigkeitsvektors st\"andig. Seien
+\begin{equation}
+  x'^i(t) = \sum_j R(t)^i_j x^j(t)            
+\end{equation}
+ die Koordinaten der Bahnkurve
+im rotierenden System (wobei $R(t)$ eine
+$t$-abh\"angige Rotationsmatrix darstellt) und entsprechend
+\begin{equation}
+     v'^{\,i}(t)=\frac{{\rm d}}{{\rm d}t} \sum_j R(t)^i_j x^j(t) 
+         = \sum_j \left( \frac{\rm d}{{\rm d}t} R(t)^i_j \right) x^j(t)
+         + \sum_j R(t)^i_j  \frac{\rm d}{{\rm d}t} x^j(t)
+\end{equation}
+die Komponenten der Geschwindigkeit
+im rotierenden System, dann gilt bekanntlich
+\begin{equation}
+       \vec{v}^{\, \prime}(t) = R(t) \left( \vec{v}(t) + 
+             \vec{\omega} \times \vec{x}(t) \right)  \, ,
+\end{equation}
+wobei $\vec{\omega}$ die Drehung charakterisiert,
+also die Richtung von $\vec{\omega}$ die
+Drehachse und der Betrag die Winkelgeschwindigkeit.
+Nun definiert man oft die kovariante
+Zeitableitung
+\begin{equation}  
+    \frac{{\rm D}}{{\rm D}t} \vec{x}(t) = \frac{\rm d}{{\rm d}t} \vec{x}(t) +
+         \vec{\omega} \times \vec{x}(t)  
+\end{equation}
+bzw.\ in Koordinaten
+\begin{equation}  
+    \frac{{\rm D}}{{\rm D}t} x^i(t) = \frac{\rm d}{{\rm d}t} x^i (t) +
+         \sum_{jk} \epsilon^i_{jk} \omega^j  x^k(t)  \, .
+\end{equation}
+Die Gr\"o\ss e $\Gamma^i_k=\sum_j \epsilon^i_{jk}\omega^j$
+definiert den Zusammenhang. Da die \glqq Mannigfaltigkeit\grqq\
+nur in der Zeitachse besteht, gibt es keinen gesonderten
+Index f\"ur die Richtung der Parallelverschiebung. Die
+kovariante Ableitung gibt an, wie sich die Komponenten
+eines Vektors im rotierenden System zeitlich
+ver\"andern m\"ussen, wenn dieser Vektor im ruhenden
+System konstant ist. Und die kovariante Ableitung
+verschwindet, wenn sich die Komponenten genau so
+ver\"andern, dass es sich bei dem Vektor im Inertialsystem
+um einen konstanten Vektor handelt.
+
+\subsection{Die Geod\"atengleichung}
+
+Wir formulieren nun eine\index{Geod\"atengleichung} 
+Geod\"atengleichung, d.h.\
+eine Gleichung f\"ur die k\"urzeste (in der Relativit\"atstheorie
+wegen der Pseudo-Riemann'schen Geometrie
+die l\"angste) Verbindungskurve zwischen zwei
+Punkten. Wir leiten diese Gleichung aus physikalischen 
+\"Uberlegungen zur Konstanz der Geschwindigkeit ab.
+
+Gegeben sei eine Bahnkurve $\gamma(\tau)$ mit ihrer
+Koordinatendarstellung $x^\mu(\tau)$, parametrisiert
+durch die Eigenzeit $\tau$. An jedem Punkt sei 
+\begin{equation}
+          u^\mu(\tau) = \frac{{\rm d}x^\mu(\tau)}{{\rm d}\tau}
+\end{equation}
+der Geschwindigkeitsvektor an die Kurve. Bei dem
+Geschwindigkeitsvektor handelt es sich um einen
+Tangentialvektor.
+
+Gew\"ohnlich sagen wir, eine Bahnkurve ist eine
+Gerade (oder Geod\"ate), wenn die Komponenten der
+Geschwindigkeit konstant sind, sich also entlang der 
+Bahnkurve nicht \"andern. Auf einer Mannigfaltigkeit
+mit einer Metrik bedeutet dies, dass sich die \"Anderung 
+der Komponenten von $u^\mu$ {\em in Richtung}
+der Geschwindigkeit nicht \"andern, bzw.
+\begin{equation}
+       {\rm d} u^\mu = -  \Gamma^\mu_{\nu \lambda} u^\nu
+          {\rm d}x^\lambda    \, ,
+\end{equation}
+wobei 
+\begin{equation}
+     {\rm d}x^\lambda = u^\lambda {\rm d}\tau
+\end{equation}
+in Richtung des Tangentialvektors zeigt. Damit erhalten
+wir als Geod\"atengleichung:
+\begin{equation}
+\label{geodaete}
+     \frac{{\rm d}u^\mu (\tau)}{{\rm d} \tau} ~=~
+       - \Gamma^\mu_{\nu \lambda} u^\nu u^\lambda  \;.   
+\end{equation}       
+Diese Gleichung ist gleichzeitig die Bewegungsgleichung
+f\"ur ein \glqq freies\grqq\ Teilchen auf einer
+Mannigfaltigkeit mit der Metrik $g_{\mu \nu}$. 
+Die Geschwindigkeit muss dabei f\"ur ein massives
+Teilchen noch der Bedingung
+\begin{equation}
+\label{eq_eigenm}
+      c^2 = g_{\mu \nu} \frac{{\rm d}x^\mu}{{\rm d}\tau}
+      \frac{{\rm d}x^\nu}{{\rm d}\tau}  \hspace{2cm}
+      m\neq 0 
+\end{equation}
+gen\"ugen, die im Wesentlichen angibt, dass es sich
+bei $\tau$ um die Eigenzeit handelt (in der gew\"ohnlichen
+Geometrie w\"urde sich $\tau$ auf die Bogenl\"ange
+beziehen). F\"ur ein masseloses Teilchen ist
+${\rm d}\tau=0$ und damit folgt f\"ur eine beliebige
+Parametrisierung die Geod\"atengleichung
+\begin{equation}
+      \frac{{\rm d}^2 x^\mu (\lambda)}{{\rm d} \lambda^2} ~=~
+       - \Gamma^\mu_{\nu \lambda} \frac{{\rm d}x^\nu}{{\rm d}\lambda}
+       \frac{{\rm d}x^\lambda}{{\rm d}\lambda}           
+\end{equation}
+mit der Einschr\"ankung
+\begin{equation}
+\label{eq_eigen0}
+      0 = g_{\mu \nu} \frac{{\rm d}x^\mu}{{\rm d}\lambda}
+      \frac{{\rm d}x^\nu}{{\rm d}\lambda}  \hspace{2cm}
+      m = 0\, . 
+\end{equation}
+
+Dieselbe Gleichung erh\"alt man auch als
+Euler-Lagrange-Gleichung aus dem L\"angenfunktional
+\begin{equation}
+\label{eq_freieTeilchen}
+      S =  \int  L(x(t),\dot{x}(t)) {\rm d} t  \hspace{0.7cm} {\rm mit}
+      \hspace{0.7cm}
+    L =  \sqrt{g_{\mu \nu}(x(t)) \dot{x}^\mu \dot{x}^\nu} \, .
+\end{equation}
+Die Ableitungen sind
+\begin{equation}
+   \frac{\partial L}{\partial x^\lambda(t)} =
+       \frac{1}{2 \sqrt{g_{\mu \nu}(x(t)) \dot{x}^\mu \dot{x}^\nu}}
+        \left( \frac{\partial g_{\mu \nu}}{\partial x^\lambda}
+          \dot{x}^\mu \dot{x}^\nu \right) 
+\end{equation}
+und
+\begin{equation}
+   \frac{{\rm d}}{{\rm d}t}  \frac{\partial L}{\partial \dot{x}^\lambda(t)} =
+   \frac{{\rm d}}{{\rm d}t}  \left(  \frac{1}{\sqrt{g_{\mu \nu}(x(t)) \dot{x}^\mu \dot{x}^\nu}}
+          g_{\mu \lambda}
+            \dot{x}^\mu \right) 
+\end{equation}
+und die Extrema findet man, indem man die beiden
+Ausdr\"ucke gleich setzt. Diese Gleichung wird sehr kompliziert,
+daher geht man auch hier meist zur Eigenzeitparametrisierung
+(Gl.\ \ref{eq_eigenm} bzw.\ f\"ur masselose Teilchen
+Gl.\ \ref{eq_eigen0}) 
+\"uber, wodurch man nahezu direkt die Geod\"atengleichung
+erh\"alt. 
+
+\section{Kr\"ummungstensoren}
+\label{sec_curvature}
+
+Der Levi-Civita-Zusammenhang bzw.\ die Christoffel-Symbole
+erlauben eine Parallelverschiebung eines Vektors in
+eine bestimmte Richtung. Sie erm\"oglichen damit den Vergleich
+zweier Vektoren an verschiedenen Punkten, sofern der eine
+Vektor entlang eines vorgegebenen Weges zu dem anderen
+Vektor parallel verschoben wird. Nun wollen
+wir einen Vektor entlang einer {\em geschlossenen} Bahnkurve
+parallel transportieren. Im Allgemeinen wird sich dabei
+der Vektor ver\"andern. Diese Ver\"anderung entlang
+geschlossener Bahnkurven ist ein Ma\ss\ f\"ur die
+geometrische Kr\"ummung der\index{Kugeloberfl\"ache!Parallelverschiebung} 
+Mannigfaltigkeit.\index{Parallelverschiebung!auf Kugeloberfl\"ache} 
+
+\begin{figure}[htb]
+\begin{picture}(170,120)(-20,0)
+\put(10,30){\line(5,1){100}}
+\put(10,30){\line(1,3){30}}
+\put(110,50){\line(-1,1){70}}
+\thicklines
+\put(10,30){\vector(-1,-1){12}}
+\put(60,40){\vector(-1,-1){12}}
+\put(110,50){\vector(-1,-1){12}}
+\put(75,85){\vector(-1,-1){12}}
+\put(40,120){\vector(-1,-1){12}}
+\put(25,75){\vector(-1,-1){12}}
+\put(60,5){\makebox(0,0){(a)}}
+\end{picture}
+%
+\begin{picture}(120,120)(0,0)
+\qbezier(8,75)(22,110)(60,111)
+\qbezier(60,111)(98,110)(112,75)
+\qbezier(8,35)(0,55)(8,75)
+\qbezier(112,35)(120,55)(112,75)
+\qbezier(4,55)(60,25)(116,55)
+\put(60,105){\circle*{5}}
+%
+\qbezier(60,105)(30,90)(23,47)
+\qbezier(60,105)(95,100)(110,52)
+%
+\put(58,104){\vector(4,-1){12}}
+\put(23,47){\vector(4,-1){12}}
+\put(35,82){\vector(4,-1){12}}
+\put(65,40){\vector(1,0){12}}
+\put(110,52){\vector(2,1){10}}
+\put(96,83){\vector(2,1){10}}
+\put(60,105){\vector(2,1){10}}
+
+\thicklines
+\put(58,104){\vector(-2,-1){18}}
+\put(23,47){\vector(0,-1){18}}
+\put(65,40){\vector(0,-1){18}}
+\put(110,52){\vector(0,-1){18}}
+\put(35,82){\vector(-2,-3){11}}
+\put(96,83){\vector(2,-3){10}}
+\put(60,105){\vector(4,-1){18}}
+\put(60,5){\makebox(0,0){(b)}}
+%
+\put(55,108){\makebox(0,0){${\scriptstyle 1}$}}
+\put(31,82){\makebox(0,0){${\scriptstyle 2}$}}
+\put(20,44){\makebox(0,0){${\scriptstyle 3}$}}
+\put(61,37){\makebox(0,0){${\scriptstyle 4}$}}
+\put(106,47){\makebox(0,0){${\scriptstyle 5}$}}
+\put(92,82){\makebox(0,0){${\scriptstyle 6}$}}
+\put(61,99){\makebox(0,0){${\scriptstyle 7}$}}
+\end{picture}
+\caption{\label{fig_Par}%
+(a) Wird ein Vektor in einer Ebene entlang der Kanten eines Dreiecks
+parallel verschoben, \"andert sich seine Richtung nicht. (b) F\"ur
+eine entsprechende Parallelverschiebung entlang von
+Gro\ss kreisen (jeweils um eine Viertel Vollkreisl\"ange) 
+entlang der Positionen 1 bis 7 (Position 7 = Position 1) 
+haben sich die Vektoren um $90^\circ$ gedreht.}
+\end{figure} 
+
+Wir betrachten zun\"achst ein vertrautes Beispiel auf
+der Kugeloberfl\"ache: Wird ein Vektor beginnend am
+Nordpol entlang eines L\"angengrads parallel zum
+\"Aquator transportiert, anschlie\ss end entlang
+des \"Aquators um einen Viertelkreis parallel verschoben
+und dann wieder entlang eines L\"angengrads zum
+Nordpol,
+so hat sich dieser Vektor im Vergleich zu Anfangszustand
+um $90^\circ$ gedreht (siehe Abb.\ \ref{fig_Par}). 
+Verkleinert man die Fl\"ache, um die herum ein
+Vektor parallel verschoben wird, so verkleinert sich
+auch der Winkel, um den dieser Vektor gedreht wird.
+Es zeigt sich jedoch, dass der Quotient aus dem
+Winkel, um den ein Vektor bei einer Parallelverschiebung
+um eine geschlossene Fl\"ache gedreht wird, und
+dem Inhalt dieser Fl\"ache gegen eine Konstante
+geht. Diese Konstante ist ein Ma\ss\ f\"ur die
+Kr\"ummung an dem Punkt, an dem dieser Weg
+beginnt und endet.
+
+In Analogie zu Gleichung \ref{eq_parallel} definieren
+wir den Kr\"ummungstensor $R^\mu_{\nu \rho \sigma}$
+\"uber eine infinitesimale Parallelverschiebung, diesmal
+allerdings entlang eines geschlossenen Weges:
+\begin{equation}
+  \delta X^\mu ~=~ R^\mu_{\nu \rho \sigma} X^\nu {\rm d} 
+                \sigma^{\rho \sigma} \, .   
+\end{equation}
+Diese Gleichung bedeutet Folgendes: Wenn ein Vektor
+$X$ mit Komponenten $X^\nu$ um den Rand des 
+infinitesimalen Fl\"achenelements ${\rm d}\sigma^{\rho \sigma}$ 
+parallel verschoben wird, dann \"andern sich seine
+Komponenten um $\delta X^\mu$. Das infinitesimale
+Fl\"achenelement ${\rm d}\sigma^{\rho \sigma}$ liegt
+in der durch die Koordinaten $\rho$ und $\sigma$
+aufgespannten Ebene und hat den Fl\"acheninhalt
+$|{\rm d}\sigma^{\rho \sigma}|$. 
+
+Damit l\"asst sich aus den Christoffel-Symbolen der 
+Riemann-Christoffel-Kr\"um\-mungstensor\index{Kr\"ummungstensor}
+\index{Riemann-Christoffel-Kr\"ummungstensor} berechnen:
+\[ R^{\lambda}_{\mu \nu \kappa} ~=~
+   \frac{\partial \Gamma^{\lambda}_{\mu \nu}}{\partial x^\kappa} -
+   \frac{\partial \Gamma^{\lambda}_{\mu \kappa}}{\partial x^\nu} +
+   \Gamma^{\eta}_{\mu \nu}\Gamma^{\lambda}_{\kappa \eta} - 
+   \Gamma^{\eta}_{\mu \kappa}\Gamma^{\lambda}_{\nu \eta} \;.  \]
+Bei diesem Ausdruck handelt es sich im Wesentlichen
+um den Kommutator von zwei kovarianten Ableitungen
+\begin{equation}
+  R^\lambda_{\mu \nu \kappa}=
+      [ (\partial_\mu \delta^\lambda_\alpha - \Gamma^\lambda_{\mu \alpha}),
+       (\partial_\nu \delta^\alpha_\kappa - \Gamma^\alpha_{\nu \kappa})] \, ,
+\end{equation}
+was nochmals zum Ausdruck bringt, dass eine kovariante
+Ableitung ein Generator einer Parallelverschiebung in eine
+bestimmte Richtung ist, und der Kr\"ummungstensor als
+Kommutator zweier solcher Generatoren als Differenz
+zwischen \glqq erst Richtung $\kappa$, dann Richtung $\nu$\grqq\
+und \glqq erst Richtung $\nu$, dann Richtung $\kappa$\grqq\
+aufzufassen ist.
+
+Aus dem Riemann-Christoffel-Kr\"ummungstensor erh\"alt man durch
+Kontraktion den Ricci-Tensor\index{Ricci-Tensor}:
+\[         R_{\mu \nu } ~=~ R^\lambda_{\mu \lambda \nu}   \;.  \]
+Eine weitere Kontraktion f\"uhrt auf den Kr\"ummungsskalar:
+\index{Kr\"ummungsskalar}
+\[         R ~=~ g^{\mu \nu} R_{\mu \nu}  \;.      \]
+In der Riemannschen Geometrie -- mit positiv definiter Metrik -- hat der 
+Kr\"ummungs\-skalar eine sehr anschauliche Bedeutung. Es ist der f\"uhrende 
+Korrekturfaktor f\"ur das Volumen $V_d(r)$ einer Kugel vom Radius $r$ 
+im Vergleich zum 
+Volumen der Kugel in einem euklidischen Raum in $d$-Dimensionen
+(siehe Pauli \cite{Pauli}, S.~48): 
+\[   V_d(r) ~=~ 
+   C_d r^d \left\{ 1 + \frac{R}{6} \frac{r^2}{d+2} + \ldots \right\}\;.\]
+Die Ableitung nach $r$ liefert eine entsprechende Formel f\"{u}r die 
+Oberfl\"{a}che der Kugel:
+\[  S_d(r) ~=~ d
+    C_d r^{d-1} \left\{ 1 + \frac{R}{6} \frac{r^2}{d}
+         + \ldots \right\}\;.  \]
+         
+\section{Die Einstein'schen Feldgleichungen}
+\label{sec_EinsteinGl}
+         
+Damit haben wir die rein geometrischen Bausteine der Allgemeinen
+Relativit\"atstheorie. Es fehlt noch der Anteil der Materie, ausgedr\"uckt
+durch den\index{Energie-Impuls-Tensor} 
+Energie-Impuls-Tensor $T_{\mu \nu}$. L\"asst sich die Materie 
+in einer durch den metrischen Tensor $g_{\mu \nu}$ beschriebenen Raum-Zeit
+durch eine Wirkung $S[g;...]$ beschreiben, so gilt formal:
+\[     T_{\mu \nu} ~=~ \frac{\delta S}{\delta g^{\mu \nu}} \;.  \]
+Diese Formel ist besonders n\"utzlich, wenn die Materie durch Felder
+repr\"asentiert wird, beispielsweise im Fall der Maxwell-Theorie (in
+einer gekr\"ummten Raumzeit), der Dirac- oder der Klein-Gordon-Theorie.
+
+Die Einstein'schen Feldgleichungen\index{Einstein'sche Gleichungen} 
+lauten nun:
+\begin{equation}
+\label{EinsteinGl}
+   R_{\mu \nu} - \frac{1}{2} g_{\mu \nu} R 
+     ~=~ - \frac{8 \pi G}{c^4} T_{\mu \nu}   \;. 
+\end{equation}     
+($G$ ist Newtons Gravitationskonstante.) Die linke Seite dieser Gleichung
+enth\"alt rein geometrische Gr\"o\ss en der Raumzeit; die rechte Seite
+den Materieanteil in der Raumzeit. Der Energie-Impuls-Tensor h\"angt 
+im Allgemeinen ebenfalls von der Metrik ab. Diese Gleichung ist allerdings
+nur eine H\"alfte des vollst\"andigen Gleichungssystems der Allgemeinen
+Relativit\"atstheorie. Es fehlt noch die Bewegungsgleichung der Materie.
+L\"asst sich die Materie durch eine Wirkung beschreiben, so erh\"alt
+man diese Bewegungsgleichungen durch Variation der Wirkung nach den
+entsprechenden Freiheitsgraden. F\"ur Punktteilchen ist die 
+Geod\"atengleichung \ref{geodaete} die Bewegungsgleichung eines Teilchens
+in einer gekr\"ummten Raum-Zeit.
+
+Die Einstein'schen Feldgleichungen lassen sich auch
+als Euler-Lagrange-Glei\-chungen aus einer Wirkung ableiten.
+Dazu betrachten wir folgenden Ausdruck, die so genannte
+{\em Einstein-Hilbert-Wirkung}:\index{Einstein-Hilbert-Wirkung}
+\begin{equation}
+\label{eq_EinsteinHilbert}
+           S = \kappa \int {\rm d}^4x \sqrt{-g} R + S[g_{\mu \nu};\varphi, \psi, ...]
+\end{equation}
+Der erste Term beschreibt ein 4-dimensionales Volumenintegral
+\"uber die skalare Kr\"um\-mung. Der Faktor $\sqrt{-g}$ ist die
+Quadratwurzel aus der Determinante des metrischen Tensors.
+Das Minuszeichen macht diesen Ausdruck positiv,
+da in der \"ublichen Signatur die Determinante der
+Pseudo-Riemann'schen Metrik negativ ist. Die Kombination
+${\rm d}^4 x\sqrt{-g}$ ist das invariante Volumenma\ss. Die
+Konstante $\kappa$ h\"angt \"uber
+\begin{equation}
+          \kappa = \frac{c^3}{16 \pi G}
+\end{equation}
+mit der Newton'schen Gravitationskonstante $G$ zusammen.
+
+Der zweite Term ist die Wirkung der Materie. Handelt es sich
+um Felder (Skalarfelder $\varphi$ oder Dirac-Felder $\psi$) ist
+dies die \"ubliche Klein-Gordon-Wirkung bzw.\ Dirac-Wirkung,
+allerdings koppeln diese Felder nun (minimal) an die
+Metrik. Wie schon erw\"ahnt, liefert die Funktionalableitung dieser
+Wirkung nach der Metrik den Energie-Impuls-Tensor der
+Materie und damit den rechten Teil der Einstein'schen Gleichungen.
+Die Funktionalableitung des Kr\"ummungsskalars nach der
+Metrik liefert die linke Seite der Einstein'schen Gleicnungen.
+
+Manchmal addiert man zu der angegebenen Wirkung noch
+einen Term
+\begin{equation}
+          S_\Lambda = - 2\kappa \Lambda \int {\rm d}^4x \, \sqrt{-g} \, ,
+\end{equation}
+wobei $\Lambda$ die so genannte {\em kosmologische Konstante}
+ist.\index{Kosmologische Konstante} 
+Dieser Teil der Wirkung besteht also einfach aus einem 
+Volumenintegral. Die Einstein-Gleichungen werden damit zu
+\begin{equation}
+\label{EinsteinLambda}
+   R_{\mu \nu} - \frac{1}{2} g_{\mu \nu} R + \Lambda g_{\mu \nu} 
+     ~=~  \frac{8 \pi G}{c^4} T_{\mu \nu}   \;. 
+\end{equation}     
+
+Den noch fehlenden zweiten Anteil der Bewegungsgleichungen
+-- die Bewegungsgleichungen f\"ur die Materie -- erh\"alt
+man aus der Wirkung (Gl.\ \ref{eq_EinsteinHilbert}) durch
+die Variation nach den Feldern. Betrachtet man freie
+Punktteilchen, so ist ihre Wirkung durch das L\"angenfunktional
+(Gl.\ \ref{eq_freieTeilchen}) gegeben und die zweite
+Bewegungsgleichung ist die Geod\"atengleichung.
+
+Abschlie\ss end wollen wir die Einstein'schen Feldgleichungen
+noch etwas umformen, was die L\"osung insbesondere f\"ur
+den Fall $T_{\mu \nu}=0$ einfacher macht. Bilden wir auf beiden
+Seiten der Gleichung \ref{EinsteinGl} die Spur (genauer, ziehen
+einen der Indizes mit der Metrik hoch und bilden dann die Spur)
+so erhalten wir
+\begin{equation}
+       R = \frac{8 \pi G}{c^4} T  \, .
+\end{equation}
+Wir k\"onnen daher den Term mit der skalaren Kr\"ummung auf die
+andere Seite der Gleichung bringen:
+\begin{equation}
+   R_{\mu \nu} 
+     ~=~ - \frac{8 \pi G}{c^4} 
+\left( T_{\mu \nu} - \frac{1}{2} g_{\mu \nu} T \right)   \;. 
+\end{equation}
+Man erkennt an dieser Form sofort, dass die L\"osungen
+der Einstein-Gleichungen\index{Einstein'sche Gleichungen!im Vakuum} 
+im Vakuum (also f\"ur $T_{\mu \nu}=0$)
+durch
+\begin{equation}
+\label{eq_RiccigleichNull}
+        R_{\mu \nu}=0
+\end{equation}
+gegeben sind. Der Ricci-Tensor (und damit nat\"urlich auch die
+skalare Kr\"ummung) verschwinden im materiefreien Raum.
+
+\begin{thebibliography}{99}
+%\addcontentsline{toc}{chapter}{Literaturangaben}
+%\bibitem{Aichelburg} Peter C.\ Aichelburg (Hrsg.); {\it Zeit im 
+%       Wandel der Zeit}; Verlag Vieweg, Braunschweig, Wiesbaden, 1988.
+%\bibitem{Barbour3} {\it Mach's Principle -- From Newton's Bucket to
+%        Quantum Gravity}; Julian Barbour \& Herbert Pfister (Hrsg.);
+%        Birkh\"auser, Boston, Basel, Berlin, 1995.       
+%\bibitem{Bekenstein} Jacob D.\ Bekenstein, \textit{Black holes
+%          and entropy}, Phys.\ Rev.\ D\,7 (1973) 2333--2346.        
+%\bibitem{Bell} John Bell;  {\em Speakable and Unspeakable in 
+%        Quantum Physics}, 2.\ edition, Cambridge University Press (2004).       
+%\bibitem{Born} Max Born; {\it Optik}; Springer-Verlag, Berlin, Heidelberg,
+%        1972.
+%\bibitem{Britannica} Encyclopaedia Britannica; 15.th edition, 1988.
+%\bibitem{Descartes} Ren\'e Descartes; {\it Die Prinzipien der
+%        Philosophie}; Felix Meiner Verlag, Hamburg, 1992; \"ubersetzt
+%        von Artur Buchenau.
+%\bibitem{EDM} Encyclopaedic Dictionary of Mathematics; Second Edition,
+%        MIT Press, 1987.
+%\bibitem{Einstein1} Albert Einstein; {\it Zur Elektrodynamik bewegter 
+%        K\"orper}; Annalen der Physik, Leipzig, 17 (1905) 891. 
+%\bibitem{Einstein2} Albert Einstein; {\it Ist die Tr\"agheit eines
+%        K\"orpers von seinem Energieinhalt abh\"angig?} (Ann.\ Phys., 
+%        Leipzig, 18 (1905) 639.
+%\bibitem{Einstein3} Albert Einstein; {\it Aus meinen sp\"aten Jahren};
+%         Ullstein Sachbuch, Verlag Ullstein, Frankfurt, Berlin, 1993.                 
+%\bibitem{Einstein4} Albert Einstein; {\it Prinzipielles zur allgemeinen
+%        Relativit\"atstheorie}; Annalen der Physik 55 (1918) 241.
+%\bibitem{Einstein5} Albert Einstein; {\it \"Uber den Einflu\ss\ der
+%        Schwerkraft auf die Ausbreitung des Lichtes}; Annalen der
+%        Physik 35 (1911) 898.                 
+%\bibitem{Feynman} Richard Feynman; {\it The Character of Physical Law};
+%        The MIT Press, 1987.        
+%\bibitem{Fierz} Markus Fierz; {\it \"Uber den Ursprung und die Bedeutung
+%        der Lehre Isaac Newtons vom absoluten Raum}; Gesnerus, 
+%        11.\ Jahrgang (1954), S.\,62--120.
+%\bibitem{Fliessbach} Torsten Flie\ss bach; {\it Allgemeine 
+%        Relativit\"atstheorie}; BI-Wissenschaftsverlag, Mannheim, Wien
+%        Z\"urich, 1990. 
+%\bibitem{Galilei} Galilei; {\it Dialog \"uber die beiden haupts\"achlichen
+%        Weltsysteme, das ptolem\"aische und das kopernikanische}; 
+%        Teubner Stuttgart, 1982; aus dem Italienischen \"ubersetzt von
+%        Emil Strauss.   
+%  \bibitem{Hawking} Stephen W.\ Hawking, \textit{Particle Creation by
+%            black holes}, Comm.\ Math.\ Phys.\ 43 (1976) 199--220.      
+%\bibitem{Helmholtz2} Hermann von Helmholtz; {\em \"Uber Wirbelbewegungen,
+%        \"Uber Fl\"ussigkeitsbewegungen}, 1858; in Ostwalds Klassiker der 
+%       exakten Wissenschaften Bd.\ 1; Verlag Harri Deutsch, Frankfurt, 
+%       1996.                   
+%\bibitem{Lamb} G.L.\ Lamb, Jr.; {\it Elements of Soliton Theory}; 
+%         Pure \& Applied Mathematics, John Wiley \& Sons, 1980. 
+%\bibitem{Laue} Max von Laue; {\it Geschichte der Physik}; 
+%         Universit\"ats-Verlag Bonn, 1947.
+%\bibitem{Lorentz} Hendrik Antoon Lorentz; {\it Electromagnetic phenomena 
+ %        in a system moving with any velocity smaller than that of light}; 
+%         Proc.\ Acad.\ Sci., Amsterdam, 6 [1904], S.\ 809.
+%\bibitem{Mach} Ernst Mach; {\it Die Mechanik in ihrer Entwicklung
+%      historisch kritisch dargestellt}; Akademie Verlag, Berlin, 1988.       
+%\bibitem{Mainzer} Klaus Mainzer; {\it Philosophie und Geschichte von
+%         Raum und Zeit}; in {\it Philosophie und Physik der Raum-Zeit};
+%         J\"urgen Audretsch und Klaus Mainzer (Hrsg.); 
+%         BI-Wissenschaftsverlag, 1994. 
+%\bibitem{Microscope} Touboul, Pierre, et al. (MICROSCOPE Collaboration); \textit{MICROSCOPE Mission:
+%         Final Results of the Test of the Equivalence Principle}; Phys.\ Rev.\ Lett.\ \textbf{129} (2022) 121102.
+%\bibitem{Misner} C.W.\ Misner, K.S.\ Thorne, J.A.\ Wheeler; 
+%        {\it Gravitation}; W.H.\ Freeman and Company, San Francisco,  1973.
+%\bibitem{Mittelstaedt} Peter Mittelstaedt; {\it Der Zeitbegriff in der
+%        Physik}; BI-Wissenschaftsverlag, 1989.        
+%\bibitem{Mittelstaedt2} Peter Mittelstaedt; {\it Philosophische Probleme
+%        der modernen Physik}; BI-Wissenschaftsverlag, 1989.        
+%\bibitem{Newton}
+%   Isaac Newton; {\it Mathematische Grundlagen der Naturphilosophie}; 
+%   \"ubersetzt von Ed Dellian; Felix Meiner Verlag, 1988. 
+%\bibitem{Newton2} Isaac Newton; {\it \"Uber die Gravitation...};
+%       Klostermann Texte Philosophie; Vittorio Klostermann, Frankfurt,
+%      1988; \"ubersetzt von Gernot B\"ohme.
+%\bibitem{Newton3} Isaac Newton; {\it Optik oder Abhandlung \"uber
+%      Spiegelungen, Brechungen, Beugungen und Farben des Lichts};
+%      I., II.\ und III.\ Buch (1704); aus dem Englischen \"ubersetzt
+%      von W.\ Abendroth; Ostwalds Klassiker der exakten Wissenschaften,
+%      Verlag Harri Deutsch 1998.   
+%\bibitem{Neumann} Carl Neumann; {\it \"Uber die Principien der
+%         Galilei-Newtonschen Theorie}; Akademische Antrittsvorlesung,
+%         gehalten in der Aula der Universit\"at Leipzig am 3.\ Nov.\
+%         1869; Teubner (Leipzig) 1870.         
+\bibitem{Pauli} Wolfgang Pauli; {\it Theory of Relativity}; Dover
+      Publications, New York, 1981.      
+%\bibitem{Poincare} Jules Henri Poincar\'e; {\it Sur la dynamique de 
+%     l'\'electron}, C.R.\ Acad.\ Sci., Paris, 140 (1905) S.~1504; und 
+%      Rendiconti del Circolo Matematico di Palermo, Bd.~21 (1906) S.~129.
+%\bibitem{Reichenbach1} Hans Reichenbach; {\em Philosophie der 
+%       Raum-Zeit-Lehre}; Hans Reichenbach - Gesammelte Werke Bd.\ 2;
+%       Vieweg-Verlag, Braunschweig; 1977.
+%\bibitem{Reichenbach2} Hans Reichenbach; {\em Axiomatik der
+%       relativistischen Raum-Zeit-Lehre}; in {\em Die philosophische
+%       Bedeutung der Relativit\"atstheorie}; Hans Reichenbach - Gesammelte
+%       Werke Bd.\ 3; Vieweg-Verlag, Braunschweig, 1977. 
+%\bibitem{Rovelli} Carlo Rovelli, \textit{Quantum Gravity}; Cambridge
+%      University Press, 2007.       
+%\bibitem{Schlamminger} Schlamminger, Choi, Wagner, Gundlach,
+%         Adelberger; {\em Test of the Equivalence Principle using a
+%         rotating torsion balance}; Phys.\ Rev.\ Lett.\ {\bf 100} (2008)
+%         041101.     
+%\bibitem{Sexl} Roman U.\ Sexl, Helmuth K.\ Urbantke; {\it Relativit\"at,
+%      Gruppen, Teilchen}; Springer-Verlag, Wien, New York, 1992.
+%\bibitem{Simonyi}
+%       K\'aroly Simonyi; {\it Kulturgeschichte der Physik}; Verlag
+%       Harri Deutsch, Thun, Frankfurt am Main, 1990.
+%\bibitem{Weisberg} Weisberg, J.M., Taylor, J.H.; {\em Relativistic Binary Pulsar
+%          B1913+16: Thirty Years of Observations and Analysis}; 
+%          \verb+arXiv:astro-ph/0407149v1+; 2004. 
+%\bibitem{Thomson} James Thomson; {\it On the Law of Inertia; the
+%       Principle of Chronometry; and the Principle of Absolute Clinural
+%       Rest, and of Absolute Rotation}; Proc.\ Roy.\ Soc.\ (Edinburgh),
+%       Session 1883-84, Vol.\ XII, 568--578.       
+%\bibitem{Weizsaecker} Carl Friedrich von Weizs\"acker; {\em Der zweite
+%      Hauptsatz und der Unterschied von Vergangenheit und Zukunft};
+%      Annalen der Physik 36 (1939) 275--283.       
+%\bibitem{Zeh} Zeh, H.D.; {\em The Physical Basis of the Direction of Time},
+%      Springer-Verlag, Berlin, 1989.       
+
+%\bibitem{Einstein} Einstein, Albert; {\em ??}, .                   
+\end{thebibliography}
+
+
+
+
+\end{document}

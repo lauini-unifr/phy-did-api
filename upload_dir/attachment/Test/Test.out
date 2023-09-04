@@ -1,0 +1,219 @@
+\BOOKMARK [1][-]{section.1}{Die Solarkonstante}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Sonnenaktivit\344t}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Milankovic-Zyklen}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Die Exzentrizit\344t der Erdumlaufbahn}{subsection.1.2}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Neigung der Erdachse}{subsection.1.2}% 5
+\BOOKMARK [3][-]{subsubsection.1.2.3}{Pr\344zession der Erdachse}{subsection.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.3}{Das Sonnenalter}{section.1}% 7
+\BOOKMARK [1][-]{section.2}{Die Albedo}{}% 8
+\BOOKMARK [1][-]{section.3}{Aufbau der Atmosph\344re}{}% 9
+\BOOKMARK [2][-]{subsection.3.1}{Die Troposph\344re}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.2}{Die Stratosph\344re}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.3}{Die Mesosph\344re}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.4}{Thermosph\344re und Exosph\344re}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.5}{Homosph\344re und Heterosph\344re}{section.3}% 14
+\BOOKMARK [1][-]{section.4}{Anmerkungen}{}% 15
+\BOOKMARK [1][-]{section.1}{Grundlagen}{}% 16
+\BOOKMARK [2][-]{subsection.1.1}{Die Solarkonstante}{section.1}% 17
+\BOOKMARK [2][-]{subsection.1.2}{Die Albedo}{section.1}% 18
+\BOOKMARK [2][-]{subsection.1.3}{Aufbau der Erdatmosph\344re}{section.1}% 19
+\BOOKMARK [1][-]{section.2}{Einige globale, statische Klimamodelle}{}% 20
+\BOOKMARK [2][-]{subsection.2.1}{Klimamodell 1 - ohne Atmosph\344re}{section.2}% 21
+\BOOKMARK [2][-]{subsection.2.2}{Klimamodell 2 - ohne Atmosph\344renschicht, mit Emissionsfaktor}{section.2}% 22
+\BOOKMARK [2][-]{subsection.2.3}{Klimamodell 3 - eine total absorbierende Atmosph\344renschicht}{section.2}% 23
+\BOOKMARK [2][-]{subsection.2.4}{Klimamodell 4 - eine teilabsorbierende Atmosph\344renschicht}{section.2}% 24
+\BOOKMARK [2][-]{subsection.2.5}{Ein einfaches Klimamodell f\374r die Venus}{section.2}% 25
+\BOOKMARK [2][-]{subsection.2.6}{Klimamodell 5 - Erw\344rmung der Troposph\344re und Abk\374hlung der Stratosph\344re}{section.2}% 26
+\BOOKMARK [1][-]{section.3}{Anmerkungen}{}% 27
+\BOOKMARK [2][-]{subsection.3.1}{L\366sung des Gleichungssystems f\374r das Stratosph\344renmodell}{section.3}% 28
+\BOOKMARK [1][-]{section.1}{Quantenmechanische Grundbegriffe}{}% 29
+\BOOKMARK [2][-]{subsection.1.1}{Observable}{section.1}% 30
+\BOOKMARK [2][-]{subsection.1.2}{Zustand}{section.1}% 31
+\BOOKMARK [2][-]{subsection.1.3}{Messung}{section.1}% 32
+\BOOKMARK [1][-]{section.2}{Zwei-Zustandssysteme}{}% 33
+\BOOKMARK [2][-]{subsection.2.1}{Realisation durch die Polarisation von Licht}{section.2}% 34
+\BOOKMARK [2][-]{subsection.2.2}{Die Menge der Observablen}{section.2}% 35
+\BOOKMARK [2][-]{subsection.2.3}{Die Bloch-Kugel}{section.2}% 36
+\BOOKMARK [1][-]{section.3}{Verschr\344nkung}{}% 37
+\BOOKMARK [1][-]{section.4}{Bell-Zust\344nde}{}% 38
+\BOOKMARK [1][-]{section.1}{Strahlteiler}{}% 39
+\BOOKMARK [1][-]{section.2}{Das Mach-Zehnder-Interferometer}{}% 40
+\BOOKMARK [1][-]{section.3}{Feynman's Summation \374ber alle Wege}{}% 41
+\BOOKMARK [1][-]{section.4}{Das Michelson-Interferometer}{}% 42
+\BOOKMARK [1][-]{section.5}{Das \214Knallerexperiment\215}{}% 43
+\BOOKMARK [1][-]{section.1}{Klassische Kryptographie - das One-Time-Pad}{}% 44
+\BOOKMARK [1][-]{section.2}{Das BB84-Protokoll}{}% 45
+\BOOKMARK [2][-]{subsection.2.1}{Messung und Pr\344paration der Polarisation von Einzelphotonen}{section.2}% 46
+\BOOKMARK [2][-]{subsection.2.2}{Alice pr\344pariert die Photonen f\374r Bob}{section.2}% 47
+\BOOKMARK [2][-]{subsection.2.3}{Bob nimmt an den Photonen von Alice Messungen vor}{section.2}% 48
+\BOOKMARK [2][-]{subsection.2.4}{Alice und Bob vergleichen ihre Basissysteme}{section.2}% 49
+\BOOKMARK [2][-]{subsection.2.5}{Eve}{section.2}% 50
+\BOOKMARK [2][-]{subsection.2.6}{\334berpr\374fung der Zufallsfolge}{section.2}% 51
+\BOOKMARK [1][-]{section.3}{Schulische Teilrealisierung durch Laserlicht}{}% 52
+\BOOKMARK [1][-]{section.4}{Fragen}{}% 53
+\BOOKMARK [1][-]{section.1}{Der "klassische"Quantenradierer}{}% 54
+\BOOKMARK [2][-]{subsection.1.1}{Laserlicht und polarisierte elektrische Felder}{section.1}% 55
+\BOOKMARK [2][-]{subsection.1.2}{Der klassische Quantenradierer mit Einzelphotonen}{section.1}% 56
+\BOOKMARK [1][-]{section.2}{Quantenradierer nach Scully}{}% 57
+\BOOKMARK [1][-]{section.3}{Quantenradierer nach Walborn}{}% 58
+\BOOKMARK [1][-]{section.4}{Quantenradierer nach K\374blbeck}{}% 59
+\BOOKMARK [1][-]{section.1}{Das neue System der Grundeinheiten}{}% 60
+\BOOKMARK [2][-]{subsection.1.1}{Die Sekunde}{section.1}% 61
+\BOOKMARK [2][-]{subsection.1.2}{Das Meter}{section.1}% 62
+\BOOKMARK [2][-]{subsection.1.3}{Das Kilogramm}{section.1}% 63
+\BOOKMARK [2][-]{subsection.1.4}{Das Ampere}{section.1}% 64
+\BOOKMARK [2][-]{subsection.1.5}{Das Kelvin}{section.1}% 65
+\BOOKMARK [2][-]{subsection.1.6}{Das Mol}{section.1}% 66
+\BOOKMARK [1][-]{section.2}{Zur Geschichte der Grundeinheiten}{}% 67
+\BOOKMARK [2][-]{subsection.2.1}{Die Sekunde}{section.2}% 68
+\BOOKMARK [2][-]{subsection.2.2}{Das Meter}{section.2}% 69
+\BOOKMARK [2][-]{subsection.2.3}{Das Kilogramm}{section.2}% 70
+\BOOKMARK [2][-]{subsection.2.4}{Das Ampere}{section.2}% 71
+\BOOKMARK [2][-]{subsection.2.5}{Das Kelvin}{section.2}% 72
+\BOOKMARK [2][-]{subsection.2.6}{Das Mol}{section.2}% 73
+\BOOKMARK [1][-]{section.3}{Historische Kuriosit\344ten}{}% 74
+\BOOKMARK [2][-]{subsection.3.1}{Jean Picard und das Meter}{section.3}% 75
+\BOOKMARK [2][-]{subsection.3.2}{2 oder 4/3 - wenn gro\337e Geister uneins sind}{section.3}% 76
+\BOOKMARK [1][-]{section.1}{Tage, Monate und Jahre}{}% 77
+\BOOKMARK [2][-]{subsection.1.1}{Tage}{section.1}% 78
+\BOOKMARK [2][-]{subsection.1.2}{Monate}{section.1}% 79
+\BOOKMARK [2][-]{subsection.1.3}{Jahre}{section.1}% 80
+\BOOKMARK [1][-]{section.2}{Der Menton-Zyklus und die Struktur von Mondkalendern}{}% 81
+\BOOKMARK [2][-]{subsection.2.1}{Der J\374dische Kalender}{section.2}% 82
+\BOOKMARK [2][-]{subsection.2.2}{Der Islamische Kalender}{section.2}% 83
+\BOOKMARK [1][-]{section.3}{Die Wochentage}{}% 84
+\BOOKMARK [1][-]{section.4}{Die Kalenderreform von 1582}{}% 85
+\BOOKMARK [1][-]{section.5}{Kuriosit\344ten der Kalenderreform}{}% 86
+\BOOKMARK [1][-]{section.1}{Zeitsysteme}{}% 87
+\BOOKMARK [2][-]{subsection.1.1}{Zeitzonen}{section.1}% 88
+\BOOKMARK [2][-]{subsection.1.2}{Wahrer und mittlerer Sonnentag}{section.1}% 89
+\BOOKMARK [1][-]{section.2}{Zur Mathematik einer elliptischen Bahnkurve}{}% 90
+\BOOKMARK [1][-]{section.3}{Der Einfluss der elliptischen Bahnkurve}{}% 91
+\BOOKMARK [1][-]{section.4}{Die Neigung der Erdachse zur Ekliptik}{}% 92
+\BOOKMARK [1][-]{section.5}{Die Zeitgleichung}{}% 93
+\BOOKMARK [1][-]{section.6}{Kuriosit\344ten}{}% 94
+\BOOKMARK [2][-]{subsection.6.1}{Die Ekliptik auf alten Landkarten und Globen}{section.6}% 95
+\BOOKMARK [2][-]{subsection.6.2}{Das Analemma}{section.6}% 96
+\BOOKMARK [2][-]{subsection.6.3}{Der k\374rzeste Tag}{section.6}% 97
+\BOOKMARK [1][-]{section.7}{Anhang}{}% 98
+\BOOKMARK [2][-]{subsection.7.1}{\304quivalenz des zweiten Kepler'schen Gesetzes und der Drehimpulserhaltung}{section.7}% 99
+\BOOKMARK [1][-]{section.1}{Das Julianische Datum}{}% 100
+\BOOKMARK [1][-]{section.2}{Die Ephemeridenzeit - ET}{}% 101
+\BOOKMARK [1][-]{section.3}{TT, TCG und TCB}{}% 102
+\BOOKMARK [1][-]{section.4}{Die Internationale Atomzeit - TAI}{}% 103
+\BOOKMARK [1][-]{section.5}{Universal Times - UT0, UT1, UT2}{}% 104
+\BOOKMARK [1][-]{section.6}{Universal Coordinated Time - UTC}{}% 105
+\BOOKMARK [1][-]{section.7}{Lokalzeit - Local Time}{}% 106
+\BOOKMARK [1][-]{section.8}{GPS Time}{}% 107
+\BOOKMARK [1][-]{section.9}{Kuriosit\344ten}{}% 108
+\BOOKMARK [2][-]{subsection.9.1}{Die Datumsgrenze}{section.9}% 109
+\BOOKMARK [2][-]{subsection.9.2}{Verschiebung der Datumsgrenze zum Millenium}{section.9}% 110
+\BOOKMARK [1][-]{section.1}{Antike Zeitmesser}{}% 111
+\BOOKMARK [2][-]{subsection.1.1}{Sonnenuhren}{section.1}% 112
+\BOOKMARK [2][-]{subsection.1.2}{Wasseruhren und andere Zeitmesser des Altertums}{section.1}% 113
+\BOOKMARK [1][-]{section.2}{Uhren}{}% 114
+\BOOKMARK [2][-]{subsection.2.1}{Hemmungen}{section.2}% 115
+\BOOKMARK [2][-]{subsection.2.2}{Pendeluhren}{section.2}% 116
+\BOOKMARK [1][-]{section.3}{Das Problem des L\344ngengrads}{}% 117
+\BOOKMARK [1][-]{section.4}{Moderne Uhren}{}% 118
+\BOOKMARK [2][-]{subsection.4.1}{Das Master-Slave-Prinzip}{section.4}% 119
+\BOOKMARK [2][-]{subsection.4.2}{Quarzuhren}{section.4}% 120
+\BOOKMARK [2][-]{subsection.4.3}{Atomuhren}{section.4}% 121
+\BOOKMARK [2][-]{subsection.4.4}{Fountain-Clocks}{section.4}% 122
+\BOOKMARK [1][-]{section.5}{Kuriosit\344ten}{}% 123
+\BOOKMARK [2][-]{subsection.5.1}{Die tautochrone Kurve - Zykloide}{section.5}% 124
+\BOOKMARK [1][-]{section.1}{Gezeitenkr\344fte}{}% 125
+\BOOKMARK [1][-]{section.2}{Der dem Mond abgewandte Gezeitenberg}{}% 126
+\BOOKMARK [2][-]{subsection.2.1}{Der Einfluss der Fliehkraft}{section.2}% 127
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Der Schwerpunkt des Erde-Mond-Systems}{subsection.2.1}% 128
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Radiale Fliehkr\344fte}{subsection.2.1}% 129
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Die Fliehkr\344fte auf der Erde}{subsection.2.1}% 130
+\BOOKMARK [2][-]{subsection.2.2}{Die Gezeitenkr\344fte}{section.2}% 131
+\BOOKMARK [1][-]{section.3}{Spring- und Nipptide}{}% 132
+\BOOKMARK [1][-]{section.4}{Die Neigung der Erdachse}{}% 133
+\BOOKMARK [1][-]{section.5}{Herleitung einiger Gleichungen}{}% 134
+\BOOKMARK [2][-]{subsection.5.1}{Gezeitenbeschleunigung}{section.5}% 135
+\BOOKMARK [1][-]{section.1}{Die Tage werden l\344nger}{}% 136
+\BOOKMARK [1][-]{section.2}{Ein paar \214-.4 Daumen\215-Rechnungen}{}% 137
+\BOOKMARK [2][-]{subsection.2.1}{Die Zunahme der Tagesl\344nge}{section.2}% 138
+\BOOKMARK [2][-]{subsection.2.2}{Wie alt ist der Mond?}{section.2}% 139
+\BOOKMARK [2][-]{subsection.2.3}{Wie geht es weiter?}{section.2}% 140
+\BOOKMARK [1][-]{section.3}{Herleitung einiger Gleichungen}{}% 141
+\BOOKMARK [2][-]{subsection.3.1}{Differenzieller Drehimpuls}{section.3}% 142
+\BOOKMARK [1][-]{section.1}{Himmelskoordinaten}{}% 143
+\BOOKMARK [2][-]{subsection.1.1}{Lokale Koordinaten}{section.1}% 144
+\BOOKMARK [2][-]{subsection.1.2}{\304quatoriale Koordinaten}{section.1}% 145
+\BOOKMARK [2][-]{subsection.1.3}{Ekliptische Koordinaten}{section.1}% 146
+\BOOKMARK [2][-]{subsection.1.4}{Galaktische Koordinaten}{section.1}% 147
+\BOOKMARK [1][-]{section.2}{Sternbilder}{}% 148
+\BOOKMARK [1][-]{section.3}{Tierkreiszeichen}{}% 149
+\BOOKMARK [1][-]{section.4}{Asterismen}{}% 150
+\BOOKMARK [1][-]{section.1}{Aristarchos von Samos}{}% 151
+\BOOKMARK [1][-]{section.2}{Eratosthenes von Kyrene}{}% 152
+\BOOKMARK [1][-]{section.3}{Die Gr\366\337e der Erde}{}% 153
+\BOOKMARK [1][-]{section.4}{Der Abstand Erde-Sonne}{}% 154
+\BOOKMARK [1][-]{section.5}{Parallaxenmessung der n\344chsten Sterne}{}% 155
+\BOOKMARK [1][-]{section.6}{Standardkerzen}{}% 156
+\BOOKMARK [2][-]{subsection.6.1}{Absolute und scheinbare Magnitude}{section.6}% 157
+\BOOKMARK [2][-]{subsection.6.2}{Ver\344nderliche}{section.6}% 158
+\BOOKMARK [2][-]{subsection.6.3}{Statistische Verfahren}{section.6}% 159
+\BOOKMARK [2][-]{subsection.6.4}{Supernovae Typ Ia}{section.6}% 160
+\BOOKMARK [1][-]{section.7}{Die kosmische Rotverschiebung}{}% 161
+\BOOKMARK [1][-]{section.1}{Ortsabh\344ngige Landkartenma\337st\344be}{}% 162
+\BOOKMARK [1][-]{section.2}{Beschreibung einer Ellipse}{}% 163
+\BOOKMARK [1][-]{section.3}{Tissot-Indikatrix und die Metrik}{}% 164
+\BOOKMARK [1][-]{section.4}{Parameterdarstellungen}{}% 165
+\BOOKMARK [1][-]{section.5}{Zylinder-Projektionen}{}% 166
+\BOOKMARK [2][-]{subsection.5.1}{Die Lambert-Projektion}{section.5}% 167
+\BOOKMARK [2][-]{subsection.5.2}{Die Mercator-Projektion}{section.5}% 168
+\BOOKMARK [1][-]{section.6}{Das UNO-Emblem}{}% 169
+\BOOKMARK [1][-]{section.7}{Kuriosit\344ten}{}% 170
+\BOOKMARK [2][-]{subsection.7.1}{Tissot-Figuren in h\366heren Dimensionen}{section.7}% 171
+\BOOKMARK [2][-]{subsection.7.2}{Tissot-Hyperbeln in Minkowski-R\344umen}{section.7}% 172
+\BOOKMARK [2][-]{subsection.7.3}{Die Lambert-Karte und ein Theorem von Archimedes}{section.7}% 173
+\BOOKMARK [1][-]{section.1}{Der \304ther}{}% 174
+\BOOKMARK [1][-]{section.2}{Das Experiment von Michelson und Morley}{}% 175
+\BOOKMARK [1][-]{section.3}{Axiomatische Formulierung derspeziellen Relativit\344tstheorie}{}% 176
+\BOOKMARK [1][-]{section.4}{Lorentz-Transformationen}{}% 177
+\BOOKMARK [1][-]{section.5}{Die Minkowski-Raumzeit}{}% 178
+\BOOKMARK [2][-]{subsection.5.1}{Die Geometrie des Minkowski-Raums}{section.5}% 179
+\BOOKMARK [2][-]{subsection.5.2}{Darstellung des Minkowski-Raums}{section.5}% 180
+\BOOKMARK [2][-]{subsection.5.3}{Die kausale Struktur}{section.5}% 181
+\BOOKMARK [2][-]{subsection.5.4}{Inertialsysteme}{section.5}% 182
+\BOOKMARK [0][-]{section*.30}{Literaturangaben}{}% 183
+\BOOKMARK [1][-]{section.1}{Eine Kette gekoppelter Pendel}{section*.30}% 184
+\BOOKMARK [1][-]{section.2}{Von der \304therhypothese zur Relativit\344tstheorie}{section*.30}% 185
+\BOOKMARK [1][-]{section.3}{Die Synchronisation von Uhren}{section*.30}% 186
+\BOOKMARK [2][-]{subsection.3.1}{Synchronisation durch Lichtsignale}{section.3}% 187
+\BOOKMARK [2][-]{subsection.3.2}{Die Einstein-Synchronisation}{section.3}% 188
+\BOOKMARK [2][-]{subsection.3.3}{Synchronisation mit der \304therhypothese}{section.3}% 189
+\BOOKMARK [2][-]{subsection.3.4}{Synchronisation durch langsamen Uhrentransport}{section.3}% 190
+\BOOKMARK [0][-]{section*.32}{Literaturangaben}{}% 191
+\BOOKMARK [1][-]{section.1}{Zeitdilatation}{section*.32}% 192
+\BOOKMARK [1][-]{section.2}{Lorentz-Kontraktion}{section*.32}% 193
+\BOOKMARK [1][-]{section.3}{Doppler-Effekte}{section*.32}% 194
+\BOOKMARK [2][-]{subsection.3.1}{Der Doppler-Effekt in der klassischen Mechanik}{section.3}% 195
+\BOOKMARK [2][-]{subsection.3.2}{Der longitudinale relativistische Doppler-Effekt}{section.3}% 196
+\BOOKMARK [2][-]{subsection.3.3}{Der transversale Doppler-Effekt}{section.3}% 197
+\BOOKMARK [1][-]{section.4}{\214Einparken\215}{section*.32}% 198
+\BOOKMARK [1][-]{section.5}{Das Zwillingsparadoxon}{section*.32}% 199
+\BOOKMARK [1][-]{section.6}{Die Eigenzeit}{section*.32}% 200
+\BOOKMARK [1][-]{section.7}{Der kanonische Formalismus}{section*.32}% 201
+\BOOKMARK [1][-]{section.8}{Die \304quivalenz von Masse und Energie}{section*.32}% 202
+\BOOKMARK [0][-]{section*.34}{Literaturangaben}{}% 203
+\BOOKMARK [1][-]{section.1}{Die Eigenzeit entlang einer Weltlinie}{section*.34}% 204
+\BOOKMARK [1][-]{section.2}{Die Euklid- und Minkowski-Schablone}{section*.34}% 205
+\BOOKMARK [1][-]{section.3}{Das Zwillingsparadoxon}{section*.34}% 206
+\BOOKMARK [1][-]{section.4}{Die Rolle der Beschleunigung}{section*.34}% 207
+\BOOKMARK [1][-]{section.5}{Vergleich der Bezugssysteme}{section*.34}% 208
+\BOOKMARK [1][-]{section.6}{Kuriosit\344ten}{section*.34}% 209
+\BOOKMARK [2][-]{subsection.6.1}{Das Zwillingsparadoxon in einem periodischen Universum}{section.6}% 210
+\BOOKMARK [1][-]{section.1}{Die konstante Beschleunigung}{section*.34}% 211
+\BOOKMARK [2][-]{subsection.1.1}{Herleitung der Differentialgleichung f\374r die Geschwindigkeit}{section.1}% 212
+\BOOKMARK [2][-]{subsection.1.2}{Bestimmung der Bahnkurve}{section.1}% 213
+\BOOKMARK [2][-]{subsection.1.3}{Erste Analyse der konstant beschleunigten Bewegung}{section.1}% 214
+\BOOKMARK [1][-]{section.2}{Zwei konstant beschleunigte Systeme}{section*.34}% 215
+\BOOKMARK [1][-]{section.3}{Das Rindler-Universum}{section*.34}% 216
+\BOOKMARK [2][-]{subsection.3.1}{Kausale Beziehungen}{section.3}% 217
+\BOOKMARK [2][-]{subsection.3.2}{Was \214sehen\215 die Beobachter voneinander?}{section.3}% 218
+\BOOKMARK [0][-]{section*.37}{Literaturangaben}{}% 219

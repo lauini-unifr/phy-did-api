@@ -1,0 +1,381 @@
+\documentclass[german,10pt]{book}         \input{../preambel}         \begin{document}  \setcounter{chapter}{5}
+
+\chapter{Thermodynamik Schwarzer L\"ocher}
+
+
+\section{Quantentheorie und Gravitation}
+
+Eine wirklich zufriedenstellende Quantentheorie der
+Gravitation bzw.\ der Raumzeit gibt es derzeit 
+trotz umfangreicher Versuche (es gibt die kanonische Quantengravitation,
+die Loop-Quantengravitation, die String-Theorie, kausale
+Mengen, kausale Triangulationen, nicht-kommutative Geometrie, ...)
+noch nicht. Auch nur ein elementarer \"Uberblick zu diesen
+Ans\"atzen w\"urde den Rahmen dieser Vorlesung mehr als sprengen.
+
+Ein paar wichtige \"Uberlegungen scheinen jedoch so allgemein,
+dass sie vermutlich in jeder sinnvollen Form der Quantengravitation
+eine Rolle spielen werden. Dazu z\"ahlen beispielsweise
+die so genannten Planck'schen Einheiten, als auch insbesondere
+die Thermodynamik Schwarzer L\"ocher. Auf beides m\"ochte ich
+kurz eingehen.
+
+\subsubsection{Planck'sche Einheiten}
+
+Die Quantentheorie, die Spezielle Relativit\"ats\-theorie und
+die Allgemeine Relativit\"ats\-theorie liefern uns drei
+fundamentale Naturkonstanten:\index{Planck-Einheiten}
+\begin{eqnarray*}
+      \hbar &=& 1,054572\times 10^{-34} \, {\rm J \cdot s}\\
+      c &=& 299\,792\,458\,{\rm m} \\
+      G &=& 6,675 \times 10^{-11}\, \frac{\rm m^3}{kg \cdot s^2} \, .
+\end{eqnarray*}
+Aus diesen Konstanten lassen sich fundamentale
+Gr\"o\ss en zu allen physikalischen Einheiten
+ableiten, z.B.:
+\begin{eqnarray*}
+  \mbox{Planck-L\"ange} \hspace{0.4cm}
+        l_{\rm P} &=&  \sqrt{\frac{\hbar G}{c^3}} =
+         1,6162 \times 10^{-35}\, {\rm m} \\
+  \mbox{Planck-Zeit} \hspace{0.4cm}
+        t_{\rm P} &=&  \sqrt{\frac{\hbar G}{c^5}} =
+         5,391 \times 10^{-44}\, {\rm s} \\
+  \mbox{Planck-Masse} \hspace{0.4cm}
+        m_{\rm P} &=&  \sqrt{\frac{\hbar c}{G}} =
+         2,1765 \times 10^{-8}\, {\rm kg} \\
+  \mbox{Planck-Energie} \hspace{0.4cm}
+        E_{\rm P} &=&  \sqrt{\frac{\hbar c^5}{G}} =
+         1,9561 \times 10^{9}\, {\rm J}  \\
+  \mbox{Planck-Dichte} \hspace{0.4cm}
+        \rho_{\rm P} &=&  \frac{c^5}{\hbar G^2} =
+         5,155 \times 10^{96}\, {\rm kg/m^3} \\
+  \mbox{Planck-Volumen} \hspace{0.4cm}
+        V_{\rm P} &=&  \sqrt{\frac{(\hbar G)^3}{c^9}} =
+         4,2217 \times 10^{-105}\, {\rm m^3} 
+\end{eqnarray*}
+Nehmen wir noch die Boltzmann-Konstante
+\begin{equation}
+      k_{\rm B} = 1,38065 \times 10^{-23}\, {\rm J/K}
+\end{equation}
+hinzu, so erhalten wir auch eine\index{Planck-Einheiten!Planck-Temperatur}
+\begin{equation}
+  \mbox{Planck-Temperatur} \hspace{0.4cm}
+        T_{\rm P} ~~ = ~~  \sqrt{\frac{\hbar c^5}{G k_{\rm B}^2}} =
+         1,4168 \times 10^{32}\, {\rm K} \, . 
+\end{equation}
+
+Schon 1899 (also ein Jahr vor seinem ber\"uhmten Vortrag
+am 14.\ Dezember 1900 vor der Physikalischen Gesellschaft,
+der allgemein als die Geburtsstunde der Quantentheorie
+angesehen wird) machte Max Planck\index{Planck, Max} 
+darauf aufmerksam,
+dass es diese fundamentalen Gr\"o\ss en geben m\"usse.
+Er hatte zu dieser Zeit eine empirische Formel f\"ur die
+Schwarzk\"orperstrahlung gefunden und erkannt, dass in
+dieser Formel eine fundamentale Konstante (die wir heute
+als Planck-Konstante bezeichnen) auftritt. Mit dieser Konstanten
+und den damals schon bekannten Konstanten $c$ und $G$
+gelangte er zu den Gr\"o\ss en, die wir heute als 
+\textit{Planck-Einheiten} bezeichnen.
+
+Die Planck-L\"ange\index{Planck-Einheiten!Planck-L\"ange} 
+ist vermutlich die kleinste Skala, auf der
+das Konzept einer L\"ange noch sinnvoll ist, \"ahnliches gilt
+f\"ur die Planck-Zeit.\index{Planck-Einheiten!Planck-Zeit} 
+Die Planck-Zeit entspricht der Zeit, die
+das Licht braucht, um eine Planck-L\"ange zu durchqueren.
+
+Die Planck-Masse ist die Masse\index{Planck-Einheiten!Planck-Masse}
+eines Schwarzen Loches, dessen Schwarzschild-Radius gleich
+der Planck-L\"ange ist. Mit rund 0,02\,mg hat sie fast einen
+makroskopischen Wert. Ausgedr\"uckt in GeV/$c^2$,
+eine bei Teilchenphysikern sehr beliebte Einheit, entspricht
+dies $m_{\rm P}=1,22\times 10^{19}$\,GeV/$c^2$. Dies ist
+vermutlich die h\"ochste Masse, die ein nachweisbares 
+elementares Teilchen haben kann.   
+
+Die Planck-Energie ist die Energie zu einer Planck-Masse
+nach\index{Planck-Einheiten!Planck-Energie} 
+der Einstein'schen Beziehung $E=mc^2$.
+Gleichzeitig ist es die Unbestimmtheit in der Energie, die
+nach der Quantentheorie innerhalb einer Planck-Zeit 
+nicht unterschritten werden kann.
+
+Au\ss erdem definieren die Planck-Einheiten die Grenzen,
+bis zu denen wir nach dem Standardmodell der Teilchenphysik
+vordringen k\"onnen, ohne die Quantengravitation mit 
+einbeziehen zu m\"ussen: Das Universum hatte eine 
+Planck-Zeit nach dem Urknall einen Radius von der
+Planck-L\"ange bzw.\ ein Planck-Volumen.
+Es hatte zu diesem Zeitpunkt eine Temperatur von der
+Planck-Temperatur, usw. 
+
+\subsection{Die Hawking-Bekenstein-Strahlung}
+
+Als einzigen Quantenaspekt der Gravitation
+m\"ochte ich in dieser Vorlesung kurz die Thermodynamik
+Schwarzer L\"ocher ansprechen. Es geht dabei darum,
+dass man einem Schwarzen Loch eine Entropie und
+eine Temperatur zuschreiben kann, und dass mit dieser
+Temperatur auch eine Strahlung verbunden ist,
+die \textit{Bekenstein-Hawking-Strahlung}\index{Bekenstein-Hawking-Strahlung} 
+Schwarzer 
+L\"ocher \cite{Bekenstein,Hawking}.
+
+Wie wir im Zusammenhang mit den L\"osungen der
+Einstein'schen Gleichungen gesehen haben, gilt f\"ur
+Schwarze L\"ocher das \glqq No Hair-Theorem\grqq. 
+Neben ihrer Masse, ihrem Drehimpuls und ihrer Ladung
+(sowie einigen Erhaltungsgr\"o\ss en aus der Teilchenphysik)
+haben Schwarze L\"oche keine weiteren Freiheitsgrade.
+Insbesondere gibt es keine Quadrupolmomente zur Massen-
+oder Ladungsverteilung etc. Im Sinne der Boltzmann'schen
+Beziehung\index{Entropie} 
+$S=k_{\rm B} \ln \Omega$ zwischen der Entropie
+$S$ und der Anzahl der Mikrozust\"ande $\Omega$ sollte
+ein Schwarzes Loch daher praktisch keine Entropie besitzen.
+
+Damit w\"urden Schwarze L\"ocher jedoch dem zweiten
+Hauptsatz der Thermodynamik (zumindest in einer bestimmten
+Form) widersprechen: Die Gesamtentropie in unserem Universum
+kann niemals abnehmen. Wenn jedoch ein Schwarzes Loch
+praktisch keine Entropie h\"atte, gleichzeitig aber beliebige
+Materiemengen mit nahezu beliebig viel Entropie \glqq verschlucken\grqq\
+kann, dann scheint bei diesem Prozess die Entropie in 
+unserem Universum abzunehmen. 
+
+Ein Ausweg ergibt sich, wenn man einem Schwarzen Loch
+eine Entropie\index{Entropie!Schwarzes Loch}\index{Schwarzes Loch!Entropie} 
+zuschreibt, die mit seiner Masse zusammenh\"angt.
+Durch solche \"Uberlegungen gelangte Bekenstein zu
+der Schlussfolgerung, dass ein Schwarzes Loch eine Entropie
+\begin{equation}
+          S = \frac{k_{\rm B}}{4} \frac{A}{l_{\rm P}^2}  
+\end{equation}
+haben muss. Hierbei ist $A$ die Oberfl\"ache des Schwarzen
+Lochs (also die Fl\"ache einer Kugeloberfl\"ache vom Radius
+$R_{\rm S}$) und $l_{\rm P}$ die oben eingef\"uhrte
+Planck-L\"ange. Die Entropie eines Schwarzen Lochs entspricht
+also seiner Oberfl\"ache in Einheiten der Planck-Fl\"ache.
+Es zeigt sich, dass dies die h\"ochste Entropie ist, die sich
+in dem Volumen eines Schwarzen Lochs unterbringen
+l\"asst. Keine Materieform kann in einem so kleinen Bereich
+eine gr\"o\ss ere Entropie haben.
+
+Es mag erstaunen, dass ein Schwarzes Loch eine Entropie hat,
+die proportional zu seiner Oberfl\"ache und nicht zu seinem
+Volumen ist, denn gew\"ohnlich ist die Entropie eine extensive
+Gr\"o\ss e, die proportional zum Volumen eines Systems ist. 
+Hier hilft aber vielleicht die Vorstellung, dass f\"ur einen 
+asymptotischen Beobachter Materie (und damit Entropie) niemals
+hinter dem Horizont verschwindet, sondern in gewisser Hinsicht
+an der Oberfl\"ache \glqq kleben\grqq\ bleibt. Die emittierte
+Strahlung wird zwar immer langwelliger, aber die Wellenl\"ange
+kann nie gr\"o\ss er als der Durchmesser des Schwarzen
+Lochs werden. 
+
+Dies gibt auch gleichzeitig eine Vorstellung von der Temperatur
+des Schwarzen Lochs:\index{Temperatur eines Schwarzen Lochs} 
+Ein Schwarzes Loch strahlt eine\index{Schwarzes Loch!Temperatur}
+thermische Strahlung ab, deren Wellenl\"ange seinem
+Durchmesser entspricht. Verwenden wir das Wien'sche
+Verschiebungsgesetz, das eine Beziehung zwischen der
+Temperatur und der Wellenl\"ange zur maximalen Intensit\"at
+der abgestrahlten Strahlung angibt,
+\begin{equation}
+       \lambda = {\rm const} \frac{\hbar c}{k_{\rm B} T} \, ,
+\end{equation} 
+und setzen f\"ur $\lambda$ den Schwarzschild-Durchmesser
+(doppelten Radius) eines Schwarzen Lochs ein, so erhalten wir
+\begin{equation}
+     \frac{4GM}{c^2} = {\rm const} \frac{\hbar c}{k_{\rm B}T}
+\end{equation}
+oder
+\begin{equation}
+      T = {\rm const} \frac{\hbar c^3}{k_{\rm B} GM}  \, .
+\end{equation}
+Eine genaue quantenfeldtheoretische Rechnung liefert
+die \textit{Bekenstein-Hawking-Tem\-pe\-ratur}:\index{Bekenstein-Hawking-Temperatur}
+\begin{equation}
+      T = \frac{\hbar c^3}{8 \pi k_{\rm B} GM}  \, .
+\end{equation}
+Aus dieser Gleichung kann man auch wieder die
+Entropie des Schwarzen Lochs ableiten.
+
+In einem sehr vereinfachten Bild wird der Ursprung der
+Bekenstein-Hawking-Strahlung in der Quantenfeldtheorie
+gerne folgenderma\ss en beschrieben: Das Vakuum
+ist in der Quantenfeldtheorie nicht leer, sondern es
+gibt eine Grundzustandsenergie und Grundzustandsfluktuationen.
+Diese werden oft durch die Erzeugung und Vernichtung
+virtueller Teilchen-Antiteilchen-Paare beschrieben.
+Wenn nun ein Teilchen-Antiteilchen-Paar nahe der
+Oberfl\"ache eines Schwarzen Lochs entsteht, kann es
+passieren, dass eines der Teilchen den Schwarzschild-Radius
+\"uberquert, wohingegen das andere Teilchen dem
+Schwarzen Loch entkommt. F\"ur einen entfernten 
+Beobachter scheint dieses (nun reale) Teilchen von dem Schwarzen
+Loch abgestrahlt worden zu sein. Das vom Schwarzen Loch
+verschluckte Teilchen hatte eine negative Energie und
+hat somit die Energie des Schwarzen Lochs um die
+Energie des abgestrahlten Teilchens verringert. 
+Man sollte jedoch nicht vergessen, dass dies nur
+ein sehr vereinfachtes, anschauliches Bild ist.
+
+Die Entropie zu einem Schwarzen Loch von der
+Masse der Sonne ist ungef\"ahr\index{Entropie!Sonne} 
+\begin{equation}
+        \frac{S_{\rm Sonne}}{k_{\rm B}} \approx 1,07 \cdot 10^{76} \, .
+\end{equation}
+Die Masse unseres Universums wird auf rund $10^{24}$ Sonnenmassen
+gesch\"atzt. Da die Entropie proportional zum Quadrat der Sonnenmasse
+ist, folgt daraus f\"ur die maximal m\"ogliche Entropie, die unser
+Universum haben kann (wenn n\"amlich die gesamte Masse in
+einem einzige Schwarzen Loch verschwunden ist), ein 
+Wert\index{Entropie!Uni@des Universums}
+von rund $10^{124}$. Die gesch\"atzte Entropie des heutigen
+Universums liegt um rund 20 Gr\"o\ss enordnungen niedriger. 
+
+Derzeit entspricht die Mikrowellenhintergrundstrahlung
+einer Temperatur von rund $2,7$\,K. Dies bezeichnet man
+manchmal als die heutige Temperatur des Universums.
+Die Temperatur eines Schwarzen Lochs von der Masse
+unserer Sonne ist nach obiger Formel ungef\"ahr $10^{-6}$\,K,
+schwerere Schwarze L\"ocher haben sogar noch niedrigere
+Temperaturen. Somit w\"urde ein Schwarzes Loch derzeit
+mehr Strahlung aufnehmen (und dadurch an Masse
+zunehmen) als es abstrahlt. Da sich unser Universum aber
+beschleunigt ausdehnt (siehe n\"achstes Kapitel) und somit 
+seine Temperatur weiterhin abnimmt, k\"onnte irgendwann
+der Zeitpunkt kommen, an dem Schwarze L\"ocher mehr
+Strahlung abstrahlen als sie aufnehmen. Ist das der
+Fall, k\"onnten langsam s\"amtliche Schwarzen L\"ocher
+verstrahlen und zur\"uck bliebe ein sehr d\"unnes Gas
+in einem ansonsten leeren Raum. 
+
+
+\begin{thebibliography}{99}
+%\addcontentsline{toc}{chapter}{Literaturangaben}
+%\bibitem{Aichelburg} Peter C.\ Aichelburg (Hrsg.); {\it Zeit im 
+%       Wandel der Zeit}; Verlag Vieweg, Braunschweig, Wiesbaden, 1988.
+%\bibitem{Barbour3} {\it Mach's Principle -- From Newton's Bucket to
+%        Quantum Gravity}; Julian Barbour \& Herbert Pfister (Hrsg.);
+%        Birkh\"auser, Boston, Basel, Berlin, 1995.       
+%\bibitem{Bekenstein} Jacob D.\ Bekenstein, \textit{Black holes
+%          and entropy}, Phys.\ Rev.\ D\,7 (1973) 2333--2346.        
+%\bibitem{Bell} John Bell;  {\em Speakable and Unspeakable in 
+%        Quantum Physics}, 2.\ edition, Cambridge University Press (2004).       
+%\bibitem{Born} Max Born; {\it Optik}; Springer-Verlag, Berlin, Heidelberg,
+%        1972.
+%\bibitem{Britannica} Encyclopaedia Britannica; 15.th edition, 1988.
+%\bibitem{Descartes} Ren\'e Descartes; {\it Die Prinzipien der
+%        Philosophie}; Felix Meiner Verlag, Hamburg, 1992; \"ubersetzt
+%        von Artur Buchenau.
+%\bibitem{EDM} Encyclopaedic Dictionary of Mathematics; Second Edition,
+%        MIT Press, 1987.
+%\bibitem{Einstein1} Albert Einstein; {\it Zur Elektrodynamik bewegter 
+%        K\"orper}; Annalen der Physik, Leipzig, 17 (1905) 891. 
+%\bibitem{Einstein2} Albert Einstein; {\it Ist die Tr\"agheit eines
+%        K\"orpers von seinem Energieinhalt abh\"angig?} (Ann.\ Phys., 
+%        Leipzig, 18 (1905) 639.
+%\bibitem{Einstein3} Albert Einstein; {\it Aus meinen sp\"aten Jahren};
+%         Ullstein Sachbuch, Verlag Ullstein, Frankfurt, Berlin, 1993.                 
+%\bibitem{Einstein4} Albert Einstein; {\it Prinzipielles zur allgemeinen
+%        Relativit\"atstheorie}; Annalen der Physik 55 (1918) 241.
+%\bibitem{Einstein5} Albert Einstein; {\it \"Uber den Einflu\ss\ der
+%        Schwerkraft auf die Ausbreitung des Lichtes}; Annalen der
+%        Physik 35 (1911) 898.                 
+%\bibitem{Feynman} Richard Feynman; {\it The Character of Physical Law};
+%        The MIT Press, 1987.        
+%\bibitem{Fierz} Markus Fierz; {\it \"Uber den Ursprung und die Bedeutung
+%        der Lehre Isaac Newtons vom absoluten Raum}; Gesnerus, 
+%        11.\ Jahrgang (1954), S.\,62--120.
+%\bibitem{Fliessbach} Torsten Flie\ss bach; {\it Allgemeine 
+%        Relativit\"atstheorie}; BI-Wissenschaftsverlag, Mannheim, Wien
+%        Z\"urich, 1990. 
+%\bibitem{Galilei} Galilei; {\it Dialog \"uber die beiden haupts\"achlichen
+%        Weltsysteme, das ptolem\"aische und das kopernikanische}; 
+%        Teubner Stuttgart, 1982; aus dem Italienischen \"ubersetzt von
+%        Emil Strauss.   
+%  \bibitem{Hawking} Stephen W.\ Hawking, \textit{Particle Creation by
+%            black holes}, Comm.\ Math.\ Phys.\ 43 (1976) 199--220.      
+%\bibitem{Helmholtz2} Hermann von Helmholtz; {\em \"Uber Wirbelbewegungen,
+%        \"Uber Fl\"ussigkeitsbewegungen}, 1858; in Ostwalds Klassiker der 
+%       exakten Wissenschaften Bd.\ 1; Verlag Harri Deutsch, Frankfurt, 
+%       1996.                   
+%\bibitem{Lamb} G.L.\ Lamb, Jr.; {\it Elements of Soliton Theory}; 
+%         Pure \& Applied Mathematics, John Wiley \& Sons, 1980. 
+%\bibitem{Laue} Max von Laue; {\it Geschichte der Physik}; 
+%         Universit\"ats-Verlag Bonn, 1947.
+%\bibitem{Lorentz} Hendrik Antoon Lorentz; {\it Electromagnetic phenomena 
+ %        in a system moving with any velocity smaller than that of light}; 
+%         Proc.\ Acad.\ Sci., Amsterdam, 6 [1904], S.\ 809.
+%\bibitem{Mach} Ernst Mach; {\it Die Mechanik in ihrer Entwicklung
+%      historisch kritisch dargestellt}; Akademie Verlag, Berlin, 1988.       
+%\bibitem{Mainzer} Klaus Mainzer; {\it Philosophie und Geschichte von
+%         Raum und Zeit}; in {\it Philosophie und Physik der Raum-Zeit};
+%         J\"urgen Audretsch und Klaus Mainzer (Hrsg.); 
+%         BI-Wissenschaftsverlag, 1994. 
+%\bibitem{Microscope} Touboul, Pierre, et al. (MICROSCOPE Collaboration); \textit{MICROSCOPE Mission:
+%         Final Results of the Test of the Equivalence Principle}; Phys.\ Rev.\ Lett.\ \textbf{129} (2022) 121102.
+%\bibitem{Misner} C.W.\ Misner, K.S.\ Thorne, J.A.\ Wheeler; 
+%        {\it Gravitation}; W.H.\ Freeman and Company, San Francisco,  1973.
+%\bibitem{Mittelstaedt} Peter Mittelstaedt; {\it Der Zeitbegriff in der
+%        Physik}; BI-Wissenschaftsverlag, 1989.        
+%\bibitem{Mittelstaedt2} Peter Mittelstaedt; {\it Philosophische Probleme
+%        der modernen Physik}; BI-Wissenschaftsverlag, 1989.        
+%\bibitem{Newton}
+%   Isaac Newton; {\it Mathematische Grundlagen der Naturphilosophie}; 
+%   \"ubersetzt von Ed Dellian; Felix Meiner Verlag, 1988. 
+%\bibitem{Newton2} Isaac Newton; {\it \"Uber die Gravitation...};
+%       Klostermann Texte Philosophie; Vittorio Klostermann, Frankfurt,
+%      1988; \"ubersetzt von Gernot B\"ohme.
+%\bibitem{Newton3} Isaac Newton; {\it Optik oder Abhandlung \"uber
+%      Spiegelungen, Brechungen, Beugungen und Farben des Lichts};
+%      I., II.\ und III.\ Buch (1704); aus dem Englischen \"ubersetzt
+%      von W.\ Abendroth; Ostwalds Klassiker der exakten Wissenschaften,
+%      Verlag Harri Deutsch 1998.   
+%\bibitem{Neumann} Carl Neumann; {\it \"Uber die Principien der
+%         Galilei-Newtonschen Theorie}; Akademische Antrittsvorlesung,
+%         gehalten in der Aula der Universit\"at Leipzig am 3.\ Nov.\
+%         1869; Teubner (Leipzig) 1870.         
+%\bibitem{Pauli} Wolfgang Pauli; {\it Theory of Relativity}; Dover
+%      Publications, New York, 1981.      
+%\bibitem{Poincare} Jules Henri Poincar\'e; {\it Sur la dynamique de 
+%     l'\'electron}, C.R.\ Acad.\ Sci., Paris, 140 (1905) S.~1504; und 
+%      Rendiconti del Circolo Matematico di Palermo, Bd.~21 (1906) S.~129.
+%\bibitem{Reichenbach1} Hans Reichenbach; {\em Philosophie der 
+%       Raum-Zeit-Lehre}; Hans Reichenbach - Gesammelte Werke Bd.\ 2;
+%       Vieweg-Verlag, Braunschweig; 1977.
+%\bibitem{Reichenbach2} Hans Reichenbach; {\em Axiomatik der
+%       relativistischen Raum-Zeit-Lehre}; in {\em Die philosophische
+%       Bedeutung der Relativit\"atstheorie}; Hans Reichenbach - Gesammelte
+%       Werke Bd.\ 3; Vieweg-Verlag, Braunschweig, 1977. 
+%\bibitem{Rovelli} Carlo Rovelli, \textit{Quantum Gravity}; Cambridge
+%      University Press, 2007.       
+%\bibitem{Schlamminger} Schlamminger, Choi, Wagner, Gundlach,
+%         Adelberger; {\em Test of the Equivalence Principle using a
+%         rotating torsion balance}; Phys.\ Rev.\ Lett.\ {\bf 100} (2008)
+%         041101.     
+%\bibitem{Sexl} Roman U.\ Sexl, Helmuth K.\ Urbantke; {\it Relativit\"at,
+%      Gruppen, Teilchen}; Springer-Verlag, Wien, New York, 1992.
+%\bibitem{Simonyi}
+%       K\'aroly Simonyi; {\it Kulturgeschichte der Physik}; Verlag
+%       Harri Deutsch, Thun, Frankfurt am Main, 1990.
+%\bibitem{Weisberg} Weisberg, J.M., Taylor, J.H.; {\em Relativistic Binary Pulsar
+%          B1913+16: Thirty Years of Observations and Analysis}; 
+%          \verb+arXiv:astro-ph/0407149v1+; 2004. 
+%\bibitem{Thomson} James Thomson; {\it On the Law of Inertia; the
+%       Principle of Chronometry; and the Principle of Absolute Clinural
+%       Rest, and of Absolute Rotation}; Proc.\ Roy.\ Soc.\ (Edinburgh),
+%       Session 1883-84, Vol.\ XII, 568--578.       
+%\bibitem{Weizsaecker} Carl Friedrich von Weizs\"acker; {\em Der zweite
+%      Hauptsatz und der Unterschied von Vergangenheit und Zukunft};
+%      Annalen der Physik 36 (1939) 275--283.       
+%\bibitem{Zeh} Zeh, H.D.; {\em The Physical Basis of the Direction of Time},
+%      Springer-Verlag, Berlin, 1989.       
+
+%\bibitem{Einstein} Einstein, Albert; {\em ??}, .                   
+\end{thebibliography}
+
+\end{document}

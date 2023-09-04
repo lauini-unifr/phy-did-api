@@ -1,0 +1,1324 @@
+\documentclass[german,10pt]{book}         \input{../preambel}         \begin{document}  \setcounter{chapter}{4}
+
+\chapter{Schwarze L\"ocher}
+
+Die wohl spektakul\"arsten Vorhersagen der
+Einstein'schen Feldgleichungen beziehen sich
+auf Schwarze L\"ocher. Einige L\"osungen kennt
+man in analytischer Form, dazu geh\"oren die
+bekannte Schwarzschild-L\"osungen eines
+ruhenden ungeladenen Schwarzen Lochs, die
+Kerr-L\"osung f\"ur ungeladene rotierende
+Schwarze L\"ocher, die Reissner-Nordstr\"om-L\"osung
+f\"ur ruhende geladene Schwarze L\"ocher und
+schlie\ss lich die Kerr-Newman-L\"osung f\"ur
+rotierende geladene Schwarze L\"ocher.
+Au\ss erdem gibt es L\"osungen der
+Einstein'schen Feldgleichungen, die 
+kosmologische Modelle beschreiben -- die
+bekannteste L\"osung ist in diesem Fall
+die Friedman-L\"osung bzw.\ Robertson-Walker-Metrik. 
+
+\section{Isotrope, statische L\"osungen}
+\label{sec_IsoStat}
+
+Bevor wir uns konkret mit der Schwarzschild-Metrik 
+besch\"aftigen, betrachten wir den allgemeineren Fall
+einer isotropen, statischen Geometrie. Die genauen
+L\"osungen h\"angen vom Energie-Impuls-Tensor ab.
+Hier geht es mir jedoch nur um vorbereitende Bemerkungen
+zur allgemeinen Form solcher Geometrien.
+Die folgenden \"Uberlegungen sind gr\"o\ss tenteils dem Buch von
+Flie\ss bach entnommen \cite{Fliessbach}.
+
+\subsection{Standardform einer asymptotisch flachen isotropen
+und statischen Metrik}
+
+Neben \glqq isotrop und statisch\grqq\ verlangen wir noch, 
+dass die L\"osung
+asymptotisch f\"ur sehr gro\ss e Werte der Koordinate
+$r$ (die eine r\"aumlich radiale Achse vom Zentrum der L\"osung
+parametrisiert) gegen die Minkowski-Metrik gehen soll, also
+in Kugelkoordinaten:
+\begin{equation}
+    {\rm d}s^2 = c^2 {\rm d}t^2 - {\rm d}r^2 - r^2 ({\rm d}\theta^2 + \sin^2 \theta {\rm d}\varphi^2) \, . 
+\end{equation}
+\glqq Isotrop\grqq\ bedeutet, dass\index{isotrope Raumzeit} 
+die Abh\"angigkeit der Metrik von
+den Winkeln $\theta$ und $\varphi$ unver\"andert bleibt.
+\glqq Statisch\grqq\ soll sich in diesem\index{statische Raumzeit} 
+Fall auf den Zeitparameter $t$ 
+beziehen, d.h.\ auf die physikalische Zeit eines \glqq unendlich\grqq\ 
+weit entfernten Beobachters. Die Metrik soll nicht von diesem
+Zeitparameter abh\"angen.
+
+Ganz allgemein setzen wir f\"ur eine solche Metrik
+die folgende Form an:
+\begin{equation}
+    {\rm d}s^2 = B(r) c^2 {\rm d}t^2 - A(r) {\rm d}r^2 - C(r)  
+    r^2 ({\rm d}\theta^2 + \sin^2 \theta {\rm d}\varphi^2) \, . 
+\end{equation}
+Wegen der Isotropie kann es keine gemischten Terme
+in den Winkeln geben, und einen gemischten Term der
+Form ${\rm d}t\,{\rm d}r$ kann man immer durch eine
+geeignete Umdefinition $t'=t+\psi(r)$ loswerden. F\"ur
+$r\rightarrow \infty$ muss $\psi(r)$ verschwinden und
+damit hat auch $t'$ asymtotisch immer noch die Bedeutung der 
+physikalischen Zeit eines weit entfernten Beobachters.
+Ebenso hat $r$ in diesem Grenzfall die Bedeutung einer
+gew\"ohnlichen Radialkoordinate. Die Winkel $\theta$ und
+$\varphi$ sind ohnehin die gew\"ohnlichen Winkel in
+Kugelkoordinaten.
+
+Zus\"atzlich zu diesen Einschr\"ankungen k\"onnen wir immer noch 
+eine Umparametrisierung von $r$ vornehmen, sodass wir den
+Term $C(r)$ loswerden. Auch dies \"andert
+asymptotisch an der Interpretation von $r$ nichts.
+Als {\em Standardform} einer\index{Standardform einer isotropen, statischen Metrik} 
+isotropen, statischen
+Metrik bezeichnet man daher folgende Parametrisierung:
+\begin{equation}
+\label{eq_isostat1}
+    {\rm d}s^2 = B(r) c^2 {\rm d}t^2 - A(r) {\rm d}r^2 - 
+    r^2 ({\rm d}\theta^2 + \sin^2 \theta {\rm d}\varphi^2) \, . 
+\end{equation}
+In dieser Parametrisierung hat eine Kugelschale
+f\"ur einen Abstand, der durch den Parameter $r$ 
+charakterisiert ist, eine Fl\"ache von $4 \pi r^2$. 
+Allerdings bezeichnet $r$ nun nicht mehr den
+physikalischen Abstand vom Ursprung; dieser ist durch
+\begin{equation}
+          R(r) = \int_0^r \sqrt{A(r')} {\rm d}r'
+\end{equation}
+gegeben. Insofern verh\"alt sich die Fl\"ache einer
+Kugelschale als Funktion des Abstands $R(r)$ vom
+Ursprung nicht wie im Euklidischen. Dadurch kann
+der dreidimensionale Raum eine Kr\"ummung haben. 
+Betrachten wir eine zweidimensionale Fl\"ache f\"ur
+feste Werte von $t$ und $r$, also
+parametrisiert durch $\theta$ und $\varphi$, so
+handelt es sich um eine gew\"ohnliche Kugeloberfl\"ache.
+
+\subsection{Robertson-Entwicklung}
+
+Bei der experimentellen \"Uberpr\"ufung der
+ART ist man oft an dem Verhalten der L\"osungen
+f\"ur gro\ss e Wert von $r$ interessiert, also an den
+f\"uhrenden Korrekturen zur Minkowski-Raumzeit.
+Dazu betrachtet man eine Entwicklung der Funktionen
+$A(r)$ und $B(r)$ f\"ur gro\ss e Werte von $r$. Da
+$A(r)$ und $B(r)$ dimensionslos sind, k\"onnen sie
+nur Funktionen einer dimensionslosen Gr\"o\ss e
+sein, doch aus $G$, $c$ und $r$ (das sind die
+Parameter, die uns zun\"achst zur Verf\"ugung stehen)
+erhalten wir keine dimensionslose
+Gr\"o\ss e. Die L\"osung muss durch
+mindestens einen weiteren Parameter, den wir
+mit $M$ bezeichnen und der sich im Prinzip aus
+dem Energie-Impuls-Tensor ergeben sollte, charakterisiert 
+sein. $M$ ist ein Massenparameter,
+der durch die f\"uhrende Korrektur, die der Newton'schen
+Gravitation entspricht, definiert ist. (Im n\"achsten
+Abschnitt werden wir sehen, dass sich die
+Schwarzschild-L\"osung als L\"osung der Vakuumgleichungen
+-- $T_{\mu \nu}=0$ -- ergibt. Trotzdem enth\"alt die
+L\"osung einen Parameter $M$. Dies ist \"ahnlich wie
+in der Newton'schen Mechanik, wo das Gravitationspotenzial
+zu einer Punktmasse bei $r=0$ nicht definiert ist, aber au\ss erhalb
+von $r=0$ eine L\"osung der Vakuumgleichungen ist.
+Die \glqq St\"arke der Singularit\"at\grqq\ bei $r=0$ definiert
+den Massenparameter.) 
+
+Wir nehmen nun an, dass f\"ur gro\ss e Abst\"ande
+vom Zentrum der Verteilung nur dieser eine
+Parameter $M$ relevant ist. Dann ist
+$GM/c^2 r$ dimensionslos und wir k\"onnen
+schreiben:
+\begin{eqnarray}
+    A(r)  &=&  1 + 2 \beta \frac{GM}{c^2 r} + \ldots  \\
+    B(r) &=&  1 - 2 \alpha \frac{GM}{c^2 r} + 2(\gamma - \beta)
+     \left( \frac{GM}{c^2 r} \right)^2 + \ldots \, .
+\end{eqnarray}
+(Die seltsame Kombination der Parameter $\alpha, \beta,
+\gamma$ hat historische Gr\"unde.) 
+Diese Entwicklung bezeichnet man
+als {\em Robertson-Entwicklung}.\index{Robertson-Entwicklung}.  
+Wie wir schon in Abschnitt \ref{sec_NewtonGrenzfall}
+gesehen haben, gilt f\"ur den Newton'schen
+Grenzfall:
+\begin{equation}
+\label{eq_betagammaNewton}
+  \mbox{Newton:  } ~ \alpha = 1~, ~~ \beta= \gamma = 0 \, .
+\end{equation}
+Im n\"achsten Abschnitt werden wir sehen, dass 
+die Schwarzschild-L\"osung der ART folgende
+Werte liefert:
+\begin{equation}
+\label{eq_betagammaART}
+  \mbox{ART:  } ~ \alpha = \beta= \gamma = 1 \, .
+\end{equation}
+Diese Parameter haben wir auch schon im 
+Zusammenhang mit der Lichtablenkung (Abschnitt
+\ref{sec_Lichtablenkung}) und der Periheldrehung
+(Abschnitt \ref{sec_Perihel}) betrachtet.
+
+\subsection{Der Ricci-Tensor als Funktion von $A(r)$ und $B(r)$}
+
+Wir k\"onnen nun aus der Metrik (\ref{eq_isostat1}) bzw.
+\begin{equation}
+      g_{\mu \nu} = {\rm diag}~ ( B(r) , - A(r) , -r^2 , - r^2 \sin^2 \theta )
+\end{equation}
+die Christoffel-Symbole, den Riemann'schen Kr\"ummungstensor
+und den Ricci-Tensor berechnen. Man ben\"otigt dazu noch,
+dass die Metrik mit oben stehenden Indizes das Inverse
+der\index{Metrik!inverse} 
+normalen Metrik ist, also
+\begin{equation}
+      g_{\mu \nu} = {\rm diag} ~
+      \left( \frac{1}{B(r)} , - \frac{1}{A(r)} , -\frac{1}{r^2} , -\frac{1}{r^2 \sin^2 \theta} \right) \, .
+\end{equation}
+Die Rechnung ist in \cite{Fliessbach} durchgef\"uhrt. Hier beschr\"anke
+ich mich auf das Ergebnis\index{Ricci-Tensor} 
+f\"ur den Ricci-Tensor:
+\begin{eqnarray}
+\label{eq_RicciAB1}
+      R_{00} &=& R_{tt}~ =~  - \frac{B''}{2A} + \frac{B'}{4A} \left( \frac{A'}{A} +
+         \frac{B'}{B} \right) - \frac{B'}{rA}  \\ 
+      R_{11} &=& R_{rr} \; =~   \frac{B''}{2B} - \frac{B'}{4B} \left( \frac{A'}{A} +
+         \frac{B'}{B} \right) - \frac{A'}{rA}  \\
+      R_{22} &=& R_{\theta \theta} \; = ~  
+      - 1 -  \frac{r}{2A} \left( \frac{A'}{A} -
+         \frac{B'}{B} \right) + \frac{1}{A}  \\
+\label{eq_RicciAB2}
+      R_{33} &=&  R_{\varphi \varphi} = ~ 
+      R_{22} \, \sin^2 \theta \, .             
+\end{eqnarray}
+Alle gemischen Terme verschwinden: $R_{\mu \nu}=0$ f\"ur
+$\mu \neq \nu$. 
+
+\section{Schwarze L\"ocher -- Schwarzschild-Metrik}
+
+Eine der ersten nicht-trivialen L\"osung der materiefreien Feldgleichungen 
+der Allgemeinen Relativit\"atstheorie fand 1916 der deutsche Astronom
+Karl\index{Schwarzschild, Karl} 
+Schwarzschild ({\em geb.\ 9.10.1873 in Frankfurt am Main; 
+gest.\ 11.5.1916 in Pottsdam}). Diese Schwarzschild-Metrik
+\index{Schwarzschild-Metrik}
+beschreibt nicht nur schwarze L\"ocher\index{Schwarzes Loch}, sondern
+auch das Gravitationsfeld in der Umgebung von Sternen oder Planeten.
+Daher kann man diese L\"osung zur Berechnung der Periheldrehung
+des Merkur oder der Lichtablenkung im Gravitationsfeld der Sonne
+heranziehen. 
+
+\subsection{Klassische Berechnung des kritischen Radius}
+
+Schon im Jahre 1783 entwickelte der Geologe 
+John Michell\index{Michell, John} 
+die\index{Dunkler Stern@\glqq Dunkler Stern\grqq} 
+Vorstellung \glqq Dunkler Sterne\grqq,
+von denen wegen ihrer Masse kein Licht entweichen
+kann. Seine \"Uberlegungen basierten auf der
+Newton'schen Mechanik und setzten voraus,
+dass sich Licht wie jede andere Materie verh\"alt
+(im Sinne der Korpuskeltheorie des Lichts von
+Newton). Ausgangspunkt seiner \"Uberlegungen
+war die klassische Fluchtgeschwindigkeit.
+
+Ein Probek\"orper der Masse $m$, der im 
+Unendlichen in Ruhe ist
+($v=0$) und frei fallend auf einen 
+schweren K\"orper der Masse $M$ zuf\"allt, hat im 
+Abstand $r$ die kinetische Energie:
+\begin{equation}
+     E_{\rm kin} = \frac{1}{2} m v^2 = G \frac{mM}{r}
+\end{equation} 
+und damit die Geschwindigkeit
+\begin{equation}
+        v = \sqrt{2G \frac{M}{r}} \, .         
+\end{equation}
+Dies ist umgekehrt die\index{Fluchtgeschwindigkeit} 
+Fluchtgeschwindigkeit
+beim Radius $r$ aus dem Feld eines
+K\"orpers der Masse $M$. 
+Nach klassischen \"Uberlegungen hat
+er somit die Lichtgeschwindigkeit $c$
+bei einem Abstand:
+\begin{equation}
+\label{eq_Schwarzschildradius}
+       R_{\rm S} = \frac{2GM}{c^2}  \, .
+\end{equation}
+Wenn der Radius des schweren K\"orpers
+der Masse $M$ kleiner als $R_{\rm S}$ ist, kann
+somit selbst Licht diesem K\"orper nicht
+entweichen, da die Fluchtgeschwindigkeit
+gr\"o\ss er als $c$ w\"are. Wie wir im n\"achsten
+Abschnitt sehen werden, ist diese
+Gleichung f\"ur einen kritischen Radius
+(dem Radius des Horizonts eines schwarzen
+Lochs -- dem Schwarzschild-Radius) auch 
+in der Relativit\"atstheorie exakt.
+\vspace{0.3cm}
+
+{\small 
+Ein solcher K\"orper ben\"otigt nicht
+unbedingt eine sehr hohe Dichte, sofern
+er nur gro\ss\ genug ist.  
+Ausgedr\"uckt durch die Dichte ist die
+Masse eines K\"orpers vom
+Radius $R$ 
+\begin{equation}
+           M = \rho V = \rho \frac{4\pi}{3}R^3 \, .
+\end{equation}
+Setzen wir dies in Gleichung \ref{eq_Schwarzschildradius}
+f\"ur den kritischen Radius ein, erhalten wir 
+die Bedingung:
+\begin{equation}
+      R = \frac{2G}{c^2} \rho \frac{4\pi}{3} R^3
+  \hspace{1cm} {\rm oder} \hspace{1cm}
+      R = c  \sqrt{\frac{3}{8\pi \rho G} }  \, . 
+\end{equation}
+Mit 
+\begin{equation}
+       G = 6,6738 \cdot 10^{-11} \frac{{\rm m}^3}{{\rm kg}\cdot {\rm s}^2}
+\end{equation}
+und der Dichte von
+Wasser, also $\rho = 1000\,{\rm kg}/{\rm m}^3$,
+kommen wir zu einem Radius von rund 
+$R=4\cdot 10^{8}$\,km oder dem rund
+2,5-fachen des Abstands Erde--Sonne. 
+Ein K\"orper dieser Gr\"o\ss e mit der Dichte
+von Wasser h\"atte einen Radius, der
+gleich seinem Schwarzschild-Radius ist.}
+
+\subsection{Herleitung der Schwarzschild-L\"osung}
+
+Wie wir im letzten Kapitel gesehen haben (vgl.\
+Gl.\ \ref{eq_RiccigleichNull}), lassen sich
+die Einstein'schen Feldgleichungen ohne Materie
+(also f\"ur $T_{\mu \nu} = 0$) 
+in der Form\index{Einstein'sche Gleichungen!ohne Materie}
+\begin{equation}
+       R_{\mu \nu} = 0  
+\end{equation} 
+schreiben. Wir verwenden nun die Komponenten
+des Ricci-Tensors f\"ur die Standardform der isotropen,
+statischen L\"osung (Gl.\ \ref{eq_RicciAB1}--\ref{eq_RicciAB2}), 
+um eine L\"osung zu finden. Auch hierbei halte ich mich eng
+an \cite{Fliessbach}. Es muss gelten:
+$R_{00}=R_{11}=R_{22}=0$. (Wegen Gl.\ \ref{eq_RicciAB2}
+folgt aus $R_{22}=0$ auch $R_{33}=0$.) 
+Wir bilden die Summe 
+\begin{equation}
+\label{eq_SSL0}
+   \frac{R_{00}}{B} + \frac{R_{11}}{A} = - \frac{1}{rA}
+      \left( \frac{B'}{B} + \frac{A'}{A} \right) = 0  \, ,
+\end{equation}
+was auf
+\begin{equation}
+       \left( \frac{B'}{B} + \frac{A'}{A} \right) =  \frac{\rm d}{{\rm d}r}
+       \ln (AB) = 0  
+\end{equation}  
+f\"uhrt. Daraus folgt
+\begin{equation}
+      A(r) B(r) = {\rm const} \, ,
+\end{equation}
+und wegen des asymptotischen Verhaltens von $A(r)$ und
+$B(r)$ f\"ur gro\ss e Werte von $r$ ist die Konstante 1, also
+\begin{equation}
+\label{eq_SSL1}
+                A(r) = \frac{1}{B(r)}  \, . 
+\end{equation} 
+Wir nutzen diese Beziehung in $R_{11}$ und gelangen zu der
+Gleichung
+\begin{equation}
+\label{eq_SSL2}
+           R_{22} = -1 + r B' + B = 0 \, .
+\end{equation}
+Da $R_{22}$ identisch verschwinden soll, muss auch
+die Ableitung verschwinden und damit folgt:
+\begin{equation}
+\label{eq_SSL3}
+           \frac{{\rm d}R_{22}}{{\rm d}r} = B' + r B'' + B' = rB'' + 2B' = 0 \, .
+\end{equation}
+Setzen wir Gl.\ \ref{eq_SSL1} in $R_{11}$ ein, erhalten wir
+\begin{equation}
+     R_{11} = \frac{B''}{2B} + \frac{B'}{rB} = \frac{rB'' + 2B}{2rB} \, .
+\end{equation}
+Wegen Gl.\ \ref{eq_SSL3} verschwindet dieser Ausdruck aber,
+also ist $R_{11}=0$ (und damit wegen Gl.\ \ref{eq_SSL0} auch 
+$R_{00}=0$), sofern $R_{22}$ verschwindet. Wir haben also
+nur noch Gleichung \ref{eq_SSL2} zu l\"osen. Da $(rB)' = rB' + B$
+f\"uhrt dies auf:
+\begin{equation}
+             \frac{{\rm d}(rB)}{{\rm d}r} = 1 \, .
+\end{equation} 
+Aus dieser Gleichung folgt $rB=r -2a$, wobei wir die
+freie Integrationskonstante mit $-2a$ bezeichnet haben. 
+Damit erhalten wir als L\"osungen:
+\begin{equation}
+     B(r) = 1 - \frac{2a}{r} \hspace{1cm} {\rm und}
+     A(r) = \frac{1}{1 - 2a/r}  \, .
+\end{equation}
+Die Minkowski-Metrik $A(r)=B(r)=1$ ergibt sich aus dem
+Spezialfall $a=0$. 
+
+Die physikalische Bedeutung der Integrationskonstanten
+$a$ ergibt sich aus einem Vergleich mit der Newton'schen
+N\"aherung (siehe Abschnitt \ref{sec_NewtonGrenzfall}, 
+Gl.\ \ref{eq_gnnNewton}). F\"ur gro\ss e Werte von $r$ sollte
+die L\"osung dem Newton'schen Grenzfall entsprechen, und 
+damit erhalten wir 
+\begin{equation} 
+            a=GM/c^2\, . 
+\end{equation}  
+
+\subsection{Die Schwarzschild-L\"osung}
+
+Wie wir im letzten Abschnitt gesehen haben, l\"asst sich die 
+Schwarzschild-Metrik als statische und 
+rotationssymmetrische L\"osung schreiben, d.h.\ sie h\"angt in diesem
+Fall nur von einer Koordinate ab -- dem Radius $r$ vom Zentrum der 
+L\"osung:
+\begin{equation}
+\label{schwarz}
+  {\rm d}s^2 ~=~ \left( 1 - \frac{2GM}{c^2 r} \right)c^2 {\rm d}t^2 -
+  \frac{ {\rm d}r^2}{ 1 - 2GM/(c^2 r)}  - r^2 \left( {\rm d} \vartheta^2 +
+  \sin^2 \vartheta \; {\rm d} \phi^2  \right)   
+\end{equation}     
+Au\ss erdem enth\"alt die Schwarzschild-Metrik noch einen Parameter $M$, 
+der die St\"arke des Gravitationsfeldes in einem bestimmten Abstand angibt.
+$M$ wird meist so gew\"ahlt, dass die Schwarzschild-L\"osung f\"ur
+$r\rightarrow \infty$ einem Newton'schen Gravitationspotential 
+einer Masse $M$ im Abstand $r$ entspricht. 
+
+Der winkelabh\"angige (letzte) Term der Metrik entspricht
+gew\"ohnlichen Kugelkoordinaten (vgl.\ Gl.\ \ref{eq_Kugelmetrik}). 
+Die ersten beiden Terme werden bei 
+\begin{equation}
+            R_{\rm S} = \frac{2 G M}{c^2}
+\end{equation}
+singul\"ar. $R_{\rm S}$ bezeichnet man auch als
+Schwarzschild-Radius\index{Schwarzschild-Radius}. 
+Vergleichen wir die Art der Singularit\"at dieser
+beiden Elemente der Metrik mit der speziellen
+Kugelprojektion in Gl.\ \ref{eq_Kugelsingularitaet},
+so entdeckt man (bis auf das relative Vorzeichen,
+das durch die Minkowski-Struktur hereinkommt)
+eine deutliche \"Ahnlichkeit, was die Vermutung
+nahelegt, dass es sich hierbei nur um eine
+Koordinatensingularit\"at handelt. 
+
+Obwohl Eddington
+\index{Eddington, Arthur Stanley}
+1924 schon gezeigt hatte, dass es sich bei dieser Singularit\"at
+nur um eine Koordinatensingularit\"at handelt, blieb ihre Natur doch
+unklar. Bis in die sechziger Jahre schien man sich auch wenig daf\"ur
+zu interessieren, da man sich kaum vorstellen konnte, dass schwarze
+L\"ocher wirklich existierten. Erst 1958 untersuchte David Finkelstein  
+\index{Finkelstein, David}
+die Singularit\"at in der Metrik genauer und \glqq entdeckte\grqq\ das
+alte Ergebnis von Eddington wieder. Bei $r=0$ gibt es allerdings wirklich
+eine geometrische Singularit\"at, denn dort wird die Kr\"ummung unendlich.
+
+\subsubsection{Veranschaulichungen der Schwarzschild-Metrik}
+
+Als ersten Schritt zum Versuch einer Veranschaulichung
+betrachten wir einen r\"aum\-lichen Schnitt durch die
+\"Aquatorebene der Schwarzschild-Metrik. 
+Das bedeutet,\index{Schwarzschild-Metrik!Aequa@\"Aquatorialebene}
+wir setzen $\theta=0$ (dieser Winkel wird nicht variiert) und
+$t={\rm const}$ (diese Koordinate wird ebenfalls nicht
+variiert). Die verbleibende Metrik in der \"Aquatorebene
+ist somit:
+\begin{equation}
+    {\rm d}s^2 = 
+      \frac{ {\rm d}r^2}{ 1 - R_{\rm S}/r}  + r^2  {\rm d} \varphi^2 
+\end{equation}
+Wir suchen nun eine \glqq H\"ohenfunktion\grqq $f(r)$ \"uber der 
+von $r$ und $\varphi$ parametrisierten Ebene, sodass die
+Projektion der Fl\"ache $(r,\varphi,f(r))$ im $\mathbb{R}^3$
+auf die Ebene $(r,\varphi)$ die oben angegebene Metrik
+liefert. Nach den \"Uberlegungen aus Abschnitt \ref{sec_InduzMet} 
+wird die $rr$-Komponente der Metrik (alle
+anderen Komponenten werden nicht beeinflusst, da $f$ nicht
+vom Winkel abh\"angen soll) zu
+\begin{equation}
+     g_{rr} = \frac{\partial (r,\varphi,f(r))}{\partial r} \cdot
+     \frac{\partial (r,\varphi,f(r))}{\partial r} = (1,0,f'(r)) \cdot (1,0,f'(r)) 
+     = 1 + (f'(r))^2 \, .
+\end{equation}
+Wir m\"ussen also die Differentialgleichung
+\begin{equation}
+       \frac{1}{1-R_{\rm S}/r} = 1 + f'^2
+\end{equation}
+bzw.
+\begin{equation}
+      f'(r) = \sqrt{\frac{R_{\rm S}}{r - R_{\rm S}}}    
+\end{equation}
+l\"osen (zun\"achst nur f\"ur $r > R_{\rm S}$). Das Ergebnis
+ist
+\begin{equation}
+     f(r) = 2\sqrt{R_{\rm S}} \sqrt{r - R_{\rm S}} \, .
+\end{equation} 
+Wir erhalten somit einen Trichter von der Form einer
+Wurzelfunktion (siehe Abb.\ \ref{fig_trichter}). Diesen
+Trichter bezeichnet man auch als Flamm'schen 
+Paraboloid.\index{Flamm'scher Paraboloid} 
+
+\begin{figure}[ht]
+\begin{picture}(210,120)(-10,0)
+\put(0,0){\line(1,0){200}}
+\put(0,0){\line(1,2){20}}
+\put(200,0){\line(-1,2){20}}
+\put(20,40){\line(1,0){55}}
+\put(125,40){\line(1,0){55}}
+%
+\qbezier(110,20)(110,65)(150,110)
+\qbezier(90,20)(90,65)(50,110)
+\put(100,20){\line(0,1){90}}
+%
+\qbezier(80,20)(80,25)(100,25)
+\qbezier(100,25)(120,25)(120,20)
+\qbezier(0,110)(0,115)(100,115)
+\qbezier(100,115)(200,115)(200,110)
+\qbezier(50,75)(50,80)(100,80)
+\qbezier(100,80)(150,80)(150,75)
+\qbezier(70,52)(70,57)(100,57)
+\qbezier(100,57)(130,57)(130,52)
+\thicklines
+\qbezier(120,20)(120,65)(200,110)
+\qbezier(80,20)(80,65)(0,110)
+\end{picture}
+%
+\hfill
+\begin{picture}(160,150)(-50,-70)
+\put(20,0){\line(1,0){50}}
+\put(0,20){\line(0,1){50}}
+\put(-20,0){\line(-1,0){50}}
+\put(0,-20){\line(0,-1){50}}
+\put(14.14,14.14){\line(1,1){35.4}}
+\put(-14.14,14.14){\line(-1,1){35.4}}
+\put(-14.14,-14.14){\line(-1,-1){35.4}}
+\put(14.14,-14.14){\line(1,-1){35.4}}
+%
+\qbezier(-50,0)(-50,20.7)(-35.36,35.36)
+\qbezier(-35.36,35.36)(-20.7,50)(0,50)
+\qbezier(0,50)(20.7,50)(35.36,35.36)
+\qbezier(35.36,35.36)(50,20.7)(50,0)
+\qbezier(-50,0)(-50,-20.7)(-35.36,-35.36)
+\qbezier(-35.36,-35.36)(-20.7,-50)(0,-50)
+\qbezier(0,-50)(20.7,-50)(35.36,-35.36)
+\qbezier(35.36,-35.35)(50,-20.7)(50,0)
+%
+\qbezier(-70,0)(-70,29)(-49.5,49.5)
+\qbezier(-49.5,49.5)(-29,70)(0,70)
+\qbezier(0,70)(29,70)(49.5,49.5)
+\qbezier(49.5,49.5)(70,29)(70,0)
+\qbezier(-70,0)(-70,-29)(-49.5,-49.5)
+\qbezier(-49.5,-49.5)(-29,-70)(0,-70)
+\qbezier(0,-70)(29,-70)(49.5,-49.5)
+\qbezier(49.5,-49.5)(70,-29)(70,0)
+%
+\qbezier(-32,0)(-32,13.25)(-22.63,22.63)
+\qbezier(-22.63,22.63)(-13.25,32)(0,32)
+\qbezier(0,32)(13.25,32)(22.63,22.63)
+\qbezier(22.63,22.63)(32,13.25)(32,0)
+\qbezier(-32,0)(-32,-13.25)(-22.63,-22.63)
+\qbezier(-22.63,-22.63)(-13.25,-32)(0,-32)
+\qbezier(0,-32)(13.25,-32)(22.63,-22.63)
+\qbezier(22.63,-22.63)(32,-13.25)(32,0)
+%
+\qbezier(-25,0)(-25,10.35)(-17.68,17.68)
+\qbezier(-17.68,17.68)(-10.35,25)(0,25)
+\qbezier(0,25)(10.35,25)(17.68,17.68)
+\qbezier(17.68,17.68)(25,10.35)(25,0)
+\qbezier(-25,0)(-25,-10.35)(-17.68,-17.68)
+\qbezier(-17.68,-17,68)(-10.35,-25)(0,-25)
+\qbezier(0,-25)(10.35,-25)(17.68,-17.68)
+\qbezier(17.68,-17.68)(25,-10.35)(25,0)
+%
+\qbezier(-22,0)(-22,9.1)(-15.56,15.56)
+\qbezier(-15.56,15.56)(-9.1,22)(0,22)
+\qbezier(0,22)(9.1,22)(15.56,15.56)
+\qbezier(15.56,15.56)(22,9.1)(22,0)
+\qbezier(-22,0)(-22,-9.1)(-15.56,-15.56)
+\qbezier(-15.56,-15.56)(-9.1,-22)(0,-22)
+\qbezier(0,-22)(9.1,-22)(15.56,-15.56)
+\qbezier(15.56,-15.56)(22,-9.1)(22,0)
+%
+\thicklines
+\qbezier(-20,0)(-20,8.3)(-14.14,14.14)
+\qbezier(-14.14,14.14)(-8.3,20)(0,20)
+\qbezier(0,20)(8.3,20)(14.14,14.14)
+\qbezier(14.14,14.14)(20,8.3)(20,0)
+\qbezier(-20,0)(-20,-8.3)(-14.14,-14.14)
+\qbezier(-14.14,-14.14)(-8.3,-20)(0,-20)
+\qbezier(0,-20)(8.3,-20)(14.14,-14.14)
+\qbezier(14.14,-14.14)(20,-8.3)(20,0)
+\end{picture}
+\caption{\label{fig_trichter}%
+(links) Projiziert man den Trichter auf die $(r,\varphi)$-Ebene so induziert
+dieser eine Metrik, die gleich der Metrik der Schwarzschild-L\"osung
+in der \"Aquatorialebene ist. (rechts) Die Dichte der Kreise, die
+auf dem Trichter einen konstanten Abstand voneinander haben, wird in 
+dieser Karte immer h\"oher, je n\"aher man sich dem Schwarzschild-Radius
+n\"ahert.}
+\end{figure}
+
+Obwohl $f(r)$ f\"ur sehr gro\ss e Werte von $r$ nicht
+verschwindet, ist die durch $f(r)$ induzierte Metrik
+f\"ur sehr gro\ss e Werte von $r$ gleich der Minkowski-Metrik,
+da die Ableitung von $f(r)$ f\"ur $r\rightarrow \infty$ gegen null
+geht. 
+
+Was passiert f\"ur $r< R_{\rm S}$? In diesem Fall dreht sich
+das Vorzeichen in der $rr$-Komponente der Metrik um. Wir
+erhalten also f\"ur den Bereich innerhalb des Schwarzschild-Radius
+eine kausale Struktur in $r$-Richtung. Dies werden wir sp\"ater
+noch diskutieren. 
+
+\begin{SCfigure}[50][ht]
+\begin{picture}(260,230)(0,0)
+\thinlines
+\put(120,20){\line(0,1){180}}
+\thicklines
+\put(40,20){\vector(0,1){180}}
+\put(43,20){\line(0,1){180}}
+%\put(220,20){\line(0,1){200}}
+\thinlines
+\put(40,20){\vector(1,0){210}}
+\qbezier(130,50)(139,33)(250,32)
+\qbezier(130,50)(121,60)(121,200)
+\put(40,10){\makebox(0,0){\footnotesize Singularit\"at}}
+\put(120,10){\makebox(0,0){$R_{\rm S}$}}
+\put(250,13){\makebox(0,0){$r$}}
+\put(35,200){\makebox(0,0){$t$}}
+%
+\put(140,20){\line(0,1){23}}
+\put(147,30){\makebox(0,0){${\scriptstyle \Delta \tau}$}}
+%
+\put(240,17){\line(0,1){6}}
+\put(220,17){\line(0,1){6}}
+\put(200,17){\line(0,1){6}}
+\put(180.5,17){\line(0,1){6}}
+\put(162,17){\line(0,1){6}}
+\put(146,17){\line(0,1){6}}
+\put(135,17){\line(0,1){6}}
+\put(127,17){\line(0,1){6}}
+\put(124,17){\line(0,1){6}}
+\put(122,17){\line(0,1){6}}
+\put(121,17){\line(0,1){6}}
+\end{picture}
+\caption{\label{figSMrt}%
+Schwarzschild-Metrik au\ss erhalb des Schwarz\-schild-Radius. 
+Physikalisch gleiche r\"aumliche
+Abst\"ande werden in der Karte durch immer k\"urzere
+Abst\"ande dargestellt, wenn $r$ sich dem Schwarzschild-Radius
+n\"ahert. Andererseits entsprechen physikalisch gleiche 
+Eigenzeitintervalle in $t$-Richtung
+immer gr\"o\ss ere Intervallen in der Karte.}
+\end{SCfigure}
+
+Nun betrachten wir die Schwarzschild-Metrik in
+$(t,r)$-Koordinaten\index{Schwarzschild-Metrik} 
+(vgl.\ Abbildung \ref{figSMrt}).
+Wir haben in der Abbildung gleiche physikalische
+r\"aumliche Distanzen auf der $r$-Achse markiert.
+In der Karte entsprechen diesen Distanzen immer
+k\"urzere Abst\"ande. Man vergleiche dieses Verhalten
+mit den Abst\"anden der Breitengraden auf einer Kugeloberfl\"ache
+in einer senkrechten Zylinderprojektion auf die $z$-Achse
+(Abb.\ \ref{fig_karte}). Umgekehrt werden gleiche Eigenzeiten in $t$-Richtung
+in der Karte durch immer gr\"o\ss ere Abst\"ande wiedergegeben
+(die Punkte auf der durchgezogenen Kurve haben von der
+$r$-Achse immer denselben senkrechten Abstand $\Delta \tau$).    
+Dies entspricht den Verh\"altnissen f\"ur horizontale Abst\"ande
+(entlang von Breitengraden) in Abb.\ \ref{fig_karte}. Dieselbe physikalische
+Distanz auf der Kugeloberfl\"ache wird in der Karte durch
+immer gr\"o\ss ere Abst\"ande in horizontaler Richtung 
+wiedergegeben, wenn man sich den Polen n\"ahert. 
+
+\subsubsection{Weltlinien von Beobachtern}
+
+
+\begin{SCfigure}[50][ht]
+\begin{picture}(260,230)(0,0)
+\thinlines
+\put(120,20){\line(0,1){200}}
+\thicklines
+\put(40,20){\vector(0,1){200}}
+\put(43,20){\line(0,1){200}}
+\put(220,20){\line(0,1){200}}
+\thinlines
+\put(40,20){\vector(1,0){210}}
+\qbezier(220,20)(220,50)(170,100)
+\qbezier(170,100)(120,150)(122,220)
+\put(40,10){\makebox(0,0){Singularit\"at}}
+\put(120,10){\makebox(0,0){$R_{\rm S}$}}
+\put(227,70){\makebox(0,0){$A$}}
+\put(187,70){\makebox(0,0){$B$}}
+\put(82,105){\makebox(0,0){$C$}}
+\put(180,160){\makebox(0,0){I}}
+\put(80,160){\makebox(0,0){II}}
+\put(250,13){\makebox(0,0){$r$}}
+\put(35,220){\makebox(0,0){$t$}}
+\multiput(218,20)(0,6){34}{\line(1,0){4}}
+\put(217,27){\line(1,0){4}}
+\put(215,34){\line(1,0){4}}
+\put(213,42){\line(1,0){4}}
+\put(208,52){\line(1,0){4}}
+\put(200,64){\line(1,0){4}}
+\put(187,80){\line(1,0){4}}
+\put(154,116){\line(1,0){4}}
+\put(120,214){\line(1,0){4}}
+\qbezier(117,200)(100,70)(43,70)
+\put(114,193){\line(1,0){4}}
+\put(96.5,120){\line(1,0){4}}
+\put(79.5,90){\line(1,0){4}}
+\put(67,78){\line(1,0){4}}
+\put(61.5,75){\line(1,0){4}}
+\put(57,73){\line(1,0){4}}
+\put(51,71){\line(1,0){4}}
+\put(43,70){\line(1,0){4}}
+\end{picture}
+\caption{\label{figschwarz}%
+Schwarzschild-Metrik. Beobachter $A$ h\"alt einen konstanten
+Abstand von der Singularit\"at; Beobachter $B$ trennt sich von
+Beobachter $A$ und fliegt frei auf das schwarze Loch zu. Die
+Markierungen auf den jeweiligen Weltlinien entsprechen 
+(qualitativ) gleichen
+Taktzeiten. Bereich I entspricht $r>R_{\rm S}$, Bereich II ist der
+Bereich innerhalb des Horizonts. Eine Weltlinie hinter dem
+Horizont ($C$) \glqq kommt von oben\grqq\ und 
+endet unweigerlich in der Singularit\"at.}
+\end{SCfigure}
+
+Abb.~\ref{figschwarz} skizziert die Verh\"altnisse zweier 
+Beobachter\index{Schwarzschild-Metrik!Weltlinien} 
+im Feld der Schwarzschild-Metrik, ausgedr\"uckt in den
+Koordinaten $(t,r)$, entsprechend der obigen Form (Gl.~\ref{schwarz}).
+Die Winkelvariable interessieren uns im 
+Folgenden nicht weiter, da die L\"osung rotationssymmetrisch ist.
+Die Koordinate $t$ entspricht der Eigenzeit eines Beobachters
+in konstantem \glqq unendlichen\grqq\ Abstand vom Schwarzen
+Loch und ist proportional zur Eigenzeit
+eines Beobachters $A$, der einen konstanten Abstand 
+au\ss erhalb vom Schwarzschild-Radius h\"alt. 
+N\"ahert sich dieser Abstand dem
+Schwarzschild-Radius, so wird dieser 
+Proportionalit\"atsfaktor kleiner, d.h.\ umso 
+weiter liegen in diesen Koordinaten Takte konstanter Eigenzeit auf der 
+Weltlinie auseinander. Am Schwarzschild-Radius wird dieser
+Faktor null. Die senkrechte Linie an diesem Punkt entspricht
+einer \glqq Null-Linie\grqq, d.h.\ zwei Punkte auf dieser Linie haben 
+den Minkowski-Abstand Null. 
+
+\begin{SCfigure}[50][ht]
+\begin{picture}(260,230)(0,0)
+\thinlines
+\put(120,20){\line(0,1){200}}
+\thicklines
+\put(40,20){\vector(0,1){200}}
+\put(43,20){\line(0,1){200}}
+\put(220,20){\line(0,1){200}}
+\thinlines
+\put(40,20){\vector(1,0){210}}
+\qbezier(220,20)(220,50)(170,100)
+\qbezier(170,100)(120,150)(122,220)
+\put(40,10){\makebox(0,0){Singularit\"at}}
+\put(120,10){\makebox(0,0){$R_{\rm S}$}}
+\put(227,70){\makebox(0,0){$A$}}
+\put(187,70){\makebox(0,0){$B$}}
+\put(180,160){\makebox(0,0){I}}
+\put(80,160){\makebox(0,0){II}}
+\put(250,13){\makebox(0,0){$r$}}
+\put(35,220){\makebox(0,0){$t$}}
+%
+\qbezier(220,130)(250,131)(220,132)
+\qbezier(220,130)(190,131)(220,132)
+\qbezier(220,115)(250,116)(220,117)
+\qbezier(220,115)(190,116)(220,117)
+\put(204,116){\line(2,1){30}}
+\put(236,116){\line(-2,1){30}}
+%
+\put(180,123){\makebox(0,0){
+\qbezier(0,7)(20,8)(0,9)
+\qbezier(0,7)(-20,8)(0,9)
+\qbezier(0,-8)(20,-7)(0,-6)
+\qbezier(0,-8)(-20,-7)(0,-6)
+\put(-10.5,-7){\line(4,3){20}}
+\put(10.5,-7){\line(-4,3){20}}
+}}
+%
+\put(151,123){\makebox(0,0){
+\qbezier(0,7)(15,8)(0,9)
+\qbezier(0,7)(-15,8)(0,9)
+\qbezier(0,-8)(15,-7)(0,-6)
+\qbezier(0,-8)(-15,-7)(0,-6)
+\put(-7,-7){\line(1,1){15}}
+\put(7,-7){\line(-1,1){15}}
+}}
+%
+\put(132,123){\makebox(0,0){
+\qbezier(0,7)(8,8)(0,9)
+\qbezier(0,7)(-8,8)(0,9)
+\qbezier(0,-8)(8,-7)(0,-6)
+\qbezier(0,-8)(-8,-7)(0,-6)
+\put(-3,-7){\line(2,5){6}}
+\put(3,-7){\line(-2,5){6}}
+}}
+%
+\thicklines
+\put(120.5,114){\line(0,1){18}}
+\put(119.5,114){\line(0,1){18}}
+%
+\thinlines
+\put(110,123){\makebox(0,0){
+\qbezier(-6.5,0)(-5,15)(-3.5,0)
+\qbezier(-6.5,0)(-5,-15)(-3.5,0)
+\qbezier(6.5,0)(5,15)(3.5,0)
+\qbezier(6.5,0)(5,-15)(3.5,0)
+\put(-4,-8){\line(1,2){8}}
+\put(4,-8){\line(-1,2){8}}
+}}
+%
+\put(70,123){\makebox(0,0){
+\qbezier(-12,0)(-10,10)(-8,0)
+\qbezier(-12,0)(-10,-10)(-8,0)
+\qbezier(8,0)(10,10)(12,0)
+\qbezier(8,0)(10,-10)(12,0)
+\put(-10,-5){\line(2,1){20}}
+\put(10,-5){\line(-2,1){20}}
+}}
+\end{picture}
+\caption{\label{figschwarz2}%
+Lichtkegelstruktur der Schwarz\-schild-Metrik. 
+Je kleiner $r$, umso enger wird der Lichtkegel in
+den Schwarzschild-Koordinaten.
+Beim Schwarzschild-Radius entartet der Kegel
+zu einer Linie (\"Offnungswinkel null).
+Innerhalb des Horizonts
+haben $r$ und $t$ ihre Rollen als \glqq r\"aumliche\grqq\ 
+und \glqq zeitliche\grqq\ Koordinaten vertauscht.}
+\end{SCfigure}
+
+
+F\"ur einen Beobachter $B$, der sich von
+$A$ trennt und \glqq frei\grqq\ auf das schwarze Loch zuf\"allt,
+werden die Intervalle gleicher Eigenzeit durch immer gr\"o\ss ere
+Abst\"ande wiedergegeben. 
+Dies wird durch die Markierungen in Abb.~\ref{figschwarz}
+symbolisiert. Integriert man die L\"ange der Weltlinie von $B$ bis zum
+Wert $t=\infty$ (d.h.\ unendlicher Eigenzeit des Beobachters $A$)
+auf, so findet man einen endlichen Wert. Beobachter $B$ erreicht somit
+den Schwarzschild-Radius nach einer f\"ur ihn endlichen Eigenzeit. Sein
+weiteres Schicksal wird aus dieser Darstellung zun\"achst
+nicht deutlich. Man kann jedoch seine Geod\"ate vervollst\"andigen
+und erh\"alt dabei eine Trajektorie $C$ innerhalb des Schwarzschild-Radius,
+die in den angegebenen Kooridanten \glqq von oben\grqq\ kommt
+und in der Singularit\"at bei $r=0$ endet. 
+
+F\"ur $r<R_{\rm S}$ haben die Koeffizienten von ${\rm d}t$ und ${\rm d}r$
+ihre Vorzeichen gewechselt, d.h.\ innerhalb des Schwarzschild-Radius
+sind die Verh\"altniss von 
+\glqq raumartig\grqq\ und \glqq zeitartig\grqq\ umgekehrt: waagerechte
+Linien sind zeitartig und senkrechte Linien sind raumartig. Daher
+liegt die Singularit\"at eigentlich in der zeitlichen Zukunft und ist
+raumartig. 
+
+Das \glqq Universum\grqq\ von Beobachter $A$ ist der Bereich I. Er kann 
+Bereich II\index{Schwarzschild-Metrik!kausale Beziehungen} 
+innerhalb des Schwarzschild-Radius nicht einsehen. Der
+Schwarzschild-Radius bildet somit f\"ur $A$ einen
+Ereignishorizont.\index{Ereignishorizont}
+Er sieht einen Beobachter $B$ auf diesen Ereignishorizont zufliegen,
+allerdings bleibt $B$ f\"ur alle Zeiten von $A$ au\ss erhalb dieses
+Bereichs. Er verschwindet f\"ur $A$ im infraroten Bereich des
+Spektrums. 
+
+\begin{figure}[ht]
+\begin{picture}(360,250)(0,0)
+\put(160,70){\vector(0,1){100}}
+\put(60,120){\vector(1,0){240}}
+\thicklines
+%\put(195,63){\line(0,1){114}}
+\put(60,20){\line(1,1){200}}
+\put(60,220){\line(1,-1){200}}
+\qbezier(232,70)(200,120)(195,177)
+\qbezier(270,20)(170,120)(270,220)
+\qbezier(80,210)(160,130)(240,210)
+\qbezier(80,213)(160,133)(240,213)
+\qbezier(80,30)(160,110)(240,30)
+\qbezier(80,27)(160,107)(240,27)
+\thinlines
+\put(155,160){\makebox(0,0){$t'$}}
+\put(300,115){\makebox(0,0){$x$}}
+\put(160,200){\makebox(0,0){Zukunftssingularit\"at}}
+\put(160,40){\makebox(0,0){Vergangenheitssingularit\"at}}
+\put(250,130){\makebox(0,0){{\Large I}}}
+\put(150,80){\makebox(0,0){{\Large IV}}}
+\put(60,130){\makebox(0,0){{\Large III}}}
+\put(175,155){\makebox(0,0){{\Large II}}}
+\put(160,128){\makebox(0,0){O}}
+\put(230,150){\makebox(0,0){A}}
+\put(205,110){\makebox(0,0){B}}
+\end{picture}
+\caption{\label{figkruskal}%
+Kruskal-Szekeres-Darstellung der geod\"atisch vervollst\"andigten 
+Schwarzschild-L\"osung. Beobachter $A$ sieht das schwarze Loch nur
+von au\ss en. Seine Welt ist der Bereich I. Aus dem Bereich der
+Vergangenheitssingularit\"at IV kann Strahlung in Bereich I dringen.
+Beobachter $A$ sieht diesen Bereich als \glqq wei\ss es Loch\grqq.
+Andererseits kann ein Beobachter $B$ auch von Bereich I hinter
+den Horizont in Bereich II dringen. Er trifft dann unweigerlich auf
+die Zukunftssingularit\"at. Bereich II ist f\"ur $A$ ein schwarzes Loch.}
+\end{figure}
+
+Eine interessante\index{Schwarzes Loch!Kruskal-Szekeres-Karte} 
+Darstellung der Verh\"altnisse an einem schwarzen
+Loch, die insbesondere das Schicksal von Beobachter $B$ deutlich macht,
+fanden 1960 Martin Kruskal\index{Kruskal, Martin David} und unabh\"angig 
+von ihm George Szekeres\index{Szekeres, George} (vgl.\ Abb.~\ref{figkruskal}).
+Der Darstellung \ref{figschwarz} entsprechen dabei zun\"achst nur die
+Bereiche I und II. Die Bereiche III und IV sind eine Erweiterung der
+Schwarzschild-Metrik zu einem geod\"atisch vollst\"andigen 
+Universum:\index{Geod\"atisch Vollst\"andig}
+Geod\"aten enden entweder an einer Singulari\"at oder im Unendlichen.
+
+Der wesentliche qualitative Unterschied zwischen Abb.~\ref{figkruskal} 
+und der Darstellung des Rindler-Universums,
+Abb.~\ref{figrindler}, liegt in der Existenz einer Zukunfts- und
+Vergangenheitssingularit\"at. Dort wird die Kr\"ummung singul\"ar,
+d.h.\ nach unserem klassischen Verst\"andnis enden dort Raum und Zeit.
+Ein weiterer Unterschied zum Rindler-Universum ist die
+Rotationsinvarianz. Erweitert man das Rindler-Universum um
+zwei r\"aumliche Dimensionen, wird die Struktur der
+Horizonte dort zu einem Keil, wohingegen es beim Schwarzen
+Loch ein Kegel ist. 
+
+Bereich I entspricht einem \"au\ss eren Beobachter $A$ des schwarzen Loches.
+Er muss eine Kraft aufwenden, um sich dem Einfluss des schwarzen
+Loches entziehen zu k\"onnen, und sp\"urt somit das Gravitationsfeld. 
+Aus Bereich IV kann Strahlung in seine Welt dringen, nichts aus seiner
+Welt kann aber in diesen Bereich hinein. Man bezeichnet diesen Bereich
+manchmal auch als \glqq wei\ss es Loch\grqq\index{Wei\ss es Loch}. 
+Die Trennungsfl\"ache zwischen Bereich I und II entspricht dem 
+Ereignishorizont.
+\index{Schwarzes Loch}\index{Ereignishorizont}
+Nichts, was einmal aus Bereich I in diesen Bereich gelangt ist, kann
+jemals wieder in den Bereich I zur\"uck. Der \"au\ss ere Beobachter
+$A$ sieht den Beobachter $B$ an der Oberfl\"ache des Horizonts 
+verschwinden, ganz \"ahnlich wie im Fall des Rindler-Universums.
+
+Bereich III ist wiederum von Bereich I kausal getrennt. F\"ur eine
+geod\"atisch vollst\"andige L\"osung -- d.h.\ eine L\"osung, f\"ur die
+jede Geod\"ate entweder fortgesetzt werden kann oder an einer
+Singularit\"at endet -- ist dieser Bereich jedoch notwendig. Er ist
+wie ein zweites Universum - ebenfalls au\ss erhalb des schwarzen Loches -
+aber trotzdem mit I durch keine zeitartige Linie verbunden.
+
+Eine ebenfalls elegante Darstellung von L\"osungen 
+der Einstein-Gleichungen sind so genannte 
+Penrose-Diagramme.\index{Penrose-Diagramm}
+Hierbei handelt es sich um eine konforme Koordinatentransformation,
+d.h.\ Winkel werden getreu dargestellt, allerdings sind L\"angen
+verzerrt. Durch eine konforme Transformation l\"asst sich die
+Kruskal-Szekeres-Raumzeit auf ein Diagramm wie in
+Abb.\ \ref{fig_Penrose} abbilden.
+
+\begin{SCfigure}[50][htb]
+\begin{picture}(210,130)(0,0)
+\put(60,20){\line(1,0){100}}
+\put(60,120){\line(1,0){100}}
+\put(60,20){\line(-1,1){50}}
+\put(60,20){\line(1,1){100}}
+\put(160,20){\line(1,1){50}}
+\put(160,20){\line(-1,1){100}}
+\put(10,70){\line(1,1){50}}
+\put(210,70){\line(-1,1){50}}
+\multiput(62,20)(4,0){25}{\makebox(0,0){${\scriptstyle \vee}$}}
+\multiput(62,120)(4,0){25}{\makebox(0,0){${\scriptstyle \vee}$}}
+\put(110,10){\makebox(0,0){\footnotesize Vergangenheitssingularit\"at}}
+\put(110,130){\makebox(0,0){\footnotesize Zukunftssingularit\"at}}
+\put(175,74){\makebox(0,0){\footnotesize unser}}
+\put(175,66){\makebox(0,0){\footnotesize Universum}}
+\put(45,74){\makebox(0,0){\footnotesize anderes}}
+\put(45,66){\makebox(0,0){\footnotesize Universum}}
+\put(110,110){\makebox(0,0){\footnotesize Schwarzes}}
+\put(110,101){\makebox(0,0){\footnotesize Loch}}
+\put(110,40){\makebox(0,0){\footnotesize Wei\ss es}}
+\put(110,31){\makebox(0,0){\footnotesize Loch}}
+%
+\put(139,90){\begin{rotate}{45}
+\makebox(0,0){\bf\tiny Ereignishorizont}
+\end{rotate}}
+%
+\put(196,100){\makebox(0,0){${\scriptstyle t=+\infty}$}}
+\put(196,40){\makebox(0,0){${\scriptstyle t=-\infty}$}}
+\end{picture}
+\caption{\label{fig_Penrose}%
+Penrose-Diagramm einer vervollst\"andigten 
+Schwarzschild-L\"osung. Die Zukunftssingularit\"at
+und die Vergangenheitssingularit\"at entsprechen
+den horizontanten Linien am oberen und unteren
+Rand. Topologisch sind die Bereiche \"ahnlich
+dargestellt wie bei den Kruskal-Szekeres-Koordinaten.
+Lokal sind Lichtkegel immer unter $\pm 45^\circ$ geneigt,
+also wie bei einem gew\"ohnlichen Minkowski-Diagramm.}
+\end{SCfigure}
+
+Durch die konforme Transformation wird der Bereich
+\glqq unseres\grqq\ Universums endlich. Er wird oben
+rechts von der Zukunftslinie $t=+\infty$ berandet und
+unten rechts von der Vergangenheitslinie $t=-\infty$.
+S\"amtliche Weltlinien in unserem Universum (die also nie
+einen Ereignishorizont \"uberschreiten) beginnen
+auf der Linie unten rechts und enden auf der Linie
+oben rechts. Weltlinien aus unserem Universum, die
+den Ereignishorizont zum Schwarzen Loch
+\"uberschreiten, enden an der Zukunftssingularit\"at.
+
+\section{Schwarze L\"ocher mit Ladung und Drehimpuls}
+
+Geschlossene L\"osungen der Einstein-Gleichung sind
+noch f\"ur Schwarze L\"ocher mit einer elektrischen Ladung $Q$
+und einem Drehimpuls $J$ bekannt. Die Kerr-Newman-Metrik 
+beschreibt eine\index{Kerr-Newman-Metrik} 
+L\"osung mit allen drei Qualit\"atsmerkmalen.
+Sie lautet:
+\begin{equation}
+{\rm d}s^2 =  \frac{\Delta}{\rho^2} ({\rm d}t - a \sin^2 \theta\, {\rm d}\varphi)^2
+    - \frac{\sin^2 \theta}{\rho^2} \Big( (r^2+ a^2){\rm d}\varphi - a\, {\rm d}t \Big)^2
+    - \frac{\rho^2}{\Delta} {\rm d}r^2 - \rho^2\, {\rm d}\theta^2
+\end{equation}
+mit folgenden Abk\"urzungen:
+\begin{equation}
+   \Delta = r^2 - 2Mr + a^2 + Q^2  \hspace{1cm}
+   \rho^2 = r^2 + a^2 \cos^2 \theta \hspace{1cm}
+   a = \frac{J}{M}   \, .
+\end{equation}
+F\"ur den Spezialfall $Q=0$ und $J=0$ wird
+diese Metrik zur Schwarzschild-Metrik (Gl.\ \ref{schwarz}). 
+Den Spezialfall $Q=0$ und $J\neq 0$ bezeichnet man
+als Kerr-Metrik, und den Spezialfall $Q\neq 0$ und $J=0$
+als Reissner-Nordstr\"om-Metrik. 
+
+Theoretisch kann ein Schwarzes Loch noch 
+andere Quantenzahlen haben -- Baryonenzahl, Leptonenzahl, etc. --
+aber es gibt zu diesen Quantenzahlen keine weiteren
+Parameter. Insbesondere gibt es zur Massenverteilung oder
+Ladungsverteilung keine h\"oheren Momente, oder zum Drehimpuls
+keinen Tr\"agheitstensor mit unterschiedlichen Tr\"agheitsmomenten.
+Diese Tatsache bezeichnet man manchmal 
+auch als\index{No-Hair-Theorem}
+\glqq No-Hair-Theorem\grqq, womit angedeutet werden soll, dass
+ein Schwarzes Loch neben diesen angedeuteten Quantenzahlen
+keine weiteren Freiheitsgrade besitzen kann. 
+
+Besonders interessant sind einige Eigenschaften
+rotierender\index{Schwarzes Loch!rotierendes} 
+Schwarzer L\"ocher, die ich
+qualitativ kurz ansprechen m\"ochte, da sie
+einerseits bei Sch\"ulern auf
+gro\ss es Interesse sto\ss en d\"urften und
+andererseits mit gro\ss er Wahrscheinlichkeit die
+riesigen Schwarzen L\"ocher in den Zentren
+von Galaxien sehr rasch rotieren werden, diese
+L\"osungen also wichtig sind.
+
+\begin{SCfigure}[50][htb]
+\begin{picture}(185,120)(0,20)
+\qbezier(50,70)(50,90.7)(64.65,105.36)
+\qbezier(64.65,105.36)(79.3,120)(100,120)
+\qbezier(100,120)(120.7,120)(135.36,105.36)
+\qbezier(135.36,105.36)(150,90.7)(150,70)
+\qbezier(50,70)(50,49.3)(64.65,34.65)
+\qbezier(64.65,34.65)(79.3,20)(100,20)
+\qbezier(100,20)(120.7,20)(135.36,34.65)
+\qbezier(135.36,34.65)(150,49.3)(150,70)
+%
+\qbezier(20,70)(20,90.7)(43.42,105.36)
+\qbezier(43.42,105.36)(66.9,120)(100,120)
+\qbezier(100,120)(133.1,120)(156.6,105.36)
+\qbezier(156.6,105.36)(180,90.7)(180,70)
+\qbezier(20,70)(20,49.3)(43.42,34.65)
+\qbezier(43.42,34.65)(66.9,20)(100,20)
+\qbezier(100,20)(133.1,20)(156.6,34.65)
+\qbezier(156.6,34.65)(180,49.3)(180,70)
+\put(163,73){\makebox(0,0){\tiny Ergo-}}
+\put(163,67){\makebox(0,0){\tiny sph\"are}}
+\put(100,5){\vector(0,1){130}}
+\end{picture}
+\caption{\label{fig_rotblackhole}%
+Ein rotierendes Schwarzes Loch besitzt
+einen inneren und einen \"au\ss eren
+Ereignishorizont. Den Bereich zwischen den
+beiden Horizonten bezeichnet man als
+Ergosph\"are.}
+\end{SCfigure}
+
+Ein rotierendes Schwarzes Loch besitzt zwei
+Ereignishorizonte (siehe Abb.\ \ref{fig_rotblackhole}).
+Der innere Ereignishorizont hat Kugelform, und
+ein Gegenstand, der diesen Horizont \"uberquert hat,
+kann nicht mehr in den \"au\ss eren Bereich, aus dem
+er gekommen ist, zur\"uck. Zwischen den beiden
+Horizonten befindet sich die so genannte
+Ergosph\"are.\index{Ergosph\"are} 
+In diesem Bereich kann sich ein
+Beobachter nur halten, wenn er sich um das
+Schwarze Loch herumbewegt. Der Raum 
+in diesem Bereich wird durch das rotierende
+Schwarze Loch derart \glqq mitgedreht\grqq,
+dass der Lichtkegel so stark in Rotationsrichtung
+gekippt ist, dass eine Weltlinie innerhalb des
+Lichtkegels nicht an ihrem Ort bleiben kann, sondern
+sich ebenfalls um das Schwarze Loch winden muss.
+Trotzdem kann ein Beobachter diesem Bereich
+auch wieder entkommen. 
+
+Roger Penrose hat auf einen interessanten Prozess
+hingewiesen\index{Penrose-Prozess} 
+(den so genannten \textit{Penrose-Prozess}), bei
+dem man an einem rotierenden Schwarzen Loch durch
+die Entsorgung von M\"ull Energie gewinnen kann:
+Eine Rakete mit M\"ull fliegt in den Bereich der
+Ergosph\"are und trennt sich dort von dem
+M\"ull. Dies kann in einer Weise geschehen, dass
+der M\"ull in das Schwarze Loch hineinfliegt und
+gleichzeitig der Rakete ein gr\"o\ss erer Impuls
+\"ubertragen wird, mit dem sie das Schwarze
+Loch wieder verlassen kann. Insgesamt hat die
+Rakete nachher eine h\"ohere Energie als vorher,
+und zwar einschlie\ss lich der urspr\"unglichen
+Energie des M\"ulls,
+und der M\"ull ist im Schwarzen Loch 
+verschwunden. Bei diesem Prozess verliert das
+rotierende Schwarze Loch allerdings einen
+Teil seines Drehimpulses (und damit einen Teil seiner
+Rotationsenergie, die nun auf die Rakete \"ubertragen
+wurde), sodass er nicht beliebig
+oft wiederholt werden kann.
+
+Allgemein sind die Eigenschaften der L\"osungen zu rotierenden 
+bzw.\ geladenen Schwarzen L\"o\-chern wesentlich 
+komplizierter als bei der Schwarzschild-L\"osung. 
+Abbildung \ref{fig_Penrose2}) zeigt das 
+Penrose-Diagramm\index{Penrose-Diagramm}
+zur geod\"atisch vervollst\"andigten L\"osung. Man erkennt
+die beiden Horizonte, den inneren und \"au\ss eren Horizont.
+Au\ss erdem sind die Singularit\"aten nun zeitartig und
+k\"onnen von einer Weltlinie umgangen werden, so dass
+es bei diesen Schwarzen L\"ochern tats\"ahlich m\"oglich
+ist, dem Inneren wieder zu entkommen, allerdings in
+einen anderen Teil des Universums.
+
+\begin{SCfigure}[50][htb]
+\begin{picture}(220,350)(0,0)
+\put(160,120){\line(0,1){100}}
+\put(60,120){\line(0,1){100}}
+\put(70,10){\line(-1,1){60}}
+\put(50,10){\line(1,1){160}}
+\put(150,10){\line(1,1){60}}
+\put(170,10){\line(-1,1){160}}
+\put(10,70){\line(1,1){200}}
+\put(210,70){\line(-1,1){200}}
+\put(10,170){\line(1,1){160}}
+\put(210,170){\line(-1,1){160}}
+\put(10,270){\line(1,1){60}}
+\put(210,270){\line(-1,1){60}}
+\put(60,320){\line(0,1){10}}
+\put(160,320){\line(0,1){10}}
+\put(60,10){\line(0,1){10}}
+\put(160,10){\line(0,1){10}}
+\multiput(60,122)(0,4){25}{\makebox(0,0){${\scriptstyle >}$}}
+\multiput(160,122)(0,4){25}{\makebox(0,0){${\scriptstyle >}$}}
+\multiput(60,322)(0,4){3}{\makebox(0,0){${\scriptstyle >}$}}
+\multiput(160,322)(0,4){3}{\makebox(0,0){${\scriptstyle >}$}}
+\multiput(60,10)(0,4){3}{\makebox(0,0){${\scriptstyle >}$}}
+\multiput(160,10)(0,4){3}{\makebox(0,0){${\scriptstyle >}$}}
+%
+\put(40,179){\makebox(0,0){\tiny zeitartige}}
+\put(37,170){\makebox(0,0){\tiny Singularit\"at}}
+\put(180,179){\makebox(0,0){\tiny zeitartige}}
+\put(183,170){\makebox(0,0){\tiny Singularit\"at}}
+\put(175,74){\makebox(0,0){\footnotesize unser}}
+\put(175,66){\makebox(0,0){\footnotesize Universum}}
+\put(45,74){\makebox(0,0){\footnotesize anderes}}
+\put(45,66){\makebox(0,0){\footnotesize Universum}}
+
+\put(45,274){\makebox(0,0){\footnotesize anderes}}
+\put(45,266){\makebox(0,0){\footnotesize Universum}}
+\put(170,274){\makebox(0,0){\footnotesize anderes}}
+\put(170,266){\makebox(0,0){\footnotesize Universum}}
+
+%
+\put(138,91){\begin{rotate}{45}
+\makebox(0,0){\bf\tiny Ereignishorizont}
+\end{rotate}}
+\put(131,97){\begin{rotate}{45}
+\makebox(0,0){\bf\tiny \"au\ss erer}
+\end{rotate}}
+\put(132,143){\begin{rotate}{-45}
+\makebox(0,0){\bf\tiny Ereignishorizont}
+\end{rotate}}
+\put(135,153){\begin{rotate}{-45}
+\makebox(0,0){\bf\tiny innerer}
+\end{rotate}}
+\put(137,190){\begin{rotate}{45}
+\makebox(0,0){\bf\tiny Ereignishorizont}
+\end{rotate}}
+\put(131,197){\begin{rotate}{45}
+\makebox(0,0){\bf\tiny innerer}
+\end{rotate}}
+\put(132,243){\begin{rotate}{-45}
+\makebox(0,0){\bf\tiny Ereignishorizont}
+\end{rotate}}
+\put(135,253){\begin{rotate}{-45}
+\makebox(0,0){\bf\tiny \"au\ss erer}
+\end{rotate}}
+\qbezier(135,60)(70,170)(135,280)
+%
+\put(196,100){\makebox(0,0){${\scriptstyle t=+\infty}$}}
+\put(196,40){\makebox(0,0){${\scriptstyle t=-\infty}$}}
+\put(95,230){\makebox(0,0){\bf\tiny erlaubte}}
+\put(92,223){\makebox(0,0){\bf\tiny Weltlinie}}
+
+\end{picture}
+\caption{\label{fig_Penrose2}%
+Penrose-Diagramm einer vervollst\"andigten 
+Kerr-L\"osung. Die Singularit\"aten sind nun
+zeitartig und k\"onnen daher von Weltlinien
+vermieden werden. Das Diagramm wiederholt sind
+in Zeitrichtung beliebig oft. In dieser Raumzeit
+gibt es zeitartige Weltlinien, die von unserem
+Universum in andere Universen f\"uhren, ohne
+auf eine Singularit\"at zu treffen.}
+\end{SCfigure}
+
+
+\begin{thebibliography}{99}
+%\addcontentsline{toc}{chapter}{Literaturangaben}
+%\bibitem{Aichelburg} Peter C.\ Aichelburg (Hrsg.); {\it Zeit im 
+%       Wandel der Zeit}; Verlag Vieweg, Braunschweig, Wiesbaden, 1988.
+%\bibitem{Barbour3} {\it Mach's Principle -- From Newton's Bucket to
+%        Quantum Gravity}; Julian Barbour \& Herbert Pfister (Hrsg.);
+%        Birkh\"auser, Boston, Basel, Berlin, 1995.       
+%\bibitem{Bekenstein} Jacob D.\ Bekenstein, \textit{Black holes
+%          and entropy}, Phys.\ Rev.\ D\,7 (1973) 2333--2346.        
+%\bibitem{Bell} John Bell;  {\em Speakable and Unspeakable in 
+%        Quantum Physics}, 2.\ edition, Cambridge University Press (2004).       
+%\bibitem{Born} Max Born; {\it Optik}; Springer-Verlag, Berlin, Heidelberg,
+%        1972.
+%\bibitem{Britannica} Encyclopaedia Britannica; 15.th edition, 1988.
+%\bibitem{Descartes} Ren\'e Descartes; {\it Die Prinzipien der
+%        Philosophie}; Felix Meiner Verlag, Hamburg, 1992; \"ubersetzt
+%        von Artur Buchenau.
+%\bibitem{EDM} Encyclopaedic Dictionary of Mathematics; Second Edition,
+%        MIT Press, 1987.
+%\bibitem{Einstein1} Albert Einstein; {\it Zur Elektrodynamik bewegter 
+%        K\"orper}; Annalen der Physik, Leipzig, 17 (1905) 891. 
+%\bibitem{Einstein2} Albert Einstein; {\it Ist die Tr\"agheit eines
+%        K\"orpers von seinem Energieinhalt abh\"angig?} (Ann.\ Phys., 
+%        Leipzig, 18 (1905) 639.
+%\bibitem{Einstein3} Albert Einstein; {\it Aus meinen sp\"aten Jahren};
+%         Ullstein Sachbuch, Verlag Ullstein, Frankfurt, Berlin, 1993.                 
+%\bibitem{Einstein4} Albert Einstein; {\it Prinzipielles zur allgemeinen
+%        Relativit\"atstheorie}; Annalen der Physik 55 (1918) 241.
+%\bibitem{Einstein5} Albert Einstein; {\it \"Uber den Einflu\ss\ der
+%        Schwerkraft auf die Ausbreitung des Lichtes}; Annalen der
+%        Physik 35 (1911) 898.                 
+%\bibitem{Feynman} Richard Feynman; {\it The Character of Physical Law};
+%        The MIT Press, 1987.        
+%\bibitem{Fierz} Markus Fierz; {\it \"Uber den Ursprung und die Bedeutung
+%        der Lehre Isaac Newtons vom absoluten Raum}; Gesnerus, 
+%        11.\ Jahrgang (1954), S.\,62--120.
+%\bibitem{Fliessbach} Torsten Flie\ss bach; {\it Allgemeine 
+%        Relativit\"atstheorie}; BI-Wissenschaftsverlag, Mannheim, Wien
+%        Z\"urich, 1990. 
+%\bibitem{Galilei} Galilei; {\it Dialog \"uber die beiden haupts\"achlichen
+%        Weltsysteme, das ptolem\"aische und das kopernikanische}; 
+%        Teubner Stuttgart, 1982; aus dem Italienischen \"ubersetzt von
+%        Emil Strauss.   
+%  \bibitem{Hawking} Stephen W.\ Hawking, \textit{Particle Creation by
+%            black holes}, Comm.\ Math.\ Phys.\ 43 (1976) 199--220.      
+%\bibitem{Helmholtz2} Hermann von Helmholtz; {\em \"Uber Wirbelbewegungen,
+%        \"Uber Fl\"ussigkeitsbewegungen}, 1858; in Ostwalds Klassiker der 
+%       exakten Wissenschaften Bd.\ 1; Verlag Harri Deutsch, Frankfurt, 
+%       1996.                   
+%\bibitem{Lamb} G.L.\ Lamb, Jr.; {\it Elements of Soliton Theory}; 
+%         Pure \& Applied Mathematics, John Wiley \& Sons, 1980. 
+%\bibitem{Laue} Max von Laue; {\it Geschichte der Physik}; 
+%         Universit\"ats-Verlag Bonn, 1947.
+%\bibitem{Lorentz} Hendrik Antoon Lorentz; {\it Electromagnetic phenomena 
+ %        in a system moving with any velocity smaller than that of light}; 
+%         Proc.\ Acad.\ Sci., Amsterdam, 6 [1904], S.\ 809.
+%\bibitem{Mach} Ernst Mach; {\it Die Mechanik in ihrer Entwicklung
+%      historisch kritisch dargestellt}; Akademie Verlag, Berlin, 1988.       
+%\bibitem{Mainzer} Klaus Mainzer; {\it Philosophie und Geschichte von
+%         Raum und Zeit}; in {\it Philosophie und Physik der Raum-Zeit};
+%         J\"urgen Audretsch und Klaus Mainzer (Hrsg.); 
+%         BI-Wissenschaftsverlag, 1994. 
+%\bibitem{Microscope} Touboul, Pierre, et al. (MICROSCOPE Collaboration); \textit{MICROSCOPE Mission:
+%         Final Results of the Test of the Equivalence Principle}; Phys.\ Rev.\ Lett.\ \textbf{129} (2022) 121102.
+%\bibitem{Misner} C.W.\ Misner, K.S.\ Thorne, J.A.\ Wheeler; 
+%        {\it Gravitation}; W.H.\ Freeman and Company, San Francisco,  1973.
+%\bibitem{Mittelstaedt} Peter Mittelstaedt; {\it Der Zeitbegriff in der
+%        Physik}; BI-Wissenschaftsverlag, 1989.        
+%\bibitem{Mittelstaedt2} Peter Mittelstaedt; {\it Philosophische Probleme
+%        der modernen Physik}; BI-Wissenschaftsverlag, 1989.        
+%\bibitem{Newton}
+%   Isaac Newton; {\it Mathematische Grundlagen der Naturphilosophie}; 
+%   \"ubersetzt von Ed Dellian; Felix Meiner Verlag, 1988. 
+%\bibitem{Newton2} Isaac Newton; {\it \"Uber die Gravitation...};
+%       Klostermann Texte Philosophie; Vittorio Klostermann, Frankfurt,
+%      1988; \"ubersetzt von Gernot B\"ohme.
+%\bibitem{Newton3} Isaac Newton; {\it Optik oder Abhandlung \"uber
+%      Spiegelungen, Brechungen, Beugungen und Farben des Lichts};
+%      I., II.\ und III.\ Buch (1704); aus dem Englischen \"ubersetzt
+%      von W.\ Abendroth; Ostwalds Klassiker der exakten Wissenschaften,
+%      Verlag Harri Deutsch 1998.   
+%\bibitem{Neumann} Carl Neumann; {\it \"Uber die Principien der
+%         Galilei-Newtonschen Theorie}; Akademische Antrittsvorlesung,
+%         gehalten in der Aula der Universit\"at Leipzig am 3.\ Nov.\
+%         1869; Teubner (Leipzig) 1870.         
+%\bibitem{Pauli} Wolfgang Pauli; {\it Theory of Relativity}; Dover
+%      Publications, New York, 1981.      
+%\bibitem{Poincare} Jules Henri Poincar\'e; {\it Sur la dynamique de 
+%     l'\'electron}, C.R.\ Acad.\ Sci., Paris, 140 (1905) S.~1504; und 
+%      Rendiconti del Circolo Matematico di Palermo, Bd.~21 (1906) S.~129.
+%\bibitem{Reichenbach1} Hans Reichenbach; {\em Philosophie der 
+%       Raum-Zeit-Lehre}; Hans Reichenbach - Gesammelte Werke Bd.\ 2;
+%       Vieweg-Verlag, Braunschweig; 1977.
+%\bibitem{Reichenbach2} Hans Reichenbach; {\em Axiomatik der
+%       relativistischen Raum-Zeit-Lehre}; in {\em Die philosophische
+%       Bedeutung der Relativit\"atstheorie}; Hans Reichenbach - Gesammelte
+%       Werke Bd.\ 3; Vieweg-Verlag, Braunschweig, 1977. 
+%\bibitem{Rovelli} Carlo Rovelli, \textit{Quantum Gravity}; Cambridge
+%      University Press, 2007.       
+%\bibitem{Schlamminger} Schlamminger, Choi, Wagner, Gundlach,
+%         Adelberger; {\em Test of the Equivalence Principle using a
+%         rotating torsion balance}; Phys.\ Rev.\ Lett.\ {\bf 100} (2008)
+%         041101.     
+%\bibitem{Sexl} Roman U.\ Sexl, Helmuth K.\ Urbantke; {\it Relativit\"at,
+%      Gruppen, Teilchen}; Springer-Verlag, Wien, New York, 1992.
+%\bibitem{Simonyi}
+%       K\'aroly Simonyi; {\it Kulturgeschichte der Physik}; Verlag
+%       Harri Deutsch, Thun, Frankfurt am Main, 1990.
+%\bibitem{Weisberg} Weisberg, J.M., Taylor, J.H.; {\em Relativistic Binary Pulsar
+%          B1913+16: Thirty Years of Observations and Analysis}; 
+%          \verb+arXiv:astro-ph/0407149v1+; 2004. 
+%\bibitem{Thomson} James Thomson; {\it On the Law of Inertia; the
+%       Principle of Chronometry; and the Principle of Absolute Clinural
+%       Rest, and of Absolute Rotation}; Proc.\ Roy.\ Soc.\ (Edinburgh),
+%       Session 1883-84, Vol.\ XII, 568--578.       
+%\bibitem{Weizsaecker} Carl Friedrich von Weizs\"acker; {\em Der zweite
+%      Hauptsatz und der Unterschied von Vergangenheit und Zukunft};
+%      Annalen der Physik 36 (1939) 275--283.       
+%\bibitem{Zeh} Zeh, H.D.; {\em The Physical Basis of the Direction of Time},
+%      Springer-Verlag, Berlin, 1989.       
+
+%\bibitem{Einstein} Einstein, Albert; {\em ??}, .                   
+\end{thebibliography}
+
+\end{document}

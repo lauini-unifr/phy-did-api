@@ -1,0 +1,4345 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.4.20)  17 MAY 2023 23:11
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**0_Mod_Phys.tex
+(./0_Mod_Phys.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (../preambel.tex
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2017/05/19 3.10 The Babel package
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/babel-german/german.ldf
+Language: german 2016/11/02 v2.9 German support for babel (traditional orthogra
+phy)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/babel-german/germanb.ldf
+Language: germanb 2016/11/02 v2.9 German support for babel (traditional orthogr
+aphy)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2017/05/19 3.10 Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+Package babel Info: Making " an active character on input line 139.
+)))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen104
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen105
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks15
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks16
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks24
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amscd.sty
+Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
+\athelp@=\toks25
+\minaw@=\dimen113
+\bigaw@=\dimen114
+\minCDarrowwidth=\dimen115
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks26
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count101
+))
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count102
+\rotFPtop=\skip49
+\rotFPbot=\skip50
+\rot@float@box=\box28
+\rot@mess@toks=\toks27
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/sidecap/sidecap.sty
+Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
+\SC@BOXWD=\dimen118
+\SC@CAPWD=\dimen119
+\SC@tempdima=\dimen120
+\SC@tempdimb=\dimen121
+\c@SC@C=\count103
+\SC@BOX=\box29
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/fancybox/fancybox.sty
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box30
+\shadowsize=\dimen122
+\@Sbox=\box31
+\do@VerbBox=\toks28
+\the@fancyput=\toks29
+\this@fancyput=\toks30
+\EndVerbatimTokens=\toks31
+\Verbatim@Outfile=\write3
+\Verbatim@Infile=\read1
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks32
+\pgfutil@tempdima=\dimen123
+\pgfutil@tempdimb=\dimen124
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box32
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks33
+\pgfkeys@temptoks=\toks34
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks35
+))
+\pgf@x=\dimen125
+\pgf@y=\dimen126
+\pgf@xa=\dimen127
+\pgf@ya=\dimen128
+\pgf@xb=\dimen129
+\pgf@yb=\dimen130
+\pgf@xc=\dimen131
+\pgf@yc=\dimen132
+\w@pgf@writea=\write4
+\r@pgf@reada=\read2
+\c@pgf@counta=\count104
+\c@pgf@countb=\count105
+\c@pgf@countc=\count106
+\c@pgf@countd=\count107
+\t@pgf@toka=\toks36
+\t@pgf@tokb=\toks37
+\t@pgf@tokc=\toks38
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count108
+\pgfsyssoftpath@bigbuffer@items=\count109
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen133
+\pgfmath@count=\count110
+\pgfmath@box=\box33
+\pgfmath@toks=\toks39
+\pgfmath@stack@operand=\toks40
+\pgfmath@stack@operation=\toks41
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count111
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen134
+\pgf@picmaxx=\dimen135
+\pgf@picminy=\dimen136
+\pgf@picmaxy=\dimen137
+\pgf@pathminx=\dimen138
+\pgf@pathmaxx=\dimen139
+\pgf@pathminy=\dimen140
+\pgf@pathmaxy=\dimen141
+\pgf@xx=\dimen142
+\pgf@xy=\dimen143
+\pgf@yx=\dimen144
+\pgf@yy=\dimen145
+\pgf@zx=\dimen146
+\pgf@zy=\dimen147
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen148
+\pgf@path@lasty=\dimen149
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen150
+\pgf@shorten@start@additional=\dimen151
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box34
+\pgf@hbox=\box35
+\pgf@layerbox@main=\box36
+\pgf@picture@serial@count=\count112
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen152
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen153
+\pgf@pt@y=\dimen154
+\pgf@pt@temp=\dimen155
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen156
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen157
+\pgf@sys@shading@range@num=\count113
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box37
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box38
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen158
+\pgf@nodesepend=\dimen159
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen160
+\pgffor@skip=\dimen161
+\pgffor@stack=\toks42
+\pgffor@toks=\toks43
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count114
+\pgfplotmarksize=\dimen162
+)
+\tikz@lastx=\dimen163
+\tikz@lasty=\dimen164
+\tikz@lastxsaved=\dimen165
+\tikz@lastysaved=\dimen166
+\tikzleveldistance=\dimen167
+\tikzsiblingdistance=\dimen168
+\tikz@figbox=\box39
+\tikz@figbox@bg=\box40
+\tikz@tempbox=\box41
+\tikz@tempbox@bg=\box42
+\tikztreelevel=\count115
+\tikznumberofchildren=\count116
+\tikznumberofcurrentchild=\count117
+\tikz@fig@count=\count118
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count119
+\pgfmatrixcurrentcolumn=\count120
+\pgf@matrix@numberofcolumns=\count121
+)
+\tikz@expandcount=\count122
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+\arrowsize=\dimen169
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarysnakes.code.tex
+File: tikzlibrarysnakes.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.7)
+
+
+Package pgf Warning: Snakes have been superseded by decorations. Please use the
+ decoration libraries instead of the snakes library on input line 14.
+
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
+\pgfdecoratedcompleteddistance=\dimen170
+\pgfdecoratedremainingdistance=\dimen171
+\pgfdecoratedinputsegmentcompleteddistance=\dimen172
+\pgfdecoratedinputsegmentremainingdistance=\dimen173
+\pgf@decorate@distancetomove=\dimen174
+\pgf@decorate@repeatstate=\count123
+\pgfdecorationsegmentamplitude=\dimen175
+\pgfdecorationsegmentlength=\dimen176
+)
+\tikz@lib@dec@box=\box43
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathreplacing.code.tex))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.shapes.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.shapes.code.tex)))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.3)
+\pgf@layerbox@background=\box44
+\pgf@layerboxsaved@background=\box45
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen177
+\Hy@linkcounter=\count124
+\Hy@pagecounter=\count125
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count126
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4751.
+\c@Hy@tempcnt=\count127
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5104.
+\XeTeXLinkMargin=\dimen178
+\Fld@menulength=\count128
+\Field@Width=\dimen179
+\Fld@charsize=\dimen180
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
+\Hy@abspage=\count129
+\c@Item=\count130
+\c@Hfootnote=\count131
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+\Fld@listcount=\count132
+\c@bookmark@seq@number=\count133
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip51
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 20.
+\c@num=\count134
+)
+\@indexfile=\write5
+\openout5 = `0_Mod_Phys.idx'.
+
+
+Writing index file 0_Mod_Phys.idx
+(./0_Mod_Phys.aux
+
+LaTeX Warning: Label `Niermann' multiply defined.
+
+)
+\openout1 = `0_Mod_Phys.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+ (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count135
+\scratchdimen=\dimen181
+\scratchbox=\box46
+\nofMPsegments=\count136
+\nofMParguments=\count137
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count138
+\MPscratchDim=\dimen182
+\MPnumerator=\count139
+\makeMPintoPDFobject=\count140
+\everyMPtoPDFconversion=\toks45
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ms/ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 126.
+)
+\CenteringLeftskip=\skip52
+\RaggedLeftLeftskip=\skip53
+\RaggedRightLeftskip=\skip54
+\CenteringRightskip=\skip55
+\RaggedLeftRightskip=\skip56
+\RaggedRightRightskip=\skip57
+\CenteringParfillskip=\skip58
+\RaggedLeftParfillskip=\skip59
+\RaggedRightParfillskip=\skip60
+\JustifyingParfillskip=\skip61
+\CenteringParindent=\skip62
+\RaggedLeftParindent=\skip63
+\RaggedRightParindent=\skip64
+\JustifyingParindent=\skip65
+)
+ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box47
+Package hyperref Info: Link coloring ON on input line 7.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count141
+)
+LaTeX Info: Redefining \ref on input line 7.
+LaTeX Info: Redefining \pageref on input line 7.
+LaTeX Info: Redefining \nameref on input line 7.
+
+(./0_Mod_Phys.out) (./0_Mod_Phys.out)
+\@outlinefile=\write6
+\openout6 = `0_Mod_Phys.out'.
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 21.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 21.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 21.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 21.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 21.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 21.
+ [1
+
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./00_V
+orwort.tex
+Overfull \vbox (6.44444pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 3.
+
+[2
+
+]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+)
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 25.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 25.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 25.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 26.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 26.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 26.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 26.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 26.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 26.
+ [3]
+Overfull \vbox (6.44444pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 26.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 26.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 26.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 26.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 26.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 26.
+
+[4
+
+] (./0_Mod_Phys.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 5.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 37.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 37.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 37.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 37.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 37.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 37.
+ [5]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 82.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 82.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 82.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 82.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 82.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 82.
+
+[6]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 126.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 126.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 126.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 126.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 126.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 126.
+
+[7])
+\tf@toc=\write7
+\openout7 = `0_Mod_Phys.toc'.
+
+ (./01_SI_Einheiten.tex
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+
+[8]
+Kapitel 1.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 17.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 17.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 17.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 55.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 55.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 55.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 55.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 55.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 55.
+[9
+
+]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 65.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 65.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 65.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 87.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 87.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 87.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 113.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 113.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 113.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 121.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 121.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 121.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 121.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 121.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 121.
+
+[10]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 135.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 135.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 135.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 155.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 155.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 155.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 180.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 180.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 180.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 180.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 180.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 180.
+
+[11]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 190.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 190.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 190.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 206.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 206.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 206.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 208.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 208.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 208.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 237.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 237.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 237.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 237.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 237.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 237.
+
+[12]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 243.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 243.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 243.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 269.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 269.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 269.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 283.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 283.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 283.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 291.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 291.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 291.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 291.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 291.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 291.
+
+[13]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 313.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 313.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 313.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 350.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 350.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 350.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 350.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 350.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 350.
+
+[14]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 380.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 380.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 380.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 418.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 418.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 418.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 418.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 418.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 418.
+
+[15]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 441.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 441.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 441.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 446.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 446.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 446.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 467.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 467.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 467.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 467.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 467.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 467.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 467.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 467.
+
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 473.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 473.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 473.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 473.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 473.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 473.
+
+[16]
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 543.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 543.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 543.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 543.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 543.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 543.
+
+[17]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 561.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 561.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 561.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 561.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 561.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 561.
+
+[18]
+Underfull \hbox (badness 1360) in paragraph at lines 562--567
+[]\OT1/cmr/m/n/10 Rudolf Clau-si-us; []\OT1/cmr/m/it/10 Uber die mitt-le-re L[]
+ange der We-ge, wel-che bei der Mo-le-cu-l-ar-be-we-gung
+ []
+
+) (./02_Kalender.tex
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 3.
+ [19
+
+]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 3.
+
+[20
+
+]
+Kapitel 2.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 52.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 52.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 65.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 65.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 65.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 65.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 65.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 65.
+[21]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 117.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 117.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 117.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 140.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 140.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 140.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 140.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 140.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 140.
+
+[22]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 176.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 176.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 176.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 205.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 205.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 205.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 205.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 205.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 205.
+
+[23]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 229.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 229.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 229.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 249.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 249.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 249.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 249.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 249.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 249.
+
+[24]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 250.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 250.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 250.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 262.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 262.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 262.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 273.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 273.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 273.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 311.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 311.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 311.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 322.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 322.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 322.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 322.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 322.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 322.
+
+[25]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 368.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 368.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 368.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 368.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 368.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 368.
+
+[26]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 382.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 382.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 382.
+
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 425.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 425.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 425.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 425.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 425.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 425.
+
+[27]) (./03_Zeitgleichung.tex
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 3.
+
+[28]
+Kapitel 3.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 50.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 50.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 50.
+
+Underfull \vbox (badness 1997) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 57.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 57.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 57.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 57.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 57.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 57.
+ [29
+
+]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 58.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 58.
+
+<./Bilder/World_Time_Zones_Map.png, id=886, 2409.0pt x 1299.05325pt>
+File: ./Bilder/World_Time_Zones_Map.png Graphic file (type png)
+
+<use ./Bilder/World_Time_Zones_Map.png>
+Package pdftex.def Info: ./Bilder/World_Time_Zones_Map.png used on input line 8
+4.
+(pdftex.def)             Requested size: 433.6013pt x 233.81949pt.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 101.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 101.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 101.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 101.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 101.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 101.
+
+[30 <./Bilder/World_Time_Zones_Map.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 102.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 102.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 102.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 120.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 120.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 240.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 240.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 240.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 240.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 240.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 240.
+
+[31]
+Underfull \hbox (badness 1337) in paragraph at lines 242--247
+[]\OT1/cmr/m/n/10 Nach dem zwei-ten[] Kep-ler'schen Ge-setz ([]In glei-chen Zei
+-ten wer-den glei-che Fl[]achen
+ []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 262.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 262.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 262.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 293.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 293.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 293.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 293.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 293.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 293.
+
+[32]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 362.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 362.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 362.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 362.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 362.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 362.
+
+[33]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 363.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 363.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 363.
+ <./Bilder/Ecliptic.png, id=946, 513.92pt x 513.92pt>
+File: ./Bilder/Ecliptic.png Graphic file (type png)
+
+<use ./Bilder/Ecliptic.png>
+Package pdftex.def Info: ./Bilder/Ecliptic.png used on input line 382.
+(pdftex.def)             Requested size: 154.17719pt x 154.17719pt.
+
+
+LaTeX Warning: Reference `fig_Hondius1' on page 34 undefined on input line 453.
+
+
+
+LaTeX Warning: Reference `fig_Hondius2' on page 34 undefined on input line 453.
+
+
+
+LaTeX Warning: Reference `fig_Hondius1' on page 34 undefined on input line 453.
+
+
+
+LaTeX Warning: Reference `fig_Hondius2' on page 34 undefined on input line 453.
+
+
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 461.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 461.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 461.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 461.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 461.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 461.
+
+[34 <./Bilder/Ecliptic.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 493.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 493.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 493.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 501.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 501.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 501.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 501.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 501.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 501.
+
+[35] <./Bilder/Zeitgleichung.jpg, id=964, 770.88pt x 514.17094pt>
+File: ./Bilder/Zeitgleichung.jpg Graphic file (type jpg)
+
+<use ./Bilder/Zeitgleichung.jpg>
+Package pdftex.def Info: ./Bilder/Zeitgleichung.jpg used on input line 503.
+(pdftex.def)             Requested size: 277.51659pt x 185.1014pt.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 519.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 519.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 519.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 520.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 520.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 520.
+
+<./Bilder/Hondius_gesamt.png, id=968, 985.6825pt x 690.58pt>
+File: ./Bilder/Hondius_gesamt.png Graphic file (type png)
+
+<use ./Bilder/Hondius_gesamt.png>
+Package pdftex.def Info: ./Bilder/Hondius_gesamt.png used on input line 528.
+(pdftex.def)             Requested size: 433.70163pt x 303.85614pt.
+
+<./Bilder/Hondius_00.jpg, id=969, 842.14626pt x 852.18375pt>
+File: ./Bilder/Hondius_00.jpg Graphic file (type jpg)
+
+<use ./Bilder/Hondius_00.jpg>
+Package pdftex.def Info: ./Bilder/Hondius_00.jpg used on input line 529.
+(pdftex.def)             Requested size: 168.42627pt x 170.43372pt.
+
+<./Bilder/Hondius_90.jpg, id=970, 781.92125pt x 551.05875pt>
+File: ./Bilder/Hondius_90.jpg Graphic file (type jpg)
+
+<use ./Bilder/Hondius_90.jpg>
+Package pdftex.def Info: ./Bilder/Hondius_90.jpg used on input line 530.
+(pdftex.def)             Requested size: 242.39308pt x 170.82643pt.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 560.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 560.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 560.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 572.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 572.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 572.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 572.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 572.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 572.
+
+[36 <./Bilder/Zeitgleichung.jpg>]
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 572.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 572.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 572.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 572.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 572.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 572.
+
+[37 <./Bilder/Hondius_gesamt.png> <./Bilder/Hondius_00.jpg> <./Bilder/Hondius_9
+0.jpg>] <./Bilder/Analemma.jpg, id=993, 500.1084pt x 752.0898pt>
+File: ./Bilder/Analemma.jpg Graphic file (type jpg)
+
+<use ./Bilder/Analemma.jpg>
+Package pdftex.def Info: ./Bilder/Analemma.jpg used on input line 574.
+(pdftex.def)             Requested size: 140.02939pt x 210.5837pt.
+
+<./Bilder/Munich_Altes_Rathaus_Sundial.jpg, id=994, 1178.4025pt x 722.7pt>
+File: ./Bilder/Munich_Altes_Rathaus_Sundial.jpg Graphic file (type jpg)
+
+<use ./Bilder/Munich_Altes_Rathaus_Sundial.jpg>
+Package pdftex.def Info: ./Bilder/Munich_Altes_Rathaus_Sundial.jpg used on inpu
+t line 576.
+(pdftex.def)             Requested size: 282.82237pt x 173.45154pt.
+
+<./Bilder/Bernhardt.jpg, id=1000, 1084.05pt x 722.7pt>
+File: ./Bilder/Bernhardt.jpg Graphic file (type jpg)
+
+<use ./Bilder/Bernhardt.jpg>
+Package pdftex.def Info: ./Bilder/Bernhardt.jpg used on input line 612.
+(pdftex.def)             Requested size: 216.80615pt x 144.53743pt.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 615.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 615.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 615.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 615.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 615.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 615.
+
+[38 <./Bilder/Analemma.jpg> <./Bilder/Munich_Altes_Rathaus_Sundial.jpg>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 627.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 627.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 627.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 648.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 648.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 648.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 649.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 649.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 649.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 660.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 660.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 660.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 660.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 660.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 660.
+
+[39 <./Bilder/Bernhardt.jpg>]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 670.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 670.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 670.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 670.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 670.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 670.
+
+[40]) (./04_Zeitsysteme.tex
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+ [41
+
+]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+
+[42
+
+]
+Kapitel 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 35.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 35.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 35.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 64.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 64.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 64.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 64.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 64.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 64.
+[43]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 95.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 95.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 95.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 118.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 118.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 118.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 118.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 118.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 118.
+
+[44]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 123.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 123.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 123.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 164.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 164.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 164.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 183.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 183.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 183.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 183.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 183.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 183.
+
+[45]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 192.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 192.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 192.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 228.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 228.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 228.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 228.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 228.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 228.
+
+[46]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 229.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 229.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 229.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 275.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 275.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 275.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 275.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 275.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 275.
+
+[47]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 275.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 275.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 275.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 315.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 315.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 315.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 332.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 332.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 332.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 332.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 332.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 332.
+
+[48]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 370.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 370.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 370.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 372.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 372.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 372.
+
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 385.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 385.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 385.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 385.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 385.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 385.
+
+[49]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 391.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 391.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 391.
+) (./05_Uhren.tex
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+
+[50]
+Kapitel 5.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 16.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 16.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 16.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 38.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 38.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 38.
+<./Bilder/Munich_Altes_Rathaus_sundial.jpg, id=1089, 1178.4025pt x 722.7pt>
+File: ./Bilder/Munich_Altes_Rathaus_sundial.jpg Graphic file (type jpg)
+
+<use ./Bilder/Munich_Altes_Rathaus_sundial.jpg>
+Package pdftex.def Info: ./Bilder/Munich_Altes_Rathaus_sundial.jpg used on inpu
+t line 54.
+(pdftex.def)             Requested size: 353.52348pt x 216.81166pt.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 60.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 60.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 60.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 60.
+ [51
+
+]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 66.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 66.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 66.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 91.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 91.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 91.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 98.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 98.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 98.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 98.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 98.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 98.
+
+[52 <./Bilder/Munich_Altes_Rathaus_sundial.jpg>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 99.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 99.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 99.
+
+<./Bilder/Foliot.jpg, id=1103, 878.28125pt x 518.93875pt>
+File: ./Bilder/Foliot.jpg Graphic file (type jpg)
+
+<use ./Bilder/Foliot.jpg>
+Package pdftex.def Info: ./Bilder/Foliot.jpg used on input line 116.
+(pdftex.def)             Requested size: 351.30627pt x 207.57182pt.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 134.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 134.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 134.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 134.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 134.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 134.
+
+[53 <./Bilder/Foliot.jpg>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 135.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 135.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 135.
+
+<./Bilder/Anker_10.png, id=1115, 359.3425pt x 542.025pt>
+File: ./Bilder/Anker_10.png Graphic file (type png)
+
+<use ./Bilder/Anker_10.png>
+Package pdftex.def Info: ./Bilder/Anker_10.png used on input line 149.
+(pdftex.def)             Requested size: 106.59906pt x 161.40424pt.
+
+<./Bilder/Anker_18.png, id=1117, 358.33875pt x 542.025pt>
+File: ./Bilder/Anker_18.png Graphic file (type png)
+
+<use ./Bilder/Anker_18.png>
+Package pdftex.def Info: ./Bilder/Anker_18.png used on input line 150.
+(pdftex.def)             Requested size: 106.29794pt x 161.40424pt.
+
+<./Bilder/Anker_27.png, id=1119, 359.3425pt x 543.02875pt>
+File: ./Bilder/Anker_27.png Graphic file (type png)
+
+<use ./Bilder/Anker_27.png>
+Package pdftex.def Info: ./Bilder/Anker_27.png used on input line 151.
+(pdftex.def)             Requested size: 106.59906pt x 161.70537pt.
+
+<./Bilder/Anker_35.png, id=1121, 357.335pt x 541.02126pt>
+File: ./Bilder/Anker_35.png Graphic file (type png)
+
+<use ./Bilder/Anker_35.png>
+Package pdftex.def Info: ./Bilder/Anker_35.png used on input line 152.
+(pdftex.def)             Requested size: 105.99681pt x 161.1031pt.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 169.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 169.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 169.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 185.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 185.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 185.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 185.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 185.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 185.
+
+[54 <./Bilder/Anker_10.png> <./Bilder/Anker_18.png> <./Bilder/Anker_27.png> <./
+Bilder/Anker_35.png>]
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 250.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 250.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 250.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 250.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 250.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 250.
+
+[55]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 285.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 285.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 285.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 301.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 301.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 301.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 310.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 310.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 310.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 310.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 310.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 310.
+
+[56]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 330.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 330.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 330.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 342.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 342.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 342.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 358.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 358.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 358.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 358.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 358.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 358.
+
+[57] <./Bilder/Atomic_Clock.jpg, id=1154, 752.8125pt x 281.05pt>
+File: ./Bilder/Atomic_Clock.jpg Graphic file (type jpg)
+
+<use ./Bilder/Atomic_Clock.jpg>
+Package pdftex.def Info: ./Bilder/Atomic_Clock.jpg used on input line 366.
+(pdftex.def)             Requested size: 376.40532pt x 140.52464pt.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 395.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 395.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 395.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 409.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 409.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 409.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 409.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 409.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 409.
+
+[58 <./Bilder/Atomic_Clock.jpg>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 410.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 410.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 410.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 412.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 412.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 412.
+
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 524.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 524.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 524.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 524.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 524.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 524.
+
+[59]
+Underfull \hbox (badness 3482) in paragraph at lines 575--575
+\OT1/cmr/m/n/10 Zy-kloi-de l[]ost gleich-zei-tig das zwei-te Pro-blem
+ []
+
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 588.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 588.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 588.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 588.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 588.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 588.
+
+[60]
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 589.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 589.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 589.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 589.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 589.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 589.
+
+[61]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 589.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 589.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 589.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 589.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 589.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 589.
+
+[62
+
+]pdfTeX warning (ext4): destination with the same identifier (name{cite.Nierman
+n}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.591 \bibitem{Niermann}
+                        
+Underfull \hbox (badness 1132) in paragraph at lines 596--597
+[]\OT1/cmr/m/n/10 aus Wi-ki-pe-dia ``Fo-li-ot''. [][]$\OT1/cmtt/m/n/10 https : 
+/ / de . wikipedia . org / wiki / Foliot # /media / Datei : Foliot .
+ []
+
+) (./06_Gezeiten_1.tex
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+ [63]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+
+[64
+
+]
+Kapitel 6.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 59.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 59.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 59.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 59.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 59.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 59.
+[65]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 61.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 61.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 130.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 130.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 130.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 130.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 130.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 130.
+
+[66]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 143.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 143.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 143.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 156.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 156.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 156.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 209.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 209.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 209.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 209.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 209.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 209.
+
+[67]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 297.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 297.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 297.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 297.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 297.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 297.
+
+[68]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 428.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 428.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 428.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 428.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 428.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 428.
+
+[69]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 441.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 441.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 441.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 500.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 500.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 500.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 500.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 500.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 500.
+
+[70]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 537.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 537.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 537.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 537.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 537.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 537.
+
+[71]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 547.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 547.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 547.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 568.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 568.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 568.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 635.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 635.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 635.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 635.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 635.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 635.
+
+[72]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 644.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 644.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 644.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 645.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 645.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 645.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 673.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 673.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 673.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 673.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 673.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 673.
+
+[73]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 675.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 675.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 675.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 675.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 675.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 675.
+
+[74]
+Underfull \hbox (badness 10000) in paragraph at lines 677--679
+[]\OT1/cmr/m/n/10 Hicks, S.D.; \OT1/cmr/m/it/10 Un-der-stan-ding Ti-des\OT1/cmr
+/m/n/10 , NO-AA Re-port; 2006; [][]$\OT1/cmtt/m/n/10 https : / / repository .
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 682--684
+[]\OT1/cmr/m/n/10 Parker, B.B.; \OT1/cmr/m/it/10 Ti-dal Ana-ly-sis and Pre-dic-
+ti-on\OT1/cmr/m/n/10 ; NO-AA Spe-ci-al Pu-bli-ca-ti-on NOS CO-OPS
+ []
+
+) (./07_Gezeiten_2.tex
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+ [75
+
+]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+
+[76
+
+]
+Kapitel 7.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 15.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 15.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 15.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 75.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 75.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 75.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 75.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 75.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 75.
+[77]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 75.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 75.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\setbox' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hbox' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\pi' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\dimen@' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\wd' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                \kern -0.6199pt
+(hyperref)                removed on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\copy' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                \kern 0.30995pt
+(hyperref)                removed on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\raise' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\ex@' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\copy' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                \kern 0.30995pt
+(hyperref)                removed on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\box' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\times' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 75.
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 77.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 77.
+
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 115.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 115.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 115.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 115.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 115.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 115.
+
+[78]
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 181.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 181.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 181.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 181.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 181.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 181.
+
+[79]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 213.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 213.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 213.
+
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 243.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 243.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 243.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 243.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 243.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 243.
+
+[80]
+
+LaTeX Warning: Citation `??' on page 81 undefined on input line 250.
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 272.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 272.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 272.
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 284.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 284.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 284.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 284.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 284.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 284.
+
+[81]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 286.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 286.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 286.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 288.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 288.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 288.
+) (./08_Nachthimmel.tex
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 3.
+
+[82]
+Kapitel 8.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 38.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 38.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 38.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 45.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 45.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 52.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 52.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 52.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 52.
+[83
+
+]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 72.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 72.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 119.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 119.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 119.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 119.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 119.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 119.
+
+[84]
+File: ./Bilder/Ecliptic.png Graphic file (type png)
+ <use ./Bilder/Ecliptic.png>
+Package pdftex.def Info: ./Bilder/Ecliptic.png used on input line 145.
+(pdftex.def)             Requested size: 154.17719pt x 154.17719pt.
+
+<./Bilder/Fr-Punkt.png, id=1396, 410.4936pt x 240.4182pt>
+File: ./Bilder/Fr-Punkt.png Graphic file (type png)
+
+<use ./Bilder/Fr-Punkt.png>
+Package pdftex.def Info: ./Bilder/Fr-Punkt.png used on input line 146.
+(pdftex.def)             Requested size: 246.29805pt x 144.25201pt.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 182.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 182.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 182.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 182.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 182.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 182.
+
+[85 <./Bilder/Fr-Punkt.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 183.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 183.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 183.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 199.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 199.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 199.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 216.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 216.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 216.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 229.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 229.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 229.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 229.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 229.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 229.
+
+[86] <./Bilder/Constellations.png, id=1418, 1027.84pt x 546.04pt>
+File: ./Bilder/Constellations.png Graphic file (type png)
+
+<use ./Bilder/Constellations.png>
+Package pdftex.def Info: ./Bilder/Constellations.png used on input line 231.
+(pdftex.def)             Requested size: 431.68987pt x 229.33524pt.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 265.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 265.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 265.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 265.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 265.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 265.
+
+[87 <./Bilder/Constellations.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 279.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 279.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 279.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 322.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 322.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 322.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 322.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 322.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 322.
+
+[88]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 330.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 330.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 330.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 364.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 364.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 364.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 364.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 364.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 364.
+
+[89]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 364.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 364.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 364.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 364.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 364.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 364.
+
+[90
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
+[]\OT1/cmr/m/n/10 Wikipedia []Li-ste der hell-sten Ster-ne\: [][]$\OT1/cmtt/m/n
+/10 https : / / de . wikipedia . org / wiki / Liste _ der _
+ []
+
+) (./09_Kosm_Entfernung.tex
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+ [91]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+
+[92
+
+]
+Kapitel 9.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 33.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 33.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 33.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 107.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 107.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 107.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 107.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 107.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 107.
+[93]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 156.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 156.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 156.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 156.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 156.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 156.
+
+[94]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 240.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 240.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 240.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 240.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 240.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 240.
+
+[95]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 241.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 241.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 241.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 308.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 308.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 308.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 308.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 308.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 308.
+
+[96]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 309.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 309.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 309.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 354.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 354.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 354.
+
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 365.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 365.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 365.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 365.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 365.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 365.
+
+[97]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 446.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 446.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 446.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 446.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 446.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 446.
+
+[98]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 522.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 522.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 522.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 522.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 522.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 522.
+
+[99]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 538.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 538.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 538.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 577.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 577.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 577.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 577.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 577.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 577.
+
+[100]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 599.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 599.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 599.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 613.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 613.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 613.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 640.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 640.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 640.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 640.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 640.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 640.
+
+[101]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 685.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 685.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 685.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 702.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 702.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 702.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 702.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 702.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 702.
+
+[102]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 742.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 742.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 742.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 752.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 752.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 752.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 752.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 752.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 752.
+
+[103]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 753.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 753.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 753.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 798.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 798.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 798.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 811.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 811.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 811.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 811.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 811.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 811.
+
+[104]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 874.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 874.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 874.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 874.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 874.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 874.
+
+[105]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 931.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 931.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 931.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 931.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 931.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 931.
+
+[106]) (./10_Landkarten.tex
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+
+[107]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+
+[108
+
+]
+Kapitel 10.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 47.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 47.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 47.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 59.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 59.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 59.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 59.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 59.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 59.
+[109] <./Bilder/Zylinderprojektion.jpg, id=1599, 401.5pt x 279.0425pt>
+File: ./Bilder/Zylinderprojektion.jpg Graphic file (type jpg)
+
+<use ./Bilder/Zylinderprojektion.jpg>
+Package pdftex.def Info: ./Bilder/Zylinderprojektion.jpg used on input line 73.
+
+(pdftex.def)             Requested size: 235.78027pt x 133.28322pt.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 107.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 107.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 107.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 117.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 117.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 117.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 117.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 117.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 117.
+
+[110 <./Bilder/Zylinderprojektion.jpg>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 175.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 175.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 175.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 187.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 187.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 187.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 187.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 187.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 187.
+
+[111] <./Bilder/Tissot_rectangle.png, id=1632, 2569.6pt x 1284.8pt>
+File: ./Bilder/Tissot_rectangle.png Graphic file (type png)
+
+<use ./Bilder/Tissot_rectangle.png>
+Package pdftex.def Info: ./Bilder/Tissot_rectangle.png used on input line 189.
+(pdftex.def)             Requested size: 436.82623pt x 218.4131pt.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 221.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 221.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 221.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 221.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 221.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 221.
+
+[112 <./Bilder/Tissot_rectangle.png>]
+File: ./Bilder/Zylinderprojektion.jpg Graphic file (type jpg)
+ <use ./Bilder/Zylinderprojektion.jpg>
+Package pdftex.def Info: ./Bilder/Zylinderprojektion.jpg used on input line 257
+.
+(pdftex.def)             Requested size: 235.78027pt x 133.28322pt.
+
+Underfull \hbox (badness 1052) in paragraph at lines 268--268
+[][]\OT1/cmr/m/n/10 : []|Die k[]urzeste Ver-bin-dung
+ []
+
+
+Underfull \hbox (badness 1881) in paragraph at lines 268--268
+\OT1/cmr/m/n/10 Ellipsen, um die-se ge-kr[]ummte Li-nie zu
+ []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 270.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 270.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 270.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 290.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 290.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 290.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 290.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 290.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 290.
+
+[113]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 380.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 380.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 380.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 380.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 380.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 380.
+
+[114]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 406.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 406.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 406.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 474.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 474.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 474.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 474.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 474.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 474.
+
+[115]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 474.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 474.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 474.
+ <./Bilder/Lambert.png, id=1686, 883.3pt x 281.05pt>
+File: ./Bilder/Lambert.png Graphic file (type png)
+
+<use ./Bilder/Lambert.png>
+Package pdftex.def Info: ./Bilder/Lambert.png used on input line 509.
+(pdftex.def)             Requested size: 432.82079pt x 137.7157pt.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 522.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 522.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 522.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 522.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 522.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 522.
+
+[116]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 523.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 523.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 523.
+ <./Bilder/Mercator-proj.png, id=1698, 681.54625pt x 726.715pt>
+File: ./Bilder/Mercator-proj.png Graphic file (type png)
+
+<use ./Bilder/Mercator-proj.png>
+Package pdftex.def Info: ./Bilder/Mercator-proj.png used on input line 546.
+(pdftex.def)             Requested size: 201.90466pt x 200.9444pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 556--556
+[][]\OT1/cmr/m/n/10 : []|Eine Welt-kar-te in Mercator-
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 556--556
+\OT1/cmr/m/n/10 Darstellung. In []Aquatorn[]ahe gleicht die-se Kar-te
+ []
+
+
+Underfull \hbox (badness 2443) in paragraph at lines 556--556
+\OT1/cmr/m/n/10 zwar []ahnlich wie auf ei-ner lo-ka-len Pro-jek-ti-on,
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 556--556
+\OT1/cmr/m/n/10 f[]unfzehnmal gr[]o^^Yer als Gr[]onland, Au-stra-li-en ist
+ []
+
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 574.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 574.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 574.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 574.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 574.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 574.
+
+[117 <./Bilder/Lambert.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 586.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 586.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 586.
+
+<./Bilder/un_PNG20.png, id=1714, 1606.0pt x 1606.0pt>
+File: ./Bilder/un_PNG20.png Graphic file (type png)
+
+<use ./Bilder/un_PNG20.png>
+Package pdftex.def Info: ./Bilder/un_PNG20.png used on input line 589.
+(pdftex.def)             Requested size: 160.6094pt x 154.91852pt.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 614.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 614.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 614.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 614.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 614.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 614.
+
+[118 <./Bilder/Mercator-proj.png> <./Bilder/un_PNG20.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 657.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 657.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 657.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 659.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 659.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 659.
+
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 673.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 673.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 673.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 673.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 673.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 673.
+
+[119]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 674.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 674.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 674.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 694.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 694.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 694.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 742.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 742.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 742.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 742.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 742.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 742.
+
+[120]
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 815.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 815.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 815.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 815.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 815.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 815.
+
+[121]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 815.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 815.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 815.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 815.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 815.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 815.
+
+[122
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 816--818
+[][]$\OT1/cmtt/m/n/10 https : / / commons . wikimedia . org / wiki / File : Zyl
+inderprojektion _ quadratische _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 820--822
+[][]$\OT1/cmtt/m/n/10 https : / / upload . wikimedia . org / wikipedia / common
+s / thumb / c / cb / Tissot _ indicatrix _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 820--822
+\OT1/cmtt/m/n/10 world _ map _ Lambert _ cyl _ equal-[]area _ proj . svg / 880p
+x-[]Tissot _ indicatrix _ world _ map _
+ []
+
+) (./11_Zwillingsparadoxon.tex
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+ [123]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+
+[124
+
+]
+Kapitel 11.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 42.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 42.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 42.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 55.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 55.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 55.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 55.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 55.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 55.
+[125]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 124.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 124.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 124.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 124.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 124.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 124.
+
+[126]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 165.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 165.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 165.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 190.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 190.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 190.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 190.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 190.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 190.
+
+[127]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 304.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 304.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 304.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 304.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 304.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 304.
+
+[128]
+Underfull \hbox (badness 1097) in paragraph at lines 313--318
+[]\OT1/cmr/m/n/10 Diese Kon-zep-te las-sen sich auf mehr Raum-di-men-sio-nen ve
+r-all-ge-mei-nern: Die Euklid-
+ []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 319.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 319.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 319.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 383.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 383.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 383.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 383.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 383.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 383.
+
+[129]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 384.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 384.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 384.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 466.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 466.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 466.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 466.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 466.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 466.
+
+[130]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 629.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 629.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 629.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 629.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 629.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 629.
+
+[131]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 651.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 651.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 651.
+
+Underfull \vbox (badness 1472) has occurred while \output is active []
+
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 661.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 661.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 661.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 661.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 661.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 661.
+
+[132]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 763.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 763.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 763.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 763.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 763.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 763.
+
+[133]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 792.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 792.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 792.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 794.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 794.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 794.
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 852.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 852.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 852.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 852.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 852.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 852.
+
+[134])
+Overfull \vbox (8.77078pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 49.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 49.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 49.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 49.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 49.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 49.
+
+[135]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 51.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 51.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 51.
+ (./0_Mod_Phys.ind
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 91.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 91.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 91.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 91.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 91.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 91.
+ [136
+
+]
+Underfull \hbox (badness 5893) in paragraph at lines 124--126
+[]\OT1/cmr/m/n/10 Frequenz des Hy-perfe-in-struk-tur[]ubergangs in
+ []
+
+
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 202.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 202.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 202.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 202.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 202.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 202.
+
+[137]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 310.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 310.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 310.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 310.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 310.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 310.
+
+[138]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 422.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 422.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 422.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 422.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 422.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 422.
+
+[139]
+Overfull \vbox (6.83331pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 453.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 453.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 453.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 453.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 453.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 453.
+
+[140
+
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
+ (./0_Mod_Phys.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 54.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
+Package rerunfilecheck Info: File `0_Mod_Phys.out' has not changed.
+(rerunfilecheck)             Checksum: CC85E5B9456D675B71E6BF57B69A98AE;9498.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
+ ) 
+Here is how much of TeX's memory you used:
+ 19360 strings out of 492995
+ 371519 string characters out of 6132704
+ 691584 words of memory out of 5000000
+ 21915 multiletter control sequences out of 15000+600000
+ 16809 words of font info for 67 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,11n,76p,1157b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/amsfonts/latxfont/lcircle1.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/amsfonts/latxfont/linew10.pfb>
+Output written on 0_Mod_Phys.pdf (140 pages, 15765698 bytes).
+PDF statistics:
+ 2533 PDF objects out of 2984 (max. 8388607)
+ 2278 compressed objects within 23 object streams
+ 563 named destinations out of 1000 (max. 500000)
+ 1232 words of extra memory for PDF output out of 10000 (max. 10000000)
+

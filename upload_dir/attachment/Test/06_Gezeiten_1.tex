@@ -1,0 +1,698 @@
+%\documentclass[german,10pt]{book}      \input{../preambel}    \begin{document}  \setcounter{chapter}{5}
+
+\setcounter{page}{1}
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{equation}{0}
+\setcounter{table}{0}
+\setcounter{footnote}{0}
+
+\section*{Die Gezeiten - Ebbe und Flut}
+\vspace{0.2cm}
+\noindent
+{\bf Thomas Filk, Universit\"at Freiburg}
+\vspace{1cm}
+
+% Kap x
+\label{chap_Gezeiten1}
+\noindent
+Die Gezeiten - Ebbe und Flut - sind jedem bekannt, der mal an einer Ozeank\"uste
+war. Die Erscheinungen k\"onnen jedoch sehr unterschiedlich sein: Meist erlebt man
+zweimal an einem Tag Flut und zweimal Ebbe, es gibt jedoch auch K\"usten, an denen
+je nach Jahreszeit nur einmal am Tag Ebbe und Flut auftreten. Die H\"ohenunterschiede
+- der Tidenhub -\index{Tidenhub} 
+k\"onnen zwischen \glqq kaum sp\"urbar\grqq\ bis hin zu deutlich \"uber 10 Metern schwanken.  
+Der vermutlich h\"ochste Tidenhub ist in der Bay of Fundy in Kanada.\index{Bay of Fundy} 
+Dort wurden schon \"uber 20 Meter gemessen. 
+
+Schon im Altertum war den Seefahrern bekannt, dass Ebbe und Flut irgendwie mit
+dem Stand von Mond und Sonne zu tun haben. Sowohl das deutsche Wort \glqq Gezeiten\grqq\
+als auch der Ausdruck \glqq Tiden\grqq\ (niederdeutsch f\"ur \glqq Zeiten\grqq), 
+der besonders in Norddeutschland \"ublich ist,
+deuten den engen Zusammenhang zur \glqq Zeit\grqq\ an, der immer schon mit dem Stand
+der Gestirne in Verbindung gebracht wurde. Sonne und Mond sind f\"ur die Gezeiten 
+verantwortlich, wobei - wie wir noch sehen werden - der Einfluss des Monds ungef\"ahr 
+doppelt so gro\ss\ ist wie der Einfluss der Sonne.
+
+Versucht man die Einzelheiten zu verstehen, erkennt man bald, dass die Gezeiten ein
+sehr komplexes Ph\"anomen darstellen. Hier kann nur ein elementarer Einblick gegeben werden.
+Ausf\"uhrlichere Informationen findet man z.B.\ in den Referenzen \cite{Hicks,Kowalik,Parker}.
+
+In Tabelle \ref{tab_Tide} sind die wichtigsten Gr\"o\ss en zusammengefasst, die in diesem
+Kapitel ben\"otigt werden.
+
+\begin{table}[htb]
+\begin{tabular}{r|l}
+Gravitationskonstante & $G= 6,67 \cdot 10^{-11}\,{\rm \frac{m^3}{kg\cdot s^2}}$  \\  
+Masse der Erde & $M_{\rm Erde} = 5,97\cdot 10^{24}$\,kg  \\ 
+Masse des Monds &  $ M_{\rm Mond} =7,35 \cdot 10^{22}$\,kg  \\
+Masse der Sonne &  $ M_\odot = 2\cdot 10^{30}$\,kg  \\
+Abstand Erde-Mond &  $R_{EM} = 380\,000$\,km  \\[-0.2cm] 
+ & (zwischen $363\,000$ und $405\,500$\,km) \\
+Abstand Erde-Sonne &  $R_{ES} = 150\,000\,000$\,km   \\
+Erdradius &   $R_{\rm Erde} =  6\,375$\, km \\
+Neigung der Erdachse zur Ekliptik&   $\alpha = 23,44^\circ $  \\
+\end{tabular}
+\caption{\label{tab_Tide}%
+Die wichtigsten physikalischen Gr\"o\ss en, die im Zusammenhang mit den Gezeiten
+auftreten. Es handelt sich um ungef\"ahre bzw.\ gemittelte Angaben, die f\"ur eine grobe Absch\"atzung
+der Gezeitenkr\"afte ausreichen.}
+\end{table}
+\index{Erdmasse}\index{Mondmasse}\index{Abstand!Erde-Mond}\index{Abstand!Erde-Sonne}\index{Erdradius}%
+\index{Neigung der Erdachse}\index{Gravitationskonstante}
+
+Anmerkung: Ich werde in diesem Kapitel oft von Fliehkr\"aften sprechen,\index{Fliehkraft} 
+obwohl es sich dabei f\"ur
+viele nicht um wirkliche Kr\"afte handelt. Andererseits ist das Konzept der Kraft ohnehin ein
+Hilfskonstrukt, dessen \glqq Wirklichkeit\grqq, insbesondere im Zusammenhang mit der Gravitation,
+durchaus in Frage gestellt werden kann. Wer den Begriff Fliehkraft vermeiden m\"ochte, kann dies
+immer durch \glqq Richtungs\"anderung des Impulses\grqq\ ersetzen. 
+
+
+\section{Gezeitenkr\"afte}
+
+Ausgangspunkt der Erkl\"arungen sind immer die\index{Gezeitenkraft} 
+Gezeitenkr\"afte (engl.\ \textit{tidal forces}) 
+des Monds bzw.\ der Sonne. Gezeitenkr\"afte sind\index{Differenzielle Kraft} 
+sogenannte \glqq differenzielle Kr\"afte\grqq,
+d.h., sie geben die Differenz eines Kraftfelds bzw.\ die Differenz der Kr\"afte zwischen zwei Punkten an. 
+Betrachten wir zun\"achst die gew\"ohnliche Schwerkraft.\index{Schwerkraft}\index{Gravitationskraft}
+
+Die Schwerkraft $F$ eines Objekts der Masse $M$
+auf einen Gegenstand der Masse $m$ im Abstand $R$ ist
+\begin{equation}
+                         F = G \frac{M m}{R^2} \, .
+\end{equation} 
+Bildet man $F/m$ erh\"alt man eine Beschleunigung. Dieser Wert ist unabh\"angig von der Masse $m$
+des \glqq Probek\"orpers\grqq:
+\begin{equation}
+                         a = G \frac{M}{R^2} \, .
+\end{equation} 
+Setzt man die Werte f\"ur die Gravitationskonstante $G$, die Masse des Monds $M_{\rm Mond}$
+und den mittleren Abstand $R_{EM}$ zwischen Erde und Mond ein, erh\"alt man:
+\begin{equation}
+                         a_M = 6,67\cdot 10^{-11} \frac{{\rm m}^3}{\rm kg \cdot s^2} 
+                         \cdot \frac{7,35 \cdot 10^{22} \, {\rm kg}}{ 3,8^2 \cdot 10^{16}\, {\rm m}^2} 
+                         \approx  3,4 \cdot 10^{-5} \, \frac{\rm m}{\rm s^2} \, ,
+\end{equation}
+wobei dieser Wert aufgrund der elliptischen Form der Mondbahn und dem damit verbundenen variierenden
+Abstand zwischen Erde und Mond zwischen $2,98 \cdot 10^{-5}\, \frac{\rm m}{\rm s^2}$ und 
+$3,71 \cdot 10^{-5}\, \frac{\rm m}{\rm s^2}$ schwanken kann.
+
+Entsprechend erhalten wir f\"ur den Einfluss Sonne: 
+\begin{equation}
+                         a_\odot = 6,67\cdot 10^{-11} \frac{{\rm m}^3}{\rm kg \cdot s^2} 
+                         \cdot \frac{2 \cdot 10^{30} \, {\rm kg}}{ 1,5^2 \cdot 10^{22}\, {\rm m}^2} 
+                         \approx 5,9 \cdot 10^{-3}  \, \frac{\rm m}{\rm s^2}  \, .
+\end{equation} 
+Der gravitative Einfluss der Sonne auf die Erde bzw.\ auf Gegenst\"ande auf der Erde ist also 
+\"uber 170-mal gr\"o\ss er als der Einfluss des Monds. Der f\"uhrende, konstante Teil 
+dieser Kraft wirkt jedoch auf alle
+Gegenst\"ande auf der Erde gleicherma\ss en, d.h., wir sp\"uren ihn nicht, da alle Gegenst\"ande
+derselben Beschleunigung unterliegen und somit keine relativen Verschiebungen auftreten. 
+Wir w\"urden ihn sp\"uren, wenn die Erde (durch was auch immer f\"ur einen \"uberirdischen 
+Mechanismus) in ihrem Zentrum an einem Punkt im Raum
+\glqq festgehalten\grqq\ w\"urde. Alle Gegenst\"ande (insbesondere auch alle Wassermassen)
+w\"urden in diesem Fall mit der obigen Beschleunigung zur Sonne hingezogen. 
+
+F\"ur die Gezeiten sind jedoch die Gezeitenkr\"afte verantwortlich, d.h.\ die Unterschiede in
+der Schwerkraft des Monds (bzw.\ der Sonne) auf Gegenst\"ande, die sich an
+verschiedenen Orten auf der Erde befinden. Der Unterschied zwischen der Gravitationsbeschleunigung des
+Monds auf den Schwerpunkt der Erde und einen Punkt an der Erdoberfl\"ache, der dem Mond
+zugewandt ist, betr\"agt:\hyperref[secA]{(Herleitung)}
+\begin{equation}
+\label{eq_Delta_a}
+                         \Delta a = G \frac{M_{\rm Mond}}{(R_{EM}-R_{\rm Erde})^2}  - 
+                          G \frac{M_{\rm Mond}}{R_{EM}^2}  \approx 
+                          G \frac{M_{\rm Mond}}{R_{EM}^3} 2 R_{\rm Erde}    \, .
+\end{equation} 
+Im letzten Schritt wurde nur der f\"uhrende Term in $R_{\rm Erde}/R_{EM} \approx 1/60$ genommen,
+entsprechend kleiner sind die Korrekturen. Setzt man Zahlen f\"ur das Erde-Mond-System ein,
+erh\"alt man f\"ur diese differenzielle\index{Gezeitenkraft!Mond} 
+Beschleunigung:
+\begin{equation}
+        \Delta a_M \approx 1,14 \cdot 10^{-6}\, \frac{\rm m}{\rm s^2} \, ,
+\end{equation}     
+wobei auch hier der Wert wieder zwischen $0,94 \cdot 10^{-6}\, \frac{\rm m}{\rm s^2}$ und
+$1,3\cdot 10^{-6}\, \frac{\rm m}{\rm s^2}$ schwanken kann. 
+
+Wegen des wesentlich gr\"o\ss eren Abstands zwischen Erde und Sonne und weil dieser
+Abstand kubisch eingeht, ist diese Beschleunigung nun f\"ur die Sonne kleiner:\index{Gezeitenkraft!Sonne} 
+\begin{equation}
+        \Delta a_\odot \approx 5\cdot 10^{-7}\, \frac{\rm m}{\rm s^2} \, .
+\end{equation}  
+W\"ahrend also die absolute Schwerkraft der Sonne auf die Erde rund 170 mal gr\"o\ss er ist als die des Monds,
+ist die Gezeitenkraft an der Oberfl\"ache der Erde rund 2,3 (schwankend zwischen 1,9 und 2,6) mal
+schw\"acher als die des Monds. Wie schon erw\"ahnt, sp\"uren wir die absolute Schwerkraft der
+Sonne und des Monds nicht, da sich die Erde auf ihrer Bahn \glqq im freien Fall\grqq\ befindet. 
+Die differenzielle Schwerkraft, also die Gezeitenkraft, ist jedoch wahrnehmbar,
+da der Schwerpunkt der Erde, und damit der Punkt im freien Fall, einer anderen Beschleunigung
+unterliegt als die Punkte an der Erdoberfl\"ache. Die Punkte auf der dem Mond abgewandten    
+Seite der Erde sp\"uren eine entsprechend geringere Schwerebeschleunigung im Vergleich zum
+Mittelwert. 
+
+\section{Der dem Mond abgewandte Gezeitenberg}
+
+Der dem Mond zugewandte Wasserberg der Gezeiten wird durch die h\"ohere Gravitationskraft 
+des Monds auf diese Wassermassen im Vergleich zum Erdschwerpunkt erkl\"art.
+F\"ur den Wasserberg auf der dem Mond abgewandten Seite findet man zwei zun\"achst scheinbar 
+verschiedene Erkl\"arungen, nach denen einmal die h\"ohere Fliehkraft an dieser Seite der Erde f\"ur den
+Wasserberg verantwortlich ist und einmal die schw\"achere Gravitationskraft. Beide Erkl\"arungen sind
+richtig, allerdings muss man hier vorsichtig sein, keine Fehlvorstellungen zu generieren.
+Wir berechnen zun\"achst die Fliehkr\"afte an beliebigen Punkten der Erde und 
+beschr\"anken uns dabei auf das Erde-Mond-System, das f\"ur die Gezeiten den gr\"o\ss ten
+Einfluss hat. Die Effekte der Sonne lassen sich ebenso erkl\"aren und \"uberlagern sich den
+Einfl\"ussen des Monds.
+
+\subsection{Der Einfluss der Fliehkraft}
+
+Wir werden sehen, dass sich die Fliehkraft an jedem Punkt der Erde in zwei Anteile aufspalten
+l\"asst: Ein Anteil ist von einer Achse durch das Zentrum der Erde radial nach au\ss en gerichtet, der
+zweite Anteil ist \"uberall auf der Erde (und auch in ihrem Inneren) derselbe und bezieht sich
+auf die Bewegung des Erdzentrums um den Schwerpunkt des Erde-Mond-Systems. Bildet man die
+vektorielle Summe dieses zweiten Anteils der Fliehkraft und der Gravitationskr\"afte des Monds, bleiben
+gerade die Gezeitenkr\"afte mit einer Wirkung nach au\ss en \"ubrig. Diese erzeugen die Gezeiten.
+
+\subsubsection{Der Schwerpunkt des Erde-Mond-Systems}
+
+Erde und Mond drehen sich um eine Achse, die durch den gemeinsamen Schwerpunkt $D$
+(Abb.\ \ref{fig_Schwerpunkt})
+verl\"auft und senkrecht auf der Erde-Mond-Umlaufbahn steht. Der Schwerpunkt berechnet sich aus
+der Bedingung\index{Schwerpunkt!Erde-Mond-System}
+\begin{equation}
+\label{eq_Schwerpunkt}
+             r_1 M_1 = r_2 M_2  \hspace{1cm} {\rm oder} \hspace{1cm}  
+                 r_1  = \frac{M_2}{M_1+M_2} R  \hspace{1cm} {\rm mit} ~~ R=r_1+r_2 \, .
+\end{equation}
+Setzen wir f\"ur $M_2$ die Masse des Monds, f\"ur $M_1$ die Masse der Erde und f\"ur
+$R=r_1+r_2$ den Abstand Erde-Mond ein, erhalten wir f\"ur $r_1$ - den Abstand vom Erdmittelpunkt $Z$
+zum Schwerpunkt $D$ des Erde-Mond-Systems, $r_1 = R_{ZD} \approx 4\,620$\,km. Das ist etwas weniger als
+3/4-tel des Erdradius. Der Schwerpunkt des Erde-Mond-Systems liegt also innerhalb der Erde.   
+
+\begin{figure}[htb]
+\begin{tikzpicture}
+\draw[thick] (2,1.5) circle (1.2);
+\draw[thick] (14,1.5) circle (0.6);
+\draw (2,1.5) -- (14,1.5);
+\filldraw[black] (6,1.5) circle (0.1);
+\filldraw[black] (2,1.5) circle (0.05);
+\filldraw[black] (14,1.5) circle (0.05);
+\draw (6,1.2) node {$D$};
+\draw (2,1.8) node {$Z$};
+\draw (2,1.0) node {$M_1$};
+\draw (14,1.2) node {$M_2$};
+\draw (4,1.2) node {$r_1$};
+\draw (10,1.2) node {$r_2$};
+\end{tikzpicture}
+%
+\caption{\label{fig_Schwerpunkt}%
+Zwei Massen $M_1$ und $M_2$ drehen sich um einen gemeinsamen Schwerpunkt $D$. Die
+Abst\"ande $r_1$ und $r_2$ ergeben sich aus dem Hebelgesetz. $Z$ ist der Mittelpunkt der
+einen Masse (Erde).}
+\end{figure}
+
+F\"ur das System Erde-Sonne liegt dieser Schwerpunkt\index{Schwerpunkt!Erde-Sonne-System} 
+rund 450\,km vom
+Zentrum der Sonne entfernt, also tief im Inneren der Sonne. Auch wenn sich die Situation f\"ur
+das Erde-Mond-System in dieser Hinsicht vollkommen vom Erde-Sonne-System unterscheidet, bleibt
+die Argumentation f\"ur die Gezeiten im Wesentlichen die Gleiche. Diese Argumentation h\"angt nicht
+von der genauen Lage des gemeinsamen Schwerpunkts ab.  
+
+\subsubsection{Radiale Fliehkr\"afte}
+
+Wir stellen uns nun das Erde-Mond-System als einen starren K\"orper vor, bei dem sich Erde
+und Mond um eine feste Achse durch den gemeinsamen Schwerpunkt $D$ drehen und sich dabei
+immer dieselbe Seite zuwenden. F\"ur den Mond ist das richtig und wir werden in
+Abschnitt \ref{sec_EMWW} auch eine Begr\"undung daf\"ur finden, f\"ur die Erde gilt dies jedoch
+nicht: Sie dreht sich
+zus\"atzlich noch um eine Achse durch ihren Mittelpunkt $Z$. Drehungen der Erde um eine Achse
+durch ihren Mittelpunkt haben aber (unter den hier angenommenen idealisierten Bedingungen einer
+kugelf\"ormigen Erde) keinen Einfluss auf die Gezeiten, da ihr Effekt - die Fliehkraft zu dieser Drehung - 
+in radialer Richtung von der Drehachse durch $Z$ nach au\ss en zeigt und im selben Abstand von der
+Drehachse auch denselben Wert hat. Diese Kr\"afte f\"uhren zu einer Abplattung der Erde, die dadurch am 
+\"Aquator etwas dicker ist als entlang von Gro\ss kreisen durch die Pole.\index{Erde!Form} 
+
+\subsubsection{Die Fliehkr\"afte auf der Erde}
+
+Der Schwerpunkt des Erde-Mond-Systems sei also ein fester Punkt der Erde, den wir mit
+$D$ bezeichnen; er markiert eine Drehachse durch diesen Punkt (siehe Abbildung \ref{fig_Balance1}).   
+Allgemein ist die Fliehkraft auf einen Gegenstand der Masse $m$ an einem Punkt $C$ durch
+\begin{equation}
+                 \vec{F} = m \omega^2 \vec{R}_{DC} 
+\end{equation}
+gegeben, wobei $\vec{R}_{DC}$ der Verbindungsvektor von der Drehachse $D$ zum Punkt $C$ ist und
+$\omega$ die Winkelfrequenz der Drehung bezeichnet (sie entspricht einer Umlaufzeit des
+Erde-Mond-Systems um den gemeinsamen Schwerpunkt).
+Auch hier bietet es sich an, die Beschleunigung $\vec{a}=\omega^2\vec{R}_{DC}$
+aufgrund dieser Kraft zu betrachten. Da die Winkelfrequenz f\"ur alle 
+punktf\"ormigen Objekte auf der Erde dieselbe
+ist, spielt nur der Abstandsvektor $\vec{R}_{DC}$ vom Drehzentrum $D$ zum Punkt $C$ eine Rolle. 
+Auf der dem Mond zugewandten Seite der Erde (Punkt $B$) ist dieser Abstand sehr klein, 
+$R_{DB} \approx 1\,755$\,km, im Vergleich zur abgewandten Seite (Punkt $A$), 
+$R_{DA}\approx 11\,000$\,km. Im Zentrum der Erde heben sich die
+Fliehkraft und die Anziehungskraft des Monds gerade auf. Oft hei\ss t es nun, dass sich auf der dem 
+Mond zugewandten Seite die gr\"o\ss ere Gravitationskraft des Monds und die kleinere Fliehkraft addieren, 
+w\"ahrend auf der abgewandten Seite die Fliehkraft gr\"o\ss er sei, sodass eine Nettokraft \"ubrig bliebe, 
+selbst wenn man die kleinere Gravitationskraft abzieht. Diese Erkl\"arung f\"ur die beiden
+Wasserberge ist so nicht ganz richtig, da die f\"ur die Gezeiten relevanten Fliehkr\"afte an allen Punkten
+der Erde gleich sind, wie die folgende \"Uberlegung zeigt. 
+
+\begin{figure}[htb]
+\setlength{\unitlength}{0.8pt}
+\begin{picture}(400,205)(-50,100)
+\put(120,200){\makebox(0,0){$\bullet$}}    %  Z
+\put(195,200){\makebox(0,0){$\bullet$}}    %  D
+\put(165,290){\makebox(0,0){$\bullet$}}    %  C
+\put(20,200){\makebox(0,0){$\bullet$}}      %  A
+\put(220,200){\makebox(0,0){$\bullet$}}    %  B
+%
+\put(120,192){\makebox(0,0){{\footnotesize $Z$}}}
+\put(195,192){\makebox(0,0){{\footnotesize $D$}}}
+\put(163,298){\makebox(0,0){{\footnotesize $C$}}}
+\put(12,200){\makebox(0,0){{\footnotesize $A$}}}
+\put(228,200){\makebox(0,0){{\footnotesize $B$}}}
+\put(170,192){\makebox(0,0){{\footnotesize $\vec{R}_{ZD}$}}}
+\put(123,240){\makebox(0,0){{\footnotesize $\vec{R}_{ZC}$}}}
+\put(198,240){\makebox(0,0){{\footnotesize $\vec{R}_{DC}$}}}
+\put(135,208){\makebox(0,0){{\footnotesize $\vec{e}_1$}}}
+\qbezier(20,200)(20.7,241.1)(49.3,270.7)
+\qbezier(49.3,270.7)(78.8,299.5)(120,300)
+\qbezier(120,300)(161.2,299.5)(190.7,270.7)
+\qbezier(190.7,270.7)(219.3,241.1)(220,200)
+\qbezier(220,200)(219.3,158.9)(190.7,129.3)
+\qbezier(190.7,129.3)(161.2,100.5)(120,100)
+\qbezier(120,100)(78.8,100.5)(49.3,129.3)
+\qbezier(49.3,129.3)(20.7,158.9)(20,200)
+%
+\put(300,170){\vector(1,0){100}}
+\put(300,200){\vector(1,0){100}}
+\put(300,230){\vector(1,0){100}}
+\put(350,210){\makebox(0,0){Mond}}
+\thicklines
+\put(120,200){\vector(1,0){30}}
+\put(120,200){\vector(1,0){75}}
+\put(120,200){\vector(1,2){44}}
+\put(195,200){\vector(-1,3){29.5}}
+\put(120,200){\line(1,0){75}}
+\end{picture}
+\caption{\label{fig_Balance1}%
+Die Fliehkraft bzw.\ -beschleunigung auf einen allgemeinen Punkt $C$. 
+Der Schwerpunkt des Erde-Mond-Systems und damit der Mittelpunkt der Erde-Mond-Umlaufbahn ist 
+der Drehpunkt $D$. $Z$ bezeichnet den Mittelpunkt der Erde. 
+Die Ansicht ist \glqq von oben\grqq,
+d.h., bei $Z$ und $D$ handelt es sich eigentlich um Drehachsen.}
+\end{figure}
+
+Dazu berechnen wir die Fliehbeschleunigung auf einen beliebigen Punkt $C$ (er muss nicht an der
+Erdoberfl\"ache liegen). Diese Fliehbeschleunigung ist durch
+\begin{equation}
+                   \vec{a} = \omega^2 \vec{R}_{DC} = \omega^2 (\vec{R}_{ZC} - \vec{R}_{ZD})  
+\end{equation}
+gegeben (siehe Abb.\ \ref{fig_Balance1}).  
+
+Wie man sieht, kann man diese\index{Fliehkraft} 
+Fliehbeschleunigung in zwei Anteile aufteilen: Ein Anteil
+zeigt vom Erdmittelpunkt $Z$ radial nach au\ss en (Richtung $\vec{R}_{ZC}$) - dieser Anteil addiert 
+sich zu der t\"aglichen Drehung der Erde um ihre Achse und tr\"agt nicht zur Gezeitenwirkung 
+bei.%
+\footnote{Hier muss man eigentlich etwas vorsichtiger sein: Die t\"agliche Drehung der Erde erfolgt
+um ihre Rotationsachse, die relativ zur Ekliptik um 23,4 Grad geneigt ist. Die Drehung der Erde, von
+der hier die Rede ist, erfolgt einmal im Monat um eine Achse durch das Erdzentrum, die parallel zur
+Drehachse des Erde-Mond-Systems durch ihren gemeinsamen Schwerpunkt $D$ ist. Diese beiden Achsen sind 
+nicht identisch, auch wenn sie beide durch den Erdschwerpunkt verlaufen. Beide Drehungen haben
+keinen Einfluss auf die Gezeiten.} %
+Der zweite Anteil ist unabh\"angig vom Punkt $C$, also f\"ur alle Punkte der Erde
+derselbe. Er ist immer parallel zur Verbindungslinie vom gemeinsamen Schwerpunkt $D$ in
+die dem Mond abgewandte Richtung, d.h.\ in die Richtung der Achse durch den Erdmittelpunkt $Z$. 
+Dieser zweite Anteil ist gleich der Gravitationskraft auf den Mittelpunkt $Z$ der Erde. F\"ur die
+Gravitationsbeschleunigung bedeutet das:
+\begin{equation}
+\label{eq_aZ}
+              \vec{a}_Z = G \frac{M_{\rm Mond}}{R_{EM}^2} \vec{e}_1 - \omega^2  \vec{R}_{ZD} = 0  \hspace{1cm} {\rm oder}
+                  \hspace{1cm}    G \frac{M_{\rm Mond}}{R_{EM}^2} \vec{e}_1   = \omega^2  \vec{R}_{ZD}  \, .
+\end{equation}
+Hierbei ist $\vec{e}_1$ ein Einheitsvektor von der zentralen Drehachse durch den Erdmittelpunkt $Z$
+in Richtung des Monds. 
+
+\begin{figure}[htb]
+\setlength{\unitlength}{0.6pt}
+\begin{picture}(420,350)(-60,50)
+\thicklines
+\put(120,200){\makebox(0,0){$\bullet$}}
+\put(128,190){\makebox(0,0){{\footnotesize $Z$}}}
+\put(205,200){\makebox(0,0){$\bullet$}}
+\put(213,190){\makebox(0,0){{\footnotesize $D$}}}
+\qbezier(20,200)(20.7,241.1)(49.3,270.7)
+\qbezier(49.3,270.7)(78.8,299.5)(120,300)
+\qbezier(120,300)(161.2,299.5)(190.7,270.7)
+\qbezier(190.7,270.7)(219.3,241.1)(220,200)
+\qbezier(220,200)(219.3,158.9)(190.7,129.3)
+\qbezier(190.7,129.3)(161.2,100.5)(120,100)
+\qbezier(120,100)(78.8,100.5)(49.3,129.3)
+\qbezier(49.3,129.3)(20.7,158.9)(20,200)
+%
+\thinlines
+\put(20,200){\vector(-1,0){60}}
+\put(50,270){\vector(-1,1){44}}
+\put(220,200){\vector(1,0){60}}
+\put(190,270){\vector(1,1){44}}
+\put(120,300){\vector(0,1){60}}
+\put(50,130){\vector(-1,-1){44}}
+\put(120,100){\vector(0,-1){60}}
+\put(190,130){\vector(1,-1){44}}
+%
+\put(20,200){\vector(-1,0){45}}
+\put(50,270){\vector(-1,0){45}}
+\put(220,200){\vector(-1,0){45}}
+\put(190,270){\vector(-1,0){45}}
+\put(120,300){\vector(-1,0){45}}
+\put(50,130){\vector(-1,0){45}}
+\put(120,100){\vector(-1,0){45}}
+\put(190,130){\vector(-1,0){45}}
+\put(120,200){\vector(-1,0){45}}
+\end{picture}
+%
+\begin{picture}(200,350)(0,50)
+\thicklines
+\put(120,200){\makebox(0,0){$\bullet$}}
+\put(128,190){\makebox(0,0){{\footnotesize $Z$}}}
+\put(205,200){\makebox(0,0){$\bullet$}}
+\put(213,190){\makebox(0,0){{\footnotesize $D$}}}
+\qbezier(20,200)(20.7,241.1)(49.3,270.7)
+\qbezier(49.3,270.7)(78.8,299.5)(120,300)
+\qbezier(120,300)(161.2,299.5)(190.7,270.7)
+\qbezier(190.7,270.7)(219.3,241.1)(220,200)
+\qbezier(220,200)(219.3,158.9)(190.7,129.3)
+\qbezier(190.7,129.3)(161.2,100.5)(120,100)
+\qbezier(120,100)(78.8,100.5)(49.3,129.3)
+\qbezier(49.3,129.3)(20.7,158.9)(20,200)
+%
+\thinlines
+%\put(20,200){\vector(-1,0){40}}
+%\put(50,270){\vector(-1,1){29}}
+%\put(220,200){\vector(1,0){40}}
+%\put(190,270){\vector(1,1){29}}
+%\put(120,300){\vector(0,1){40}}
+%\put(50,130){\vector(-1,-1){29}}
+%\put(120,100){\vector(0,-1){40}}
+%\put(190,130){\vector(1,-1){29}}
+%
+\put(20,200){\vector(-1,0){20}}
+\put(50,270){\vector(-1,0){15}}
+\put(220,200){\vector(1,0){20}}
+\put(190,270){\vector(1,0){15}}
+%\put(120,300){\vector(-1,0){45}}
+\put(50,130){\vector(-1,0){15}}
+%\put(120,100){\vector(-1,0){45}}
+\put(190,130){\vector(1,0){15}}
+%\put(120,200){\vector(-1,0){45}}
+\end{picture}
+\caption{\label{fig_Balance2}%
+(links) Die Fliehkr\"afte bzw.\ -beschleunigungen lassen sich an jedem Punkt in zwei
+Anteile aufspalten: ein Anteil, der radial nach au\ss en zeigt und proportional zum Abstand vom
+Erdmittelpunkt ist - dieser Anteil tr\"agt nicht zu den Gezeiten bei. Ein zweiter Anteil, der an jedem
+Punkt der Erde derselbe ist und gleich der Fliehkraft auf das Zentrum $Z$ der Erde.
+(rechts) L\"asst man den radialen Anteil der Fliehkr\"afte weg - er tr\"agt nicht zu den Gezeiten bei - 
+und addiert man zu dem konstanten vom Mond weggerichteten Teil der Fliehkaft die
+Gravitationskraft des Monds, heben sich die Fliehkraft und der zentrale Teil der Gravitationskraft
+weg. Es bleiben nur die Gezeitenanteile der Gravitation. Diese sind f\"ur Ebbe und Flut auf der
+Erde verantwortlich.}
+\end{figure}
+
+Bilden wir nun die Summe der beiden Beschleunigungen und nutzen dabei Gl.~\ref{eq_aZ},
+erhalten wir f\"ur den Punkt $C$:
+\begin{equation}
+         \vec{a}_C =   2 G \frac{M_{\rm Mond}}{R_{EM}^3}  (\vec{e}_1 \cdot \vec{R}_{ZC}) \vec{e}_1 \, .
+\end{equation} 
+Anmerkungen:
+\begin{enumerate}
+\item
+Wir haben es bei den obigen Betrachtungen mit drei verschiedenen Drehachsen zu tun:
+(1) die Drehachse der Erde durch ihren Mittelpunkt $Z$ - sie ist um etwas \"uber 23 Grad zur
+Eklipik geneigt; (2) die Drehachse des Erde-Mond-Systems durch den Schwerpunkt $D$, wegen
+der Neigung der Mondumlaufbahn\index{Neigung der Mondumlaufbahn} 
+relativ zur Ekliptik von rund 5 Grad schwankt diese Neigung
+relativ zur Drehachse der Erde zwischen 18 und 28 Grad; (3) eine Achse parallel
+zur Drehachse Erde-Mond durch das Zentrum $Z$ der Erde, um diese Achse dreht sich die
+Erde einmal monatlich bei einem Umlauf des Erde-Mond-Systems relativ zum Fixsternhimmel.
+\item  
+Wir hatten schon mehrfach erw\"ahnt, dass die Fliehkr\"afte zu Drehungen um Achsen durch
+den Erdmittelpunkt nicht zur Gezeitenwirkung beitragen, da diese Fliehkr\"afte radial von der
+Drehachse weg nach au\ss en wirken und ihr Betrag nur vom Abstand von der Drehachse
+abh\"angt. Diese Kr\"afte sind also symmetrisch zur Drehachse.
+Durch die t\"agliche Drehung der Erde um ihre Achse wirkt am
+\"Aquator eine Beschleunigung von $a=R_{\rm Erde} \omega^2$, wobei $\omega$ einer Umdrehung
+am Tag entspricht, also
+$\omega=(2\pi)/(24\cdot 60\cdot 60)\,{\rm s}^{-1}$. Diese Beschleunigung betr\"agt rund
+$a=0,0337\,\frac{\rm m}{{\rm s}^2}$, ist also um ein Vielfaches gr\"o\ss er als die Gezeitenkr\"afte. 
+Diese Beschleunigung tr\"agt zu einer Abplattung der Erde bei: Der Umfang der Erde am 
+\"Aquator ist gr\"o\ss er als entlang der Pole.   
+\end{enumerate}
+
+\subsection{Die Gezeitenkr\"afte}
+
+Eine zweite Erkl\"arung der Gezeiten betont einen anderen Gesichtspunkt, ist aber letztendlich
+\"aquivalent zu der Erkl\"arung im letzten Abschnitt. 
+
+Wir stellen uns statt der Erde drei Objekte im Abstand von einem punktf\"ormig angenommenen 
+Massezentrum (z.B.\ dem Mond) vor. Der Einfachheit wegen sei dieses anziehende Massezentrum weit 
+von diesen drei Objekten entfernt. Das mittlere der drei Objekte entspreche der Erde; zwei weitere 
+Objekte - eines dem Mond zugewandt,
+das andere dem Mond abgewandt - entspreche Wassermassen auf der dem Mond zugewandten
+bzw.\ abgewandten Seite der Erde (siehe Abb.\ \ref{fig_Erkl2}). 
+
+\begin{figure}[htb]
+\begin{picture}(430,80)(0,0)
+\put(50,30){\circle{40}}
+\put(77,30){\circle*{10}}
+\put(23,30){\circle*{10}}
+\put(330,20){\vector(1,0){100}}
+\put(330,40){\vector(1,0){100}}
+\put(380,30){\makebox(0,0){Mond}}
+\thicklines
+\put(23,55){\vector(1,0){10}}
+\put(50,55){\vector(1,0){15}}
+\put(77,55){\vector(1,0){20}}
+\end{picture}\\
+\begin{picture}(300,60)(0,0)
+\put(160,30){\circle{40}}
+\put(197,30){\circle*{10}}
+\put(123,30){\circle*{10}}
+\put(330,20){\vector(1,0){100}}
+\put(330,40){\vector(1,0){100}}
+\put(380,30){\makebox(0,0){Mond}}
+\thicklines
+\put(123,55){\vector(1,0){25}}
+\put(160,55){\vector(1,0){35}}
+\put(197,55){\vector(1,0){45}}
+\end{picture}\\
+%
+\begin{picture}(300,60)(0,0)
+\put(270,30){\circle{40}}
+\put(320,30){\circle*{10}}
+\put(220,30){\circle*{10}}
+\put(330,20){\vector(1,0){100}}
+\put(330,40){\vector(1,0){100}}
+\put(380,30){\makebox(0,0){Mond}}
+\end{picture}
+
+\caption{\label{fig_Erkl2}%
+Die Gezeitenkr\"afte ziehen einen Gegenstand auseinander, sofern er nicht
+durch andere Kr\"afte zusammengehalten wird.}
+\end{figure}
+
+
+Auf alle drei Objekte wirkt in erster N\"aherung die Schwerkraft des Massezentrums. Bei dem vorderen
+Objekt (in Richtung des Massezentrums) kommt die Gezeitenkraft hinzu, da es n\"aher am Massezentrum
+liegt, bei dem hinteren Objekt ist die Gesamtkraft um die Gezeitenkraft geringer, da es weiter vom
+Massezentrum entfernt ist. W\"urden diese drei Objekte im freien Fall auf das Massezentrum zufallen,
+w\"urde sich der Abstand zwischen ihnen vergr\"o\ss ern: Das vordere Objekt f\"allt schneller, das hintere
+langsamer als das mittlere Objekt (die Erde als Ganzes). 
+
+\begin{figure}[htb]
+\begin{picture}(400,100)(-40,0)
+\put(20,100){\line(1,0){360}}
+\put(20,10){\line(4,1){360}}
+\put(20,100){\vector(0,-1){90}}
+\put(20,10){\vector(4,1){15}}
+\put(185,100){\vector(1,0){15}}
+\put(187,52){\vector(4,1){15}}
+\qbezier(20,100)(20,52)(33,12.5)
+\put(-8,50){\makebox(0,0){$\Delta \vec{s}_0=\vec{v}t$}}
+\put(45,3){\makebox(0,0){$\Delta \vec{s}=\frac{1}{2}\vec{g}t^2$}}
+\put(180,93){\makebox(0,0){$R$}}
+\put(183,58){\makebox(0,0){$R$}}
+\end{picture}
+\caption{\label{fig_Fliehkraft}%
+Eine Zentripetalkraft zieht einen Gegenstand von einer Geraden gerade so ab, dass die
+Beschleunigung diesen Gegenstand auf einer Kreisbahn h\"alt.}
+\end{figure}
+
+Zu diesem freien Fall kommt nun eine Kreisbewegung hinzu, die gerade so ist, dass die Beschleunigung
+des mittleren Objekts dieses auf der Kreisbahn h\"alt. Die Bedingung daf\"ur ist, dass die in der (infinitesimalen)
+Zeitdauer $t$ zur\"uckgelegte tangentiale Strecke $\Delta \vec{s}_0=\vec{v} t$ abz\"uglich der Strecke 
+aufgrund der Beschleunigung ($\Delta \vec{s} = \frac{1}{2} \vec{g} t^2$)
+zum Zentrum der Zentripetalkraft gerade wieder dem Abstand $R$ von diesem Zentrum entspricht (siehe Abb.\
+\ref{fig_Fliehkraft}). Nach dem Satz von Pythagoras gilt somit:
+\begin{equation}
+            R^2 + (vt)^2  = \left( R + \frac{1}{2}gt^2 \right)^2 = R^2 + R g t^2 + \frac{1}{4}g^2 t^4  \, .
+\end{equation}
+Vernachl\"assigen wir den Term $t^4$, da $t$ infinitesimal klein sein soll, folgt die Bedingung:
+\begin{equation}
+               (vt)^2  =  R g t^2   \hspace{1cm} {\rm oder} \hspace{1cm}  g = \frac{v^2}{R}  \, .
+\end{equation}
+F\"ur einen vollen Umlauf ben\"otige der K\"orper die Zeit $T$, in der die Strecke $U=2\pi R$ (der
+Umfang der Kreisbahn) zur\"uckgelegt wird. Es ist also $vT=2\pi R$ oder $v=\omega R$ mit der
+Umlauf(winkel)frequenz $\omega= 2\pi/T$. Damit ergibt sich schlie\ss lich die Bedingung, die schon mehrfach
+verwendet wurde:
+\begin{equation}
+               g =  \omega^2 R  \, .
+\end{equation}
+Das dem Massezentrum zugewandte Objekt
+bewegt sich auf einer kleineren Kreisbahn, d.h., bei ihm ist die Anziehung durch die Masse etwas
+gr\"o\ss er als die Kreisbeschleunigung. Bei dem abgewandten Objekt ist es umgekehrt: Seine Kreisbahn
+hat einen gr\"o\ss eren Radius, bei ihm ist somit die Anziehung durch das Massezentrum etwas
+geringer als es seiner Kreisbeschleunigung entspricht. Es w\"urde also nach Au\ss en getrieben, wenn
+es nicht durch andere Kr\"afte an die mittlere Masse gebunden w\"are. 
+
+\section{Spring- und Nipptide}
+
+Die Einfl\"usse\index{Springtide} 
+von Sonne und Mond \"uberlagern sich, sodass die Gezeitenkr\"afte besonders
+intensiv sind, wenn Sonne, Erde und Mond auf einer Linie liegen. Dabei ist es zun\"achst nicht
+wichtig, ob sich Sonne und Mond von der Erde aus gegen\"uberliegen (also Vollmond ist), oder
+ob Sonne und Mond von der Erde aus auf einer Seite sind (also bei Neumond). In beiden F\"allen
+erh\"alt man eine sogenannte Springflut oder Springtide. Diese tritt rund zweimal in einem Monat
+auf. 
+
+Andererseits ist der Einfluss auf die Gezeiten besonders schwach, wenn Sonne und Mond von der
+Erde aus betrachtet unter einem Winkel von 90 Grad erscheinen, d.h.\ bei zunehmendem oder
+abnehmendem Halbmond. Man spricht in diesem Fall von einer Nipptide.\index{Nipptide} 
+
+Die Intensit\"at einer Springflut kann durch verschiedene Faktoren noch verst\"arkt werden. Zum einen
+handelt es sich um rein geometrische Faktoren im Sonnen- und Mondstand: Zum Beispiel, wenn
+der Mond sich gerade in seiner Periapsis, also dem erdn\"achsten Punkt seiner elliptischen 
+Umlaufbahn um die Erde (bzw.\ den gemeinsamen Schwerpunkt des Erde-Mond-Systems) befindet. 
+Weitere wichtige Faktor sind allerdings Wetterbedingungen, z.B.\ wenn zeitgleich zur Springflut
+auch ein landeinw\"artiger Sturm weht. 
+
+\section{Die Neigung der Erdachse}
+
+Da der Wasserstand gerade bei Hafeneinfahrten f\"ur die Schifffahrt von Bedeutung ist, wurde
+dieser teilweise schon seit Jahrhunderten gemessen. Diese Aufzeichnungen sind nicht nur f\"ur
+den Klimawandel (Anhebung des Meeresspiegels) von Bedeutung, sondern verdeutlichen
+auch die Komplexit\"at der Gezeiten. 
+In einer harmonischen Analyse (also einer Frequenzanalyse oder Fourier-Zerlegung) der Wasserst\"ande
+kann man viele hundert Anteile erkennen. Neben dem idealisierten Einfluss von Sonne und Mond, die
+nicht exakt dieselbe Frequenz haben - ein Sonnentag dauert 24 Stunden, ein Mondtag ist jedoch
+um rund 50 Minuten l\"anger -, spielt auch die Elliptizit\"at der Mond- und Sonnenbahnen
+eine wichtige Rolle. Au\ss erdem kommen ortsabh\"angige Str\"omungsverh\"altnisse hinzu. 
+
+Ein wichtiger Faktor ist aber auch die Neigung der Erdachse
+um 23,5 Grad relativ zur Ekliptik sowie die Neigung der Mondumlaufbahn relativ zur Ekliptik von
+etwas \"uber 5 Grad. Dieser Einfluss kann an manchen Orten der Erde und zu manchen
+Jahreszeiten dazu f\"uhren, dass nur eine Ebbe und eine Flut am Tag auftreten.   
+
+\begin{figure}[htb]
+\setlength{\unitlength}{0.8pt}
+\begin{picture}(400,220)(-20,90)
+\put(20,200){\makebox(0,0){$\bullet$}}
+\put(180,120){\makebox(0,0){$\bullet$}}
+\put(61,280){\makebox(0,0){$\bullet$}}
+\put(220,200){\makebox(0,0){$\bullet$}}
+%
+\put(52,285){\makebox(0,0){$A$}}
+\put(209,195){\makebox(0,0){$A'$}}
+\put(30,206){\makebox(0,0){$B$}}
+\put(188,115){\makebox(0,0){$B'$}}
+%
+\qbezier(20,200)(20.7,241.1)(49.3,270.7)
+\qbezier(49.3,270.7)(78.8,299.5)(120,300)
+\qbezier(120,300)(161.2,299.5)(190.7,270.7)
+\qbezier(190.7,270.7)(219.3,241.1)(220,200)
+\qbezier(220,200)(219.3,158.9)(190.7,129.3)
+\qbezier(190.7,129.3)(161.2,100.5)(120,100)
+\qbezier(120,100)(78.8,100.5)(49.3,129.3)
+\qbezier(49.3,129.3)(20.7,158.9)(20,200)
+%
+\qbezier(40,140)(-40,200)(40,260)
+\qbezier(200,140)(280,200)(200,260)
+%
+\put(70,100){\line(1,2){100}}
+\put(31,244.5){\line(2,-1){178}}
+\multiput(61,277)(4,-2){40}{$\cdot$}
+\multiput(21,197)(4,-2){40}{$\cdot$}
+\put(300,170){\vector(1,0){100}}
+\put(300,200){\vector(1,0){100}}
+\put(300,230){\vector(1,0){100}}
+\put(350,210){\makebox(0,0){Mond}}
+\end{picture}
+\caption{\label{fig_Neigung}%
+Durch die Neigung der Erdachse zur Ekliptik ist einer der Flutwulste oberhalb
+des \"Aquators, der gegen\"uberliegende unterhalb. An bestimmten Orten, z.B. $A$ oder $B$, 
+kann es vorkommen, dass nur einer der beiden Flutberge auftritt. Zwischen den jeweiligen
+Positionen, $A$ bzw.\ $B$ und $A'$ bzw.\ $B'$ liegen etwas \"uber 12 Stunden.}
+\end{figure}
+
+Wie man in Abb.\ \ref{fig_Neigung} erkennt, 
+gibt es Orte auf der Erdoberfl\"ache, die\index{diurnale Gezeiten}
+zu bestimmten Zeiten, wenn die Erdachse zum Mond gerichtet ist (und nat\"urlich auch,
+wenn sie von ihm weggerichtet ist), mitten im Flutberg befinden, wohingegen sie etwas
+\"uber 12 Stunden sp\"ater (ein Mond-Tag hat 24\,h plus 50\,min) vergleichsweise weit
+entfernt von dem gegen\"uberliegenden Flutberg sind. Das kann den Effekt haben, dass
+man an solchen Orten nur einmal am Tag eine Flut und nur einmal am Tag eine Ebbe
+wahrnimmt. 
+
+Allerdings ist dies nur ein geometrischer Effekt auf die Gezeiten. In Wirklichkeit spielen
+sehr viele Faktoren eine weitaus dominantere Rolle, wann, wo und wie intensiv Gezeiten an
+einem Ort auftreten. Insbesondere spielen die Tiefenverh\"altnisse des Meeres und
+auch die geographischen Verh\"altnisse der K\"uste eine sehr wichtige Rolle oder auch
+ob es sich um eine Ost- oder Westk\"uste handelt. Auch die Dynamik der Str\"omungen spielt
+hier eine wichtige Rolle. Tritt an einem Ort nur einmal innerhalb von 24 Stunden eine Flut oder Ebbe
+auf, spricht man von diurnalen Gezeiten, ansonsten von semi-diurnalen Gezeiten. 
+
+
+\section{Herleitung einiger Gleichungen}
+\subsection{Gezeitenbeschleunigung}
+\label{secA}
+
+Berechnet werden soll in f\"uhrender Ordnung (Gl.\ \ref{eq_Delta_a})
+\begin{equation}
+                         \Delta a = G \frac{M_{\rm Mond}}{(R_{EM}-R_{\rm Erde})^2}  - 
+                          G \frac{M_{\rm Mond}}{R_{EM}^2}   \, .
+\end{equation} 
+Dazu wird aus dem ersten Term auf der rechten Seite der Abstand Erde-Mond ausgeklammert,
+\begin{equation}
+           G \frac{M_{\rm Mond}}{(R_{EM}-R_{\rm Erde})^2} 
+                  = G \frac{M_{\rm Mond}}{R_{EM}^2} \frac{1}{(1-\frac{R_{\rm Erde}}{R_{EM}})^2} \, , 
+\end{equation} 
+und der hintere Term in Potenzen von $\frac{R_{\rm Erde}}{R_{EM}}$ entwickelt. Die Entwicklung
+lautet allgemein:
+\begin{equation}
+           \frac{1}{(1-x)^2} = 1 + 2x + O(x^2)  \, .
+\end{equation}
+Damit folgt:
+\begin{equation}
+           G \frac{M_{\rm Mond}}{(R_{EM}-R_{\rm Erde})^2} 
+                  = G \frac{M_{\rm Mond}}{R_{EM}^2} \left( 1 + 2 \frac{R_{\rm Erde}}{R_{EM}} + ...\right)  
+\end{equation} 
+und wir erhalten f\"ur die Gezeitenbeschleunigung (die f\"uhrenden Terme heben sich weg): 
+\begin{equation}
+          \Delta a = G \frac{M_{\rm Mond}}{(R_{EM}-R_{\rm Erde})^2}  - 
+       G \frac{M_{\rm Mond}}{R_{EM}^2}  =  2 G \frac{M_{\rm Mond}}{R_{EM}^2} \left( \frac{R_{\rm Erde}}{R_{EM}} 
+          + O\left( \left(\frac{R_{\rm Erde}}{R_{EM}} \right)^2 \right) \right) \, .
+\end{equation} 
+
+\begin{thebibliography}{99}
+
+\bibitem{Hicks} Hicks, S.D.; \textit{Understanding Tides}, NOAA Report; 2006; 
+                  \url{https://repository.oceanbestpractices.org/handle/11329/594} (aufgerufen am 13.5.2023).
+\bibitem{Kowalik} Kowalik, Z., Luick, J.L.; \textit{Modern Theory and Practice of Tide Analysis and
+                 Tidal Power}, Austides Consulting, Eden Hills, 2019; \url{https://austides.com/downloads/} 
+                 (aufgerufen am 13.5.2023).
+\bibitem{Parker} Parker, B.B.; \textit{Tidal Analysis and Prediction}; NOAA Special Publication NOS CO-OPS 3;
+                 2007; \url{https://repository.oceanbestpractices.org/handle/11329/632} (aufgerufen am 13.5.2023).                 
+
+\end{thebibliography}
+
+%\end{document}

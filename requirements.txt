@@ -1,0 +1,14 @@
+flask
+flask-smorest
+python-dotenv
+sqlalchemy
+flask-sqlalchemy
+flask-jwt-extended
+passlib
+flask-migrate
+sqlalchemy-file
+fasteners
+pylatex
+pdflatex
+latexcompiler
+https://github.com/JonasBernard/pdflatex-clean/archive/main.zip

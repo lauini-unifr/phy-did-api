@@ -1,0 +1,409 @@
+\documentclass[german,10pt]{book}         \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
+
+\chapter{ART-Kosmologie}
+
+Au\ss erdem gibt es L\"osungen der
+Einstein'schen Feldgleichungen, die 
+kosmologische Modelle beschreiben -- die
+bekannteste L\"osung ist in diesem Fall
+die Friedman-L\"osung bzw.\ Robertson-Walker-Metrik. 
+
+\section{Kosmologische Modelle}
+
+Eine L\"osung der Einstein'schen Feldgleichungen entspricht einer
+vollst\"andigen Raum-Zeit, d.h.\ einem Modell eines Kosmos. Zum ersten
+Mal hat die Physik mit der Allgemeinen Relativit\"atstheorie somit
+ein Modell an der Hand, mit dem sich kosmologische Fragen, insbesondere
+auch zur Entstehungsgeschichte des Universums, 
+wissenschaftlich angehen lassen. 
+
+Einstein ging zun\"achst davon aus, dass unser Universum auf gro\ss en
+Skalen im Wesentlichen statisch sei. Er musste jedoch rasch feststellen,
+dass seine Feldgleichungen ein solch statisches Universum nur in
+sehr unphysikalischen Situationen ($T_{\mu \nu}=0$) zulassen.
+Um auch f\"ur realistischere Materieverteilungen L\"osungen zu einem
+statischen Universum zu erhalten, erweiterte Einstein seine
+Feldgleichungen um einen sogenannten kosmologischen 
+Term mit einer kosmologischen Konstanten 
+$\Lambda$\index{Kosmologische Konstante}, sodass Gl.~\ref{EinsteinGl}
+zu folgender Gleichung wird:\index{Einstein'sche Gleichungen}
+\begin{equation}
+   R_{\mu \nu} - \frac{1}{2} g_{\mu \nu} R + \Lambda g_{\mu \nu}
+     ~=~ - \frac{8 \pi G}{c^4} T_{\mu \nu}   \;. 
+\end{equation}
+Geometrisch k\"onnte man $\Lambda$ als eine 
+\glqq negative Raumkr\"ummung\grqq\ des Vakuums interpretieren, die durch
+die vorhandene Materie nahezu ausgeb\"ugelt wird. Schl\"agt man den
+kosmologischen Term der rechten Seite der Gleichung zu, so kann man ihn
+als eine Art Energiedichte des Vakuums interpretieren, die zu einer
+negativen Raumkr\"ummung f\"uhrt. 
+
+Durch die kosmologische Konstante hoffte Einstein, statische L\"osungen
+der Feldgleichungen mit Materiefeldern zu erhalten. Er wurde aber rasch
+entt\"auscht. Angeblich (die einzige Quelle f\"ur dieses Zitat scheint der
+Physiker George Gamow zu sein) 
+hat Einstein bei sp\"aterer Gelegenheit die Einf\"uhrung
+dieses Terms als seine \glqq gr\"o\ss te Eselei\grqq\ bezeichnet. 
+
+\subsection{Das Olbers'sche Paradoxon}
+\index{Olbers, Heinrich Wilhelm Matthias}
+
+Im Rahmen der klassischen Kosmologie war schon bekannt, dass die
+Annahme eines homogenen, seit unendlichen Zeiten in gleicher Form
+bestehenden Kosmos zu einem Widerspruch f\"uhrt. Heute bezeichnet man
+dieses Paradoxon meist nach dem Astronom und Arzt Heinrich Wilhelm 
+Matthias Olbers ({\em geb.\ 11.10.1758 in Arbergen bei Bremen; gest.\
+2.3.1840 in Bremen}), obwohl entsprechende \"Uberlegungen bereits von 
+Edmund Halley (1656--1742)\index{Halley, Edmund} angestellt wurden.
+
+Olbers argumentierte, dass der Himmel in alle Richtungen dieselbe
+Helligkeit wie die Sonne haben m\"usste. Insbesondere m\"usste es
+auch Nachts \glqq taghell\grqq\ sein. Das Argument basiert auf der
+Annahme eines unendlich ausgedehnten, homogenen Universums 
+(d.h.\ die Sternendichte ist \"uberall nahezu konstant), das in dieser
+Form auch seit unendlicher Zeit existiert hat. In diesem Fall m\"usste
+n\"amlich aus jeder Raumrichtung das Licht eines Sterns auf die Erde
+treffen. 
+
+Olbers selber glaubte das Paradoxon dadurch umgehen zu k\"onnen, dass 
+er Wolken im Kosmos annahm, die das Licht von sehr weit entfernten
+Sternen verdecken. Man wei\ss\ heute jedoch, dass sich diese Wolken
+durch die einfallende Strahlung h\"atten erw\"armen m\"ussen, bis sie
+schlie\ss lich ins thermische Gleichgewicht mit dieser Strahlung gekommen
+w\"aren, d.h.\ ebenfalls die Strahlung emittieren w\"urden. Auch die
+Annahme einer endlichen Lebensdauer der Sterne umgeht das Paradoxon
+nicht, wenn man zus\"atzlich fordert, dass die mittlere Sterndichte
+konstant bleibt, also auch st\"andig neue Sterne entstehen.
+
+Aus heutiger Sicht gibt es zwei L\"osungen dieses Olbers'schen
+Paradoxons (vgl.\ \cite{Fliessbach}, S.~347):
+\begin{enumerate}
+\item
+F\"ur ein endliches Weltalter gibt es den\index{Ereignishorizont} 
+Ereignishorizont, jenseits
+dessen wir nichts sehen. Auch in einem unendlich ausgedehnten Universum
+erreicht uns nur Licht aus einem Bereich, der in unserer kausalen 
+Vergangenheit liegt.
+\item
+Bei einer Expansion des Universums nimmt die Fluchtgeschwindigkeit mit
+dem Abstand zu. Geht diese Fluchtgeschwindigkeit gegen die
+Lichtgeschwindigkeit, so muss die Rotverschiebung des wahrgenommenen
+Lichtes gegen Unendlich gehen. Auch hierdurch wird die empfangene
+Helligkeit begrenzt. Diese Schranke der Wahrnehmbarkeit ist f\"ur
+Robertson-Walker-Universen (s.u.) mit dem Ereignishorizont identisch.
+\end{enumerate}
+
+\subsection{Expandierende Universen}
+
+Im Jahre 1924 zeigte Edwin Powell Hubble ({\em geb.\ 20.11.1889 in
+Marshfield (Missouri), gest.\ 28.9.1953 in San Marino (Kalifornien)})
+\index{Hubble, Edwin Powell}
+die Existenz von Galaxien au\ss erhalb unseres Sternensystems. F\"unf
+Jahre sp\"ater entdeckte er die Expansion des Weltalls \"uber die
+Rotverschiebung entfernter Galaxien. Zu dem Zeitpunkt, als Einstein
+die Allgemeine Relativit\"atstheorie entwickelt hatte, waren also weder
+au\ss ergalaktische Objekte noch die Expansion des Universums bekannt.
+
+Doch schon im Jahre 1917 fand der sowjetische Kosmologe Aleksandr
+Alexandrovich Friedmann 
+(1888--1925)\index{Friedmann, Aleksandr Alexandrovich}
+L\"osungen der Einstein-Gleichungen, die ein expandierendes Universum
+beschreiben. Er legte so die Grundlagen f\"ur unsere heutige
+Big-Bang- bzw.\ Urknall-Theorie\index{Big-Bang}\index{Urknall}.
+
+Die wesentliche Annahme, die f\"ur kosmologische L\"osungen der 
+Einstein-Glei\-chungen
+meist gemacht wird, ist die Homogenit\"at und Isotropie unseres
+Universums. Darunter versteht man, dass auf sehr gro\ss en Skalen
+kein Ort und keine Richtung im Universum ausgezeichnet sind. Diese
+Annahme bezeichnet man auch als 
+kosmologisches Prinzip\index{Kosmologisches Prinzip}. F\"ur
+den geometrischen Anteil der Einstein-Gleichungen bedeutet dies, dass 
+die dreidimensionale Kr\"ummung r\"aumlich konstant sein mu\ss. Lediglich
+eine Zeitabh\"angigkeit dieser Kr\"ummung ist noch erlaubt. Es zeigt sich,
+dass unter diesen Bedingungen nur noch eine Metrik der Form
+\begin{equation}
+    {\rm d}s^2 ~=~ c^2 {\rm d}t^2 - R(t)^2 
+    \left( \frac{{\rm d}r^2}{1-kr^2} + r^2( {\rm d}\vartheta^2 +
+    \sin^2 \vartheta \; {\rm d}\phi^2) \right)    
+\end{equation}
+m\"oglich ist. Diese Metrik bezeichnet man als 
+Robertson-Walker-Metrik\index{Robertson-Walker-Metrik}. 
+
+Zwei freie Parameter kennzeichnen diese Metrik: Der Parameter $k$, der
+durch geeignete Skalierung von $r$ auf die Werte $k=0,+1,-1$ beschr\"ankt
+werden kann, und der Wert $R(t)$, der \"uber die Gleichung
+\begin{equation}
+        K ~=~ \frac{k}{R(t)^2}    
+\end{equation}
+mit dem dreidimensionalen Kr\"ummungsskalar $K$ in Beziehung steht.
+Der Wert von $k$ unterscheidet somit, ob die dreidimensionale
+skalare Kr\"ummung positiv, null oder negativ ist. Dem entsprechen
+drei unterschiedlichen Formen von Universen.
+Insbesondere ist f\"ur $k=1$ der dreidimensionale Raum endlich, aber ohne
+Grenze (Kugel). 
+
+Das kosmologische Prinzip wird gelegentlich angezweifelt, und man
+kann zurecht fragen, ob wir wirklich eine Homogenit\"at und Isotropie
+des Raumes beobachten. Der sichtbare Teil des Universums hat einen
+Radius von ungef\"ahr $10^{10}$\,Lichtjahren. Unsere Galaxie andererseits
+hat einen Radius von $10^5$\,Lichtjahren. Die meisten Galaxien sind in
+Clustern oder Haufen mit einem Durchmesser von rund $10^7$\,Lichtjahren 
+konzentriert. Bis zu dieser Skala beobachten wir somit durchaus
+reichhaltige Strukturen auch in der Form der Materieverteilung. Es handelt 
+sich also um maximal zwei bis drei Gr\"o\ss enordnungen, f\"ur die das
+kosmologische Prinzip g\"ultig sein k\"onnte. Ob das der Fall ist, oder
+ob es weitere charakteristische Strukturen jenseits der Galaxiencluster
+gibt, m\"ussen zuk\"unftige Messungen entscheiden.
+
+Noch wurde nichts \"uber die zeitliche Entwicklung des Universums
+ausgesagt. Diese steckt in der Abh\"angigkeit des \glqq Radius\grqq\ $R(t)$
+-- genauer sollte man von einer Skala sprechen -- des Universums von
+der Zeit und sollte aus der Einstein-Gleichung bestimmt werden.
+Dazu macht man \"ublicherweise Annahmen \"uber den 
+Energie-Impuls-Tensor\index{Energie-Impuls-Tensor}
+der Materie, der nach dem kosmologischen Prinzip ebenfalls r\"aumlich
+konstant und isotrop sein sollte. Die wesentliche Freiheit besteht
+in der Relation zwischen der Materiedichte $\rho$ und dem 
+\glqq Radius\grqq\
+$R(t)$. F\"ur \glqq normale\grqq\ Materie gilt 
+\begin{equation}
+       \rho_m R(t)^3 ~=~ {\rm const}   \hspace{2cm}
+      \mbox{(materiedominiert)}  \;,   
+\end{equation}
+also die bekannte Relation, dass die Dichte umgekehrt proportional zum
+Volumen ist. F\"ur Strahlung beispielsweise gilt
+\begin{equation}
+       \rho_s R(t)^4 ~=~ {\rm const}   \hspace{2cm}
+      \mbox{(strahlungsdominiert)}  \;.   
+\end{equation}
+Mit diesen Relationen erh\"alt man aus den Einstein-Gleichungen eine 
+einfache Differentialgleichung f\"ur $R(t)$,
+\begin{equation}
+\label{Friedmann}
+     \dot{R}^2 + V(R) ~=~ - k    \;,   
+\end{equation}
+mit
+\begin{equation}
+  V(R) ~=~ - \frac{a}{R^2} - \frac{b}{R} - \frac{1}{3} \Lambda R^2 \;.
+\end{equation}  
+$a$ und $b$ sind Konstanten, die den Anteil an Strahlung bzw.\
+normaler Materie im Universum angeben, und $\Lambda$ ist die kosmologische
+Konstante. Modelle, bei denen $R(t)$ der Gl.~\ref{Friedmann} gen\"ugt, 
+bezeichnet man als Friedmann-Modelle\index{Friedmann-Modelle}.
+
+Qualitativ lassen sich die L\"osungen von Gl.~\ref{Friedmann} leicht
+durch die physikalische Analogie mit der Energie eines eindimensionalen
+Teilchens in einem effektivem Potential $V(R)$ diskutieren. F\"ur
+$\Lambda=0$ beispielsweise kann es Universen
+geben, deren Radius (Skala) nach oben beschr\"ankt ist
+ -- in diesem Fall kommt es wieder zu einem Kollaps. Oder
+aber das Universum expandiert f\"ur alle Zeiten. 
+
+\begin{SCfigure}[50][htb]
+\begin{picture}(210,200)(-10,0)
+\put(20,0){\vector(0,1){180}}
+\put(16,100){\vector(1,0){174}}
+\put(10,190){\makebox(0,0){$V(R)$}}
+\put(190,90){\makebox(0,0){$R$}}
+\put(175,145){\makebox(0,0){${\scriptstyle \Lambda < 0}$}}
+\put(160,90){\makebox(0,0){${\scriptstyle \Lambda = 0}$}}
+\put(161,35){\makebox(0,0){${\scriptstyle \Lambda > 0}$}}
+\put(5,100){\makebox(0,0){${\scriptstyle k=0}$}}
+\put(5,120){\makebox(0,0){${\scriptstyle k=1}$}}
+\put(5,80){\makebox(0,0){${\scriptstyle k=-1}$}}
+\put(16,80){\line(1,0){8}}
+\put(16,120){\line(1,0){8}}
+\qbezier(90,90)(150,100)(180,180)
+\qbezier(90,90)(140,95)(180,20)
+\qbezier(90,90)(140,97)(180,97)
+\thicklines
+\qbezier(25,0)(30,80)(90,90)
+\end{picture}
+\caption{\label{fig_cosmos}%
+Das \glqq effektive Potenzial\grqq\ f\"ur die Dynamik des
+Skalenfaktors $R(t)$ in einer Friedman-L\"osung f\"ur
+verschiedene Werte der kosmologischen Konstanten $\Lambda$.
+In Abh\"angigkeit von $k$ verschiebt sich die $V(R)=0$-Achse
+nach oben oder untern.}
+\end{SCfigure}
+
+Der wesentliche
+Parameter f\"ur diese Unterscheidung ist die Materiedichte im Universum.
+Aus der sichtbaren Materie in unserem Universum w\"urde man auf einen
+Wert von $\rho$ schlie\ss en, der zu einem ewig expandierenden
+Universum f\"uhrt. Allerdings deuten genaue Untersuchungen der
+Bewegungen von Galaxien darauf hin, dass der gr\"o\ss te Teil der
+Materie in unserem Universum unsichtbar ist. 
+
+Nachdem vor einigen Jahren aufgrund genauer Beobachtungen und Messugen
+an Supernovaexplosionen die Entfernungsskalen f\"ur Objekte, deren
+Entfernung nicht mehr durch Paralaxenmessugn m\"oglich ist, revidiert
+werden mussen, ergibt sich heute (Stand Januar 2015) das Bild, dass sich
+unser Universum in einem Stadium befindet, in dem die Geschwindigkeit der
+Expansion wieder zunimmt, nachdem es vor rund 8 Milliarden Jahren
+eine \glqq minimale Expansionsrate\grqq\ durchlaufen hat. 
+Die Beobachtungen lassen sich zwar durch eine positive kosmologische
+Konstante beschreiben, doch die Natur dieser Konstanten bleibt
+ungewiss. Manche Modelle postulieren eine ganz neue 
+Energie- oder gar Materieform (man spricht auch manchmal von
+{\em Dunkler Energie}), die\index{Dunkle Energie} 
+sich durch einen negativen Druck 
+auszeichnet und das Universum zur Expansion \glqq dr\"angt\grqq. 
+In kaum einem Gebiet der Physik \"andern sich derzeit die 
+grundlegenden Vorstellungen innerhalb weniger Jahre so oft und so 
+einschneidend wie in der Kosmologie.
+
+\subsection{Das de Sitter-Universum}
+
+Sollten sich die augenblicklichen Vorstellungen als richtig erweisen
+und die Skala des Universums beschleunigt zunehmen, wird der
+Materiegehalt immer d\"unner und spielt eine zunehmend
+geringere Rolle. In diesem Fall ist das Verhalten des Universums
+durch die Kosmologische\index{Kosmologische Konstante} 
+Konstante $\Lambda$ dominiert, die
+bei einem beschleunigt expandierenden Universum positiv sein muss.
+
+Ein Universum ohne Materiegehalt aber mit einer positiven
+Kosmologischen Konstanten bezeichnet man als 
+\textit{de Sitter-Universum}.\index{de Sitter-Universum}
+Die \glqq Bewegungsgleichung\grqq\ f\"ur $R(t)$ (Gl.\ \ref{Friedmann}) 
+wird in diesem Fall zu
+\begin{equation}
+           \dot{R}(t) = \frac{1}{\sqrt{3}} \sqrt{\Lambda} R(t) = H R(t) 
+\end{equation}  
+mit Expansionsrate $H$. Die L\"osung lautet:
+\begin{equation}
+              R(t) = R_0 {\rm e}^{H t}  \, .
+\end{equation}
+Dies ist die \textit{de Sitter-L\"osung} der Einstein'schen Gleichungen
+f\"ur einen materiefreien Raum mit einer kosmologischen Konstanten.
+Sie beschreibt nicht nur m\"oglicherweise das asymptotische
+Verhalten unseres Universums in der fernen Zukunft, sondern sie
+hat auch viele interessante mathematische Eigenschaften.
+
+\begin{thebibliography}{99}
+%\addcontentsline{toc}{chapter}{Literaturangaben}
+%\bibitem{Aichelburg} Peter C.\ Aichelburg (Hrsg.); {\it Zeit im 
+%       Wandel der Zeit}; Verlag Vieweg, Braunschweig, Wiesbaden, 1988.
+%\bibitem{Barbour3} {\it Mach's Principle -- From Newton's Bucket to
+%        Quantum Gravity}; Julian Barbour \& Herbert Pfister (Hrsg.);
+%        Birkh\"auser, Boston, Basel, Berlin, 1995.       
+%\bibitem{Bekenstein} Jacob D.\ Bekenstein, \textit{Black holes
+%          and entropy}, Phys.\ Rev.\ D\,7 (1973) 2333--2346.        
+%\bibitem{Bell} John Bell;  {\em Speakable and Unspeakable in 
+%        Quantum Physics}, 2.\ edition, Cambridge University Press (2004).       
+%\bibitem{Born} Max Born; {\it Optik}; Springer-Verlag, Berlin, Heidelberg,
+%        1972.
+%\bibitem{Britannica} Encyclopaedia Britannica; 15.th edition, 1988.
+%\bibitem{Descartes} Ren\'e Descartes; {\it Die Prinzipien der
+%        Philosophie}; Felix Meiner Verlag, Hamburg, 1992; \"ubersetzt
+%        von Artur Buchenau.
+%\bibitem{EDM} Encyclopaedic Dictionary of Mathematics; Second Edition,
+%        MIT Press, 1987.
+%\bibitem{Einstein1} Albert Einstein; {\it Zur Elektrodynamik bewegter 
+%        K\"orper}; Annalen der Physik, Leipzig, 17 (1905) 891. 
+%\bibitem{Einstein2} Albert Einstein; {\it Ist die Tr\"agheit eines
+%        K\"orpers von seinem Energieinhalt abh\"angig?} (Ann.\ Phys., 
+%        Leipzig, 18 (1905) 639.
+%\bibitem{Einstein3} Albert Einstein; {\it Aus meinen sp\"aten Jahren};
+%         Ullstein Sachbuch, Verlag Ullstein, Frankfurt, Berlin, 1993.                 
+%\bibitem{Einstein4} Albert Einstein; {\it Prinzipielles zur allgemeinen
+%        Relativit\"atstheorie}; Annalen der Physik 55 (1918) 241.
+%\bibitem{Einstein5} Albert Einstein; {\it \"Uber den Einflu\ss\ der
+%        Schwerkraft auf die Ausbreitung des Lichtes}; Annalen der
+%        Physik 35 (1911) 898.                 
+%\bibitem{Feynman} Richard Feynman; {\it The Character of Physical Law};
+%        The MIT Press, 1987.        
+%\bibitem{Fierz} Markus Fierz; {\it \"Uber den Ursprung und die Bedeutung
+%        der Lehre Isaac Newtons vom absoluten Raum}; Gesnerus, 
+%        11.\ Jahrgang (1954), S.\,62--120.
+%\bibitem{Fliessbach} Torsten Flie\ss bach; {\it Allgemeine 
+%        Relativit\"atstheorie}; BI-Wissenschaftsverlag, Mannheim, Wien
+%        Z\"urich, 1990. 
+%\bibitem{Galilei} Galilei; {\it Dialog \"uber die beiden haupts\"achlichen
+%        Weltsysteme, das ptolem\"aische und das kopernikanische}; 
+%        Teubner Stuttgart, 1982; aus dem Italienischen \"ubersetzt von
+%        Emil Strauss.   
+%  \bibitem{Hawking} Stephen W.\ Hawking, \textit{Particle Creation by
+%            black holes}, Comm.\ Math.\ Phys.\ 43 (1976) 199--220.      
+%\bibitem{Helmholtz2} Hermann von Helmholtz; {\em \"Uber Wirbelbewegungen,
+%        \"Uber Fl\"ussigkeitsbewegungen}, 1858; in Ostwalds Klassiker der 
+%       exakten Wissenschaften Bd.\ 1; Verlag Harri Deutsch, Frankfurt, 
+%       1996.                   
+%\bibitem{Lamb} G.L.\ Lamb, Jr.; {\it Elements of Soliton Theory}; 
+%         Pure \& Applied Mathematics, John Wiley \& Sons, 1980. 
+%\bibitem{Laue} Max von Laue; {\it Geschichte der Physik}; 
+%         Universit\"ats-Verlag Bonn, 1947.
+%\bibitem{Lorentz} Hendrik Antoon Lorentz; {\it Electromagnetic phenomena 
+ %        in a system moving with any velocity smaller than that of light}; 
+%         Proc.\ Acad.\ Sci., Amsterdam, 6 [1904], S.\ 809.
+%\bibitem{Mach} Ernst Mach; {\it Die Mechanik in ihrer Entwicklung
+%      historisch kritisch dargestellt}; Akademie Verlag, Berlin, 1988.       
+%\bibitem{Mainzer} Klaus Mainzer; {\it Philosophie und Geschichte von
+%         Raum und Zeit}; in {\it Philosophie und Physik der Raum-Zeit};
+%         J\"urgen Audretsch und Klaus Mainzer (Hrsg.); 
+%         BI-Wissenschaftsverlag, 1994. 
+%\bibitem{Microscope} Touboul, Pierre, et al. (MICROSCOPE Collaboration); \textit{MICROSCOPE Mission:
+%         Final Results of the Test of the Equivalence Principle}; Phys.\ Rev.\ Lett.\ \textbf{129} (2022) 121102.
+%\bibitem{Misner} C.W.\ Misner, K.S.\ Thorne, J.A.\ Wheeler; 
+%        {\it Gravitation}; W.H.\ Freeman and Company, San Francisco,  1973.
+%\bibitem{Mittelstaedt} Peter Mittelstaedt; {\it Der Zeitbegriff in der
+%        Physik}; BI-Wissenschaftsverlag, 1989.        
+%\bibitem{Mittelstaedt2} Peter Mittelstaedt; {\it Philosophische Probleme
+%        der modernen Physik}; BI-Wissenschaftsverlag, 1989.        
+%\bibitem{Newton}
+%   Isaac Newton; {\it Mathematische Grundlagen der Naturphilosophie}; 
+%   \"ubersetzt von Ed Dellian; Felix Meiner Verlag, 1988. 
+%\bibitem{Newton2} Isaac Newton; {\it \"Uber die Gravitation...};
+%       Klostermann Texte Philosophie; Vittorio Klostermann, Frankfurt,
+%      1988; \"ubersetzt von Gernot B\"ohme.
+%\bibitem{Newton3} Isaac Newton; {\it Optik oder Abhandlung \"uber
+%      Spiegelungen, Brechungen, Beugungen und Farben des Lichts};
+%      I., II.\ und III.\ Buch (1704); aus dem Englischen \"ubersetzt
+%      von W.\ Abendroth; Ostwalds Klassiker der exakten Wissenschaften,
+%      Verlag Harri Deutsch 1998.   
+%\bibitem{Neumann} Carl Neumann; {\it \"Uber die Principien der
+%         Galilei-Newtonschen Theorie}; Akademische Antrittsvorlesung,
+%         gehalten in der Aula der Universit\"at Leipzig am 3.\ Nov.\
+%         1869; Teubner (Leipzig) 1870.         
+%\bibitem{Pauli} Wolfgang Pauli; {\it Theory of Relativity}; Dover
+%      Publications, New York, 1981.      
+%\bibitem{Poincare} Jules Henri Poincar\'e; {\it Sur la dynamique de 
+%     l'\'electron}, C.R.\ Acad.\ Sci., Paris, 140 (1905) S.~1504; und 
+%      Rendiconti del Circolo Matematico di Palermo, Bd.~21 (1906) S.~129.
+%\bibitem{Reichenbach1} Hans Reichenbach; {\em Philosophie der 
+%       Raum-Zeit-Lehre}; Hans Reichenbach - Gesammelte Werke Bd.\ 2;
+%       Vieweg-Verlag, Braunschweig; 1977.
+%\bibitem{Reichenbach2} Hans Reichenbach; {\em Axiomatik der
+%       relativistischen Raum-Zeit-Lehre}; in {\em Die philosophische
+%       Bedeutung der Relativit\"atstheorie}; Hans Reichenbach - Gesammelte
+%       Werke Bd.\ 3; Vieweg-Verlag, Braunschweig, 1977. 
+%\bibitem{Rovelli} Carlo Rovelli, \textit{Quantum Gravity}; Cambridge
+%      University Press, 2007.       
+%\bibitem{Schlamminger} Schlamminger, Choi, Wagner, Gundlach,
+%         Adelberger; {\em Test of the Equivalence Principle using a
+%         rotating torsion balance}; Phys.\ Rev.\ Lett.\ {\bf 100} (2008)
+%         041101.     
+%\bibitem{Sexl} Roman U.\ Sexl, Helmuth K.\ Urbantke; {\it Relativit\"at,
+%      Gruppen, Teilchen}; Springer-Verlag, Wien, New York, 1992.
+%\bibitem{Simonyi}
+%       K\'aroly Simonyi; {\it Kulturgeschichte der Physik}; Verlag
+%       Harri Deutsch, Thun, Frankfurt am Main, 1990.
+%\bibitem{Weisberg} Weisberg, J.M., Taylor, J.H.; {\em Relativistic Binary Pulsar
+%          B1913+16: Thirty Years of Observations and Analysis}; 
+%          \verb+arXiv:astro-ph/0407149v1+; 2004. 
+%\bibitem{Thomson} James Thomson; {\it On the Law of Inertia; the
+%       Principle of Chronometry; and the Principle of Absolute Clinural
+%       Rest, and of Absolute Rotation}; Proc.\ Roy.\ Soc.\ (Edinburgh),
+%       Session 1883-84, Vol.\ XII, 568--578.       
+%\bibitem{Weizsaecker} Carl Friedrich von Weizs\"acker; {\em Der zweite
+%      Hauptsatz und der Unterschied von Vergangenheit und Zukunft};
+%      Annalen der Physik 36 (1939) 275--283.       
+%\bibitem{Zeh} Zeh, H.D.; {\em The Physical Basis of the Direction of Time},
+%      Springer-Verlag, Berlin, 1989.       
+
+%\bibitem{Einstein} Einstein, Albert; {\em ??}, .                   
+\end{thebibliography}
+
+\end{document}

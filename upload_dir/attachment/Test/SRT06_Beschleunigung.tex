@@ -1,0 +1,1163 @@
+%\documentclass[german,10pt]{book}      \input{../preambel}       \begin{document} \setcounter{chapter}{5}
+
+\setcounter{page}{1}
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{equation}{0}
+\setcounter{table}{0}
+\setcounter{footnote}{0}
+
+\section*{Beschleunigte Systeme und das Rindler-Universum}
+\noindent
+{\bf Thomas Filk; Universit\"at Freiburg}
+% Kap x
+\vspace{1cm}
+
+\label{chap_Rindler}
+
+\noindent
+Das \"Aquivalenzprinzip besagt im Wesentlichen,
+dass wir in einem lokalen Bezugssys\-tem nicht 
+zwischen einer konstanten Beschleunigung 
+und einem konstanten Gravitationsfeld 
+unterscheiden k\"onnen. Wir werden
+dieses Prinzip in den n\"achsten Abschnitten 
+ausgiebig nutzen, um den Einfluss von
+Gravitationsfeldern zu untersuchen und damit
+ersten Schritte zur Allgemeinen Relativit\"atstheorie
+zu gehen.
+
+In diesem Kapitel geht es konkret um 
+einen konstant
+beschleunigten Beobachter in der Speziellen
+Relativit\"atstheorie. Viele der Effekte
+lassen sich dann \"uber das \"Aquivalenzprinzip
+auf die Allgemeine Relativit\"atstheorie
+\"ubertragen.
+
+\section{Die konstante Beschleunigung}
+
+Schon allein die Frage,  was genau unter einer
+konstanten Beschleunigung zu verstehen ist, bedarf
+in der Speziellen Relativit\"atstheorie einer 
+eingehenderen Analyse. Wir k\"onnen an einem
+ausgedehnten K\"orper nicht einfach eine
+Kraft angreifen lassen, da kein K\"orper wirklich
+starr ist - dies w\"urde der Speziellen Relativit\"atstheorie
+widersprechen - und sich die Wirkung jeder
+angreifenden Kraft erst \"uber eine Sto\ss welle
+auf den K\"orper ausdehnt. Der Einfachheit
+halber betrachten wir daher zun\"achst nur
+einen idealisierten Massepunkt, der
+konstant beschleunigt werden soll. Doch auch
+hier ist das Konzept einer konstanten
+Beschleunigung nicht trivial.
+
+Einerseits befindet sich der 
+beschleunigte Gegenstand zu jedem Zeitpunkt in 
+einem anderen Inertialsystem, andererseits
+h\"angt die naheliegende Antwort --
+eine konstante Beschleunigung bedeutet einen pro 
+Zeiteinheit konstanten Geschwindigkeitszuwachs --
+vom Bezugssystem ab. Eine invariante Definition
+des Konzepts einer konstanten Beschleunigung,
+die wir auch in diesem Kapitel verwenden 
+werden, ist folgende: 
+{\em Im jeweiligen momentanten Inertialsystem
+des beschleunigten Massepunktes ist die 
+Beschleunigung konstant.} Damit ist gemeint,
+dass es in jedem Augenblick ein Inertialsystem
+gibt, das dieselbe Geschwindigkeit wie der
+beschleunigte Beobachter hat (nat\"urlich 
+\"andert sich dieses Inertialsystem st\"andig); 
+von diesem \glqq momentanen Inertialsystem\grqq\
+aus betrachtet erf\"ahrt der beschleunigte 
+Beobachter einen konstanten Geschwindigkeitszuwachs.
+
+In diesem Abschnitt betrachten wir die Bewegung eines 
+konstant beschleunigten Massepunktes von einem
+Inertialsystem aus, in dem
+der Massepunkt zum Zeitpunkt $t_0=0$
+ruht. Zun\"achst leiten wir die 
+Differentialgleichung f\"ur die 
+Geschwindigkeit --
+gemessen in diesem Inertialsystem -- 
+her, anschlie\ss end l\"osen wir
+diese Gleichung und bestimmten die
+Bahnkurve $x(t)$ f\"ur diesen Massepunkt.
+
+\subsection{Herleitung der Differentialgleichung
+f\"ur die Geschwindigkeit}
+
+Die Differentialgleichung f\"ur die
+Geschwindigkeit im Inertialsystem des zu
+Beginn ruhenden Teilchens lautet:
+\begin{equation}
+\label{eq_Diffkonst}
+      \frac{{\rm d}v(t)}{{\rm d}t} =
+          g \left( 1 - \frac{v(t)^2}{c^2} \right)^{3/2} \, .
+\end{equation}
+Diese Gleichung werden wir im n\"achsten
+Abschnitt l\"osen, doch zun\"achst wollen wir
+sie auf zwei verschiedene Weisen ableiten.
+
+In dem Ruhesystem des Massepunktes
+zu einem bestimmten Zeitpunkt ($t$ im
+Inertialsystem des anf\"anglichen Ruhezustands,
+$\tau$ im Bezugssytem des beschleunigten
+Massepunktes) soll
+eine Kraft wirken, die ihn in der infinitesimalen
+Eigenzeit ${\rm d}\tau$ immer auf dieselbe 
+infinitesimale Geschwindigkeit ${\rm d}v$ 
+beschleunigt:
+\begin{equation}
+          {\rm d} v = g \, {\rm d} \tau  \, ,
+\end{equation}
+wobei $g$ ein Ma\ss\ f\"ur die konstante
+Beschleunigung ist. 
+
+Im anf\"anglichen Ruhesstem, d.h.\ bez\"uglich
+der Zeit $t$, nimmt die Geschwindigkeit also
+zu einem Zeitpunkt $t$ um
+\begin{equation}
+      {\rm d} v = g \sqrt{1 - \frac{v(t)^2}{c^2} } \,  {\rm d}t
+\end{equation}
+zu. Hierbei wurde die Beziehung ${\rm d}\tau = \sqrt{1-v^2/c^2}\,{\rm dt}$
+zwischen der Eigenzeit $\tau$ und der Zeit $t$ in einem (momentanen)
+Inertialsystem verwendet. 
+
+Hat f\"ur den ruhenden Beobachter das beschleunigte
+System zum Zeitpunkt $t$ die Geschwindigkeit $v(t)$,
+so hat es zum Zeitpunkt $t+ {\rm d}t$ nach dem
+Geschwindigkeitsadditionstheorem
+(vgl.\ Gl.\ \ref{eq_vadd}) die Geschwindigkeit:
+\begin{eqnarray}
+   v(t+{\rm d}t) &=& \frac{v(t) + {\rm d}v}{1 + \frac{v(t) \, {\rm d}v}{c^2}}
+    \approx v(t) + \left( 1 - \frac{v(t)^2}{c^2} \right) {\rm d} v +
+    ... \\\
+    & = & v(t) + g \left( 1 - \frac{v(t)^2}{c^2} \right)^{3/2} {\rm d} t + ...  \, .
+\end{eqnarray}
+Daraus erhalten wir unmittelbar Gl.\ \ref{eq_Diffkonst}.
+
+Die zweite Herleitung der Differentialgleichung
+geht von der allgemeinen Beziehung f\"ur das
+Transformationsgesetz der Beschleunigung zwischen
+zwei Bezugssystemen aus. Wenn die Beschleunigung
+in dieselbe Richtung wie die Transformation erfolgt,
+gilt:
+\begin{equation}
+        a' = \gamma^3 a  \, .
+\end{equation} 
+Mit $a'=g$ und $a=\frac{{\rm d}v}{{\rm d}t}$ folgt obige
+Differentialgleichung.
+
+\subsection{Bestimmung der Bahnkurve}
+\label{sec_Konst}
+
+Wir k\"onnen die Differentialgleichung \ref{eq_Diffkonst}
+beispielsweise durch Trennung der Variablen
+l\"osen:
+\begin{equation}
+     \frac{{\rm d}v}{\left( 1 - \frac{v^2}{c^2} \right)^{3/2}} = g\, {\rm d}t \, .
+\end{equation}
+Da
+\begin{equation}
+           \frac{\rm d}{{\rm d} v} \left( \frac{v}{\sqrt{1 - \frac{v^2}{c^2}}} \right)
+           =      \frac{1}{\left( 1 - \frac{v^2}{c^2} \right)^{3/2}} 
+\end{equation}
+und wir f\"ur $t_0=0$ die Anfangsbedingung $v=0$ gesetzt
+haben, erhalten wir
+\begin{equation}
+\label{eq_Diff2}
+         \frac{v(t)}{\sqrt{1-\frac{v(t)^2}{c^2}}} = g t \, .
+\end{equation}
+Diese Gleichung k\"onnen wir nach $v(t)$ aufl\"osen und
+finden:
+\begin{equation}
+\label{eq_relGesch}
+          v(t) = \frac{gt}{\sqrt{1 + \frac{(gt)^2}{c^2}}}  \, .
+\end{equation}
+F\"ur $t \ll c/g$ nimmt $v(t)$ offensichtlich linear mit $t$
+zu, wie es in der nicht-relativistischen Mechanik f\"ur
+die konstante Beschleunigung gelten muss, f\"ur
+$t \gg c/g$ n\"ahert sich $v(t)$ der Lichtgeschwindigkeit
+$c$ als der Grenzgeschwindigkeit.\footnote{F\"ur die
+Erdbeschleunigung $g=9,81\,{\rm m/s}^2$ entspricht
+die Zeitskala $c/g\approx 354$ Tage bzw.\ fast einem Jahr.
+Ab dieser zeitlichen Gr\"o\ss enordnung lohnt sich eine 
+Weltraumreise mit konstanter Beschleunigung.}
+
+Wir k\"onnen diese Gleichung nochmals integrieren
+und erhalten die Trajektorie $x(t)$:
+\begin{eqnarray}
+     x(t) &=&  \int_0^t \frac{gt'}{\sqrt{1 + \frac{(gt')^2}{c^2}}} {\rm d}t' ~=~  
+     \left. \frac{c^2}{g} \sqrt{1+\frac{(g t')^2}{c^2}} ~ \right|_0^t  \\
+     &=&
+\label{eq_konstBeschl}
+     \frac{c^2}{g} \left( \sqrt{1+\frac{(gt)^2}{c^2}} -1 \right) \, .
+\end{eqnarray}
+Im n\"achsten Abschnitt werden wir die L\"osungen
+f\"ur $v(t)$ und $x(t)$ etwas genauer untersuchen.
+Zum Abschluss dieses Abschnitts m\"ochte ich
+noch eine kurze Anmerkung zu der relativistischen
+Bewegungsgleichung machen:
+
+Multiplizieren wir Gleichung \ref{eq_Diff2} auf beiden
+Seiten mit der Konstanten $m$ (der Ruhemasse des Teilchens)
+und bilden die
+Ableitung nach $t$, so erhalten wir:
+\begin{equation}
+      \frac{\rm d}{{\rm d}t} \left( \frac{m v(t)}{\sqrt{1-\frac{v(t)^2}{c^2}}}
+      \right)  = mg  \, ,
+\end{equation}
+was wir mit dem relativistischen Impuls 
+\begin{equation}
+         p = \frac{mv}{\sqrt{1 - \frac{v^2}{c^2}}} 
+\end{equation}
+auch in der Form
+\begin{equation}
+          \frac{{\rm d}p}{{\rm d}t} = mg = F 
+\end{equation} 
+schreiben k\"onnen. Dies ist die relativistische
+Bewegungsgleichung (auch f\"ur eine allgemeine Kraft $F$)
+und aus ihr h\"atten wir die Bewegungsgleichung
+f\"ur die konstante Beschleunigung durch Umkehrung der
+obigen Schritte sofort ableiten k\"onnen. Es mag allerdings
+zun\"achst \"uberraschen, dass auf der linken Seite
+der Gleichung die Ableitung nach $t$ und nicht nach
+der Eigenzeit $\tau$ im beschleunigten System steht.
+Es sieht daher zun\"achst so aus, als ob diese Gleichung nicht
+invariant sei. Doch die relativistische Kraft ist eigentlich
+nicht $F$ sondern $\gamma F$ und die invariante
+Gleichung lautet
+\begin{equation}
+          \frac{{\rm d}p}{{\rm d}\tau} = \gamma F  \, .
+\end{equation}
+Da
+\begin{equation} 
+      \frac{{\rm d}p}{{\rm d}\tau} =    \frac{{\rm d}p}{{\rm d}t}
+      \frac{{\rm d}t}{{\rm d}\tau} =    \frac{{\rm d}p}{{\rm d}t} \gamma \, ,
+\end{equation}
+hebt sich der $\gamma$-Faktor auf beiden Seiten weg.
+
+\subsection{Erste Analyse der konstant
+beschleunigten Bewegung}
+  
+Wir untersuchen zun\"achst die Trajektorie aus der
+Sichtweise des ruhenden Beobachters (im Ruhesystem
+der Ausgangslage des beschleunigten Systems).
+Anschlie\ss end betrachten wir die Situation aus
+der Sichtweise eines Beobachters in dem 
+konstant beschleunigten System (beispielsweise
+einer konstant beschleunigten Rakete).    
+  
+Die Trajektorie der konstanten
+relativistischen Beschleunigung im Inertialsys\-tem
+der anf\"anglichen Ruhelage beschreibt einen 
+Hyperbelast (siehe Abb.\ \ref{fig_KonstBeschl}).
+Dies sieht man leicht, wenn man Gl.\ \ref{eq_konstBeschl}  
+in folgende Form bringt:
+\begin{equation}
+   \left(  x(t) + \frac{c^2}{g} \right)^2 - \frac{(gt)^2}{c^2} = 1 \, . 
+\end{equation}
+    
+\begin{SCfigure}[50][htb]
+\setlength{\unitlength}{2.0pt}
+\begin{picture}(110,90)(20,0)
+\put(20,15){\vector(1,0){80}}
+\put(73.5,55){\vector(0,1){20}}
+\put(24,7){\line(2,1){90}}
+\put(73.5,15){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(76.5,33){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(40,15){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(80,12){\makebox(0,0){${\scriptstyle x_0=0}$}}
+\put(79,32){\makebox(0,0){$A$}}
+\put(43,10){\makebox(0,0){$-\frac{c^2}{g}$}}
+\put(100,12){\makebox(0,0){$x$}}
+\put(100,42){\makebox(0,0){$x'$}}
+\put(70,70){\makebox(0,0){$t$}}
+\put(38,19){\makebox(0,0){$O$}}
+\put(90,55){\makebox(0,0){$1$}}
+\put(70,60){\makebox(0,0){$2$}}
+\thicklines
+\qbezier(73.5,15)(73.5,47)(107.5,81)
+\put(73.2,0){\line(0,1){70}}
+\put(73.5,0){\line(0,1){70}}
+\put(25,0){\line(1,1){90}}
+\end{picture}
+\caption{\label{fig_KonstBeschl}%
+Die konstante Beschleunigung. Die
+Trajektorie eines konstant beschleunigten
+Massepunktes (1) beschreibt im Inertialsystem
+eines ruhenden Beobachters (2) eine
+Hyperbel. Bei dem Ereignis $O$ mit den
+Koordinaten $x=-\frac{c^2}{g}$ 
+und $t_0=0$ schneiden
+sich alle Gleichzeitigkeitslinien der
+Trajektorie einschlie\ss lich der Weltlinie
+des Lichtstrahls, dem sich die Trajektorie 
+asymptotisch n\"ahert.}
+\end{SCfigure}
+
+F\"ur kleine Werte von $t$ (genauer $t \ll \frac{c}{g}$)
+beschreibt die Trajektorie die zu erwartende Parabel
+der Newton'schen Mechanik. Dazu entwickeln wir
+die L\"osung nach kleinen Werten von $(tg)/c$:
+\begin{equation}
+         x(t) \approx \frac{c^2}{g} \left(  1 + \frac{1}{2}
+          \frac{g^2 t^2}{c^2} - \frac{1}{8} \frac{g^4t^4}{c^4} + ...
+          - 1 \right)  = \frac{1}{2} g t^2 + ...         
+\end{equation} 
+F\"ur sehr gro\ss e Werte von $t$ n\"ahert sich
+die Trajektorie immer mehr dem Lichtstrahl
+$x(t) = c t $. Dieses Verhalten zeigt sich auch in
+der Geschwindigkeit (Gl.\ \ref{eq_relGesch}), die
+f\"ur kleine Werte von $t$ linear zunimmt,
+$v(t) \approx gt +...$, und sich f\"ur gro\ss e
+Werte von $t$ der Lichtgeschwindigkeit n\"ahert.
+
+Interessant ist, dass sich alle 
+Gleichzeitigkeitslinien zu der Trajektorie
+in einem Ereignis $O$ bei $t=0$ und $x=-\frac{c^2}{g}$
+schneiden (in Abb.\ \ref{fig_KonstBeschl} ist die
+Gleichzeitigkeitslinie zum Ereignis $A$ angegeben).
+Dies ist gleichzeitig das Ereignis, bei dem
+ein ausgesandter Lichtstrahl die Asymptote
+der Hyperbel bildet. Der Abstand, gemessen in 
+einem augenblicklichen Inertialsystem, 
+zwischen einem Punkt auf der Hyperbelbahn 
+(z.B.\ dem Ereignis $A$)
+und diesem Ereignis $O$ bleibt konstant. 
+
+Wir betrachten nun dieselbe Situation, allerdings
+aus der Sichtweise eines
+Beobachters in dem konstant beschleunigten
+System (man denke beispielsweise an eine
+Rakete, die konstant beschleunigt wird).
+Zun\"achst m\"ussen wir die Zeit $t$
+in die Eigenzeit $\tau$ des beschleunigten Beobachters
+umrechnen. Dazu verwenden wir die
+allgemeine Beziehung
+\begin{equation} 
+   {\rm d} \tau = \sqrt{1-\frac{v(t)^2}{c^2}} \, {\rm d}t
+\end{equation}
+und nutzen nun aus, dass
+\begin{equation} 
+   \sqrt{1-\frac{v(t)^2}{c^2}} = \frac{1}{\sqrt{1+\frac{(gt)^2}{c^2}}} \, .
+\end{equation}
+Diese Beziehung folgt unmittelbar aus den
+beiden Gleichungen \ref{eq_Diff2} und \ref{eq_relGesch}.
+Wir erhalten somit
+\begin{equation}
+   \tau = \int_0^t \frac{1}{\sqrt{1+\frac{(gt')^2}{c^2}}} {\rm d}t'
+    = \frac{c}{g} \sinh^{-1} \frac{gt}{c} 
+\end{equation}
+oder, aufgel\"ost nach $t$:
+\begin{equation}
+      t = \frac{c}{g} \sinh \frac{g\tau}{c} \, .
+\end{equation}
+Zwischen der verstrichenen Zeit $t$ eines Beobachters
+im anf\"anglichen Ruhesystem (beispielsweise auf
+der Erde) und der Zeit $\tau$ f\"ur einen Beobachter in dem konstant
+beschleunigten System besteht also f\"ur gro\ss e
+Zeiten eine exponentielle Beziehung. F\"ur die
+relativ zum anf\"anglichen Ruhesystem zur\"uckgelegte
+Strecke als Funktion der Eigenzeit einer Person in
+ dem beschleunigten System erhalten wir
+ \begin{equation}
+       x(\tau) = \frac{c^2}{g} \left( \cosh \frac{g \tau}{c} - 1 \right) \, .
+ \end{equation}
+Diese Beziehung scheint zun\"achst den
+M\"oglichkeiten eines bemannten Raumflugs
+sehr entgegen zu kommen: F\"ur die Reise zum 
+rund 2 Millionen Lichtjahre entfernten Andro\-meda-Nebel
+(der n\"achsten gro\ss en Galaxie au\ss erhalb der
+Milchstra\ss e) w\"urden bei einer konstanten
+Beschleunigung von $g=9,81\,{\rm m/s}^2$ (der 
+Erdbeschleunigung) f\"ur einen Astronauten
+in seinem Bezugssystem nur rund 28 Jahre
+vergehen.\footnote{Auf der Internetseite
+von John Baez \cite{Baez}
+findet man eine sehr sch\"one Beschreibung der
+seltsamen Effekte einer konstant beschleunigten
+relativistischen Rakete.} 
+
+Dies widerspricht nicht der Relativit\"atstheorie:
+Die 2 Millionen Lichtjahre erfahren f\"ur den
+Beobachter in der Rakete eine (Lorentz-)Kontraktion auf
+weniger als 28 Lichtjahre. Das bedeutet aber, dieser
+Beobachter \glqq sieht\grqq\ den Andromeda-Nebel
+mit \"Uberlichtge\-schwindigkeit auf sich zukommen.
+
+Einen \"ahnlich erstaunlichen Effekt sieht
+der Beobachter auch, wenn er zur\"uck\-blickt.
+Das Ereignis $O$ bei $(t=0,x=-\frac{c^2}{g})$ bleibt
+f\"ur immer auf seiner Gleichzeitigkeitslinie.
+Es wird zu einem Augenblick, der nie vergeht.
+Auch der Abstand zwischen ihm
+und diesem Ereignis bleibt in seinem Bezugssystem 
+immer konstant. Allerdings sollte nochmals
+betont werden, dass sich diese Effekte auf ein
+augenblickliches globales Inertialsystem 
+beziehen, und dies l\"asst sich f\"ur einen
+beschleunigten Beobachter nicht
+operational realisieren.
+
+In Abschnitt \ref{sec_Rindler} kommen wir
+nochmals auf den konstant beschleunigten
+Beobachter zu sprechen und beschreiben
+dort, was der Beobachter wirklich \glqq sieht\grqq.
+
+
+\section{Zwei konstant beschleunigte Systeme}
+
+Die bekannte Schriftensammlung 
+\glqq Speakable and unspeakable in quantum mechanics\grqq\ 
+von John Bell (\cite{Bell}, Kapitel 9) enth\"alt auch einen Artikel,
+der nichts mit Quantentheorie zu tun hat. Er tr\"agt
+den Titel \glqq How to teach special relativity\grqq, und
+hier pl\"adiert Bell daf\"ur, Studierende der Physik auch
+mit der \glqq alten\grqq\ Version der Speziellen Relativit\"atstheorie
+vertraut zu machen, wie sie von Larmor, Lorentz und
+Poincar\'{e} vertreten wurde und wie sie in
+Kapitel \hyperref[chap_Philosophie-SRT]{Philosophischer Hintergrund der SRT} angedeutet wurde. 
+Er beschreibt
+dort eine einfache Situation aus der Speziellen Relativit\"atstheorie,
+die seiner Ansicht nach in der \glqq alten\grqq\ Sichtweise
+leichter nachvollzogen werden kann als in der Form, in der die
+Relativit\"atstheorie heute meist gelehrt wird.
+
+\begin{SCfigure}[50][htb]
+\setlength{\unitlength}{2.0pt}
+\begin{picture}(125,100)(0,0)
+\put(0,15){\vector(1,0){100}}
+\put(53.5,55){\vector(0,1){20}}
+\put(53.5,15.2){\line(1,0){25}}
+\put(53.5,15){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(79,15){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(59,12){\makebox(0,0){${\scriptstyle x_1=0}$}}
+\put(84,12){\makebox(0,0){${\scriptstyle x_2=L}$}}
+\put(67,19){\makebox(0,0){$L$}}
+\put(100,12){\makebox(0,0){$x$}}
+\put(50,70){\makebox(0,0){$t$}}
+\put(87,76){\makebox(0,0){$1$}}
+\put(113,76){\makebox(0,0){$2$}}
+\multiput(5,0)(8,8){11}{\line(1,1){5}}
+\multiput(30.5,0)(8,8){11}{\line(1,1){5}}
+\thicklines
+\qbezier(53.5,15)(53.5,47)(87.5,81)
+\qbezier(79,15)(79,47)(113,81)
+\put(53.5,0){\line(0,1){70}}
+\put(53.5,15.2){\line(1,0){25}}
+\end{picture}
+\caption{\label{fig_Bell}%
+Zwei Raketen (1 und 2) erfahren dieselbe konstante
+Beschleunigung. Sie seien durch ein Seil miteinander
+verbunden, dessen L\"ange gerade dem
+anf\"anglichen Abstand $L$ der Raketen entspricht.
+Wird das Seil rei\ss en oder nicht?}
+\end{SCfigure}
+
+Zwei gleichartige Raketen befinden sich zun\"achst in Ruhe 
+und haben einen Abstand $L$ (in diesem Ruhesystem haben
+sie die Koordinaten $x_1=0$ und $x_2=L$).
+Sie seien durch ein Seil der L\"ange $L$ miteinander
+verbunden. Ab dem Zeitpunkt $t=0$ erfahren beide Raketen 
+dieselbe konstante Beschleunigung $g$ in Richtung
+ihres Abstandsvektors (also die $x$-Richtung). Ihre 
+Weltlinien sind somit Hyperbeln, deren Abstand
+im anf\"anglichen Ruhesystem (mit den Koordinaten
+$(t,x)$) konstant bleibt (vgl.\ Abb.\ \ref{fig_Bell}).  
+
+Bell stellt nun die Frage, ob das Seil zwischen den
+beiden Raketen
+irgendwann rei\ss t. Ein solches Ereignis ist eine
+physikalische Tatsache und h\"angt daher nicht
+vom Bezugssystem ab. Anscheinend hat er diese
+Frage in den 70er Jahren mehreren Physikern am
+CERN gestellt und sehr unterschiedliche Antworten
+erhalten (viele scheinen behauptet zu haben,
+das Seil rei\ss e nicht). Tats\"achlich rei\ss t das Seil.
+Wir betrachten nun diese
+Situation aus allen drei Bezugssystemen -- dem
+Inertialsystem, in dem die Raketen anf\"anglich
+in Ruhe sind, sowie den beiden Bezugssystemen
+der Raketen. 
+
+\begin{SCfigure}[50][htb]
+\setlength{\unitlength}{2.0pt}
+\begin{picture}(105,90)(20,0)
+\put(20,15){\vector(1,0){80}}
+\put(53.5,55){\vector(0,1){20}}
+\put(63,49.5){\line(1,0){25}}
+%
+\put(63,49.5){\vector(1,2){10}}
+\put(88.6,49.5){\vector(1,2){10}}
+\put(43,39.5){\line(2,1){40}}
+\put(68.6,39.5){\line(2,1){40}}
+%
+\put(63,49.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(53.5,15){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(79,15){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(88.6,49.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(60,12){\makebox(0,0){${\scriptstyle x_1=0}$}}
+\put(85,12){\makebox(0,0){${\scriptstyle x_2=L}$}}
+\put(64,46){\makebox(0,0){$A$}}
+\put(90,46){\makebox(0,0){$B$}}
+\put(100,12){\makebox(0,0){$x$}}
+\put(50,70){\makebox(0,0){$t$}}
+\put(87,76){\makebox(0,0){$1$}}
+\put(113,76){\makebox(0,0){$2$}}
+\multiput(21,16)(8,8){9}{\line(1,1){5}}
+\multiput(46.5,16)(8,8){9}{\line(1,1){5}}
+\thicklines
+\qbezier(53.5,15)(53.5,47)(87.5,81)
+\qbezier(79,15)(79,47)(113,81)
+\put(53.5,0){\line(0,1){70}}
+\end{picture}
+\caption{\label{fig_Bell2}%
+Die beiden Ereignisse $A$ und $B$ sind
+im ruhenden Inertialsystem gleichzeitig. 
+Auch die Eigenzeiten der beiden
+Raketen sind bei diesen Ereignissen gleich.
+Der r\"aumliche Abstand der Ereignisse ist $L$.}
+\end{SCfigure}
+
+Wir beginnen unsere Betrachtungen im 
+ruhenden Inertialsystem mit den Koordinaten
+$(t,x)$. Zwei in diesem System gleichzeitige
+Positionen der Raketen (z.B.\ $A$ und $B$) haben
+immer noch den r\"aumlichen Abstand $L$ 
+(vgl.\ Abb.\ \ref{fig_Bell2}). Trotzdem bewegt
+sich das Seil mit einer bestimmten 
+Geschwindigkeit relativ zu dem Ruhesystem
+(angedeutet durch die Vektorpfeile in
+Abb.\ \ref{fig_Bell2}).
+Damit sind die Ereignisse $A$ und $B$ 
+f\"ur das Seil auch nicht gleichzeitig
+(auch die Gleichzeitigkeitslinien zu den
+beiden Ereignissen sind in der Abbildung
+angedeutet). Da sich das Seil bewegt,
+kommt es zu einer Lorentz-Kontraktion und
+das Seil wird rei\ss en.
+
+Bell bemerkt, dass damals viele Physiker in der
+Lorentz-Kontraktion nur eine scheinbare
+Verk\"urzung von Abst\"anden sahen, weil
+man eine L\"ange aus verschiedenen Systemen mit
+unterschiedlichen Gleichzeitigkeitsvorstellungen
+ausmisst. Doch das Rei\ss en des Seils ist
+eine Tatsache, kein \glqq Schein\-effekt\grqq. 
+Hier, so argumentiert er, gibt die Lorentz'sche
+Vorstellung einer tats\"achlichen Verk\"urzung
+ein besseres Bild: Die Reichweite der
+elektromagnetischen Kr\"afte, die das Seil
+zusammenhalten, wird (\"ahnlich wie die
+Solitonen bei unserer linearen, gekoppelten
+Kette) k\"urzer, doch die Atome m\"ussen,
+da sie zwischen den Raketen eingespannt
+sind, ihren Abstand behalten. Irgendwann
+wird die Reichweite der Kr\"afte so klein, dass
+die Atome nicht mehr zusammengehalten werden
+k\"onnen und das Seil rei\ss t. 
+
+\begin{figure}[htb]
+\setlength{\unitlength}{2.0pt}
+\begin{picture}(110,90)(-8,0)
+\put(0,15){\vector(1,0){80}}
+\put(33.5,55){\vector(0,1){20}}
+\put(-4,13){\line(2,1){90}}
+\put(33.5,15){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(36.5,33){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(59,15){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(68.4,49){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(0,15){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(40,12){\makebox(0,0){${\scriptstyle x_1=0}$}}
+\put(65,12){\makebox(0,0){${\scriptstyle x_2=L}$}}
+\put(-3,20){\makebox(0,0){${\scriptstyle -\frac{c^2}{g}}$}}
+\put(39,32){\makebox(0,0){$A$}}
+\put(70,46){\makebox(0,0){$B$}}
+\put(80,12){\makebox(0,0){$x$}}
+\put(30,70){\makebox(0,0){$t$}}
+\put(67,76){\makebox(0,0){$1$}}
+\put(93,76){\makebox(0,0){$2$}}
+\multiput(1,16)(8,8){9}{\line(1,1){5}}
+\multiput(26.5,16)(8,8){9}{\line(1,1){5}}
+\thicklines
+\qbezier(33.5,15)(33.5,47)(67.5,81)
+\qbezier(59,15)(59,47)(93,81)
+\put(33.5,0){\line(0,1){70}}
+\end{picture}
+%
+\begin{picture}(110,90)(-8,0)
+\put(0,15){\vector(1,0){80}}
+\put(33.5,55){\vector(0,1){20}}
+\put(15.3,7){\line(5,4){70}}
+\put(33.5,15){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(59,15){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(68.6,49.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(34,21.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(25,15){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(34.4,24){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(40,12){\makebox(0,0){${\scriptstyle x_1=0}$}}
+\put(65,12){\makebox(0,0){${\scriptstyle x_2=L}$}}
+\put(20,20){\makebox(0,0){${\scriptstyle L-\frac{c^2}{g}}$}}
+\put(36.5,19){\makebox(0,0){$C$}}
+\put(70,46){\makebox(0,0){$D$}}
+\put(30,27){\makebox(0,0){$E$}}
+\put(80,12){\makebox(0,0){$x$}}
+\put(30,70){\makebox(0,0){$t$}}
+\put(67,76){\makebox(0,0){$1$}}
+\put(93,76){\makebox(0,0){$2$}}
+\multiput(1,16)(8,8){9}{\line(1,1){5}}
+\multiput(26.5,16)(8,8){9}{\line(1,1){5}}
+\thicklines
+\qbezier(33.5,15)(33.5,47)(67.5,81)
+\qbezier(59,15)(59,47)(93,81)
+\put(33.5,0){\line(0,1){70}}
+\end{picture}
+\caption{\label{fig_Bell3}%
+Die Gleichzeitigkeitslinien f\"ur die beiden Raketen.
+(Links) Ereignis $A$ befindet sich auf der Weltlinie 
+von Rakete 1. In dem augenblicklichen Inertialsystem
+ist Ereignis $B$ auf der Weltline von Rakete 2 
+gleichzeitig zu $A$. Doch bei $B$ hat Rakete 2 bereits eine 
+gr\"o\ss ere Geschwindigkeit als Rakete 1 bei Ereignis
+$A$, sodass der Abstand von Rakete 2 aus Sicht
+von Rakete 1 zunimmt. (Rechts) $D$ ist ein Ereignis
+auf der Weltlinie von Rakete 2 und in dem augenblicklichen
+Inertialsystem ist Ereignis $C$ auf der Weltlinie von
+Rakete 1 gleichzeitig zu $D$. Doch nicht nur ist die Geschwindigkeit
+von Rakete 1 bei $C$ sehr viel langsamer als die von
+Rakete 2 bei $D$, sodass der Abstand zwischen den
+beiden Raketen aus der Sicht von Rakete 2 zunimmt,
+sondern Rakete 2 sieht Rakete 1 auch nie zu
+dem Ereignis $E$ gelangen. F\"ur Rakete 2 endet
+die Weltlinie von Rakete 1 an diesem Punkt.}
+\end{figure}
+
+Wir betrachten nun die Situation aus
+dem Bezugssystem von Rakete 1, also der
+hinteren Rakete bez\"uglich der
+Beschleunigungsrichtung (Abb.\ \ref{fig_Bell3}
+(links)). Zu einem beliebigen Ereignis $A$ auf
+der Weltlinie dieser Rakete kann der Beobachter
+in der Rakete zumindest mathematisch seine augenblickliche 
+Gleichzeitigkeitslinie konstruieren (er kann sie nicht im Sinne
+einer Einstein-Synchronisation operational realisieren): Das sind alle
+Ereignisse zu Vektoren, die bez\"uglich der
+Minkowski-Metrik senkrecht auf dem augenblicklichen
+4-Vektor der Geschwindigkeit bzw.\ der
+augenblicklichen Tangente an die Weltlinie stehen. 
+Danach ist Ereignis $B$ auf der Weltlinie von
+Rakete 2 gleichzeitig zu Ereignis $A$ (f\"ur 
+Rakete 1). Doch bei $B$ bewegt sich Rakete
+2 bereits wesentlich schneller als Rakete 1 bei $A$.
+Das bedeutet, f\"ur Rakete 1 nimmt der Abstand
+zu Rakete 2 st\"andig zu. Somit wird das Seil auch
+irgendwann rei\ss en.
+
+Abschlie\ss end betrachten wir dieselbe Situation
+noch aus dem Bezugssystem von Rakete 2
+(Abb.\ \ref{fig_Bell3} (rechts)).
+$D$ sei ein beliebiges Ereignis auf dieser
+Weltlinie, und \"ahnlich wie zuvor konstruiert der
+Beobachter in dieser Rakete die Gleichzeitigkeitslinie
+zu diesem Ereignis. Er findet, dass in diesem
+augenblicklichen Inertialsystem Ereignis $C$
+auf der Weltlinie von Rakete 1 gleichzeitig zu $D$
+ist. Doch bei $C$ bewegt sich Rakete 1 wesentlich
+langsamer als Rakete 2 bei $D$, daher nimmt 
+auch in seinem Bezugssystem der Abstand zu
+Rakete 1 zu und das Seil wird rei\ss en.
+
+Wir beobachten hier aber noch etwas Weiteres:
+Alle Gleichzeitigkeitslinien zur Weltlinie von Rakete
+2 liegen (bei $x$-Koordinaten gr\"o\ss er als
+$L-\frac{c^2}{g}$) unterhalb des Lichtstrahls,
+der zur Asymptote der Bahnkurve von 2 wird. 
+Das bedeutet, f\"ur Rakete 2 wird Rakete 1
+niemals weiter als bis zu dem Ereignis $E$
+auf diesem Lichtstrahl
+gelangen, Rakete 1 wird dieses Ereignis {\em aus
+der Sichtweise von Rakete 2} noch nicht einmal 
+erreichen. 
+
+Im n\"achsten Abschnitt gehen wir auf diesen
+letztgenannten Punkt nochmals ein. Jedenfalls
+sind sich alle drei Beobachter darin einig,
+dass das Seil nach den physikalischen Gesetzen
+in ihrem Bezugssystem rei\ss en muss.
+Man sollte aber in jedem Fall ber\"ucksichtigen,
+dass die Konstruktion einer \glqq augenblicklichen
+Gleichzeitigkeitsfl\"ache\grqq\ bei beschleunigten
+Weltlinien rein mathematische ist und sich 
+physikalisch nicht realisieren l\"asst. Bei einem
+\glqq ewigen\grqq\ Inertialsystem ist eine
+solche Konstruktion zumindest im Prinzip
+operational m\"oglich. 
+
+\section{Das Rindler-Universum}
+\label{sec_Rindler}
+
+Wir haben gesehen, wie sich im Rahmen der
+Speziellen Relativit\"atstheorie bereits einige
+sehr interessante Effekte in der Physik eines konstant 
+beschleunigten Beobachters untersuchen lassen. 
+Dabei haben wir allerdings von globalen 
+Gleichzeitigkeitslinien Gebrauch gemacht,
+die f\"ur einen Beobachter entlang einer
+Weltlinie nicht unbedingt von Relevanz sind.
+Beispielsweise kann bei beschleunigten
+Systemen die Folge solcher Gleichzeitigkeitslinien,
+selbst wenn sie entlang der Weltlinie in kausaler 
+Reihenfolge konstruiert werden, Ereignisse in 
+gro\ss em Abstand (hier definiert 
+$d=\frac{c^2}{g}$ die Skala) 
+in kausal r\"uckl\"aufiger Reihenfolge 
+\"uberstreichen (man betrachte beispielsweise
+Ereignisse, die in Abb.\ \ref{fig_KonstBeschl}
+links von Ereignis $O$ liegen).
+Aus diesem Grunde 
+verwendet man auch in der Allgemeinen
+Relativit\"atstheorie solche globalen
+Gleichzeitigkeitslinien -- in $2+1$ Raumzeit-Dimensionen
+sind es nat\"urlich Fl\"achen und in $3+1$
+Raumzeit-Dimensionen Volumina -- nur 
+selten.
+
+In diesem Abschnitt soll nochmals der 
+konstant beschleunigter Beobachter betrachtet
+werden, allerdings mit den Methoden, die
+wir sp\"ater bei verallgemeinerten Geometrien 
+in der Allgemeinen Relativit\"atstheorie 
+verwenden werden: (1) durch Angabe der 
+kausalen Beziehungen und (2) durch 
+die Untersuchung von Signalen, die zwischen
+Beobachtern auf verschiedenen Weltlinien
+ausgetauscht werden k\"onnen.
+Die Raumzeit eines solchen konstant 
+beschleunigten Beobachters bezeichnet 
+man auch als Rindler-Universum\index{Rindler-Universum}.
+Aufgrund des \"Aquivalenzprinzips lassen sich
+viele der beobachteten Effekte qualitativ (und in manchen 
+Einzelheiten sogar quantitativ) auf einen Beobachter 
+in der N\"ahe eines schwarzen Loches \"ubertragen. 
+Von besonderer Bedeutung ist in diesem Zusammenhang 
+das Konzept eines \glqq Horizonts\grqq.
+
+\subsection{Kausale Beziehungen}
+
+\begin{SCfigure}[50][ht]
+\begin{picture}(270,250)(40,0)
+\put(160,20){\vector(0,1){200}}
+\put(60,120){\vector(1,0){240}}
+\thicklines
+\put(195,20){\line(0,1){200}}
+\put(195.3,20){\line(0,1){200}}
+\put(60,20){\line(1,1){200}}
+\put(60,220){\line(1,-1){200}}
+\qbezier(270,20)(170,120)(270,220)
+\thinlines
+\put(155,220){\makebox(0,0){$t$}}
+\put(300,115){\makebox(0,0){$x$}}
+\put(250,130){\makebox(0,0){{\Large I}}}
+\put(170,30){\makebox(0,0){{\Large IV}}}
+\put(60,130){\makebox(0,0){{\Large III}}}
+\put(175,200){\makebox(0,0){{\Large II}}}
+\put(160,128){\makebox(0,0){$O$}}
+\put(275,20){\makebox(0,0){$A$}}
+\put(190,20){\makebox(0,0){$B$}}
+\end{picture}
+\caption{\label{figrindler}%
+Rindler-Univer\-sum. Dargestellt sind die Weltlinien eines konstant
+beschleunigten Beobachters $A$ und eines inertialen Beobachters $B$.
+Die Hyperbelbahn von Beobachter $A$ definiert die 
+angegebenen Lichtstrahlen sowie das Ereignis $O$.
+Die Quadranten I---IV stehen jeweils in einer besonderen
+kausalen Beziehung zu Beobachter $A$.}
+\end{SCfigure}
+
+Wie wir in Abschnitt \ref{sec_Konst} gezeigt haben, l\"asst sich im 
+Raumzeit-Diagramm eines inertialen Beobachters $B$ die 
+Weltlinie eines konstant beschleunigten Beobachters $A$ als Hyperbel 
+darstellen. In diesem Abschnitt betrachten wir eine
+Weltline zu einem System, das seit \glqq ewigen Zeiten\grqq\
+einer konstanten Beschleunigung unterlag und auch f\"ur
+ewige Zeiten dieser Beschleunigung unterliegen wird 
+(vgl.\ Abb.~\ref{figrindler}). Das System kommt also aus dem
+Unendlichen auf den inertialen Beobachter $B$ zu und wird
+dabei konstant abgebremst bis es schlie\ss lich f\"ur einen
+Augenblick relativ zu dem inertialen Beobachter in Ruhe ist und
+sich nun mit derselben Beschleunigung wieder von dem
+inertialen Beobachter entfernt. 
+
+Der Minkowski-Raum des inertialen Beobachters $B$ 
+l\"asst sich durch die kausale Relationen der Ereignisse 
+zu dem beschleunigten Beobachter $A$ in vier Klassen 
+einteilen:
+\begin{itemize}
+\item[I]
+Dieser Bereich enth\"alt alle Ereignisse, die irgendwann 
+einmal in der kausalen Zukunft des Beoachters $A$ lagen 
+und gleichzeitig irgendwann einmal in der kausalen 
+Vergangenheit von $A$ sein werden. Jedes der Ereignisse
+konnte von $A$ einmal beeinflusst werden und kann
+umgekehrt einmal einen Einfluss auf $A$ haben.
+Dieser Bereich entspricht also im \"ublichen Sinne der 
+kausalen Raumzeit f\"ur Beobachter $A$.
+\item[II]
+Dieser Bereich enth\"alt alle Ereignisse, die in der kausalen Zukunft
+von Ereignissen auf der Weltlinie von $A$ liegen, aber nicht 
+in der kausalen Vergangenheit irgendeines Ereignisses auf der Weltlinie 
+von $A$. Der Beobachter $A$ kann diesen Bereich also nicht 
+\glqq einsehen\grqq\ bzw.\ er kann von den Ereignissen in
+diesem Bereich nie
+kausal beeinflusst werden, er kann aber umgekehrt die 
+Ereignisse in diesem Bereich kausal beeinflussen.
+\item[III]
+Die Ereignisse in diesem Bereich haben keinen kausalen Zusammenhang --
+weder in der Zukunft noch in der Vergangenheit --
+zu irgendeinem Ereignis auf der Weltlinie von Beobachter $A$. 
+\item[IV]
+Alle Ereignisse in diesem Bereich liegen irgendwann einmal in der kausalen
+Vergangenheit von $A$, waren aber niemals in seiner kausalen Zukunft.
+$A$ kann von diesen Ereignissen also kausal beeinflusst
+werden, hat aber umgekehrt keinen Einfluss auf sie.
+\end{itemize}
+Hinsichtlich der Kausalbeziehungen ist f\"ur den
+beschleunigten Beobachter $A$ die Ereignismenge in 
+Bereich I so, wie f\"ur einen inertialen Beobachter 
+die Ereignismenge der
+Minkowski-Raum-Zeit: Zu jedem Ereignis gibt es 
+auf seiner Weltlinie
+einen Zeitpunkt in der Vergangenheit, 
+{\em vor} dem dieses Ereignis in seiner kausalen Zukunft
+lag, es kann also durch diesen Beobachter
+beeinflusst werden. Ebenso gibt es zu jedem Ereignis einen
+Zeitpunkt, {\em ab} dem der Beobachter in der kausalen Zukunft des
+Ereignisses liegt, d.h.\ dieses Ereignis wahrnehmen bzw.\ von 
+ihm Kenntnis erlangen kann.
+
+Alle anderen Bereiche haben f\"ur einen inertialen Beobachter in
+einer Minkowski-Raum-Zeit kein Gegenst\"uck. Die Ereignisse in den
+Bereichen III und IV liegen beispielsweise niemals in der kausalen
+Zukunft von $A$. Der beschleunigte Beobachter hat somit auch keine
+M\"oglichkeit, diese Ereignisse jemals zu beeinflussen. 
+Allerdings kann er die Ereignisse aus Bereich IV
+wahrnehmen bzw.\ kausal von ihnen beeinflusst werden, da
+er sich irgendwann in der kausalen Zukunft von diesen 
+Ereignissen befinden wird.
+Der Bereich III geh\"ort zu einem Teil des Universums, der mit $A$
+\"uberhaupt keine kausale Verbindung hat, weder in der Zukunft noch
+in der Vergangenheit. In gewisser Hinsicht existiert dieser Bereich f\"ur
+den beschleunigten Beobachter $A$ gar nicht. Die Ereignisse von Bereich II
+k\"onnen zwar von $A$ beeinflusst werden, allerdings kann $A$ diesen 
+Bereich ebenfalls nie einsehen.
+
+\subsection{Was \glqq sehen\grqq\ die Beobachter voneinander?}
+
+\begin{SCfigure}[50][ht]
+\begin{picture}(240,260)(20,0)
+\put(110,20){\vector(0,1){220}}
+\put(50,120){\vector(1,0){200}}
+\thicklines
+\put(145,20){\line(0,1){230}}
+\put(145.3,20){\line(0,1){230}}
+\put(50,60){\line(1,1){160}}
+\put(50,180){\line(1,-1){160}}
+\qbezier(220,18)(120,120)(220,222)
+%
+\put(225,226.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(209,210){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(197.3,195.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(189,182.7){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(183,171.3){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(178.3,161.1){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(175,151.8){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(172.6,143.3){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(171,135.2){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(170.2,127.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(170,120){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(170.2,112.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(171,104.8){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(172.6,96.7){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(175,88.2){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(178.3,78.9){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(183,68.7){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(189,57.3){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(197.3,44.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(209,30){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(225,13.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+%
+\thinlines
+\put(225,226.5){\line(-1,1){20}}
+\put(209,210){\line(-1,1){40}}
+\put(197.3,195.5){\line(-1,1){52.3}}
+\put(189,182.7){\line(-1,1){44}}
+\put(183,171.3){\line(-1,1){38}}
+\put(178.3,161.1){\line(-1,1){33.3}}
+\put(175,151.8){\line(-1,1){30}}
+\put(172.6,143.3){\line(-1,1){27.6}}
+\put(171,135.2){\line(-1,1){26}}
+\put(170.2,127.5){\line(-1,1){25.2}}
+\put(170,120){\line(-1,1){25}}
+\put(170.2,112.5){\line(-1,1){25.2}}
+\put(171,104.8){\line(-1,1){26}}
+\put(172.6,96.7){\line(-1,1){27.6}}
+\put(175,88.2){\line(-1,1){30}}
+\put(178.3,78.9){\line(-1,1){33.3}}
+\put(183,68.7){\line(-1,1){38}}
+\put(189,57.3){\line(-1,1){44}}
+\put(197.3,44.5){\line(-1,1){52.3}}
+\put(209,30){\line(-1,1){64}}
+\put(225,13.5){\line(-1,1){80}}
+%
+\put(145,91.5){\line(1,-1){90}}
+\put(145,89.5){\line(1,-1){90}}
+\put(145,88){\line(1,-1){90}}
+\put(145,87){\line(1,-1){90}}
+\put(145,86){\line(1,-1){90}}
+\put(145,85.5){\line(1,-1){90}}
+%
+\put(105,240){\makebox(0,0){$t$}}
+\put(250,115){\makebox(0,0){$x$}}
+\put(200,130){\makebox(0,0){{\Large I}}}
+\put(120,30){\makebox(0,0){{\Large IV}}}
+\put(50,130){\makebox(0,0){{\Large III}}}
+\put(125,200){\makebox(0,0){{\Large II}}}
+\put(110,128){\makebox(0,0){$O$}}
+\put(225,25){\makebox(0,0){$A$}}
+\put(139,20){\makebox(0,0){$B$}}
+\end{picture}
+\caption{\label{fig_Rindler1}%
+Was sieht der inertiale Beobachter $B$ von dem
+beschleunigten Beobachter $A$? In regelm\"a\ss igen
+Eigenzeitabst\"anden (Ereignisse auf der Weltlinie
+von $A$, gekennzeichnet durch 
+\glqq {\footnotesize $\bullet$}\grqq) 
+sendet der beschleunigte Beobachter
+Signale aus. $B$ empf\"angt diese Signale in
+seinem System in unterschiedlichen
+Zeitabst\"anden.}
+\end{SCfigure}
+
+Wir \"uberlegen uns zun\"achst, was der inertiale Beobachter
+$B$ von dem beschleunigten Beobachter $A$ \glqq sieht\grqq.
+In Abbildung \ref{fig_Rindler1} sind beide Weltlinien 
+dargestellt, zust\"atzlich sind in gleichm\"a\ss igen 
+Eigenzeitabst\"anden von $A$ Ereignisse markiert,
+bei denen $A$ ein Lichtsignal zu Beobachter $B$
+aussendet.
+
+Solange $B$ sich in Bereich IV befindet, hat er 
+keinerlei Kenntnisse von $A$. Erst beim \"Uberscheiten
+der Grenze zwischen Bereich IV zu Bereich I 
+\glqq erf\"ahrt\grqq\ Beobachter $B$ von $A$. 
+Das geschieht allerdings gleich sehr heftig: Innerhalb einer
+beliebig kurzen Zeit nimmt Beobachter $B$ eine unendliche Zeitspanne
+in der Vergangenheit von Beobachter $A$ wahr. 
+
+Hinsichtlich seiner Wahrnehmung sieht Beobachter $B$
+den beschleunigten Beobachter $A$ in einer beliebig
+kurzen Zeit eine unendliche Strecke auf ihn zukommen.
+Diese scheinbare Wahrnehmung widerspricht nat\"urlich
+nicht der Aussage, dass die Lichtegeschwindigkeit  
+eine Grenzgeschwindigkeit darstellt. Da 
+Beobachter $B$ in beliebig kurzer Zeit eine unendliche
+Vergangenheit von $A$ wahrnimmt, sind die eintreffenden
+Lichtwellen auch unendlich blau-verschoben. 
+In gewisser Hinsicht ist dieses Ereignis f\"ur Beobachter $B$ 
+wie eine Singularit\"at.
+
+Solange sich der inertiale Beobachter $B$ im Bereich I befindet, 
+kann er mit dem beschleunigten Beobachter $A$ Information austauschen.
+F\"ur Beobachter $B$ \"andert sich auch nicht viel,
+wenn er in den Bereich II tritt. F\"ur ihn hat die Grenze
+zwischen Bereich I und II keinerlei Bedeutung und
+er hat an dieser Grenze auch keine besondere
+Wahrnehmung. Er kann den beschleunigten
+Beobachter $A$ bis in eine beliebige Zukunft
+weiter beobachten. Allerdings werden die 
+Zeitabst\"ande
+zwischen Signalen, die $A$ in gleichen Eigenzeitabst\"anden
+aussendet, f\"ur $B$ immer gr\"o\ss er. Der intertiale 
+Beobachter $B$ sieht also den beschleunigten Beobachter
+$A$ immer st\"arker rot-verschoben. Diese Rotverschiebung
+entspricht im Wesentlichen dem Doppler-Effekt eines 
+sich zunehmend rasch entfernenden Senders.
+
+\begin{SCfigure}[50][ht]
+\begin{picture}(240,260)(35,0)
+\put(110,20){\vector(0,1){220}}
+\put(50,120){\vector(1,0){200}}
+\thicklines
+\put(145,10){\line(0,1){230}}
+\put(145.3,10){\line(0,1){230}}
+\put(50,60){\line(1,1){190}}
+\put(50,180){\line(1,-1){160}}
+\qbezier(220,18)(120,120)(220,222)
+%
+\put(225,226.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(209,210){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(197.3,195.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(189,182.7){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(183,171.3){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(178.3,161.1){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(175,151.8){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(172.6,143.3){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(171,135.2){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(170.2,127.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(170,120){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(170.2,112.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(171,104.8){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(172.6,96.7){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(175,88.2){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(178.3,78.9){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(183,68.7){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(189,57.3){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(197.3,44.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(209,30){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(225,13.5){\makebox(0,0){{\footnotesize $\bullet$}}}
+%
+\put(145,155){\makebox(0,0){{\footnotesize $\bullet$}}}
+%
+\thinlines
+\put(190,10){\line(1,1){30}}
+\put(182.5,10){\line(1,1){40}}
+\put(175,10){\line(1,1){50}}
+\put(167.5,10){\line(1,1){60}}
+\put(160,10){\line(1,1){70}}
+\put(152.5,10){\line(1,1){80}}
+\put(145,10){\line(1,1){90}}
+\put(145,17.5){\line(1,1){90}}
+\put(145,25){\line(1,1){90}}
+\put(145,32.5){\line(1,1){90}}
+\put(145,40){\line(1,1){90}}
+\put(145,47.5){\line(1,1){90}}
+\put(145,55){\line(1,1){90}}
+\put(145,62.5){\line(1,1){90}}
+\put(145,70){\line(1,1){90}}
+\put(145,77.5){\line(1,1){90}}
+\put(145,85){\line(1,1){90}}
+\put(145,92.5){\line(1,1){90}}
+\put(145,100){\line(1,1){90}}
+\put(145,107.5){\line(1,1){90}}
+\put(145,115){\line(1,1){90}}
+\put(145,122.5){\line(1,1){90}}
+\put(145,130){\line(1,1){90}}
+\put(145,137.5){\line(1,1){90}}
+\put(145,145){\line(1,1){90}}
+\put(145,152.5){\line(1,1){90}}
+\put(145,160){\line(1,1){80}}
+\put(145,167.5){\line(1,1){70}}
+\put(145,175){\line(1,1){60}}
+\put(145,182.5){\line(1,1){50}}
+%
+\put(105,240){\makebox(0,0){$t$}}
+\put(250,115){\makebox(0,0){$x$}}
+\put(200,130){\makebox(0,0){{\Large I}}}
+\put(120,30){\makebox(0,0){{\Large IV}}}
+\put(50,130){\makebox(0,0){{\Large III}}}
+\put(125,200){\makebox(0,0){{\Large II}}}
+\put(110,128){\makebox(0,0){$O$}}
+\put(137,157){\makebox(0,0){$E$}}
+\put(225,25){\makebox(0,0){$A$}}
+\put(139,20){\makebox(0,0){$B$}}
+\end{picture}
+\caption{\label{fig_Rindler2}%
+Was sieht der beschleunigte Beobachter $A$ von dem
+inertialen Beobachter $B$? Nun sendet $B$
+in regelm\"a\ss igen Eigenzeitabst\"anden 
+Signale aus, die $A$ empf\"angt. Wegen der
+unterschiedlichen relativen Geschwindigkeit
+sowie zus\"atzlich den unterschiedlichen Skalen
+f\"ur die Eigenzeiten von $A$ relativ zu $B$ 
+(Ereignisse in gleichen Eigenzeitabst\"anden
+wurden auf der Weltlinie
+von $A$ wieder gekennzeichnet) 
+empf\"angt auch $A$ die Signale in 
+unterschiedlichen Zeitabst\"anden.}
+\end{SCfigure}
+
+Nun untersuchen wir, was der beschleunigte
+Beobachter $A$ von dem inertialen Beobachter
+$B$ sieht. In Abb.\ \ref{fig_Rindler2} sind wieder
+die beiden Weltlinien dargestellt, diesmal sendet
+aber $B$ in regelm\"a\ss igen Abst\"anden
+Lichtisgnale aus. Auf der Weltlinie von $A$
+sind in \"aquidistanten Eigenzeitabst\"anden
+Ereignispunkte eingetragen -- der Eigenzeitabstand
+entspricht dem zeitlichen Abstand, mit dem $B$
+die Lichtsignale abschickt.
+
+In beliebig ferner Vergangenheit kann $A$ den
+Beobachter $B$ schon wahrnehmen, allerdings
+treffen die Lichtsignale bez\"uglich seiner
+Eigenzeit sehr viel rascher bei ihm ein, sodass
+er Beobachter $B$ blau-verschoben wahrnimmt,
+wiederum wie bei einem Doppler-Effekt.
+Je weiter man in die Vergangenheit von $A$
+zur\"uckgeht, umso blauverschobener sieht
+$A$ den intertialen Beobachter $B$. 
+Sobald $B$ auch in den Bereich $I$ eingedrungen
+ist, k\"onnen $A$ und $B$ Signale austauschen
+und sich gegenseitig verst\"andigen. 
+
+Wenn die beiden Weltlinien von $A$ und $B$
+f\"ur einen Augenblick parallel sind, sieht $A$
+die Signale von $B$ mit derselben Frequenz,
+wie $B$ sie aussendet. Ab dann empf\"angt
+$A$ die Signale seltener, d.h.\ $A$ sieht
+$B$ rotverschoben.
+
+Offenbar kann $A$ keinerlei Signale mehr
+aus dem Bereich II empfangen. Das
+bedeutet, kein Signal, das $B$ nach dem
+Ereignis $E$ verschickt, wird $A$ jemals
+erreichen. F\"ur $A$ endet die Weltlinie
+von $B$ an dem Ereignis $E$. Der Lichtstrahl,
+der die Bereiche I und II trennt, ist f\"ur
+Beobachter $A$ ein Horizont, hinter den
+er nicht blicken kann. Man bezeichnet diesen
+Horizont auch als {\em Ereignishorizont}.
+
+Der Beobachter $A$ sieht den Beobachter $B$ aber nicht einfach hinter
+dem Horizont verschwinden. Im Gegenteil: Er kann f\"ur alle Zukunft den
+Beobachter $B$ wahrnehmen, wie er sich immer mehr dem Horizont 
+bzw.\ dem Ereignis $E$ n\"ahert.
+Die Abst\"ande, mit denen $A$ aber von $B$ die in gleichen 
+Zeitabst\"anden ausgesandten 
+Signale erh\"alt, werden immer gr\"o\ss er.
+$A$ nimmt die Zeit im $B$-System immer langsamer wahr.
+Damit ist eine Rotverschiebung der Strahlung
+verbunden. $B$ verschwindet
+also nicht hinter dem Horizont, sondern $B$ verschwindet an der 
+Oberfl\"ache des Horizonts im langwelligen Bereich des Spektrums. 
+
+Die Grenzen zwischen den Bereichen I und IV einerseits und den
+Bereichen I und II andererseits verhalten sich also in gewisser
+Hinsicht symmetrisch: $A$ kann die Ereignisse in Bereich IV wahrnehmen,
+nicht aber die Ereignisse in Bereich II. Umgekehrt hat $B$ keine
+Kenntnis von $A$, solange er sich in Bereich IV befindet, er nimmt
+das Schicksal von $A$ aber durchaus wahr, wenn er sich in Bereich II
+befindet.
+
+Der Bereich III geh\"ort zu einem Teil des Universums, der mit $A$
+\"uberhaupt keine kausale Verbindung hat, weder in der Zukunft noch
+in der Vergangenheit. In gewisser Hinsicht existiert dieser Bereich f\"ur
+den beschleunigten Beobachter $A$ gar nicht. Trotzdem ist dieser Bereich 
+f\"ur den inertialen Beobachter $B$ ein ganz normaler Teil seines
+Universums. Da andererseits $B$ von diesem Bereich auch erst erf\"ahrt,
+nachdem er den Horizont zwischen I und II durchschritten hat, kann er 
+$A$ keine Mitteilung davon machen.
+
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Literaturangaben}
+\bibitem{Baez} Baez, John; \url{math.ucr.edu/home/baez}, und speziell f\"ur Physik 
+                 \url{math.ucr.edu/home/baez/physics}
+\bibitem{Bell} John Bell;  {\em Speakable and Unspeakable in 
+        Quantum Physics}, 2.\ edition, Cambridge University Press (2004).       
+\end{thebibliography}
+
+%\end{document}

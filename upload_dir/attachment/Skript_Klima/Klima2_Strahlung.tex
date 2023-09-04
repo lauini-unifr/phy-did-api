@@ -1,0 +1,235 @@
+\documentclass[german,10pt]{book}      \input{preambel}         \begin{document}  \setcounter{chapter}{0}
+
+
+\chapter{Physik des Klimas II\\Strahlungsgesetze}
+% Kap x
+\label{chap_Klima2}
+
+In die Klimamodelle der Erde gehen verschiedene Strahlungsgesetze ein: das Stefan-Boltzmann-Gesetz,
+das Wien'sche Verschiebungsgesetz, sowie das Planck'sche Strahlungsgesetz, aus dem sich die
+ersten beiden Gesetze ableiten lassen. Man findet jedoch unterschiedliche Versionen des
+Planck'schen Strahlungsgesetzes: Zum Einen wird das Gesetz gelegentlich als Funktion der
+Strahlungsfrequenz oder auch als Funktion der Wellenl\"ange ausgedr\"uckt, was zu unterschiedlichen
+Vorfaktoren f\"uhrt. Zum Anderen sollte man aber auch zwischen dem Strahlungsgesetz in Form
+einer Energiedichte in einem Hohlk\"orper und in Form einer Flussdichte, die von einem Schwarzen
+K\"orper abgestrahlt wird, unterscheiden.
+
+Der erste Abschnitt beschreibt diese Unterschiede. Im zweiten Abschnitt wird das Planck'sche
+Strahlungsgesetz zun\"achst in Form einer Energiedichte f\"ur einen Hohlk\"orper abgeleitet und dann
+auf die anderen Formen verallgemeinert. Schlie\ss lich werden das Stefan-Boltzmann-Gesetz und
+das Wien'sche Verschiebungsgesetz abgeleitet.
+
+\section{Verschiedene Strahlungsgesetze - \"Uberblick}
+
+\section{Herleitung der Planck'schen Formel}
+\label{sec_Planck}
+
+Bestimmt werden soll die spektrale
+Verteilungsfunktion 
+\begin{equation}
+     u(T,\nu) = \frac{1}{V} 
+         \frac{{\rm d} E(T,\nu)}{{\rm d}  \nu} \, ,
+\end{equation}     
+wobei $E(T,\nu)$ die Gesamtenergie der 
+elektromagnetischen Strahlung des Systems
+ist, die bei einer absoluten Temperatur $T$ auf 
+Frequenzen kleiner oder gleich
+$\nu$ entf\"allt. $V$ ist das Volumen des
+Systems, man ist also an einer Energiedichte
+interessiert. Man kann die Gleichung auch in folgender Form 
+schreiben, die eine andere Sichtweise erlaubt:
+\begin{equation}
+     \frac{1}{V} {\rm d} E(T,\nu) = u(T,\nu)  {\rm d}  \nu   
+\end{equation}     
+${\rm d} E(T,\nu)$ ist der Anteil der Energie, der bei  einer Temperatur $T$
+von den Moden im Bereich $[\nu, \nu + {\rm d} \nu]$ herr\"uhrt.
+
+Die Verteilungsfunktion $u(T,\nu)$ setzt sich aus
+zwei Anteilen zusammen:
+\begin{itemize}
+\item[-]
+der spektralen Dichte $N(\nu)$ der thermodynamischen Freiheitsgrade
+bei $\nu$ bzw.\ der Anzahl $N(\nu){\rm d} \nu$
+der thermodynamischen
+Freiheitsgrade in einem Frequenzbereich zwischen $\nu$
+und $\nu + {\rm d}  \nu$. Etwas genauer definiert man diese Gr\"o\ss e, indem man
+zun\"achst die kumulative Spektralverteilung
+\begin{equation}
+      g(\nu) = \sum_{\nu_i\leq \nu} 1
+\end{equation}
+betrachtet. $g(\nu)$ ist also gleich der Anzahl der Moden, deren Frequenz $\nu_i$ kleiner oder
+gleich $\nu$ ist. Die spektrale Dichte ist dann definiert als die Ableitung dieser Funktion:
+\begin{equation}
+      N(\nu) = \frac{{\rm d} g(\nu)}{{\rm d} \nu}  \, .
+\end{equation}
+Da es sich bei $g(\nu)$ um eine Stufenfunktion handelt, ist diese Ableitung streng genommen
+im distributiven Sinne zu verstehen. Diese Dichte ist unabh\"angig von der Temperatur und ergibt sich aus 
+einem einfachen Abz\"ahlen der m\"oglichen Schwingungsmoden:
+\begin{equation}
+\label{eq_PlanckDichte}
+      \frac{N(\nu)}{V} = \frac{4 \pi \nu^2}{c^3} 
+\end{equation} 
+Diese Beziehung war schon zu Plancks Zeiten bekannt
+und unstrittig.
+
+Zur Herleitung dieser Formel: Zun\"achst l\"osen wir ein einfaches mathematisches
+Problem: Wie viele nat\"urliche Zahlentripel $(n_1,n_2,n_3)$ gibt es, sodass 
+$\sqrt{n_1^2+n_2^2+n_3^2}\leq R$? Wir sind dabei nicht an der genauen Anzahl $N(R)$ dieser
+Zahlentripel interessiert, sondern nur an der f\"uhrenden Ordnung f\"ur gro\ss e Werte von $R$. 
+Wir denken uns das Tripel $(n_1,n_2,n_3)$ als Koordinaten von Punkten im
+$\mathbb{R}^3$ und stellen zun\"achst die Frage: Wie viele Punkte im $\mathbb{R}^3$
+gibt es, die ganzzahlige Koordinaten haben und innerhalb (oder auf dem Rand) einer
+Kugel vom Radius $R$ liegen. Wir k\"onnen und um jeden dieser Punkte einen W\"urfel
+der Kantenl\"ange 1 - und damit vom Volumen 1 - legen, und diese W\"urfel
+\"uberdecken den Raum vollst\"andig ohne zu \"uberlappen. Die Kugel vom Radius $R$
+hat ein Volumen von $V=\frac{4\pi}{3}R^3$, und damit ist dies n\"aherungsweise auch gleich der
+Anzahl an Punkten mit ganzzahligen Koordinaten, die innerhalb der Kugel liegen.
+Die Korrekturen beziehen sich auf Fl\"achen und sind somit von der Ordnung $O(1/R)$
+relativ zum f\"uhrenden Term. 
+
+Da wir nur an nat\"urlichen Zahlen interessiert sind, d\"urfen wir nur einen der acht
+3-dim.\ Quadranten betrachten (f\"ur den die Vorzeichen aller drei Koordinaten nicht
+negativ sind). Somit ist die gesuchte f\"uhrende Ordnung $N(R)=\frac{\pi}{6}R^3$.
+
+In einem n\"achsten Schritt bestimmen wir die Anzahl der Zust\"ande $N(E)$, f\"ur die die
+Energie eines einzelnen Photons in einem Kasten kleiner als ein vorgegebener Wert $E$ ist. 
+
+
+Wir verwenden nun das obige Ergebnis und bestimmen die Anzahl der elektromagnetischen
+Zust\"ande mit einer Energie $\epsilon \leq E$ in einem kubischen Kasten der Kantenl\"ange $L$
+und damit dem Volumen $V=L^3$. Die m\"oglichen Wellenl\"angen in jede der drei Richtungen 
+sind durch $\lambda= 2 L/n$ gegeben: In jede Richtung
+muss ein Vielfaches einer halben Wellenl\"ange passen.
+F\"ur die m\"oglichen Zust\"ande im $\vec{k}$-Raum ergibt
+sich damit $\vec{k}=\frac{\pi}{L}(n_1,n_2,n_3)$ mit
+beliebigen nat\"urlichen Zahlen $n_i$. Jedem
+Zustand im $\vec{k}$-Raum kann man daher
+ein Volumen $|\Delta k|^3=\pi^3/V$ zuschreiben. 
+Eine Kugel vom Radius $k=|\vec{k}|$
+hat ein Volumen von $\frac{4\pi}{3} k^3$
+und enth\"alt somit 
+\begin{equation}
+   \frac{4\pi k^3}{3 |\Delta k|^3} =  V\frac{4}{3\pi^2}k^3 
+\end{equation}    
+Zust\"ande.
+Da aber nur der Teil der Kugelschale
+von Interesse ist, der sich im positiven Quadranten
+befindet (die $n_i$ sind nie negativ), m\"ussen
+wir noch durch 8 dividieren; andererseits kann
+jeder Zustand wegen der beiden Polarisationsm\"oglichkeiten
+zweimal auftreten, sodass die Anzahl der Zust\"ande 
+durch $\frac{V}{3\pi^2}k^3$ gegeben ist.
+Mit $|\vec{k}|= \frac{2 \pi}{\lambda}=\frac{2\pi \nu}{c}$
+ergeben sich schlie\ss lich
+\begin{equation}
+        N(\nu)  = V
+         \frac{4 \pi \nu^2}{c^3}{\rm d}  \nu
+\end{equation}
+Zust\"ande in diesem $\nu$-Bereich.
+
+\item[-]
+der mittleren Energie $\langle \epsilon (\nu, T)\rangle$, die 
+ein gegebener Freiheitsgrad mit der Frequenz $\nu$ bei
+einer Temperatur $T$ hat. Das Ergebnis ist dann
+\begin{equation}
+        u(T,\nu) = \frac{N(\nu)}{V} \langle \epsilon (\nu, T)\rangle \, , 
+\end{equation}
+also das Produkt aus der Anzahl der Zust\"ande zu einer gegebenen
+Frequenz $\nu$ und der mittleren Energie eines Zustands mit
+dieser Frequenz. 
+\end{itemize}
+
+F\"ur eine quantenmechanische Herleitung
+der gesuchten Strahlungsdichte \"andert sich
+an der Abz\"ahlung der m\"oglichen Moden
+nichts. Jede Mode $\nu$ kann mit $n$
+Photonen mit einer Gesamtenergie von $E_n(\nu)=n h \nu$
+besetzt sein, und die Wahrscheinlichkeit einer
+solchen Besetzung
+ist proportional zum 
+Boltzmann-Faktor\index{Boltzmann-Faktor} 
+$\exp(-E_n(\nu)/k_{\rm B}T)=\exp(-n h \nu/k_{\rm B}T)$. Als
+Mittelwert f\"ur die Energie zu einer solchen
+Mode erhalten wir somit:
+\begin{equation}
+\label{eq_PlanckSummen}
+  \langle \epsilon (\nu, T)\rangle = \frac{1}{Z} \sum_{n=0}^\infty
+    (n h \nu) \exp \left( - \frac{n h \nu}{k_{\rm B}T}
+     \right)  ~~~~ {\rm mit} ~~
+     Z= \sum_{n=0}^\infty \exp\left( - \frac{n h \nu}{k_{\rm B}T}
+     \right) 
+\end{equation}
+Bei den auftretenden Summen handelt es sich um
+geometrische Reihen und deren Ableitungen,
+die sich geschlossen ausf\"uhren lassen:
+\begin{equation}
+   \langle \epsilon(\nu,T)\rangle = \frac{ h \nu}{\exp \left(
+    \frac{ h \nu}{k_{\rm B} T} \right)  - 1} 
+\end{equation}
+Als Ergebnis dieser \"Uberlegungen erhalten wir
+die Planck'sche Formel:\index{Planck'sche Strahlungsformel}
+\begin{equation}
+\label{eq_PlanckFormel}
+      u(\nu,T) = \frac{4\pi}{c^3} \frac{h \nu^3}{\exp \left(
+    \frac{\hbar \nu}{k_{\rm B} T} \right)  - 1}
+\end{equation}
+
+Oft findet man die Strahlungsformeln als
+Funktion der Frequenz $\nu$ oder der Wellenl\"ange $\lambda$. Bei der Umrechnung
+muss man jedoch darauf achten, dass es sich bei $u(\nu,T)$ um
+eine {\em Dichte} handelt, d.h., auch das Integrationsma\ss\
+${\rm d} \nu$ muss transformiert werden.
+
+\subsection{Anmerkungen}
+
+\begin{anmerkungen}
+\item
+\label{Anm-1}%
+Der Grund f\"ur den Faktor 2 zwischen der Schwankung im Abstand und
+der Schwankung in der Intensit\"at der Sonneneinstrahlung liegt in dem $1/r^2$-Gesetz
+der Intensit\"at als Funktion des Abstands:
+\begin{equation}
+        \frac{1}{(r\pm \Delta r)^2} \approx \frac{1}{r^2} \mp 2 \frac{\Delta r}{r} \, .
+\end{equation}
+
+\item
+\label{Anm-2}
+Das Stefan-Boltzmann-Gesetz gibt die Intensit\"at $L$ einer Schwarzk\"orper-Strahlung
+als Funktion der absoluten Temperatur $T$ des K\"orpers an. 
+Intensit\"at ist dabei wieder Energie pro Zeit und Fl\"ache, d.h.,
+es handelt sich um die in einer Zeiteinheit (Sekunde) von einer Fl\"ache (Quadratmeter)
+abgestrahlte Energie eines idealen schwarzen K\"orpers, integriert \"uber alle Frequenzen bzw.\
+Wellenl\"angen. Das Gesetz lautet:
+\begin{equation}
+        L = \sigma T^4  \hspace{1.5cm} \sigma \equiv \mbox{Stefan-Boltzmann-Konstante.}
+\end{equation}
+Die Stefan-Boltzmann-Konstante l\"asst sich exakt aus dem Planck'schen Strahlungsgesetz
+bestimmen:
+\begin{equation}
+        \sigma = \frac{2 \pi^5 k_{\rm B}^4}{15 h^3 c^2} = 5,670\,374\,42... \cdot 10^{-8} \frac{\rm W}{\rm m^2 K^4} \, .
+\end{equation}
+\end{anmerkungen}
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Filk} Thomas Filk; \textit{Quantenmechanik (nicht nur) f\"ur Lehramtsstudierende};
+         Springer-Verlag, 2019.  
+\bibitem{Solar} Solarkonstante; Uni Kassel,\\
+       {\small \verb+https://www.greenrhinoenergy.com/solar/radiation/images/solar-constant.jpg+}         
+\bibitem{NASA_World} NASA Image and Video Library, 
+       {\small \verb+https://images.nasa.gov/details/as17-148-22727+}
+\bibitem{NASA_facts} NASA Earth Fact Sheet; 
+      {\small \verb+ https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html+}   
+\bibitem{Petty} Grant W.\ Petty; \textit{A First Course in Atmospheric Radiation}, 2nd Ed.; Sundog
+         Publishing, Madison, Wisconsin; 2006.       
+\bibitem{Wikipedia_Faint} Wikipedia \glqq Faint young Sun paradox\grqq\ 
+       {\small \verb+https://en.wikipedia.org/wiki/Faint_young_Sun_paradox+}.                 
+\bibitem{Wikipedia_Milankovic} Wikipedia \glqq Milankovic-Zyklen\grqq.   
+       {\small \verb+https://de.wikipedia.org/wiki/Milankovi+}{\small\tt \'c}{\small \verb+-Zyklen+}.        
+\bibitem{Wikipedia_Solarkonstante} Wikipedia \glqq Solarkonstante\grqq.   
+       {\small \verb+https://de.wikipedia.org/wiki/Solarkonstante+}.               
+\end{thebibliography}
+
+\end{document}
+

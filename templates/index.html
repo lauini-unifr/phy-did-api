@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/path/to/mathquill.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/path/to/mathquill.js"></script>
+    <script>
+    var MQ = MathQuill.getInterface(2);
+    </script>
+    <title>Math Equation Evaluator</title>
+</head>
+<body>
+    <h1>Math Equation Evaluator</h1>
+    <p><span id="answer">x=</span></p>
+
+    <p>Solve <span id="problem">ax^2 + bx + c = 0</span>.</p>
+
+    <form action="/evaluate" method="post">
+        <textarea name="equation" rows="5" cols="50" placeholder="Enter math equations, one per line"></textarea>
+        <br>
+        <button type="submit">Evaluate</button>
+    </form>
+    {% if equations %}
+        <h2>Solution:</h2>
+        {% for equation, result in equations.items() %}
+            <p>{{ equation }} = {{ result }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
+
+<script>
+  var answerSpan = document.getElementById('answer');
+  var answerMathField = MQ.MathField(answerSpan, {
+    handlers: {
+      edit: function() {
+        var enteredMath = answerMathField.latex(); // Get entered math in LaTeX format
+        checkAnswer(enteredMath);
+      }
+    }
+  });
+  var problemSpan = document.getElementById('problem');
+  MQ.StaticMath(problemSpan);
+</script>
+
