@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="/path/to/mathquill.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="/path/to/mathquill.js"></script>
-    <script>
-    var MQ = MathQuill.getInterface(2);
-    </script>
-    <title>Math Equation Evaluator</title>
+    <title>GET Request Button</title>
 </head>
 <body>
-    <h1>Math Equation Evaluator</h1>
-    <p><span id="answer">x=</span></p>
+    <button id="getRequestButton">Send GET Request</button>
+    <a href="localhost:5000/download/1"><button>Send GET Request</button></a>
+    
 
-    <p>Solve <span id="problem">ax^2 + bx + c = 0</span>.</p>
-
-    <form action="/evaluate" method="post">
-        <textarea name="equation" rows="5" cols="50" placeholder="Enter math equations, one per line"></textarea>
-        <br>
-        <button type="submit">Evaluate</button>
-    </form>
-    {% if equations %}
-        <h2>Solution:</h2>
-        {% for equation, result in equations.items() %}
-            <p>{{ equation }} = {{ result }}</p>
-        {% endfor %}
-    {% endif %}
+   
 </body>
 </html>
 
 <script>
-  var answerSpan = document.getElementById('answer');
-  var answerMathField = MQ.MathField(answerSpan, {
-    handlers: {
-      edit: function() {
-        var enteredMath = answerMathField.latex(); // Get entered math in LaTeX format
-        checkAnswer(enteredMath);
-      }
-    }
-  });
-  var problemSpan = document.getElementById('problem');
-  MQ.StaticMath(problemSpan);
+  // Function to handle the GET request when the button is clicked
+  function sendGetRequest() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://localhost:5000/download/1");
+    
+    xhr.onreadystatechange = () => {
+        // In local files, status is 0 upon success in Mozilla Firefox
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            const status = xhr.status;
+            if (status === 0 || (status >= 200 && status < 400)) {
+                // Create a new Blob object using the response data of the onload object
+                var blob = new Blob([xhr.response], {type: 'image/pdf'});
+                //Create a link element, hide it, direct it towards the blob, and then 'click' it programatically
+                let a = document.createElement("a");
+                a.style = "display: none";
+                document.body.appendChild(a);
+                //Create a DOMString representing the blob and point the link element towards it
+                let url = window.URL.createObjectURL(blob);
+                a.href = url;
+                a.download = 'myFile.pdf';
+                //programatically click the link to trigger the download
+                a.click();
+                //release the reference to the file by revoking the Object URL
+                window.URL.revokeObjectURL(url);
+            } else {
+            // Oh no! There has been an error with the request!
+            }
+        }
+    };
+
+    xhr.send();
+  }
+
+  // Attach the sendGetRequest function to the button's click event
+  const getRequestButton = document.getElementById('getRequestButton');
+  getRequestButton.addEventListener('click', sendGetRequest);
 </script>
 

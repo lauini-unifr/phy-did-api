@@ -101,14 +101,6 @@ def upload_file():
     
     abort(401, message="No file in request.")
 
-
-def compile(path):
-    feedback = LC.compile_document(tex_engine = 'lualatex',
-                        bib_engine = 'biber', # Value is not necessary
-                        no_bib = True, path=path, # Provide the full path to the file!
-                        folder_name = '.aux_files')
-    print(feedback)
-
 def copy_files(src, trg):
     files=os.listdir(src)
  
@@ -127,31 +119,40 @@ def download_files(item_id):
     if item.file_name:
         tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
 
-        src = "C:/Users/Nils/Desktop/Scripts/Uni Freiburg/RestApiFlask/upload_dir/attachment/Skript_Klima"
-        src_pic = "C:/Users/Nils/Desktop/Scripts/Uni Freiburg/RestApiFlask/upload_dir/attachment/Bilder"
+        if item.topic.name == "Klimaphysik":
+            topic_folder_name = "Skript_Klima"
+        elif item.topic.name == "Klassische Systeme":
+            topic_folder_name = "Skript_klass"
+        elif item.topic.name == "Quantenphysik":
+            topic_folder_name = "Skript_QM"
+        elif item.topic.name == "Relativitätstheorie":
+            topic_folder_name = "Skript_SRT"    
+
+        src = "upload_dir/attachment/" + topic_folder_name + "/" + item.name
+        src_pic = "upload_dir/attachment/Bilder"
         os.makedirs(tmpdirname + '\Bilder')
         copy_files(src, tmpdirname)
+        copy_files("upload_dir/attachment/Preambel", tmpdirname)
         copy_files(src_pic, tmpdirname + '\Bilder')
 
+        if item.name in ["Klass_03_Zeitgleichung",
+                         "Klass_05_Uhren",
+                         "Klass_08_Nachthimmel",
+                         "Klass_10_Landkarten",
+                         "QM_01_QuBit",
+                         "SRT_03_Kette"]:
+            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '\Bilder') 
+
+        output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
         output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
 
         path = Path(tmpdirname + "/file.pdf").resolve()
 
         
-
-        #compile(path)
-
-        #try:
-        #with open(path, 'r') as file:
-        #     tex= file.read()
-
-        # doc = Document('basic')
-        # doc.append(NoEscape(tex))
-        # doc.generate_pdf(clean_tex=False)
         #except:
         # abort(500, message="An error occurred while compiling the pdf.")
 
-        return send_file(path, as_attachment=True)
+        return send_file(path, as_attachment=True, mimetype="application/pdf")
 
     
     abort(401, message="No file in request.")

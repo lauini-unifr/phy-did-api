@@ -1,0 +1,647 @@
+\documentclass[german,10pt]{book}      \input{preambel}         \begin{document}  \setcounter{chapter}{9}
+
+
+\chapter{Interferometer}
+% Kap x
+\label{chap_Interferometer}
+
+Interferometer spielen \"uberall in der Optik eine wichtige Rolle. Sie sind eines
+der zentralen Instrumente der Experimentalphysik f\"ur optische und quantenoptische Versuche. Verwendet man
+Laserlicht, zeigen Interferometer unter anderem die Wellennatur des Lichts. Mit Einzelphotonen
+lassen sich jedoch vollkommen neuartige und interessante Effekte erzielen. 
+
+Zwei der bekanntesten Interferometer sind das Mach-Zehnder-Interferometer und
+das Michelson-Interferometer. Beide beruhen auf einem \"ahnlichen Prinzip: Ein Strahl
+wird mit einem Strahlteiler geteilt, \"uber ein Spiegelsystem auf einen zweiten Strahlteiler gelenkt
+und dort wieder zusammengebracht, wobei dann die Interferenzmuster entstehen. Beim Michelson-Interferometer
+gibt es nur einen Strahlteiler, der sowohl die Aufspaltung als auch die sp\"atere
+Zusammenf\"uhrung \"ubernimmt, d.h.\ das Spiegelsystem reflektiert die aufgeteilten 
+Strahlen wieder zur\"uck auf den ersten Strahlteiler, hinter dem es dann zur Interferenz kommen kann. Beim 
+Mach-Zehnder-Interferometer lenken die Spiegel die beiden Strahlen auf einen
+zweiten Strahlteiler, hinter dem dann eventuell Interferenzen beobachtet werden k\"onnen.  
+
+
+Beide Interferometer lassen sich sowohl mit gew\"ohnlichen Strahlteilern als auch
+mit polarisationsabh\"angigen Strahlteilern betreiben. Allerdings ist dies beim Michelson-Interferometer
+etwas problematischer, da dort die vorgegebene Orientierung die Strahlen in die Lichtquelle
+lenken w\"urde, wohingegen man einen Ausgang m\"ochte, der senkrecht dazu steht. 
+Das Michelson-Interferometer wird auch beim Nachweis von Gravitationswellen verwendet. 
+
+Viele Experimente lassen sich am Mach-Zehnder-Interferometer leichter beschreiben,
+aber am Michelson-Interferometer leichter durchf\"uhren. Daher sollen hier beide Interferometer
+besprochen werden. In gewissen Hinsicht sind diese Interferometer Erweiterungen des
+Doppelspaltexperiments f\"ur koh\"arentes Licht: Der Strahl bzw.\ der Zustand eines einzelnen Photons
+wird aufgeteilt und die beiden Anteile breiten sich entlang unterschiedlicher Wege aus bevor
+sie wieder zusammengef\"uhrt und zur Interferenz gebracht werden. Allerdings kann man an
+diesen Interferometern die beiden Teile eines Strahls bzw.\ eines Photonzustands im Prinzip beliebig weit
+auseinander bringen, was den Effekt erh\"oht. Au\ss erdem kann man optische
+Ger\"ate oder Hinternisse in den Weg einer der Teilstrahlen bringen. In der Schule werden viele
+der (Gedanken-)Experimente mit Mach-Zender- bzw.\ Michelson-Interferometern unter dem
+Gesichtspunkt \glqq Ist Welcher-Weg-Information bekannt?\grqq\ behandelt, d.h.\ die Aufgabe
+der Sch\"uler*innen besteht darin zu entscheiden, ob man je nach experimentellem Aufbau
+im Prinzip die Information dar\"uber, welchen Weg ein Photon genommen hat, gewinnen kann
+oder nicht. In Abh\"angigkeit davon kann man dann entscheiden, ob ein Interferenzmuster beobachtet werden
+kann oder nicht.  
+
+Beide Interferometer werden f\"ur den Fall normaler (d.h., nicht polarisationsabh\"angiger) 
+Strahlteilern beschrieben. Ein anderes Kapitel widmet sich dem Mach-Zehnder-Interferometer 
+mit polarisationsabh\"angigen Strahlteilern. Wir beginnen allerdings mit einer
+kurzen Beschreibung der mathematischen Darstellung eines Strahlteilers.
+
+\section{Strahlteiler}
+
+Strahlteiler sind die wesentlichen Elemente eines Mach-Zehnder- bzw.\ Michelson-Interferometers.
+Es gibt polarisationsabh\"angige Strahlteiler, bei denen ein einfallender Lichtstrahl in zwei
+Teilstrahlen mit zueinander orthogonalen Polarisationszust\"anden aufgespalten wird. H\"aufiger
+verwendet man jedoch nicht polarisationsabh\"angige Strahlteiler, d.h., der einfallende Strahl wird koh\"arent
+in zwei gleichartig polarisierte Teilstrahlen aufgeteilt. 
+
+Physikalisch besteht ein Strahlteiler meist aus einer beschichteten Grenzfl\"ache. Die Beschichtung ist
+gerade so gew\"ahlt, dass die H\"alfte der Lichtintensit\"at durchgelassen und die andere H\"alfte
+abgelenkt wird. Es gibt auch Strahlteiler mit einer asymmetrischen Aufspaltung, wir beschr\"anken uns
+hier aber auf die Halbe-Halbe-Strahlteiler.
+
+Wir k\"onnen die Wirkung eines Strahlteilers 
+durch eine unit\"are Matrix beschreiben (unit\"ar, weil zumindest in der Theorie keine Intensit\"at 
+verloren geht, d.h.,\ alle Photonen, die in den Strahlteiler eindringen, kommen auch wieder heraus). 
+Diese Matrix ergibt sich auch direkt aus der \"Uberlegung, wie zwei einfallende Strahlen am
+Strahlteiler aufgeteilt werden. Diese beiden Vorschriften sind:
+\begin{equation}
+\label{eq_ST1}
+       |  1 \rangle_{\rm i}  \longrightarrow  \frac{1}{\sqrt{2}} \big( |1 \rangle_{\rm f} + {\rm i} | 2 \rangle_{\rm f} \big)
+       \hspace{2cm}
+    |  2 \rangle_{\rm i}  \longrightarrow  \frac{1}{\sqrt{2}} \big( | 2 \rangle_{\rm f} + {\rm i} | 1 \rangle_{\rm f} \big)       
+\end{equation}
+Hierbei wurde die in der Streutheorie \"ubliche Konvention verwendet, die einlaufenden (`initial')
+Zust\"ande durch i und die auslaufenden (`final') Zust\"ande durch f zu kennzeichnen. Die
+(Streu-)Matrix zum Strahlteiler ist dann durch $S_{ij}={}_{\rm f}\langle j | i \rangle_{\rm i}$ gegeben, also
+durch die Wahrscheinlichkeitsamplituden zu dem \"Ubergang von einem Anfangzustand $i$  
+zu einem Ausgangszustand $j$ (siehe auch Abb.\ \ref{fig_ST}). Die Faktoren i in Gl.\ \ref{eq_ST1}
+beschreiben eine relative Phasenverschiebung um $90^\circ$. Diese Phasenverschiebung tritt immer
+auf, wenn eine Reflektion an einer einer Grenzschicht stattfindet, bei der der Winkel zwischen
+einfallender und ausfallender Welle gerade $90^\circ$ betr\"agt. Der Faktor $1/\sqrt{2}$ ergibt sich 
+daraus, dass das Quadrat dieses Faktors nach der Born'schen
+Regel die Wahrscheinlichkeit angibt, das Photon in dem jeweiligen Sektor zu messen (hier
+jeweils $1/2$). F\"ur
+Laserlicht bedeutet er einfach, dass jeder Teilstrahl die H\"alfte der Eingangsintensit\"at besitzt. 
+
+\begin{SCfigure}[30][htb]
+\begin{picture}(100,100)(-5,0)
+\put(10,50){\line(1,0){80}}
+\put(50,50){\line(0,1){40}}
+\put(30,50){\vector(1,0){0}}
+\put(80,50){\vector(1,0){0}}
+\put(50,80){\vector(0,1){0}}
+\put(90,58){\makebox(0,0){$|1\rangle_{\rm f}$}}
+\put(42,90){\makebox(0,0){$|2\rangle_{\rm f}$}}
+\put(10,58){\makebox(0,0){$|1\rangle_{\rm i}$}}
+\thicklines
+\put(29,29){\line(1,1){40}}
+\put(31,31){\line(1,1){40}}
+\end{picture}
+%
+\begin{picture}(110,100)(0,0)
+\put(50,50){\line(1,0){40}}
+\put(50,10){\line(0,1){80}}
+\put(50,30){\vector(0,1){0}}
+\put(80,50){\vector(1,0){0}}
+\put(50,80){\vector(0,1){0}}
+\put(90,58){\makebox(0,0){$|1\rangle_{\rm f}$}}
+\put(42,90){\makebox(0,0){$|2\rangle_{\rm f}$}}
+\put(58,15){\makebox(0,0){$|2\rangle_{\rm i}$}}
+\thicklines
+\put(29,29){\line(1,1){40}}
+\put(31,31){\line(1,1){40}}
+\end{picture}
+\caption{\label{fig_ST}%
+Die beiden Strahleng\"ange in einem Strahlteiler in Abh\"angigkeit vom
+Anfangszustand. Ordnet man jeder Reflektion
+einen Faktor i zu, erh\"alt man die Matrix in Gl.\ \ref{eq_STrep1}.}
+\end{SCfigure}
+
+
+Damit erhalten wir die folgende unit\"are Matrix, die das Verhalten von Photonen bzw.\
+Licht an einem Halbe-Halbe-Strahlteiler beschreibt:
+\begin{equation}
+\label{eq_STrep1}
+                 S = \frac{1}{\sqrt{2}}  \left( \begin{array}{cc}  1 & {\rm i} \\ {\rm i} & 1 \end{array} \right)  \, .
+\end{equation}
+
+Man kann noch relative optische Wegl\"angen\"anderungen (Phasen) vor- bzw.\ nachschalten.
+Diese werden durch eine Diagonalmatrix mit reinen Phasen beschrieben. Auf diese Weise erhalten
+wir eine allgemeine Darstellung f\"ur $S$ in der Form:
+\begin{equation}
+        S(\alpha,\beta) = \frac{1}{\sqrt{2}} 
+        \left( \begin{array}{cc}  {\rm e}^{{\rm i}\alpha} & 0 \\ 0 & {\rm e}^{-{\rm i}\alpha} \end{array} \right)
+          \left( \begin{array}{cc}  1 & {\rm i} \\ {\rm i} & 1 \end{array} \right)
+          \left( \begin{array}{cc}  {\rm e}^{{\rm i}\beta} & 0 \\ 0 & {\rm e}^{-{\rm i}\beta} \end{array} \right)
+  =  \frac{1}{\sqrt{2}}   
+    \left( \begin{array}{cc}  {\rm e}^{{\rm i}(\alpha+\beta)} & {\rm i} {\rm e}^{{\rm i}(\beta-\alpha)} \\ 
+                   {\rm i} {\rm e}^{{\rm i}(\alpha-\beta)} & {\rm e}^{-{\rm i}(\alpha+\beta)} \end{array} \right)
+\end{equation}
+Durch die spezielle Wahl $\alpha = - \beta = \pi/4$ erhalten wir eine andere Darstellung f\"ur
+einen Strahlteiler, die ebenfalls h\"aufig verwendet wird:
+\begin{equation}
+\label{eq_STrep2}
+                 S' = \frac{1}{\sqrt{2}}  \left( \begin{array}{cc}  1 & 1 \\ -1 & 1 \end{array} \right)  \, .
+\end{equation}
+Das Minuszeichen in der Matrix ist 
+wesentlich, da es sich andernfalls nicht um eine unit\"are Matrix handeln w\"urde. Dieses Minuszeichen
+beschreibt letztendlich die relative Phasenverschiebung von $180^\circ$ zwischen den beiden
+reflektierten Strahlen. Anders ausgedr\"uckt: Die Summe der relativen Phasen der reflektierten Strahlen 
+ist $180^\circ$, die Summe der relativen Phasen der durchgelassenen Strahlen ist $0^\circ$. 
+Dieses Minuszeichen ist aber gerade Sch\"uler*innen kaum einfach zu vermitteln,
+wohingegen die obige Erkl\"arung einsichtiger ist und auf dasselbe Ergebnis f\"uhrt. 
+
+\section{Das Mach-Zehnder-Interferometer}
+
+Beim Mach-Zehnder-Interferometer trifft ein Lichtstrahl zun\"achst auf einen Strahlteiler.
+Ein Teil des Lichtstrahls wird abgelenkt, der andere Teil durchgelassen. \"Uber zwei Spiegel,
+an denen die Lichtstrahlen um jeweils $90^\circ$ reflektiert werden, treffen beide
+Strahlen von verschiedenen Seiten auf einen zweiten Strahlteiler, wo sie wieder
+zusammengef\"uhrt werden. Hinter dem zweiten Strahlteiler kann man die Intensit\"at
+des Lichts an zwei m\"oglichen Ausg\"angen messen. 
+
+\begin{SCfigure}[30][htb] 
+%\unitlength 2pt
+\begin{picture}(300,170)(-5,0)
+\thicklines
+\put(40,10){\line(1,1){20}}
+\put(250,10){\line(1,1){20}}
+\put(251,9){\line(1,1){20}}
+\put(40,120){\line(1,1){20}}
+\put(39,121){\line(1,1){20}}
+\put(250,120){\line(1,1){20}}
+\thinlines
+\put(0,20){\line(1,0){260}}
+%\put(60,20){\circle*{10}}
+\put(50,20){\line(0,1){110}}
+\put(260,20){\line(0,1){110}}
+\put(50,130){\line(1,0){210}}
+\put(20,20){\vector(1,0){0}}
+\put(150,20){\vector(1,0){0}}
+\put(150,130){\vector(1,0){0}}
+\put(50,70){\vector(0,1){0}}
+\put(260,70){\vector(0,1){0}}
+\put(260,130){\vector(1,0){20}}
+\put(260,130){\vector(0,1){20}}
+%
+\put(25,30){\makebox(0,0){$|\gamma \rangle$}}
+\put(150,30){\makebox(0,0){$| {\rm t} \rangle$}}
+\put(60,70){\makebox(0,0){$|{\rm r} \rangle$}}
+\put(250,150){\makebox(0,0){$| {\rm D} \rangle$}}
+\put(275,120){\makebox(0,0){$|{\rm C} \rangle$}}
+%
+%\put(260,170){\makebox(0,0){\footnotesize D dunkel}}
+%\put(300,130){\makebox(0,0){\footnotesize C hell}}
+\put(70,10){\makebox(0,0){\footnotesize Strahlteiler}}
+\put(220,120){\makebox(0,0){\footnotesize Strahlteiler}}
+\put(70,146){\makebox(0,0){\footnotesize Spiegel}}
+\put(280,37){\makebox(0,0){\footnotesize Spiegel}}
+%
+\end{picture} 
+\caption{\label{fig_MachZehnder}%
+Mach-Zehnder-Interferometer. Der Strahl trifft auf einen ersten Strahlteiler. Die beiden
+Teil\-strahlen r und t werden von Spiegeln auf einen zweiten Strahlteiler gelenkt, hinter dem
+es zu konstruktiver bzw.\ destruktiver Interferenz kommen kann.} 
+\end{SCfigure}
+
+Die Interferenz am Ausgang hinter dem zweiten Strahlteiler ergibt sich aus unterschiedlichen
+optischen Wegl\"angen der zwei Strahlen, die dort zusammentreffen. Meist findet man
+folgende, sehr vereinfachte Erkl\"arung: Am Ausgang $D$ treffen zwei Strahlen aufeinander,
+von denen einer einmal um $90^\circ$ reflektiert wurde und der andere dreimal. Da jede
+Reflektion um $90^\circ$ eine Phasenverschiebung von $90^\circ$ zur Folge hat 
+ergibt sich zwischen den beiden Strahlen eine relative Phasenverschiebung
+von $180^\circ$ und somit destruktive Interferenz. Bei Ausgang $C$ treffen zwei Strahlen
+aufeinander, die jeweils einmal reflektiert wurden und somit in Phase sind; es kommt also zu
+konstruktiver Interferenz. 
+
+Im mathematischen Formalismus f\"ur Einzelphotonen k\"onnen wir dies folgenderma\ss en
+beschreiben. Ein einfallendes Photon wird durch den Vektor $|\gamma\rangle$ beschrieben.
+Am ersten Strahlteiler (ST) wird dieser Zustand in eine Superposition von zwei Zust\"anden 
+zerlegt: einer dieser Zust\"ande ist der Zustand $|{\rm t}\rangle$ (f\"ur transmittiert), der andere ist der
+Zustand des reflektierten Anteils $|{\rm r}\rangle$. Der reflektierte Anteil erh\"alt noch eine Phase von
+$90^\circ$, was durch einen Faktor i ausgedr\"uckt werden kann. Hinter dem ersten Strahlteiler
+erhalten wir also folgenden Zustand:
+\begin{equation}
+           |\gamma \rangle  \longrightarrow  \frac{1}{\sqrt{2}} \big( |{\rm t}\rangle + {\rm i} |{\rm r}\rangle \big) \, .
+\end{equation}
+Der Faktor $1/\sqrt{2}$ ergibt sich daraus, dass das Quadrat dieses Faktors nach der Born'schen
+Regel die Wahrscheinlichkeit angibt, das Photon in dem jeweiligen Sektor zu messen. F\"ur
+Laserlicht bedeutet er einfach, dass jeder Teilstrahl die H\"alfte der Eingangsintensit\"at besitzt. 
+
+Beide Anteile des Strahls werden nun an einem Spiegel reflektiert, erhalten somit einen 
+Faktor i, der f\"ur beide Teile gleich ist. Die beiden
+Anteile treffen anschlie\ss end auf den zweiten Strahlteiler, wobei jeder der beiden Anteile
+entweder in die Richtung von D oder von C gelenkt werden kann. Dies dr\"ucken wir durch die
+Zust\"ande $|{\rm D}\rangle$ bzw.\ $|{\rm C}\rangle$ aus, und je nachdem, ob eine Reflektion stattgefunden
+hat oder nicht, erhalten wir einen weiteren Faktor i.
+\begin{eqnarray}
+  |\gamma \rangle & \stackrel{\rm 1.~ST}{\longrightarrow}  & 
+    \frac{1}{\sqrt{2}} \big( |{\rm t}\rangle + {\rm i}   |{\rm r}\rangle \big) 
+    ~ \stackrel{\rm Spiegel}{\longrightarrow} ~ 
+    \frac{\rm i}{\sqrt{2}} \big( |{\rm t}\rangle + {\rm i}    |{\rm r}\rangle \big) \\
+\label{eq_Feynman1}    
+    & \stackrel{\rm 2.~ST}{\longrightarrow} &
+    \frac{\rm i}{\sqrt{2}} \left(   \frac{1}{\sqrt{2}} \big(  |{\rm D}\rangle + {\rm i}  |{\rm C}\rangle \big)
+    + \frac{\rm i}{\sqrt{2}} \big({\rm i}     |{\rm D}\rangle  + |{\rm C}\rangle \big) \right)  \\
+\label{eq_DCDC}    
+    & =  &
+    \frac{\rm i}{2}  |{\rm D}\rangle  +  \frac{{\rm i}^2}{2} |{\rm C}\rangle 
+    + \frac{{\rm i}^3}{2}  |{\rm D}\rangle  + \frac{{\rm i}^2}{2} |{\rm C}\rangle \\
+    & = &  - |{\rm C} \rangle 
+\end{eqnarray}
+Das \"ubliche Interferenzmuster im Sinne von \glqq alternierenden Helligkeitsstreifen\grqq\ erh\"alt man
+hier, wenn man die optische Wegl\"ange eines der beiden Teilstrahlen beispielsweise durch eine
+Verschiebung des reflektierenden Spiegels \"andert. Man erhalt so alternierend mal den Ausgang C und
+mal den Ausgang D als den Ausgang maximaler Helligkeit, wobei der jeweils andere Ausgang dunkel ist.  
+  
+In der Praxis, beispielsweise bei der Verwendung von sichtbarem Licht, l\"asst sich die optische Wegl\"ange 
+kaum so ausmessen, dass man die relativen Phasenunterschiede einzig auf die Anzahl der Reflektionen
+zur\"uckf\"uhren kann. Man wird die optische Wegl\"ange eines der Teilstrahlen durch Verschieben der
+optischen Elemente so anpassen, dass man beispielsweise hinter einem der Ausg\"ange kein Licht 
+(destruktive Interferenz) und entsprechend hinter dem anderen Ausgange volle Helligkeit (konstruktive
+Interferenz) findet. 
+
+\section{Feynman's Summation \"uber alle Wege}
+
+Richard Feynman hat eine sehr eing\"angige Darstellung f\"ur die Bestimmung einer
+Amplitude $\langle b | a \rangle$ gefunden. Formal kann man schreiben:
+\begin{equation}
+       \langle b | a \rangle = \sum_{\mbox{\tiny Wege $a \rightarrow b$}}  A(\mbox{Weg}) \, ,
+\end{equation}
+wobei $A(\mbox{Weg})$ eine komplexe Amplitude ist, die sich als Produkt einzelner Beitr\"age entlang
+eines Weges schreiben l\"asst. Summiert wird \"uber alle \glqq Wege\grqq\ (M\"oglichkeiten), unter
+Einhaltung der physikalischen Gesetze von dem Zustand $a$ zu dem Zustand $b$ zu gelangen.
+Diese Darstellung wollen wir uns am Mach-Zehnder-Interferometer anschauen. 
+
+Der Ausgangszustand ist der Zustand $|\gamma \rangle$ von einem Photon, das am
+ersten Strahlteiler in das Interferometer trifft. Die m\"oglichen Endzust\"ande sind $|D\rangle$ und $|C\rangle$,
+bei denen ein Photon in Detektor D bzw.\ C nachgewiesen wird. F\"ur die beiden
+Amplituden $\langle D | \gamma \rangle$ und $\langle C | \gamma \rangle$
+gibt es jeweils zwei Wege:
+\begin{eqnarray}
+\nonumber
+     \langle D | \gamma \rangle &=&  |\gamma \rangle \longrightarrow \mbox{ST}_1 \longrightarrow
+       | {\rm r} \rangle \longrightarrow \mbox{Spiegel} \longrightarrow |{\rm r}\rangle \longrightarrow 
+       \mbox{ST}_2 \longrightarrow |{\rm D}\rangle  \\
+     & &  + ~ |\gamma \rangle \longrightarrow \mbox{ST}_1 \longrightarrow
+       | {\rm t} \rangle \longrightarrow \mbox{Spiegel} \longrightarrow |{\rm t}\rangle \longrightarrow 
+       \mbox{ST}_2 \longrightarrow |{\rm D}\rangle  \\
+ \nonumber      
+     \langle C | \gamma \rangle &=&  |\gamma \rangle \longrightarrow \mbox{ST}_1 \longrightarrow
+       | {\rm r} \rangle \longrightarrow \mbox{Spiegel} \longrightarrow |{\rm r}\rangle \longrightarrow 
+       \mbox{ST}_2 \longrightarrow |{\rm C}\rangle  \\
+     & &  + ~  |\gamma \rangle \longrightarrow \mbox{ST}_1 \longrightarrow
+       | {\rm t} \rangle \longrightarrow \mbox{Spiegel} \longrightarrow |{\rm t}\rangle \longrightarrow 
+       \mbox{ST}_2 \longrightarrow |{\rm C}\rangle  \, .  
+\end{eqnarray}
+Zur Berechnung der Phase verwenden wir folgende Regeln:
+\begin{itemize}
+\item
+Propagation entlang einer geraden Strecke: $A = 1$.\\
+Dies ist nicht ganz korrekt, eigentlich m\"usste man hier als reine Phase die optische Wegl\"ange
+nehmen. Da wir nur an relativen Phasenunterschieden interessiert sind k\"onnen wir diesen Beitrag unber\"ucksichtigt lassen.
+\item
+F\"ur jede Reflektion um einen Winkel $\alpha$ erhalten wir eine Phase $A={\rm e}^{{\rm i}\alpha}$. 
+F\"ur Reflektionen um $90^\circ$ ist dies ein Faktor i.
+\item
+F\"ur jede Verzweigung (z.B.\ in einem Strahlteiler) erhalten wir einen Faktor $A=1/\sqrt{2}$ (das Quadrat
+dieses Faktors ist gleich der Wahrscheinlichkeit, in eine der beiden Richtungen abgelenkt zu werden).
+\end{itemize}
+Damit k\"onnen wir die Phasen f\"ur die obigen Wege ausrechnen:
+\begin{eqnarray}
+     \langle D | \gamma \rangle &=&  \Big( \frac{\rm i}{\sqrt{2}}\Big) \Big( {\rm i} \Big) \Big( \frac{\rm i}{\sqrt{2}}\Big) 
+       +  \Big( \frac{1}{\sqrt{2}}\Big) \Big( {\rm i} \Big) \Big( \frac{1}{\sqrt{2}}\Big) 
+          = - \frac{\rm i}{2} + \frac{\rm i}{2} = 0     \\
+     \langle C | \gamma \rangle &=&  \Big( \frac{\rm i}{\sqrt{2}}\Big)\Big( {\rm i}\Big)\Big( \frac{1}{\sqrt{2}} \Big)
+     + \Big( \frac{1}{\sqrt{2}}\Big)\Big( {\rm i} \Big)\Big(\frac{\rm i}{\sqrt{2}} \Big)
+     = - \frac{1}{2} - \frac{1}{2} = -1  \, .  
+\end{eqnarray}
+Wir finden diese Faktoren auch in den Gleichungen \ref{eq_Feynman1} und \ref{eq_DCDC} wieder.
+
+Feynmans Darstellung einer Amplitude als Summe \"uber Beitr\"age von Wegen ist oft
+ganz hilfreich, um sich die m\"oglichen Wege vor Augen zu halten. In einer Kontinuumstheorie wird
+aus der Summation \"uber Wege ein sogenanntes Funktionalintegral. Die Idee hinter dieser
+Darstellung beruht auf folgender \"Uberlegung: Ein physikalischer Prozess wird in der Quantentheorie
+durch den sogenannten Zeitentwicklungsoperator $\exp \big( \frac{\rm i}{\hbar} H t\big) $ (oder, wie
+beispielsweise beim Mach-Zehnder-Interferometer, durch einen \"aquivalenten unit\"aren Operator)
+beschrieben. Diesen unit\"aren Operator kann man als Produkt von Operatoren zu einzelnen
+Abschnitten der Wege (oder sehr kurzen Zeitabschnitten) schreiben. Die Matrixmultiplikation entspricht
+aber einer \glqq Summation \"uber alle Wege im Indexraum\grqq. Um das zu verdeutlichen, betrachten
+wir der Einfachheit halber das Produkt von drei Matrizen $A$, $B$ und $C$, wobei wir die Bra-Ket-Notation
+von Dirac verwenden:
+\begin{equation}
+     \langle m | (CBA)| n \rangle 
+            = \sum_{kl}  \langle m | C | l \rangle \langle l |B | k \rangle \langle  k| A| n \rangle  
+\end{equation} 
+F\"ur einen festen Wert von $n$ und $m$ (Anfangs- und Endzustand) erhalten wir somit
+eine Darstellung des gesamten Matrixelements als Summe \"uber alle Wege 
+(summiert wird \"uber alle $k$ und $l$) 
+$ n \rightarrow k \rightarrow l \rightarrow m$ und zu jedem Teilprozess eines dieser Wege erhalten
+wir als \glqq Amplitude\grqq\ das entsprechende Element der zugeh\"origen unit\"aren Matrix.
+Die Wahrscheinlichkeit f\"ur einen \"Ubergang $n\rightarrow m$ bei dem Prozess $CBA$ 
+ist dann das Quadrat dieser Amplitude. 
+ 
+Beim Mach-Zehnder-Interferometer multiplizieren wir drei Matrizen: Die erste Matrix beschreibt
+den ersten Strahlteiler, die zweite Matrix die Reflektion an einem Spiegel (dies ergibt im
+Wesentlichen nur einen Faktor i) und die dritte Matrix
+den zweiten Strahlteiler. 
+
+\section{Das Michelson-Interferometer}
+
+Beim Michelson-Interferometer trifft ein einfallender Strahl bzw.\ der Zustand eines einfallenden
+Photons auf einen Strahlteiler und wird dort in zwei Anteile aufgespalten, die sich entlang
+unterschiedlicher Wege ausbreiten. Beide Teilstrahlen werden an Spiegel totalreflektiert und
+laufen wieder zur\"uck. Sie treffen schlie\ss lich wieder
+auf den Strahlteiler, wo sie zusammengef\"uhrt werden und interferieren k\"onnen (siehe
+Abb.\ \ref{fig_Michelson}).
+
+\begin{SCfigure}[30][htb] 
+%\unitlength 2pt
+\begin{picture}(260,200)(0,0)
+\thicklines
+\put(70,60){\line(1,1){20}}
+\put(190,60){\line(0,1){20}}
+\put(192,60){\line(0,1){20}}
+\put(70,180){\line(1,0){20}}
+\put(70,182){\line(1,0){20}}
+%\put(250,120){\line(1,1){20}}
+\thinlines
+\put(70,0){\line(1,0){20}}
+\put(70,0){\line(0,1){20}}
+\put(90,0){\line(0,1){20}}
+\put(70,20){\line(1,0){20}}
+%
+\put(10,70){\line(1,0){180}}
+\put(80,70){\line(0,1){110}}
+\put(82,70){\line(0,1){110}}
+\put(80,72){\line(1,0){110}}
+\put(81,20){\line(0,1){50}}
+\put(83,20){\line(0,1){50}}
+\put(50,70){\vector(1,0){0}}
+\put(150,70){\vector(1,0){0}}
+\put(150,72){\vector(-1,0){0}}
+\put(80,120){\vector(0,1){0}}
+\put(82,120){\vector(0,-1){0}}
+\put(81,40){\vector(0,-1){0}}
+\put(83,40){\vector(0,-1){0}}
+%
+\put(55,80){\makebox(0,0){$|\gamma \rangle$}}
+\put(150,80){\makebox(0,0){$| {\rm t} \rangle$}}
+\put(70,120){\makebox(0,0){$|{\rm r} \rangle$}}
+%\put(250,150){\makebox(0,0){$| {\rm D} \rangle$}}
+%\put(275,120){\makebox(0,0){$|{\rm C} \rangle$}}
+%
+%\put(260,170){\makebox(0,0){\footnotesize D dunkel}}
+%\put(300,130){\makebox(0,0){\footnotesize C hell}}
+\put(45,57){\makebox(0,0){\footnotesize Strahlteiler}}
+\put(80,190){\makebox(0,0){\footnotesize Spiegel}}
+\put(210,70){\makebox(0,0){\footnotesize Spiegel}}
+\put(108,10){\makebox(0,0){\footnotesize Detektor}}
+%
+\end{picture} 
+\caption{\label{fig_Michelson}%
+Michelson-Inter\-fero\-meter. Nachdem der Strahl von einem Strahlteiler
+geteilt wurde, treffen die beiden Strahlteile auf Spiegel, die sie auf den
+Strahlteiler zur\"ucklenken. Hinter dem Strahlteiler kann man mit einem
+Detektor die Lichtintensit\"at messen. Durch winzige Variationen in den
+optischen Wegl\"angen kann man Interferenzen beobachten.} 
+\end{SCfigure}
+
+Beim Michelson-Interferometer erh\"alt man zun\"achst nur einen Ausgang, hinter
+dem man die Interferenz nachweisen kann. Das ist insofern kein Informationsverlust,
+da der zweite Ausgang ohnehin nur die am ersten Ausgang fehlende Intensit\"at 
+(zur einlaufenden Gesamtintensit\"at) aufzeigt. Der zweite Ausgang zeigt wieder zur\"uck
+zum einfallenden Licht und sollte daher nicht mit Detektoren zugebaut werden. Es gibt
+aber unterschiedliche Varianten dieses Aufbaus, bei denen auch hinter dem zweiten Ausgang
+Detektoren stehen k\"onnen.
+
+\section{Das \glqq Knallerexperiment\grqq}
+
+Das sogenannte \glqq Knallerexperiment\grqq\ geht auf eine Arbeit von Avshalom Elitzur und
+Lev Vaidman aus dem Jahr 1993 mit dem Titel ``Quantum mechanical interaction-free measurements'' 
+zur\"uck \cite{Elitzur}.
+Sie beschreiben darin die M\"oglichkeit, eine Superbombe auf ihre Funktionsf\"ahigkeit zu testen, ohne
+diese Bombe zur Explosion bringen zu m\"ussen. F\"ur schulische Zwecke wurde aus der Superbombe
+ein \glqq Knaller\grqq. 
+
+Hier ist allerdings zu erw\"ahnen, dass die Ideen von Elitzur und Vaidman nicht neu waren, sie
+haben sie lediglich in einen \glqq werbewirksamen\grqq\ Rahmen gepackt. Schon 1960 hat 
+Mauritius Renninger in einem Artikel \glqq Messung ohne St\"orung des Messobjekts\grqq\ auf diese
+M\"oglichkeit in der Quantentheorie aufmerksam gemacht \cite{Renninger}. Und schon 1934 schreibt 
+Schr\"odinger in einem Artikel: \textit{\"Ubrigens ist es auch an sich nichts weniger als einleuchtend,
+da\ss\ das Me\ss instrument ohne Wechselwirkung keine Aussagge \"uber das Objekt machen kann.
+Eine Zielscheibe, die nicht getroffen wird, schlie\ss t zumindest gewisse Flugbahnen des Projektils
+aus. Und wenn die Scheibe den Sch\"utzen als Hohlkugel umgibt, die blo\ss\ ein kleines Loch hat,
+so gibt sie, ungetroffen, sehr genauen Aufschlu\ss\ \"uber die Flugbahn} \cite{Schroedinger}. Damit
+ist die wesentliche Idee des Artikels von Elitzur und Vaidman schon vorweggenommen. 
+
+Elitzur und Vaidman beschreiben folgende Situation: Gegeben ist ein gro\ss es Lager von
+Superbomben, die einen sehr empfindlichen Ausl\"oser haben. Sobald ein Photon auf diesen
+Ausl\"oser trifft und seine Energie \"ubertr\"agt, 
+explodiert die Bombe. Andererseits hat man festgestellt, dass bei manchen
+Bomben die Ausl\"oser fehlen und bei diesen Bomben ein Photon, das normalerweise auf einen 
+Ausl\"oser treffen w\"urde, einfach hindurchgeht und an einer Seite wieder austritt. Ein normaler
+Test, bei dem nachgeschaut wird, ob ein Ausl\"oser vorhanden ist, w\"urde die intakten Bomben 
+explodieren lassen. Man m\"ochte jedoch m\"oglichst viele intake Bomben behalten k\"onnen.
+
+\begin{SCfigure}[30][htb] 
+%\unitlength1cm
+\begin{picture}(130,125)(-5,0)
+\thicklines
+\put(15,15){\line(1,1){10}}
+\put(95,15){\line(1,1){10}}
+\put(96,14){\line(1,1){10}}
+\put(15,95){\line(1,1){10}}
+\put(14,96){\line(1,1){10}}
+\put(95,95){\line(1,1){10}}
+\thinlines
+\put(0,20){\line(1,0){100}}
+%\put(60,20){\circle*{10}}
+\put(20,20){\line(0,1){80}}
+\put(100,20){\line(0,1){80}}
+\put(20,100){\line(1,0){80}}
+\put(10,20){\vector(1,0){0}}
+\put(60,20){\vector(1,0){0}}
+\put(60,100){\vector(1,0){0}}
+\put(20,60){\vector(0,1){0}}
+\put(100,60){\vector(0,1){0}}
+\put(100,100){\vector(1,0){10}}
+\put(100,100){\vector(0,1){10}}
+%
+\put(110,116){\makebox(0,0){\footnotesize D dunkel}}
+\put(125,97){\makebox(0,0){\footnotesize C hell}}
+%
+\end{picture} \hspace{1cm}
+\begin{picture}(130,125)(0,0)
+\thicklines
+\put(15,15){\line(1,1){10}}
+\put(95,15){\line(1,1){10}}
+\put(96,14){\line(1,1){10}}
+\put(15,95){\line(1,1){10}}
+\put(14,96){\line(1,1){10}}
+\put(95,95){\line(1,1){10}}
+\thinlines
+\put(0,20){\line(1,0){53}}
+\put(60,20){\circle*{10}}
+\put(20,20){\line(0,1){80}}
+%\put(100,20){\line(0,1){80}}
+\put(20,100){\line(1,0){80}}
+\put(10,20){\vector(1,0){0}}
+\put(40,20){\vector(1,0){0}}
+\put(60,100){\vector(1,0){0}}
+\put(20,60){\vector(0,1){0}}
+%\put(100,60){\vector(0,1){0}}
+\put(100,100){\vector(1,0){10}}
+\put(100,100){\vector(0,1){10}}
+%
+\put(110,116){\makebox(0,0){\footnotesize D}}
+\put(125,97){\makebox(0,0){\footnotesize C}}
+%
+\end{picture}
+\caption{\label{fig_Bombe}%
+Mach-Zehnder Interferometer ohne und mit
+Hindernis in einem Strahlgang. Ohne Hindernis sollte der Detektor bei
+D nie ansprechen, mit Hindernis in rund einem Viertel der F\"alle.} 
+\label{fig_MZInterferometer}
+\end{SCfigure}
+
+Elitzur und Vaidman schlagen nun vor, ein Mach-Zehnder-Interferometer zum Test
+der Bomben zu verwenden. Die Bomben werden so in den Strahlengang gelegt, dass
+der Ausl\"oser, sofern vorhanden, ein Hindernis darstellt und, wenn er von einem Photon
+getroffen wird, die Bombe ausgel\"ost wird. Bei Bomben, die defekt sind und bei denen 
+kein Ausl\"oser vorhanden ist, ist der Strahlengang frei und ein Photon k\"onnte ungehindert
+durch den fehlenden Ausl\"oser hindurchtreten. 
+
+Falls die Bomben defekt sind, handelt es sich bei dem Aufbau um ein normales Mach-Zehnder-Interferometer.
+Wenn die optischen Wegl\"angen entsprechend eingestellt sind, sollten Photonen letztendlich nur
+in Detektor C nachgewiesen werden. Man k\"onnte entweder eine ausreichende Anzahl von Photonen
+durch die Anordnung treten lassen und feststellen, dass immer nur Detektor C anspricht. Man kann
+aber auch das Photon hinter dem Ausgang C durch entsprechende Spiegel wieder in das 
+Mach-Zehnder-Interferometer leiten und w\"urde feststellen, dass ein Photon \glqq immer im Kreis l\"auft\grqq.
+Dies w\"are das Zeichen f\"ur eine defekte Bombe.
+
+Bei einer intakten Bombe befindet sich ein Hinternis in einem Strahlengang. In rund der H\"alfte der F\"alle
+wird ein Photon auf die Bombe treffen und diese ausl\"osen. In der anderen H\"alfte der F\"alle 
+kann man sich vorstellen, dass das Photon den anderen Strahlengang nimmt und dort hinter
+dem zweiten Strahlteiler entweder in Detektor C oder Detektor D abgelenkt wird. Landet das Photon
+in Detektor D wei\ss\ man, dass ein Hindernis vorhanden ist, und damit ist auch bekannt, dass die
+Bombe intakt ist. Da das Photon aber im Detektor nachgewiesen wurde, ist es nicht auf das Hindernis
+getroffen, es hat keine Wechselwirkung mit dem Hindernis stattgefunden und die Bombe bleibt intakt. 
+Dies ist bei einer intakten Bombe in rund einem Viertel der F\"alle der Fall. Schlie\ss lich kann das 
+Photon auch in Detektor C landen (ebenfalls ein Viertel der F\"alle); in diesem Fall erh\"alt man keine 
+Information \"uber die Bombe. Ein solches Photon kann nochmals in das Mach-Zehnder-Interferometer
+gelenkt werden, wieder wird in der H\"alfte der F\"alle die Bombe ausgel\"ost und in jeweils einem Viertel der
+F\"alle landet das Photon in Detektor D (damit ist bekannt, dass die Bombe intakt ist) oder in Detektor
+C (keine Information). Auf diese Weise kann man letztendlich rund ein Drittel aller intakten Bomben als
+intakt erkennen und retten, wohingegen rund zwei Drittel aller intakten Bomben explodieren. 
+
+Wir k\"onnen auch in diesem Fall zur Bestimmung der Wahrscheinlichkeiten die Feynman'sche
+Summe \"uber alle M\"oglichkeiten nutzen. Bei einer intakten Bombe gibt es neben den 
+M\"oglichkeiten, dass ein Photon in Detektor D oder C landet noch die M\"oglichhkeit, auf die Bombe
+zu treffen und diese auszul\"osen. Dies geschieht mit Wahrscheinlichkeit 1 f\"ur einen Weg, der das
+Photon auf die Bombe leitet. Zu den Amplituden f\"ur die Detektoren tr\"agt nun jeweils nur ein Weg bei:
+\begin{eqnarray}
+\nonumber
+     \langle D | \gamma \rangle &=&  |\gamma \rangle \longrightarrow \mbox{ST} \longrightarrow
+       | {\rm r} \rangle \longrightarrow \mbox{Spiegel} \longrightarrow |{\rm r}\rangle \longrightarrow 
+       \mbox{ST} \longrightarrow |{\rm D}\rangle  \\
+     & =  &   \Big( \frac{\rm i}{\sqrt{2}}\Big) \Big( {\rm i} \Big) \Big( \frac{\rm i}{\sqrt{2}}\Big) 
+       =   - \frac{\rm i}{2} \\
+ \nonumber      
+     \langle C | \gamma \rangle &=&  |\gamma \rangle \longrightarrow \mbox{ST} \longrightarrow
+       | {\rm r} \rangle \longrightarrow \mbox{Spiegel} \longrightarrow |{\rm r}\rangle \longrightarrow 
+       \mbox{ST} \longrightarrow |{\rm C}\rangle  \\
+     & = &   \Big( \frac{\rm i}{\sqrt{2}}\Big)\Big( {\rm i}\Big)\Big( \frac{1}{\sqrt{2}} \Big)
+      =   - \frac{1}{2}  \\
+ \langle \mbox{Bombe explodiert}|\gamma \rangle &=& 
+\nonumber 
+         |\gamma \rangle \longrightarrow \mbox{ST} \longrightarrow
+       | {\rm t} \rangle \longrightarrow  \mbox{Bombe}  \\
+        &=&   \Big( \frac{1}{\sqrt{2}}\Big)  \, . 
+\end{eqnarray}
+Das Absolutquadrat dieser Amplituden ergibt die Wahrscheinlichkeiten. Damit erhalten wir f\"ur
+die beiden Wahrscheinlichkeiten, dass ein Photon in einem der Detektoren landet, jeweils
+$1/4$, wohingegen die Wahrscheinlichkeit auf die Bombe zu treffen und diese
+auszul\"osen gleich $1/2$ ist. 
+
+F\"ur die experimentelle Realisation verwendet man meist ein Michelson-Interferometer (Abb.\ \ref{fig:MZ3}).
+Die Bombe kann durch einen Spiegel ersetzt werden, der in den Strahlengang geschoben wird
+und ein Photon, das eigentlich eine intakte Bombe ausl\"osen w\"urde, auf einen Detektor lenkt. 
+
+\begin{figure}[htb]
+\begin{picture}(280,160)(-10,0)
+\thicklines
+\put(0,100){\line(1,0){30}}
+\put(18,100){\vector(1,0){1}}
+\put(45,100){\line(2,1){30}}
+\put(45,100){\line(1,0){225}}
+\put(180,100){\line(0,-1){90}}
+\put(61,108){\vector(2,1){1}}
+\put(110,100){\vector(1,0){1}}
+\put(120,100){\vector(-1,0){1}}
+\put(180,70){\vector(0,-1){1}}
+\put(180,60){\vector(0,1){1}}
+\put(220,100){\vector(1,0){1}}
+\put(230,100){\vector(-1,0){1}}
+\thinlines
+\put(165,50){\vector(1,0){10}}
+\put(30,95){\line(1,0){15}}
+\put(30,95){\line(0,1){10}}
+\put(30,105){\line(1,0){15}}
+\put(45,95){\line(0,1){10}}
+\put(80,117){\circle{10}}
+\put(170,110){\line(1,-1){20}}
+\put(170,10){\line(1,0){20}}
+\put(170,8){\line(1,0){20}}
+\put(270,90){\line(0,1){20}}
+\put(272,90){\line(0,1){20}}
+\put(170,40){\line(-1,1){14}}
+\put(171.5,41.5){\line(-1,1){14}}
+\put(210,48){\circle{10}}
+\put(180,130){\circle{10}}
+%
+\put(80,130){\makebox(0,0){\footnotesize Detektor}}
+\put(180,143){\makebox(0,0){\footnotesize Detektor}}
+%\put(180,143){\makebox(0,0){\footnotesize (dunkel)}}
+\put(225,60){\makebox(0,0){\footnotesize Detektor}}
+%\put(230,52){\makebox(0,0){\footnotesize (Bombe)}}
+\put(215,87){\makebox(0,0){\footnotesize Strahlteiler}}
+\put(180,2){\makebox(0,0){\footnotesize Spiegel}}
+\put(280,117){\makebox(0,0){\footnotesize Spiegel}}
+\put(148,40){\makebox(0,0){\footnotesize Spiegel}}
+\put(148,30){\makebox(0,0){\footnotesize (Bombe)}}
+%
+\put(15,108){\makebox(0,0){\footnotesize UV}}
+\put(37,88){\makebox(0,0){\footnotesize BBO}}
+\end{picture}
+\caption{Experimentelle Realisierung des \glqq Knallerexperiments\grqq\ in einem
+Michelson-Interferometer.
+In einem BBO-Kristall werden zwei Photonen erzeugt, von denen eines
+nachgewiesen wird. Dadurch ist bekannt, dass sich ein zweites
+Photon in der experimentellen Anordnung befindet.
+Der bewegliche Spiegel (\glqq Bombe\grqq) kann nach rechts in den 
+Strahlengang geschoben werden und lenkt das Photon auf den Detektor.
+Der obere Detektor (dunkel) sollte nur Ereignisse anzeigen,
+bei denen ein Hindernis im zweiten Strahlengang vorhanden ist. 
+Der untere Detektor zeigt an, ob das Hindernis getroffen wurde.}
+\label{fig:MZ3}
+\end{figure}
+
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Elitzur} Elitzur, A.C., Vaidman, L.; {\em Quantum mechanical
+        interaction-free measurements}, Found.\ of Phys.\ {\bf 23}
+        (1993) 987.
+\bibitem{Renninger} Renninger, M.; {\em Messung ohne St\"orung des
+        Me\ss objekts}; Z.\ Physik 158 (1960) 417.      
+\bibitem{Schroedinger} Schr\"odinger, E.; {\em \"Uber die
+        Unanwendbarkeit der Geometrie im Kleinen}; Die Naturwissenschaften
+        31 (1934) 518--520.                 
+\end{thebibliography}
+
+\end{document}
+

@@ -1,0 +1,581 @@
+\documentclass[german,10pt]{book}      \input{preambel}         \begin{document}  \setcounter{chapter}{1}
+
+
+\chapter{SI-Einheiten}
+% Kap 1
+\label{chap_SI}
+
+Auf ihrer 26.\ Versammlung im November 2018 hat die CGPM (Conf\'{e}rence g\'{e}n\'{e}rale des poids et mesure -
+General Conference on Weights and Measures) \index{CGPM - General Conference on Weights and Measures} 
+ein neues Einheitensystem (SI - Syst\'{e}me international d'unit\'{e}s)\index{SI - Internationales Einheitensystem} 
+beschlossen, das am 20.\ Mai 2019 in Kraft trat. Dieses System basiert im Wesentlichen auf der
+Festlegung einer Zeiteinheit sowie der Festlegung bestimmter Naturkonstanten, mit denen ausgehend von der
+Zeiteinheit andere Grundeinheiten - L\"ange, Masse, Temperatur, Stromst\"arke, 
+Mengeneinheit - definiert werden k\"onnen. 
+
+
+\section{Das neue System der Grundeinheiten}
+
+Das neue System der Grundeinheiten beruht auf den Festlegungen der in Tabelle \ref{tab_SI}
+angegebenen Naturkonstanten.\index{Frequenz des Hyperfeinstruktur\"ubergangs in C\"asium-133}%
+\index{Lichtgeschwindigkeit}\index{Planck'sche Konstante}\index{Elementarladung}%
+\index{Boltzmann-Konstante}\index{Avogadro-Konstante}%
+
+\begin{table}[htb]
+\begin{tabular}{l|l|l}
+Bezeichnung & Symbol & Wert und Einheit \\ \hline
+Frequenz des Hyperfinestruktur\"ubergangs in C\"asium-133 & $\Delta \nu_{\rm Cs}$ &
+        9\,192\,631\,770\,{\rm Hz} \\
+Lichtgeschwindigkeit im Vakuum & $c$ & 299\,792\,458\,{\rm m/s} \\ 
+Planck'sche Konstante & $h$ & $6,626\,070\,15 \cdot 10^{-34}\,{\rm J\,s}$ \\
+Elementarladung & $e$ & $1,602\,176\,634 \cdot 10^{-19}\,{\rm C}$ \\
+Boltzmann-Konstante & $k_{\rm B}$ & $1,380\,649 \cdot 10^{-23}\,{\rm J/K}$ \\
+Avogadro-Konstante & $N_{\rm A}$ & $ 6,022\,140\,76 \cdot 10^{23}\,{\rm mol}^{-1}$ \\
+Photometrisches Strahlungs\"aquivalent & $K_{\rm cd}$ & $683\,{\rm lm/W}$ \\[-0.1cm]
+(Monochromatische Strahlung von 540\,THz) & &  \\ \hline        
+\end{tabular}
+\caption{\label{tab_SI}%
+Die fundamentalen Konstanten zur Festlegung der SI-Basis.}
+\end{table}
+
+Das photometrische Strahlungs\"aquivalent ist eine technische Konstante, die eine physikalische
+Gr\"o\ss e (eine Strahlungsleistung, ausgedr\"uckt in Watt) mit einer physiologischen Gr\"o\ss e,
+einer wahrgenommenen Helligkeit - ausgedr\"uckt durch die Einheit Lumen - in Verbindung bringt. 
+Hierauf werden wir nicht weiter eingehen. 
+
+Die Definition einer fundamentalen Frequenz $\Delta \nu_{\rm Cs}$ \"uber einen bestimmten
+\"Ubergang (dem Hyperfeinstruktur\"ubergang im Grundzustand)
+ in einem bestimmten Atom (C\"asium-133) gibt gleichzeitig eine physikalische Realisierung
+dieser Frequenz an. Atomuhren, bei denen die Frequenz des C\"asium\"ubergangs gemessen wird, 
+bezeichnet man als \glqq prim\"are Zeitnormale\grqq.\index{Zeitnormale!prim\"are} 
+Es gibt andere Realisierungen (\"Uberg\"ange im Wasserstoff oder in Rubidium etc.),
+die aber vorher am C\"asium\"ubergang geeicht werden m\"ussen und mit mindestens derselben
+Genauigkeit und Stabilit\"at reproduzierbar sein sollten. Solche Realisierungen bezeichnet man
+auch als \glqq sekund\"are Zeitnormale\grqq.\index{Zeitnormale!sekund\"are} 
+
+Die fundamentalen Einheiten - Sekunde, Meter, Kilogramm, Ampere, Kelvin, Mol (und das Candela) -
+erh\"alt man nun als Kombination dieser Gr\"o\ss en. Wie diese fundamentalen Einheiten zu bestimmen
+sind, ist mit Ausnahme der Sekunde nicht festgelegt. Bei der Boltzmann-Konstanten und der Avogadro-Konstanten
+handelt es sich um Proportionalit\"atsfaktoren zwischen historisch festgelegten Gr\"o\ss en, die
+man heute nicht mehr unterscheiden m\"usste. Die Planck'sche Konstante und die Lichtgeschwindigkeit
+im Vakuum sind universelle Naturkonstanten, die in vielen Naturgesetzen auftreten und somit
+auf unterschiedliche Weisen bestimmt werden k\"onnen. Das neue SI-System l\"asst diese
+Bestimmung offen.  
+
+\subsection{Die Sekunde}
+\label{sec_Sekunde}
+
+Eine Frequenz gibt an,\index{Sekunde}\index{Frequenz} 
+wie oft sich ein periodisch wiederkehrendes Ereignis in einer gewissen
+Zeiteinheit wiederholt. Die Einheit Hertz (Hz) legt diese Zeiteinheit auf eine Sekunde fest. 
+Eine Sekunde ist somit die Zeitdauer, in der sich die Schwingungen, die dem \"Ubergang im
+C\"asium entsprechen, 9\,192\,631\,770 mal wiederholen. Oder anders ausgedr\"uckt: Die 
+Periodendauer einer Schwingung entspricht\index{Periodendauer} 
+\begin{equation}
+               T = \frac{1}{\Delta \nu_{\rm Cs}} = \frac{1}{ 9\,192\,631\,770} {\rm s} \, .
+\end{equation}  
+Damit ist
+\begin{equation}
+               1\,{\rm s}  =  9\,192\,631\,770 \, T = 9\,192\,631\,770 \, \frac{1}{\Delta \nu_{\rm Cs}} \, .
+\end{equation}  
+Diese Gleichung kann man auch so interpretieren, dass die Definition
+\begin{equation}
+               \Delta \nu_{\rm Cs}  =  9\,192\,631\,770 \, {\rm s}^{-1}
+\end{equation}  
+nach der Einheit Sekunde aufgel\"ost wird. 
+
+\subsection{Das Meter}
+
+Bereits 1975 wurde der Wert der Lichtgeschwindigkeit 
+im Vakuum als Naturkonstante,\index{Meter}
+wie in Tabelle \ref{tab_SI} angegeben, festgelegt. Damit l\"asst sich die Einheit f\"ur
+eine L\"ange - das Meter - auf die Einheit der Zeit zur\"uckf\"uhren:
+\begin{equation}
+              1\,{\rm m} =                 \frac{c}{299\,792\,458} \cdot 1 \,{\rm s} = 
+              \frac{9\,192\,631\,770}{299\,792\,458} \frac{c}{\Delta \nu_{\rm Cs}} 
+                 \approx  30,6633189885 \frac{c}{\Delta \nu_{\rm Cs}} \, .
+\end{equation}  
+Diese Festlegung hat zwei \"aquivalente Interpretationen: Zum einen ist ein Meter der
+1/299\,792\,458 Teil der Strecke, die das Licht im Vakuum in einer Sekunde zur\"ucklegt,
+bzw.\ das 30,6633... fache der Strecke, die das Licht im Vakuum in der Zeitdauer einer Periode
+der Cs-Schwingung zur\"ucklegt. Andererseits entspricht das Verh\"altnis $c/\Delta \nu$
+der Wellenl\"ange einer Strahlung, die sich mit der Geschwindigkeit $c$ ausbreitet und eine
+Frequenz $\Delta \nu$ hat. Also ist 1 Meter das 30,6633...-fache der 
+Wellenl\"ange der Strahlung\index{Wellenl\"ange}
+zu dem Cs-\"Ubergang im Vakuum. 
+
+Damit erhalten wir auch eine Vorstellung von der Wellenl\"ange der Strahlung zu dem
+Cs-Hyperfeinstruktur\"ubergang: 1/30,6633... Meter oder ungef\"ahr 3,26\,cm. Es handelt sich also
+um eine Strahlung im Radiobereich. Per Definition sind\index{Radiowellen} 
+Radiowellen alle Formen von Wellen,
+deren Frequenz unter 3000\,GHz liegt, was hier offensichtlich der Fall ist. 
+
+\subsection{Das Kilogramm}
+
+Das Produkt aus Planck'schem Wirkungsquantum und Frequenz, also $h\nu$, ist eine Energie.
+Es ist die Energie eines einzelnen Photons\index{Photonenergie}\index{Energie} 
+mit der Frequenz $\nu$. \"Uber die Einstein'sche
+Gleichung $E=mc^2$ k\"onnen wir eine Energie mit einer Masse in Beziehung setzen. Offenbar hat
+$h \nu/c^2$ die Einheit einer Masse, und wenn man die Naturkonstanten in SI-Einheiten
+ausdr\"uckt, ist die Einheit dieser Masse das Kilogramm. Wenn wir den Ausdruck:
+\begin{equation}
+              \frac{h \Delta \nu_{\rm Cs}}{c^2} = 
+       \frac{6,626\,070\,15 \cdot 10^{-34} \cdot 9\,192\,631\,770}{(299\,792\,458)^2} {\rm kg} 
+\end{equation}  
+nach der Einheit Kilogramm aufl\"osen, erhalten wir:\index{Kilogramm}
+\begin{equation}
+           1\,{\rm kg} =
+       \frac{(299\,792\,458)^2}{6,626\,070\,15 \cdot 10^{-34} \cdot 9\,192\,631\,770} \, \frac{h \Delta \nu_{\rm Cs}}{c^2}
+         \approx  1,475\,5214 \cdot 10^{40} \, \frac{h \Delta \nu_{\rm Cs}}{c^2}  \, .
+\end{equation}  
+Man kann diese Gleichung folgenderma\ss en interpretieren: Ein Kilogramm entspricht \"uber die Beziehung $E=mc^2$
+der Energie von $1,475... \cdot 10^{40}$ Photonen, von denen jedes einzelne zu dem Strahlungs\"ubergang
+im Cs-Atom geh\"ort. 
+
+\subsection{Das Ampere}
+
+Das neue SI-System definiert die Elementarladung als fundamentale Naturkonstante. 
+Die Einheit - das Coulomb - ist gleich $1 \, {\rm C= 1\, A \cdot s}$. Damit hat das Produkt aus der
+Elementarladung und der Cs-Frequenz die Einheit Ampere:\index{Ampere}
+\begin{equation}
+       e \cdot \Delta \nu_{\rm Cs} = 1,602\,176\,634 \cdot 10^{-19} \cdot 9\,192\,631\,770\, {\rm A} \approx
+            1,4728219827 \cdot 10^{-9} \,{\rm A} \, .
+\end{equation}
+Dieses Produkt ist gleich der Stromst\"arke, die man erh\"alt, wenn eine Elementarladung in der Periodendauer 
+einer Cs-Schwingung durch eine vorgegebene Fl\"ache tritt. Damit folgt f\"ur die Einheit Ampere:
+\begin{equation}
+     1\,{\rm A} = \frac{1}{1,602\,176\,634 \cdot 10^{-19} \cdot 9\,192\,631\,770} \, e \cdot \Delta \nu_{\rm Cs} \approx
+           6,789\,6868 \cdot 10^8 \,  e \cdot \Delta \nu_{\rm Cs} \, .
+\end{equation}
+Die Stromst\"arke von 1 Ampere entspricht also entweder dem Fluss von 
+$1/1,602...\cdot 10^{19} \approx 0,624\cdot 10^{19}$ 
+Elementarladungen pro Sekunde oder dem Fluss von $6,789... \cdot 10^8$ Elementarladungen
+pro Periodendauer einer Cs-Schwingung. 
+
+\subsection{Das Kelvin}
+
+Theoretisch k\"onnte man auf eine eigene Temperaturskala verzichten. In allen relevanten
+F\"allen, in denen die Temperatur $T$ mit anderen physikalischen Gr\"o\ss en in Beziehung
+gesetzt wird, tritt das Produkt $k_{\rm B}T$ mit der Boltzmann-Konstanten $k_{\rm B}$ 
+auf. Dieses Produkt hat die Dimension einer Energie, also
+dieselbe Dimension wie $h\nu$. Es sind haupts\"achlich historische Gr\"unde, dass man der
+Temperatur nicht die Dimension der Energie gegeben hat. 
+
+Da die Boltzmann-Konstante in den Einheiten J/K angegeben
+ist, hat\index{Temperatur}\index{Kelvin}\index{Boltzmann-Konstante}
+\begin{equation}
+    \frac{h \Delta \nu_{\rm Cs}}{k_{\rm B}} = 
+    \frac{6,626\,070\,15 \cdot 10^{-34} \cdot 9\,192\,631\,770}{1,380\,649 \cdot 10^{-23}} \, {\rm K}
+\end{equation}
+die Dimension einer Temperatur. L\"osen wir diese Gleichung nach der Einheit Kelvin auf, folgt:
+\begin{equation}
+   1\,{\rm K} =      \frac{1,380\,649 \cdot 10^{-23}}{6,626\,070\,15 \cdot 10^{-34} \cdot 9\,192\,631\,770} \, 
+    \frac{h \Delta \nu_{\rm Cs}}{k_{\rm B}} \approx 2,266\,6653 \,  \frac{h \Delta \nu_{\rm Cs}}{k_{\rm B}} \, .
+\end{equation}
+Die thermische Energie zu einem Kelvin entspricht also ungef\"ahr der Energie des Strahlungs\"ubergangs
+bei C\"asium. Etwas anders ausgedr\"uckt: Wenn man jedem thermischen Freiheitsgrad eines Systems
+die Energie $h \Delta \nu$ eines Photons aus dem Cs-Strahlungs\"ubergang zuf\"uhrt, erh\"oht sich
+seine Temperatur um ungef\"ahr 1 Kelvin. 
+
+Hierbei handelt es sich um \glqq ungef\"ahr\grqq-Werte, also Gr\"o\ss enordnungen. Zum einen h\"angt
+die Beziehung zwischen der zugef\"uhrten Energie und der Temperaturerh\"ohung von der spezifischen
+W\"arme ab und kann an Phasen\"uberg\"angen sogar \"uberhaupt keine Temperaturerh\"ohung zur
+Folge haben (latente W\"arme), andererseits gibt die Beziehung
+\begin{equation}
+                   \langle \epsilon_{\rm kin} \rangle = \frac{3}{2} k_{\rm B} T 
+\end{equation}
+eine klare Beziehung zwischen dem Erwartungswert der kinetischen Energie eines Bestandteils einer Substanz
+und der Temperatur an, die lediglich die Boltzmann-Konstante als Faktor enth\"alt. 
+
+\subsection{Das Mol}
+
+Die Avogadro-Konstante ist eine historisch gew\"ahlte Konstante 
+zwischen der Menge\index{Mol}\index{Avogadro-Konstante}
+einer Substanz und der Anzahl ihrer elementaren Bestandteile (Atome, Molek\"ule, Ionen, etc.). Bei
+\glqq Substanzen\grqq\ aus makroskopischen Bestandteilen (z.B.\ einer Gruppe von Menschen
+oder Billiardkugeln) w\"urde man einfach deren Anzahl angeben. Zu einer Zeit, als die mikroskopische
+Natur der Materie noch nicht bekannt war, definierte man die Menge einer Substanz \"uber
+bestimmte chemische Reaktionen, bei denen diese Substanz mit einer wohldefinierten Menge
+einer anderen Substanz reagierte. Willk\"urlich hat man dann eine bestimmte Menge an Kohlenstoff, 
+ausgedr\"uckt in Gramm, als die Einheit mol definiert. Sp\"ater hat man dann durch Messungen die Anzahl
+der Kohlenstoffmolek\"ule bestimmt, die dieser Menge entspricht, also die Avogadro-Zahl.
+
+Heute ist ein Mol einer Substanz genau die Menge, die aus $N_{\rm A}= 6,022\,140\,76 \cdot 10^{23}$ 
+elementaren Bestandteilen dieser Substand besteht. 
+
+\section{Zur Geschichte der Grundeinheiten}
+
+\subsection{Die Sekunde}
+
+Die Einteilung eines Tages in 24 Stunden finden wir schon im antiken Babylon bzw.\ Mesopotamien. 
+Bis ins Mittelalter wurden Tag und Nacht in jeweils 12 Stunden unterteilt,\index{Tag}\index{Stunde} 
+was allerdings je nach Jahreszeit zu unterschiedlich
+langen Tag- und Nachtstunden f\"uhrte. Diese sogenannten 
+\glqq Temporalstunden\grqq\ (horae inequales) konnten\index{Temporalstunde}
+sich deutlich unterscheiden und waren nur bei den Tag-und-Nacht-Gleichen - also den \"Aquinoktien um den
+20.\ M\"arz und den 23.\ September - gleich. Erst mit dem Aufkommen
+von R\"aderuhren zu Beginn des 14.\ Jahrhunderts setzten sich die sogenannten horae aequinoctiales, also
+gleichlange Tag- und Nachtstunden, durch.   
+
+Den Begriff der Minute und Sekunde finden wir erst im Mittelalter. 
+Dabei ist - fern aller Logik - die Minute\index{Minute}\index{Sekunde} 
+eine Abk\"urzung von \glqq pars minuta prima\grqq\ (einmal verminderter Teil) und die Sekunde eine
+Abk\"urzung von \glqq pars minuta secunda\grqq\ (zweimal vermindeter Teil). 
+
+Bis 1956 war die Sekunde definiert als der 1/86\,400-ste Teil eines 
+mittleren\index{Sonnentag!mittlerer}\index{Sonnentag!wahrer} 
+Sonnentages.\footnote{Die sogenannten wahren
+Sonnentage - beispielsweise die Zeitdauer zwischen zwei Sonnenh\"ochstst\"anden an aufeinanderfolgenden
+Tagen - sind nicht immer gleich lang, siehe das Kapitel zur Zeitgleichung, Kap.\ \ref{chap_Zeitgleichung}.
+Der mittlere Sonnentag ist die \"uber ein Jahr gemittelte Dauer eines Tages.} 
+Nachdem man aber festgestellt hatte, dass auch die mittleren Sonnentage Schwankungen
+unterworfen sind, legte man 1956 die Sekunde als den Bruchteil 1/31\,556\,925,9747
+des tropischen Jahres 1900 fest, wobei
+man hier ein im Rahmen einer Theorie hochgerechnetes Jahr 1900 aus den Bewegungsdaten der Erde um die
+Sonne am 31.\ Januar 1899, 12 Uhr, gew\"ahlt hat. Die so definierte Sekunde bezeichnet man
+als Ephemeridensekunde.\index{Ephemeridensekunde} 
+
+Die Definition der Sekunde \"uber den Hyperfeinstruktur\"ubergang in C\"asium-133 l\"oste 1967 die 
+Ephemeridensekunde ab. Es wird nicht ausgeschlossen, dass bis 2030
+eine Neudefinition der Sekunde \"uber atomare \"Uberg\"ange im optischen Bereich erfolgt, da mit 
+diesen eine deutlich h\"ohere Genauigkeit erreicht werden kann.
+
+\subsection{Das Meter}
+
+Bis in die fr\"uhe Neuzeit waren sehr unterschiedliche L\"angenma\ss st\"abe in Gebrauch. 
+Elle, Fu\ss, Zoll (Daumenbreite) oder Schritt (heute noch im englischen Yard) konnten sich 
+beispielsweise auf den jeweiligen Herrscher beziehen. Eintausend Doppelschritte (Lateinisch
+\glqq mille passus\grqq, hiervon leitet sich die Bezeichnung Meile ab)\index{Meile} 
+entsprachen im R\"omischen\index{Seemeile}\index{nautische Meile}
+Reich einer Meile von etwas \"uber 1,5\,km. Sp\"ater setzte sich die nautische Meile bzw.\ Seemeile
+mit 1852 Metern (das entspricht ungef\"ahr einer Bogenminute am \"Aquator) als meist verwendete
+Form der Meile durch. 
+
+Ende des 18.\ Jahrhunderts definierte man die Einheit Meter als den 10\,000\,000-sten\index{Meter} 
+Teil des Meridianbogens (also des L\"angengrads) durch Paris vom Nordpol zum \"Aquator. Mittlerweile
+war durch genaue Vermessungen des Geoids (der Erdform) bekannt, dass die Erde keine Kugelform
+hat und somit der Umfang oder auch die L\"ange eines Meridianbogens davon abh\"angen, wo diese
+Gr\"o\ss en gemessen werden. Man realisierte das so definierte Meter durch ein 
+Urmeter, einen Platinstab,\index{Urmeter}
+der in Paris gelagert wurde. Obwohl sich sp\"ater herausstellte, dass die Messungen der L\"ange des
+Merdians durch Paris fehlerhaft waren, wurde 1889 international die L\"ange des Meters nach den alten
+Prototypen festgelegt und als Urmeter einer Platin-Iridium-Legierung angefertigt. 
+
+Das Meter als die L\"ange des in Paris gelagerten Urmeters war bis 1960 in Gebrauch. Zwischen 1960
+und 1975 wurde das Meter \"uber die Wellenl\"ange einer bestimmten Linie einer Krypton-Lampe
+definiert. Durch die Festlegung eines Zahlenwerts f\"ur die Lichtgeschwindigkeit im Vakuum wurde ab 1975
+das Meter \"uber die Sekunde definiert. 
+
+\subsection{Das Kilogramm}
+
+Urspr\"unglich sollte das Kilogramm\index{Kilogramm} 
+der Masse von einem Kubikdezimeter Wasser entsprechen, wobei die Temperatur von manchen
+Definitionen auf $0^\circ$C, von anderen auf die Temperatur maximaler Dichte (rund 
+$4^\circ$C) festgelegt wurde. Da diese Definitionen nur schwer mit der erforderlichen Genauigkeit
+(im Bereich von Milligramm pro Kilogramm) reproduziert werden konnten, stellte man sp\"ater
+Prototypen des Kilogramms aus Platin-Iridium-Legierungen her. Die Definition eines Kilogramms
+\"uber solch einen Prototyp hatte bis 2018 G\"utligkeit. Allerdings zeigte sich schon seit mehreren
+Jahren, dass die Masse des in Paris in einem Safe bei konstanter Temperatur gelagerten Prototypen
+und die Massen von urspr\"unglich gleich schweren Kopien signifikante Unterschiede aufwiesen. 
+Daher wurde 2018 festgelegt, dass das Kilogramm \"uber die Planck'sche Konstante und die
+Lichtgeschwindigkeit auf die Definition der Sekunde zur\"uckgef\"uhrt werden soll. 
+
+\subsection{Das Ampere}
+
+Streng genommen m\"usste man f\"ur die Gesetze des Elektromagnetismus keine neuen
+Einheiten einf\"uhren. \"Uber die Coulomb-Kraft k\"onnte man z.B.\ der Ladung eine Einheit
+in Bezug auf die drei Grundeinheiten Kilogramm, Meter und Sekunde geben. Dazu definiert man
+beispielsweise die Ladung \"uber das Kraftgesetz in folgender Form:
+\begin{equation}
+                 F = \frac{q_1 q_2}{r^2}  \, .
+\end{equation}
+Die Ladung erh\"alt dadurch eine Einheit ${\rm kg}^{\frac{1}{2}} {\rm m}^{\frac{3}{2}} {\rm s}^{-1}$. 
+Die freie Naturkonstante, die die Ladungen $q_1$ und $q_2$ im Abstand $r$ mit einer Kraft $F$ verbindet,
+wird zu 1 definiert. Experimentell \"uberpr\"uft werden kann nur, dass die Kraft proportional zum Produkt
+der beiden Ladungen und umgekehrt proportional zum Quadrat des Abstands ist. 
+Das sogenannte CGS-System\index{CGS-System}\index{Gau\ss'sche Einheiten}
+(bzw.\ die Gau\ss'schen Einheiten) beruht auf dieser Konstruktion. CGS steht f\"ur Zentimeter-Gramm-Sekunde,
+d.h.\ es gibt in diesem System zus\"atzlich noch Zehnerpotenzen zwischen den CGS-Einheiten und den 
+MKS-Einheiten (Meter-Kilogramm-Sekunde). Eine weitere Freiheit gibt es bei der Proportionalit\"at zwischen 
+Ladung und elektrischen Feld sowie bei der Proportionalit\"at zwischen Stromst\"arke und magnetischem
+Feld. Neben der Einheit f\"ur die Ladung besteht also eine Freiheit f\"ur die Einheiten des elektrischen und
+magnetischen Feldes. 
+
+W\"ahrend im 19.\ Jahrhundert das CGS-System bzw.\ das Gau\ss'sche System verbreitet waren, entschloss
+man sich gegen Ende des 19.\ Jahrhunderts, der Stromst\"arke eine eigene Einheit, das Ampere, 
+zu geben.\index{Ampere}
+Man h\"atte ebenso gut (wie es im Prinzip heute der Fall ist) der Ladung eine eigene Einheit geben k\"onnen.  
+Auf diese Weise vermied man nicht ganzzahlige Exponenten f\"ur die Einheiten mancher Gr\"o\ss en (wie
+beispielsweise f\"ur die Ladung im CGS-System). Mitte des 20.\ Jahrhunderts definierte man das Ampere
+\"uber die Kraft zwischen zwei stromdurchflossenen Leitern. Diese Definition war im Wesentlichen bis
+2019 g\"ultig.  
+
+\subsection{Das Kelvin}
+
+Die Definition einer Temperaturskala galt historisch als ein Problem. Rein
+subjektiv k\"onnen wir zwischen k\"alteren und w\"armeren Systemen unterscheiden und
+es ist eine Erfahrungstatsache, dass es eine Eigenschaft gibt, die mit diesem Empfinden
+korreliert, und die f\"ur Systeme, die l\"angere Zeit in Kontakt sind, gleich wird. Diese Eigenschaft
+nennen wir Temperatur.\index{Temperatur} 
+Verschiedene Systeme reagieren jedoch sehr unterschiedlich auf
+Temperatur\"anderungen (Festk\"orper \"andern beipielsweise ihre lineare Ausdehnung, Metalle ihren
+elektrischen Widerstand, Gase ihr Volumen oder ihren Druck etc.). Die Festlegung einer Skala erscheint daher
+zun\"achst willk\"urlich. Erst durch Experimente im 17.\ und 18.\ Jahrhundert fand man heraus,
+dass f\"ur Gase bei hohen Temperaturen und hohen Verd\"unnungen ein von dem jeweiligen Gas
+nahezu unabh\"angiges Ausdehnungsverhalten vorliegt. Die Gesetze von 
+Boyle-Mariotte (um 1670; f\"ur eine\index{Boyle-Mariotte, Gesetz von}
+feste Temperatur ist das Produkt aus Druck und Volumen konstant), 
+von Gay-Lussac\index{Gay-Lussac, Gesetz von} 
+(um 1800; f\"ur einen festen Druck ist das Volumen proportional zur Temperatur, manchmal bezeichnet
+man dieses Gesetz auch als das Gesetz von Charles, der es 1786 entdeckte) 
+und von Amontons\index{Amontons, Gesetz von}
+(um 1700; f\"ur ein konstantes Volumen ist der Druck proportional zur Temperatur) erlaubten eine
+Definition der Temperatur, die in mehrfacher Hinsicht ausgezeichnet war: Sie war unabh\"angig
+von dem jeweiligen Gas sowie von anderen Parametern, sofern die Dichte klein genug und
+die Temperatur hoch genug war, sodass man verschiedene Systeme miteinander vergleichen 
+konnte. Das ideale Gasgesetz in seiner heutigen Form als Zusammenfassung der drei oben genannten
+Gesetze wurde allerdings erst 1834 von Beno\^{i}t Clapeyron formuliert.\index{Clapeyron, Beno\^{i}t} 
+
+1824 erschien eine Schrift von\index{Carnot, Nicolas L\'{e}onard Sadi} 
+Nicolas L\'{e}onard Sadi Carnot, in der er im Wesentlichen den
+Carnot-Prozess beschrieb und eine Schranke f\"ur den Wirkungsgrad von W\"armemaschinen
+(also Maschinen, bei denen ein Temperaturunterschied zwischen zwei Systemen und der
+damit verbundene W\"armefluss, wenn man diese Systeme in Kontakt bringt, genutzt wird, um 
+mechanische Arbeit zu leisten). Eine wichtige Folgerung dieses Prozesses war, dass
+man eine Temperaturskala definieren konnte, ohne sich auf eine spezielle Realisierung zu
+beziehen. Mathematisch kann man sagen: Die Temperatur ist der integrierende Faktor
+zwischen der nicht exakten Einsform W\"arme und der exakten Einsform zur Entropie 
+(d.h.\ dem Gradienten der Zustandsgr\"o\ss e Entropie).  
+
+Die heutige\index{Celsius-Skala} 
+Celsius-Skala wurde 1742 von Anders Celsius\index{Celsius, Anders} 
+formuliert: Er unterteilte die Temperatur
+zwischen dem Gefrier- und dem Siedepunkt von Wasser bei Normaldruck in 100 Teile. Allerdings
+ordnete Celsius dem Siedepunkt die Temperatur 0 und dem Gefrierpunkt die Temperatur
+100 zu. Zwei Jahre sp\"ater (nach dem Tod von Celsius) wurde diese Zuordnung umgedreht.
+Schon einige Zeit vor der Celsius-Skala f\"uhrte\index{Fahrenheit-Skala}\index{Fahrenheit, Daniel Gabriel} 
+Daniel Gabriel Fahrenheit um 1714 eine Temperaturskala
+ein, die auf drei Fixpunkten basierte: $0{\,}^\circ$F entspricht $-17,8{\,}^\circ$C und war damals
+die tiefste Temperatur, die man mit einer sogenannten K\"altemischung (aus Eis, Wasser und Salmiak)
+erzeugen konnte. Fahrenheit glaubte, auf diese Weise negative Temperaturwerte vermeiden
+zu k\"onnen. Der Gefrierpunkt von Wasser wurde zu $32{\,}^\circ$F festgelegt, und die
+K\"orpertemperatur eines gesunden Menschen zu $96{\,}^\circ$F, was mit $35,6{\,}^\circ$C etwas
+niedrig ist. 
+
+William Thomson (First Baron Kelvin)\index{Thomson, William (First Baron Kelvin)} 
+schlug 1848 vor, die Celsius-Skala \glqq zu verschieben\grqq\ und
+den Nullpunkt auf den absoluten Nullpunkt festzulegen, den man z.B.\ aus den idealen Gasgesetzen
+mit dem universellen Volumenausdehnungskoeffizienten $\gamma=1/T$ zur\"uckrechnen konnte. Die
+neue Skala wurde sp\"ater Kelvin genannt.\index{Kelvin-Skala} 
+Sie basierte auf dem absoluten Nullpunkt mit $0$\,K (bis
+1967 sagte man auch \glqq $0$ Grad Kelvin\grqq) sowie dem Tripelpunkt von Wasser, der zu
+$273,16$\,K festgelegt wurde (also bei $0,01{\,}^\circ$C). 
+
+Seit 2019 ist die Einheit Kelvin direkt \"uber die Energieeinheit Joule definiert.
+Die Boltzmann-Konstante ist
+streng genommen keine Naturkonstante sondern verkn\"upft die historische
+Kelvin-Skala mit der Energieskala. Die Temperatur ist direkt proportional zur thermischen
+Energie, d.h.\ die thermische Energie ist zu $k_{\rm B}T$ definiert.   
+
+\subsection{Das Mol}
+
+Dass es \"uberhaupt eine Einheit f\"ur die Substanzmenge gibt, geht vermutlich auf die
+Chemie zur\"uck. Ohne ihre Gesetze h\"atte man Anfang des 19.\ Jahrhunderts Mengen verschiedener 
+Substanzen kaum vergleichen k\"onnen.
+
+John Dalton\index{Dalton, John} 
+entdeckte um 1800 das Gesetz der konstanten Proportionen und das
+Gesetz der multiplen Proportionen. Ersteres besagt, dass in einer Substanz (also einer aus Molek\"ulen
+bestehenden chemischen Zusammensetzung) das Massenverh\"altnis der Bestandteile
+(chemischen Elemente) immer gleich ist. Das zweite Gesetz besagt: Wenn zwei chemische Elemente
+mehrere Verbindungen eingehen k\"onnen (z.B.\ die Stickoxide ${\rm NO}$, ${\rm NO}_2$, ${\rm N_2O}$,
+${\rm N_2O_3}$ etc.), 
+geschieht dies immer in Massenverh\"altnissen, die relativ zu einander kleine Zahlen annehmen. Diese 
+Gesetze unterst\"utzten die Atomtheorie Daltons, allerdings konnte man zu dieser Zeit keine absoluten
+Gr\"o\ss enordnungen angeben. Die Vermutung war aber, dass sich zwei Substanzen $A$ und $B$
+im Prinzip in der Form $AB$ oder $AB_2$ oder $A_2B$ etc.\ verbinden k\"onnen. Wenn man somit
+willk\"urlich eine bestimmte Menge (im Sinne einer bestimmten Masse) der Substanz $A$ als 
+\glqq Mengeneinheit\grqq\ bezeichnet, kann man aus den Masseverh\"altnissen in solchen chemischen 
+Verbindungen die Masse der Substanz $B$ bestimmen, die nach Daltons Atomhypothese dieselbe Anzahl 
+von atomaren Einheiten haben sollte. 
+
+Kurze Zeit sp\"ater - um 1812 - entdeckte\index{Avogadro'sches Gesetz}\index{Avogadro, Amedeo} 
+Amedeo Avogadro das Avogadro'sche Gesetz (oftmals spricht
+man auch von der Avogadro'schen Vermutung, da die Atomhypothese damals nicht als erwiesen galt), 
+wonach (ideale) Gase bei gleicher Temperatur, gleichem Druck und gleichem Volumen auch dieselbe Anzahl 
+von Molek\"ulen enthalten. Seine Vermutung wiederum ging auf eine Beobachtung von Gay-Lussac um 1800
+zur\"uck, die darin bestand, dass sich Gase, wenn diese sich zu einer chemischen Substanz verbinden, immer
+in entsprechenden Volumenverh\"altnissen miteinander reagierten (z.B.\ zwei Volumeneinheiten Wasserstoff
+mit einer Volumeneinheit Sauerstoff zu Wasser, ${\rm H_2O}$). 
+
+Es folgte ein Sprung bis in die Mitte des 19.\ Jahrhunderts:
+Josef Loschmidt\index{Loschmidt, Josef}\index{mittlere Wegl\"ange} 
+fand 1865 eine interessante Beziehung zwischen der mittleren Wegl\"ange $l$ von
+Luftmolek\"ulen bei einer bestimmten Temperatur $T$, dem
+Durchmesser $d$ der Luftmolek\"ule und dem Verh\"altnis $V_{\rm l}/V_{\rm g}$ - dem Volumen $V_{\rm l}$
+von Luft in seiner fl\"ussigen Form und dem Volumen $V_{\rm g}$ derselben Masse an Luft im gasf\"ormigen
+Zustand bei derselben Temperatur $T$ (er nannte dieses Verh\"altnis Kondensationskoeffizient):
+\begin{equation}
+               d = 8 l \frac{V_{\rm l}}{V_{\rm g}} \, .
+\end{equation} 
+Loschmidt wusste, dass diese Beziehung wegen mehrerer N\"aherungen, die er gemacht hatte, nicht 
+exakt gilt, ihm ging es aber auch nur um eine Bestimmung der
+Gr\"o\ss enordnung von $d$. Das Volumen fl\"ussiger Luft war damals zwar noch nicht bekannt,
+allerdings verwendete er theoretische \"Uberlegungen, dieses Volumen aus der chemischen Zusammensetzung
+und dem Vergleich mit \"ahnlichen Gasen (z.B.\ Wasser, wo dieses Verh\"altnis bekannt war) abzusch\"atzen. 
+Maxwell hatte in seiner Arbeit von 1860 unter Bezug auf Messungen von Stokes die mittlere freie Wegl\"ange 
+der Luftmolek\"ule bei Zimmertemperatur ziemlich gut auf etwas \"uber 60 Nanometer (heute gibt man meist 68\,nm an) 
+abgesch\"atzt. Damit konnte Loschmidt den Durchmesser der Luftmolek\"ule mit rund 1\,nm angeben.
+Es war dann wieder Maxwell, der erkannte, 
+dass man aus dem Wert von Loschmidt f\"ur die Gr\"o\ss e der Luftmolek\"ule auch deren Anzahl in einem 
+bestimmten Volumen bzw.\ einer bestimmten Masse (und damit die heutige Avogadro-Zahl) bestimmen konnte. 
+(N\"aheres in Abschnitt \ref{sec_SI_Kur}.)
+
+Auch wenn sich die Verfahren zur Bestimmung der Avogadro-Zahl im Verlauf der Zeit
+verbesserten, blieb sie mit vergleichsweise gro\ss en Ungenauigkeiten behaftet. Daher\index{Mol}
+behielt man bis 2018 die historische Definition f\"ur ein Mol bei: Das Mol ist die Stoffmenge eines Systems, das aus
+ebensoviel Einzelteilchen besteht, wie Atome in 0,012 Kilogramm des Kohlenstoffnuklids ${}^{12}$C enthalten
+sind. Durch die Festlegung der Avogadro-Zahl wurde die Einheit Mol eigentlich \"uberfl\"ussig, sie ist jedoch
+aus praktischen Gr\"unden immer noch sinnvoll.
+
+\section{Historische Kuriosit\"aten}
+
+Im Zusammenhang mit der Festlegung der fundamentalen Einheiten gibt es einige 
+interessante und teilweise am\"usante historische Anmerkungen.
+
+\subsection{Jean Picard und das Meter}
+
+Eine interessante Idee,\index{Picard, Jean}
+eine von k\"orperlichen Gliedma\ss en unabh\"angige Definition des Meters zu finden, stammt
+von Jean Picard, der 1668 vorschlug, als L\"angeneinheit die L\"ange eines Pendels mit der Halbperiode 
+von einer Sekunde zu w\"ahlen. Diesem Vorschlag ging die Beobachtung Galileis um 1630 voraus, dass
+ein Pendel f\"ur kleine Auslenkungen eine wohldefinierte Periode (unabh\"angig von dem Grad
+der Auslenkung) hat; au\ss erdem hatte\index{Huygens, Christiaan}\index{Pendeluhr} 
+Christiaan Huygens um 1656 das Prinzip der Pendeluhr
+erfunden. Nach der Formel f\"ur die Periodenl\"ange $T$ eines Pendels der L\"ange $l$ im Schwerefeld
+der Erde mit der Erdbeschleunigung $g$ bei kleinen Auslenkungen,
+\begin{equation}
+       T = 2 \pi \sqrt{\frac{l}{g}}   \, ,
+\end{equation}
+folgt aus $T/2=1$\,s mit $g=9,81\,{\rm m/s^2}$ die L\"ange $l=0,99396$\,m. Dieser Vorschlag Picards ist insofern
+interessant, weil hier ein L\"angenma\ss stab \"uber eine \glqq Naturkonstante\grqq\ ($g$) auf eine
+Zeiteinheit zur\"uckgef\"uhrt wurde. Vermutlich trug die schlechte Reproduzierbarkeit der Sekunde
+dazu bei, dass sich dieser Vorschlag nicht durchsetzte. Dass $g$ an verschiedenen Orten der Welt
+unterschiedliche Werte hat, stellte sich erst sp\"ater heraus, wobei schon Picard als Referenzort
+Paris vorgeschlagen hatte. 
+
+\subsection{$\sqrt{2}$ oder $4/3$ - wenn gro\ss e Geister uneins sind}
+\label{sec_SI_Kur}
+
+Wenn sich zwei gro\ss e Wissenschaftler - in diesem Fall James Clerk Maxwell und Rudolf Clausius - um 
+einen Faktor streiten, kann man davon ausgehen, dass ein interessantes Problem dahintersteckt.  
+
+1858 formulierte\index{Clausius, Rudolf} 
+Rudolf Clausius eine Beziehung zwischen der mittleren freien Wegl\"ange $l$ von Atomen 
+bzw.\ Molek\"ulen in Gasen und ihrer Gr\"o\ss e \cite{Clausius58}. Die Herleitung dieser Formel
+erfolgt heute meist in folgender Form: Angenommen, wir haben einen Beh\"alter vom Volumen $V$ mit
+$N$ kugelf\"ormigen Teilchen ($N$ sehr gro\ss, Teilchendichte $\rho=N/V$), die in diesem Volumen zuf\"allig 
+verteilt sind und zun\"achst als in Ruhe angenommen werden. F\"ur ein weiteres Teilchen, das sich mit der 
+Geschwindigkeit $v$ durch diesen Beh\"alter bewegt, ist $s=vt$ die in der Zeit $t$ zur\"uckgelegte Strecke. 
+Die Frage ist: Wie oft st\"o\ss t dieses Teilchen auf 
+dieser Strecke mit anderen Teilchen zusammen, wobei der Wirkungsqueschnitt f\"ur einen solchen
+Zusammensto\ss\ $\sigma$ (Dimension einer Fl\"ache) sein soll? $\sigma\cdot vt$ ist das Volumen des Zylinders,
+den das Teilchen mit seinem Wirkungsquerschnitt f\"ur einen Zusammensto\ss\ mit einem ruhenden Teilchen
+in der Zeit $t$ \"uberstrichen hat.
+In diesem Zylinder befinden sich $\rho \sigma \cdot v t$ ruhende Teilchen, mit denen das fliegende Teilchen
+im Prinzip zusammengesto\ss en ist; dies ist also die Anzahl der Zusammenst\"o\ss e. Die mittlere freie
+Wegl\"ange $l$ ist nun die zur\"ckgelegte Stecke $vt$ dividiert durch die mittlere Anzahl der Zusammenst\"o\ss e,
+also
+\begin{equation}
+           l = \frac{vt}{\rho \sigma \cdot vt} = (\rho \sigma)^{-1}  \, .
+\end{equation}   
+Wenn sich die anderen Teilchen nicht in Ruhe befinden, sondern eine mittlere Geschwindigkeit $u$
+haben, z\"ahlt f\"ur das in der Zeit $t$ \"uberstrichene Volumen die mittlere Relativgeschwindigkeit zwischen 
+$v$ und $u$; diese ist $v_{\rm rel}=\sqrt{v^2+u^2}$ (das Skalarprodukt $\pmb{u} \cdot \pmb{v}$ verschwindet im Mittel). 
+Da $u$ und $v$ im Mittel gleich sind, erhalten wir einen Faktor $\sqrt{2}$:
+\begin{equation}
+\label{eq_meanfreepath}
+           l = \frac{vt}{\rho \sigma \cdot v_{\rm rel}t} = (\sqrt{2}\rho \sigma)^{-1}  \, .
+\end{equation}   
+
+Clausius hatte in seiner Arbeit von 1858 \cite{Clausius58} statt des Faktors $\sqrt{2}$ ohne eine weitere Begr\"undung
+den Faktor $4/3$ verwendet.\index{Maxwell, James Clerk} 
+James Clerk Maxwell hatte in seiner Arbeit von 1860, in der er auch die heute als
+Maxwell'sche Geschwindigkeitsverteilung bekannte Verteilungsformel f\"ur die Geschwindigkeiten der
+Molek\"ule bzw.\ Atome bei einer bestimmten Temperatur herleitete \cite{Maxwell60}, den Faktor $\sqrt{2}$
+nach obiger Argumentation hergeleitet und in einer Notiz vermerkt, dass Clausius statt dessen den Faktor 
+$4/3$ verwendet habe. Daraufhin f\"uhlte sich Clausius gen\"otigt, seinen Faktor $4/3$ zu begr\"unden \cite{Clausius60}. 
+Bis zum ersten Gleichheitszeichen in
+Gl.\ \ref{eq_meanfreepath} stimmen beide Autoren \"uberein. Doch Claudius berechnet die mittlere
+relative Geschwindigkeit, indem er \"uber die Richtungen aller Geschwindigkeiten $u$ der anderen Teilchen
+mittelt:
+\begin{equation}
+    v_{\rm rel} = \frac{1}{2} \int_0^\pi \sqrt{ v^2 + u^2 - 2uv \cos \theta} \, \sin \theta \, {\rm d} \theta \, .  
+\end{equation}
+Das Integrationsma\ss\ $\frac{1}{2} \sin \theta \, {\rm d}\theta$ begr\"undet Clausius mit dem Argument,
+dass jede Richtung gleichwahrscheinlich sei und daher proportional zum Fl\"achenelement zu dieser Richtung.
+Die relative H\"aufigkeit, in die Richtung $\theta$ abgelenkt zu werden, ist somit $2 \pi \sin \theta \, {\rm d}\theta/4\pi$
+(Fl\"achenelement zum Winkel ${\rm d}\theta$ relativ zur Kugeloberfl\"ache). Heute w\"urden wir das Ma\ss\ 
+in Winkelkoordinaten f\"ur die Kugeloberfl\"ache schreiben, $\frac{1}{4\pi} \sin \theta \, {\rm d} \theta\, {\rm d}\varphi$, 
+und da der Integrand nicht von $\varphi$ abh\"angt, k\"onnen wir das Integral \"uber $\varphi$
+ausf\"uhren (es ergibt einen Faktor $2\pi$) und wir erhalten 
+dasselbe Ergebnis.
+
+Das Integral l\"asst sich mit $\sin\theta \, {\rm d}\theta = {\rm d}\cos \theta$ leicht berechnen und man
+erh\"alt:
+\begin{equation}
+    v_{\rm rel} = \frac{1}{6uv}  (v^2 + u^2 - 2uv \cos \theta )^{3/2} \Big|_0^\pi  
+     =  \frac{1}{6 uv} \big( |v+u|^3 - |v-u|^3 \big)  
+     =  \left\{ \begin{array}{ll}  v + \frac{u^2}{3v} &  u\leq v \\  u + \frac{v^2}{3u} & u>v \end{array} \right. \, .
+\end{equation}
+F\"ur $u=v$ ist somit $v_{\rm rel}= \frac{4}{3}v$. Diese Argumentation klingt sehr vern\"unftig. 
+
+In den \glqq Collected Papers\grqq\ von Maxwell aus dem Jahre 1890 ist auch die 1860er Arbeit 
+wiedergegeben \cite{Maxwell90},
+allerdings  folgt der Bemerkung, dass Clausius den Faktor 4/3 verwendet, eine Fu\ss note, die der
+Herausgeber hinzugef\"ugt hat. Dort hei\ss t es, dass das Ergebnis von Clausius zwar im Prinzip richtig ist, 
+Clausius aber immer nur von einer mittleren Geschwindigkeit $u$ bzw.\ $v$ der Teilchen ausgegangen ist und
+f\"ur $u=v$ annimmt, dass alle Teilchen dieselbe Geschwindigkeit haben und lediglich ihre Richtungen
+gleichverteilt sind. Er ersetzt nun den konstanten Geschwindigkeitsbetrag f\"ur $u$ und $v$ (mit der Mittelung \"uber alle
+Richtungen - hier verwendet der Herausgeber die Formeln von Clausius) durch die Maxwell'sche 
+Geschwindigkeitsverteilung und behauptet (ohne Beweis), dass dies auf den gew\"unschten Faktor $\sqrt{2}$
+statt 4/3 f\"uhre. 
+
+
+%\begin{equation}
+%               d = 8 l \frac{V_{\rm l}}{V_{\rm g}} \hspace{1.5cm} {\rm heute} \hspace{0.6cm}
+%               d = \sqrt{2} \cdot  6 \cdot l \frac{V_{\rm l}}{V_{\rm g}} \, .
+%\end{equation} 
+%Loschmidt wusste, dass es sich bei dieser Beziehung nur um eine N\"aherung handelte,
+%da sie beispielsweise den Leerraum zwischen Molek\"ulen in der fl\"ussigen
+%Phase vernachl\"assigt, doch er schreibt: \glqq ... [der Wert f\"ur die Gr\"o\ss e der Luftmolek\"ule] 
+%ist aber sicher nicht um das zehnfache zu gro\ss\ oder zu klein\grqq, 
+%was sich als richtig herausstellte (er lag um einen Faktor 3,5 falsch). 
+
+Loschmidt verwendete die Clausius'sche Beziehung zwischen der mittleren freien
+Wegl\"ange und dem Durchmesser (sowie der Dichte) der Molek\"ule. Die \glqq heutige\grqq\ Formel
+beruht auf dem von Maxwell korrigierten Faktor. Allerdings sind beide Gleichungen ohnehin nur als
+N\"aherungen aufzufassen, da sie beispielsweise den Leerraum zwischen Molek\"ulen in der fl\"ussigen
+Phase vernachl\"assigen. 
+
+\begin{thebibliography}{99}
+\bibitem{Clausius58} Rudolf Clausius; \textit{\"Uber die mittlere L\"ange der Wege, welche bei der
+       Molecularbewegung gasf\"ormiger K\"orper von den einzelnen Molec\"ulen zur\"uckgelegt werden;
+       nebst einigen anderen Bemerkungen \"uber die mechanische W\"armetheorie}; Annalen der Physik 181 (1958),
+       p.\ 239--258. \\
+       \url{https://era-prod11.ethz.ch/zut/ch19/content/zoom/15344023}
+\bibitem{Clausius60} Rudolf Clausius; \textit{On the dynamical theory of gases}; Philosophical Magazine 19,
+         4.\ Series (1860); p.\ 434--436. 
+\bibitem{Maxwell60} James Clerk Maxwell; \textit{Illustrations of the dynamical theory of gases -- Part I.\ on the
+           motions and collisions of perfectly elastic spheres}; Philosophical Magazine 19; 4.\ Series (1860); 
+           p.\ 19--32.               
+\bibitem{Maxwell90} James Clerk Maxwell; \textit{The Scientific Papers of James Clerk Maxwell}; Cambridge
+              University Press, 1890.            
+\bibitem{Loschmidt} Johann Josef Loschmidt; \textit{Zur Gr\"o\ss e der Luftmolec\"ule}; Sitzungsbericht der kais.\ Akad.\
+           der Wissenschaften, Band 52 (1866) Abt.\ II; p.\ 395--413.  
+           \url{https://mpoweruk.com/timekeepers.htm}
+\end{thebibliography}
+
+
+\end{document}
+

@@ -87,13 +87,14 @@ def create_app(db_url=None):
 
     app.config['UPLOAD_FOLDER'] = './upload_dir/attachment'
 
+    @app.route('/')
+    def home():
+        return render_template('index.html')
 
     return app
 
 
-# @app.route('/')
-# def home():
-#     return render_template('index.html')
+
 
 
 
