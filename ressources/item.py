@@ -130,10 +130,10 @@ def download_files(item_id):
 
         src = "upload_dir/attachment/" + topic_folder_name + "/" + item.name
         src_pic = "upload_dir/attachment/Bilder"
-        os.makedirs(tmpdirname + '\Bilder')
+        os.makedirs(tmpdirname + '/Bilder')
         copy_files(src, tmpdirname)
         copy_files("upload_dir/attachment/Preambel", tmpdirname)
-        copy_files(src_pic, tmpdirname + '\Bilder')
+        copy_files(src_pic, tmpdirname + '/Bilder')
 
         if item.name in ["Klass_03_Zeitgleichung",
                          "Klass_05_Uhren",
@@ -141,7 +141,7 @@ def download_files(item_id):
                          "Klass_10_Landkarten",
                          "QM_01_QuBit",
                          "SRT_03_Kette"]:
-            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '\Bilder') 
+            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder') 
 
         output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
         output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
