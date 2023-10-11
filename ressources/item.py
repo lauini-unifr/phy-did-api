@@ -1,5 +1,4 @@
 import os
-import app
 
 from flask import request,send_file
 from flask.views import MethodView
@@ -12,18 +11,11 @@ from db import db
 from models import ItemModel
 from schemas import ItemSchema, ItemUpdateSchema
 
-## TODO remove to own class
-from pylatex import Document
-from pylatex.utils import NoEscape
-from pdflatex import PDFLaTeX
-from latexcompiler import LC
-
 import subprocess
 import tempfile
 from pathlib import Path
 import shutil
 import os
-
 
 blp = Blueprint("items", __name__, description="Operations on items")
 
@@ -101,59 +93,5 @@ def upload_file():
     
     abort(401, message="No file in request.")
 
-def copy_files(src, trg):
-    files=os.listdir(src)
- 
-    # iterating over all the files in
-    # the source directory
-    for fname in files:
-        
-        # copying the files to the
-        # destination directory
-        shutil.copy2(os.path.join(src,fname), trg)
 
-@blp.route('/download/<int:item_id>', methods=['GET'])
-def download_files(item_id):
-
-    item = ItemModel.query.get_or_404(item_id)
-    if item.file_name:
-        tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
-
-        if item.topic.name == "Klimaphysik":
-            topic_folder_name = "Skript_Klima"
-        elif item.topic.name == "Klassische Systeme":
-            topic_folder_name = "Skript_klass"
-        elif item.topic.name == "Quantenphysik":
-            topic_folder_name = "Skript_QM"
-        elif item.topic.name == "Relativitätstheorie":
-            topic_folder_name = "Skript_SRT"    
-
-        src = "upload_dir/attachment/" + topic_folder_name + "/" + item.name
-        src_pic = "upload_dir/attachment/Bilder"
-        os.makedirs(tmpdirname + '/Bilder')
-        copy_files(src, tmpdirname)
-        copy_files("upload_dir/attachment/Preambel", tmpdirname)
-        copy_files(src_pic, tmpdirname + '/Bilder')
-
-        if item.name in ["Klass_03_Zeitgleichung",
-                         "Klass_05_Uhren",
-                         "Klass_08_Nachthimmel",
-                         "Klass_10_Landkarten",
-                         "QM_01_QuBit",
-                         "SRT_03_Kette"]:
-            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder') 
-
-        output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
-        output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
-
-        path = Path(tmpdirname + "/file.pdf").resolve()
-
-        
-        #except:
-        # abort(500, message="An error occurred while compiling the pdf.")
-
-        return send_file(path, as_attachment=True, mimetype="application/pdf")
-
-    
-    abort(401, message="No file in request.")
 
