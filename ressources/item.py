@@ -143,8 +143,8 @@ def download_files(item_id):
                          "SRT_03_Kette"]:
             copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder') 
 
-        output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
-        output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
+        output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
+        output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
 
         path = Path(tmpdirname + "/file.pdf").resolve()
 
