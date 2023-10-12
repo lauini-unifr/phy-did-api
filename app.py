@@ -189,4 +189,7 @@ def create_app(db_url=None):
         return send_file(future.result(), as_attachment=True, mimetype="application/pdf")
 
 
+    if __name__ == "__main__":
+        app.run(host='0.0.0.0')
+
     return app
