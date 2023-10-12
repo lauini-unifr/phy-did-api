@@ -114,18 +114,7 @@ def create_app(db_url=None):
             # destination directory
             shutil.copy2(os.path.join(src,fname), trg)
 
-    def generate_pdf(tmpdirname, file_name):
-        output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', file_name])
-        output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', file_name])
-
-        path = Path(tmpdirname + "/file.pdf").resolve()
-
-        return path
-
-    @app.route('/download', methods=['GET'])
-    def download_files():
-        item_id = 1
-
+    def generate_pdf(item_id):
         item = ItemModel.query.get_or_404(item_id)
         if item.file_name:
             tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
@@ -152,17 +141,26 @@ def create_app(db_url=None):
                                 "Klass_10_Landkarten",
                                 "QM_01_QuBit",
                                 "SRT_03_Kette"]:
-                copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder') 
-
-        executor.submit_stored('pdf_ready', generate_pdf, tmpdirname, item.file_name)
+                copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder')
 
 
-        path = executor.submit(generate_pdf, tmpdirname, item.file_name)
+        output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
+        output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
 
-        print(path)
+        path = Path(tmpdirname + "/file.pdf").resolve()
+
+        return path
+
+    @app.route('/download', methods=['GET'])
+    def download_files():
+        item_id = 1
+
         
+         
 
+        executor.submit_stored('pdf_ready', generate_pdf, item_id)
 
+    
         #except:
         # abort(500, message="An error occurred while compiling the pdf.")
 
@@ -175,6 +173,7 @@ def create_app(db_url=None):
             
             #except:
             # abort(500, message="An error occurred while compiling the pdf.")
+        time.sleep(5)
 
         return redirect("/get-pdf")
 
