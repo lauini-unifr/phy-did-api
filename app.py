@@ -122,14 +122,15 @@ def create_app(db_url=None):
 
     def generate_pdf(item_ids):
         if item_ids:
-            texdoc = []  # a list of string representing the latex document in python
-            begin = r'\documentclass[german,10pt]{book}      \input{preambel.tex}         \begin{document}  \setcounter{chapter}{0}'
-            texdoc.append(begin)
+            try:
+                texdoc = []  # a list of string representing the latex document in python
+                begin = r'\documentclass[german,10pt]{book}      \input{preambel.tex}         \begin{document}  \setcounter{chapter}{0}'
+                texdoc.append(begin)
 
-            for item_id in item_ids:
-                item = ItemModel.query.get_or_404(int(item_id))
-                if item.file_name:
-                    try:
+                for item_id in item_ids:
+                    item = ItemModel.query.get_or_404(int(item_id))
+                    if item.file_name:
+                    
                         tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
 
                         if item.topic.name == "Klimaphysik":
@@ -160,22 +161,23 @@ def create_app(db_url=None):
                                         "QM_01_QuBit",
                                         "SRT_03_Kette"]:
                             copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '\Bilder') 
-                    except Exception as e:
-                        app.logger.error(f"Fehler in some_route: {str(e)}")
-                        abort(500, message="An error occurred while compiling the pdf.")
+                    
 
-            texdoc.append(r'\end{document}')
+                texdoc.append(r'\end{document}')
 
-            # write back the new document
-            with open(os.path.join(tmpdirname, 'final.tex')  , 'w') as f_out:
-                for i in range(len(texdoc)):
-                    f_out.write(texdoc[i])
+                # write back the new document
+                with open(os.path.join(tmpdirname, 'final.tex')  , 'w') as f_out:
+                    for i in range(len(texdoc)):
+                        f_out.write(texdoc[i])
 
 
-            output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', 'final.tex'])
-            output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', 'final.tex'])
+                output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', 'final.tex'])
+                output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', 'final.tex'])
 
-            path = Path(tmpdirname + "/file.pdf").resolve()
+                path = Path(tmpdirname + "/file.pdf").resolve()
+            except Exception as e:
+                    app.logger.error(f"Fehler in some_route: {str(e)}")
+                    abort(500, message="An error occurred while compiling the pdf.")
 
             return path
                     
