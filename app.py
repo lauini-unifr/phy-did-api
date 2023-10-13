@@ -6,6 +6,7 @@ from flask_smorest import Api, abort
 from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
 from flask_executor import Executor
+from flask_cors import CORS
 
 from db import db
 from sqlalchemy_file.storage import StorageManager
@@ -31,6 +32,8 @@ from ressources.user import blp as UserBlueprint
 
 def create_app(db_url=None):
     app = Flask(__name__)
+
+    CORS(app)
 
     app.config["PROPAGATE_EXCEPTIONS"] = True
     app.config["API_TITLE"] = "Topics REST API"
