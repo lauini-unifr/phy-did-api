@@ -127,12 +127,11 @@ def create_app(db_url=None):
                 begin = r'\documentclass[german,10pt]{book}      \input{preambel.tex}         \begin{document}  \setcounter{chapter}{0}'
                 texdoc.append(begin)
                 tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
+                os.makedirs(tmpdirname + '/Bilder')
 
                 for item_id in item_ids:
                     item = ItemModel.query.get_or_404(int(item_id))
                     if item.file_name:
-                    
-                        
 
                         if item.topic.name == "Klimaphysik":
                             topic_folder_name = "Skript_Klima"
@@ -150,7 +149,7 @@ def create_app(db_url=None):
                                     texdoc.append(line)
 
                         src_pic = "upload_dir/attachment/Bilder"
-                        os.makedirs(tmpdirname + '/Bilder')
+                        
                         #copy_files(src, tmpdirname)
                         copy_files("upload_dir/attachment/Preambel", tmpdirname)
                         copy_files(src_pic, tmpdirname + '/Bilder')
