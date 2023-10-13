@@ -119,71 +119,80 @@ def create_app(db_url=None):
             # destination directory
             shutil.copy2(os.path.join(src,fname), trg)
 
-    def generate_pdf(item_id):
-        item = ItemModel.query.get_or_404(item_id)
-        if item.file_name:
-            try:
-                tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
 
-                if item.topic.name == "Klimaphysik":
-                    topic_folder_name = "Skript_Klima"
-                elif item.topic.name == "Klassische Systeme":
-                    topic_folder_name = "Skript_klass"
-                elif item.topic.name == "Quantenphysik":
-                    topic_folder_name = "Skript_QM"
-                elif item.topic.name == "Relativitätstheorie":
-                    topic_folder_name = "Skript_SRT"    
+    def generate_pdf(item_ids):
+        if item_ids:
+            texdoc = []  # a list of string representing the latex document in python
+            begin = r'\documentclass[german,10pt]{book}      \input{preambel.tex}         \begin{document}  \setcounter{chapter}{0}'
+            texdoc.append(begin)
 
-                src = "upload_dir/attachment/" + topic_folder_name + "/" + item.name
-                src_pic = "upload_dir/attachment/Bilder"
-                os.makedirs(tmpdirname + '/Bilder')
-                copy_files(src, tmpdirname)
-                copy_files("upload_dir/attachment/Preambel", tmpdirname)
-                copy_files(src_pic, tmpdirname + '/Bilder')
+            for item_id in item_ids:
+                item = ItemModel.query.get_or_404(int(item_id))
+                if item.file_name:
+                    try:
+                        tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
 
-                if item.name in ["Klass_03_Zeitgleichung",
-                                    "Klass_05_Uhren",
-                                    "Klass_08_Nachthimmel",
-                                    "Klass_10_Landkarten",
-                                    "QM_01_QuBit",
-                                    "SRT_03_Kette"]:
-                    copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder')
+                        if item.topic.name == "Klimaphysik":
+                            topic_folder_name = "Skript_Klima"
+                        elif item.topic.name == "Klassische Systeme":
+                            topic_folder_name = "Skript_klass"
+                        elif item.topic.name == "Quantenphysik":
+                            topic_folder_name = "Skript_QM"
+                        elif item.topic.name == "Relativitätstheorie":
+                            topic_folder_name = "Skript_SRT"    
 
+                        src = "upload_dir/attachment/" + topic_folder_name + "/" + item.name + "/" + item.file_name
+                        with open(src) as f_in:
+                            for line in f_in:
+                                if '\documentclass[german,10pt]' not in line and '\end{document}' not in line:
+                                    texdoc.append(line)
 
-                output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
-                output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
+                        src_pic = "upload_dir/attachment/Bilder"
+                        os.makedirs(tmpdirname + '\Bilder')
+                        #copy_files(src, tmpdirname)
+                        copy_files("upload_dir/attachment/Preambel", tmpdirname)
+                        copy_files(src_pic, tmpdirname + '\Bilder')
 
-                path = Path(tmpdirname + "/file.pdf").resolve()
+                        if item.name in ["Klass_03_Zeitgleichung",
+                                        "Klass_05_Uhren",
+                                        "Klass_08_Nachthimmel",
+                                        "Klass_10_Landkarten",
+                                        "QM_01_QuBit",
+                                        "SRT_03_Kette"]:
+                            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '\Bilder') 
+                    except Exception as e:
+                        app.logger.error(f"Fehler in some_route: {str(e)}")
+                        abort(500, message="An error occurred while compiling the pdf.")
 
-                return path
-            except Exception as e:
-                app.logger.error(f"Fehler in some_route: {str(e)}")
-                abort(500, message="An error occurred while compiling the pdf.")
-        else:
-            abort(401, message="No file in request.")
+            texdoc.append(r'\end{document}')
 
-    @app.route('/download', methods=['GET'])
-    def download_files():
-        item_id = 1
-
-        
-         
-
-        executor.submit_stored('pdf_ready', generate_pdf, item_id)
-
-    
-        #except:
-        # abort(500, message="An error occurred while compiling the pdf.")
+            # write back the new document
+            with open(os.path.join(tmpdirname, 'final.tex')  , 'w') as f_out:
+                for i in range(len(texdoc)):
+                    f_out.write(texdoc[i])
 
 
-            # output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
-            # output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
+            output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', 'final.tex'])
+            output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', 'final.tex'])
 
-            # path = Path(tmpdirname + "/file.pdf").resolve()
+            path = Path(tmpdirname + "/file.pdf").resolve()
 
-            
+            return path
+                    
             #except:
             # abort(500, message="An error occurred while compiling the pdf.")
+
+        
+        else:
+            abort(401, message="No ids in request.")
+    
+
+    @app.route('/download/<item_ids_as_str>', methods=['GET'])
+    def download_files(item_ids_as_str):
+        item_ids = item_ids_as_str.split("+")
+        
+        executor.submit_stored('pdf_ready', generate_pdf, item_ids)
+
         time.sleep(5)
 
         return redirect("/get-pdf")
