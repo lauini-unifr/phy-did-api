@@ -2,7 +2,7 @@ import os
 import secrets
 
 from flask import Flask, render_template, request, redirect, jsonify, send_file
-from flask_smorest import Api
+from flask_smorest import Api, abort
 from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
 from flask_executor import Executor
@@ -20,6 +20,7 @@ from pathlib import Path
 import shutil
 import os
 import time
+import logging
 
 from ressources.item import blp as ItemBlueprint
 from ressources.topic import blp as TopicBlueprint
@@ -40,6 +41,10 @@ def create_app(db_url=None):
     app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
     app.config["SQLALCHEMY_DATABASE_URI"] = db_url or os.getenv("DATABASE_URL", "sqlite:///data.db")
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+    # Logging
+    logging.basicConfig(filename='app.log', level=logging.INFO)
+    app.logger.addHandler(logging.StreamHandler())
 
     db.init_app(app)
     migrate = Migrate(app,db,render_as_batch=True)
@@ -117,39 +122,45 @@ def create_app(db_url=None):
     def generate_pdf(item_id):
         item = ItemModel.query.get_or_404(item_id)
         if item.file_name:
-            tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
+            try:
+                tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
 
-            if item.topic.name == "Klimaphysik":
-                topic_folder_name = "Skript_Klima"
-            elif item.topic.name == "Klassische Systeme":
-                topic_folder_name = "Skript_klass"
-            elif item.topic.name == "Quantenphysik":
-                topic_folder_name = "Skript_QM"
-            elif item.topic.name == "Relativitätstheorie":
-                topic_folder_name = "Skript_SRT"    
+                if item.topic.name == "Klimaphysik":
+                    topic_folder_name = "Skript_Klima"
+                elif item.topic.name == "Klassische Systeme":
+                    topic_folder_name = "Skript_klass"
+                elif item.topic.name == "Quantenphysik":
+                    topic_folder_name = "Skript_QM"
+                elif item.topic.name == "Relativitätstheorie":
+                    topic_folder_name = "Skript_SRT"    
 
-            src = "upload_dir/attachment/" + topic_folder_name + "/" + item.name
-            src_pic = "upload_dir/attachment/Bilder"
-            os.makedirs(tmpdirname + '/Bilder')
-            copy_files(src, tmpdirname)
-            copy_files("upload_dir/attachment/Preambel", tmpdirname)
-            copy_files(src_pic, tmpdirname + '/Bilder')
+                src = "upload_dir/attachment/" + topic_folder_name + "/" + item.name
+                src_pic = "upload_dir/attachment/Bilder"
+                os.makedirs(tmpdirname + '/Bilder')
+                copy_files(src, tmpdirname)
+                copy_files("upload_dir/attachment/Preambel", tmpdirname)
+                copy_files(src_pic, tmpdirname + '/Bilder')
 
-            if item.name in ["Klass_03_Zeitgleichung",
-                                "Klass_05_Uhren",
-                                "Klass_08_Nachthimmel",
-                                "Klass_10_Landkarten",
-                                "QM_01_QuBit",
-                                "SRT_03_Kette"]:
-                copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder')
+                if item.name in ["Klass_03_Zeitgleichung",
+                                    "Klass_05_Uhren",
+                                    "Klass_08_Nachthimmel",
+                                    "Klass_10_Landkarten",
+                                    "QM_01_QuBit",
+                                    "SRT_03_Kette"]:
+                    copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder')
 
 
-        output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
-        output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
+                output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
+                output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
 
-        path = Path(tmpdirname + "/file.pdf").resolve()
+                path = Path(tmpdirname + "/file.pdf").resolve()
 
-        return path
+                return path
+            except Exception as e:
+                app.logger.error(f"Fehler in some_route: {str(e)}")
+                abort(500, message="An error occurred while compiling the pdf.")
+        else:
+            abort(401, message="No file in request.")
 
     @app.route('/download', methods=['GET'])
     def download_files():
