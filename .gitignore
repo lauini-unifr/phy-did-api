@@ -1,0 +1,6 @@
+__pycache__
+.venv
+.vscode
+github_uni_fr
+github_uni_fr.pub
+.flaskenv
