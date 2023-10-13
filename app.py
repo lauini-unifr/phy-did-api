@@ -165,25 +165,8 @@ def create_app(db_url=None):
     @app.route('/download', methods=['GET'])
     def download_files():
         item_id = 1
-
-        
-         
-
         executor.submit_stored('pdf_ready', generate_pdf, item_id)
 
-    
-        #except:
-        # abort(500, message="An error occurred while compiling the pdf.")
-
-
-            # output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
-            # output = subprocess.run(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', item.file_name])
-
-            # path = Path(tmpdirname + "/file.pdf").resolve()
-
-            
-            #except:
-            # abort(500, message="An error occurred while compiling the pdf.")
         time.sleep(5)
 
         return redirect("/get-pdf")
