@@ -4,3 +4,4 @@ __pycache__
 github_uni_fr
 github_uni_fr.pub
 .flaskenv
+app.log
