@@ -126,12 +126,13 @@ def create_app(db_url=None):
                 texdoc = []  # a list of string representing the latex document in python
                 begin = r'\documentclass[german,10pt]{book}      \input{preambel.tex}         \begin{document}  \setcounter{chapter}{0}'
                 texdoc.append(begin)
+                tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
 
                 for item_id in item_ids:
                     item = ItemModel.query.get_or_404(int(item_id))
                     if item.file_name:
                     
-                        tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
+                        
 
                         if item.topic.name == "Klimaphysik":
                             topic_folder_name = "Skript_Klima"
