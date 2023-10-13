@@ -208,7 +208,9 @@ def create_app(db_url=None):
         while not executor.futures.done('pdf_ready'):
             time.sleep(5)
         future = executor.futures.pop('pdf_ready')
-        return send_file(future.result(), as_attachment=True, mimetype="application/pdf")
+        response = send_file(future.result(), as_attachment=True, mimetype="application/pdf")
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        return response
 
 
     if __name__ == "__main__":
