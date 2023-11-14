@@ -30,6 +30,8 @@
         <option value="13">Interferometer</option>
         <option value="14">BB84 - Quantenkryptographie</option>
         <option value="15">Quantenradierer</option>
+        <option value="21">Verschränkung</option>
+        <option value="22">EPR-Bell-CHSH</option>
       </optgroup>
       <optgroup label="Relativitätstheorie">
         <option value="16">Grundlagen der SRT</option>
@@ -41,26 +43,9 @@
     </select>
 
     <div>
-      <button onclick="getIDs();" id="loader">Ausgewählte Kapitel herunterladen </button><div id="spinner" style="display: none; float: left;"><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" ></span></div>
+      <button class="btn-primary" onclick="getIDs();" id="loader">Ausgewählte Kapitel herunterladen </button><div id="spinner" style="display: none; float: left;"><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" ></span></div>
     </div>
 
-    <select class="form-select" multiple>
-        <optgroup label="Klimaphysik">
-          <option value="1">Solarkonstante und Paleoklima</option>
-          <option value="2">Klimamodelle</option>
-        </optgroup>
-        <optgroup label="Klassische Systeme">
-          <option value="3">SI-Einheiten</option>
-          <option value="4">Kalendersysteme</option>
-          <option value="5">Die Zeitgleichung</option>
-        </optgroup>
-      </select>
-    
-    
-    <button id="downloadButton">Herunterladen</button>
-
-    <button id="getRequestButton">Send GET Request</button>
-    <a href="phy-did-api/download/1"><button>Send GET Request</button></a>
     
 
    
