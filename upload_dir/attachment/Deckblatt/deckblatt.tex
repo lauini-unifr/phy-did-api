@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\usepackage{pdfpages}
+\usepackage{eso-pic}
+\usepackage{hyperref}
+\usepackage{url}
+
+
+\usepackage{background}
+\usepackage{blindtext}
+\backgroundsetup{scale = 1, angle = 0, opacity = 1,
+  contents = {\includegraphics[width = \paperwidth,
+  height = \paperheight, keepaspectratio]
+  {background.pdf}}}
+  % Adjust filename and path to match your own image 
+\begin{document}
+
+\begin{titlepage}
+   \begin{center}
+       \vspace*{1cm}
+	\Large
+       \textbf{Kurztexte Physikdidaktik Uni Freiburg} \\
+	\normalsize
+       \vspace{0.5cm}
+       \today
+            
+       \vspace{1.5cm}
+
+       \textbf{Professor Dr. Thomas Filk}
+
+       \vfill
+            
+%       A thesis presented for the degree of\\
+%       Doctor of Philosophy
+            
+       \vspace{0.8cm}
+     
+       %\includegraphics[width=0.4\textwidth]{university}
+            
+%       Department Name\\
+%       University Name\\
+%       Country\\
+       Weitere Kurztexte hier: \url{https://physikdidaktik.uni-freiburg.de/kurztexte/}
+            
+   \end{center}
+\end{titlepage}
+
+
+%\Blinddocument
+\end{document}
