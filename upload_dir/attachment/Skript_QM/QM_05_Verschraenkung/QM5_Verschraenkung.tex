@@ -1,0 +1,695 @@
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
+\newcommand{\solution}[1]{#1}
+%\newcommand{\solution}[1]{}
+
+\chapter{Verschr\"ankung}
+% Kap x
+\label{chap_Entanglement}
+
+M\"ochte man in der Quantentheorie Systeme beschreiben, die aus
+mehreren Teilsystemen, beispielsweise mehreren Teilchen, bestehen, so ergeben
+sich zwei Besonderheiten: (1) Der Zusammenhang zwischen dem Spin
+von Teilchen und ihrer Statistik (das Spin-Statistik-Theorem) f\"ur
+Systeme aus identischen Teilchen, was beispielsweise f\"ur Elektronen das Pauli'sche
+Ausschlie\ss ungsprinzip impliziert, und
+(2) die sogenannten Quantenkorrelationen von verschr\"ankten
+Systemen. Gerade die M\"oglichkeit solcher neuartiger
+Korrelationen, die sich nicht auf eine direkte kausale 
+Beziehung und auch nicht im klassischen Sinn auf eine gemeinsame Vergangenheit
+mit einer durchg\"angigen Kette von Ursache-Wirkungs-Relationen
+zur\"uckf\"uhren lassen, ist immer noch Gegenstand grundlegender
+Diskussionen. Auf das Spin-Statistik-Theorem wird an anderer Stelle
+eingegangen. In diesem Kurztext geht es in erster Linie um das Konzept
+der Verschr\"ankung. 
+
+\section{Das Ph\"anomen der Verschr\"ankung}
+
+Eine Voraussetzung, um \"uberhaupt von Verschr\"ankung sprechen zu k\"onnen,
+sind zwei Systeme unabh\"angiger Freiheitsgrade. Nur dann ist es sinnvoll von Zust\"anden
+zu sprechen, f\"ur die diese beiden Freiheitsgrade miteinander verschr\"ankt sind. 
+\glqq Unabh\"angig\grqq\ bedeutet hier,
+dass s\"amtliche Observablen des einen Sys\-tems von Freiheitsgraden mit allen Observablen 
+des anderen Systems kommutieren, d.h., je zwei Observablen, von denen sich 
+eine auf das eine System und die andere auf das andere System beziehen, lassen sich gleichzeitig
+messen.
+
+Das typische Beispiel sind die Freiheitsgrade zu zwei verschiedenen Teilchen: 
+S\"amtliche Observablen, die sich an dem einen Teilchen messen lassen (Ort, Impuls,
+Spin, etc.) kommutieren mit allen Observablen, die sich an dem anderen Teilchen
+messen lassen. Aber auch die r\"aumlichen Observablen (Ort, Impuls und Funktionen
+dieser beiden Observablen) eines Teilchens kommutieren mit seinen inneren
+Freiheitsgraden (z.B.\ den Spinkomponenten). Auch in solchen F\"allen kann man
+von Verschr\"ankung (z.B.\ zwischen dem Ort eines Teilchens und seinem Spin) sprechen.
+Zun\"achst beschr\"anken wir uns jedoch auf den Fall von zwei Teilchen.
+
+Da an jedem der beiden Teilchen gleichzeitig jeweils eine Observable gemessen werden
+kann, k\"onnen wir auch nach Korrelationen zwischen den Ergebnissen solcher
+Messungen fragen. Betrachten wir als Beispiel zwei Elektronen in einem gro\ss en
+Abstand (sodass diese beiden Elektronen aufgrund ihrer verschiedenen Orte 
+unterscheidbar sind), dann k\"onnen wir an beiden Elektronen gleichzeitig eine
+beliebige Spin-Komponente messen (z.B.\ mit einem Stern-Gerlach-Experiment). 
+Wir bezeichnen mit $w(a,\pmb{n}_1;b,\pmb{n}_2)$ die Wahrscheinlichkeit, an Teilchen
+1 den Wert $a=\pm1$ (in Einheiten von $\hbar/2$) 
+bei einer Messung des Spins in $\pmb{n}_1$-Richtung zu erhalten
+und gleichzeitig an Teilchen 2 den Wert $b=\pm1$ bei einer Messung des Spins in 
+$\pmb{n}_2$-Richtung zu erhalten. Sind diese Wahrscheinlichkeiten 
+unabh\"angig von einander, d.h.\ sind diese Wahrscheinlichkeiten das
+Produkt der Einzelwahrscheinlichkeiten, 
+\begin{equation}
+          w(a,\pmb{n}_1;b,\pmb{n}_2) = w_1(a,\pmb{n}_1) w_2(b,\pmb{n}_2) \, ,
+\end{equation}
+dann liegt keine Verschr\"ankung vor. 
+Sind die Wahrscheinlichkeiten nicht unabh\"angig, d.h., sind die konditionierten
+Wahrscheinlichkeiten f\"ur ein Ereignis an einem Teilchen abh\"angig von dem
+Ereignis, das an dem anderen Teilchen gemessen wurde, \emph{und} handelt es sich
+um einen \emph{reinen} Zustand der beiden Teilchen, dann liegt eine Verschr\"ankung vor. 
+
+Das Ph\"anomen konditionierter Wahrscheinlichkeiten gibt es auch in der klassischen
+Physik. Man denke an folgende Situation: Jeden Tag werden an zwei Personen zwei Emails
+verschickt, die einen identischen Inhalt haben -- der Einfachheit halber nur
+entweder die Zahl $+1$ oder die Zahl $-1$. Sobald eine Person 
+ihre Email liest und somit die Zahl in ihrer Email kennt, wei\ss\ sie, was die andere
+Person liest oder lesen wird. Das Lesen einer Email
+erlaubt eine neue Vorhersage f\"ur den Inhalt der anderen Email. 
+
+Allerdings handelt es sich hier um ein Gemisch von Emailpaaren: ein Gemisch aus 
+Emailpaaren, bei denen beide Emails den Inhalt \glqq $+1$\grqq\ haben, und Emailpaaren, bei denen
+beide Emails den Inhalt \glqq$-1$\grqq\ haben. 
+H\"atten alle Emails immer
+denselben Inhalt, w\"usste man schon im Voraus, was die andere Person lesen wird.
+Durch das Lesen der eigenen Email w\"urde in diesem Fall diese Vorhersage nicht ge\"andert. Nur weil
+es sich um Emails mit potenziell verschiedenen Inhalten handelt (entweder beide $+1$ oder beide
+$-1$), kommt es zu einer wirklichen Vorhersage, nachdem die eine Email gelesen wurde.
+
+Betrachten wir ganz konkret einen sogenannten $\Phi^+$ Bell-Zustand, der ein verschr\"ankter
+reiner Zustand ist:
+\begin{equation}
+            | \Phi^+ \rangle = \frac{1}{\sqrt{2}} 
+            \big(  | \uparrow_z \rangle_1 |\uparrow_z \rangle_2 +  | \downarrow_z \rangle_1 |\downarrow_z \rangle_2 \big) \, .
+\end{equation}
+Hierbei bezeichnet $|\uparrow_z\rangle_1$ einen Eigenzustand von Teilchen 1 zum Spin in
+$z$-Richtung mit Eigenwert $+\hbar/2$. Entsprechend bezeichnet $\downarrow_z$ den Eigenwert $-\hbar/2$
+bez\"uglich der $z$-Richtung. Das Gleiche gilt f\"ur Teilchen 2, gekennzeichnet durch den Index an der Klammer. 
+
+Nimmt man an einem der beiden Teilchen, die von diesem Zustand beschrieben werden, eine Spinmessung
+entlang der $z$-Richtung
+vor, kann man vorhersagen, dass eine entsprechende Spinmessung am anderen Teilchen
+denselben Wert ergibt. Die konditionierten Wahrscheinlichkeiten sind
+also gleich $+1$ f\"ur gleiche Spinrichtungen und $0$ f\"ur entgegengesetzte. Die
+urspr\"ungliche Wahrscheinlichkeit, $0,5$ f\"ur jede der beiden Spinrichtungen, wird also
+durch die Kenntnis des Ergebnisses der ersten Messung revidiert, indem man nun den
+Spin f\"ur das andere Teilchen mit Sicherheit vorhersagen kann.
+
+Dasselbe Ergebnis erh\"alt man allerdings auch, wenn ein gleiches Gemisch
+aus Zust\"anden $| \uparrow_z \rangle_1 |\uparrow_z \rangle_2$ und 
+$| \downarrow_z \rangle_1 |\downarrow_z \rangle_2$ vorliegt. In diesem Fall w\"urde man
+den Zustand allerdings durch eine Dichtematrix ausdr\"ucken. Dieser Fall ist vergleichbar
+mit einer klassischen Korrelation, die eine gemeinsame Ursache hat. Er entspricht den
+beiden Arten von Emails (beide mit Inhalt $+1$ oder beide mit Inhalt $-1$). 
+
+Wie kann man diese beiden F\"alle experimentell
+unterscheiden? Eine Unterscheidung ist nur m\"oglich, indem man auch andere Observablen an
+dem System aus zwei Teilchen misst. Beispielsweise ist der $\Phi^+$-Zustand ein Zustand, der
+sich unter reellen Koordinatentransformationen (Drehungen des Koordinatensystems um die
+Ausbreitungsachse der Teilchen) nicht
+\"andert. Die Korrelation gilt bez\"uglich jeder beliebigen Richtung in der $xz$-Ebene, in 
+welcher der Spin gemessen wird \hyperref[sec_Entanglement_A]{(Herleitung)}. Diese
+Aussage gilt nicht f\"ur das Gemisch. Misst man dort die Spin-Komponenten beispielsweise
+in $x$-Richtung, erh\"alt man auch Ergebnisse, bei denen die Werte auf beiden Seiten verschieden
+sind. Dies zeigt auch eine einfache Rechnung, wenn man die $z$-Eigenzust\"ande nach 
+$x$-Eigenzust\"anden entwickelt \hyperref[sec_Entanglement_B]{(Herleitung 2)}. 
+Eine Korrelation bez\"uglich aller (reellen) Richtungen l\"asst sich
+nicht durch ein echtes Gemisch realisieren.
+
+\section{Das Tensorprodukt von Vektorr\"aumen}
+\label{sec_Tensorprodukt}
+
+In der klassischen Mechanik ist der Phasenraum von $N$
+Teilchen das kartesische Produkt der Einteilchenphasenr\"aume,
+d.h., ein reiner $N$-Teilchenzustand entspricht einem Punkt
+in einem $6N$-dimensionalen Phasenraum: jeweils drei Orts-
+und Impulskomponenten f\"ur jedes Teilchen.  
+In der Quantentheorie wird der Zustandsraum \"uber
+einen Hilbert-Raum definiert. Bei zwei Vektorr\"aumen 
+ist der Produktraum das sogenannte\index{Tensorprodukt} 
+{\em Tensorprodukt} der
+beiden einzelnen Vektorr\"aume: Dazu bildet man zun\"achst das 
+kartesische Produkt von zwei Basen der Teilr\"aume; dies
+definiert eine Basis des Produktraums. Der Produkt-Vektorraum
+besteht aus s\"amtlichen Linearkombinationen, die von
+dieser Basis aufgespannt werden.
+
+In diesem Abschnitt wird das Tensorprodukt auf vergleichsweise abstraktem
+Niveau beschrieben. Wer zun\"achst ein konkretes Beispiel m\"ochte, kann
+Abschnitt \ref{sec_Entanglement_Produkt} vorziehen.
+
+%\begin{definition}
+Seien ${\cal H}_1$ und ${\cal H}_2$ zwei Vektorr\"aume \"uber demselben
+K\"orper mit
+jeweiligen Basisvektoren $\{|e_i\rangle \}_{i\in I}$ und $\{|f_j\rangle\}_{j\in J}$
+(die Indexmengen $I$ f\"ur $i$ und $J$ f\"ur $j$ m\"ussen nicht gleich sein). 
+Das {\em Tensorprodukt} ${\cal H}={\cal H}_1\otimes{\cal H}_2$
+ist definiert als der Vektorraum, der durch die Paare von Basisvektoren
+$\{ |e_i,f_j\rangle \}_{i\in I, j\in J}$ aufgespannt wird. Ein beliebiger Vektor 
+$|x\rangle \in {\cal H}$ l\"asst sich somit immer in der Form
+\begin{equation}
+     |x \rangle = \sum_{i,j} x_{ij} |e_i,f_j\rangle 
+\end{equation}
+darstellen.
+%\end{definition}
+
+Statt $|e_i,f_j\rangle$ schreibt man 
+manchmal auch $|e_i\rangle |f_j\rangle$
+oder $|e_i\rangle \otimes |f_j\rangle$. Seien
+$|a\rangle=\sum_i a_i |e_i\rangle \in {\cal H}_1$ 
+und $|b\rangle = \sum_j b_j |f_j\rangle \in {\cal H}_2$ 
+Vektoren aus den einzelnen Vektorr\"aumen, 
+dann ist
+\begin{equation}
+     |a\rangle \otimes |b\rangle = \Big( \sum_i a_i |e_i\rangle \Big)
+       \otimes \Big( \sum_j b_j | f_j\rangle \Big) =
+       \sum_{i,j} a_i b_j \, |e_i, f_j\rangle
+\end{equation}
+das Tensorprodukt dieser beiden Vektoren.
+Haben ${\cal H}_1$ und ${\cal H}_2$ jeweils die Dimensionen
+$d_1$ bzw.\ $d_2$, so hat ${\cal H}_1\otimes {\cal H}_2$
+die Dimension $d_1 \cdot d_2$. 
+
+Man unterscheide zwischen dem
+Tensorprodukt von zwei Vektorr\"aumen und dem kartesischen
+Produkt der Vektorr\"aume (das man auch als direkte Summe
+${\cal H}_1 \oplus{\cal H}_2$ schreibt). Das kartesische Produkt
+besteht aus allen Paaren $(x,y)$ von Vektoren $x\in {\cal H}_1$ 
+und $y\in {\cal H}_2$ mit komponentenweiser
+Addition und hat die Dimension $d_1+d_2$. F\"ur eine Basis $\{|e_i\rangle\}$ von
+${\cal H}_1$ und eine Basis $\{|f_j\rangle\}$ von ${\cal H}_2$ ist die 
+mengentheoretische Vereinigung $\{|e_i \rangle\}\cup \{|f_j\rangle\}$ eine Basis
+in ${\cal H}_1\oplus {\cal H}_2$ und jeder Vektor $z$ in ${\cal H}_1\oplus {\cal H}_2$
+l\"asst sich in der Form
+\begin{equation}
+       z = \sum_{i=1}^{d_1} x_i |e_i\rangle + \sum_{j=1}^{d_2} y_j |f_j\rangle
+\end{equation}
+schreiben. Diese beiden Konstruktionen eines Vektorraums aus zwei
+gegebenen Vektorr\"aumen sollten nicht verwechselt werden.
+
+Ist auf den beiden Vektorr\"aumen jeweils ein Skalarprodukt definiert, so kann man
+auch auf dem Produktraum ein Skalarprodukt definieren:
+F\"ur zwei Vektoren des Tensorproduktraums
+\begin{equation}
+|x\rangle, |y\rangle \in {\cal H} ;~~~
+|x\rangle = \sum_{i,j} x_{ij}|e_i,f_j\rangle ~;~~~~  
+|y\rangle = \sum_{k,l} y_{kl}|e_k,f_l\rangle  
+\end{equation}
+gilt:
+\begin{equation}
+  \langle y | x \rangle = \sum_{i,j,k,l} 
+         y^*_{lk} x_{ij} \,  \langle e_i|e_k\rangle \langle f_j|f_l\rangle
+\end{equation}
+und, sofern es sich bei $\{ | e_k\rangle \}$ und $|f_l\rangle \}$ um Orthonormalbasen handelt
+\begin{equation}
+  \langle y | x \rangle = \sum_{i,j} 
+         y^*_{ji} x_{ij}   \, . 
+\end{equation}
+Auf diese Weise wird auch der Produktraum von zwei Hilbert-R\"aumen wieder zu
+einem Hilbert-Raum. 
+
+Diese Definition des Tensorprodukts von Vektorr\"aumen
+(bzw.\ von Hilbert-R\"aumen) ist nicht sehr elegant, da sie explizit auf Basissysteme
+in den jeweiligen Vektorr\"aumen Bezug nimmt. Es gibt in der
+Mathematik zwar elegantere M\"oglichkeiten, das Tensorprodukt von
+zwei Vektorr\"aumen ohne Bezug auf eine Basis zu definieren, diese
+Definitionen sind aber f\"ur konkrete Berechnungen sehr unhandlich.
+Der Nachteil der obigen Definition ist, dass man von
+relevanten Konzepten (beispielsweise dem Konzept der
+Verschr\"ankung, s.u.) eigentlich beweisen muss, dass sie  nicht von der
+Wahl der Basisvektoren bei der Konstruktion des Tensorraums abh\"angen. 
+F\"ur das Folgende sollte man diese Aussage einfach glauben oder 
+ein entsprechendes Mathematikbuch konsultieren.
+
+Seien $A_1$ ein linearer Operator auf ${\cal H}_1$ und $A_2$ ein
+linearer Operator auf ${\cal H}_2$, dann ist $A_1\otimes A_2$ ein 
+linearer Operator auf ${\cal H}$, der folgenderma\ss en auf die Basisvektoren
+wirkt:
+\begin{equation}
+    (A_1 \otimes A_2) ( |e_i\rangle \otimes | f_j\rangle)  = 
+                A_1|e_i\rangle \otimes \,  A_2|f_j\rangle 
+\end{equation}
+Wegen der Linearit\"at der Abbildung ist durch 
+diese Definition festgelegt, wie ein solcher Operator auf einen
+beliebigen Vektor im Tensorproduktraum wirkt. Insbesondere kann man
+sich leicht \"uberzeugen, dass zwei Operatoren, die auf verschiedene
+Vektorr\"aume wirken, im Tensorprodukt immer kommutieren:
+\begin{equation}
+     (A_1 \otimes {\bf 1}_2 ) ({\bf 1}_1 \otimes A_2) =
+    ({\bf 1}_1 \otimes A_2)  (A_1 \otimes {\bf 1}_2 ) 
+\end{equation}
+Hier bezeichnet ${\bf 1}_i$ die Identit\"atsabbildung in Vektorraum ${\cal H}_i$.
+Oft findet man daf\"ur vereinfacht die Schreibweise
+\begin{equation}
+       [A_1,A_2] = 0   \, ,
+\end{equation}
+wobei aber betont werden muss, dass sich die Indizes auf verschiedene
+Vektorr\"aume beziehen und mit $A_1$ eigentlich $A_1\otimes {\bf 1}_2$ 
+gemeint ist und entsprechend $A_2$ f\"ur ${\bf 1}_1\otimes A_2$ steht. 
+
+Allgemein l\"asst sich ein Operator $B$ auf ${\cal H}$ immer als eine
+Linearkombination solcher \glqq Produktoperatoren\grqq\ schreiben,
+d.h.
+\begin{equation}
+       B = \sum_{ij} b_{ij} (A_i \otimes A_j)  \, .
+\end{equation}
+
+Nun wird auch die Bra-Ket-Notation f\"ur Operatoren einsichtiger:
+Lineare Abbildungen von einem Vektorraum
+$V$ in einen Vektorraum $W$ kann man abstrakt
+als Elemente von $W\otimes V^*$ auffassen,
+wobei $V^*$ der Dualraum von $V$ ist. Ein solches
+Element aus $W\otimes V^*$ hat die
+Eigenschaft, dass man es auf ein Element auf $V$
+anwenden muss (das ist der $V^*$-Anteil, er liefert
+zun\"achst eine Zahl) und das
+Ergebnis ist ein Vektor in $W$ (der $W$-Anteil, der
+mit der vorher erhaltenen Zahl multipliziert wird). 
+Diese sehr abstrakte Sichtweise steckt implizit hinter
+der Bra-Ket-Notation f\"ur Operatoren.
+
+\section{Separable Zust\"ande und verschr\"ankte Zust\"ande}
+
+Ist ein Vektorraum ${\cal H}$ das Tensorprodukt von zwei
+Vektorr\"aumen ${\cal H}_1$ und ${\cal H}_2$, kann man
+f\"ur Vektoren in dem Tensorproduktraum folgende Eigenschaften definieren:
+
+%\begin{definition}
+Ein Vektor $|\Psi\rangle\in {\cal H}_1 \otimes {\cal H}_2$ 
+hei\ss t {\em separabel},\index{separabel}\index{Quantenzustand!separabler}
+wenn es Vektoren $|\phi\rangle \in {\cal H}_1$ und 
+$|\psi\rangle \in {\cal H}_2$ gibt, sodass
+\begin{equation}
+       | \Psi \rangle = |\phi \rangle \otimes |\psi \rangle  \, ,
+\end{equation}
+andernfalls hei\ss t der Vektor $|\Psi\rangle$ (bez\"uglich des
+vorgegebenen Tensorprodukts) 
+{\em verschr\"ankt}.\index{verschr\"ankt}\index{Quantenzustand!versch\"ankter}
+%\end{definition}
+
+Hierzu ein paar Anmerkungen:
+\begin{enumerate}
+\item
+Die Begriffe {\em separabel} bzw.\ {\em verschr\"ankt} sind
+nur in Bezug auf eine Tensorproduktdarstellung eines Vektorraums
+definiert. Es macht keinen Sinn, von einem verschr\"ankten Vektor bzw.\
+Zustand {\em per se} zu sprechen. Ein Vektor kann immer nur
+{\em verschr\"ankt in Bezug auf eine Partitionierung} (d.h.\ Auf\-teilung
+des Gesamtsys\-tems in Teilsysteme) sein. 
+\item
+Die Eigenschaften \glqq separabel\grqq\ und \glqq verschr\"ankt\grqq\ wurden zwar f\"ur Vektoren
+definiert, aber man kann sich leicht davon \"uberzeugen, dass sie
+auch f\"ur die Darstellung reiner physikalischer Zust\"ande (also Strahlen bzw.\ 1-dimensionale
+lineare Unterr\"aume im Hilbert-Raum) sinnvoll sind: Ist ein Vektor
+separabel (bzw.\ verschr\"ankt), dann ist auch ein beliebiges komplexes
+Vielfaches dieses Vektors separabel (bzw.\ verschr\"ankt). Die Produktzerlegung
+von Strahlen ist sogar eindeutig, wohingegen die Zerlegung eines
+separablen Vektors nicht eindeutig ist, da z.B.\ $\vec{x}\otimes \vec{y}$ und
+$(\frac{1}{\alpha}\vec{x})\otimes(\alpha \vec{x})$ denselben Produktvektor
+definieren.
+
+Ein reiner Zustand eines aus zwei Teilsystemen zusammengesetzten Gesamtsystems
+hei\ss t verschr\"ankt, wenn er durch einen verschr\"ankten Zustandsvektor
+in dem zugeh\"origen Produkt-Hilbert-Raum beschrieben wird. Entsprechend hei\ss t
+ein solcher Zustand separabel, wenn der zugeh\"orige Zustandsvektor separabel ist. 
+\item
+Es ist wichtig zu betonen, dass die Konzepte der Separabilit\"at
+und Verschr\"ankt\-heit nicht von den gew\"ahlten Basissystemen 
+in den Hilbert-R\"aumen
+abh\"angen. Auch die Definition des Tensorprodukts h\"angt nicht 
+von der Wahl der Basen ab.
+\item
+Auch wenn die Definitionen f\"ur einen separablen bzw.\ verschr\"ankten
+Vektor sehr einfach sind,
+kann es in einem konkreten Fall durchaus schwierig sein zu
+entscheiden, ob ein gegebener Vektor in Bezug auf eine 
+Tensorproduktzerlegung separabel oder verschr\"ankt
+ist. In Abschnitt \ref{sec_Teilreduktion} wird ein Kriterium
+eingef\"uhrt, mit dem sich diese Entscheidung 
+zumindest im Prinzip treffen l\"asst.  
+\item
+Ein Problem im Zusammenhang mit verschr\"ankten Vektoren ist, dass
+weder die separablen noch die verschr\"ankten Vektoren einen Unterraum
+(also Vektorraum) von ${\cal H}$ bilden. Die Linearkombination zweier
+separabler Vektoren ist meist verschr\"ankt und die Linearkombination
+verschr\"ankter Vektoren kann separabel sein. 
+\end{enumerate}
+
+\section{Beispiel: Der Produktraum $\mathbb{C}^2 \otimes \mathbb{C}^2$}
+\label{sec_Entanglement_Produkt}
+
+Sehr viele Beispiele beziehen sich auf Zwei-Zustandssysteme, die durch 
+den komplexen zweidimensionalen Hilbert-Raum $\mathbb{C}^2$ beschrieben
+werden. Das Tensorprodukt von zwei solchen Vektorr\"aumen beschreibt
+zwei Zwei-Zustandssysteme. Dieses besteht aus den Vektoren
+mit Komponenten $x_{ij}$ mit $i,j=1,2$. Das Tensorprodukt von zwei
+Vektoren $\pmb{x}$ mit Komponenten $x_i$ und $\pmb{y}$ mit Komponenten
+$y_i$ ist
+\begin{equation}
+       \pmb{x} \otimes \pmb{y} = \left( \begin{array}{c} x_1 \\ x_2 \end{array} \right)
+       \otimes  \left( \begin{array}{c} y_1 \\ y_2 \end{array} \right) =
+        \left( \begin{array}{c} x_1 y_1 \\ x_1y_2 \\ x_2 y_1 \\ x_2 y_2 \end{array} \right) \, .
+\end{equation}
+Davon zu unterscheiden ist die direkte Summe bzw.\ das kartesische Produkt
+der beiden Vektoren:
+\begin{equation}
+       \pmb{x} \oplus \pmb{y} = \left( \begin{array}{c} x_1 \\ x_2 \end{array} \right)
+       \oplus  \left( \begin{array}{c} y_1 \\ y_2 \end{array} \right) =
+        \left( \begin{array}{c} x_1 \\ x_2 \\  y_1 \\  y_2 \end{array} \right) \, .
+\end{equation}
+F\"ur den Spezialfall von zwei zweidimensionalen Vektorr\"aumen ist die 
+Dimension der Summe und des Produkts der Vektorr\"aume gleich
+($2+2=2\times 2=4$), sodass in diesem Fall eine Verwechslung nochmals leichter
+m\"oglich ist. 
+
+Nicht jeder Vektor im $\mathbb{C}^2 \otimes \mathbb{C}^2$ l\"asst sich als
+Produkt von zwei Vektoren im $\mathbb{C}^2$ schreiben. F\"ur solche Vektoren muss
+offensichtlich gelten $x_{11} x_{22} = x_{12} x_{21}$, d.h., das Produkt der beiden \"au\ss eren
+Komponenten ist gleich dem Produkt der beiden mittleren Komponenten. Es zeigt sich, dass beim
+$\mathbb{C}^2 \otimes \mathbb{C}^2$ diese Bedingung nicht nur notwendig sondern
+sogar hinreichend ist, damit ein Vektor separabel ist, sich also als Tensorprodukt von
+zwei Vektoren darstellen l\"asst. Ist bei einem Vektor im $\mathbb{C}^2 \otimes \mathbb{C}^2$
+diese Bedingung nicht erf\"ullt, ist der Vektor verschr\"ankt. 
+
+Der eingangs erw\"ahnte $\Phi^+$ Bell-Zustand hat in dieser Schreibweise die Form
+\begin{equation}
+       |\Phi^+\rangle = \frac{1}{\sqrt{2}} \big( \pmb{e}_1 \otimes \pmb{e}_1 + \pmb{e}_2 \otimes \pmb{e}_2 \big)
+         = \frac{1}{\sqrt{2}} \left[ \left( \begin{array}{c} 1 \\ 0 \end{array} \right)
+       \otimes   \left( \begin{array}{c} 1 \\ 0 \end{array} \right) +  \left( \begin{array}{c} 0 \\ 1 \end{array} \right)
+       \otimes   \left( \begin{array}{c} 0 \\ 1 \end{array} \right) \right]
+       =   \frac{1}{\sqrt{2}} 
+        \left( \begin{array}{c} 1 \\ 0 \\ 0 \\ 1 \end{array} \right) \, ,
+\end{equation}
+und f\"ur den sogenannten EPR-Zustand (benannt nach Einstein, Podolsky und Rosen, wobei man auch
+Bohm hinzunehmen sollte), den man auch als $\Psi^-$ Bell-Zustand bezeichnet, folgt:
+\begin{equation}
+       |\Psi^-\rangle = \frac{1}{\sqrt{2}} \big( \pmb{e}_1 \otimes \pmb{e}_2 - \pmb{e}_2 \otimes \pmb{e}_1 \big)
+         = \frac{1}{\sqrt{2}} \left[ \left( \begin{array}{c} 1 \\ 0 \end{array} \right)
+       \otimes   \left( \begin{array}{c} 0 \\ 1 \end{array} \right) -  \left( \begin{array}{c} 0 \\ 1 \end{array} \right)
+       \otimes   \left( \begin{array}{c} 1 \\ 0 \end{array} \right) \right]
+       =   \frac{1}{\sqrt{2}} 
+        \left( \begin{array}{c} 0 \\ 1 \\ -1 \\ 0 \end{array} \right) \, .
+\end{equation}
+In beiden F\"allen ist offensichtlich, dass das Produkt der beiden mittleren Komponenten nicht
+gleich dem Produkt der beiden \"au\ss eren Komponenten ist. 
+
+\section{Beispiele f\"ur Tensorprodukte und Verschr\"ankungen}
+
+\subsection{Zwei Teilchen}
+
+Wie schon erw\"ahnt ist das Standardbeispiel f\"ur ein System, bei dem eine Verschr\"ankung
+auftreten kann, ein Zwei-Teilchensystem. S\"amtliche Observablen an dem einen Teilchen
+vertauschen mit s\"amtlichen Observablen an dem anderen Teilchen. Das gilt f\"ur die
+r\"aumlichen Freiheitsgrade (meist beschrieben durch Wellenfunktionen) ebenso wie f\"ur diskrete
+Freiheitsgrade wie den Spin.
+
+Wird der r\"aumliche Anteil eines Ein-Teilchensystems durch den Hilbert-Raum
+${\cal L}_2(\mathbb{R}^3,{\rm d^3 x)}$ beschrieben, so ist der Hilbert-Raum f\"ur ein
+Zwei-Teilchensystem das Tensorprodukt dieses Hilbert-Raums mit sich selbst, 
+und das ist der Hilbert-Raum ${\cal L}_2(\mathbb{R}^6,{\rm d}^6 x)$, also der
+Hilbert-Raum der Funktionen $\psi(\pmb{x},\pmb{y})$ mit der Eigenschaft
+\begin{equation}
+       \int_{\mathbb{R}^3} \int_{\mathbb{R}^3} | \psi(\pmb{x},\pmb{y}) |^2 \, {\rm d}^3x \,{\rm d}^3y = 1 \, .
+\end{equation}
+Es ist also
+\begin{equation}
+          {\cal L}_2(\mathbb{R}^3,{\rm d^3 x)} \otimes {\cal L}_2(\mathbb{R}^3,{\rm d^3 x)} =
+          {\cal L}_2(\mathbb{R}^3\times \mathbb{R}^3,{\rm d^6 x)} \, .
+\end{equation}
+Etwas vereinfacht kann man sagen, dass das Tensorprodukt eines Funktionenraums in $n$
+Variablen mit dem Funktionenraum in $m$ Variablen der Funktionenraum in $n+m$ Variablen
+ist. 
+
+Eine Funktion $\psi(\pmb{x},\pmb{y})$ hei\ss t verschr\"ankt, wenn es keine Funktionen 
+$\phi(\pmb{x})$ und $\varphi(\pmb{y})$ gibt, sodass $\psi(\pmb{x},\pmb{y})=\phi(\pmb{x}) \varphi(\pmb{y})$.
+
+Dies l\"asst sich auf beliebige Systeme verallgemeinern, die in nat\"urlicher Weise in Subsysteme
+unterteilt werden k\"onnen. 
+
+\subsection{Ort und Spin}
+
+Auch die r\"aumlichen Observablen Ort und Impuls kommutieren mit den Observablen zum 
+Spin, beispielsweise bei einem Elektron oder bei einem Photon (wo der Spin
+der Polarisation entspricht). Damit kann es auch zu einer Verschr\"ankung zwischen
+Orts- und Spin-Freiheitsgraden kommen. 
+
+Ein typisches Beispiel ist das Stern-Gerlach-Experiment. Tritt ein Spin-1/2-Teilchen durch einen
+Stern-Gerlach-Magneten, wird es nach oben oder unten (relativ zur Richtung des inhomogenen
+Magnetfelds) abgelenkt. Elektronen, die nach oben abgelenkt wurden, haben Spin $+\frac{1}{2}\hbar$,
+Elektronen, die nach unten abgelenkt wurden, haben Spin $-\frac{1}{2}\hbar$. Der Zustand
+nach dem Durchtritt durch den Magneten aber vor dem Auftreffen auf dem Schirm ist somit
+\begin{equation}
+        | e \rangle = 
+         | \psi_+ \rangle | \uparrow \rangle + | \psi_- \rangle |\downarrow\rangle
+        \simeq  \left( \begin{array}{c}  \psi_+(\pmb{x}) \\  \psi_-(\pmb{x})  \end{array} \right) 
+        \hspace{0.7cm} {\rm mit} \hspace{0.3cm}
+        \int_{\mathbb{R}^3} \big( | \psi_+(\pmb{x})|^2 + |\psi_-(\pmb{x})|^2 \big)\, {\rm d}^3x =1  \, ,  
+\end{equation} 
+wobei $\psi_+(\pmb{x})$ seinen Tr\"ager entlang der Ablenkungsrichtung 
+nach oben und $\psi_-(\pmb{x})$ seinen 
+Tr\"ager entlang der Ablenkungsrichtung nach unten hat. Formal handelt es sich hierbei um
+ein Tensorprodukt aus einem Funktionenraum (beispielsweise dem Hilbert-Raum der
+quadratintegrierbaren Funktionen ${\cal L}_2(\mathbb{R}^3,{\rm d^3 x)}$) und 
+dem $\mathbb{C}^2$. Man gelangt so zu zweikomponentigen Spinoren. 
+
+Ein \"ahnlicher Fall tritt auf, wenn ein Lichtstrahl auf einen Doppelspalt trifft, der \glqq markiert\grqq\ ist,
+z.B.\ indem hinter dem linken Spalt ein Polarisationsfilter in $h$-Richtung (horizontal) und hinter
+dem rechten Spalt ein Polarisationsfilter in $v$-Richtung (vertikal) platziert ist, sodass
+der Lichtstrahl hinter dem Doppelspalt eine Superposition aus einem horizontal polarisierten
+Strahl, der durch den linken Spalt getreten ist, und einem vertikal polarisierten Strahl, der durch
+den rechten Spalt getreten ist, darstellt. Der Zustand ist somit:
+\begin{equation}
+                  | \gamma \rangle = \frac{1}{\sqrt{2}}\big( |L \rangle | h \rangle + | R \rangle | v\rangle \big) \, ,  
+\end{equation} 
+Hierbei stehen $|L\rangle$ und $|R\rangle$ symbolisch f\"ur den r\"aumlichen Zustand eines
+Photons, das durch den linken bzw.\ rechten Spaltgetreten ist, und
+$|h\rangle$ bzw.\ $|v\rangle$ f\"ur eine Polarisation in horizontaler bzw.\ vertikaler Richtung. 
+
+\subsection{Verschiedene Koordinatenrichtungen}
+
+Eine Wellenfunktion $\Psi(\pmb{x})$ im $\mathbb{R}^3$ ist ein Element des dreifachen Tensorprodukts
+von Wellenfunktionen \"uber $\mathbb{R}$, also entlang der $x$-, $y$- bzw.\ $z$-Richtung. 
+Wenn eine solche Wellenfunktion nicht in ihre Anteile entlang verschiedener Koordinatenachsen
+faktorisiert, kann man hier theoretisch von einer Verschr\"ankung zwischen den Anteilen zu verschiedenen 
+Koordinatenrichtungen sprechen. 
+Damit sind alle Wellenfunktionen im Wasserstoffatom, die Eigenfunktionen zu
+den Quantenzahlen $n$, $l$ und $m$ sind, verschr\"ankt. Dies zeigt eine gewisse Willk\"ur
+in der Wahl der Partition eines Systemes. Offenbar kann man auch Partitionen vornehmen,
+die physikalisch im Allgemeinen nicht sinnvoll sind. 
+
+\subsection{Der Messprozess}
+
+Eine besondere Form der Verschr\"ankung, die ebenfalls immer noch Anlass zu Diskussionen
+gibt, ist der Messprozess. Gegeben sei ein Quantensystem $S$, an dem mit einem Messinstrument $M$
+eine Messung vorgenommen werden soll. Man kann dies als ein Gesamtsystem ($Q+M$) auffassen,
+das in nat\"urlicher Weise in zwei Teilsysteme $Q$ und $M$ partitioniert werden kann. Vor der
+Messung sei die Messapparatur in einem neutralen Zustand $|\varphi_0\rangle$ und das
+Quantensystem $S$ befinde sich in einem Superpositionszustand bez\"uglich der Eigenzust\"ande
+der Messapparatur $| s \rangle = \sum_i a_i | s_i \rangle$. 
+
+Durch den Messprozess geht das Gesamtsystem in einen verschr\"ankten Zustand \"uber, bei
+dem die Zust\"ande $|s_i\rangle$ des Quantensystems korreliert sind mit den Zeigerstellungen
+$|\varphi_i\rangle$ des Messinstruments:
+\begin{equation}
+                    | s \rangle | \varphi_0\rangle = \sum_i a_i |s_i\rangle |\varphi_0\rangle 
+                       ~~ \overset{\textrm{Messprozess}}{\longrightarrow} ~~
+                        \sum_i a_i |s_i\rangle |\varphi_i\rangle \, . 
+\end{equation}
+Wir nutzen dann diesen verschr\"ankten Zustand, um an dem Messapparat eine Messung vorzunehmen:
+Wir lesen die Zeigerstellung $\varphi_i$ am Messapparat ab und schlie\ss en aus dem Ergebnis auf den
+Zustand $|s_i\rangle$ des Quantensystems. Dieser erste Schritt des Messprozesses -- die 
+Verschr\"ankung zwischen Quantensystem und Messapparatur -- l\"asst sich mit einer
+Schr\"odinger-Gleichung beschreiben und ist meist recht gut verstanden. Der anschlie\ss ende
+Schritt - die Reduktion der Superposition zu einem reinen Zustand, bei dem das Messinstrument
+eine wohldefinierte Zeigerstellung hat -- l\"asst sich nicht durch eine Schr\"odinger-Gleichung
+beschreiben und bildet das eigentliche Problem des Messprozesses. 
+
+\section{Die Teilreduktion von Zust\"anden}
+\label{sec_Teilreduktion}
+
+In der Quantentheorie l\"asst sich jeder
+Zustand durch eine Dichtematrix darstellen, wobei reine
+Zust\"ande den Projektionsoperatoren entsprechen. S\"amtliche
+Eigenschaften allgemeiner Dichtematrizen gelten nat\"urlich
+auch in Tensorproduktr\"aumen. Eine besondere
+Konstruktion ist jedoch,\index{Teilreduktion} 
+dass man \glqq Teilreduktionen\grqq\ vornehmen
+kann. Man bildet dabei die Spur \"uber nur einen
+der beiden Hilbert-R\"aume. Physikalisch kann man das so
+deuten, dass man alle Information \"uber den ausreduzierten Teilraum (bzw.\ alle 
+Korrelationen mit diesem Teilraum) \glqq vergisst\grqq\ und sich nur auf die Informationen
+beschr\"ankt, die man durch lokale Messungen an dem verbliebenen
+Teilsystem gewinnen kann.
+
+Sei $A$ eine Matrix in einem Produkt-Hilbert-Raum, dann l\"asst
+sich (in Bezug auf beliebige orthonormale 
+Basen $\{|e_i\rangle\}$ f\"ur ${\cal H}_1$
+und $\{|f_j\rangle\}$ f\"ur ${\cal H}_2$) die Matrix folgenderma\ss en
+schreiben:
+\begin{equation}
+     A = \sum_{i,j,k,l}  a_{ij\,kl} ~ | e_i\rangle | f_j\rangle \,
+           \langle f_k|  \langle e_l|  
+\end{equation} 
+Wir definieren nun die\index{Teilspur} 
+\textit{Spur} (oder auch \textit{Teilspur}) \"uber den
+Hilbert-Raum ${\cal H}_1$ durch
+\begin{eqnarray}
+        A_2 &=&  {\rm Sp}_1\, A = \sum_{n} \langle e_n |A | e_n \rangle \\
+         &=&
+          \sum_{ijkl} a_{ijkl} ~ \sum_n \langle e_n| e_i \rangle 
+          |f_j\rangle \langle f_k| \langle e_l|e_n\rangle   \\
+          &=& \sum_{jk} \left( \sum_n  a_{njkn} \right) |f_j\rangle \langle f_k| \, .
+\end{eqnarray}
+$A_2$ ist ein Operator auf ${\cal H}_2$, der auf ${\cal H}_1$ 
+wirkende Anteil von $A$ wurde \glqq ausgespurt\grqq. 
+
+Ganz entsprechend kann die Spur \"uber
+${\cal H}_2$ gebildet werden und man erh\"alt einen Operator auf ${\cal H}_1$:
+\begin{eqnarray}
+        A_1 &=&  {\rm Sp}_2\, A = \sum_{m} \langle f_m |A | f_m \rangle \\
+         &=&
+          \sum_{ijkl} a_{ijkl} ~ \sum_m \langle f_m| f_j \rangle 
+          |e_i\rangle \langle e_l | \langle f_k|f_m\rangle   \\
+          &=& \sum_{il} \left( \sum_m  a_{imml} \right) |e_i\rangle \langle e_l| 
+\end{eqnarray}
+
+Diese Operationen des teilweisen Ausspurens kann man
+auch f\"ur Dichtematrizen vornehmen. Handelt es sich um die
+Dichtematrix zu einem separablen reinen Zustand, also um
+das Tensorprodukt von zwei Projektionsoperatoren,
+\begin{equation}
+    \rho =  | \psi \rangle |\phi \rangle \,   
+       \langle \phi| \langle \psi|  =
+        P_\psi \otimes P_\phi   \, ,
+\end{equation}
+dann erh\"alt man durch die Teilspuren wieder Projektionsoperatoren
+zu reinen Zu\-st\"anden:
+\begin{equation}
+   \rho_1 = {\rm Sp}_2\, \rho = |\psi \rangle \langle \psi| = P_\psi
+   ~~~  {\rm und} ~~~ 
+   \rho_2 = {\rm Sp}_1\, \rho = |\phi \rangle \langle \phi| = P_\phi 
+\end{equation}
+Handelt es sich jedoch bei $\rho$ um die Dichtematrix zu einem
+verschr\"ankten Zustand (d.h., $\rho$ ist zwar ein Projektionsoperator
+in Gesamt-Hilbert-Raum, aber es
+gibt keine Projektionsoperatoren $P_\phi$ und $P_\psi$, sodass
+$\rho = P_\phi \otimes P_\psi$), dann beschreiben $\rho_1$ 
+und $\rho_2$ gemischte Zust\"ande. Auf diese Weise erh\"alt
+man ein praktisches Kriterium zur \"Uberpr\"ufung, ob ein Zustand
+separabel oder verschr\"ankt ist: Handelt es sich bei den Dichtematrizen 
+der ausreduzierten Teilr\"aume um Projektionsoperatoren, ist der Zustand 
+separabel; sind es Dichtematrizen zu gemischten Zust\"anden, ist
+der Zustand verschr\"ankt. 
+Die {\em von Neumann-Entropie}\index{von Neumann-Entropie}
+der reduzierten Dichtematrizen
+\begin{equation}
+    S = \sum_i p_{\alpha,\,i} \ln p_{\alpha,\,i} =
+     {\rm Sp}\, \rho_\alpha \ln \rho_\alpha   
+    ~~~~~~~  (\alpha=1,2)
+\end{equation}
+wird oft als ein Verschr\"ankungsma\ss\ angesehen (f\"ur reine
+Zust\"ande ist die von Neumann-Entropie null). Man kann
+beweisen, dass die von null verschiedenen Eigenwerte 
+$\{p_{\alpha, \,i} \}$ der
+beiden reduzierten Dichtematrizen gleich sind, sodass auch
+die beiden von Neumann-Entropien gleich sind.
+
+Physikalisch l\"asst sich die teilreduzierte Dichtematrix 
+folgenderma\ss en verstehen: Durch lokale Messungen an einem Teilsystem
+(z.B.\ Teilsystem 1) kann man
+den verschr\"ankten Zustand $|\Psi\rangle$ nicht von einem gemischten
+Zustand zu der ausreduzierten Dichtematrix 
+unterscheiden. Anders ausgedr\"uckt: F\"ur alle Observablen
+der Form $A\otimes \identity$ sind die Erwartungswerte in
+einem verschr\"ankten Zustand dieselben wie f\"ur die
+Observable $A$ bez\"uglich der reduzierten Dichtematrix 
+$\rho_1=\mathrm{Sp}_2\, P_\Psi A$, d.h., es gilt:
+\begin{equation}
+     \langle \Psi | A \otimes \identity |  \Psi   \rangle = 
+     \mathrm{Sp}\, (\rho_1 A )
+\end{equation} 
+Man kann $\rho_1$ sogar \"uber diese Forderung definieren; das oben
+angegebene Verfahren ist aber konstruktiver.
+Eine entsprechende Beziehung gilt f\"ur die Dichtematrix, die man
+f\"ur das Teilsystem 2 durch Ausreduktion von Teilsystem 1 erh\"alt.
+
+Man kann auch Verschr\"ankungsma\ss e f\"ur gemischte
+Zust\"ande formulieren, allerdings handelt es sich hier um ein
+sehr komplexes Thema, das immer noch Teil der
+aktuellen Forschung ist. Ebenfalls ein schwieriges und noch
+nicht abgeschlossenes Forschungsgebiet ist die Untersuchung
+von Verschr\"ankungsma\ss en von 
+(reinen und gemischten) Zust\"anden in
+Hilbert-R\"aumen, die das Tensorprodukt von mehr als zwei
+Zustandsr\"aumen sind, d.h.\ bez\"uglich einer Partition des
+Gesamtsystems in mehr als zwei Teilsysteme. Ein guter
+\"Ubersichtsartikel zu Verschr\"ankungsma\ss en ist
+\cite{Horodecki}. 
+
+\section*{Anmerkungen}
+\subsection*{Die Richtungsunabh\"angigkeit des $\Phi^+$-Zustands (Herleitung)}
+\label{sec_Entanglement_A}
+
+Eine allgemeine unit\"are Transformation in einem 2-dimensionalen reellen
+Vektorraum hat die Form einer Drehung
+\begin{equation}
+             R = \left( \begin{array}{cc} a & b \\ - b & a \end{array} \right)
+             \hspace{1cm} {\rm mit} \hspace{0.6cm}  a^2 + b^2 = 1 \, . 
+\end{equation}
+(Typischerweise parametrisiert man eine solche Transformation durch $a=\cos \alpha$ und
+$b=\sin \alpha$.)
+Auf eine beliebige Basis $\{ |\pmb{e}_1 \rangle, |\pmb{e}_2\rangle\}$ wirkt diese Transformation
+in der Form:
+\begin{equation}
+    | \pmb{f}_1 = a | \pmb{e}_1 \rangle + b |\pmb{e}_2 \rangle \hspace{0.5cm} , \hspace{0.5cm}
+     | \pmb{f}_2 = -b | \pmb{e}_1\rangle + a |\pmb{e}_2 \rangle \, . 
+\end{equation}
+F\"ur den korrelierten verschr\"ankten Zustand $\Phi^+$ (ausgedr\"uckt in der $\pmb{f}$-Basis) folgt:
+\begin{eqnarray}
+    \frac{1}{\sqrt{2}} \big(  | \pmb{f}_1 \rangle \otimes | \pmb{f}_1 \rangle + 
+        | \pmb{f}_2 \rangle \otimes | \pmb{f}_2 \rangle \big)  & = & \\ 
+        & &  \hspace*{-5cm} =
+    \frac{1}{\sqrt{2}} \Big(  \big( a | \pmb{e}_1 \rangle + b |\pmb{e}_2 \rangle \big) 
+        \otimes  \big(  a | \pmb{e}_1\rangle + b |\pmb{e}_2 \rangle \big)
+         +  \big( -b | \pmb{e}_1\rangle + a |\pmb{e}_2 \rangle \big) 
+            \otimes \big(  -b | \pmb{e}_1 \rangle + a |\pmb{e}_2 \rangle \big)  \Big)       \\   
+        & &  \hspace*{-5cm} =
+  \frac{1}{\sqrt{2}} ( a^2 + b^2) \big( | \pmb{e}_1 \rangle \otimes | \pmb{e}_1 \rangle +
+        | \pmb{e}_2 \rangle \otimes | \pmb{e}_2 \rangle \big)  \\
+                & &  \hspace*{-5cm} =
+  \frac{1}{\sqrt{2}} \big( | \pmb{e}_1 \rangle \otimes | \pmb{e}_1 \rangle + 
+        | \pmb{e}_2 \rangle \otimes | \pmb{e}_2 \rangle \big)  
+\end{eqnarray}
+
+\subsection*{Die Richtungsabh\"angigkeit des gemischten Zustands (Herleitung 2)}
+\label{sec_Entanglement_B}
+
+Auf die beiden Zust\"ande des Gemischs wirkt die Drehung in der Form
+\begin{eqnarray}
+    | \pmb{f}_1 \otimes |\pmb{f}_1\rangle &=&
+    = \big( a | \pmb{e}_1 \rangle + b |\pmb{e}_2 \rangle \big) \otimes
+                     ( a | \pmb{e}_1 \rangle + b |\pmb{e}_2 \rangle \big)  \\
+    &=& \big( a^2 | \pmb{e}_1 \rangle \otimes | \pmb{e}_1 \rangle + ab | \pmb{e}_1 \rangle \otimes | \pmb{e}_2 \rangle +
+                   ba | \pmb{e}_2 \rangle \otimes | \pmb{e}_1 \rangle + b^2 | \pmb{e}_2 \rangle \otimes | \pmb{e}_2 \rangle  \\
+    | \pmb{f}_2 \otimes |\pmb{f}_2\rangle &=&
+    = \big( -b | \pmb{e}_1 \rangle + a |\pmb{e}_2 \rangle \big) \otimes
+                     ( -b | \pmb{e}_1 \rangle + a |\pmb{e}_2 \rangle \big)  \\
+    &=& \big( b^2 |\pmb{e}_1 \rangle \otimes | \pmb{e}_1 \rangle - ba |\pmb{e}_1 \rangle \otimes |\pmb{e}_2 \rangle -
+                   -ab | \pmb{e}_2 \rangle \otimes | \pmb{e}_1 \rangle + a^2 |\pmb{e}_2 \rangle \otimes |\pmb{e}_2 \rangle  
+\end{eqnarray}
+Man erkennt, dass in beiden F\"allen auch antikorrelierte Ergebnisse m\"oglich sind.
+
+\begin{thebibliography}{99}
+\bibitem{Horodecki} Horodecki, R., Horodecki, P., Horodecki, M.,
+         Horodecki, K.; {\em Quantum entanglement}; Rev.\ Mod.\ Phys.\ {\bf 81}
+         (2009) 865--942.       
+\end{thebibliography}
+
+
+\end{document}
+

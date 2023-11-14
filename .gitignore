@@ -5,3 +5,4 @@ github_uni_fr
 github_uni_fr.pub
 .flaskenv
 app.log
+wsgi.py

@@ -132,6 +132,12 @@ def create_app(db_url=None):
                 tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
                 os.makedirs(tmpdirname + '/Bilder')
 
+                # Deckblatt
+                copy_files("upload_dir/attachment/Deckblatt/Bilder", tmpdirname + '/Bilder')
+                with open("upload_dir/attachment/Deckblatt/deckblatt_clean.tex") as f_in:
+                    for line in f_in:
+                        texdoc.append(line)
+
                 for item_id in item_ids:
                     item = ItemModel.query.get_or_404(int(item_id))
                     if item.file_name:
