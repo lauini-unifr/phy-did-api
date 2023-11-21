@@ -28,6 +28,37 @@ from ressources.topic import blp as TopicBlueprint
 from ressources.tag import blp as TagBlueprint
 from ressources.user import blp as UserBlueprint
 
+CHAPTER_VARS = { ### "label" : "item_id" 
+    "chap_Klima1": ["1", "Solarkonstante und Paleoklima"],
+    "chap_Klima3": ["2", "Klimamodelle"],
+    "chap_SI": ["3", "SI-Einheiten"],
+    "chap_Kalender": ["4", "Kalendersysteme"], ### not in use
+    "chap_Zeitgleichung": ["5", "Die Zeitgleichung"],
+    "chap_Uhren": ["6", "Zeitmessung"],
+    "chap_Gezeiten": ["7", "Die Gezeiten - Ebbe und Flut"],
+    "eq_Schwerpunkt": ["7", "8 Kap. Die Gezeiten - Ebbe und Flut"],
+    "tab_Tide": ["7", "1 Kap. Die Gezeiten - Ebbe und Flut"],
+    "chap_Gezeiten2": ["8", r"Gezeiten und Tagesl\"ange"],
+    "sec_EMWW": ["8", r"Gezeiten und Tagesl\"ange"],
+    "chap_Nachthimmel": ["9", "Der Nachthimmel"],
+    "chap_Kosm_Entfernung": ["10", "Die Kosmische Entfernungsleiter"],
+    "chap_Landkarte": ["11", "Landkarten und der metrische Tensor"],
+    "chap_QuBit": ["12", "Das QuBit"],
+    "chap_Interferometer": ["13", "Interferometer"],
+    "chap_BB84": ["14", "BB84 - Quantenkryptographie"],
+    "chap_Quantenradierer": ["15", "Quantenradierer"],
+    "chap_Grundlagen": ["16", "Grundlagen der SRT"],
+    "eq_vadd": ["16", "21 des Kapitels Grundlagen der SRT"],
+    "chap_Philosophie": ["17", "Philosphischer Hintergrund der SRT"],
+    "chap_SpezRel": ["17", "Philosphischer Hintergrund der SRT"],
+    "sec_Synch": ["17", "3 des Kapitels Philosphischer Hintergrund der SRT"],
+    "chap_SRT-Effekte": ["18", "SRT – Effekte"],
+    "chap_Zwilling": ["19", "Das Zwillingsparadoxon"],
+    "SRT_Beschleunigung": ["20", "Beschleunigte Systeme und das Rindler-Universum"],
+    "chap_Entanglement": ["21", r"Verschr\"ankung"],
+    "chap_EPR": ["22", "EPR-Bell-CHSH"]
+}
+
 
 
 def create_app(db_url=None):
@@ -129,6 +160,7 @@ def create_app(db_url=None):
                 texdoc = []  # a list of string representing the latex document in python
                 begin = r'\documentclass[german,10pt]{book}      \input{preambel.tex}         \begin{document}  \setcounter{chapter}{0}'
                 texdoc.append(begin)
+
                 tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
                 os.makedirs(tmpdirname + '/Bilder')
 
@@ -137,6 +169,10 @@ def create_app(db_url=None):
                 with open("upload_dir/attachment/Deckblatt/deckblatt_clean.tex") as f_in:
                     for line in f_in:
                         texdoc.append(line)
+
+                # Table of contents
+                table_of_contents = r'{\let\cleardoublepage\clearpage\tableofcontents}'
+                texdoc.append(table_of_contents)
 
                 for item_id in item_ids:
                     item = ItemModel.query.get_or_404(int(item_id))
@@ -155,7 +191,18 @@ def create_app(db_url=None):
                         with open(src) as f_in:
                             for line in f_in:
                                 if '\documentclass[german,10pt]' not in line and '\end{document}' not in line:
-                                    texdoc.append(line)
+                                    if 'ref' in line:
+                                        hit = False
+                                        for chapter, index in CHAPTER_VARS.items():
+                                            if chapter in line and index[0] not in item_ids:
+                                                hit = True
+                                                newline = line.replace('ref','href')
+                                                newline = newline.replace(chapter+'}','https://physikdidaktik.uni-freiburg.de/kurztexte/}{'+index[1]+'}')
+                                                texdoc.append(newline)
+                                        if not hit:
+                                            texdoc.append(line)
+                                    else:
+                                        texdoc.append(line)
 
                         src_pic = "upload_dir/attachment/Bilder"
                         
