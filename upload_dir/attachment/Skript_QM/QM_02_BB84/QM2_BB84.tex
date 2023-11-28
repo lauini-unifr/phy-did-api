@@ -1,10 +1,51 @@
-\documentclass[german,10pt]{book}      \input{preambel}         \begin{document}  \setcounter{chapter}{6}
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
 \newcommand{\solution}[1]{#1}
 %\newcommand{\solution}[1]{}
 
 \chapter{BB84 - Quantenkryptographie}
 % Kap x
 \label{chap_BB84}
+
+\section*{Kurzzusammenfassung}
+
+Eine gesicherte Nachrichten\"ubertragung ist mit einem Schl\"ussel m\"oglich, der
+aus einer Zufallsfolge von Bits (0 und 1) besteht, der dieselbe L\"ange wie die zu
+\"ubertragende Nachricht hat und der nur ein einziges Mal verwendet wird. Dieses
+Protokoll bezeichnet man als One-Time Pad. Die meisten Verfahren der Quantenkryptographie, 
+insbesondere auch das sogenannte BB84-Protokoll, verwenden die Quantentheorie
+lediglich zur sicheren Erzeugung eines solchen Schl\"ussels (also einer Zufallsfolge
+aus 0 und 1), von dem \"uberpr\"uft werden kann, dass nur der Sender und der
+Empf\"anger diesen Schl\"ussel kennen. 
+
+Eine wesentliche Eigenschaft der Quantentheorie, die dieses Verfahren erm\"oglicht,
+ist das sogenannte \glqq No-Cloning\grqq-Theorem bzw.\ die Unm\"oglichkeit, einen
+unbekannten Quantenzustand eines Systems durch die Messung an einem Einzelsystem
+bestimmen zu k\"onnen. 
+
+Alice erzeugt dazu eine Serie von Photonen, die sie in einer Zufallsfolge von 
+horizontaler, vertikaler, $+45^\circ$-diagonaler und $-45^\circ$-diagonaler Polarisation 
+pr\"apariert und an Bob versendet. Bob analysiert den Polarsationszustand dieser
+Photonen mit Polarisationsstrahlteilern, deren Orientierung ebenfalls zuf\"allig auf
+$h/v$ (horizontal/vertikal) oder $+/-$ ($+45^\circ$- und $-45^\circ$-diagonal) gestellt wird. 
+Anschlie\ss end tauschen Alice und Bob \"uber einen klassischen Kanal
+die Folge der Basissysteme ($h/v$ oder $+/-$) aus und
+w\"ahlen nur die Ergebnisse, bei denen sie zuf\"allig dieselbe Basis gew\"ahlt haben.
+Die dabei gemessenen Polarisationen definieren ihren Schl\"ussel. 
+
+Eve kann die Photonen von Alice abfangen, \"ahnlich wie Bob die Polarisationszust\"ande
+bez\"uglich zuf\"allig gew\"ahlter Basen untersuchen, und dann gezielt diese
+Polarisationszust\"ande an Bob weiterleiten. In rund der H\"alfte der F\"alle wird ihre
+Polarisation mit der von Alice \"ubereinstimmen und die Photonen wurden nicht ver\"andert.
+In der H\"alfte der F\"alle w\"ahlt sie jedoch die falsche Polarisation, sodass Bob 
+in diesen F\"allen wiederum in der H\"alfte der F\"alle ein anderes Ergebnis erh\"alt
+als Alice (in der anderen H\"alfte der F\"alle sind die Ergebnisse zuf\"allig gleich). 
+Durch einen Vergleich eines Teils ihres Schl\"ussels l\"asst sich diese
+Diskrepanz nachweisen und somit feststellen, ob der Schl\"usselaustausch \glqq abgelauscht\grqq\
+wurde.
+
+\newpage
+
+\section*{Einf\"uhrung}
 
 Quantenkryptographie ist eine der vielen faszinierenden Anwendungen der Quanteninformation.
 Die M\"oglichkeit, Nachrichten austauschen zu k\"onnen, ohne dass diese Nachrichten
