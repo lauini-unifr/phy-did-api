@@ -186,6 +186,8 @@ def create_app(db_url=None):
                             topic_folder_name = "Skript_QM"
                         elif item.topic.name == "Relativitätstheorie":
                             topic_folder_name = "Skript_SRT"    
+                        elif item.topic.name == "Thermodynamik":
+                            topic_folder_name = "Skript_Thermo"  
 
                         src = "upload_dir/attachment/" + topic_folder_name + "/" + item.name + "/" + item.file_name
                         with open(src) as f_in:
@@ -215,7 +217,9 @@ def create_app(db_url=None):
                                         "Klass_08_Nachthimmel",
                                         "Klass_10_Landkarten",
                                         "QM_01_QuBit",
-                                        "SRT_03_Kette"]:
+                                        "SRT_03_Kette",
+                                        "Thermo_01_Prozess",
+                                        "Thermo_03_Entropie"]:
                             copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder') 
                     
 
