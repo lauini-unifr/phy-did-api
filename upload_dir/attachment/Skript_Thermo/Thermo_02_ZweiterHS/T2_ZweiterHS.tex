@@ -1,0 +1,753 @@
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{1}
+
+%\newcommand{\solution}[1]{}
+
+\chapter{Der zweite Hauptsatz der Thermodynamik}
+% Kap x
+\label{chap_ZweiteHS}
+
+Die \textit{thermodynamische Entropie} geh\"ort erfahrungsgem\"a\ss\ 
+zu den schwierigen Konzepten in der Physik, sowohl f\"ur Sch\"ulerinnen und Sch\"uler als
+auch f\"ur Studierende. Als
+Zustandsgr\"o\ss e bleibt sie vergleichsweise unanschaulich. Sie hat ihren Ursprung
+in der wichtigen Arbeit von Nicolas L\'{e}onard Sadi Carnot (1796--1832) von 1824 \cite{Carnot}, 
+und auch heute noch dient der Carnot-Prozesses h\"aufig der Herleitung dieser Zustandsgr\"o\ss e
+und ihrem Bezug zum zweiten Hauptsatz der Thermodynamik. In der heutigen Form 
+erfasst wurde dieser Begriff allerdings erst von Rudolf Clausius (1822--1888), der 
+dieses Konzept 1854 zum ersten Mal formulierte und ihm 1865 die heutige Bezeichnung \glqq Entropie\grqq\ sowie
+die heutige thermodynamische Formulierung gab. Die statistische Formulierung der Entropie
+in Form der \textit{Boltzmann-Entropie} (siehe der Kurztext 
+\glqq \hyperref[chap_Entropie]{Entropie -- Statistische Zug\"ange}\grqq\ gegen Ende des 19.\ Jahrhunderts 
+gab ihr zwar eine gewisse Anschauung, allerdings ist der Zusammenhang zur thermodynamischen Entropie
+gerade in der Schule schwierig zu vermitteln. 
+
+Ausgangspunkt f\"ur den thermodynamischen Entropiebegriff ist der zweite Hauptsatz der
+Thermodynamik. Hier gibt es einfache Formulierungen (z.B.\ von Clausius und von Kelvin bzw.\ Planck),
+die aber wenig unmittelbare Schlussfolgerungen erlauben, und komplexere Formulierung, die zwar
+ergiebig sind aber meist auch sehr unanschaulich (in diesem Kurztext verwende ich die Formulierung
+von Sommerfeld \cite{Sommerfeld}). Der Carnot-Prozess zeigt die Gleichwertigkeit dieser
+Definitionen. In einem abschlie\ss enden Kapitel beschreibe ich skizzenhaft die axiomatischen Ans\"atze
+von Carath\'{e}odory \cite{Caratheodory}, Jauch \cite{Jauch} sowie Lieb und Yngvason \cite{Lieb1,Lieb2}). 
+
+\section{Der zweite Hauptsatz der Thermodynamik}
+
+Der zweite Hauptsatz der Thermodynamik besitzt viele Formulierungen, von denen einige
+sehr einfach und unmittelbare Erfahrungstatsachen sind, andere hingegen eher 
+komplex aber geeignet, um weitreichende Schlussfolgerungen daraus ziehen zu k\"onnen.
+Das Ziel des Carnot-Prozesses oder auch der axiomatischen Zug\"ange von Carath\'{e}odory und
+Jauch ist, die komplexere aber reichhaltigere Aussage des zweiten Hauptsatzes auf die
+einfacheren Aussagen zur\"uckzuf\"uhren, d.h., deren \"Aquivalenz zu zeigen. Die bekanntesten
+einfachen Formulierungen des zweiten Hauptsatzes sind die Formulierung von 
+Clausius sowie die Formulierung von Kelvin bzw.\ Planck. 
+
+\subsection{Der zweite Hauptsatz in der Formulierung von Clausius und Kelvin}
+
+Die Formulierungen des zweiten Hauptsatzes der Thermodynamik von Clausius und
+Kelvin, wobei die Formulierung von Kelvin erst von Max Planck in die hier verwendete Form
+gebracht wurde, geh\"oren zu den unmittelbar einsichtigen Formen des zweiten Hauptsatzes. 
+\vspace{0.3cm}
+
+\noindent
+Die Formulierung von Clausius lautet:\\
+Es gibt keinen Prozess, bei dem W\"arme von einem k\"alteren System in ein w\"armeres
+System flie\ss t, ohne dass weitere Ver\"anderungen aufgetreten sind. 
+\vspace{0.3cm}
+
+Gemeint ist damit, dass es kein System $M$ gibt, das der Umgebung Energie in Form von W\"arme oder
+Arbeit (also W\"armeenergie, elektrische Energie, chemische Energie, ...) entzieht, diese dazu nutzt, aus
+einem k\"alteren System mit der Temperatur $T_2$ W\"arme in ein w\"armeres Reservoir mit der Temperatur
+$T_1>T_2$ zu pumpen, und anschlie\ss end die aufgenommene Energie in derselben Form und Menge
+wieder an die Umgebung abgibt. Letztendlich soll sich nichts ge\"andert haben, au\ss er dass das
+k\"altere System noch k\"alter geworden und das w\"armere System noch w\"armer geworden ist (vgl.\
+Abb.\ \ref{fig_ZweiterHauptsatz}).
+
+\begin{figure}[htb]
+\begin{picture}(170,150)(-20,0)
+\put(-10,140){\makebox(0,0){(a)}}
+\put(10,10){\line(1,0){120}}
+\put(10,10){\line(0,1){20}}
+\put(10,30){\line(1,0){120}}
+\put(130,10){\line(0,1){20}}
+\put(10,120){\line(1,0){120}}
+\put(10,120){\line(0,1){20}}
+\put(10,140){\line(1,0){120}}
+\put(130,120){\line(0,1){20}}
+\put(70,55){\line(1,0){40}}
+\put(70,55){\line(0,1){40}}
+\put(70,95){\line(1,0){40}}
+\put(110,55){\line(0,1){40}}
+%
+\put(80,30){\line(0,1){15}}
+\put(100,30){\line(0,1){15}}
+\put(75,45){\line(1,0){5}}
+\put(100,45){\line(1,0){5}}
+\put(75,45){\line(3,2){15}}
+\put(105,45){\line(-3,2){15}}
+\put(80,95){\line(0,1){15}}
+\put(100,95){\line(0,1){15}}
+\put(75,110){\line(1,0){5}}
+\put(100,110){\line(1,0){5}}
+\put(75,110){\line(3,2){15}}
+\put(105,110){\line(-3,2){15}}
+%
+\put(30,60){\line(1,0){30}}
+\put(60,55){\line(1,1){10}}
+\put(60,75){\line(1,-1){10}}
+\put(60,55){\line(0,1){5}}
+\put(60,70){\line(0,1){5}}
+\put(30,70){\line(1,0){30}}
+\put(40,80){\line(1,0){30}}
+\put(30,85){\line(1,1){10}}
+\put(30,85){\line(1,-1){10}}
+\put(40,75){\line(0,1){5}}
+\put(40,90){\line(0,1){5}}
+\put(40,90){\line(1,0){30}}
+%
+\put(70,20){\makebox(0,0){$T_2$}}
+\put(70,130){\makebox(0,0){$T_1>T_2$}}
+\put(90,75){\makebox(0,0){$M$}}
+\put(50,65){\makebox(0,0){${\scriptstyle Q_2,W}$}}
+\put(50,85){\makebox(0,0){${\scriptstyle Q_2,W}$}}
+\put(90,40){\makebox(0,0){$Q_1$}}
+\put(90,105){\makebox(0,0){$Q_1$}}
+\end{picture}
+\hspace{1cm}
+%%
+\begin{picture}(150,150)(0,0)
+\put(0,140){\makebox(0,0){(b)}}
+\put(10,10){\line(1,0){120}}
+\put(10,10){\line(0,1){20}}
+\put(10,30){\line(1,0){120}}
+\put(130,10){\line(0,1){20}}
+\put(70,95){\line(1,0){40}}
+\put(70,95){\line(0,1){40}}
+\put(70,135){\line(1,0){40}}
+\put(110,95){\line(0,1){40}}
+%
+\put(80,30){\line(0,1){55}}
+\put(100,30){\line(0,1){55}}
+\put(75,85){\line(1,0){5}}
+\put(100,85){\line(1,0){5}}
+\put(75,85){\line(3,2){15}}
+\put(105,85){\line(-3,2){15}}
+%
+\put(30,115){\line(1,0){40}}
+\put(30,105){\circle{20}}
+\put(20,65){\line(0,1){40}}
+\put(10,45){\line(1,0){20}}
+\put(10,45){\line(0,1){20}}
+\put(30,45){\line(0,1){20}}
+\put(10,65){\line(1,0){20}}
+\put(37,45){\vector(0,1){20}}
+\put(70,20){\makebox(0,0){$T_1$}}
+\put(20,55){\makebox(0,0){$m$}}
+\put(30,105){\makebox(0,0){$\bullet$}}
+\put(90,115){\makebox(0,0){$M$}}
+\put(90,60){\makebox(0,0){$Q$}}
+%
+\put(110,100){\line(1,0){30}}
+\put(140,95){\line(1,1){10}}
+\put(140,115){\line(1,-1){10}}
+\put(140,95){\line(0,1){5}}
+\put(140,110){\line(0,1){5}}
+\put(110,110){\line(1,0){30}}
+\put(120,120){\line(1,0){30}}
+\put(110,125){\line(1,1){10}}
+\put(110,125){\line(1,-1){10}}
+\put(120,115){\line(0,1){5}}
+\put(120,130){\line(0,1){5}}
+\put(120,130){\line(1,0){30}}
+\put(130,105){\makebox(0,0){${\scriptstyle Q_2,W}$}}
+\put(130,125){\makebox(0,0){${\scriptstyle Q_2,W}$}}
+\end{picture}
+\caption{\label{fig_ZweiterHauptsatz}%
+Zur Formulierung des zweiten Hauptsatzes durch Clausius und Kelvin bzw.\ Planck. (a) Eine
+Maschine $M$ wird dazu genutzt, W\"armeenergie $Q_1$ aus einem k\"alteren in ein w\"armeres System zu pumpen.
+Sie nimmt dabei Energie in Form von Arbeit $W$ oder W\"arme $Q_2$ aus der Umgebung auf, gibt diese aber
+in derselben Form wieder an die Umgebung zur\"uck. Eine W\"armepumpe erh\"alt man, wenn $Q_2$ aus
+dem w\"armeren System entnommen und (zus\"atzlich zu $Q_1$) an dieses wieder zur\"uckgegeben wird.  
+(b) Eine zyklisch arbeitende Maschine wird dazu genutzt, W\"armeenergie $Q$ in mechanische Arbeit -- das
+Hochheben eines Gewichtes zur Masse $m$ -- umzusetzen. }
+\end{figure} 
+
+Manchmal formuliert man den Satz f\"ur eine W\"armepumpe: In diesem Fall entnimmt die Maschine dem 
+w\"armeren System zun\"achst eine W\"armemenge $Q_2$ und nutzt diese, um dem k\"alteren System die W\"arme 
+$Q_1$ zu entziehen. Schlie\ss lich gibt sie die W\"arme $Q_1+Q_2$ wieder an das w\"armere Sys\-tem ab. Die
+W\"arme $Q_2$ wurde also dem w\"armeren System entnommen und an dieses zur\"uckgegeben. Die W\"arme
+$Q_1$ wurde vom k\"alteren System in das w\"armere System gepumpt.
+\vspace{0.3cm}
+
+\noindent
+Die Formulierung von Kelvin bzw.\ Planck lautet:\\  
+Es ist unm\"oglich, eine periodisch arbeitende Maschine zu konstruieren, die weiter nichts bewirkt als die
+Hebung einer Last und die Abk\"uhlung eines W\"armereservoirs.
+\vspace{0.3cm}
+
+Letztendlich bedeutet dies, dass man nicht W\"armeenergie vollst\"andig in mechanische Arbeit umwandeln kann.
+Die Maschine darf der Umgebung f\"ur ihren Betrieb zwar Energie in Form von W\"arme oder Arbeit entziehen,
+muss diese aber wieder vollst\"andig an die Umgebung abgeben, sodass sich in der Umgebung nach einem
+Zyklus nichts ge\"andert hat. 
+
+Die beiden Aussagen sind \"aquivalent. G\"abe es die Maschine von Clausius, k\"onnte man die in das
+w\"armere System gepumpte W\"armemenge nutzen, um eine Masse anzuheben, wobei ein Teil dieser
+W\"armemenge in das k\"altere System zur\"uckflie\ss en k\"onnte. Insgesamt h\"atte man aber W\"arme aus
+dem k\"alteren System genutzt, um eine Masse anzuheben. Umgekehrt, g\"abe es die Maschine von
+Kelvin (diese bezeichnet man auch gelegentlich als Perpetuum Mobile 2.\ Art), k\"onnte man die angehobene
+Masse wieder absinken lassen und dabei (analog zu dem Experiment von Joule zur Bestimmung des
+W\"arme\"aquivalents) ein beliebiges System erw\"armen. 
+
+\subsection{Der zweite Hauptsatz in der Formulierung von Sommerfeld}
+
+Arnold Sommerfeld formuliert den zweiten Hauptsatz der Thermodynamik in seinen
+\textit{Vorlesungen zur theoretischen Physik} folgenderma\ss en \cite{Sommerfeld}:\\[0.2cm]
+Jedes thermodynamische System besitzt eine Zustandsgr\"o\ss e, Entropie genannt. Man 
+berechnet sie, indem man das System aus einem willk\"urlich gew\"ahlten Anfangszustand in den jeweiligen Zustand
+des Systems durch eine Folge von Gleichgewichtszust\"anden \"uberf\"uhrt, die hierbei schrittweise
+zugef\"uhrte W\"arme $\delta Q$ bestimmt, letztere durch die erst bei dieser Gelegenheit zu definierende
+\glqq absolute Temperatur\grqq\ $T$ dividiert und s\"amtliche Quotienten summiert.\\
+Bei den wirklichen (nicht ideellen) Vorg\"angen nimmt die Entropie eines nach au\ss en abgeschlossenen Systems
+zu. 
+\vspace{0.3cm}
+ 
+Hier wird sofort ein anderer Charakter der Aussage deutlich. Diese Aussagen sind alles andere als sofort
+einsichtig. Die Tatsache, dass es eine Zustandsgr\"o\ss e Entropie geben soll, ist schon f\"ur sich nicht trivial.
+Die Vorgehensweise, wie man diese bestimmt, erscheint ebenfalls sehr eigenartig. Sommerfeld spricht von einer
+\glqq Folge von Gleichgewichtszust\"anden\grqq, er meint jedoch einen reversiblen Prozess. Damit ein
+Prozess reversibel ist (also durch beliebig kleine \"Anderungen in der Umgebung auch in umgekehrter 
+Richtung ausgef\"uhrt werden kann) ist die Folge von Gleichgewichtszust\"anden -- dies bezeichnet man
+auch als quasistation\"ar -- nur eine notwendige Bedingung. Es gibt Prozesse, die beliebig langsam ablaufen und
+daher eine Folge von Gleichgewichtszust\"anden sind, die trotzdem nicht reversibel sind. Ein Beispiel ist
+der Joule-Thomson-Effekt, bei dem eine Druckdifferenz zwischen benachbarten Systemen durch eine
+kleine D\"use ausgeglichen wird. Die D\"usen\"offnung l\"asst sich beliebig klein machen, wodurch der
+Prozess beliebig langsam verl\"auft. Trotzdem ist dieser Prozess nicht reversibel. Es ist daher
+nicht selbstverst\"andlich, dass je zwei beliebige Gleichgewichtszust\"ande durch einen reversiblen Prozess
+miteinander verbunden werden k\"onnen. 
+
+Ebenfalls eigenartig ist die Formulierung \glqq die erst bei dieser Gelegenheit zu definierende absolute Temperatur\grqq.
+Gemeint ist, dass es zur W\"arme $Q$, die eine Prozessgr\"o\ss e ist und keine Zustandsgr\"o\ss e (diese Begriffe
+werden in dem Kurztext \hyperref[chap_Zustand]{Zustands- und Prozessgr\"o\ss en} genauer erl\"autert), 
+einen integrierenden Faktor gibt, sodass $\delta Q$ lokal proportional zum totalen Differential (d.h.\ zum Gradienten) 
+einer Zustandsgr\"o\ss e ist: $\delta Q = T {\rm d}S$. 
+Dieser integrierende Faktor ist bis auf einen Skalenfaktor festgelegt und man kann zeigen, dass dadurch
+eine absolute Temperatur definiert werden kann. Dies wird im n\"achsten Abschnitt \ref{sec_Carnot} gezeigt und
+dies ist auch das Ziel der axiomatischen Formulierungen (siehe Abschnitt \ref{sec_AxiomeEntropie}). 
+
+Die eigentliche Aussage des zweiten Hauptsatzes besteht in dem letzten Satz: Die Entropie nimmt
+in wirklichen abgeschlossenen Systemen immer zu. Insbesondere nimmt sie in abgeschlossenen Systemen
+nie ab. Dies erkl\"art, weshalb manche Prozesse in der Natur beobachtet werden, die umgekehrt
+ablaufenden Prozesse aber nie. Au\ss erdem zeichnet diese Aussage eine Zeitrichtung -- den sogenannten
+thermodynamischen Zeitpfeil -- aus: Die thermodynamische Zeitrichtung ist so, dass die Entropie in
+dieser Richtung zunimmt.      
+
+Sommerfeld f\"uhrt seine nicht triviale Formulierung des zweiten Hauptsatzes der Thermodynamik auf
+eine triviale Formulierung (von Kelvin bzw.\ Planck) zur\"uck. Dazu verwendet er den Carnot-Prozess. 
+
+\subsection{Carnot-Prozesse}
+\label{sec_Carnot}
+
+Unter Berufung auf Carnot gibt Sommerfeld in seiner Vorlesung \cite{Sommerfeld} eine
+sehr elegante Begr\"undung, weshalb $\delta Q/T$ integrabel ist, oder anders ausgedr\"uckt,
+weshalb f\"ur jeden beliebigen zyklischen reversiblen Prozess (mathematisch ein geschlossener
+Weg $\gamma$ im Raum der Gleichgewichtszust\"ande)
+\begin{equation}
+           \oint_\gamma  \frac{\delta Q}{T} = 0 
+\end{equation}
+ist. 
+
+Ich m\"ochte an dieser Stelle den in meinen Augen sehr eleganten Beweis nur
+andeuten, und das auch nur f\"ur ein homogenes Fluid (Fl\"ussigkeit oder Gas), bei
+dem bei vorgegebener Stoffmenge der Druck $p$ und das Volumen $V$ den thermischen Zustand
+bereits festlegen. Es gen\"ugt daher, geschlossene Wege im $p$-$V$-Diagramm zu betrachten. 
+
+\begin{SCfigure}[50][htb]
+\begin{picture}(220,160)(0,0)
+\put(10,10){\vector(1,0){200}}
+\put(10,10){\vector(0,1){140}}
+\qbezier(40,130)(80,110)(140,100)
+\qbezier(70,60)(110,40)(190,30)
+\qbezier(40,130)(50,80)(70,60)
+\qbezier(140,100)(150,60)(190,30)
+\put(210,0){\makebox(0,0){$V$}}
+\put(5,150){\makebox(0,0){$p$}}
+\put(37,135){\makebox(0,0){$1$}}
+\put(145,100){\makebox(0,0){$2$}}
+\put(195,30){\makebox(0,0){$3$}}
+\put(65,55){\makebox(0,0){$4$}}
+\put(100,120){\makebox(0,0){${\scriptstyle T_1={\rm const}}$}}
+\put(120,35){\makebox(0,0){${\scriptstyle T_2={\rm const}}$}}
+\put(38,90){\makebox(0,0){${\scriptstyle \delta Q=0}$}}
+\put(166,70){\makebox(0,0){${\scriptstyle \delta Q=0}$}}
+\end{picture}
+\caption{\label{fig_Carnot}%
+Der Carnot-Prozess in der 
+$p$-$V$-Ebene. Der Prozess $1\rightarrow 2$ verl\"auft
+entlang einer Isothermen bei der Temperatur
+$T_1$; der Prozess $2\rightarrow 3$ ist adiabatisch; 
+der Prozess $3\rightarrow 4$ verl\"auft
+wieder entlang einer Isothermen, diesmal bei der
+Temperatur $T_2<T_1$; und der Prozess
+$4\rightarrow 1$ ist wieder adiabatisch.}
+\end{SCfigure}
+
+Ein {\em Carnot-Prozess} ist ein reversibler
+Kreisprozess, d.h., alle Teilprozesse sind reversibel
+und nach einem vollen Durchlauf
+befindet sich das System wieder in seinem 
+Ausgangszustand. Er setzt sich zusammen aus
+zwei isothermen Teilprozessen, bei denen das
+System an zwei W\"armeb\"ader bei den jeweiligen 
+Temperaturen $T_1 > T_2$ gekoppelt wird, und   
+zwei adiabatischen Prozessen, bei denen also kein
+W\"armeaustausch mit der Umgebung
+stattfindet. Adiabaten sind \glqq steiler\grqq\ als
+Isothermen im $p$-$V$-Diagramm, weil dem
+System f\"ur eine Volumenausdehnung entlang 
+einer Isothermen W\"arme zugef\"uhrt
+wird. F\"ur dieselbe Volumenausdehnung
+entlang einer Adiabaten nimmt die Temperatur
+wegen der fehlenden W\"armezufuhr ab
+und damit nimmt auch der Druck rascher
+ab als entlang einer Isothermen. 
+
+Da Anfangs- und Endzustand bei einem
+Durchlauf gleich sind, folgt
+\begin{equation}
+   \oint \delta Q = \oint \delta W 
+   \hspace{1cm} {\rm bzw.} \hspace{0.7cm}
+   W = Q_{1} - Q_{2}  \, ,
+\end{equation}
+wobei $Q_{1}$ die entlang des Weges
+$1\rightarrow 2$ vom System aus dem hei\ss en Reservoir
+($T_1$) aufgenommene W\"armemenge
+und $Q_{2}$ die von dem System entlang
+des Weges $3\rightarrow 4$ an das k\"uhle Reservoir 
+($T_2$) abgegebene W\"armemenge sind.
+$W$ ist die bei dem Kreisprozess $1\rightarrow 2\rightarrow 3 \rightarrow 4$
+geleistete Arbeit. 
+
+Der Wirkungsgrad eines solchen Prozesses
+ist definiert als das Verh\"altnis von geleisteter
+Arbeit $W$ zu aufgenommener W\"armemenge
+$Q_{1}$:
+\begin{equation}
+       \eta = \frac{W}{Q_{1}} = 1 - \frac{Q_{2}}{Q_{1}} \, .
+\end{equation} 
+
+Sommerfeld (in Anlehnung an Carnot) beweist nun, dass alle
+reversiblen Carnot-Prozesse, die zwischen
+denselben Temperaturen $T_1$ und $T_2$
+operieren, denselben Wirkungsgrad haben
+m\"ussen, unabh\"angig von der Stoffbeschaffenheit
+oder anderer Parameter. Das bedeutet,
+das Verh\"altnis $Q_2/Q_1$ kann nur von den
+Temperaturen $T_1$ und $T_2$ abh\"angen:
+\begin{equation}
+           \frac{Q_2}{Q_1} = f(T_1,T_2) \, .
+\end{equation}
+Zum Beweis argumentiert er, dass die Prozesse
+reversibel sein sollen und daher
+auch in umgekehrter Reihenfolge
+durchlaufen werden k\"onnen, wobei in
+diesem Fall aus der Umgebung Arbeit
+$W$ aufgenommen wird und dazu dient,
+eine bestimmte W\"armemenge $Q_2$
+aus dem k\"uhlen Reservoir aufzunehmen
+und $Q_1$ in das hei\ss e Reservoir abzugeben.
+Die Arbeit wird also genutzt, um W\"arme aus
+dem kalten in das warme Reservoir zu
+pumpen. H\"atten zwei Carnot-Prozesse zwischen
+denselben Temperaturen verschiedene
+Wirkungsgrade, k\"onnte man den Prozess mit
+dem gr\"o\ss eren Wirkungsgrad zur Erzeugung von 
+Arbeit aus W\"arme verwenden, und den anderen
+in umgekehrter Richtung zur Verwendung dieser
+Arbeit als W\"armepumpe einsetzen und h\"atte
+so effektiv (ohne weitere Ver\"anderungen in der
+Umgebung) W\"arme vom k\"alteren in das 
+w\"armere Bad gepumpt. Dies widerspricht aber
+dem 2.\ Hauptsatz der Thermodynamik in der Formulierung von Clausius.  
+
+\begin{SCfigure}[50][htb]
+\begin{picture}(220,160)(0,0)
+\put(10,10){\vector(1,0){200}}
+\put(10,10){\vector(0,1){140}}
+\qbezier(40,130)(80,110)(140,100)
+\qbezier(70,60)(110,40)(190,30)
+\qbezier(50,95)(100,75)(156,65)
+\qbezier(40,130)(50,80)(70,60)
+\qbezier(140,100)(150,60)(190,30)
+\put(210,0){\makebox(0,0){$V$}}
+\put(5,150){\makebox(0,0){$p$}}
+\put(37,135){\makebox(0,0){$1$}}
+\put(145,100){\makebox(0,0){$2$}}
+\put(161,65){\makebox(0,0){$3$}}
+\put(45,95){\makebox(0,0){$4$}}
+\put(195,30){\makebox(0,0){$5$}}
+\put(65,55){\makebox(0,0){$6$}}
+\put(100,120){\makebox(0,0){${\scriptstyle T_1={\rm const}}$}}
+\put(110,85){\makebox(0,0){${\scriptstyle T_2={\rm const}}$}}
+\put(120,35){\makebox(0,0){${\scriptstyle T_3={\rm const}}$}}
+\put(45,75){\makebox(0,0){${\scriptstyle \delta Q=0}$}}
+\put(160,83){\makebox(0,0){${\scriptstyle \delta Q=0}$}}
+\end{picture}
+\caption{\label{fig_Carnot2}%
+Zwei Carnot-Prozesse ($1$-$2$-$3$-$4$-$1$ bei Temperaturen $T_1>T_2$
+und $4$-$3$-$5$-$6$-$4$ bei $T_2>T_3$) k\"onnen zu einem Carnot-Prozess
+$1$-$2$-$5$-$6$-$1$ bei den Temperaturen $T_1>T_3$ verkn\"upft werden,
+in dem die Punkte in der Reihenfolge $1$-$2$-$3$-$4$-$3$-$5$-$6$-$4$-$1$
+durchlaufen werden.}
+\end{SCfigure}
+
+Hat man sich davon \"uberzeugt, dass f\"ur einen reversiblen Carnot-Prozess das Verh\"altnis von
+abgegebener zu aufgenommener W\"armemenge nur von den Temperaturen 
+abh\"angen kann, betrachtet man nun zwei Carnot-Prozesse bei den Temperaturen
+$T_1>T_2$ und $T_2>T_3$, sodass eine geeignete Hintereinanderschaltung
+der Wege einen Carnot-Prozess bei den Temperaturen $T_1>T_3$ beschreibt (vgl.\
+Abb.\ \ref{fig_Carnot2}). Wegen
+\begin{equation}
+     \frac{Q_3}{Q_1} =      \frac{Q_2}{Q_1}  \frac{Q_3}{Q_2} =   f(T_1,T_2) f(T_2,T_3)  =  f(T_1,T_3)
+\end{equation}
+muss es eine Funktion $f(T)$ geben, sodass
+\begin{equation}
+     \frac{Q_2}{Q_1} =   \frac{f(T_2)}{f(T_1)}  \, .
+\end{equation}
+Wir {\em definieren} nun eine Temperaturskala (die f\"ur die bisherige Argumentation noch
+nicht vorausgesetzt wurde), indem wir f\"ur einen reversiblen Carnot-Prozess
+\begin{equation}
+     \frac{Q_2}{Q_1} =    \frac{T_2}{T_1}  \hspace{1cm} ({\rm bzw.})  \hspace{1cm}  \frac{Q_1}{T_1} = \frac{Q_2}{T_2} 
+\end{equation}
+festlegen. Dies ist eine M\"oglichkeit, eine Temperaturskala zu bestimmen. (Sie legt die
+Temperatur bis auf eine multiplikative Konstante, also eine lineare Umdefinition der Skala,
+fest.) Dass dieses Verfahren \"ubereinstimmt mit der Definition einer
+Temperaturskala \"uber das Verhalten idealer Gase w\"are allerdings noch zu zeigen, was hier
+nicht geschehen soll. Bez\"uglich der so gew\"ahlten Temperaturskala ist also bei einem reversiblen
+Carnot-Prozess das Verh\"altnis $Q_1/T_1$ entlang der oberen Isothermen gleich dem
+Verh\"altnis $Q_2/T_2$ entlang der unteren Isothermen. Ganz nebenbei haben wir auf diese Weise
+auch den Wirkungsgrad eines reversiblen Carnot-Prozesses abgeleitet:
+\begin{equation}
+        \eta = 1 - \frac{T_2}{T_1}  \, .
+\end{equation}
+
+\begin{SCfigure}[50][htb]
+\begin{picture}(220,160)(-20,0)
+\put(0,10){\vector(1,0){180}}
+\put(0,10){\vector(0,1){140}}
+\qbezier(50,110)(55,107)(60,105)
+\qbezier(80,40)(85,37)(90,35)
+\qbezier(50,110)(60,60)(80,40)
+\qbezier(60,105)(70,55)(90,35)
+%
+\qbezier(110,103)(113,101)(120,100)
+\qbezier(140,45)(143,44)(150,43)
+\qbezier(110,103)(120,63)(140,45)
+\qbezier(120,100)(130,60)(150,43)
+%
+\thicklines
+\qbezier(30,100)(50,117)(150,93)
+\qbezier(150,93)(200,75)(145,43)
+\qbezier(145,43)(100,30)(50,45)
+\qbezier(50,45)(-10,70)(30,100)
+
+\put(190,0){\makebox(0,0){$V$}}
+\put(5,150){\makebox(0,0){$p$}}
+\put(115,110){\makebox(0,0){${\scriptstyle \delta Q_1/T_1}$}}
+\put(145,35){\makebox(0,0){${\scriptstyle \delta Q_2/T_2}$}}
+\end{picture}
+\caption{\label{fig_Carnot3}%
+Jeder beliebige Kreisprozess l\"asst sich n\"aherungsweise in Carnot-Prozesse unterteilen,
+die bei verschiedenen Temperaturen aber infinitesimal benachbarten Adiabaten ablaufen. F\"ur jeweils
+zu einem Carnot-Prozess geh\"orende gegen\"uberliegende isotherme
+Abschnitte heben sich die Beitr\"age $\delta Q_1/T_1$ und $\delta Q_2/T_2$
+bei der Integration \"uber den Prozessweg paarweise weg.}
+\end{SCfigure}
+
+Als letzten Schritt zerlegt Sommerfeld einen
+beliebigen Kreisprozess in der $p$-$V$-Ebene
+in Carnot-Prozesse zu infinitesimal benachbarten
+Adiabaten (d.h., die W\"armemengen $Q_1$ und
+$Q_2$ werden zu infinitesimalen Elementen
+$\delta Q_1$ und $\delta Q_2$), die aber bei
+verschiedenen Temperaturen arbeiten
+(Abb.\ \ref{fig_Carnot3}). F\"ur
+diese Prozesse gilt
+\begin{equation}
+     \frac{\delta Q_1}{T_1} =
+     \frac{\delta Q_2}{T_2} \, .  
+\end{equation}
+Da sich diese Elemente bei der Summation
+\"uber einen geschlossenen Weg immer paarweise 
+wegheben, erhalten wir insgesamt die
+zu beweisende Identit\"at
+\begin{equation}
+              \oint \frac{\delta Q}{T} = 0 \, .
+\end{equation}
+Offensichtlich ist die \"uber einen
+Carnot-Prozess definierte Temperaturskala
+(bis auf einen multiplikativen Faktor) identisch
+zu der Temperaturskala, die man aus der
+Forderung erh\"alt, dass $T$ der integrierende
+Faktor zwischen der 1-Form $\delta Q$ und
+der zugeh\"origen exakten 1-Form ${\rm d}S$
+sein soll.
+
+\section{Axiomatische Definitionen der Entropie}
+\label{sec_AxiomeEntropie}
+
+Der Carnot-Prozess hat gezeigt, dass es zu der Prozessgr\"o\ss e (1-Form) W\"arme $\delta Q$ 
+einen integrierenden Faktor $T$ gibt, sodass $\delta Q=T{\rm d}S$. Die meisten axiomatischen Zug\"ange
+(z.B.\ Carath\'{e}odory und Jauch \cite{Caratheodory,Jauch}) leiten diese Tatsache aus rein mathematischen
+\"Uberlegungen her, wobei ein genaue Analyse zeigt, dass sie das Konzept des Carnot-Prozesses
+mathematisieren und dann beweisen, dass die 1-Form \glqq W\"arme\grqq\ einen integrierenden
+Faktor besitzt und dass dieser integrierende Faktor nur von einer empirischen Temperatur
+$\theta$ abh\"angt. Sie definieren dann die absolute Temperatur $T$ als diesen integrierenden
+Faktor. Ich skizziere hier einige dieser axiomatischen Zug\"ange, obwohl dies weit \"uber die
+Anforderungen in der Schule hinausgeht. Aber f\"ur den interessierten Leser stecken in diesen Zug\"angen
+doch sehr viele zus\"atzliche Einsichten.
+
+\subsection{Die geometrische Bedeutung eines integrierenden Faktors}
+
+In diesem Abschnitt geht es um einige Beziehungen zwischen 1-Formen und 0-Formen. N\"aheres
+zu diesen Formen sowie zu der hier verwendeten Notation 
+findet man in dem Kurztext \hyperref[chap_Zustand]{Zustands- und Prozessgr\"o\ss en}. Hier
+werden nur die wichtigsten Definitionen angegeben. 
+
+Die Menge der Gleichgewichtszust\"ande
+in der Thermodynamik l\"asst sich als Mannigfaltigkeit $M$ darstellen, d.h., sie l\"asst sich lokal durch
+Koordinaten $\pmb{x}=(x_0,x_1,...,x_n)$ beschreiben. Bei diesen Koordinaten handelt es sich um einen Satz von 
+unabh\"angigen Zustandsgr\"o\ss en, wobei eine Koordinate ($x_0$) die innere Energie sein soll und die
+anderen Koordinaten ein Satz von Gr\"o\ss en, durch welche die Arbeit des Systems an der Umgebung
+kontrolliert werden kann (z.B.\ das Volumen, die Stoffmengen, Ladungsmengen, etc.), daher bezeichnet man
+diese Koordinaten auch als Arbeitskoordinaten. Eine 
+Zustandsgr\"o\ss e oder auch 0-Form ist eine Observable, die an einem Gleichgewichtszustand gemessen 
+werden kann, d.h., es handelt sich um eine Funktion $f:M\rightarrow \mathbb{R}$ (bzw.\ in Koordinaten
+$f:U\subset \mathbb{R}^n \rightarrow \mathbb{R}$; ich verwende hier dasselbe Symbol). Unter einem
+Prozess bzw.\ einer Zustands\"anderung verstehen wir einen Weg $\gamma: [0,1] \rightarrow M$ (in Koordinaten
+$t \mapsto \pmb{x}(t)=(x_0(t),...,x_n(t))$) auf der Mannigfaltigkeit der Gleichgewichtszust\"ande. Damit
+dieser Weg tats\"achlich auf dieser Mannigfaltigkeit verl\"auft, muss die Zustands\"anderung reversibel 
+erfolgen, d.h., sie muss quasistation\"ar sein (zu jedem Zeitpunkt muss sich das System in einem Gleichgewichtszustand
+befinden, d.h., der Prozess verl\"auft beliebig langsam) und durch minimale \"Anderungen in der Umgebung
+muss der Prozess umkehrbar sein. Man \"uberlege sich, dass jeder solche Weg auf der Menge der
+Gleichgewichtszust\"ande tats\"achlich durch einen reversiblen Prozess physikalische realisiert
+werden kann.
+
+Das totale Differential
+${\rm d}f$ (oder auch der Gradient $\pmb{\nabla}f$) ist eine 1-Form und damit eine sogenannte Prozessgr\"o\ss e.
+Das bedeutet, es handelt sich um ein Feld, das an jedem Punkt $\pmb{x}$ auf einen Tangentenvektor 
+(die \glqq Geschwindigkeit\grqq\ $\dot{\pmb{x}}$ eines Wegs $\gamma:[0,1] \rightarrow M; t \mapsto \pmb{x}(t)$) an 
+diesem Punkt angewandt werden muss. Die so erhaltene Funktion l\"asst sich entlang des Weges  integrieren:
+\begin{equation}
+         f(\pmb{x}) - f(\pmb{x}_0) =  \int_\gamma {\rm d}f = \int_0^1 {\rm d}f_{(\pmb{x}(t))}( \dot{\pmb{x}})\,{\rm d}t \, .
+\end{equation}
+Das Differential ${\rm d}f_{(\pmb{x})}$ definiert an jedem Punkt $\pmb{x}\in M$ eine Hyperfl\"ache (einen Vektorraum,
+der eine Dimension weniger als $M$ hat, also die Kodimension 1):
+Alle Tangentialvektoren $\dot{\pmb{x}}$ in $T_{\pmb{x}}M$ (dem Tangentialraum an $M$ im Punkte $\pmb{x}$, der
+durch die m\"oglichen Geschwindigkeiten von Wegen durch diesen Punkt gegeben ist), 
+f\"ur die ${\rm d}f_{(\pmb{x}(t))}( \dot{\pmb{x}})=0$ gilt, liegen in dieser Hyperebene, d.h.\ es handelt sich bei dieser 
+Hyperebene um den Tangentialraum an 
+eine \"Aquipotentialfl\"ache von $f$.\footnote{Oft stellt man sich ${\rm d}f_{(\pmb{x})}$ als ein Vektorfeld
+vor, das an jedem Punkt dem Gradienten von $f$ entspricht. Hierbei sollte man jedoch beachten, dass es
+sich dabei um eine lineare Abbildung (also ein Element des Dualraums) auf dem Tangentenraum an $M$ -- also
+dem Raum aller \glqq Geschwindigkeiten von Wegen\grqq\ in einem Punkt $\pmb{x}\in M$ -- handelt.} 
+Ausgedr\"uckt in Koordinaten hat ${\rm d}f$ die Form:
+\begin{equation}
+           {\rm d}f_{(\pmb{x})} = \sum_{i=1}^n \frac{\partial f(\pmb{x})}{\partial x_i}\, {\rm d} x_i \, ,
+\end{equation}
+wobei ${\rm d}x_i$ die Differentiale der Koordinatenfunktion $x_i:M\rightarrow \mathbb{R}$ sind. Diese
+sollten nicht als \glqq kleine Inkremente\grqq\ interpretiert werden, sondern als die Abbildung, die einem
+Tangentialvektor (an einem Punkt $\pmb{x}$) seine $i$-te Komponente zuordnet. Es ist also
+\begin{equation}
+                  {\rm d}x_i (\dot{\pmb{x}}) = \dot{x}_i \, . 
+\end{equation}
+Eine allgemeine 1-Form auf $M$ hat (ausgedr\"uckt in lokalen Koordinaten) die Form
+\begin{equation}
+           \omega_{(\pmb{x})} = \sum_{i=1}^n \omega_i \, {\rm d} x_i \, .
+\end{equation}
+Auch eine solche 1-Form -- anschlaulich ein Vektorfeld mit Komponenten $\omega_i$ --
+definiert an jedem Punkt $\pmb{x}$ von $M$ eine Hyperebene durch die Bedingung
+$\omega_{(\pmb{x})} (\dot{\pmb{x}}) = 0$. Dies f\"uhrt auf die Frage: Unter welchen Bedingungen
+lassen sich diese Hyperebenen in einer Umgebung eines Punktes $\pmb{x}$ als Tangentialr\"aume
+an die \"Aquipotentialfl\"achen einer Funktion $f$ deuten? Ist $\omega$ das
+totale Differential zu einer Funktion $f$, wenn also $\omega = {\rm d}f$ gilt -- in diesem Fall bezeichnet
+man $\omega$ als \textit{exakt} --, ist das der Fall. Eine solche Funktion $f$ gibt es, wenn $\omega$
+rotationsfrei ist, d.h. wenn gilt:
+\begin{equation}
+                                  \frac{\partial \omega_i}{\partial x_j} =  \frac{\partial \omega_j}{\partial x_i} \, .
+\end{equation}
+(In einem Differentialformenkalk\"ul kann man daf\"ur auch ${\rm d}\omega =0$ schreiben.) 
+
+Die Bedingung $\omega_{(\pmb{x})} (\dot{\pmb{x}}) = 0$, durch welche bei gegebenem $\omega$ die
+Hyperebene definiert ist, erlaubt aber eine gewisse Freiheit: Wenn $\omega$ an jedem Punkt mit einem
+beliebigen (von null verschiedenen) Faktor multipliziert wird, \"andert sich diese Bedingung f\"ur die
+Hyperebenen nicht. Es wird lediglich die \glqq L\"ange\grqq\ der Normalenvektoren an die Ebene
+ge\"andert, das \"andert aber die Ebene selbst nicht. Also gilt auch: Wenn es eine Funktion
+$\alpha(\pmb{x})$ gibt, sodass $\alpha(\pmb{x}) \omega_{(\pmb{x})}$ rotationsfrei ist, dann gibt es
+(in einem zusammenh\"angenden Gebiet) eine Funktion $f$, sodass $\alpha \omega= {\rm d}f$. Die
+Funktion $\alpha(\pmb{x})$ bezeichnet man als \glqq integrierenden Faktor\grqq. Die Gleichung
+$\omega(\dot{\pmb{x}})=0$ hat dieselben L\"osungen wie $\alpha(\pmb{x}) \omega(\dot{\pmb{x}})=0$ 
+bzw.\ ${\rm d}f(\dot{\pmb{x}})=0$ (sofern es diese Funktion $f$ gibt), 
+und dies sind die Vektoren der Tangentialr\"aume an die
+\"Aquipotentialfl\"achen von $f$. 
+
+Gibt es eine Funktion $f$, sodass $\alpha \omega ={\rm d}f$, ist nat\"urlich auch jede Funktion 
+$F(f)$ eine L\"osung des Problems, da die \"Aquipotentialfl\"achen dieselben sind. 
+Da ${\rm d}F(f)= F'(f) {\rm d}f$, \"andert sich entsprechend der integrierende Faktor um
+$ \alpha \rightarrow \alpha F'(f)$. Die L\"osung des Problems ist somit nicht eindeutig. 
+
+Die Beziehung zur Thermodynamik ist nun folgende: Die W\"arme $\delta Q$ (in der Mathematik w\"urde
+man eher $\omega_Q$ schreiben) ist eine 1-Form ebenso wie das Differential ${\rm d}U$ 
+der inneren Energie U. Allerdings ist ${\rm d}U$ eine exakte 1-Form -- es gibt die Zustandsfunktion 
+(0-Form) der inneren Energie $U$ --, wohingegen $\delta Q$ keine exakte 1-Form ist. 
+Allerdings kann man beweisen -- und dies tun der Carnot-Prozess wie auch die axiomatischen 
+Ans\"atze von Carath\'{e}odory und Jauch --, dass es einen integrierenden Faktor zu $\delta Q$ gibt, 
+n\"amlich $1/T$, wobei $T$ als absolute Temperatur definiert wird, sodass es eine 
+Zustandsgr\"o\ss e -- die Entropie $S$ -- gibt, sodass $\delta Q/T = {\rm d}S$. 
+  
+\subsection{Die Arbeit von Constantin Carath\'{e}odory}
+
+Die Arbeit von Constantin Carath\'{e}odory von 1913 \cite{Caratheodory} wird heute oftmals als der
+erste axiomatische Zugang zur Thermodynamik angesehen, bei dem der zweite Hauptsatz der
+Thermodynamik -- die Existenz einer Zustandsgr\"o\ss e Entropie sowie einer absoluten Temperatur --
+bewiesen wird, ohne dass das sehr unscharf definierte Konzept der W\"arme explizit verwendet wird.  
+Der erste Hauptsatz der Thermodynamik -- bei Carath\'{e}odory ist dies das Axiom I -- wird
+so umgeformt, dass die W\"arme $\delta Q$ durch die besser definierten Gr\"o\ss en innere Energie $U$ 
+bzw.\ das totale Differential ${\rm d}U$ und die Arbeit $\delta W$ ausgedr\"uckt wird. Lokal 
+wird dadurch postuliert, dass
+\begin{equation}
+                          \delta Q = {\rm d}U + \delta W \, .
+\end{equation}
+Prozesse bzw.\ Zustands\"anderungen sind auch bei Carath\'{e}odory reversible Wege $\pmb{x}(t)$ 
+auf der Mannigfaltigkeit $M$ der Gleichgewichtszust\"ande. Zun\"achst sehr unanschaulich 
+ist das Axiom II bei Carath\'{e}odory:\\[0.3cm]
+\textit{In jeder beliebigen Umgebung eines willk\"urlich vorgeschriebenen Anfangszustands
+gibt es Zust\"ande, die durch adiabatische Zustands\"anderungen nicht beliebig approximiert
+werden k\"onnen.}
+\vspace{0.3cm}
+
+Eine adiabatische Zustands\"anderung -- beschrieben durch einen Tangentialvektor $\dot{\pmb{x}}$ --
+erf\"ullt dabei die Bedingung $\delta Q(\dot{\pmb{x}})=0$. Bei einer solchen Zustands\"anderung flie\ss t
+also keine W\"arme bzw.\ findet kein W\"armeaustausch mit der Umgebung statt. Die Forderung, dass es 
+solche Zustands\"anderungen \"uberhaupt gibt, 
+setzt als empirische Tatsache die Existenz von adiabatisch abgeschlossenen W\"anden voraus, sodass man
+experimentell eine reversible Zustands\"anderung realisieren kann, bei der keine W\"arme mit der Umgebung
+ausgetauscht wird. 
+
+Carath\'{e}odory
+betrachtet nun adiabatische Wege (Zustands\"anderungen) $\pmb{x}(t)$, ausgehend von einem Anfangszustand
+$\pmb{x}_0$ zu einem beliebigen Zustand $\pmb{x}$, f\"ur die gilt
+\begin{equation}
+                          \delta Q_{(\pmb{x}(t))}(\dot{\pmb{x}}(t))  = 0 \, . 
+\end{equation}
+Wenn es zu $\delta Q$ einen integrierenden Faktor $\alpha(\pmb{x})$ und eine Funktion $S(\pmb{x})$
+gibt, so dass $\alpha(\pmb{x}) \delta Q = {\rm d}S$, bedeutet dies, dass ein solcher Weg
+(eine solche Zustands\"anderung) nur innerhalb einer \"Aquipotentialfl\"ache zu dieser Funktion $S$ verlaufen
+kann. Dies bedeutet wiederum, dass bestimmte Punkte in einer beliebig kleinen Umgebung eines
+Gleichgewichtszustands $\pmb{x}$ -- n\"amlich solche mit einem anderen Funktionswert f\"ur $S$ als der Punkt $\pmb{x}$ --
+durch adiabatische Wege nicht erreicht werden k\"onnen. Nach einem Theorem von \'{E}lie Cartan
+gilt aber auch das Umgekehrte: Wenn es in der Umgebung eines Punktes $\pmb{x}$ andere
+Punkte gibt, die durch Wege, entlang derer $\omega(\dot{\pmb{x}})=0$ ist, nicht erreicht werden
+k\"onnen, dann gibt es eine Funktion $S(\pmb{x})$, sodass diese Wege auf einer Hyperfl\"ache 
+$S(\pmb{x})={\rm const}$ verlaufen. Mit anderen Worten: Wenn $\omega$ keinen integrierenden Faktor
+besitzt, dann kann man mit Wegen, f\"ur die $\omega(\dot{\pmb{x}})=0$ gilt, jeden Punkt in einer
+Umgebung eines Punkte $\pmb{x}$ beliebig approximieren. 
+
+Damit hat Carath\'{e}odory gezeigt, dass es zu der 1-Form W\"arme einen integrierenden Faktor gibt,
+so dass diese 1-Form zu einem totalen Differential einer Zustandsgr\"o\ss e $S$ wird, die wir dann
+Entropie nennen. Es verbleibt zu zeigen, dass dieser integrierende Faktor lediglich eine Funktion der
+sogenannten \textit{empirischen Temperatur} $\theta$ sein kann. Au\ss erdem hatten wir gesagt, dass
+die Funktion $S$ nicht eindeutig ist, sofern sie existiert. Allerdings kann man zeigen, dass unter den
+Funktionen $F(S)$, die m\"oglich w\"aren, nur eine (bis auf einen konstanten Faktor) die Eigenschaft
+hat, additiv zu sein. D.h., wenn man zwei Systeme zu einem Gesamtsystem vereint, soll die
+Entropie $S$ additiv sein: $S_{\rm ges} = S_1 + S_2$. Dies legt sowohl die Funktion $S$ als auch
+den integrierenden Faktor bis auf einen konstanten Faktor fest. Von diesem kann man nun zeigen,
+dass er nur von der Temperatur abh\"angt, denn wenn der integrierende Faktor eine intensive
+Zustandsgr\"o\ss e sein soll, kann er nicht mehr von einer extensiven Gr\"o\ss e (der Entropie) 
+abh\"angen. 
+
+\subsection{Der Zugang von Joseph-Maria Jauch}
+
+In seinem Artikel von 1970 \cite{Jauch} geht Joseph-Maria Jauch ganz \"ahnlich vor, wie 
+Carathh\'{e}odory. Durch ein erstes Axiom wird die Energieerhaltung postuliert, sodass es
+eine 1-Form (genannt W\"arme) gibt, die sich als
+\begin{equation}
+                 \delta Q ={\rm d}U + \delta W 
+\end{equation}
+schreiben l\"asst, wobei vorausgesetzt wird, dass $U$ -- die innere Energie -- eine an einem
+Gleichgewichtszustand messbare Gr\"o\ss e -- also eine Zustandsgr\"o\ss e -- darstellt, 
+die bei der Verwendung von Arbeitskoordinaten mit $x_0$ bezeichnet wird,
+und dass $\delta W$ die von dem System an der Umgebung geleistete Arbeit bezeichnet, die
+durch die Arbeitskoordinaten $(x_1,...,x_n)$ kontrolliert werden kann. 
+
+Jauch betrachtet nun reversible adiabatische Wege, also wiederum Wege, f\"ur die
+$\delta Q(\dot{\pmb{x}}(t))=0$ ist. Er beweist das folgende Theorem: Ist ein adiabatischer Weg
+in den Arbeitskoordinaten $(x_1,...x_n)$ geschlossen, dann ist er auch in $M$ geschlossen, d.h.\
+in den Koordinaten $(x_0,x_1,...,x_n)$. Dies ist nicht trivial: Es k\"onnte adiabatische \glqq Spiralen\grqq\ 
+geben, sodass in $(x_1,...,x_n)$ ein Weg geschlossen ist, dieser aber in der verbliebenen Koordinate
+$x_0$ einen anderen Wert annimmt. 
+
+Wir betrachten also nun einen Weg $\gamma$, der bez\"uglich der Arbeitskoordinaten $(x_1,...,x_n)$
+geschlossen ist, und f\"ur den $\delta Q(\dot{\pmb{x}})=0$. Insbesondere gilt f\"ur diesen Weg
+\begin{equation}
+      \int_{\gamma} \delta Q = 0 \, .
+\end{equation}      
+Damit m\"usste f\"ur diesen Weg und die Koordinate $x_0$ (die der inneren Energie $U$ entspricht) 
+gelten:      
+\begin{equation}      
+               x_0(1) - x_0(0) =  \Delta U  =  \int_{\gamma} \delta W \, .
+\end{equation}
+Da die Arbeitskoordinaten $(x_1,...,x_n)$ aber am Ende des Weges wieder dieselben Werte wie
+zu Beginn annehmen, kann die Energie $\Delta U$ dem System nur zugef\"ugt worden sein, indem
+bei dem Prozess diese Energie aus einem W\"armereservoir entnommen wurde. Doch dies widerspricht
+dem zweiten Hauptsatz in der Formulierung von Planck: Es gibt keine periodisch arbeitende Maschine
+(die Arbeitskoordinaten sind nach einem Zyklus dieselben wie vorher), deren einziger Effekt darin besteht, 
+dass ein Gewicht angehoben wird und sich ein W\"armereservoir abgek\"uhlt hat.
+
+Das bedeutet aber, dass ein adiabatischer Weg, f\"ur den somit $\int_{\gamma} \delta Q = 0$, und
+der in den Arbeitskoordinaten geschlossen ist, automatisch insgesamt geschlossen ist. 
+
+
+\subsection{Lieb und Yngvason: Entropie als Ma\ss\ f\"ur Reversibilit\"at}
+
+In einigen j\"ungeren Arbeiten (z.B.\ \cite{Lieb1,Lieb2}) haben Lieb und Yngvason versucht, den
+Begriff der Entropie direkt als Ma\ss\ f\"ur Irreversibilit\"at herzuleiten. Dazu betrachten sie wieder den
+Raum aller Gleichgewichtszust\"ande und definieren darauf eine Halbordnung: Wenn ein
+Prozess f\"ur zwei Gleichgewichtszust\"ande $A$ und $B$ spontan abl\"auft (nicht notwendigerweise 
+reversibel oder \"uber eine Folge vonGleichgewichtszust\"anden), definieren sie $A\rightarrow B$. 
+Wenn es Prozesse gibt, die in beide Richtungen ablaufen k\"onnen, gelte $A \leftrightarrow B$.
+Die Relation $A\rightarrow B$ ist transitiv, d.h., wenn gilt $A\rightarrow B$ und $B \rightarrow C$, gilt
+auch $A \rightarrow C$. Auch die Relation $A \leftrightarrow B$ ist transitiv (und symmetrisch). 
+Das bedeutet: Es gibt auf der Menge der Gleichgewichtszust\"ande eine \"Aquivalenzrelation
+($\leftrightarrow$) und auf der Menge der \"Aquivalenzklassen eine Halbordnung. 
+
+Lieb und Yngvason definieren nun auf der Menge der Menge der Gleichgewichtszust\"ande eine
+Funktion $\sigma$, die innerhalb einer \"Aquivalenzklasse konstant ist und die die Halbordnung respektiert, 
+d.h., falls $A \rightarrow B$ gilt, soll auch $\sigma(A) \leq \sigma(B)$ gelten, und falls $A \leftrightarrow B$
+gilt, soll $\sigma(A) = \sigma(B)$ gelten. Diese Funktion $\sigma$ k\"onnte man als empirische
+Entropie interpretieren. 
+
+Auch diese Funktion $\sigma$ ist nicht eindeutig, da jede monotone Funktion von $\sigma$ ebenfalls
+die geforderten Eigenschaften hat. \"Ahnlich wie Carath\'{e}odory und Jauch nutzen die Autoren nun
+bestimmte Forderungen an die Funktion $\sigma$, die im Wesentlichen
+aus der Additivit\"at bzw.\ der Skalierungseigenschaft folgen, um $\sigma$ bis auf einen konstanten
+Faktor festzulegen. Die so erhaltene Funktion $S$ definieren sie als die Entropie eines Systems. 
+
+\begin{thebibliography}{99}
+\bibitem{Caratheodory} Carath\'{e}odory, C.; \textit{Untersuchungen \"uber die Grundlagen der
+          Thermodynamik}; Mathematische Annalen, Bd.\ 67 (1909) 355--386.
+\bibitem{Carnot} Carnot, S.; \textit{R\'{e}flexions sur la puissance motrice du feu et sur les machines propres \`{a} d\'{e}velopper cette
+               puissance}; Annales scientifiques de l'\'{E}cole Normale Sup\'{e}ieure S\'{e}r.\ 2 (1872), 393--457.\\Deutsch:
+               \textit{Betrachtungen \"uber die bewegende Kraft des Feuers und die zur Entwickelung dieser Kraft geeigneten Maschinen} (1824);
+               \"ubersetzt und herausgegeben von W.\ Ostwald, in Ostwald's Klassiker der exakten Wissenschaften, Nr.\ 37.        
+\bibitem{Jauch} Jauch, J.-M.; \textit{Analytical Thermodynamics. Part I. Thermostatistics---General Theory};
+               Found.\ Phys.\ 5, No.\ 1 (1975), 111--132; Verlag von Wilhelm Engelmann, Leibzig, 1892.
+\bibitem{Lieb1} Lieb, E.\,H., Yngvason, J.; \textit{The Physics and Mathematics of the Second Law of
+            Thermodynamics}; Phys.\ Rep.\ 310 (1999) 1--96.
+\bibitem{Lieb2} Lieb, E.\,H., Yngvason, J.; \textit{The Mathematical Structure of the Second Law of
+            Thermodynamics}; Current Developments in Mathematics, 2001; International Press, Cambridge (2002)
+            89--130.
+\bibitem{Sommerfeld} Sommerfeld, A.; \textit{Vorlesungen \"uber theoretische Physik; Band 5: Thermodynamik und
+             Statistik}; Verlag Harri Deutsch, Frankfurt (1992).                                                                           
+\end{thebibliography}
+
+
+\end{document}
+

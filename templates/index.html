@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
-    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <title>GET Request Button</title>
 </head>
 <body>
-    <select name="text_select" id="text_select" multiple>
+    <select name="text_select" id="text_select" data-placeholder="Tippe um nach Kurztexten zu suchen..." multiple class="chosen-select">
       <optgroup label="Klimaphysik">
         <option value="1">Solarkonstante und Paleoklima</option>
         <option value="2">Klimamodelle</option>
@@ -25,6 +27,11 @@
         <option value="10">Die Kosmische Entfernungsleiter</option>
         <option value="11">Landkarten und der metrische Tensor</option>
       </optgroup>
+      <optgroup label="Thermodynamik">
+        <option value="24">Zustands- und Prozessgrößen</option>
+        <option value="25">Der zweite Hauptsatz der Thermodynamik</option>
+        <option value="26">Entropie</option>
+      </optgroup>
       <optgroup label="Quantenphysik">
         <option value="12">Das QuBit</option>
         <option value="13">Interferometer</option>
@@ -32,6 +39,7 @@
         <option value="15">Quantenradierer</option>
         <option value="21">Verschränkung</option>
         <option value="22">EPR-Bell-CHSH</option>
+        <option value="23">Die Bra-Ket-Notation</option>
       </optgroup>
       <optgroup label="Relativitätstheorie">
         <option value="16">Grundlagen der SRT</option>
@@ -53,6 +61,10 @@
 </html>
 
 <script>
+  $(".chosen-select").chosen({
+    no_results_text: "Nichts gefunden für: "
+  })
+
     new MultiSelectTag('text_select', {
         rounded: true,    // default true
         shadow: true,      // default false

@@ -1,0 +1,923 @@
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
+
+%\newcommand{\solution}[1]{}
+
+\chapter{Die Bra-Ket-Notation}
+% Kap x
+\label{chap_BraKet}
+
+Die Bra-Ket-Notation von Dirac \cite{Dirac} hat sich mittlerweile in der Quantentheorie
+als au\ss erordentlich hilfreich etabliert. Ihre N\"utzlichkeit erweist sich besonders dann,
+wenn Zust\"ande oder Operatoren basisunabh\"angig oder aber in wechselnden Basissystemen ausgedr\"uckt
+werden sollen. Gerade in vielen modernen Zweigen der Quantentheorie, beispielsweise in der
+Quanteninformatik, sind solche Basiswechsel wichtig. 
+
+Physikalisch repr\"asentiert ein Ket-Vektor $| \psi \rangle$ einen Zustand
+(wobei der Buchstabe $\psi$ zun\"achst rein symbolisch den Zustand beschreibt oder charakterisiert),
+mathematisch repr\"ansentiert $|\psi \rangle$ einen normierten
+Vektor in einem Hilbert-Raum (d.h.\ einem komplexen Vektorraum mit einem Skalarprodukt). 
+Der zugeh\"orige Bra-Vektor $\langle \psi |$ ist ein Element des Dualraums, das
+wegen des Skalarprodukts einem Element des Vektorraums zugeordnet werden kann:
+Sei $|\psi \rangle$ ein Vektor im Hilbert-Raum und $g(\cdot, \cdot)$ das Skalarprodukt auf
+diesem Hilbert-Raum (wobei $\cdot$ jeweils durch einen Vektor zu ersetzen ist), dann ist
+$\langle \psi| = g(| \psi \rangle, \cdot)$ der zugeh\"orige Vektor im Dualraum.
+
+Diese rein mathematischen Beziehungen sind vielen Lehrkr\"aften nicht sehr vertraut, zum
+einen, weil sie in der Schule keine Verwendung finden und daher nie ben\"otigt werden,
+zum anderen aber auch, weil sie in Physikvorlesungen, besonders in fr\"uheren Zeiten,
+nicht sehr pr\"azise verwendet oder eingef\"uhrt wurden. Konzepte wie der Dualraum eines
+Vektorraums sind ohnehin vielen Studierenden der Physik eher \glqq suspekt\grqq. 
+
+Die Bra-Ket-Notation kann aber auch symbolisch f\"ur verschiedene physikalische Operationen
+verstanden werden -- unabh\"angig von ihrer mathematischen Bedeutung in der linearen
+Algebra. Dabei sind meist nur sehr wenige und einfache Regeln zu beachten, denen man au\ss erdem
+eine anschauliche Deutung geben kann. Um diese symbolische Bedeutung soll es in diesem 
+Kurztext gehen. 
+
+Zur Notation: Wenn man von einem \glqq Zustand\grqq\ spricht, ist oftmals nicht klar, was
+gemeint ist. Insbesondere sollte man zwischen der mathematischen Repr\"asentation und der
+physikalischen Realisierung unterscheiden. Bei der physikalischen Realisierung ist wiederum
+zwischen der Realisierung durch ein einzelnes System und der Realisierung durch ein
+Ensemble von Systemen zu unterscheiden (siehe auch den Kurztext 
+\hyperref[chap_Axiom]{Axiomatischer Zugang zur Physik}). Da im Folgenden viel von Wahrscheinlichkeiten
+die Rede ist, repr\"asentiert $|\psi\rangle$ (sofern nicht explizit anders erw\"ahnt) in diesem Kurztext
+immer ein Einzelsystem, das in dem Zustand $\psi$ pr\"apariert wurde.
+
+\"Ahnliches gilt f\"ur den Begriff der Observablen. Hier unterscheide ich zwischen der physikalischen
+Realisierung einer Observablen in Form eines Messprotokolls, ausgedr\"uckt durch das Symbol
+${\cal A}$, und der mathematischen Repr\"asentation der Observablen durch einen selbst-adjungierten
+Operator, $A$. F\"ur den physikalischen Zustand, der dem Zustand zu einem Eigenwert $\lambda_n$ 
+einer Observablen  entspricht, schreibe ich oft $\psi_n$; $|\lambda_n\rangle$ bezeichnet den 
+zugeh\"origen normierten Vektor.
+
+\section{Ket- und Bra- als \glqq Pr\"aparation\grqq\ und \glqq Messung\grqq}
+
+Rein symbolisch kann ein normierter Ket-Vektor $|\psi\rangle$ folgenderma\ss en interpretiert werden:
+Ein physikalisches System wird in dem Zustand $\psi$ pr\"apariert und befindet sich nun in
+diesem Zustand. Der Ket-Vektor $|\psi\rangle$ repr\"asentiert somit die Pr\"aparation eines Systems in einem
+bestimmten Zustand $\psi$. 
+
+Entsprechend repr\"asentiert ein normierter Bra-Vektor $\langle \phi|$ die
+Messung an einem System, die das System auf den Zustand $\phi$ testet. $\langle \phi|$
+repr\"asentiert somit den Prozess, bei dem ein Detektor anzeigt, dass der Zustand $\phi$ registriert wurde. 
+Man kann einen solchen Detektor dadurch realisieren, dass man zun\"achst einen Filter
+f\"ur den Zustand $\phi$ aufstellt, d.h., wenn dieser Filter das System durchgelassen hat, befindet
+es sich anschlie\ss end im Zustand $|\phi\rangle$.
+Dahinter steht ein Detektor, dessen \glqq Klick\grqq\ anzeigt, dass das System
+den Filter passiert hat. 
+
+Wenn man einen Ket-Vektor $|\psi\rangle$  im $\mathbb{C}^n$ bez\"uglich einer Orthonormalbasis
+durch einen Spaltenvektor mit Komponenten $x_1, ..., x_n$ darstellt, 
+dann entspricht dem Bra-Vektor der Zeilenvektor mit den jeweils komplex konjugierten Komponenten:
+\begin{equation}
+\label{eq_BK_Komponenten}
+          |\psi\rangle \simeq \left( \begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array} \right)
+          \hspace{1cm} \langle \psi | \simeq (x_1^* , x_2^*, \cdots , x_n^* ) \, .
+\end{equation}
+Aus der linearen Algebra ist vermutlich die Notation $\pmb{x}$ f\"ur den Spaltenvektor und
+$\pmb{\bar{x}}^T$ f\"ur den komplex konjugierten Zeilenvektor vertrauter. Mathematisch haben 
+Ket- und Bra-Vektoren die gleiche Bedeutung. 
+
+Die Hintereinanderausf\"uhrung dieser beiden Operationen -- Pr\"aparation und Messung -- 
+liefert eine komplexe Zahl, die man als Wahrscheinlichkeitsamplitude zu
+diesem Prozess -- System wurde im Zustand $\psi$ pr\"apariert und anschlie\ss end im
+Zustand $\phi$ gemessen -- interpretiert. Das Absolutquadrat dieser Wahrscheinlichkeitsamplitude
+ist die Wahrscheinlichkeit $w(\psi \rightarrow \phi)$, dass dieser Prozess auftritt. Dies ist
+die Born'sche Regel:
+\begin{equation}
+       | \psi \rangle  \begin{picture}(14,0)(0,0) \put(3,2.4){\line(1,0){20}} \end{picture} > | \phi \rangle
+        ~~ \simeq  ~~  \langle \phi | \psi \rangle  \hspace{1cm}
+         w(\psi \rightarrow \phi) = | \langle \phi | \psi \rangle |^2  \, .
+\end{equation}                    
+Wichtig ist, dass man das Skalarprodukt $\langle \phi | \psi \rangle$ als eine Amplitude auffasst,
+die dem Prozess $\psi \rightarrow \phi$ zugeordnet werden kann. Die mathematische Schreibweise hat
+f\"ur diese symbolische Interpretation
+den Nachteil, dass mathematische Ausdr\"ucke von rechts nach
+links zu lesen sind. Die \glqq Zeit\grqq-Achse, in der die Bra-Ket-Ausdr\"ucke als Prozesse 
+interpretiert werden k\"onnen, verl\"auft also waagerecht von rechts nach links.
+
+Aus dieser Interpretation ergeben sich die wichtigsten Regeln f\"ur den Umgang mit der
+Bra-Ket-Notation. Gew\"ohnlich leitet man diese Regeln aus den Eigenschaften des Skalarprodukts
+ab. Wenn ein System im Zustand $|\psi\rangle$ pr\"apariert wurde und die Wahrscheinlichkeit,
+an diesem System den Zustand $|\phi\rangle$ zu messen, verschwindet, ist $\langle \phi|\psi\rangle =0$.
+Man bezeichnet diese beiden Zust\"ande dann als orthogonal. Diese Bezeichnung darf man
+beispielsweise bei linearen Polarisationszust\"anden durchaus w\"ortlich nehmen: Eine horizontale
+Polarisation ist orthogonal zu einer vertikalen Polarisation und es gilt $\langle v|h\rangle=0$,
+wobei $|h\rangle$ und $|v\rangle$ jeweils eine horizontale bzw.\ vertikale Polarisation eines Photons
+bezeichnen. Das Gleiche gilt f\"ur die Polarisationen $+45^\circ$ und $-45^\circ$, d.h., $\langle -|+\rangle=0$.
+Sind andererseits die beiden Zust\"ande $|\psi\rangle $und $|\phi\rangle$ identisch, sodass die
+Wahrscheinlichkeit, an einem im Zustand $|\psi\rangle$ pr\"aparierten System den Zustand $|\phi\rangle$ zu
+messen, gleich eins ist, gilt $\langle \phi|\psi\rangle=1$ ($\langle \psi|\psi\rangle = 1$ ist die 
+Normierungsbedingung f\"ur Vektoren $|\psi\rangle$, die Zust\"ande repr\"asentieren). 
+Allgemein gilt das verallgemeinerte Gesetz
+von Malus: $|\langle \phi|\psi\rangle|^2 = \cos^2 \alpha$, wobei $\alpha$ in reellen Vektorr\"aumen
+der Winkel zwischen den beiden Strahlen zu $|\phi\rangle$ und $|\psi\rangle$ ist. 
+ 
+Als Beispiel betrachten wir die Wellenfunktion $\psi(x)$, die in der Bra-Ket-Notation folgende
+Darstellung hat:
+\begin{equation} 
+            \psi(x) = \langle x | \psi \rangle  \, . 
+\end{equation}
+Im Sinne unserer symbolischen Interpretation hat die Wellenfunktion also folgende 
+Bedeutung: Ein System wird im Zustand $\psi$ pr\"apariert und anschlie\ss end wird
+getestet, ob eine Messung das System am Ort $x$ registriert. Das Absolutquadrat
+dieser Gr\"o\ss e, $|\langle x|\psi\rangle|^2 = |\psi(x)|^2$, ist die Wahrscheinlichkeit(-sdichte),
+bei einer Ortsmessung das System am Ort $x$ vorzufinden.
+
+Eine ganz \"ahnliche Interpretation hat die Fourier-Transformierte der Ortswellenfunktion,
+die Funktion
+\begin{equation} 
+            \tilde{\psi}(p) = \langle p | \psi \rangle  \, . 
+\end{equation}
+(Dass es sich hierbei um die Fourier-Transformierte von $\psi(x)$ handelt, wird in Abschnitt
+\ref{sec_BK_Vollstaendig} gezeigt.) 
+Sie beschreibt die Amplitude f\"ur den Prozess, bei dem ein System im Zustand $\psi$
+pr\"apariert wurde und anschlie\ss end bei einer Impulsmessung der Impuls $p$
+gefunden wird. Das Absolutquadrat $|\langle p|\psi\rangle|^2 = |\tilde{\psi}(p)|^2$
+ist wieder die Wahrscheinlichkeit(-sdichte), an einem System, das im Zustand $\psi$
+pr\"apariert wurde, bei einer Impulsmessung den Impuls $p$ vorzufinden. 
+
+Hier wird auch ein kleiner Vorteil der Bra-Ket-Notation deutlich: Die beiden Funktionen 
+$\psi(x)=\langle x|\psi\rangle$ und $\tilde{\psi}(p)=\langle p|\psi\rangle$ beziehen sich auf
+denselben Zustand $\psi$, an dem lediglich eine andere Messung (Ort $x$ bzw.\ Impuls $p$)
+vorgenommen wird. Die funktionale Abh\"angigkeit von $x$ bzw.\ $p$ ist nat\"urlich eine
+andere, deshalb handelt es sich um verschiedene Funktionen, was durch die $\tilde{~}$
+ausgedr\"uckt wird, doch dadurch entsteht auch leicht der Eindruck, als ob es sich um 
+verschiedene Zust\"ande handelte. W\"urde man jedoch einfach $\psi(x)$ und $\psi(p)$ schreiben,
+w\"urde dasselbe Funktionssymbol f\"ur verschiedene mathematische Funktionen verwendet. 
+
+\section{Projektionsoperatoren als \glqq Filter\grqq}
+
+Projektionsoperatoren sind lineare Abbildungen -- in endlich dimensionalen Vektorr\"aumen
+mit vorgegebener Basis also darstellbar als Matrizen --, die einen beliebigen Vektor auf einen
+linearen Unterraum projizieren. Eindimensionale Projektionsoperatoren kann man mit einem
+eindimensionalen Unterraum identifizieren, sie beschreiben somit einen reinen Zustand. Andererseits
+kann man (auch mehrdimensionale) Projektionsoperatoren als Filter interpretieren, die nur
+bestimmte Zust\"ande durchlassen. 
+
+\subsection{Die Projektion als lineare Abbildung}
+
+Hat eine Projektion eines Vektors auf einen linearen Unterrraum einmal stattgefunden, \"andert
+eine erneute Projektion nichts, da der projizierte Vektor schon in dem betreffenden Unterraum
+liegt. Die definierende Gleichung eines Projektionsoperators ist somit $P^2=P$ (und
+damit gilt nat\"urlich auch $P^n=P$ f\"ur $n\geq 1, n\in \mathbb{N}$, d.h., man kann eine Projektion
+beliebig oft anwenden, es z\"ahlt nur das erste Mal). Aus dieser Bedingung folgt, dass die
+Eigenwerte von $P$ selbst nur $0$ oder $1$ sein k\"onnen, da die Eigenwerte einer linearen
+Abbildung dieselbe Gleichung erf\"ullen m\"ussen, wie diese Abbildung selbst.
+
+Da auf Hilbert-R\"aumen immer ein Skalarprodukt definiert ist, k\"onnen wir auch entscheiden, was eine
+orthogonale Projektion ist. In diesem Fall sind die Vektoren, die auf die Null (den Nullvektor)
+projiziert werden, orthogonal zu den Vektoren, die bereits in dem durch den Projektionsoperator
+ausgezeichneten Unterraum liegen und daher
+durch die Projektion nicht mehr ver\"andert werden. F\"ur diese Bedingung muss $P$ selbst-adjungiert
+sein, es muss also $P^\dagger = P$ gelten ($P^\dagger$ bedeutet bez\"uglich einer Orthonormalbasis die
+komplex konjugierte transponierte Matrix: $(P^\dagger)_{ij} = (P_{ji})^*$). 
+Diese beiden Bedingungen -- $P^\dagger =P$ und $P^2=P$ --
+werden im Folgenden f\"ur Projektionsoperatoren immer vorausgesetzt. Die Spur eines Projektionsoperators
+ist gleich der Anzahl der Eigenwerte, die den Wert 1 haben und somit gleich der Anzahl der 
+Dimensionen des Unterraums, auf den der Projektionsoperator projiziert. 
+
+Wenn es nicht explizit erw\"ahnt wird, betrachten wir in diesem Kurztext eindimensionale Projektionsoperatoren,
+also Projektionsoperatoren, die auf eindimensionale Unterr\"aume (Strahlen) projizieren. Projektionsoperatoren
+auf h\"oher-dimensionale Unterr\"aume lassen sich immer als Summe von paarweise orthogonalen
+eindimensionalen Projektionsoperatoren darstellen.
+
+\subsection{Projektionsoperatoren als Darstellung von Zust\"anden}
+
+In der Quantentheorie sind die Projektionsoperatoren auf einen eindimensionalen Unterraum
+von besonderer Bedeutung. Sie charakterisieren diesen eindimensionalen Unterraum und somit
+einen quantenmechanischen Zustand. Im Gegensatz zur Repr\"asentation eines reinen Zustands durch
+einen normierten Vektor haben sie sogar den Vorteil, dass die Freiheit in der Wahl der Phase nicht
+auftritt. Allerdings l\"asst sich mit Projektionsoperatoren das vertraute Superpositionsprinzip nicht
+mehr so einfach ausdr\"ucken wie durch Vektoren, d.h., die
+Summe bzw.\ allgemeiner die Linearkombination von zwei Projektionsoperatoren ist im Allgemeinen
+kein Projektionsoperator mehr und somit kein Repr\"asentant f\"ur einen reinen Zustand. 
+
+Wenn ein normierter 
+Ket-Vektor $|\psi\rangle$ bez\"uglich einer Orthonormalbasis im $\mathbb{C}^n$ durch einen
+Spaltenvektor und der zugeh\"orige Bra-Vektor durch den entsprechenden (komplex konjugierten)
+Zeilenvektor dargestellt werden (vgl.\ Gl.\ \ref{eq_BK_Komponenten}), dann hat der eindimensionale
+Projektionsoperator auf den von $|\psi\rangle$ aufgespannten linearen Unterraum die Form:
+\begin{equation}
+     P_\psi = | \psi \rangle \langle \psi | \simeq \left( \begin{array}{cccc}
+      x_1 x_1^*  & x_1 x_2^* & \cdots & x_1 x_n^* \\
+      x_2 x_1^* & x_2 x_2^* & \cdots & x_2 x_n^*  \\
+      \vdots & \vdots & \ddots & \vdots  \\
+      x_n x_1^* & x_n x_2^* & \cdots & x_n x_n^*  \end{array} \right)  \, .
+\end{equation}
+In der linearen Algebra verwendet man meist die Darstellung $P_\psi = \pmb{x}\cdot \pmb{\bar{x}}^T$, wobei
+$\pmb{\bar{x}}^T$ wieder den komplex konjugierten Zeilenvektor bezeichnet und $\cdot$ das
+Matrixprodukt (\glqq Summe von Komponenten in einer Zeile mal Komponenten in einer Spalte\grqq).
+
+Die definierende Eigenschaft des Projektionsoperators, $P^2=P$, ist (zumindest f\"ur eindimensionale 
+Projektionsoperatoren) in der Bra-Ket-Schreibweise offensichtlich:
+\begin{equation}
+                  P^2_\psi = | \psi \rangle \langle \psi | \psi \rangle \langle \psi | = | \psi \rangle \langle \psi |  = P_\psi \, ,
+\end{equation}
+wohingegen ihr Beweis in der Komponentenschreibweise aufwendiger ist.
+Angewandt auf einen beliebigen Zustand $|\phi\rangle$ folgt:
+\begin{equation}
+                 P_\psi |\phi \rangle =| \psi \rangle \langle \psi | \phi \rangle \, . 
+\end{equation}
+Auch hier ist offensichtlich das Ergebnis ein Vektor, der in Richtung von $|\psi\rangle$ zeigt,
+also in dem von $|\psi \rangle$ aufgespannten eindimensionalen linearen Unterraum liegt. 
+
+\subsection{Projektionsoperatoren als Repr\"asentanten von Filtern}
+
+Das physikalische System, das durch einen Projektionsoperator repr\"asentiert wird, ist ein
+Filter. Ein (idealer) Filter hat die Eigenschaft, physikalischen Systeme in bestimmten Zust\"anden ungehindert 
+durchzulassen und Systeme in anderen, orthogonalen Zust\"anden vollst\"andig zu absorbieren. Das
+einfachste Beispiel f\"ur einen Filter ist ein Polarisationsfilter f\"ur Licht, der Licht einer bestimmten
+Polarisation ungehindert durchl\"asst und Licht der orthogonalen Polarisation vollst\"andig absorbiert. 
+
+Die definierende Eigenschaft f\"ur Projektionsoperatoren, $P^2=P$, hat f\"ur Filter die Interpretation,
+dass ein zweiter Filter hinter einem ersten Filter, wobei beide dieselben Polarisationsrichtung haben
+sollen, keine Wirkung hat: Alles Strahlung, die den ersten Filter passiert hat, passiert (im Idealfall --
+reale Filter haben immer einen kleinen Absorptionskoeffizienten) auch den zweiten Filter. 
+
+F\"ur zwei eindimensionale Projektionsoperatoren zu orthogonalen Zust\"anden $|\psi\rangle$ und $|\phi\rangle$
+(also $\langle \psi|\phi \rangle =0$) gilt:
+\begin{equation}
+            P_\psi P_\phi = | \psi \rangle \langle \psi | \phi \rangle \langle \phi | = 0 \, .             
+\end{equation}
+Die anschauliche Bedeutung dieser Gleichung ist, dass zwei zueinander orthogonale Filter nichts durchlassen. 
+In diesem Fall spielt auch die Reihenfolge der Filter keine Rolle, was f\"ur die zugeh\"origen
+Projektionsoperatoren bedeutet, dass diese kommutieren. 
+
+\subsection{Die Summe von Projektionsoperatoren}
+\label{sec_BK_SP}
+
+In endlich dimensionalen
+Vektorr\"aumen l\"asst sich auch jeder Projektionsoperator auf einen mehrdimensionalen Unterraum
+durch eine Summe orthogonaler Projektionsoperatoren auf eindimensionale Unterr\"aume darstellen. 
+Sind $|\psi\rangle$ und $|\phi\rangle$ orthogonal, gilt also $\langle \psi|\phi \rangle=0$, dann handelt
+es sich bei
+\begin{equation}
+                  P_2 = P_\psi + P_\phi =  |\psi \rangle \langle \psi | + |\phi \rangle \langle \phi |
+\end{equation}
+wieder um einen Projektionsoperator, da
+\begin{equation}
+                  P_2^2 = P_\psi^2 +  P_\psi P_\phi + P_\phi P_\psi + P_\phi^2 
+                  =  P_\psi + P_\phi \, .
+\end{equation}
+Die gemischten Produkte verschwinden, $P_\psi P_\phi=0=P_\phi P_\psi$, au\ss erdem 
+wurde die definierende Eigenschaft der Projektoren verwendet. Man kann sich leicht \"uberlegen,
+dass diese Eigenschaft f\"ur eine beliebige Summe von paarweise orthogonalen Projektionsoperatoren
+gilt. Die Interpretation von $P_2$ ist die eines Filters, der sowohl die Zust\"ande $|\psi\rangle$ als
+auch die Zust\"ande $|\phi \rangle$ sowie jede Linearkombination dieser beiden Zust\"ande
+ungehindert durchl\"asst und alle dazu orthogonalen Zust\"ande absorbiert. Zur ersten Eigenschaft
+zeigt man
+\begin{eqnarray}
+                  P_2 (\alpha |\psi\rangle + \beta |\phi \rangle ) &=& 
+               \big( |\psi \rangle \langle \psi | + |\phi \rangle \langle \phi | \big)~ (\alpha |\psi\rangle + \beta |\phi \rangle )  \\
+               &=& 
+               \alpha |\psi \rangle \langle \psi |\psi\rangle + 
+               \beta |\psi \rangle \langle \psi |\phi\rangle + 
+              \alpha |\phi \rangle \langle \phi | \psi\rangle + \beta |\phi \rangle \langle \phi |\phi \rangle   \\
+              &=&  \alpha |\psi\rangle + \beta |\phi \rangle 
+\end{eqnarray}
+Die mittleren Terme verschwinden wegen der Orthogonalit\"at der Zust\"ande und bei den \"au\ss eren
+beiden Termen wurde ausgenutzt, dass die Vektoren normiert sein sollen. Das \glqq + \grqq-Zeichen zwischen
+zwei Projektionsoperatoren hat
+also hier die Bedeutung von \glqq sowohl Eigenschaft 1 als auch Eigenschaft 2 sowie jede
+Linearkombination dieser beiden Eigenschaften wird durchgelassen\grqq. 
+Die Multiplikation von zueinander orthogonalen Projektionsoperatoren
+hat die Bedeutung der Hintereinanderschaltung der Filter und liest sich 
+als \glqq nur wenn beide Eigenschaften vorliegen, wird das System durchgelassen\grqq. 
+
+Als Beispiel f\"ur die letzte Aussage betrachten wir zwei Projektionsoperatoren in einem 
+3-dimensionalen Vektorraum, von denen einer auf die von den orthogonalen Zust\"anden
+$|1\rangle$ und $|2\rangle$ aufgespannten Ebene projiziert und der zweite auf die
+von $|2\rangle$ und $|3\rangle$ aufgespannten Ebene projiziert. Die drei Vektoren
+$|1\rangle$, $|2\rangle$ und $|3\rangle$ seien paarweise orthogonal, ansonsten aber beliebig.
+Dann gilt:
+\begin{eqnarray}
+       P_{23} P_{12} &=& \Big( |2\rangle \langle 2| + |3\rangle \langle 3| \Big) \Big( |1\rangle \langle 1| + |2\rangle \langle 2| \Big) \\
+           &=& |2\rangle \langle 2|1\rangle \langle 1| + |2\rangle \langle 2|2\rangle \langle 2| +
+           |3\rangle \langle 3|1\rangle \langle 1| + |3\rangle \langle 3|2\rangle \langle 2| 
+           = |2\rangle \langle 2|
+\end{eqnarray}
+Alle anderen Terme verschwinden wegen der Orthogonalit\"at. Nur die \glqq Eigenschaft\grqq\ 2, die beiden
+Projektionsoperatoren gemeinsam ist, bleibt bestehen. 
+
+\subsection{Der Doppelspalt}
+
+Das Doppelspaltexperiment l\"asst sich mit den bisher beschriebenen Mitteln schon recht gut
+beschreiben. Wir stellen uns eine Quelle vor, die Teilchen (oder Licht bzw.\ Photonen) mit einem
+Impuls $p$ (bzw.\ einer Wellenl\"ange $\lambda$) in $z$-Richtung erzeugt (vgl.\ Abbildung \ref{fig_BK_Doppel})
+und auf einen Schirm mit einem Doppelspalt lenkt. Die beiden Spalte befinden sich bei den Punkten 1
+und 2. Diese beiden Spalte wirken wie zwei Filter, welche die Teilchen bez\"uglich der $x$-Richtung
+auf die Punkte 1 bzw.\ 2 projizieren (d.h., nur Teilchen an diesen Punkten werden von den Spalten
+durchgelassen). Hinter den beiden Spalten breiten sich, ausgehend von Punkt 1 bzw.\ Punkt 2, 
+Kugelwellen (bzw.\ Zylinderwellen) aus. Diese treffen schlie\ss lich auf eine Detektorplatte. An der
+Stelle $x$ auf dieser Detektorplatte befindet sich ein Detektor, der registriert, wenn ein Teilchen bei $x$
+auf die Platte auftrifft. 
+
+\begin{figure}[htb]
+\begin{picture}(420,130)(0,0)
+\multiput(110,50)(10,0){7}{\line(0,1){40}}
+\put(170,10){\makebox(0,0){$|\psi\rangle$}}
+\put(100,10){\makebox(0,0){$|1\rangle\langle 1| + |2\rangle\langle 2|$}}
+\put(15,120){\makebox(0,0){$x$}}
+\put(5,47){\makebox(0,0){$x$}}
+\put(160,40){\makebox(0,0){$z$}}
+\put(10,10){\makebox(0,0){$\langle x|$}}
+\put(96,57){\makebox(0,0){${\scriptstyle 1}$}}
+\put(96,80){\makebox(0,0){${\scriptstyle 2}$}}
+\put(195,70){\makebox(0,0){\footnotesize Quelle}}
+\put(150,40){\vector(-1,0){20}}
+\put(10,47){\line(6,1){88}}
+\put(10,47){\line(3,1){88}}
+\put(180,50){\line(1,0){30}}
+\put(180,50){\line(0,1){40}}
+\put(180,90){\line(1,0){30}}
+\thicklines
+\put(10,20){\vector(0,1){100}}
+\put(100,20){\line(0,1){41}}
+\put(100,64){\line(0,1){11}}
+\put(100,78){\line(0,1){42}}
+\put(298,115){\makebox(0,0){\mbox{$|\psi\rangle$ beschreibt eine ebene Welle}}}
+\put(315,105){\makebox(0,0){\mbox{zu festem Impuls in $z$-Richtung}}}
+\put(320,90){\makebox(0,0){\mbox{$|1\rangle \langle 1|$ beschreibt einen Filter am Punkt 1}}}
+\put(320,75){\makebox(0,0){\mbox{$|2\rangle \langle 2|$ beschreibt einen Filter am Punkt 2}}}
+\put(320,60){\makebox(0,0){\mbox{$\langle x|$ beschreibt eine Messung am Punkt $x$}}}
+\end{picture}
+\caption{\label{fig_BK_Doppel}%
+Das Doppelspaltexperiment. Qualitativ lassen sich die wesentlichen Elemente in der Bra-Ket-Notation
+einfach darstellen. $|\psi\rangle$ beschreibt die Pr\"aparation eines Strahls von Teilchen (oder Licht)
+zu festem Impuls bzw.\ fester Wellenl\"ange. Der Doppelspalt entspricht zwei Filtern, die Teilchen an
+den beiden Orten der Spalte, 1 und 2, durchlassen. Anschlie\ss end breiten sich von diesen beiden Orten
+Kugelwellen aus. Die beiden Anteile treffen auf einen Detektorschirm. Am Ort $x$ werden Teilchen
+registriert.} 
+\end{figure}
+
+Eine rein qualitative Beschreibung ber\"ucksichtigt nur den pr\"aparierten Zustand einer ebenen
+Welle, die auf den Schirm mit zwei Spalten zul\"auft, die beiden Spalte, die jeweils einen r\"aumlichen
+Filter darstellen -- sie lassen nur Teilchen am Ort 1 bzw.\ 2 durch -- und die abschlie\ss ende Messung
+des Orts der Teilchen auf dem Detektorschirm. Eine quantitative Beschreibung muss noch die Ausbreitung
+der Wellen ber\"ucksichtigen, insbesondere die Ausbreitung der Kugelwellen von den Orten 1 bzw.\ 2 bis
+zum Detektorschirm. 
+
+Insgesamt ergibt sich f\"ur diesen Prozess der folgende Ausdruck:
+\begin{equation}
+    |\psi \rangle \longrightarrow  \big( |1\rangle \langle 1| + |2\rangle \langle 2|\big)~ |\psi\rangle \longrightarrow
+       \langle x |~\big( |1\rangle \langle 1| + |2\rangle \langle 2|\big) ~ |\psi\rangle =
+       \langle x |1\rangle \langle 1| \psi \rangle + \langle x |2\rangle \langle 2|\psi\rangle 
+\end{equation}
+Dies entspricht dem Prozess
+\begin{equation}
+  \mbox{pr\"aparierte Welle} \longrightarrow \mbox{trifft auf die beiden Filter} \longrightarrow 
+      \mbox{wird am Ort $x$ gemessen} \, .
+\end{equation}
+Da es sich bei $|\psi\rangle$ um den Zustand zu einer ebenen Welle handelt, sind die
+Amplituden $\langle 1|\psi\rangle$ und $\langle 2|\psi\rangle$ f\"ur den Prozess \glqq ebene Welle
+propagiert zu den Spalten 1 bzw.\ 2\grqq\ gleich. Normiert auf die Teilchenanzahl, die einen der
+beiden Spalte passieren, erhalten wir jeweils die halbe Wahrscheinlichkeit oder
+$\langle 1|\psi\rangle=\langle 2|\psi\rangle = 1/\sqrt{2}$. F\"ur die Prozesse $\langle x| 1 \rangle$ bzw.\
+$\langle x|2\rangle$ m\"ussten wir eigentlich Kugelwellen von Spalt 1 zum Ort $x$ bzw.\ vom Spalt 2 zum
+Ort $x$ ansetzen. Ist der Abstand zwischen den beiden Spalten klein und der Abstand zur
+Detektorebene im Vergleich dazu sehr gro\ss, spielt
+nur der relative Gangunterschied $\delta$ der Wellen eine Rolle, d.h., 
+$\langle x|2\rangle ={\rm e}^{{\rm i}\delta} \langle x|1\rangle$. Wir erhalten so f\"ur die Amplitude der Gesamtwelle
+am Ort $x$:
+\begin{equation}
+             \Psi_{\rm ges}(x) = \frac{N}{\sqrt{2}} \Big( 1 + {\rm e}^{{\rm i}\delta(x)} \Big) \, , 
+\end{equation} 
+wobei $N$ eine geeignete Normierungskonstante ist. F\"ur das Absolutquadrat, d.h.\ die
+Wahrscheinlichkeit(sdichte), am Ort $x$ ein Teilchen nachzuweisen, erhalten wir:
+\begin{equation}
+             w(x) = \frac{N^2}{2} \Big( 2 + {\rm e}^{{\rm i}\delta(x)} + {\rm e}^{-{\rm i}\delta(x)} \Big)
+                  = N^2 \big( 1 + \cos \delta(x) \big)   \, . 
+\end{equation} 
+Dies entspricht dem Interferenzmuster auf dem Schirm. Der Gangunterschied $\delta(x)$ l\"asst sich durch 
+die Parameter des Aufbaus -- Abstand $d$ der beiden Spalte, Wellenl\"ange $\lambda$ und
+der Winkel $\alpha(x)$ des Punkts $x$ zur Normalenrichtung des Strahls -- ausdr\"ucken: 
+\begin{equation}
+             \delta(x) = 2\pi \frac{d}{\lambda} \sin \alpha(x) \, . 
+\end{equation} 
+
+\subsection{Die Vollst\"andigkeitsrelation}
+\label{sec_BK_Vollstaendig}
+
+Sei $\{ |e_i\rangle \}_{i=1,...,n}$ eine Orthonormalbasis eines Hilbert-Raums und
+seien $P_i = | e_i \rangle \langle e_i|$ die zugeh\"origen Projektionsoperatoren, dann gilt
+\begin{equation}
+            \sum_{i=1}^n P_i = \sum_{i=1}^n | e_i \rangle \langle e_i| = {\bf 1} \, .
+\end{equation}
+Dies folgt letztendlich aus der Tatsache, dass der gesamte Vektorraum von der Basis
+aufgespannt wird und ist eine direkte Verallgemeinerung dessen, was in Abschnitt
+\ref{sec_BK_SP} zur Summe von orthogonalen Projektionsoperatoren gesagt wurde. 
+
+Da die Eigenr\"aume von selbst-adjungierten Operatoren orthogonal sind, erlauben diese
+die Definition einer vollst\"andigen Orthonormalbasis. Sei $A$ ein beliebiger selbst-adjungierter
+Operator und seien $\{\lambda_i\}$ die Eigenwerte und $|\lambda_i\rangle$ die zugeh\"origen
+normierten Eigenvektoren (der Einfachheit wird hier angenommen, dass die Eigenwerte nicht
+entartet sind, die Verallgemeinerung ist aber offensichtlich), dann gilt 
+\begin{equation}
+             \sum_{i=1}^n | \lambda_i \rangle \langle \lambda_i| = {\bf 1} \, .
+\end{equation}
+Diese Identit\"at kann immer zwischen Bra- und Ket-Vektoren eingef\"ugt werden. Beispielsweise
+gilt f\"ur einen beliebigen normierten Vektor $|\psi\rangle$:
+\begin{equation}
+      \langle \psi| \psi \rangle = \sum_{i=1}^n \langle \psi | \lambda_i \rangle \langle \lambda_i \psi \rangle 
+              = \sum_{i=1}^n | \langle \lambda_i | \psi \rangle |^2   = 1 \,  .
+\end{equation}
+Diese Relation bedeutet, dass f\"ur einen beliebigen Zustand $|\psi\rangle$ und eine beliebige
+Observable ${\cal A}$, repr\"asentiert durch den selbst-adjungierten Operator $A$, die
+Wahrscheinlichkeit, einen der m\"oglichen Eigenwerte $\lambda_i$ als Messwert zu finden und
+damit das System in den Zustand $|\lambda_i\rangle$ zu versetzen, gleich 1 ist. 
+
+Eine entsprechende Relation gilt auch f\"ur ein kontinuierliches Spektrum eines
+selbst-adjungierten Operators, beispielsweise das Spektrum des Ortsoperators:
+\begin{equation}
+             \int_{-\infty}^\infty | x \rangle \langle x |  \, {\rm d}x= {\bf 1} \, .
+\end{equation}
+Damit folgt beispielsweise
+\begin{equation}
+      \langle \psi| \psi \rangle = \int_{-\infty}^\infty \langle \psi |x \rangle \langle x | \psi \rangle \, {\rm d}x
+              = \int_{-\infty}^\infty  | \langle x | \psi \rangle |^2 \,{\rm d}x  
+              = \int_{-\infty}^\infty  | \psi(x)|^2 \,{\rm d}x = 1 \,  .
+\end{equation}
+Dies ist die \"ubliche Normierungsbedingung f\"ur Wellenfunktionen.
+
+Ebenso folgt daraus, dass $\tilde{\psi}(p)$ die Fourier-Transformierte von $\psi(x)$ ist:
+\begin{equation}
+      \tilde{\psi}(p) = \langle p | \psi \rangle = \int_{-\infty}^\infty \langle p |x \rangle \langle x | \psi \rangle \, {\rm d}x
+              = \int_{-\infty}^\infty   \langle p | x \rangle  \psi(x) \,{\rm d}x = \frac{1}{\sqrt{2\pi \hbar}}
+              \int_{-\infty}^\infty  {\rm e}^{-{\rm i}px/\hbar} \, \psi(x) \,{\rm d}x  \,  ,
+\end{equation}
+wobei ausgenutzt wird, dass
+\begin{equation}
+           \langle p|x\rangle = \langle x|p\rangle^* \hspace{1cm} {\rm und} \hspace{0.6cm}
+           \langle x | p \rangle = \frac{1}{\sqrt{2\pi \hbar}} {\rm e}^{{\rm i} p x/\hbar}  \, .
+\end{equation}
+Die Wahrscheinlichkeitsamplitude, dass ein mit dem Impuls $p=\hbar/2\pi \lambda$ pr\"apariertes
+Teilchen am Ort $x$ gemessen wird, ist (bis auf eine Normierung) durch eine reine Welle gegeben.
+
+\section{Unit\"are Prozesse}
+
+Physikalische Prozesse, bei denen ein System bestehen bleibt (also beispielsweise nicht
+absorbiert werden kann), allerdings der Zustand des Systems ver\"andert werden kann,
+werden durch unit\"are Operatoren bzw.\ unit\"are Matrizen beschrieben. Diese erhalten
+das Skalarprodukt, d.h.
+\begin{equation}
+          \langle \psi | U^\dagger U| \phi \rangle = \langle \psi | \phi \rangle 
+\end{equation} 
+und damit insbesondere auch die Norm. (Umgekehrt ist jede Isometrie, d.h.\ normerhaltende
+lineare Abbildung in endlich dimensionalen Hilbert-R\"aumen auch eine unit\"are Abbildung.)
+Da diese Bedingung f\"ur beliebige Vektoren $|\psi\rangle$ und $|\phi\rangle$ gelten soll, 
+folgt $U^\dagger U = {\bf 1}$ oder $U^\dagger = U^{-1}$. 
+
+Jede lineare Abbildung kann als Linearkombination von Ausdr\"ucken der Form 
+$|\psi\rangle \langle \phi|$ dargestellt werden. Ein solcher Ausdruck  l\"asst sich folgenderma\ss en interpretieren:
+Bei dem Prozess wird festgestellt, dass sich das System im Zustand $|\phi\rangle$ befindet und es wird
+der Zustand $|\psi\rangle$ erzeugt bzw.\ pr\"apariert. 
+
+Im Folgenden betrachten wir ganz speziell den unit\"aren Prozess, der durch einen Strahlteiler
+bei Photonen gegeben ist. 
+
+\subsection{Der Strahlteiler}
+
+Ein Strahlteiler teilt einen Lichtstrahl in zwei gleiche Anteile auf. Es handelt sich dabei oft
+um einen Glasw\"urfel, der aus zwei Prismen zusammengesetzt ist, die an ihrer Grenzfl\"ache, wo
+sie aufeinanderliegen, eine besondere Beschichtung haben. Wir betrachten im Folgenden
+polarisationsunabh\"angige Strahlteiler. Typischerweise besitzen diese Strahlteiler zwei
+Eingangsstrahlen sowie zwei Ausgangsstrahlen. Wir bezeichnen diese beiden Strahlrichtungen
+mit 1 bzw.\ 2 und nummerieren die Stahlen so, dass gegen\"uberliegende Seiten dieselbe
+Bezeichnung haben. Das bedeutet, die geradeaus durchgelassenen Strahlen haben jeweils dieselbe 
+Nummer (siehe Abb.\ \ref{fig_BK_ST}). 
+
+\begin{SCfigure}[70][htb]
+\begin{picture}(100,100)(0,0)
+\put(30,30){\line(1,0){40}}
+\put(30,30){\line(0,1){40}}
+\put(70,30){\line(0,1){40}}
+\put(30,70){\line(1,0){40}}
+\put(30,30){\line(1,1){40}}
+\put(45,15){\makebox(0,0){$1$}}
+\put(45,85){\makebox(0,0){$1$}}
+\put(15,44){\makebox(0,0){$2$}}
+\put(85,44){\makebox(0,0){$2$}}
+\thicklines
+\put(50,5){\vector(0,1){20}}
+\put(5,50){\vector(1,0){20}}
+\put(75,50){\vector(1,0){20}}
+\put(50,75){\vector(0,1){20}}
+\end{picture}
+\caption{\label{fig_BK_ST}%
+Der Strahlteiler teilt einfallende Strahlen in zwei ausfallende Strahlen auf. Die einfallenden
+Strahlen k\"onnen dabei Strahl 1 oder 2 sein, die ausfallenden sind so nummeriert, dass 
+geradeaus durchgehende Strahlen die gleiche Bezeichnung behalten. Die Wirkung eines solchen Strahlteilers
+kann durch folgende Bra-Ket-Darstellung beschrieben werden: \newline
+$  U_{\rm ST} = \frac{1}{\sqrt{2}} \Big(  | 1 \rangle \langle 1 | + | 2 \rangle \langle 2 | +
+          {\rm i}  | 1 \rangle \langle 2 | + {\rm i} | 2 \rangle \langle 1 |  \Big) \, . $ }
+\end{SCfigure}
+
+Wir behandeln ein solches System f\"ur den Zustand eines Photons als
+Zwei-Zustandssystem: Das Photon befindet sich bei einer Messung entweder in Strahl 1 oder in Strahl 2. 
+Die zugeh\"origen Ket-Vektoren sind $|1\rangle$ und $|2\rangle$. (Falls das System mehr
+als zwei Strahleng\"ange hat, m\"ussen entsprechend mehr Zust\"ande eingef\"uhrt
+werden; dieser Fall kann beispielsweise auftreten, wenn die ausfallenden Strahlen 1 und/oder 2 durch weitere
+Strahlteiler nochmals aufgespalten werden.) 
+
+Da alle Photonen, die in den Strahlteiler treten, diesen auch wieder verlassen sollen, muss
+ein solcher Strahlteiler durch eine unit\"are Matrix dargestellt werden. Die allgemeinste
+$2\times 2$ unit\"are Matrix, welche die Intensit\"at der beiden einfallenden Strahlen zu jeweils
+der H\"alfte aufteilt, hat die Form\footnote{Hierbei
+handelt es sich um eine speziell unit\"are Matrix mit der Determinante 1. Eine
+gemeinsame Phase l\"asst sich immer durch eine gleiche Phasenverschiebung beider
+einfallenden oder ausfallenden Teilstrahlen kompensieren.}
+\begin{equation}
+            U_{\rm ST} = \frac{1}{\sqrt{2}} 
+            \left( \begin{array}{cc} {\rm e}^{{\rm i} \delta} & {\rm e}^{{\rm i} \alpha} \\
+            -{\rm e}^{-{\rm i} \alpha} & {\rm e}^{- {\rm i} \delta}  \end{array} \right) \, .
+\end{equation}
+Wir k\"onnen den Strahlteiler immer so bauen, dass die beiden
+geradeaus durchgelassenen Strahlen in ihrer Phase unver\"andert bleiben ($\delta=0$) und
+die beiden abgelenkten Strahlen jeweils die gleiche Phase erhalten ($\alpha=\pi/2$). Dies l\"asst uns nur die
+Matrix
+\begin{equation}
+            U_{\rm ST} = \frac{1}{\sqrt{2}} 
+            \left( \begin{array}{cc} 1 & {\rm i} \\
+           {\rm i}  & 1  \end{array} \right) \, .
+\end{equation}
+Das entspricht auch der oft verwendeten Regel, dass die Ablenkung eines Strahls um 
+$90^\circ$ eine Phasenverschiebung von $90^\circ$ bewirkt (und damit der Multiplikation mit
+einem Faktor i). 
+
+Statt aber in der Matrix- und Vektorschreibweise zu arbeiten, stellen wir die unit\"are Matrix
+durch ihre Elemente in der Bra-Ket-Schreibweise dar:
+\begin{equation}
+\label{eq_BK_UTerme}
+            U_{\rm ST} = \frac{1}{\sqrt{2}} \Big(  | 1 \rangle \langle 1 | + | 2 \rangle \langle 2 | +
+          {\rm i}  | 1 \rangle \langle 2 | + {\rm i} | 2 \rangle \langle 1 |  \Big) \, .
+\end{equation}
+Der Bra-Teil dieser Darstellung (der rechte Anteil) stellt jeweils fest, durch welche Seite das Photon in den
+Strahlteiler eintritt, er \glqq misst den Eingangszustand\grqq, und der Ket-Teil (linker Anteil) gibt an,
+durch welche Seite das Photon aus dem Strahlteiler austritt, d.h., in welchem Strahl das
+Photon pr\"apariert wurde. Die \glqq + \grqq-Zeichen bedeuten wieder Alternativen.
+
+\begin{figure}[hb]
+%     Bild 1
+\begin{picture}(100,90)(0,0)
+\put(30,30){\line(1,0){40}}
+\put(30,30){\line(0,1){40}}
+\put(70,30){\line(0,1){40}}
+\put(30,70){\line(1,0){40}}
+\put(30,30){\line(1,1){40}}
+\put(45,20){\makebox(0,0){$1$}}
+\put(45,80){\makebox(0,0){$1$}}
+\put(50,0){\makebox(0,0){$\frac{1}{\sqrt{2}}\,|1\rangle \langle 1|$}}
+\thicklines
+\put(50,15){\line(0,1){35}}
+\put(50,50){\vector(0,1){35}}
+\end{picture}
+%         Bild 2
+\begin{picture}(100,90)(0,0)
+\put(30,30){\line(1,0){40}}
+\put(30,30){\line(0,1){40}}
+\put(70,30){\line(0,1){40}}
+\put(30,70){\line(1,0){40}}
+\put(30,30){\line(1,1){40}}
+\put(45,20){\makebox(0,0){$1$}}
+\put(80,43){\makebox(0,0){$2$}}
+\put(50,0){\makebox(0,0){$\frac{\rm i}{\sqrt{2}}\,|2\rangle \langle 1|$}}
+\thicklines
+\put(50,15){\line(0,1){35}}
+\put(50,50){\vector(1,0){35}}
+\end{picture}
+%         Bild 3
+\begin{picture}(100,90)(0,0)
+\put(30,30){\line(1,0){40}}
+\put(30,30){\line(0,1){40}}
+\put(70,30){\line(0,1){40}}
+\put(30,70){\line(1,0){40}}
+\put(30,30){\line(1,1){40}}
+\put(20,45){\makebox(0,0){$2$}}
+\put(80,43){\makebox(0,0){$2$}}
+\put(50,0){\makebox(0,0){$\frac{1}{\sqrt{2}}\,|2\rangle \langle 2|$}}
+\thicklines
+\put(15,50){\line(1,0){35}}
+\put(50,50){\vector(1,0){35}}
+\end{picture}
+%         Bild 4
+\begin{picture}(100,90)(0,0)
+\put(30,30){\line(1,0){40}}
+\put(30,30){\line(0,1){40}}
+\put(70,30){\line(0,1){40}}
+\put(30,70){\line(1,0){40}}
+\put(30,30){\line(1,1){40}}
+\put(20,45){\makebox(0,0){$2$}}
+\put(45,80){\makebox(0,0){$1$}}
+\put(50,0){\makebox(0,0){$\frac{\rm i}{\sqrt{2}}\,|2\rangle \langle 1|$}}
+\thicklines
+\put(15,50){\line(1,0){35}}
+\put(50,50){\vector(0,1){35}}
+\end{picture}
+
+\caption{\label{fig_BK_Uvier}%
+Jeder Weg eines Photons durch den Strahlteiler entspricht einem Ket-Bra-Term. Bei einer Reflektion
+an der diagonalen Trennlinie wird die Phase der Photonwelle um $90^\circ$ verschoben, was einem
+Faktor i entspricht. Au\ss erdem wurde eine Strahlaufteilung zu gleichen Intensit\"aten angenommen,
+was f\"ur die Amplitude jeweils einen Faktor $1/\sqrt{2}$ bedeutet.} 
+\end{figure}
+
+Die vier Terme in Gl.\ \ref{eq_BK_UTerme} entsprechen den vier m\"oglichen Wegen, die
+ein Photon durch den Strahlteiler nehmen kann (siehe Abb.\ \ref{fig_BK_Uvier}): 
+zwei Eing\"ange und zwei Ausg\"ange.
+Sie entsprechen damit ebenfalls den vier Termen in der unit\"aren $2\times 2$-Matrix, die
+den Strahlteiler beschreibt.
+
+Tritt ein Photon nur durch den ersten Strahlengang in den Strahlteiler, befindet es sich also
+zun\"achst in dem Zustand $|1\rangle$, so befindet es sich nach dem Durchtritt durch den
+Strahlteiler im Zustand
+\begin{equation}
+             | 1 \rangle ~~ \longrightarrow ~~  \frac{1}{\sqrt{2}} \left( \begin{array}{cc}
+                 1 & {\rm i} \\ {\rm i} & 1 \end{array} \right)  \left( \begin{array}{c}
+         1 \\ 0  \end{array} \right)  = \frac{1}{\sqrt{2}} \left( \begin{array}{c}  1 \\ {\rm i} \end{array} \right) 
+\end{equation}
+was in der Bra-Ket-Notation folgenderma\ss en geschrieben wird:
+\begin{eqnarray}
+             | 1 \rangle  & \longrightarrow &  \frac{1}{\sqrt{2}} \Big(  |1\rangle \langle 1| +  
+            {\rm i} |2\rangle \langle 1| + |2\rangle \langle 2| + {\rm i} |1\rangle \langle 2| \Big) ~ |1\rangle \\
+             &=&    \frac{1}{\sqrt{2}}  \Big(  |1\rangle \langle 1| 1\rangle  +
+            {\rm i} |2\rangle \langle 1|1\rangle + |2\rangle \langle 2|1\rangle + {\rm i} |1\rangle \langle 2|1\rangle \Big)
+            =  \frac{1}{\sqrt{2}} \Big( |1\rangle + {\rm i} |2\rangle \Big) 
+\end{eqnarray}
+
+\subsection{Das Mach-Zehnder-Interferometer}
+
+Mit dem beschriebenen Formalismus k\"onnen wir nun das Mach-Zehnder-Interferometer
+behandeln. Es besteht aus zwei Strahlteilern: Der erste teilt einen Lichtstrahl in zwei Anteile,
+der zweite f\"uhrt die beiden Strahlg\"ange wieder zusammen
+und bringt sie zur Interferenz (siehe Abb.\ \ref{fig_BK_MZ}). Es entspricht im Prinzip einem Doppelspalt, 
+allerdings k\"onnen die beiden \glqq Spalte\grqq\ nun nahezu beliebig weit auseinander gebracht 
+werden. Wichtig ist jedoch, dass die optischen Wegl\"angen der beiden Strahlen innerhalb der
+Koh\"arenzl\"ange des Lichts gleich sind. 
+
+\begin{SCfigure}[50][htb] 
+\begin{picture}(285,170)(-5,0)
+\thicklines
+\put(40,10){\line(1,1){20}}
+\put(200,10){\line(1,1){20}}
+\put(201,9){\line(1,1){20}}
+\put(40,120){\line(1,1){20}}
+\put(39,121){\line(1,1){20}}
+\put(200,120){\line(1,1){20}}
+\thinlines
+\put(40,10){\line(1,0){20}}
+\put(40,10){\line(0,1){20}}
+\put(60,10){\line(0,1){20}}
+\put(40,30){\line(1,0){20}}
+
+\put(200,120){\line(1,0){20}}
+\put(200,120){\line(0,1){20}}
+\put(220,120){\line(0,1){20}}
+\put(200,140){\line(1,0){20}}
+
+\put(0,20){\line(1,0){210}}
+\put(50,20){\line(0,1){110}}
+\put(210,20){\vector(0,1){150}}
+\put(50,130){\line(1,0){40}}
+\put(100,130){\vector(1,0){150}}
+\put(90,120){\line(1,0){10}}
+\put(90,120){\line(0,1){20}}
+\put(100,120){\line(0,1){20}}
+\put(90,140){\line(1,0){10}}
+%
+\put(20,20){\vector(1,0){0}}
+\put(150,20){\vector(1,0){0}}
+\put(150,130){\vector(1,0){0}}
+\put(50,70){\vector(0,1){0}}
+\put(210,70){\vector(0,1){0}}
+%
+\put(25,30){\makebox(0,0){$| 1 \rangle$}}
+\put(140,30){\makebox(0,0){$\frac{1}{\sqrt{2}}\,| 1 \rangle$}}
+\put(64,70){\makebox(0,0){$\frac{\rm i}{\sqrt{2}}\,| 2 \rangle$}}
+\put(140,140){\makebox(0,0){$\frac{\rm i}{\sqrt{2}}{\rm e}^{{\rm i}\delta}\,| 2 \rangle$}}
+\put(224,70){\makebox(0,0){$\frac{1}{\sqrt{2}}\,| 1 \rangle$}}
+\put(240,160){\makebox(0,0){$\frac{1}{2}(1 -{\rm e}^{{\rm i}\delta})| 1 \rangle$}}
+\put(250,122){\makebox(0,0){$\frac{\rm i}{2}(1+{\rm e}^{{\rm i}\delta})| 2 \rangle$}}
+\put(95,130){\makebox(0,0){${\scriptstyle {\rm e}^{{\rm i}\delta}}$}}
+%
+%\put(210,170){\makebox(0,0){\footnotesize D dunkel}}
+%\put(270,130){\makebox(0,0){\footnotesize C hell}}
+\put(50,4){\makebox(0,0){\footnotesize Strahlteiler}}
+\put(185,114){\makebox(0,0){\footnotesize Strahlteiler}}
+\put(70,146){\makebox(0,0){\footnotesize Spiegel}}
+\put(230,37){\makebox(0,0){\footnotesize Spiegel}}
+%
+\end{picture} 
+\caption{\label{fig_BK_MZ}%
+Das Mach-Zehnder-Inter\-fero\-meter als 2-Zustands\-system. Ein einzelnes Photon kann 
+entweder im Strahl 1 oder im Strahl 2 nachgewiesen werden. Quantenmechanisch kann ein Superpositionszustand
+aus den beiden Zust\"anden vorliegen. In Stahl 2 befindet sich noch ein \glqq Phasenschieber\grqq, mit dem die
+optische Wegl\"ange des Stahls 2 relativ zu Strahl 1 um $\delta$ ver\"andert werden kann.} 
+\end{SCfigure}
+
+Wir beschreiben dieses System f\"ur Einzelphotonen als Zwei-Zustandssystem: Bei einer Messung kann sich
+das Photon entweder im Strahl 1 oder im Strahl 2 befinden. Dementsprechend bezeichnen wir den
+Zustand des Photons mit $|1\rangle$ bzw.\ $|2\rangle$. Diese beiden Zust\"ande sind orthogonal, sodass
+$\langle 1|2\rangle = \langle 2|1\rangle=0$. 
+Wir k\"onnen nun den Prozess, bei dem
+ein Photon das Mach-Zehnder-Interferometer durchquert, schrittweise beschreiben: Wir bezeichnen den
+Strahl, durch den das Photon in den ersten Strahlteiler dringt, als
+Strahl 1. Das Photon befindet sich somit im Zustand $|1\rangle$. Die
+Wirkung des ersten Strahlteilers ist:
+\begin{equation}
+  |1\rangle \longrightarrow \frac{1}{\sqrt{2}} \Big(  | 1 \rangle \langle 1 | + | 2 \rangle \langle 2 | +
+          {\rm i}  | 1 \rangle \langle 2 | + {\rm i} | 2 \rangle \langle 1 |  \Big)~ |1\rangle =
+       \frac{1}{\sqrt{2}} \Big(  | 1 \rangle  + {\rm i} | 2 \rangle \Big) \, . 
+\end{equation}
+Ohne eine Messung erhalten wir einen Superpositionszustand, bei dem das Photon eine Komponente
+in Strahl 1 und eine Komponente in Strahl 2 hat.
+Die beiden Spiegel, an denen die Strahlen abgelenkt werden, tragen einen gemeinsamen Faktor
+i bei, den wir unber\"ucksichtigt lassen, da er zum Ergebnis nicht beitr\"agt. 
+Allerdings sollten wir eine relative Phasenverschiebung zwischen den beiden Strahlg\"angen 
+ber\"ucksichtigen. Dies geschieht durch den Operator
+$\big( |1\rangle \langle 1 | + {\rm e}^{{\rm i}\delta} |2\rangle \langle 2 | \big)$. Damit wird aus dem Zustand:
+\begin{equation}
+    \frac{1}{\sqrt{2}} \Big(  | 1 \rangle  + {\rm i} | 2 \rangle \Big)  \longrightarrow
+     \Big( |1\rangle \langle 1 | + {\rm e}^{{\rm i}\delta} |2\rangle \langle 2 | \Big) 
+      \frac{1}{\sqrt{2}} \Big(  | 1 \rangle  + {\rm i} | 2 \rangle \Big)  =   
+      \frac{1}{\sqrt{2}} \Big(  | 1 \rangle  + {\rm i} {\rm e}^{{\rm i}\delta} | 2 \rangle \Big) 
+\end{equation}
+Die Superposition der beiden Zust\"ande
+trifft nun auf den zweiten Strahlteiler:
+\begin{eqnarray}
+       \frac{1}{\sqrt{2}} \Big(  | 1 \rangle  + {\rm i} {\rm e}^{{\rm i}\delta} | 2 \rangle \Big) & \longrightarrow &
+         \frac{1}{\sqrt{2}} \Big(  | 1 \rangle \langle 1 | + | 2 \rangle \langle 2 | +
+          {\rm i}  | 1 \rangle \langle 2 | + {\rm i} | 2 \rangle \langle 1 |  \Big)~  \frac{1}{\sqrt{2}} 
+          \Big(  | 1 \rangle  + {\rm i} {\rm e}^{{\rm i}\delta} | 2 \rangle \Big)  \\
+         & = &  \frac{1}{2} \Big(  | 1 \rangle  + {\rm i} {\rm e}^{{\rm i}\delta} | 2 \rangle  
+                        + {\rm i}^2 {\rm e}^{{\rm i}\delta} |1\rangle +{\rm i} |2\rangle \Big) \\
+         &=&   \frac{1}{2} \Big(  | 1 \rangle  + {\rm i}{\rm e}^{{\rm i}\delta} | 2 \rangle  - {\rm e}^{{\rm i}\delta} |1\rangle +{\rm i} |2\rangle \Big) \\
+         & = & \frac{1}{2} \Big( (1-{\rm e}^{{\rm i}\delta}) |  1 \rangle + {\rm i} (1 + {\rm e}^{{\rm i}\delta}) |2\rangle \Big)  \, . 
+\end{eqnarray}
+Je nach dem Wert von $\delta$ verschwindet der eine oder der andere Zustand: F\"ur $\delta=0~({\rm mod}\, 2\pi)$ 
+gibt es nur den Zustand $|2\rangle$, f\"ur $\delta = \pi~ ({\rm mod}\,2\pi)$ gibt es nur den Zustand $|1\rangle$. 
+F\"ur die Prozesse $|1\rangle \rightarrow \fbox{MZ} \rightarrow |j\rangle$, wobei $\fbox{MZ}$ f\"ur das
+Mach-Zehnder-Interferometer steht, erhalten wir die Wahrscheinlichkeitsamplituden:
+\begin{equation}
+   \langle 1 | ~ \fbox{MZ} ~ |  1\rangle  = \frac{1}{2} (1-{\rm e}^{{\rm i}\delta}) \hspace{0.6cm}
+   \langle 2 | ~ \fbox{MZ} ~ |  1\rangle = \frac{1}{2} {\rm i} (1+{\rm e}^{{\rm i}\delta})   
+\end{equation}
+und wenn das Photon durch den Strahl 2 in das Mach-Zehnder-Interferometer tritt entsprechend:
+\begin{equation}
+   \langle 2 | ~ \fbox{MZ} ~ |  2\rangle  = \frac{1}{2} (1-{\rm e}^{{\rm i}\delta}) \hspace{0.6cm}
+   \langle 1 | ~ \fbox{MZ} ~ |  2\rangle = \frac{1}{2} {\rm i} (1+{\rm e}^{{\rm i}\delta})   \, .
+\end{equation}
+F\"ur die Wahrscheinlichkeiten dieser Prozesse folgt: 
+\begin{equation}
+    w(1\rightarrow 1)  = w(2\rightarrow 2) = \frac{1}{2} (1-\cos \delta) \hspace{0.6cm}
+    w(1 \rightarrow 2) = w(2\rightarrow 1) = \frac{1}{2} (1+\cos\delta)   
+\end{equation}
+
+
+F\"ur das \glqq Knallerexperiment\grqq\ m\"ussen wir den Operator $\big(|1\rangle \langle 1| + 0\cdot |2\rangle \langle 2| \big)$
+dazwischenschieben. Dies bedeutet, dass ein Photon, welches sich in Strahl 2 befindet, absorbiert wird
+(weil es auf die Bombe getroffen ist). Dies ist kein unit\"arer Operator mehr sondern ein Projektionsoperator auf
+den Zustand $|1\rangle$. Die Bombe hat also einen \"ahnlichen Effekt, wie ein Filter: Befindet sich das Photon
+in Zustand $|2\rangle$, wird es absorbiert. Als Ergebnis erhalten wir nun $\frac{1}{2} \big( |1\rangle + {\rm i} |2\rangle \big)$. 
+Mit der jeweiligen Wahrscheinlichkeit $1/4$ landet das Photon also schlie\ss lich in Detektor 1 oder in Detektor 2. Mit
+der Wahrscheinlichkeit $1/2$ wurde es von der Bombe absorbiert.  
+
+\section{Erwartungswerte}
+
+Letztendlich ist das Ziel in der Quantentheorie (und allgemeiner in der Physik) immer
+die Vorhersage f\"ur das Eintreffen bestimmter Ereignisse. In der Quantentheorie besteht
+diese Vorhersage meist in einer Wahrscheinlichkeitsaussage. Bisher haben wir die Bra-Ket-Notation
+verwendet, um Prozesse zu beschreiben und wir haben gesehen, wie man f\"ur einen Prozess eine
+Wahrscheinlichkeitsamplitude und damit schlie\ss lich eine Wahrscheinlichkeit berechnen kann.
+
+In diesem Abschnitt betrachten wir Erwartungswerte von Observablen.
+Der Grund f\"ur diese Unterscheidung ist im Wesentlichen folgender: Die selbstadjungierten
+Operatoren $A$, die einer Observablen ${\cal A}$, definiert durch die Messvorschrift,
+entsprechen, beschreiben nicht den zeitlichen Ablauf der Messung und die Dynamik
+des Messvorgangs, sondern sie enthalten lediglich die Informationen, die bei einer
+Messung an einem System gewonnen werden k\"onnen: die m\"oglichen Messwerte 
+$\{ \lambda_n\}$ und die Zust\"ande $\{ |\lambda_n\rangle \}$, 
+durch welche die Systeme nach einer Messung und der Feststellung
+eines bestimmten Messresultats beschrieben werden. Sie beschreiben also nicht
+den Mess\-prozess. Andere Operatoren, beispielsweise die unit\"aren Operatoren,
+beschreiben Prozesse, bei denen sich die Zust\"ande eines Systems ver\"andern.
+Eine Zwischenrolle nehmen Projektionsoperatoren ein, die einerseits bestimmte
+absorbierende Prozesse beschreiben, bei denen das physikalische Systeme durch
+einen Filter tritt, andererseits aber auch als Observable aufgefasst werden k\"onnen.
+
+Eine Observable ${\cal A}$, definiert durch ein Messprotokoll, wird in der Quantentheorie 
+durch einen selbstadjungierten Operator $A$
+dargestellt. Aus der Mathematik ist bekannt, dass ein selbstadjungierter Operator immer
+reelle Eigenwerte hat und dass die Eigenr\"aume zu verschiedenen Eigenwerten
+orthogonal sind. Au\ss erdem sind die Eigenr\"aume vollst\"andig, d.h., sie spannen den gesamten
+Vektorraum auf. Auf die Besonderheiten bzw.\ Verallgemeinerungen dieser Aussagen f\"ur
+Operatoren mit einem kontinuierlichen Spektrum in unendlich dimensionalen Hilbert-R\"aumen   
+soll hier nicht eingegangen werden.
+
+Bekannterma\ss en sind die Eigenwerte von Observablen die m\"oglichen Messwerte und
+die zugeh\"origen Eigenr\"aume die entsprechenden Zust\"ande. Sofern ein Eigenwert entartet
+ist, d.h., der zugeh\"orige Eigenraum hat mehr als eine Dimension, repr\"asentiert jeder eindimensionale
+Teilraum dieses Eigenraums einen Zustand zu diesem Eigenwert. In allen F\"allen l\"asst sich
+eine Orthonormalbasis f\"ur den Vektorraum aus normierten Eigenvektoren eines selbst-adjungierten
+Operators bilden.
+
+Die Eigenwertgleichung eines Operators $A$ zu einem Eigenwert $\lambda_n$ lautet:
+\begin{equation}
+                                A | \lambda_n \rangle = \lambda_n | \lambda_n \rangle  \, , 
+\end{equation}
+wobei $|\lambda_n\rangle$ ein Eigenvektor (normiert auf den Betrag eins) von $A$ zum Eigenwert
+$\lambda_n$ ist. Die Tatsache, dass bei selbstadjungierten Operatoren die Eigenvektoren
+zu verschiedenen Eigenwerten orthogonal sind, bedeutet
+\begin{equation}
+                 \langle \lambda_m | \lambda_n \rangle = \delta_{mn} =
+                 \left\{ \begin{array}{ll}  1 & m=n \\ 0 & \mbox{sonst}  \end{array} \right.  \, . 
+\end{equation}
+Die symbolische Interpretation dieser Bedingung ist, dass ein System, das in einem Zustand
+$|\lambda_n\rangle$ pr\"apariert wurde, unmittelbar nach dieserr Pr\"aparation mit Sicherheit 
+nicht im Zustand $|\lambda_m\rangle$
+gemessen wird, sofern $m\neq n$, und mit Sicherheit in diesem Zustand gemessen wird, sofern
+$m=n$. 
+
+Der Operator $A$ l\"asst sich durch die Projektionsoperatoren zu seinen Eigenwerten
+darstellen:
+\begin{equation}
+\label{eq_Spektralzerlegung}
+          A = \sum_n \lambda_n  | \lambda_n \rangle \langle \lambda_n |  = \sum_n \lambda_n P_n \, .
+\end{equation}
+Zum Beweis \"uberzeuge man sich, dass dieser Operator die Eigenwertgleichungen erf\"ullt, und
+da die Eigenvektoren den Vektorraum aufspannen, ist damit die Gleichheit der linearen Operatoren
+gezeigt. Diese Darstelllung bezeichnet man auch als die Spektralzerlegung eines selbst-adjungierten
+Operators.
+
+Der Ausdruck $\langle \psi |A| \psi \rangle$ ist Erwartungswert von ${\cal A}$, d.h., wenn die Observable
+${\cal A}$ an sehr vielen Systemen, die alle im Zustand $\psi$ pr\"apariert wurden, gemessen wird,
+erh\"alt man als Erwartungswert f\"ur die Messwerte diese Gr\"o\ss e:
+\begin{equation}
+     \langle \psi | A | \psi \rangle  
+         = \sum_n \lambda_n  \langle \psi| \lambda_n \rangle \langle \lambda_n | \psi \rangle
+         = \sum_n \lambda_n  w(\psi \rightarrow n)  = \langle {\cal A} \rangle \, .
+\end{equation}
+Die Summe \"uber alle Messwerte, wobei jeder Messwert mit der Wahrscheinlichkeit seines 
+Nachweises gewichtet wird, ist gleich dem Erwartungswert dieser Messwerte. 
+
+Wir k\"onnen diese \"Uberlegungen auch umkehren: Wenn ein Operator $A$ die Eigenschaft
+haben soll, dass f\"ur jeden beliebigen Zustand $\psi$ der Ausdruck $\langle \psi |A| \psi \rangle$
+der Erwartungswert f\"ur die zugeh\"orige Observable ${\cal A}$ ist, dann muss $A$ die Form in 
+Gl.\ \ref{eq_Spektralzerlegung} haben.  
+
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Dirac} Dirac, P.A.M.; {\em A new notation for quantum mechanics}; Mathematical
+        Proceedings of the Cambridge Philosophical Society, {\bf 35} (1939) 416-418.
+
+\end{thebibliography}
+
+\section{Anhang}
+\subsection{Unit\"are Matrizen}
+\label{A_BK_Unitary}
+Eine allgemeine $2\times 2$ unit\"are Matrix mit der Determinante ${\rm e}^{{\rm i}\varphi}$
+l\"asst sich folgenderma\ss en parametrisieren und zerlegen:
+\begin{eqnarray}
+     U &=& {\rm e}^{{\rm i}\varphi/2} 
+     \left( \begin{array}{cc}  {\rm e}^{{\rm i}(\alpha+\beta)} \cos \theta & {\rm e}^{{\rm i}(\alpha - \beta)} \sin \theta \\
+     - {\rm e}^{-{\rm i}(\alpha - \beta)} \sin \theta & {\rm e}^{-{\rm i}(\alpha+\beta)} \cos \theta \end{array} \right)  \\
+     &=&
+     \left( \begin{array}{cc}  {\rm e}^{{\rm i}\varphi/2} & 0    \\
+     0  & {\rm e}^{{\rm i}\varphi/2} \end{array} \right) 
+          \left( \begin{array}{cc}  {\rm e}^{{\rm i}\alpha} & 0    \\
+     0  & {\rm e}^{-{\rm i}\alpha} \end{array} \right) 
+          \left( \begin{array}{cc}  \cos \theta & \sin \theta    \\
+     - \sin \theta  & \cos \theta \end{array} \right) 
+               \left( \begin{array}{cc}  {\rm e}^{{\rm i}\beta} & 0    \\
+     0  & {\rm e}^{-{\rm i}\beta} \end{array} \right) \, .
+\end{eqnarray}
+F\"ur einen Strahlteiler, bei dem die Intensit\"at eines einfallenden Strahls zur H\"alfte
+auf die beiden ausfallenden Strahlen verteilt werden soll, ist $\cos \theta = \sin \theta = 1/\sqrt{2}$
+bzw.\ $\theta = \pi/2$. Ansonsten kann man \"uber den Winkel $\theta$ die relativen Intensit\"aten 
+(diese sind $I_\perp=\sin^2\theta$ f\"ur den abgelenkten Strahl und $I_\parallel = \cos^2 \theta$ f\"ur den
+geradeaus durchgelassenen Strahl) parametrisieren. Eine unit\"are Matrix der Form
+\begin{equation}
+           U = \left( \begin{array}{cc}  {\rm e}^{{\rm i}\psi} & 0  \\  0  & {\rm e}^{{\rm i}\phi} \end{array} \right) 
+\end{equation}
+bedeutet lediglich eine Phase f\"ur jeden Teilstrahl (vor bzw.\ hinter dem Strahlteiler) und l\"asst
+sich physikalisch durch eine einfache Wegl\"angenver\"anderung (oder durch d\"unne Glaspl\"attchen)
+des entsprechenden Strahls erreichen. Wir k\"onnen einen Strahlteiler somit durch die Matrix
+($\varphi=\alpha=\beta=0$)
+\begin{equation}
+          U_{\rm ST~1} =  \frac{1}{\sqrt{2}}  \left( \begin{array}{cc}  1 & 1  \\ -1  & 1 \end{array} \right) 
+\end{equation}
+darstellen. W\"ahlen wir jedoch in obiger Darstellung $\varphi=0$, $\alpha = \pi/4$ und $\beta=-\pi/4$, so
+erhalten wir die Form
+\begin{equation}
+          U_{\rm ST~2} =  \frac{1}{\sqrt{2}}  \left( \begin{array}{cc}  1 & {\rm i}  \\ {\rm i}  & 1 \end{array} \right) 
+\end{equation}
+Letztendlich k\"onnen wir also durch geeignete Phasenverschiebungen vor und hinter einem
+Strahlteiler und durch Variation der Intensit\"atsanteile (durchgelassen/abgelenkt) jede beliebige 
+$2\times 2$ unit\"are 
+Matrix durch einen Strahlteiler realisieren.
+
+
+\end{document}
+
