@@ -1,0 +1,296 @@
+%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{2}
+
+\chapter{Axiomatische Zug\"ange zur Thermodynamik}
+% Kap 2
+\label{chap_Entropie_Axiom}
+
+\info{Thomas Filk; 30.03.2024}%
+Dieser Kurztext beschreibt skizzenhaft die axiomatischen Ans\"atze
+von Constantin Carath\'{e}odory (1873--1950) \cite{Caratheodory},\index{Carath\'{e}odory, Constantin} 
+Josef-Maria Jauch (1914--1974) \cite{Jauch}\index{Jauch,Josef-Maria} 
+sowie Elliott Lieb und Jakob Yngvason \cite{Lieb1,Lieb2})
+zur Thermodynamik und speziell zur Definition der Entropie. Der Inhalt dieses Kurztextes geht
+weit \"uber das hinaus, was man als Lehrkraft in der Schule zur Thermodynamik wissen sollte, und
+selbst in einem normalen Physikstudium wird man diesen axiomatischen Zug\"angen selten
+begegnen.
+
+F\"ur mathematisch interessierte Physikerinnen und Physiker ist jedoch gerade die Thermodynamik
+oftmals etwas unbefriedigend. Einerseits wird die Thermodynamik gerne als sehr allgemeine
+ph\"anomenologische Theorie bezeichnet, die in allen physikalischen Modellen erf\"ullt sein sollte.
+Andererseits wird selten deutlich gemacht, worin die entscheidenden mathematischen Annahmen
+hinter dieser Theorie bestehen. Daher gibt dieser Kurztext einen groben Einblick in axiomatische
+Zug\"ange zur Thermodynamik. Auch wenn die wichtigsten Begriffe nochmals kurz erl\"autert
+werden, setzt dieser Kurztext einerseits die Kenntnis des 2.\ Hauptsatzes sowie des
+Carnot-Prozesses voraus (siehe \glqq \hyperref[chap_ZweiterHS]{Der Zweite Hauptsatz der Thermodynamik})\grqq, 
+andererseits sollten auch die Konzepte der Zustandsgr\"o\ss en und
+Prozessgr\"o\ss en sowie der Unterschied zwischen einer exakten 1-Form und einer allgemeinen 1-Form
+(siehe \glqq \hyperref[chap_Zustand]{Zustands- und Prozessgr\"o\ss en}\grqq) bekannt sein. 
+ 
+\section{Axiomatische Definitionen der Entropie}
+\label{sec_AxiomeEntropie}
+
+Der Carnot-Prozess zeigt, dass es zu der Prozessgr\"o\ss e (1-Form) W\"arme $\delta Q$ 
+einen integrierenden Faktor $T$ gibt, sodass $\delta Q=T{\rm d}S$. Die meisten axiomatischen Zug\"ange
+(z.B.\ Carath\'{e}odory und Jauch \cite{Caratheodory,Jauch}) leiten diese Tatsache aus rein mathematischen
+\"Uberlegungen her, wobei eine genaue Analyse zeigt, dass sie das Konzept des Carnot-Prozesses
+mathematisieren und dann beweisen, dass die 1-Form \glqq W\"arme\grqq\ einen integrierenden
+Faktor besitzt und dass dieser integrierende Faktor nur von einer empirischen Temperatur
+$\theta$ abh\"angt. Sie definieren dann die absolute Temperatur $T$ als diesen integrierenden
+Faktor. 
+
+\subsection{Die geometrische Bedeutung eines integrierenden Faktors}
+
+In diesem Abschnitt geht es um einige Beziehungen\index{Integrierender Faktor} 
+zwischen 1-Formen und 0-Formen. N\"aheres
+zu diesen Formen sowie zu der hier verwendeten Notation 
+findet man in dem Kurztext \glqq \hyperref[chap_Zustand]{Zustands- und Prozessgr\"o\ss en}\grqq. Hier
+werden nur die wichtigsten Definitionen angegeben. 
+
+Die Menge der Gleichgewichtszust\"ande\index{Gleichgewichtszustand}
+in der Thermodynamik l\"asst sich als Mannigfaltigkeit $M$ darstellen, d.h., sie l\"asst sich lokal durch
+Koordinaten $\pmb{x}=(x_0,x_1,...,x_n)$ beschreiben. Bei diesen Koordinaten handelt es sich um einen Satz von 
+unabh\"angigen Zustandsgr\"o\ss en, wobei eine Koordinate ($x_0$) die innere Energie sein soll und die
+anderen Koordinaten ein Satz von Gr\"o\ss en, durch welche die Arbeit des Systems an der Umgebung
+kontrolliert werden kann (z.B.\ das Volumen, die Stoffmengen, Ladungsmengen, etc.), daher bezeichnet man
+diese Koordinaten auch als Arbeitskoordinaten. Eine\index{Zustandsgr\"o\ss e}\index{0-Form} 
+Zustandsgr\"o\ss e oder auch 0-Form ist eine Observable, die an einem Gleichgewichtszustand gemessen 
+werden kann, d.h., es handelt sich um eine Funktion $f:M\rightarrow \mathbb{R}$ (bzw.\ in Koordinaten
+$f:U\subset \mathbb{R}^n \rightarrow \mathbb{R}$; ich verwende hier dasselbe Symbol). 
+Unter einem\index{Prozess}
+Prozess bzw.\ einer Zustands\"anderung verstehen wir einen Weg $\gamma: [0,1] \rightarrow M$ (in Koordinaten
+$t \mapsto \pmb{x}(t)=(x_0(t),...,x_n(t))$) auf der Mannigfaltigkeit der Gleichgewichtszust\"ande. Damit
+dieser Weg tats\"achlich auf dieser Mannigfaltigkeit verl\"auft, muss die Zustands\"anderung reversibel 
+erfolgen, d.h., sie muss quasistation\"ar sein (zu jedem Zeitpunkt muss sich das System in einem Gleichgewichtszustand
+befinden, d.h., der Prozess verl\"auft beliebig langsam) und durch minimale \"Anderungen in der Umgebung
+muss der Prozess umkehrbar sein. Man \"uberlege sich, dass jeder solche Weg auf der Menge der
+Gleichgewichtszust\"ande tats\"achlich durch einen reversiblen Prozess physikalische realisiert
+werden kann.
+
+Das totale Differential\index{totales Differential}\index{1-Form}\index{Prozessgr\"o\ss e}
+${\rm d}f$ (oder auch der Gradient $\pmb{\nabla}f$) ist eine 1-Form und damit eine sogenannte Prozessgr\"o\ss e.
+Das bedeutet, es handelt sich um ein Feld, das an jedem Punkt $\pmb{x}$ auf einen Tangentenvektor 
+(die \glqq Geschwindigkeit\grqq\ $\dot{\pmb{x}}$ eines Wegs $\gamma:[0,1] \rightarrow M; t \mapsto \pmb{x}(t)$) an 
+diesem Punkt angewandt werden muss. Die so erhaltene Funktion l\"asst sich entlang des Weges  integrieren:
+\begin{equation}
+         f(\pmb{x}) - f(\pmb{x}_0) =  \int_\gamma {\rm d}f = \int_0^1 {\rm d}f_{(\pmb{x}(t))}( \dot{\pmb{x}})\,{\rm d}t \, .
+\end{equation}
+Das Differential ${\rm d}f_{(\pmb{x})}$ definiert an jedem Punkt $\pmb{x}\in M$ eine Hyperfl\"ache (einen Vektorraum,
+der eine Dimension weniger als $M$ hat, also die Kodimension 1):
+Alle Tangentialvektoren $\dot{\pmb{x}}$ in $T_{\pmb{x}}M$ (dem Tangentialraum an $M$ im Punkte $\pmb{x}$, der
+durch die m\"oglichen Geschwindigkeiten von Wegen durch diesen Punkt gegeben ist), 
+f\"ur die ${\rm d}f_{(\pmb{x}(t))}( \dot{\pmb{x}})=0$ gilt, liegen in dieser Hyperebene, d.h.\ es handelt sich bei dieser 
+Hyperebene um den Tangentialraum an 
+eine \"Aquipotentialfl\"ache von $f$.\footnote{Oft stellt man sich ${\rm d}f_{(\pmb{x})}$ als ein Vektorfeld
+vor, das an jedem Punkt dem Gradienten von $f$ entspricht. Hierbei sollte man jedoch beachten, dass es
+sich dabei um eine lineare Abbildung (also ein Element des Dualraums) auf dem Tangentenraum an $M$ -- also
+dem Raum aller \glqq Geschwindigkeiten von Wegen\grqq\ in einem Punkt $\pmb{x}\in M$ -- handelt.} 
+Ausgedr\"uckt in Koordinaten hat ${\rm d}f$ die Form:
+\begin{equation}
+           {\rm d}f_{(\pmb{x})} = \sum_{i=1}^n \frac{\partial f(\pmb{x})}{\partial x_i}\, {\rm d} x_i \, ,
+\end{equation}
+wobei ${\rm d}x_i$ die Differentiale der Koordinatenfunktion $x_i:M\rightarrow \mathbb{R}$ sind. Diese
+sollten nicht als \glqq kleine Inkremente\grqq\ interpretiert werden, sondern als die Abbildung, die einem
+Tangentialvektor (an einem Punkt $\pmb{x}$) seine $i$-te Komponente zuordnet. Es ist also
+\begin{equation}
+                  {\rm d}x_i (\dot{\pmb{x}}) = \dot{x}_i \, . 
+\end{equation}
+Eine allgemeine 1-Form auf $M$ hat (ausgedr\"uckt in lokalen Koordinaten) die Form
+\begin{equation}
+           \omega_{(\pmb{x})} = \sum_{i=1}^n \omega_i \, {\rm d} x_i \, .
+\end{equation}
+Auch eine solche 1-Form -- anschlaulich ein Vektorfeld mit Komponenten $\omega_i$ --
+definiert an jedem Punkt $\pmb{x}$ von $M$ eine Hyperebene durch die Bedingung
+$\omega_{(\pmb{x})} (\dot{\pmb{x}}) = 0$. Dies f\"uhrt auf die Frage: Unter welchen Bedingungen
+lassen sich diese Hyperebenen in einer Umgebung eines Punktes $\pmb{x}$ als Tangentialr\"aume
+an die \"Aquipotentialfl\"achen einer Funktion $f$ deuten? Ist $\omega$ das
+totale Differential zu einer Funktion $f$, wenn also $\omega = {\rm d}f$ gilt -- in diesem Fall bezeichnet
+man $\omega$ als \textit{exakt} --, ist das der Fall. Eine solche Funktion $f$ gibt es, wenn $\omega$
+rotationsfrei ist, d.h. wenn gilt:
+\begin{equation}
+                                  \frac{\partial \omega_i}{\partial x_j} =  \frac{\partial \omega_j}{\partial x_i} \, .
+\end{equation}
+(In einem Differentialformenkalk\"ul kann man daf\"ur auch ${\rm d}\omega =0$ schreiben.) 
+
+Die Bedingung $\omega_{(\pmb{x})} (\dot{\pmb{x}}) = 0$, durch welche bei gegebenem $\omega$ die
+Hyperebene definiert ist, erlaubt aber eine gewisse Freiheit: Wenn $\omega$ an jedem Punkt mit einem
+beliebigen (von null verschiedenen) Faktor multipliziert wird, \"andert sich diese Bedingung f\"ur die
+Hyperebenen nicht. Es wird lediglich die \glqq L\"ange\grqq\ der Normalenvektoren an die Ebene
+ge\"andert, das \"andert aber die Ebene selbst nicht. Also gilt auch: Wenn es eine Funktion
+$\alpha(\pmb{x})$ gibt, sodass $\alpha(\pmb{x}) \omega_{(\pmb{x})}$ rotationsfrei ist, dann gibt es
+(in einem zusammenh\"angenden Gebiet) eine Funktion $f$, sodass $\alpha \omega= {\rm d}f$. Die
+Funktion $\alpha(\pmb{x})$ bezeichnet man als \glqq integrierenden Faktor\grqq. Die Gleichung
+$\omega(\dot{\pmb{x}})=0$ hat dieselben L\"osungen wie $\alpha(\pmb{x}) \omega(\dot{\pmb{x}})=0$ 
+bzw.\ ${\rm d}f(\dot{\pmb{x}})=0$ (sofern es diese Funktion $f$ gibt), 
+und dies sind die Vektoren der Tangentialr\"aume an die
+\"Aquipotentialfl\"achen von $f$. 
+
+Gibt es eine Funktion $f$, sodass $\alpha \omega ={\rm d}f$, ist nat\"urlich auch jede Funktion 
+$F(f)$ eine L\"osung des Problems, da die \"Aquipotentialfl\"achen dieselben sind. 
+Da ${\rm d}F(f)= F'(f) {\rm d}f$, \"andert sich entsprechend der integrierende Faktor um
+$ \alpha \rightarrow \alpha F'(f)$. Die L\"osung des Problems ist somit nicht eindeutig. 
+
+Die Beziehung zur Thermodynamik ist nun folgende: Die W\"arme\index{Waerme@W\"arme} 
+$\delta Q$ (in der Mathematik w\"urde
+man eher $\omega_Q$ schreiben) ist eine 1-Form ebenso wie das Differential ${\rm d}U$ 
+der inneren Energie U. Allerdings ist ${\rm d}U$ eine exakte 1-Form -- es gibt die Zustandsfunktion 
+(0-Form) der inneren Energie $U$ --, wohingegen $\delta Q$ keine exakte 1-Form ist. 
+Allerdings kann man beweisen -- und dies tun der Carnot-Prozess wie auch die axiomatischen 
+Ans\"atze von Carath\'{e}odory und Jauch --, dass es einen integrierenden Faktor zu $\delta Q$ gibt, 
+n\"amlich $1/T$, wobei $T$ als absolute Temperatur definiert wird, sodass es eine 
+Zustandsgr\"o\ss e -- die Entropie $S$ -- gibt, sodass $\delta Q/T = {\rm d}S$. 
+  
+\subsection{Die Arbeit von Constantin Carath\'{e}odory}
+
+Die Arbeit von Constantin Carath\'{e}odory von 1913 \cite{Caratheodory} wird heute oftmals als der
+erste axiomatische Zugang zur Thermodynamik angesehen, bei dem der zweite Hauptsatz der
+Thermodynamik -- die Existenz einer Zustandsgr\"o\ss e Entropie sowie einer absoluten Temperatur --
+bewiesen wird, ohne dass das sehr unscharf definierte Konzept der W\"arme explizit verwendet wird.  
+Der erste Hauptsatz der Thermodynamik -- bei Carath\'{e}odory ist dies das Axiom I -- wird
+so umgeformt, dass die W\"arme $\delta Q$ durch die besser definierten Gr\"o\ss en innere Energie $U$ 
+bzw.\ das totale Differential ${\rm d}U$ und die Arbeit $\delta W$ ausgedr\"uckt wird. Lokal 
+wird dadurch postuliert, dass\index{Erster Hauptsatz der Thermodynamik}\index{Energieerhaltung}
+\begin{equation}
+                          \delta Q = {\rm d}U + \delta W \, .
+\end{equation}
+Prozesse bzw.\ Zustands\"anderungen sind auch bei Carath\'{e}odory reversible Wege $\pmb{x}(t)$ 
+auf der Mannigfaltigkeit $M$ der Gleichgewichtszust\"ande. Zun\"achst sehr unanschaulich 
+ist das Axiom II bei Carath\'{e}odory:\\[0.3cm]
+\textit{In jeder beliebigen Umgebung eines willk\"urlich vorgeschriebenen Anfangszustands
+gibt es Zust\"ande, die durch adiabatische Zustands\"anderungen nicht beliebig approximiert
+werden k\"onnen.}
+\vspace{0.3cm}
+
+Eine adiabatische Zustands\"anderung -- beschrieben durch einen Tangentialvektor $\dot{\pmb{x}}$ --
+erf\"ullt dabei die Bedingung $\delta Q(\dot{\pmb{x}})=0$.\index{adiabatisch} 
+Bei einer solchen Zustands\"anderung flie\ss t
+also keine W\"arme bzw.\ findet kein W\"armeaustausch mit der Umgebung statt. Die Forderung, dass es 
+solche Zustands\"anderungen \"uberhaupt gibt, 
+setzt als empirische Tatsache die Existenz von adiabatisch abgeschlossenen W\"anden voraus, sodass man
+experimentell eine reversible Zustands\"anderung realisieren kann, bei der keine W\"arme mit der Umgebung
+ausgetauscht wird. 
+
+Carath\'{e}odory
+betrachtet nun adiabatische Wege (Zustands\"anderungen) $\pmb{x}(t)$, ausgehend von einem Anfangszustand
+$\pmb{x}_0$ zu einem beliebigen Zustand $\pmb{x}$, f\"ur die gilt
+\begin{equation}
+                          \delta Q_{(\pmb{x}(t))}(\dot{\pmb{x}}(t))  = 0 \, . 
+\end{equation}
+Wenn es zu $\delta Q$ einen integrierenden Faktor $\alpha(\pmb{x})$ und eine Funktion $S(\pmb{x})$
+gibt, so dass $\alpha(\pmb{x}) \delta Q = {\rm d}S$, bedeutet dies, dass ein solcher Weg
+(eine solche Zustands\"anderung) nur innerhalb einer \"Aquipotentialfl\"ache zu dieser Funktion $S$ verlaufen
+kann. Dies bedeutet wiederum, dass bestimmte Punkte in einer beliebig kleinen Umgebung eines
+Gleichgewichtszustands $\pmb{x}$ -- n\"amlich solche mit einem anderen Funktionswert f\"ur $S$ als der Punkt $\pmb{x}$ --
+durch adiabatische Wege nicht erreicht werden k\"onnen. Nach einem Theorem von \'{E}lie Cartan
+gilt aber auch das Umgekehrte: Wenn es in der Umgebung eines Punktes $\pmb{x}$ andere
+Punkte gibt, die durch Wege, entlang derer $\omega(\dot{\pmb{x}})=0$ ist, nicht erreicht werden
+k\"onnen, dann gibt es eine Funktion $S(\pmb{x})$, sodass diese Wege auf einer Hyperfl\"ache 
+$S(\pmb{x})={\rm const}$ verlaufen. Mit anderen Worten: Wenn $\omega$ keinen integrierenden Faktor
+besitzt, dann kann man mit Wegen, f\"ur die $\omega(\dot{\pmb{x}})=0$ gilt, jeden Punkt in einer
+Umgebung eines Punkte $\pmb{x}$ beliebig approximieren. 
+
+Damit hat Carath\'{e}odory gezeigt, dass es zu der 1-Form W\"arme einen integrierenden Faktor gibt,
+so dass diese 1-Form zu einem totalen Differential einer Zustandsgr\"o\ss e $S$ wird, die wir dann
+Entropie nennen. Es verbleibt zu zeigen, dass dieser integrierende Faktor lediglich eine Funktion der
+sogenannten \textit{empirischen Temperatur} $\theta$ sein kann. Au\ss erdem hatten wir gesagt, dass
+die Funktion $S$ nicht eindeutig ist, sofern sie existiert. Allerdings kann man zeigen, dass unter den
+Funktionen $F(S)$, die m\"oglich w\"aren, nur eine (bis auf einen konstanten Faktor) die Eigenschaft
+hat, additiv zu sein. D.h., wenn man zwei Systeme zu einem Gesamtsystem vereint, soll die
+Entropie $S$ additiv (in der Thermodynamik spricht man meist von einer mengenartigen Gr\"o\ss e
+oder auch einer extensiven Grr\"o\ss e)\index{extensiv} 
+sein: $S_{\rm ges} = S_1 + S_2$. Dies legt sowohl die Funktion $S$ als auch
+den integrierenden Faktor bis auf einen konstanten Faktor fest. Von diesem kann man nun zeigen,
+dass er nur von der Temperatur abh\"angt, denn wenn der integrierende Faktor eine intensive
+Zustandsgr\"o\ss e sein soll, kann er nicht mehr von einer extensiven Gr\"o\ss e (der Entropie) 
+abh\"angen. 
+
+\subsection{Der Zugang von Joseph-Maria Jauch}
+
+In seinem Artikel von 1970 \cite{Jauch} geht Joseph-Maria Jauch ganz \"ahnlich vor, wie 
+Carathh\'{e}odory. Durch ein erstes Axiom wird die Energieerhaltung postuliert, sodass es
+eine 1-Form (genannt W\"arme) gibt, die sich als
+\begin{equation}
+                 \delta Q ={\rm d}U + \delta W 
+\end{equation}
+schreiben l\"asst, wobei vorausgesetzt wird, dass $U$ -- die innere Energie -- eine an einem
+Gleichgewichtszustand messbare Gr\"o\ss e -- also eine Zustandsgr\"o\ss e -- darstellt, 
+die bei der Verwendung von Arbeitskoordinaten mit $x_0$ bezeichnet wird,
+und dass $\delta W$ die von dem System an der Umgebung geleistete Arbeit bezeichnet, die
+durch die Arbeitskoordinaten $(x_1,...,x_n)$ kontrolliert werden kann. 
+
+Jauch betrachtet nun reversible adiabatische Wege, also wiederum Wege, f\"ur die
+$\delta Q(\dot{\pmb{x}}(t))=0$ ist. Er beweist das folgende Theorem: Ist ein adiabatischer Weg
+in den Arbeitskoordinaten $(x_1,...x_n)$ geschlossen, dann ist er auch in $M$ geschlossen, d.h.\
+in den Koordinaten $(x_0,x_1,...,x_n)$. Dies ist nicht trivial: Es k\"onnte adiabatische \glqq Spiralen\grqq\ 
+geben, sodass in $(x_1,...,x_n)$ ein Weg geschlossen ist, dieser aber in der verbliebenen Koordinate
+$x_0$ einen anderen Wert annimmt. 
+
+Wir betrachten also nun einen Weg $\gamma$, der bez\"uglich der Arbeitskoordinaten $(x_1,...,x_n)$
+geschlossen ist, und f\"ur den $\delta Q(\dot{\pmb{x}})=0$. Insbesondere gilt f\"ur diesen Weg
+\begin{equation}
+      \int_{\gamma} \delta Q = 0 \, .
+\end{equation}      
+Damit m\"usste f\"ur diesen Weg und die Koordinate $x_0$ (die der inneren Energie $U$ entspricht) 
+gelten:      
+\begin{equation}      
+               x_0(1) - x_0(0) =  \Delta U  =  \int_{\gamma} \delta W \, .
+\end{equation}
+Da die Arbeitskoordinaten $(x_1,...,x_n)$ aber am Ende des Weges wieder dieselben Werte wie
+zu Beginn annehmen, kann die Energie $\Delta U$ dem System nur zugef\"ugt worden sein, indem
+bei dem Prozess diese Energie aus einem W\"armereservoir entnommen wurde. Doch dies widerspricht
+dem zweiten Hauptsatz in der Formulierung von Planck: Es gibt keine periodisch arbeitende Maschine
+(die Arbeitskoordinaten sind nach einem Zyklus dieselben wie vorher), deren einziger Effekt darin besteht, 
+dass ein Gewicht angehoben wird und sich ein W\"armereservoir abgek\"uhlt hat.
+
+Das bedeutet aber, dass ein adiabatischer Weg, f\"ur den somit $\int_{\gamma} \delta Q = 0$, und
+der in den Arbeitskoordinaten geschlossen ist, automatisch insgesamt geschlossen ist. 
+
+
+\subsection{Lieb und Yngvason: Entropie als Ma\ss\ f\"ur Irreversibilit\"at}
+
+In einigen j\"ungeren Arbeiten (z.B.\ \cite{Lieb1,Lieb2}) haben Lieb und Yngvason versucht, den
+Begriff der Entropie direkt als Ma\ss\ f\"ur Irreversibilit\"at herzuleiten.\index{Entropie!Ma\ss\ f\"ur Irreversibilit\"at} 
+Dazu betrachten sie wieder den\index{Gleichgewichtszustand}
+Raum aller Gleichgewichtszust\"ande und definieren darauf eine Halbordnung: Wenn ein
+Prozess f\"ur zwei Gleichgewichtszust\"ande $A$ und $B$ spontan abl\"auft (nicht notwendigerweise 
+reversibel oder \"uber eine Folge vonGleichgewichtszust\"anden), definieren sie $A\rightarrow B$. 
+Wenn es Prozesse gibt, die in beide Richtungen ablaufen k\"onnen, gelte $A \leftrightarrow B$.
+Die Relation $A\rightarrow B$ ist transitiv, d.h., wenn gilt $A\rightarrow B$ und $B \rightarrow C$, gilt
+auch $A \rightarrow C$. Auch die Relation $A \leftrightarrow B$ ist transitiv (und symmetrisch). 
+Das bedeutet: Es gibt auf der Menge der Gleichgewichtszust\"ande eine \"Aquivalenzrelation
+($\leftrightarrow$) und auf der Menge der \"Aquivalenzklassen eine Halbordnung. 
+
+Lieb und Yngvason definieren nun auf der Menge der Menge der Gleichgewichtszust\"ande eine
+Funktion $\sigma$, die innerhalb einer \"Aquivalenzklasse konstant ist und die die Halbordnung respektiert, 
+d.h., falls $A \rightarrow B$ gilt, soll auch $\sigma(A) \leq \sigma(B)$ gelten, und falls $A \leftrightarrow B$
+gilt, soll $\sigma(A) = \sigma(B)$ gelten. Diese Funktion $\sigma$ k\"onnte man als empirische
+Entropie interpretieren. 
+
+Auch diese Funktion $\sigma$ ist nicht eindeutig, da jede monotone Funktion von $\sigma$ ebenfalls
+die geforderten Eigenschaften hat. \"Ahnlich wie Carath\'{e}odory und Jauch nutzen die Autoren nun
+bestimmte Forderungen an die Funktion $\sigma$, die im Wesentlichen
+aus der Additivit\"at bzw.\ der Skalierungseigenschaft (also der Forderung, dass die Entropie eine
+extensive Zustandsgr\"o\ss e sein soll)
+folgen, um $\sigma$ bis auf einen konstanten
+Faktor festzulegen. Die so erhaltene Funktion $S$ definieren sie als die Entropie eines Systems. 
+
+\begin{thebibliography}{99}
+\bibitem{Caratheodory} Carath\'{e}odory, C.; \textit{Untersuchungen \"uber die Grundlagen der
+          Thermodynamik}; Mathematische Annalen, Bd.\ 67 (1909) 355--386.
+\bibitem{Carnot} Carnot, S.; \textit{R\'{e}flexions sur la puissance motrice du feu et sur les machines propres \`{a} d\'{e}velopper cette
+               puissance}; Annales scientifiques de l'\'{E}cole Normale Sup\'{e}ieure S\'{e}r.\ 2 (1872), 393--457.\\Deutsch:
+               \textit{Betrachtungen \"uber die bewegende Kraft des Feuers und die zur Entwickelung dieser Kraft geeigneten Maschinen} (1824);
+               \"ubersetzt und herausgegeben von W.\ Ostwald, in Ostwald's Klassiker der exakten Wissenschaften, Nr.\ 37.        
+\bibitem{Jauch} Jauch, J.-M.; \textit{Analytical Thermodynamics. Part I. Thermostatistics---General Theory};
+               Found.\ Phys.\ 5, No.\ 1 (1975), 111--132; Verlag von Wilhelm Engelmann, Leibzig, 1892.
+\bibitem{Lieb1} Lieb, E.\,H., Yngvason, J.; \textit{The Physics and Mathematics of the Second Law of
+            Thermodynamics}; Phys.\ Rep.\ 310 (1999) 1--96.
+\bibitem{Lieb2} Lieb, E.\,H., Yngvason, J.; \textit{The Mathematical Structure of the Second Law of
+            Thermodynamics}; Current Developments in Mathematics, 2001; International Press, Cambridge (2002)
+            89--130.
+\bibitem{Sommerfeld} Sommerfeld, A.; \textit{Vorlesungen \"uber theoretische Physik; Band 5: Thermodynamik und
+             Statistik}; Verlag Harri Deutsch, Frankfurt (1992).                                                                           
+\end{thebibliography}
+
+
+%\end{document}
+
