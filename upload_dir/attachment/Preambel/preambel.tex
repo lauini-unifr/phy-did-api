@@ -15,6 +15,7 @@
 
 
 \usepackage{makeidx}
+\makeindex
 \usepackage{babel}            % Sprachunterstuetzung
 \usepackage{amsmath}          % AMS "Grundpaket"
 \usepackage{amssymb,amsfonts,amsthm,amscd} 
@@ -68,6 +69,11 @@
 \newcommand{\noi}{\noindent}
 \newcommand{\leer}{}
 \newcommand{\solution}[1]{#1}
+\newcommand{\info}[1]{%
+    \textbf{\textit{#1}}%
+    \newline
+    \newline
+}
 
 \newcommand{\engl}[1]{[\textit{#1}]}
 \parindent 1.2cm

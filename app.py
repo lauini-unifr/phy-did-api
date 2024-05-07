@@ -222,8 +222,7 @@ def create_app(db_url=None):
                                         "Thermo_03_Entropie"]:
                             copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder') 
                     
-
-                texdoc.append(r'\end{document}')
+                texdoc.append('\printindex\n\end{document}')
 
                 # write back the new document
                 with open(os.path.join(tmpdirname, 'final.tex')  , 'w') as f_out:

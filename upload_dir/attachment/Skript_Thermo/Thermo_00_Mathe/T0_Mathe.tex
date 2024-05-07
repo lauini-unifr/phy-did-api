@@ -1,0 +1,653 @@
+%\documentclass[german,10pt]{book}     \input{../preambel}      \begin{document}   %\setcounter{chapter}{0}
+
+\chapter{Mathematische Grundlagen der Statistischen Mechanik}
+\label{chap_MathStat}
+
+\info{Thomas Filk; 30.03.2024}%
+Wie schon der Name andeutet, handelt es sich bei
+der Statistischen Mechanik um eine \glqq statistische\grqq\
+Theorie, d.h., man interessiert sich f\"ur die
+gemittelten Eigenschaften von Systemen
+mit vielen Freiheitsgraden bzw.\ von einem
+Ensemble von vielen gleichartigen Systemen. 
+Die Thermodynamik ist eine ph\"anomenologische
+Theorie f\"ur den Grenzfall sehr vieler (im Idealfall
+unendlich vieler) Freiheitsgrade bzw.\ 
+Systemkomponenten. In diesem Grenzfall wird
+unter sehr allgemeinen Bedingungen das
+Verhalten von Mittelwerten exakt. 
+
+Das zentrale mathematische R\"ustzeug f\"ur
+die Statistische Mechanik umfasst somit die
+Wahrscheinlichkeitstheorie bzw.\ die Statistik, und der
+Schwerpunkt beruht 
+speziell auf dem Verhalten von Kenngr\"o\ss en von
+Wahrscheinlichkeitsverteilungen im Grenzfall
+unendlich gro\ss er Systeme (oder von Systemen
+mit unendlich vielen Freiheitsgraden). Dieses
+Werkzeug soll in diesem Kurztext kurz angerissen 
+werden. 
+
+\section{Wahrscheinlichkeiten}
+
+Das Thema \glqq Wahrscheinlichkeit\grqq\ wurde zu\index{Wahrscheinlichkeit|(}
+einem Zweig der Mathematik, als man in der Zeit
+zwischen dem 15.\ und 17.\,Jahrhundert 
+mehr und mehr erkannte, dass sich die relativen
+H\"aufigkeiten, mit der bestimmte Ereignisse bei
+Gl\"ucksspielen auftreten, mathematisch bestimmen
+lassen. Nach langen Schwierigkeiten bei der Suche
+nach einer Definition, was genau Wahrscheinlichkeit
+eigentlich sei, konnte Andrei Nikolajewitsch Kolmogorow (1903--1987) 1933\index{Kolmogorow, Andrei}
+den Begriff der Wahrscheinlichkeit axiomatisch
+fassen. Diese Formulierung umgeht die philosophische
+Frage nach dem Wesen der Wahrscheinlichkeit und
+ersetzt sie durch einen Satz von Bedingungen,
+die von einer mathematische Struktur erf\"ullt sein
+m\"ussen, um von Wahrscheinlichkeiten im 
+herk\"ommlichen Sinne sprechen zu k\"onnen.
+
+Die Hauptschwierigkeit eines solchen 
+Formalismus bezieht sich auf die mathematisch
+exakte Beschreibung von Wahrscheinlichkeiten
+bei kontinuierlichen Ereignismengen. Als Beispiel
+sei die Wahrscheinlichkeit genannt, auf einer (mathematisch
+idealisierten) Dart-Scheibe mit einer (mathematisch
+idealisierten) Pfeilspitze einen (mathematisch
+idealisieren) Punkt zu treffen. Die erste Schwierigkeit
+besteht darin, dass wir elementaren Ereignissen
+keine von null verschiedenen 
+Wahrscheinlichkeiten zuschreiben 
+k\"onnen, sondern nur Ereignismengen (beispielsweise
+einem Fl\"achenausschnitt der Dart-Scheibe). 
+Die zweite,
+f\"ur die Physik allerdings meist weniger wichtige
+Schwierigkeit liegt darin, dass manchen
+Teilmengen des Ereignisraums \"uberhaupt keine 
+Wahrscheinlichkeiten (weder null noch von null
+verschieden)
+zugeschrieben werden k\"onnen. Heute z\"ahlt
+die Wahrscheinlichkeitstheorie in der Mathematik
+zur Ma\ss theorie. Allerdings spielt gerade bei
+endlichen Ereignisr\"aumen oft die Kombinatorik
+eine wichtigere Rolle. 
+
+\subsection{Ereignisse als Teilmengen eines
+Ereignisraumes}
+
+Wenn wir im Alltag im Zusammenhang mit 
+Wahrscheinlichkeiten von einem Ereignis sprechen,\index{Ereignis}\index{Elementarereignis}
+meinen wir meist sogenannte {\em Elementarereignisse},
+die sich auf eine einzelne konkrete Realisierung beziehen.
+Bekannte Beispiele sind das Ereignis, mit einem
+W\"urfel bei einem Spiel eine bestimmte Zahl zu
+w\"urfeln oder bei einem M\"unzwurf \glqq Kopf\grqq\ zu
+erhalten. Haben wir Grund zu der Annahme, dass 
+jedes solche Ereignis gleich wahrscheinlich ist,
+k\"onnen wir die Wahrscheinlichkeit f\"ur ein
+solches Ereignis bestimmen, wenn wir die Gesamtzahl
+aller Ereignisse kennen. Beim W\"urfel gibt es 
+sechs Zahlen, daher ist die Wahrscheinlichkeit
+f\"ur das Auftreten einer bestimmten Zahl (bei einem
+\glqq ehrlichen\grqq\ W\"urfel) gleich $1/6$. Bei
+einer M\"unze gibt es zwei m\"ogliche Elementarereignisse
+und wenn die M\"unze \glqq fair\grqq\ ist, sollte jedes
+Ereignis mit der Wahrscheinlichkeit $1/2$ auftreten.
+
+In vielen F\"allen verstehen wir unter einem
+Ereignis aber auch eine ganze Klasse von
+Elementarereignissen, beispielsweise wenn
+wir bei einem W\"urfelspiel mit zwei W\"urfeln 
+nach der Wahrscheinlichkeit fragen, ein
+\glqq M\"axle\grqq\ (eine Eins und eine Zwei)
+zu w\"urfeln oder eine bestimmte Gesamtaugenzahl
+zu erreichen (dies ist
+z.B.\ bei dem Spiel \glqq Siedler von Catan\grqq\
+wichtig). Das Ereignis \glqq Gesamtaugenzahl
+Sieben\grqq\ besteht somit aus mehreren
+Elementarereignissen: 
+$\{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\}$, wobei $(p,q)$
+das Elementarereignis bezeichnet, mit dem ersten
+W\"urfel (der z.B.\ durch seine Farbe markiert sein
+kann) die Zahl $p$ und mit dem zweiten W\"urfel
+die Zahl $q$ zu w\"urfeln. Sind die Elementarereignisse
+gleich wahrscheinlich, erhalten wir die Wahrscheinlichkeit
+f\"ur ein solches zusammengesetztes Ereignis nach der 
+\textit{Laplace'schen Formel}\index{Laplace'sche Formel f\"ur Wahrscheinlichkeiten}\index{Wahrscheinlichkeit!Laplace'sche Formel}
+\begin{equation}
+   \mbox{Wahrscheinlichkeit} = 
+   \frac{\mbox{Menge der g\"unstigen Ereignisse}}{\mbox{Menge
+   der m\"oglichen Ereignisse}} \, .
+\end{equation}
+
+Bei kontinuierlichen Ereignismengen (z.B.\ dem
+oben angesprochenen mathematisch idealisierten
+Dart-Spiel) k\"onnen wir den Einzelereignissen
+im Allgemeinen nur noch die Wahrscheinlichkeiten 
+null zuschreiben, obwohl es nicht unm\"oglich 
+ist, einen bestimmten Punkt zu treffen.
+In einem solchen Fall k\"onnen wir nur 
+Mengen von Elementarereignissen eine
+nicht-verschwindende
+Wahrscheinlichkeit zuschreiben. Diese Mengen
+bestehen auch nicht aus endlich vielen oder abz\"ahlbar
+unendlich vielen einzelnen Punkten, sondern
+sind typischerweise zusammenh\"angende Gebiete.
+
+\subsection{Borel-Mengen bzw.\ Borel-Algebren}
+
+W\"ahrend man in der Physik in den meisten F\"allen
+damit zufrieden ist, dass solche Gebiete ein
+endliches Ma\ss\ haben (je nach Ereignismenge
+eine endliche L\"ange bzw.\ Dauer, Fl\"ache, Volumen, 
+etc.), m\"ochte man in der Mathematik diese Gebiete
+genauer charakterisieren k\"onnen. Insbesondere
+zeigt sich, dass es Teilmengen von kontinuierlichen
+Mengen gibt, denen man \"uberhaupt kein sinnvolles
+Ma\ss\ zuordnen kann. 
+
+Zur Umgehung dieses Problems definiert man\index{Ereignismenge}
+zu einer {\em Ereignismenge} $\Omega$ eine bestimmte 
+Klasse von Teilmengen, die bez\"uglich der Bildung
+von Komplementen sowie abz\"ahlbaren 
+Vereinigungen abgeschlossen ist. Eine solche 
+Menge von Teilmengen bezeichnet man als\index{Sigma@$\sigma$-Algebra}
+$\sigma$-Algebra.\footnote{Der Begriff der Algebra mag
+hier \"uberraschen. In der Mathematik bezeichnet man
+ganz allgemein eine Menge (oder einen Satz von Mengen),
+auf der mehr als eine Verkn\"upfungsrelation definiert ist,
+als eine Algebra.} Eine $\sigma$-Algebra bezeichnet
+man als Borel-Menge oder Borel-Algebra, wenn sie die\index{Borel-Algebra} 
+offenen Teilmengen von $\Omega$ enth\"alt. Insbesondere
+enth\"alt $\sigma$ in diesem Fall auch $\Omega$ selbst
+und die leere Menge. 
+
+Die mathematischen Details bei allgemeinen
+topologischen R\"aumen spielen hier keine
+Rolle. Bei den reellen Zahlen bzw.\ dem
+$\mathbb{R}^n$ sind die relevanten Teilmengen
+alle Mengen, die man aus Intervallen bzw.\
+offenen Kugeln durch abz\"ahlbar viele
+Vereinigungen und Bildung von Komplementmengen
+erh\"alt. Damit sind pathologischen F\"alle, beispielsweise
+die \"Aquivalenzklassen von reellen Zahlen, deren Differenz eine
+rationale Zahl ist, ausgeschlossen. Im Folgenden spreche ich
+manchmal von \glqq sinnvollen\grqq\ Teilmengen,
+wenn die Elemente einer Borel-Algebra gemeint sind.
+
+\subsection{Das Axiomensystem von Kolmogorow}
+
+Das Kolmogorow'sche Axiomensystem beschreibt
+die Voraussetzungen, um von Wahrscheinlichkeiten
+sprechen zu k\"onnen.\index{Kolmogorow-Axiome}\index{Wahrscheinlichkeitsraum}
+\vspace{0.2cm}
+
+\noindent
+{\em Definition:} Ein Tripel $(\Omega, \sigma, \omega)$
+hei\ss t Wahrscheinlichkeitsraum, wenn $\sigma$
+eine Borel-Menge von $\Omega$ ist (also eine
+Menge von sinnvollen Teilmengen von $\Omega$)
+und $\omega: \sigma \longrightarrow \mathbb{R}$ eine
+Abbildung, die folgende Bedingungen erf\"ullt:
+\begin{eqnarray*}
+     \omega(\Omega) &=&  1 \\
+     \omega(A) & \geq & 0 ~~~ \mbox{f\"ur alle } A \in \sigma \\
+     \omega \Big( \bigcup_i A_i \Big) &=& \sum_i \omega(A_i) ~~~~~  
+     {\rm sofern} ~~ A_i \in \sigma ~~{\rm und} ~~ 
+     A_i \cap A_j = \emptyset ~(i \neq j)  \, .
+\end{eqnarray*}
+$\omega$ hei\ss t Wahrscheinlichkeitsfunktion auf $\sigma$.\index{Wahrscheinlichkeitsfunktion}
+
+Die erste Bedingung bedeutet, dass die Wahrscheinlichkeit
+f\"ur das Ereignis $\Omega$ (also dass irgendein 
+Elementarereignis aus $\Omega$ realisiert wird)
+gleich 1 ist. Die zweite Bedingung bedeutet,
+dass Wahrscheinlichkeiten positive Zahlen sind.
+Die nicht-triviale Bedingung ist die dritte Bedingung: 
+Seien $\{A_i\}$ h\"ochstens abz\"ahlbar viele und
+paarweise disjunkte Teilmengen von $\sigma$, dann
+ist die Wahrscheinlichkeit f\"ur das Eintreten eines 
+Elementarereignisses
+in irgendeiner dieser Ereignismengen gleich der Summe der
+Wahrscheinlichkeiten, dass dieses Ereignis in einer
+bestimmten dieser Mengen liegt. Anschaulich bedeutet
+es: Die Wahrscheinlichkeit f\"ur das Auftreten eines 
+von mehreren unabh\"angigen Ereignissen
+ist gleich der Summe der Wahrscheinlichkeiten 
+der einzelnen Ereignisse. Aus diesem Gesetz ergibt
+sich z.B.\ unmittelbar die oben erw\"ahnte Laplace'sche Formel.
+
+
+\section{Zufallsvariable und Kenngr\"o\ss en}
+
+Die Natur des Ereignisraumes $\Omega$ kann sehr
+unterschiedlich sein.
+In den meisten F\"allen m\"ochten wir jedoch den 
+Elementarereignissen Zahlen zuordnen und dann die Frage
+stellen k\"onnen, mit welcher Wahrscheinlichkeit
+bestimmte Zahlen auftreten.
+
+Dazu definieren wir das Konzept einer
+{\em Zufallsvariablen}:\index{Zufallsvariable}
+\vspace{0.2cm}
+ 
+ \noindent
+ {\em Definition:} Eine {\em Zufallsvariable} $X$ zu einem
+ Wahrscheinlichkeitsraum $(\Omega, \sigma, \omega)$ ist eine
+ Abbildung $X: \Omega \longrightarrow \mathbb{R}$,
+ sodass das Urbild jeder messbaren Menge aus $\mathbb{R}$
+ in $\sigma$ liegt. 
+ \vspace{0.2cm}
+ 
+ Konkret bedeutet dies: Die Menge aller
+ Elementarereignisse $a\in \Omega$, f\"ur die $X(a)$
+ in einem bestimmten Intervall in $\mathbb{R}$ liegt,
+ ist eine Menge, der man eine Wahrscheinlichkeit
+ zuschreiben kann. Zu jeder Zufallsvariablen $X$ 
+ definieren wir nun eine {\em Verteilungsfunktion} $P_X$
+ auf $\mathbb{R}$:
+\begin{equation}
+    P_X: \mathbb{R} \rightarrow [0,1] ~~~ {\rm mit} ~~ 
+     P_X(x) = \omega \Big( \{a \in \Omega| X(a) < x \} \Big) \, .
+\end{equation}
+$P(x)$ ist somit die Wahrscheinlichkeit, dass bei
+einer Realisierung ein Ereignis $a$ auftritt, f\"ur
+das die Zufallsvariable $X(a)$ einen Wert 
+kleiner als $x$ hat. Formal k\"onnen wir nun einer
+Zufallsvariablen eine Wahrscheinlichkeitsdichte
+zuordnen, indem wir die Ableitung von $P(x)$
+betrachten:\index{Wahrscheinlichkeitsdichte}
+\begin{equation}
+    w_X(x) = \frac{{\rm d}P_X}{{\rm d}x}  \, .
+\end{equation}
+Allerdings ist diese Wahrscheinlichkeitsdichte nicht
+immer eine gew\"ohnliche Funktion auf den reellen
+Zahlen sondern eher eine Distribution, d.h., 
+sinnvoll sind nur Integrale \"uber messbare Teilmengen
+von $\mathbb{R}$. 
+
+Wie in der Physik oft \"ublich, werde ich nicht immer
+explizit von einem Wahrscheinlichkeitsraum $(\Omega, \sigma,\omega)$ 
+sowie einer Zufallsvariablen $X$ und ihrer Verteilungsfunktion
+$P_X$ sprechen, sondern einfacher von einer (reellen) Variablen $x$
+und ihrer Wahrscheinlichkeitsdichte $w(x)$. Ganz grob
+m\"ochte ich die Zusammenh\"ange angeben, mit denen wir
+es in der Statistischen Mechanik zu tun haben werden:
+$\Omega$ wird der Raum aller Mikrozust\"ande sein, das\index{Mikrozustand}
+ist klassisch der Phasenraum aller beteiligten Teilchen
+und in der Quantenmechanik meist die Menge der Eigenzust\"ande
+zum Energieoperator. $\sigma$ besteht aus (sinnvollen)
+Teilmengen im Phasenraum und $\omega$ ist eine
+Wahrscheinlichkeit (in der QM) oder eine 
+Wahrscheinlichkeitsdichte (\"uber dem klassischen
+Phasenraum), die angibt, mit welcher
+Wahrscheinlichkeit ein bestimmter Mikrozustand
+vorliegt. Eine Zufallsvariable ist dann eine Observable --\index{Observable}
+beispielsweise die Energie -- auf dem Phasenraum:
+Sie ordnet jedem Mikrozustand eine Zahl zu. 
+$w$ ist die Wahrscheinlichkeitsdichte f\"ur das
+Auftreten eines bestimmten Messwerts, wenn an einem
+konkreten System diese Observable gemessen wird. 
+
+Bei einem diskreten System ($\Omega$ endlich oder abz\"ahlbar)
+besteht $\sigma$ aus allen Teilmengen von $\Omega$ und
+enth\"alt damit auch die Elementarereignisse
+$i\in \Omega$. Damit gen\"ugt es bei diskreten Systemen,
+f\"ur jedes Elementarereignis $i$ seine Wahrscheinlichkeit
+$\omega(i)$ anzugeben. Die Wahrscheinlichkeit f\"ur
+ein Ereignis $A\subset \Omega$ ist dann einfach:
+\begin{equation}
+      \omega (A) = \sum_{i \in A} \omega(i) \, . 
+\end{equation}
+Da es sich nun um diskrete Ereignisse handelt,
+wird die Verteilung $P$ zu einer Stufenfunktion
+(die an einer Stelle $x$ um einen diskreten Sprung 
+zunimmt, wenn es ein Ereignis $a$
+gibt, sodass $X(a)=x$). Die Ableitung $w(x)$
+wird damit zu einer Summe \"uber $\delta-$Funktionen.
+Das ist auch richtig, wenn man die Summe \"uber
+diskrete Ereignisse als Integral schreiben m\"ochte.
+Im Allgemeinen ist das aber nicht notwendig: Man
+spricht von Wahrscheinlichkeiten und berechnet
+diese durch die Bildung von Summen \"uber
+diskrete Ereignismengen.
+
+Ist eine Wahrscheinlichkeitsdichte gegeben,
+k\"onnen wir verschiedene Kenngr\"o\ss en
+bestimmen. Diese charakterisieren eine
+Verteilung und reichen oftmals f\"ur einfache
+Zusammenh\"ange aus. F\"ur eine allgemeine
+(messbare, d.h.\ lokal integrierbare) Funktion $f(x)$ kann man den 
+Erwartungswert berechnen:\index{Mittelwert}\index{Erwartungswert}
+\begin{equation}
+     \langle f(x) \rangle = \int f(x) w(x)\, {\rm d}x \, .
+\end{equation}
+Besondere Erwartungswerte sind der
+{\em Mittelwert}
+\begin{equation}
+     \bar{x} := \langle x \rangle =  \int x w(x)\, {\rm d}x 
+\end{equation}
+und die {\em Varianz}\index{Varianz}
+\begin{equation}
+     \sigma_x^2 := \langle (x - \bar{x})^2  \rangle 
+     = \int (x-\bar{x})^2 w(x)\, {\rm d}x \, .
+\end{equation}
+Die Wurzel aus der Varianz, also $\sigma_x$, 
+bezeichnet man
+als {\em Standardabweichung}.\index{Standardabweichung}
+Allgemein sind die {\em Momente}\index{Moment einer Verteilung}
+der Verteilung durch
+\begin{equation}
+     \langle x^n \rangle = \int x^n w(x)\, {\rm d}x 
+\end{equation}
+gegeben, f\"ur die man auch die {\em erzeugende
+Funktion}\index{erzeugende Funktion}
+\begin{equation}
+     \tilde{f}(k) = \langle {\rm e}^{{\rm i}kx} \rangle = \int 
+     {\rm e}^{{\rm i}kx} w(x)\, {\rm d}x 
+\end{equation}
+definiert. Die Momente erh\"alt man aus den 
+Ableitungen von $\tilde{f}$:
+\begin{equation}
+     \langle x^n \rangle = (-{\rm i})^n \frac{{\rm d}^n \tilde{f}(k)}{{\rm d}k^n}
+     \Big|_{k=0} \, .
+\end{equation}
+Bis auf Faktoren ist $\tilde{f}(k)$ die Fourier-Transformierte
+der Wahrscheinlichkeitsdichte $w(x)$. 
+
+Bei mehreren Zufallsvariablen $X_i$ ($i=1,...,n$) 
+definiert man eine gemeinsame Verteilungsfunktion
+\begin{equation}
+     P(x_1,...,x_n) = \omega \Big( \{ a \in \Omega | \,
+       X_1(a)<x_1 \, , \, X_2(a)<x_2 \, , ..., \, X_n(a)<x_n\} \Big)  \, ,
+\end{equation}
+und durch Ableitungen nach $x_i$ ergibt sich die 
+gemeinsame Wahrscheinlichkeitsdichte
+\begin{equation}
+    w(x_1,...,x_n) = \frac{{\rm d}^n P(x_1,...,x_n)}{{\rm d}x_1 \cdots {\rm d}x_n} \, .
+\end{equation}
+Daraus erh\"alt man z.B.\ die {\em Kovarianzmatrix}\index{Kovarianzmatrix}
+\begin{equation}
+     C_{ij} = \int (x_i - \bar{x}_i)(x_j - \bar{x}_j) \, w(x_1,...,x_n)\, {\rm d}^n x \, ,
+\end{equation}
+die ein guter Indikator f\"ur Korrelationen zwischen den
+beiden Variablen $x_i$ und $x_j$ ist. Die Diagonale der
+Kovarianzmatrix enth\"alt die Varianzen zu den einzelnen
+Gr\"o\ss en.
+
+Gilt f\"ur die Wahrscheinlichkeitsdichte von zwei Gr\"o\ss en 
+$x$ und $y$ die Beziehung
+\begin{equation}
+     w(x,y) = w(x) w(y) \, ,
+\end{equation}
+so bezeichnet man $x$ und $y$ als {\em statistisch unabh\"angig}.\index{statistisch unabh\"angig}
+In diesem Fall faktorisieren alle Erwartungswerte
+von Produkten der beiden Gr\"o\ss en zu Produkten
+von den entsprechenden Erwartungswerten. Insbesondere
+ist die Kovarianzmatrix eine Diagonalmatrix, d.h., die
+Nicht-Diagonalelemente sind null. Allerdings gilt im
+Allgemeinen die Umkehrung nicht: Wenn die Kovarianzen
+verschwinden bedeutet das nicht notwendigerweise, dass
+die zugeh\"origen Gr\"o\ss en statistisch unabh\"angig sind.
+
+\subsection{Die Gau\ss-Verteilung}
+
+Unter den kontinuierlichen Wahrscheinlichkeitsverteilungen
+spielt die Gau\ss-Verteilung eine besondere Rolle.\index{Gauss@Gau\ss-Verteilung}
+Sie ist durch die Angabe ihres Mittelwerts $\bar{x}$ und
+ihrer Standardabweichung $\sigma_x$ bzw.\ ihrer
+Varianz $\sigma_x^2$ festgelegt:
+\begin{equation}
+     w(x) = \frac{1}{\sqrt{2\pi \sigma_x^2}} \exp \left( 
+     - \frac{(x-\bar{x})^2}{2 \sigma_x^2} \right) \, .
+\end{equation}
+
+Allgemeiner kann man f\"ur eine positive
+symmetrische Matrix $A_{ij}$ (positiv bedeutet in diesem
+Fall, dass s\"amtliche Eigenwerte positiv sind) die
+Verteilungsfunktion 
+\begin{equation}
+     w(x_1,...,x_n) = \frac{\sqrt{{\rm det}\,A}}{(2\pi)^{n/2}} \exp \left( 
+     - \frac{1}{2} \sum_{i,j=1}^n (x_i-\bar{x}_i) A_{ij} (x_j -\bar{x}_j) \right) 
+\end{equation}
+definieren. Die Kovarianzmatrix dieser Verteilung ist
+\begin{equation}
+          C_{ij} = (A^{-1})_{ij} \, ,
+\end{equation}
+wobei $A^{-1}$ die 
+inverse Matrix zu $A$ ist. 
+
+\section{Grenzwerts\"atze}
+
+In der Wahrscheinlichkeitstheorie unterscheidet man viele 
+Arten von Grenzwerts\"atzen, die h\"aufig auch noch 
+in starker und schwacher Form vorkommen 
+k\"onnen. Ihnen allen gemein ist, dass Aussagen
+\"uber die statistischen Eigenschaften von Funktionen von 
+sehr vielen Zufallsvariablen (im Grenzfall unendlich
+vieler Zufallsvariablen) gemacht werden. An dieser
+Stelle m\"ochte ich nur auf zwei Grenzwerts\"atze eingehen,
+und auch bei diesen nur eine schwache Version
+angeben, die f\"ur physikalische Anwendungen 
+ausreicht: das \glqq Gesetz der gro\ss en Zahlen\grqq\
+und den \glqq zentralen Grenzwertsatz\grqq.  Beide
+Grenzwerts\"atze machen Aussagen zu der
+Wahrscheinlichkeitsverteilung der Summe bzw.\ dem
+Mittelwert von vielen Zufallszahlen. 
+
+\subsection{Das Gesetz der gro\ss en Zahlen}
+
+Das Gesetz der gro\ss en Zahlen besagt, dass es\index{Gesetz der gro\ss en Zahlen}
+f\"ur den Mittelwert von Zufallsvariablen
+zunehmend (mit wachsender Anzahl der Zufallsvariablen)
+unwahrscheinlicher wird, von dem Durchschnitt der
+Mittelwerte dieser Zufallsvariablen wesentlich 
+abzuweichen. Konkretisiert werden nun die
+Begriffe \glqq zunehmend unwahrscheinlicher\grqq\ 
+und \glqq wesentlich abweichen\grqq. 
+
+Generell gilt f\"ur die Summe von zwei
+Zufallsvariaben $S=X_1+X_2$, dass ihr
+Mittelwert gleich der Summe der Mittelwerte
+von $X_1$ und $X_2$ ist. Das folgt unmittelbar
+aus der Definition des Mittelwerts und den
+Normierungseigenschaften der
+Wahrscheinlichkeitsdichten:
+\begin{eqnarray}
+      \bar{s} &=& \int (x_1+x_2) w(x_1,x_2)\, {\rm d}^2 x \\
+       &=& \int x_1 w(x_1,x_2) {\rm d} x_1 {\rm d}x_2 +
+       \int x_2 w(x_1,x_2) {\rm d} x_1 {\rm d}x_2 =
+       \bar{x}_1 + \bar{x}_2 \, .      
+\end{eqnarray}
+Im Folgenden betrachten wir den Mittelwert $M$
+und die einfache Summe $S$ von $N$ Zufallsvariablen:
+\begin{equation}
+       M = \frac{1}{N} \sum_i X_i 
+       ~~~~ {\rm und} ~~~~
+       S = \sum_i X_i \, ,
+\end{equation}
+die sich nur in dem Normierungsfaktor $1/N$
+unterscheiden. Beide Gr\"o\ss en sind selbst wieder
+Zufallsvariable. F\"ur ihre Mittelwerte gilt allgemein:
+\begin{equation}
+       \bar{m} = \frac{1}{N} \sum_i \bar{x}_i 
+       ~~~~ {\rm und} ~~~~ 
+      \bar{s} = \sum_i \bar{x}_i    \,  .
+\end{equation}
+Bisher haben wir noch keine Annahme \"uber
+die Varianzen oder die statistische
+Unabh\"angigkeit der Zufallsvariablen gemacht.
+Nun betrachten wir einen Satz $X_1,...,X_N$ von
+$N$ Zufallsvariablen, die verschiedene 
+Verteilungsfunktionen $P_i(x_i)$ und
+damit verbundene Wahrscheinlichkeitsdichten
+$w_i(x_i)$ mit 
+zugeh\"origen Mittelwerten $\bar{x}_i$ haben
+k\"onnen, deren Varianzen $\sigma_{x_i}^2$ 
+aber endlich
+und durch eine Konstante beschr\"ankt sein
+sollen. Au\ss erdem nehmen wir an, dass die
+Zufallsvariablen statistisch unabh\"angig sein sollen.
+Das bedeutet, die gemeinsame Wahrscheinlichkeitsdichte
+faktorisiert:
+\begin{equation}
+   w(x_1,...,x_N) = w_1(x_1) w_2(x_2) \cdots w_N(x_N) \, .
+\end{equation}
+Die eigentliche Aussage des Gesetzes der
+gro\ss en Zahlen ist, dass die Wahrscheinlichkeit,
+dass der Mittelwert von $N$ Zufallszahlen um
+mehr als ein vorgegebenes $\epsilon$ von dem
+Mittelwert der Mittelwerte abweicht, im Grenzfall
+$N\rightarrow \infty$ gegen null geht. Es wird also
+f\"ur gen\"ugend gro\ss e Werte von $N$ beliebig
+unwahrscheinlich, dass der Mittelwert der Summe 
+um mehr als eine beliebig kleine vorgegebene 
+Konstante vom Mittelwert der Mittelwerte abweicht.
+Dieses Gesetz der gro\ss en Zahlen ist
+gleichzeitig ein Beweis f\"ur die h\"aufig
+axiomatisch eingef\"uhrte Behauptung, dass die
+relative H\"aufigkeit bei gen\"ugend vielen
+Realisierungen eines Ereignisses gegen die
+Wahrscheinlichkeit f\"ur dieses Ereignis geht.
+
+F\"ur den Beweis machen wir die vereinfachende
+Annahme, dass alle Mittelwerte verschwinden; dies 
+l\"asst sich immer durch eine additive Verschiebung der
+Zufallsvariablen erreichen. Damit verschwinden
+nicht nur die Einzelmittelwerte $\bar{x}_i=0$
+sondern auch der Gesamtmittelwert $\bar{m}=0$.
+Weiterhin seien alle Varianzen 
+$\sigma_i$ durch eine Konstante $C$
+beschr\"ankt, also $\sigma_i \leq C$.
+Wir betrachten nun die Varianz des Mittelwerts
+der Zufallsvariablen:
+\begin{equation}
+  \sigma_m^2 = \left\langle \left( \frac{1}{N} \sum_i x_i
+  \right)^2 \right\rangle = \frac{1}{N^2} 
+  \left\langle \sum_{i,j} x_i x_j \right\rangle 
+  = \frac{1}{N^2} \sum_{i,j} \langle x_i x_j \rangle \, .
+\end{equation}
+Nun nutzen wir die Unabh\"angigkeit der
+Zufallsvariablen aus, d.h.\ f\"ur $i \neq j$ gilt
+$\langle x_i x_j\rangle =0$. Damit erhalten wir:
+\begin{equation}
+  \sigma_m^2 = \frac{1}{N^2} \sum_i
+  \langle  x_i^2 \rangle
+   = \frac{1}{N^2} \sum_i \sigma_i^2 \leq  \frac{1}{N} C  \, .
+\end{equation}
+Im Grenzfall $N\rightarrow \infty$ geht die rechte
+Seite gegen null, d.h., die Varianz zum Mittelwert
+der Zufallsvariablen wird in diesem Grenzfall
+kleiner als jedes vorgegebene $\epsilon$. 
+F\"ur die Summe der Zufallsvariablen erhalten
+wir entsprechend:
+\begin{equation}
+  \sigma_s^2 = \sum_i 
+ \langle  x_i^2  \rangle
+   =\sum_i  \sigma_i^2 \, .
+\end{equation}
+
+Hinter dieser Formulierung des Gesetzes
+der gro\ss en Zahlen stecken mehrere wichtige
+Anwendungen. Die Gleichsetzung von relativer
+H\"aufigkeit und Wahrscheinlichkeit haben wir
+schon erw\"ahnt. F\"ur die Standardabweichung
+(Wurzel aus der Varianz) der Summe von 
+Zufallsvariablen finden wir nach obiger
+Herleitung:
+\begin{equation}
+     \sigma_s = \sqrt{ \sum_i \sigma_i^2} \, . 
+\end{equation}
+Dies ist das bekannte Fehlerfortpflanzungsgesetz:\index{Fehlerfortpflanzungsgesetz}
+Setzt sich der Gesamtfehler bei einer Messung
+als Summe von Einzelfehlern zusammen, die
+als unkorreliert angenommen werden k\"onnen,
+dann ergibt sich der Gesamtfehler
+aus der Summe der Quadrate der Einzelfehler. 
+
+\subsection{Der zentrale Grenzwertsatz}
+
+W\"ahrend das Gesetz der gro\ss en Zahlen\index{Grenzwertsatz, zentraler}
+eine Aussage \"uber die Varianz des Mittelwerts
+bzw.\ der Summe von vielen Zufallszahlen
+macht, geht der zentrale Grenzwertsatz
+noch einen Schritt weiter: Er macht eine
+Aussage \"uber die Verteilungsfunktion der
+Summe bzw.\ des Mittelwerts von Zufallszahlen:\\[0.2cm]
+F\"ur $N$ statistisch unabh\"angige Zufallszahlen 
+$X_i$ mit Varianzen $\sigma_i$, die alle endlich
+und durch eine Konstante beschr\"ankt sein 
+sollen, wird die
+Verteilungsfunktion des Mittelwerts (bzw.\
+der Summe) zu einer Gau\ss verteilung
+mit den durch das Gesetz der gro\ss en Zahlen
+gegebenen Mittelwerten und Standardabweichungen.
+\vspace{0.2cm}
+
+Etwas pr\"aziser behauptet der zentrale
+Grenzwertsatz: F\"ur die normierte Variable
+\begin{equation}
+       Z = \frac{S-Nm}{\sigma_m \sqrt{N}}  
+\end{equation}
+($S$, $m$ und $\sigma_m$ wie oben) wird
+die Verteilungsfunktion im Grenzfall $N\rightarrow
+\infty$ zur Verteilungsfunktion der
+Standardnormalverteilung, also\index{Standardnormalverteilung}
+\begin{equation}
+    \lim_{N\rightarrow \infty} P(Z<z) = \Phi(z) 
+\end{equation}
+wobei 
+\begin{equation}
+     \Phi(z) =  \frac{1}{\sqrt{2\pi}} \int_{-\infty}^z
+       {\rm e}^{- \frac{1}{2} t^2} {\rm d} t 
+\end{equation}
+die Verteilungsfunktion der Standardnormalverteilung
+ist. (Die Standardnormalverteilung hat den
+Mittelwert $0$ und die Standardabweichung $1$). 
+
+Die herausragende Bedeutung der
+Normalverteilung (also der Gau\ss-Verteilung)
+ergibt sich unter anderem aus diesem Satz.
+Unabh\"angig von den Einzelverteilungen 
+irgendwelcher Zufallsvariaber wird die 
+Verteilung ihrer Summe zu einer Gau\ss-Verteilung.
+Die beiden getroffenen Annahmen -- die
+statistische Unabh\"angigkeit der Zufallsvariablen
+und die Beschr\"anktheit ihrer Varianzen -- sind
+dabei wesentlich. Viele thermodynamische
+Gr\"o\ss en sind die Summe mikroskopischer
+Gr\"o\ss en. In manchen F\"allen (beispielsweise
+an sogenannten Phasen\"uberg\"angen) 
+sind diese mikroskopischen Gr\"o\ss en
+derart korreliert, dass der zentrale Grenzwertsatz
+nicht mehr g\"ultig ist. Tats\"achlich treten in 
+diesen F\"allen oft Nicht-Gau\ss'sche 
+Verteilungsfunktionen auf. 
+
+Auch die Endlichkeit
+der Varianzen ist wichtig: Es gibt normierbare
+Wahrscheinlichkeitsdichten, beispielsweise\index{Lorentz-Verteilung}\index{Cauchy-Verteilung}
+die Lorentz- bzw.\ Cauchy-Verteilung 
+\begin{equation}
+  w(x) = \frac{1}{\pi} \frac{a}{x^2 + a^2} \, ,
+\end{equation}
+mit einem endlichen Mittelwert, deren
+Varianz aber unendlich ist. In diesen F\"allen
+sind auch sehr gro\ss e Schwankungen
+in den Realisationen der Zufallsvariablen
+nicht selten. Bei Zufallsvariablen mit solchen
+Verteilungen muss die Verteilung der Summe 
+dieser Zufallsvariablen nicht gegen
+eine Gau\ss-Funktion gehen. 
+
+Eine Variante des zentralen Grenzwertsatzes
+ist die Brown'sche Bewegung bzw.\ der
+Random Walk. Die Zufallsvariablen $X_i$ sind
+dabei Verteilungen f\"ur Einzelschritte, und
+die Wahrscheinlichkeitsdichte der Summe $S$ 
+beschreibt die Wahrscheinlichkeit, ein im
+Ursprung gestartetes Teilchen nach 
+$N$ Schritten an einem Punkt $x$ bzw.\
+in einem Abstand $r$ zu finden.\index{Wahrscheinlichkeit|)} 
+
+%\end{document}
