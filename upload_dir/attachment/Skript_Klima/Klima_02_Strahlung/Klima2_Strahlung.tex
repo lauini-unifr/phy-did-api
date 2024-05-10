@@ -1,36 +1,128 @@
-\documentclass[german,10pt]{book}      \input{preambel.tex}         \begin{document}  \setcounter{chapter}{0}
+\documentclass[german,10pt]{book}      \input{preambel}         \begin{document}  \setcounter{chapter}{1}
 
 
 \chapter{Physik des Klimas II\\Strahlungsgesetze}
 % Kap x
 \label{chap_Klima2}
 
-In die Klimamodelle der Erde gehen verschiedene Strahlungsgesetze ein: das Stefan-Boltzmann-Gesetz,
-das Wien'sche Verschiebungsgesetz, sowie das Planck'sche Strahlungsgesetz, aus dem sich die
+\info{Thomas Filk}{30.03.2024}%
+In die Klimamodelle der\index{Strahlungsgesetze|(} 
+Erde gehen verschiedene Strahlungsgesetze ein: das Stefan-Boltzmann-Gesetz,
+das Wien'sche Verschiebungsgesetz und das Planck'sche Strahlungsgesetz, aus dem sich die
 ersten beiden Gesetze ableiten lassen. Man findet jedoch unterschiedliche Versionen des
-Planck'schen Strahlungsgesetzes: Zum Einen wird das Gesetz gelegentlich als Funktion der
+Planck'schen Strahlungsgesetzes: Zum einen wird das Gesetz gelegentlich als Funktion der
 Strahlungsfrequenz oder auch als Funktion der Wellenl\"ange ausgedr\"uckt, was zu unterschiedlichen
-Vorfaktoren f\"uhrt. Zum Anderen sollte man aber auch zwischen dem Strahlungsgesetz in Form
+Vorfaktoren f\"uhrt. Zum anderen sollte man aber auch zwischen dem Strahlungsgesetz in Form
 einer Energiedichte in einem Hohlk\"orper und in Form einer Flussdichte, die von einem Schwarzen
 K\"orper abgestrahlt wird, unterscheiden.
 
-Der erste Abschnitt beschreibt diese Unterschiede. Im zweiten Abschnitt wird das Planck'sche
+Der erste Abschnitt gibt einen \"Uberblick \"uber diese Strahlungsgesetze. 
+Die weiteren Abschnitte enthalten Details zu ihrer Ableitung und k\"onnen \"ubersprungen werden. 
+Im zweiten Abschnitt wird das Planck'sche
 Strahlungsgesetz zun\"achst in Form einer Energiedichte f\"ur einen Hohlk\"orper abgeleitet und dann
-auf die anderen Formen verallgemeinert. Schlie\ss lich werden das Stefan-Boltzmann-Gesetz und
-das Wien'sche Verschiebungsgesetz abgeleitet.
+auf die anderen Formen verallgemeinert. Schlie\ss lich werden das Wien'sche Verschiebungsgesetz 
+und das Stefan-Boltzmann-Gesetz abgeleitet.
 
-\section{Verschiedene Strahlungsgesetze - \"Uberblick}
+\section{Verschiedene Strahlungsgesetze -- \"Uberblick}
+
+Das Planck'sche Strahlungsgesetz in der Form, wie es in Abschnitt \ref{sec_Planck} abgeleitet wird,
+lautet:\index{Strahlungsgesetze!Planck}\index{Planck'sches Gesetz}
+\begin{equation}
+\label{eq_PlanckFormel_a}
+      u(\nu,T) = \frac{8\pi}{c^3} \frac{h \nu^3}{\exp \left(
+    \frac{h \nu}{k_{\rm B} T} \right)  - 1}  \, .
+\end{equation}
+Hierbei ist $u(\nu,T)$ der Anteil der Energiedichte (also Energie/Volumen) in einem
+Hohlk\"orper bei der absoluten Temperatur $T$, der auf die elektromagnetische Strahlung in diesem
+Hohlk\"orper mit der Frequenz $\nu$ entf\"allt. $c$ ist die Lichtgeschwindigkeit im Vakuum, $h$
+die Planck'sche Konstante und $k_{\rm B}$ die Boltzmann-Konstante. Man spricht auch manchmal
+von spektraler, d.h.\ nach der Frequenz oder Wellenl\"ange aufgeteilter Energiedichte.
+Von den W\"anden des
+Hohlk\"orpers wird angenommen, dass sie alle Frequenzen elektromagnetischer Strahlung
+absorbieren bzw.\ emittieren k\"onnen und dass sie sich im thermischen Gleichgewicht mit der Strahlung im
+Inneren befinden. 
+
+Bei der spektralen Energiedichte sollte man betonen, dass es sich auch bez\"uglich der Frequenz
+um eine Dichte bzw.\ Verteilung (Distribution) handelt, d.h., erst das Integral \"uber ein Frequenzintervall 
+liefert eine interpretierbare Gr\"o\ss e. Insbesondere ist $\int_0^\nu u(\nu',T)\,{\rm d}\nu'$ der Anteil der
+Energiedichte, der auf die Frequenzen zwischen $0$ und $\nu$ entf\"allt. 
+
+Oft findet man diese Formel auch als Funktion der Wellenl\"ange $\lambda= c/\nu$. 
+Hierbei ist zu beachten, dass man in Gl.\ \ref{eq_PlanckFormel_a} nicht nur $\nu$ entsprechend
+durch $\lambda$ ersetzen muss, sondern es muss auch, da es sich bei $u(\nu,T)$ um eine Dichte handelt, 
+das Integrationsma\ss\ ${\rm d}\nu$ transformiert werden:
+\begin{equation}
+            {\rm d}\nu = \frac{{\rm d}\nu}{{\rm d}\lambda} {\rm d}\lambda = - \frac{c}{\lambda^2} {\rm d}\lambda \, .
+\end{equation}
+Insgesamt erhalten wir somit
+\begin{equation}
+     \tilde{u}(\lambda, T) =  \frac{8\pi}{\lambda^5} \frac{h c}{\exp \left(
+    \frac{h c}{\lambda k_{\rm B} T} \right)  - 1}  \, .
+\end{equation}
+
+Bei $u(\nu,T)$ und $\tilde{u}(\lambda,T)$ handelt es sich um spektrale Energiedichten, die
+man beispielsweise mit einer Sonde im Inneren eines Hohlk\"orpers messen kann. In vielen
+F\"allen ist man aber an der Abstrahlung eines Schwarzk\"orpers interessiert. Dazu stellt
+man sich vor, die W\"ande des Hohlk\"orpers w\"urden pl\"otzlich weggenommen. Dann breitet
+sich f\"ur einen kurzen Moment
+die Energie mit Lichtgeschwindigkeit in alle Richtungen, d.h.\ einen vollen Raumwinkel
+$4\pi$ aus. Die abgestrahlte Energie pro Fl\"ache, Zeit und Raumwinkel, d.h.\ die spektrale
+Strahldichte $L(\nu,T)$, erh\"alt man somit, indem 
+man Gl.\ \ref{eq_PlanckFormel_a} mit $c/4\pi$ multipliziert:\index{Planck'sches Strahlungsgesetz}
+\begin{equation}
+\label{eq_PlanckFormel_b}
+      L(\nu,T) = \frac{2}{c^2} \frac{h \nu^3}{\exp \left(
+    \frac{h \nu}{k_{\rm B} T} \right)  - 1}  \, .
+\end{equation}
+
+Das Wien'sche Verschiebungsgesetz\index{Wien'sches Verschiebungsgesetz} 
+macht eine Aussage \"uber die Frequenz $\nu_{\rm max}(T)$
+bzw.\ Wellenl\"ange $\lambda_{\rm max}(T)$, bei der die Intensit\"at der Energiedichte bzw.\
+Strahldichte am gr\"o\ss ten ist. Die Frequenz nimmt dabei linear mit der Temperatur $T$ zu und
+die Wellenl\"ange nimmt invers mit der Temperatur ab:
+\begin{equation}
+\label{eq_K_Wien}
+          \nu_{\rm max}(T) = 5,8789 \cdot 10^{10} \cdot T \, \frac{1}{\rm Ks}  \hspace{1cm} {\rm und} \hspace{1cm}
+          \lambda_{\rm max}(T) = \frac{2,8978 \cdot 10^{-3}}{T} \cdot {\rm Km} \, .      
+\end{equation}
+F\"ur eine effektive Oberfl\"achentemperatur von 5\,772\,K, wie sie f\"ur die Sonne angegeben wird \cite{NASA_sun}, 
+folgt:
+\begin{equation}
+             \nu_{\rm max} = 3,4 \cdot 10^{14} \, {\rm Hz}   \hspace{1cm} {\rm und} \hspace{1cm}
+             \lambda_{\rm max} = 500 \,{\rm nm} \, .
+\end{equation}
+Dies entspricht sichtbarem Licht im gr\"un-blauen Bereich. 
+F\"ur die Erde mit einer Durchschnittstemperatur von 297\,K ergibt sich:
+\begin{equation}
+             \nu_{\rm max} = 17,5 \cdot 10^{12} \, {\rm Hz}   \hspace{1cm} {\rm und} \hspace{1cm}
+             \lambda_{\rm max} = 9,72 \,{\rm \mu m} \, .
+\end{equation}
+Diese Strahlung liegt im infraroten Bereich.
+
+Schlie\ss lich\index{Strahlungsgesetze!Stefan-Boltzmann-Gesetz}\index{Stefan-Boltzmann-Gesetz} 
+ben\"otigen wir in der Klimaphysik noch das Stefan-Boltzmann-Gesetz. Es gibt die
+Gesamtintensit\"at der Strahlung an, also das Integral der spektralen Strahldichte \"uber alle
+Frequenzen und Richtungen, multipliziert mit der abstrahlenden Fl\"ache $A$. Man erh\"alt dann
+\begin{equation}
+                   I(T) =  A  \int L(\nu,T)\cos \theta \, {\rm d}\nu \, {\rm d}\Omega 
+                   = \sigma A  T^4  \hspace{1cm} {\rm mit} \hspace{0.7cm}
+                   \sigma = 5,67 \cdot 10^{-8} \frac{\rm W}{\rm m^2 K^4}  \, .
+\end{equation}
+Der Faktor $\cos \theta$ gibt die Strahlintensit\"at in eine Richtung $\theta$ zur Normalen
+an und wird in Abschnitt \ref{sec_K_Abstr} n\"aher begr\"undet. 
+Die Konstante $\sigma$ bezeichnet man als Stefan-Boltzmann-Konstante.\index{Stefan-Boltzmann-Konstante} 
+
+In den folgenden Abschnitten werden diese Formeln hergeleitet. 
 
 \section{Herleitung der Planck'schen Formel}
 \label{sec_Planck}
 
-Bestimmt werden soll die spektrale
-Verteilungsfunktion 
+Bestimmt werden soll die spektrale Verteilungsfunktion 
 \begin{equation}
-     u(T,\nu) = \frac{1}{V} 
-         \frac{{\rm d} E(T,\nu)}{{\rm d}  \nu} \, ,
+     u(\nu,T) = \frac{1}{V} 
+         \frac{{\rm d} E(\nu,T)}{{\rm d}  \nu} \, ,
 \end{equation}     
-wobei $E(T,\nu)$ die Gesamtenergie der 
+wobei $E(\nu,T)$ die Gesamtenergie der 
 elektromagnetischen Strahlung des Systems
 ist, die bei einer absoluten Temperatur $T$ auf 
 Frequenzen kleiner oder gleich
@@ -39,64 +131,56 @@ Systems, man ist also an einer Energiedichte
 interessiert. Man kann die Gleichung auch in folgender Form 
 schreiben, die eine andere Sichtweise erlaubt:
 \begin{equation}
-     \frac{1}{V} {\rm d} E(T,\nu) = u(T,\nu)  {\rm d}  \nu   
+     \frac{1}{V} {\rm d} E(\nu,T) = u(\nu,T)  {\rm d}  \nu   
 \end{equation}     
-${\rm d} E(T,\nu)$ ist der Anteil der Energie, der bei  einer Temperatur $T$
+${\rm d} E(\nu,T)$ ist der Anteil der Energie, der bei  einer Temperatur $T$
 von den Moden im Bereich $[\nu, \nu + {\rm d} \nu]$ herr\"uhrt.
 
-Die Verteilungsfunktion $u(T,\nu)$ setzt sich aus
-zwei Anteilen zusammen:
-\begin{itemize}
-\item[-]
-der spektralen Dichte $N(\nu)$ der thermodynamischen Freiheitsgrade
-bei $\nu$ bzw.\ der Anzahl $N(\nu){\rm d} \nu$
-der thermodynamischen
-Freiheitsgrade in einem Frequenzbereich zwischen $\nu$
-und $\nu + {\rm d}  \nu$. Etwas genauer definiert man diese Gr\"o\ss e, indem man
-zun\"achst die kumulative Spektralverteilung
+Die Verteilungsfunktion $u(\nu,T)$ setzt sich aus
+zwei Anteilen zusammen: (1) der spektralen Dichte $n(\nu)$ der thermodynamischen Freiheitsgrade
+mit einer Frequenz $\nu$ und (2) der mittleren Energie $\langle \epsilon (\nu, T)\rangle$, die 
+ein gegebener Freiheitsgrad mit der Frequenz $\nu$ bei
+einer Temperatur $T$ hat. Das Ergebnis ist dann
 \begin{equation}
-      g(\nu) = \sum_{\nu_i\leq \nu} 1
+        u(\nu,T) = \frac{n(\nu)}{V} \langle \epsilon (\nu, T)\rangle \, , 
 \end{equation}
-betrachtet. $g(\nu)$ ist also gleich der Anzahl der Moden, deren Frequenz $\nu_i$ kleiner oder
+also das Produkt aus der Anzahl der Zust\"ande zu einer gegebenen
+Frequenz $\nu$ und der mittleren Energie eines Zustands mit
+dieser Frequenz. 
+
+\subsection{Die spektrale Dichte $n(\nu)$} 
+
+Zur Bestimmung der spektralen Dichte $n(\nu)$ der Eigenzust\"ande zu
+einer Frequenz $\nu$ definiert man zun\"achst die kumulative Spektralverteilung
+\begin{equation}
+      N(\nu) = \sum_{\nu_i\leq \nu} 1  \, .
+\end{equation}
+$N(\nu)$ ist also gleich der Anzahl der Moden, deren Frequenz $\nu_i$ kleiner oder
 gleich $\nu$ ist. Die spektrale Dichte ist dann definiert als die Ableitung dieser Funktion:
 \begin{equation}
-      N(\nu) = \frac{{\rm d} g(\nu)}{{\rm d} \nu}  \, .
+      n(\nu) = \frac{{\rm d} N(\nu)}{{\rm d} \nu}  \, .
 \end{equation}
-Da es sich bei $g(\nu)$ um eine Stufenfunktion handelt, ist diese Ableitung streng genommen
-im distributiven Sinne zu verstehen. Diese Dichte ist unabh\"angig von der Temperatur und ergibt sich aus 
+Da es sich bei $N(\nu)$ streng genommen um eine Stufenfunktion handelt, ist diese Ableitung
+eigentlich im distributiven Sinne zu verstehen, doch da $N(\nu)$ in f\"uhrender Ordnung glatt ist (also
+keine Stufen hat), k\"onnen wir den distributiven Charakter vernachl\"assigen. 
+Diese Dichte ist unabh\"angig von der Temperatur und ergibt sich aus 
 einem einfachen Abz\"ahlen der m\"oglichen Schwingungsmoden:
 \begin{equation}
 \label{eq_PlanckDichte}
-      \frac{N(\nu)}{V} = \frac{4 \pi \nu^2}{c^3} 
+      \frac{n(\nu)}{V} = \frac{8 \pi \nu^2}{c^3}  \, .
 \end{equation} 
-Diese Beziehung war schon zu Plancks Zeiten bekannt
-und unstrittig.
 
-Zur Herleitung dieser Formel: Zun\"achst l\"osen wir ein einfaches mathematisches
-Problem: Wie viele nat\"urliche Zahlentripel $(n_1,n_2,n_3)$ gibt es, sodass 
-$\sqrt{n_1^2+n_2^2+n_3^2}\leq R$? Wir sind dabei nicht an der genauen Anzahl $N(R)$ dieser
-Zahlentripel interessiert, sondern nur an der f\"uhrenden Ordnung f\"ur gro\ss e Werte von $R$. 
-Wir denken uns das Tripel $(n_1,n_2,n_3)$ als Koordinaten von Punkten im
-$\mathbb{R}^3$ und stellen zun\"achst die Frage: Wie viele Punkte im $\mathbb{R}^3$
-gibt es, die ganzzahlige Koordinaten haben und innerhalb (oder auf dem Rand) einer
-Kugel vom Radius $R$ liegen. Wir k\"onnen und um jeden dieser Punkte einen W\"urfel
-der Kantenl\"ange 1 - und damit vom Volumen 1 - legen, und diese W\"urfel
-\"uberdecken den Raum vollst\"andig ohne zu \"uberlappen. Die Kugel vom Radius $R$
-hat ein Volumen von $V=\frac{4\pi}{3}R^3$, und damit ist dies n\"aherungsweise auch gleich der
-Anzahl an Punkten mit ganzzahligen Koordinaten, die innerhalb der Kugel liegen.
-Die Korrekturen beziehen sich auf Fl\"achen und sind somit von der Ordnung $O(1/R)$
-relativ zum f\"uhrenden Term. 
+Zur Herleitung dieser Formel bestimmen wir zun\"achst $N(\nu)$. Die Frequenz $\nu$ h\"angt
+mit den Wellenzahlen \"uber $\nu = c \sqrt{k_1^2+k_2^2+k_3^3}/2\pi$ zusammen. Wir m\"ussen
+also abz\"ahlen, wie viele Moden $(k_1,k_2,k_3)$ es gibt, sodass 
+\begin{equation}
+\label{eq_K_3d}
+          \sqrt{k_1^2+k_2^2+k_3^3} \leq 2 \pi \nu/c
+\end{equation}
+gilt. 
 
-Da wir nur an nat\"urlichen Zahlen interessiert sind, d\"urfen wir nur einen der acht
-3-dim.\ Quadranten betrachten (f\"ur den die Vorzeichen aller drei Koordinaten nicht
-negativ sind). Somit ist die gesuchte f\"uhrende Ordnung $N(R)=\frac{\pi}{6}R^3$.
-
-In einem n\"achsten Schritt bestimmen wir die Anzahl der Zust\"ande $N(E)$, f\"ur die die
-Energie eines einzelnen Photons in einem Kasten kleiner als ein vorgegebener Wert $E$ ist. 
-
-
-Wir verwenden nun das obige Ergebnis und bestimmen die Anzahl der elektromagnetischen
-Zust\"ande mit einer Energie $\epsilon \leq E$ in einem kubischen Kasten der Kantenl\"ange $L$
+Zur L\"osung dieses Problems betrachten wir einen
+kubischen Kasten der Kantenl\"ange $L$
 und damit dem Volumen $V=L^3$. Die m\"oglichen Wellenl\"angen in jede der drei Richtungen 
 sind durch $\lambda= 2 L/n$ gegeben: In jede Richtung
 muss ein Vielfaches einer halben Wellenl\"ange passen.
@@ -109,7 +193,7 @@ Eine Kugel vom Radius $k=|\vec{k}|$
 hat ein Volumen von $\frac{4\pi}{3} k^3$
 und enth\"alt somit 
 \begin{equation}
-   \frac{4\pi k^3}{3 |\Delta k|^3} =  V\frac{4}{3\pi^2}k^3 
+       V_{\rm Kugel}/|\Delta k|^3 = \frac{4\pi k^3}{3 |\Delta k|^3} =  V\frac{4}{3\pi^2}k^3 
 \end{equation}    
 Zust\"ande.
 Da aber nur der Teil der Kugelschale
@@ -118,31 +202,26 @@ befindet (die $n_i$ sind nie negativ), m\"ussen
 wir noch durch 8 dividieren; andererseits kann
 jeder Zustand wegen der beiden Polarisationsm\"oglichkeiten
 zweimal auftreten, sodass die Anzahl der Zust\"ande 
-durch $\frac{V}{3\pi^2}k^3$ gegeben ist.
+durch $\tilde{g}(k)  = \frac{V}{3\pi^2}k^3$ gegeben ist.
 Mit $|\vec{k}|= \frac{2 \pi}{\lambda}=\frac{2\pi \nu}{c}$
-ergeben sich schlie\ss lich
+erhalten wir schlie\ss lich
 \begin{equation}
         N(\nu)  = V
-         \frac{4 \pi \nu^2}{c^3}{\rm d}  \nu
+         \frac{8 \pi \nu^3}{3c^3}  \, .
 \end{equation}
-Zust\"ande in diesem $\nu$-Bereich.
-
-\item[-]
-der mittleren Energie $\langle \epsilon (\nu, T)\rangle$, die 
-ein gegebener Freiheitsgrad mit der Frequenz $\nu$ bei
-einer Temperatur $T$ hat. Das Ergebnis ist dann
+F\"ur die gesuchte Dichte ergibt sich damit:
 \begin{equation}
-        u(T,\nu) = \frac{N(\nu)}{V} \langle \epsilon (\nu, T)\rangle \, , 
+        n(\nu)  =  \frac{{\rm d} N(\nu)}{{\rm d}\nu} = V
+         \frac{8 \pi \nu^2}{c^3}  \, .
 \end{equation}
-also das Produkt aus der Anzahl der Zust\"ande zu einer gegebenen
-Frequenz $\nu$ und der mittleren Energie eines Zustands mit
-dieser Frequenz. 
-\end{itemize}
 
-F\"ur eine quantenmechanische Herleitung
-der gesuchten Strahlungsdichte \"andert sich
-an der Abz\"ahlung der m\"oglichen Moden
-nichts. Jede Mode $\nu$ kann mit $n$
+\subsection{Die mittlere Energie einer Frequenz $\nu$ bei einer
+Temperatur $T$}
+
+In diesem Abschnitt bestimmen wir die
+mittlere Energie $\langle \epsilon (\nu, T)\rangle$, die 
+ein gegebener Schwingungsmod mit der Frequenz $\nu$ bei
+einer Temperatur $T$ hat. Jede Mode zu $\nu$ kann mit $n$
 Photonen mit einer Gesamtenergie von $E_n(\nu)=n h \nu$
 besetzt sein, und die Wahrscheinlichkeit einer
 solchen Besetzung
@@ -159,9 +238,31 @@ Mode erhalten wir somit:
      Z= \sum_{n=0}^\infty \exp\left( - \frac{n h \nu}{k_{\rm B}T}
      \right) 
 \end{equation}
-Bei den auftretenden Summen handelt es sich um
-geometrische Reihen und deren Ableitungen,
-die sich geschlossen ausf\"uhren lassen:
+Hier bietet sich ein kleiner Trick an: Mit
+\begin{equation}
+     Z= \sum_{n=0}^\infty {\rm e}^{ - \beta n h \nu } \hspace{1.5cm} \beta = \frac{1}{k_{\rm B}T}
+\end{equation}
+folgt
+\begin{equation}
+      \langle \epsilon \rangle = \frac{1}{Z} \sum_{n=0}^\infty (nh\nu)  {\rm e}^{ - \beta n h \nu } =
+                - \frac{\partial}{\partial \beta} \ln Z \, .
+\end{equation}
+$Z$ ist aber eine geometrische Reihe, f\"ur die gilt:
+\begin{equation}
+              Z= \sum_{n=0}^\infty {\rm e}^{ - \beta n h \nu } =  \frac{1}{1-{\rm e}^{- \beta h\nu}}
+                = \frac{{\rm e}^{ \beta h\nu}}{{\rm e}^{ \beta h\nu}-1}  \, .
+\end{equation}
+Damit folgt:
+\begin{equation}
+             \langle \epsilon \rangle  = - \frac{\partial}{\partial \beta} \ln Z =
+             - \frac{\partial}{\partial \beta} \Big( \beta h \nu - \ln \big( {\rm e}^{ \beta h\nu}-1 \big) \Big) 
+             = -  h\nu + \frac{h\nu ~{\rm e}^{\beta h \nu} }{\big( {\rm e}^{ \beta h\nu}-1 \big) } 
+\end{equation}
+oder
+\begin{equation}
+             \langle \epsilon \rangle  = \frac{h\nu}{\big( {\rm e}^{ \beta h\nu}-1 \big) } 
+\end{equation}
+Die mittlere Energie pro Frequenz $\nu$ in einem Gas von Photonen ist somit
 \begin{equation}
    \langle \epsilon(\nu,T)\rangle = \frac{ h \nu}{\exp \left(
     \frac{ h \nu}{k_{\rm B} T} \right)  - 1} 
@@ -170,65 +271,237 @@ Als Ergebnis dieser \"Uberlegungen erhalten wir
 die Planck'sche Formel:\index{Planck'sche Strahlungsformel}
 \begin{equation}
 \label{eq_PlanckFormel}
-      u(\nu,T) = \frac{4\pi}{c^3} \frac{h \nu^3}{\exp \left(
-    \frac{\hbar \nu}{k_{\rm B} T} \right)  - 1}
+      u(\nu,T) = \frac{8\pi}{c^3} \frac{h \nu^3}{\exp \left(
+    \frac{h \nu}{k_{\rm B} T} \right)  - 1}
 \end{equation}
 
-Oft findet man die Strahlungsformeln als
-Funktion der Frequenz $\nu$ oder der Wellenl\"ange $\lambda$. Bei der Umrechnung
-muss man jedoch darauf achten, dass es sich bei $u(\nu,T)$ um
-eine {\em Dichte} handelt, d.h., auch das Integrationsma\ss\
-${\rm d} \nu$ muss transformiert werden.
+\section{Vom Hohlk\"orper zur Abstrahlung}
+\label{sec_K_Abstr}
 
-\subsection{Anmerkungen}
+Es gibt sehr viele Formen von Strahlungsgesetzen, die sich oftmals nur
+in Details, Faktoren $\pi$ oder $2\pi$, oder $c$ etc.\ unterscheiden. Wir beginnen
+mit einer Einteilung in verschiedene Gruppen.
 
-\begin{anmerkungen}
-\item
-\label{Anm-1}%
-Der Grund f\"ur den Faktor 2 zwischen der Schwankung im Abstand und
-der Schwankung in der Intensit\"at der Sonneneinstrahlung liegt in dem $1/r^2$-Gesetz
-der Intensit\"at als Funktion des Abstands:
+Aus der Mechanik ist die Energie bekannt. Ihr Einheit ist das Joule (J). 
+Betrachtet man Prozesse, bei denen
+Energie umgewandelt wird, interessiert meist die Leistung\index{Leistung}
 \begin{equation}
-        \frac{1}{(r\pm \Delta r)^2} \approx \frac{1}{r^2} \mp 2 \frac{\Delta r}{r} \, .
+            P =  \frac{\Delta E}{\Delta t} \, .
+\end{equation}
+Hierbei ist $\Delta E$ die Menge an Energie, die in einer bestimmten Zeitdauer $\Delta t$
+umgewandelt, abgestrahlt oder 
+transportiert wurde. Dabei kann es sich beispielsweise um die Umwandlung 
+von elektrischer Energie in mechanische Energie bei einer Maschine oder um die Umwandlung
+von elektrischer Energie in W\"arme bzw.\ Strahlung bei einer Gl\"uhbirne handeln. 
+Beispiele f\"ur einen Energietransport sind die \"Ubertragung von Energie von einem warmen
+zu einem kalten Gegenstand in Form von W\"arme oder die Strahlung von der Sonne.
+Die Einheit der Leistung ist das Watt (W=J/s) bzw.\ Joule
+durch Sekunde. 
+
+Von beiden Gr\"o\ss en kann man auch (r\"aumliche) Dichten betrachten: die Energiedichte
+(Energie pro Volumen) oder auch eine Leistungsdichte.
+Oft hat man es dabei auch mit einem Energiefluss zu tun, d.h.\ der Menge an Energie, die
+pro Zeiteinheit durch eine vorgegebene Fl\"ache tritt. Ihre Einheit ist Energie pro Zeiteinheit
+pro Fl\"acheneinheit oder auch Leistung pro Fl\"acheneinheit. Eine solche Gr\"o\ss e bezeichnet
+man auch als Intensit\"at.\index{Intensit\"aat} 
+Eine Intensit\"at erh\"alt man ebenfalls, wenn man eine Energiedichte
+mit einer Geschwindigkeit multipliziert. Es handelt sich in diesem Fall also um einen
+Energiedichtestrom. 
+
+Bei elektromagnetischer Strahlung kommt zu den genannten Begriffen noch die Abh\"angigkeit
+der Energie von der Frequenz bzw.\ der Wellenl\"ange hinzu. Man verwendet in diesem Fall
+das Adjektiv \glqq spektral\grqq. Eine spektrale Energiedichte\index{spektrale Verteilung} 
+ist eine Energiedichte, die einer
+bestimmten Frequenz (bzw.\ einem kleinen Frequenzintervall $[\nu, \nu + {\rm d}\nu]$) oder auch
+einer bestimmten Wellenl\"ange (bzw.\ einem kleinen Wellenl\"angenintervall 
+$[\lambda,\lambda + {\rm d}\lambda]$) zugeordnet werden kann. 
+
+Und schlie\ss lich kann man bei der Strahlung noch eine Richtungsabh\"angigkeit ber\"ucksichtigen.
+Die meisten Fl\"achen strahlen selbst bei einer diffusen Strahlung in bestimmte Richtungen
+intensiver ab als in andere, insbesondere gibt es auch bei diffuser Strahlung (sogenannter
+Lambert-Strahlung)\index{Lambert-Strahlung} 
+eine Abh\"angigkeit vom Winkel $\theta$ relativ zur Fl\"achennormalen, die
+durch $\cos \theta$ gegeben ist und die Projektion der abstrahlenden Fl\"ache auf die 
+Richtung der Strahlung ber\"ucksichtigt. 
+
+Bei dem Strahlungsgesetz Gl.\ \ref{eq_PlanckFormel_b} handelt es sich um eine
+solche spektrale Strahlungsdichte, bei der ein Fl\"achenelement ${\rm d}A$ in einer
+Richtung $\theta$ relativ zu Fl\"achennormalen eine Intensit\"at proportional zu 
+${\rm d}A \cos \theta$ abstrahlt. Dies wird beim Stefan-Boltzmann-Gesetz relevant.
+
+\section{Das Wien'sche Verschiebungsgesetz}
+
+Ausgehend von der Planck'schen Strahlungsformel leiten wir nun das
+Wien'sche Verschiebungsgesetz ab.\index{Strahlungsgesetze!Wien}\index{Wien'sches Verschiebungsgesetz} 
+Dazu bestimmen wir das Maximum der
+Verteilung $u(\nu,T)$ bez\"uglich der Frequenz:
+\begin{equation}
+     \frac{{\rm d} u(\nu,T)}{{\rm d}\nu} = \frac{8\pi}{c^3} \frac{3 h \nu^2}{\exp \left(
+    \frac{h \nu}{k_{\rm B} T} \right)  - 1} - 
+    \frac{8\pi}{c^3} \frac{h \nu^3}{\left( \exp \left(
+    \frac{h \nu}{k_{\rm B} T} \right)  - 1 \right)^2}\exp \left(
+    \frac{h \nu}{k_{\rm B} T} \right) \frac{h}{k_{\rm B}T} = 0 \, .
+\end{equation}
+Daraus erhalten wir:
+\begin{equation}
+       3 \left( \exp \left(
+    \frac{h \nu}{k_{\rm B} T} \right)  - 1 \right) =  \frac{h\nu}{k_{\rm B}T} \exp \left(
+    \frac{h \nu}{k_{\rm B} T} \right)  \, .
+\end{equation}
+Zu l\"osen ist somit die Gleichung:
+\begin{equation}
+           (3-x)  {\rm e}^x =  3 
+\end{equation}
+mit
+\begin{equation}
+            x =  \frac{h\nu}{k_{\rm B}T} \, .
+\end{equation}
+Eine L\"osung ist offensichtlich $x=0$, eine zweite L\"osung muss man nummerisch
+finden. Sie liegt bei $x_3=2,82143937$.  F\"ur die
+Frequenz folgt damit:
+\begin{equation}
+         \nu_{\rm max} = \frac{x_3 k_{\rm B}}{h} T 
+         = \frac{x_3 \cdot  1,38065 \cdot 10^{-23}}{6,62607 \cdot 10^{-34}} \cdot T 
+              \, \frac{\rm J}{\rm K \cdot J s } \approx 5,87893 \cdot 10^{10} \cdot T  \, \frac{1}{\rm K s }
+\end{equation} 
+Dies ist das Wien'sche Verschiebungsgesetz f\"ur die Frequenz und entspricht
+Gl.\ \ref{eq_K_Wien} (links).
+
+Wir wiederholen nun die gleiche Rechnung f\"ur $\tilde{u}(\lambda,T)$. 
+Wegen des zus\"atzlichen Faktors vom Integrationsma\ss\ erh\"alt man die
+L\"osung nicht einfach aus der L\"osung von $\nu$. Wir bilden die Ableitung
+von $\tilde{u}(\lambda,T)$ nach $\lambda$ und erhalten:
+\begin{equation}
+     \frac{{\rm d} \tilde{u}(\lambda,T)}{{\rm d}\lambda} = - 5 \frac{8\pi}{\lambda^6} \frac{h c}{\exp \left(
+    \frac{h c}{\lambda k_{\rm B} T} \right)  - 1} +  
+    \frac{8\pi}{\lambda^5} \frac{h c }{\left( \exp \left(
+    \frac{hc }{\lambda k_{\rm B} T} \right)  - 1 \right)^2}\exp \left(
+    \frac{h c}{\lambda k_{\rm B} T} \right) \frac{hc}{\lambda^2 k_{\rm B}T} = 0 \, .
+\end{equation}
+Dies f\"uhrt auf:
+\begin{equation}
+       5 \left( \exp \left(
+    \frac{h}{\lambda k_{\rm B} T} \right)  - 1 \right) =  \frac{hc}{\lambda k_{\rm B}T} \exp \left(
+    \frac{h }{\lambda k_{\rm B} T} \right)  \, ,
+\end{equation}
+und somit auf die Gleichung
+\begin{equation}
+           (5-x)  {\rm e}^x =  5 
+\end{equation}
+mit
+\begin{equation}
+            x =  \frac{hc}{\lambda k_{\rm B}T} \, .
+\end{equation}
+Neben der L\"osung $x=0$ gibt es nun die L\"osung $x_5=4,96511423$. F\"ur die
+Wellenl\"ange zur maximalen Intensit\"at folgt damit Gl.\ \ref{eq_K_Wien} (rechts):
+\begin{equation}
+         \lambda_{\rm max} = \frac{hc}{x_5 k_{\rm B}} \frac{1}{T} = 
+           \frac{ 6,62607 \cdot 10^{-34} \cdot 2,99792458 \cdot 10^8}{x_5 \cdot 1,38065 \cdot 10^{-23}} \cdot \frac{1}{T}
+              \, \frac{\rm J s m}{\rm Js/K } \approx 2,89777 \cdot 10^{-3} \cdot \frac{1}{T}  ~ {\rm Km} 
+\end{equation} 
+
+\section{Das Stefan-Boltzmann-Gesetz}
+
+Das\index{Stefan-Boltzmann-Gesetz}\index{Strahlungsgesetze!Stefan-Boltzmann} 
+Stefan-Boltzmann-Gesetz gibt uns eine Beziehung zwischen der Temperatur eines
+Strahlers und der Gesamtenergie bzw.\ Gesamtintensit\"at (also Energie pro
+Zeiteinheit und Fl\"ache) der abgestrahlten Leistung. Dazu betrachten wir ein Fl\"achenelement
+${\rm d}A$ auf der Oberfl\"ache des Strahlers und integrieren \"uber die Hemisph\"are, in 
+welche dieses Fl\"achenelement abstrahlt. Au\ss erdem 
+integrieren wir Gl.\ \ref{eq_PlanckFormel_b}
+\"uber die Frequenz. Damit ergibt sich f\"ur die Intensit\"at der Strahlung, die von ${\rm d}A$
+abgestrahlt wird:
+\begin{equation}
+     I = \int_0^\infty  L(\nu,T)\, {\rm d} \nu \, \cos \theta\, {\rm d}A\, {\rm d}\Omega  
+     = \frac{2}{c^2} {\rm d}A \int_0^\infty \frac{h \nu^3}{\exp \left(
+    \frac{h \nu}{k_{\rm B} T} \right)  - 1} {\rm d}\nu \, \int_0^{\frac{\pi}{2}} \cos \theta \sin \theta \, {\rm d} \theta \int_0^{2\pi}{\rm d}\varphi  \, .
+\end{equation}
+Die Integration \"uber $\theta$ erfolgt nur \"uber eine Halbkugel, also nur von $\theta=0$ (Normalenrichtung zur
+Fl\"ache ${\rm d}A$) bis $\pi/2$. F\"ur die Winkelintegration ergibt sich:
+\begin{equation}
+   \int_0^{\frac{\pi}{2}} \cos \theta \sin \theta \, {\rm d} \theta \int_0^{2\pi}{\rm d}\varphi = 
+   \int_0^1 \cos \theta\, {\rm d}(\cos \theta) \, \int_0^{2\pi} {\rm d}\varphi = \frac{1}{2} \cdot 2 \pi = \pi \, .
 \end{equation}
 
-\item
-\label{Anm-2}
-Das Stefan-Boltzmann-Gesetz gibt die Intensit\"at $L$ einer Schwarzk\"orper-Strahlung
-als Funktion der absoluten Temperatur $T$ des K\"orpers an. 
-Intensit\"at ist dabei wieder Energie pro Zeit und Fl\"ache, d.h.,
-es handelt sich um die in einer Zeiteinheit (Sekunde) von einer Fl\"ache (Quadratmeter)
-abgestrahlte Energie eines idealen schwarzen K\"orpers, integriert \"uber alle Frequenzen bzw.\
-Wellenl\"angen. Das Gesetz lautet:
+Wir f\"uhren eine neue Integrationsvariable $x=\frac{h \nu}{k_{\rm B}T}$ ein und erhalten
+mit  ${\rm d}x = \frac{h}{k_{\rm B}T} {\rm d}\nu$ die Beziehung:
 \begin{equation}
-        L = \sigma T^4  \hspace{1.5cm} \sigma \equiv \mbox{Stefan-Boltzmann-Konstante.}
+     I =  \frac{2 \pi (k_{\rm B}T)^3}{h^2 c^2}{\rm d}A \int_0^\infty \frac{h^3 \nu^3}{(k_{\rm B}T)^3 \exp \left(
+    \frac{h \nu}{k_{\rm B} T} \right)  - 1} \frac{k_{\rm B}T}{h}\, {\rm d} x =
+      \frac{2\pi k_{\rm B}^4}{h^3c^2}  T^4\, {\rm d}A   \int_0^\infty  \frac{x^3}{{\rm e}^x - 1}\,{\rm d}x  \, .
 \end{equation}
-Die Stefan-Boltzmann-Konstante l\"asst sich exakt aus dem Planck'schen Strahlungsgesetz
-bestimmen:
+Das Integral ist bekannt und hat den Wert:
 \begin{equation}
-        \sigma = \frac{2 \pi^5 k_{\rm B}^4}{15 h^3 c^2} = 5,670\,374\,42... \cdot 10^{-8} \frac{\rm W}{\rm m^2 K^4} \, .
+                     \int_0^\infty  \frac{x^3}{{\rm e}^x - 1}\,{\rm d}x  =  \frac{\pi^4}{15}  \, .
 \end{equation}
-\end{anmerkungen}
+Damit folgt f\"ur die Intensit\"at, die von einer Fl\"ache $A$ eines schwarzen Strahlers
+abgestrahlt wird:
+\begin{equation}
+     I =  \sigma \, A \, T^4 \hspace{1cm} {\rm mit} \hspace{1cm}
+      \sigma =    \frac{2k_{\rm B}^4 \pi^4}{15 h^3c^2}   \, .
+\end{equation}
+Die Konstante $\sigma$, die sogenannte Stefan-Boltzmann-Konstante,\index{Stefan-Boltzmann-Konstante}
+hat in den neuen SI-Einheiten, in denen die Planck'sche Konstante, die
+Boltzmann-Konstante und die Lichtgeschwindigkeit fest definierte Werte haben, den Wert
+$\sigma = 5,670\,374\,419 ... \cdot 10^{-8}\, {\rm W/(m^2 K^4)}$. 
 
+F\"ur die Abstrahlung der Sonne ist die abstrahlende Fl\"ache $A= 4\pi R_\odot^2$ (mit dem
+Sonnenradius $R_\odot=695\,700\,{\rm km} \approx 7\cdot 10^8\,{\rm m}$ \cite{NASA_sun}). Andererseits
+kennen wir die Intensit\"at der Sonnenstrahlung bei der Erde -- dies ist die\index{Solarkonstante}
+Solarkonstante $S=1361\,{\rm J\cdot s^{-1}\cdot m^{-2}}$. Aus dem Abstand Sonne-Erde
+$R=1,496\cdot 10^{11}\, {\rm m}$ k\"onnen wir somit die effektive Oberfl\"achentemperatur
+der Sonne bestimmen:\index{effektive Oberfl\"achentemperatur!Sonne}\index{Sonne!effektive Oberfl\"achentemperatur} 
+\begin{equation}
+           T^4 = \frac{4\pi R^2}{4 \pi R_\odot^2} \frac{S}{\sigma} 
+           = \frac{R^2}{R_\odot^2} \frac{S}{\sigma} 
+           = \frac{1,496^2 \cdot 10^{22}}{6,957^2 \cdot 10^{16}} \frac{1361}{5,67 \cdot 10^{-8}}
+           \frac{\rm J\cdot s\cdot m^2 \cdot K^4}{\rm m^2\cdot s \cdot J}     
+           \approx 1110 \cdot 10^{12}\, {\rm K}^4     
+\end{equation}
+oder
+\begin{equation}
+            T =  5772\,{\rm K}  \, .
+\end{equation}
+
+Auf diese Weise hat Josef Stefan (1835--1893)\index{Stefan, Josef} 
+um 1890 zum ersten Mal einen vergleichsweise
+genauen Wert f\"ur die Oberfl\"achentemperatur der Sonne erhalten. Die Hauptunsicherheit war
+der Wert der Solarkonstanten, denn das Verh\"altnis $R/R_\odot$ verlangt nur den scheinbaren
+Sonnendurchmesser (als \"Offnungswinkel). Die Stefan-Boltzmann-Konstante war zwar ebenfalls
+nicht genau bekannt, aber Stefan verglich die Strahlungsintensit\"at eines bekannten Objekts
+bei einer bekannten Temperatur unter vergleichbarem Raumwinkel mit der Intensit\"at der Sonne. 
+Er berechnete so einen Wert von ungef\"ahr 5700\,K, was dem tats\"achlichen Wert recht nahe kommt.
+
+\section{Weshalb $T^4$?}
+
+Das Stefan-Boltzmann-Gesetz spielt eine wesentliche Rolle in der Klimaphysik. Andererseits
+ist die Abh\"angigkeit der abgestrahlten Intensit\"at eines Schwarzk\"orpers von der 4.\ Potenz von
+$T$ sehr ungew\"ohnlich. Daher soll hier versucht werden, diese Abh\"angigkeit zu \glqq veranschaulichen\grqq.
+
+Es gibt eine Herleitung des Stefan-Boltzmann-Gesetzes im Rahmen der Thermodynamik. Diese
+setzt aber bestimmte Beziehungen f\"ur den Strahlungsdruck voraus, die in der Schule meist
+nicht bekannt sind. Vor diesem Hintergrund soll die hier gegebene Ableitung nochmals auf ihre
+wesentlichen Anteile \glqq runtergebrochen\grqq\ werden. 
+
+Die Anzahl der Moden $N(\nu)$ mit einer Frequenz, die kleiner ist als ein vorgegebenes 
+$\nu$, verh\"alt sich wie das Volumen einer dreidimensionalen Kugel: $N(\nu) \propto \nu^3$. 
+Dies l\"asst sich grob aus Gl.\ \ref{eq_K_3d} verstehen: Zu jeder Dimension ist die Anzahl der
+Moden mit einer Frequenz kleiner als $\nu$ proportional zu $\nu$ und damit ist in drei Dimensionen
+die Anzahl der Moden mit einer Frequenz kleiner als $\nu$ proportional zu $\nu^3$.
+
+Jede Mode zu einer Frequenz $\nu$ hat eine Energie $h\nu$. Das bedeutet, die Gesamtenergie aller
+Moden mit einer Frequenz kleiner als $\nu$ ist proportional zu $\nu^4$. Nun gilt
+\glqq sehr grob\grqq\ folgende Regel: Alle Frequenzen $\nu$, deren
+zugeh\"orige Energie $h\nu$ kleiner ist als die thermische Energie $k_{\rm B}T$, tragen zur 
+abgestrahlten Intensit\"at bei, wohingegen alle Frequenzen $\nu$ mit einer Energie 
+$h\nu > k_{\rm B}T$ nicht mehr beitragen. Das erkl\"art die Abh\"angigkeit der Intensit\"at 
+von $T^4$.%
+\index{Strahlungsgesetze|)}
 
 
 \begin{thebibliography}{99}
-\bibitem{Filk} Thomas Filk; \textit{Quantenmechanik (nicht nur) f\"ur Lehramtsstudierende};
-         Springer-Verlag, 2019.  
-\bibitem{Solar} Solarkonstante; Uni Kassel,\\
-       {\small \verb+https://www.greenrhinoenergy.com/solar/radiation/images/solar-constant.jpg+}         
-\bibitem{NASA_World} NASA Image and Video Library, 
-       {\small \verb+https://images.nasa.gov/details/as17-148-22727+}
-\bibitem{NASA_facts} NASA Earth Fact Sheet; 
-      {\small \verb+ https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html+}   
-\bibitem{Petty} Grant W.\ Petty; \textit{A First Course in Atmospheric Radiation}, 2nd Ed.; Sundog
-         Publishing, Madison, Wisconsin; 2006.       
-\bibitem{Wikipedia_Faint} Wikipedia \glqq Faint young Sun paradox\grqq\ 
-       {\small \verb+https://en.wikipedia.org/wiki/Faint_young_Sun_paradox+}.                 
-\bibitem{Wikipedia_Milankovic} Wikipedia \glqq Milankovic-Zyklen\grqq.   
-       {\small \verb+https://de.wikipedia.org/wiki/Milankovi+}{\small\tt \'c}{\small \verb+-Zyklen+}.        
-\bibitem{Wikipedia_Solarkonstante} Wikipedia \glqq Solarkonstante\grqq.   
-       {\small \verb+https://de.wikipedia.org/wiki/Solarkonstante+}.               
+\bibitem{NASA_sun} NASA Sun Fact Sheet; Williams, D.R.;
+      \url{https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html}      
 \end{thebibliography}
 
 \end{document}
