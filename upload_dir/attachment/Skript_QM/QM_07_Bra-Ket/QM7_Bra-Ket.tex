@@ -1,12 +1,12 @@
-\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
-
-%\newcommand{\solution}[1]{}
+%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
 
 \chapter{Die Bra-Ket-Notation}
 % Kap x
 \label{chap_BraKet}
 
-Die Bra-Ket-Notation von Dirac \cite{Dirac} hat sich mittlerweile in der Quantentheorie
+\info{Thomas Filk}{27.03.2024}%
+Die Bra-Ket-Notation von Paul Adrien Maurice Dirac (1902--1984) \cite{Dirac} hat\index{Bra-Ket-Notation|(} 
+sich mittlerweile in der Quantentheorie\index{Dirac, Paul}
 als au\ss erordentlich hilfreich etabliert. Ihre N\"utzlichkeit erweist sich besonders dann,
 wenn Zust\"ande oder Operatoren basisunabh\"angig oder aber in wechselnden Basissystemen ausgedr\"uckt
 werden sollen. Gerade in vielen modernen Zweigen der Quantentheorie, beispielsweise in der
@@ -16,7 +16,7 @@ Physikalisch repr\"asentiert ein Ket-Vektor $| \psi \rangle$ einen Zustand
 (wobei der Buchstabe $\psi$ zun\"achst rein symbolisch den Zustand beschreibt oder charakterisiert),
 mathematisch repr\"ansentiert $|\psi \rangle$ einen normierten
 Vektor in einem Hilbert-Raum (d.h.\ einem komplexen Vektorraum mit einem Skalarprodukt). 
-Der zugeh\"orige Bra-Vektor $\langle \psi |$ ist ein Element des Dualraums, das
+Der zugeh\"orige Bra-Vektor $\langle \psi |$ ist ein Element des Dualraums, dem
 wegen des Skalarprodukts einem Element des Vektorraums zugeordnet werden kann:
 Sei $|\psi \rangle$ ein Vektor im Hilbert-Raum und $g(\cdot, \cdot)$ das Skalarprodukt auf
 diesem Hilbert-Raum (wobei $\cdot$ jeweils durch einen Vektor zu ersetzen ist), dann ist
@@ -34,16 +34,19 @@ Algebra. Dabei sind meist nur sehr wenige und einfache Regeln zu beachten, denen
 eine anschauliche Deutung geben kann. Um diese symbolische Bedeutung soll es in diesem 
 Kurztext gehen. 
 
-Zur Notation: Wenn man von einem \glqq Zustand\grqq\ spricht, ist oftmals nicht klar, was
+Zur Notation: Wenn man von einem \glqq Zustand\grqq\ spricht, ist oftmals nicht klar, 
+was\index{Zustand}\index{Quantenzustand}
 gemeint ist. Insbesondere sollte man zwischen der mathematischen Repr\"asentation und der
 physikalischen Realisierung unterscheiden. Bei der physikalischen Realisierung ist wiederum
 zwischen der Realisierung durch ein einzelnes System und der Realisierung durch ein
 Ensemble von Systemen zu unterscheiden (siehe auch den Kurztext 
-\hyperref[chap_Axiom]{Axiomatischer Zugang zur Physik}). Da im Folgenden viel von Wahrscheinlichkeiten
+\glqq \hyperref[chap_Axiom]{Axiomatischer Zugang zur Physik})\grqq. 
+Da im Folgenden viel von Wahrscheinlichkeiten
 die Rede ist, repr\"asentiert $|\psi\rangle$ (sofern nicht explizit anders erw\"ahnt) in diesem Kurztext
 immer ein Einzelsystem, das in dem Zustand $\psi$ pr\"apariert wurde.
 
-\"Ahnliches gilt f\"ur den Begriff der Observablen. Hier unterscheide ich zwischen der physikalischen
+\"Ahnliches gilt f\"ur den Begriff der Observablen.\index{Observable} 
+Hier unterscheide ich zwischen der physikalischen
 Realisierung einer Observablen in Form eines Messprotokolls, ausgedr\"uckt durch das Symbol
 ${\cal A}$, und der mathematischen Repr\"asentation der Observablen durch einen selbst-adjungierten
 Operator, $A$. F\"ur den physikalischen Zustand, der dem Zustand zu einem Eigenwert $\lambda_n$ 
@@ -53,11 +56,11 @@ zugeh\"origen normierten Vektor.
 \section{Ket- und Bra- als \glqq Pr\"aparation\grqq\ und \glqq Messung\grqq}
 
 Rein symbolisch kann ein normierter Ket-Vektor $|\psi\rangle$ folgenderma\ss en interpretiert werden:
-Ein physikalisches System wird in dem Zustand $\psi$ pr\"apariert und befindet sich nun in
-diesem Zustand. Der Ket-Vektor $|\psi\rangle$ repr\"asentiert somit die Pr\"aparation eines Systems in einem
-bestimmten Zustand $\psi$. 
+Ein physikalisches System wird in dem Zustand $\psi$ pr\"apariert und wird nun durch diesen
+Zustand beschrieben. Der Ket-Vektor $|\psi\rangle$ repr\"asentiert somit die Pr\"aparation eines Systems in einem
+bestimmten Zustand $\psi$.\index{Ket-Vektor} 
 
-Entsprechend repr\"asentiert ein normierter Bra-Vektor $\langle \phi|$ die
+Entsprechend repr\"asentiert ein normierter Bra-Vektor $\langle \phi|$ die\index{Bra-Vektor}
 Messung an einem System, die das System auf den Zustand $\phi$ testet. $\langle \phi|$
 repr\"asentiert somit den Prozess, bei dem ein Detektor anzeigt, dass der Zustand $\phi$ registriert wurde. 
 Man kann einen solchen Detektor dadurch realisieren, dass man zun\"achst einen Filter
@@ -83,7 +86,7 @@ liefert eine komplexe Zahl, die man als Wahrscheinlichkeitsamplitude zu
 diesem Prozess -- System wurde im Zustand $\psi$ pr\"apariert und anschlie\ss end im
 Zustand $\phi$ gemessen -- interpretiert. Das Absolutquadrat dieser Wahrscheinlichkeitsamplitude
 ist die Wahrscheinlichkeit $w(\psi \rightarrow \phi)$, dass dieser Prozess auftritt. Dies ist
-die Born'sche Regel:
+die Born'sche Regel:\index{Born'sche Regel}
 \begin{equation}
        | \psi \rangle  \begin{picture}(14,0)(0,0) \put(3,2.4){\line(1,0){20}} \end{picture} > | \phi \rangle
         ~~ \simeq  ~~  \langle \phi | \psi \rangle  \hspace{1cm}
@@ -109,12 +112,12 @@ Sind andererseits die beiden Zust\"ande $|\psi\rangle $und $|\phi\rangle$ identi
 Wahrscheinlichkeit, an einem im Zustand $|\psi\rangle$ pr\"aparierten System den Zustand $|\phi\rangle$ zu
 messen, gleich eins ist, gilt $\langle \phi|\psi\rangle=1$ ($\langle \psi|\psi\rangle = 1$ ist die 
 Normierungsbedingung f\"ur Vektoren $|\psi\rangle$, die Zust\"ande repr\"asentieren). 
-Allgemein gilt das verallgemeinerte Gesetz
+Allgemein gilt das verallgemeinerte Gesetz\index{Malus, Gesetz von}
 von Malus: $|\langle \phi|\psi\rangle|^2 = \cos^2 \alpha$, wobei $\alpha$ in reellen Vektorr\"aumen
 der Winkel zwischen den beiden Strahlen zu $|\phi\rangle$ und $|\psi\rangle$ ist. 
  
 Als Beispiel betrachten wir die Wellenfunktion $\psi(x)$, die in der Bra-Ket-Notation folgende
-Darstellung hat:
+Darstellung hat:\index{Wellenfunktion}
 \begin{equation} 
             \psi(x) = \langle x | \psi \rangle  \, . 
 \end{equation}
@@ -148,7 +151,8 @@ w\"urde dasselbe Funktionssymbol f\"ur verschiedene mathematische Funktionen ver
 
 \section{Projektionsoperatoren als \glqq Filter\grqq}
 
-Projektionsoperatoren sind lineare Abbildungen -- in endlich dimensionalen Vektorr\"aumen
+Projektionsoperatoren\index{Projektionsoperator} 
+sind lineare Abbildungen -- in endlich dimensionalen Vektorr\"aumen
 mit vorgegebener Basis also darstellbar als Matrizen --, die einen beliebigen Vektor auf einen
 linearen Unterraum projizieren. Eindimensionale Projektionsoperatoren kann man mit einem
 eindimensionalen Unterraum identifizieren, sie beschreiben somit einen reinen Zustand. Andererseits
@@ -184,12 +188,12 @@ eindimensionalen Projektionsoperatoren darstellen.
 
 \subsection{Projektionsoperatoren als Darstellung von Zust\"anden}
 
-In der Quantentheorie sind die Projektionsoperatoren auf einen eindimensionalen Unterraum
+In der Quantentheorie sind die Projektionsoperatoren auf einen eindimensionalen Unterraum\index{Zustand}
 von besonderer Bedeutung. Sie charakterisieren diesen eindimensionalen Unterraum und somit
 einen quantenmechanischen Zustand. Im Gegensatz zur Repr\"asentation eines reinen Zustands durch
 einen normierten Vektor haben sie sogar den Vorteil, dass die Freiheit in der Wahl der Phase nicht
 auftritt. Allerdings l\"asst sich mit Projektionsoperatoren das vertraute Superpositionsprinzip nicht
-mehr so einfach ausdr\"ucken wie durch Vektoren, d.h., die
+mehr so einfach ausdr\"ucken wie durch Vektoren, d.h., die\index{Quantenzustand}
 Summe bzw.\ allgemeiner die Linearkombination von zwei Projektionsoperatoren ist im Allgemeinen
 kein Projektionsoperator mehr und somit kein Repr\"asentant f\"ur einen reinen Zustand. 
 
@@ -225,7 +229,8 @@ also in dem von $|\psi \rangle$ aufgespannten eindimensionalen linearen Unterrau
 \subsection{Projektionsoperatoren als Repr\"asentanten von Filtern}
 
 Das physikalische System, das durch einen Projektionsoperator repr\"asentiert wird, ist ein
-Filter. Ein (idealer) Filter hat die Eigenschaft, physikalischen Systeme in bestimmten Zust\"anden ungehindert 
+Filter.\index{Filter} 
+Ein (idealer) Filter hat die Eigenschaft, physikalischen Systeme in bestimmten Zust\"anden ungehindert 
 durchzulassen und Systeme in anderen, orthogonalen Zust\"anden vollst\"andig zu absorbieren. Das
 einfachste Beispiel f\"ur einen Filter ist ein Polarisationsfilter f\"ur Licht, der Licht einer bestimmten
 Polarisation ungehindert durchl\"asst und Licht der orthogonalen Polarisation vollst\"andig absorbiert. 
@@ -302,7 +307,8 @@ Projektionsoperatoren gemeinsam ist, bleibt bestehen.
 
 \subsection{Der Doppelspalt}
 
-Das Doppelspaltexperiment l\"asst sich mit den bisher beschriebenen Mitteln schon recht gut
+Das Doppelspaltexperiment\index{Doppelspaltexperiment} 
+l\"asst sich mit den bisher beschriebenen Mitteln schon recht gut
 beschreiben. Wir stellen uns eine Quelle vor, die Teilchen (oder Licht bzw.\ Photonen) mit einem
 Impuls $p$ (bzw.\ einer Wellenl\"ange $\lambda$) in $z$-Richtung erzeugt (vgl.\ Abbildung \ref{fig_BK_Doppel})
 und auf einen Schirm mit einem Doppelspalt lenkt. Die beiden Spalte befinden sich bei den Punkten 1
@@ -395,11 +401,15 @@ der Winkel $\alpha(x)$ des Punkts $x$ zur Normalenrichtung des Strahls -- ausdr\
 \begin{equation}
              \delta(x) = 2\pi \frac{d}{\lambda} \sin \alpha(x) \, . 
 \end{equation} 
+Die hier verwendete Notation $\langle x|1\rangle$ und $\langle x|2\rangle$ f\"ur die beiden Teilstrahlen
+nach dem Spalt 1 bzw.\ 2 bezeichnet nat\"urlich dasselbe, was man gew\"ohnlich als Wellen
+$\psi_1(x)$ und $\psi_2(x)$ bezeichnet. Korrekterweise bezieht sich diese Notation allerdings auf 
+eine Messung der Teilchen am Ort $x$ auf dem Schirm. 
 
 \subsection{Die Vollst\"andigkeitsrelation}
 \label{sec_BK_Vollstaendig}
 
-Sei $\{ |e_i\rangle \}_{i=1,...,n}$ eine Orthonormalbasis eines Hilbert-Raums und
+Sei $\{ |e_i\rangle \}_{i=1,...,n}$ eine Orthonormalbasis eines Hilbert-Raums und\index{Vollst\"andigkeitsrelation}
 seien $P_i = | e_i \rangle \langle e_i|$ die zugeh\"origen Projektionsoperatoren, dann gilt
 \begin{equation}
             \sum_{i=1}^n P_i = \sum_{i=1}^n | e_i \rangle \langle e_i| = {\bf 1} \, .
@@ -425,7 +435,10 @@ gilt f\"ur einen beliebigen normierten Vektor $|\psi\rangle$:
 Diese Relation bedeutet, dass f\"ur einen beliebigen Zustand $|\psi\rangle$ und eine beliebige
 Observable ${\cal A}$, repr\"asentiert durch den selbst-adjungierten Operator $A$, die
 Wahrscheinlichkeit, einen der m\"oglichen Eigenwerte $\lambda_i$ als Messwert zu finden und
-damit das System in den Zustand $|\lambda_i\rangle$ zu versetzen, gleich 1 ist. 
+damit das System in den Zustand $|\lambda_i\rangle$ zu versetzen, gleich 1 ist. Man erh\"alt
+in der Quantentheorie bei einer Messung immer ein definitives Ergebnis, das einem der
+Eigenwerte der Operators zu der Messung entspricht. Dies ist einer der Wesensz\"uge der
+Quantentheorie.\index{Wesensz\"uge der Quantentheorie}
 
 Eine entsprechende Relation gilt auch f\"ur ein kontinuierliches Spektrum eines
 selbst-adjungierten Operators, beispielsweise das Spektrum des Ortsoperators:
@@ -459,7 +472,7 @@ Teilchen am Ort $x$ gemessen wird, ist (bis auf eine Normierung) durch eine rein
 Physikalische Prozesse, bei denen ein System bestehen bleibt (also beispielsweise nicht
 absorbiert werden kann), allerdings der Zustand des Systems ver\"andert werden kann,
 werden durch unit\"are Operatoren bzw.\ unit\"are Matrizen beschrieben. Diese erhalten
-das Skalarprodukt, d.h.
+das Skalarprodukt, d.h.\index{unit\"arer Prozess}\index{Prozess!unit\"arer}
 \begin{equation}
           \langle \psi | U^\dagger U| \phi \rangle = \langle \psi | \phi \rangle 
 \end{equation} 
@@ -471,14 +484,16 @@ folgt $U^\dagger U = {\bf 1}$ oder $U^\dagger = U^{-1}$.
 Jede lineare Abbildung kann als Linearkombination von Ausdr\"ucken der Form 
 $|\psi\rangle \langle \phi|$ dargestellt werden. Ein solcher Ausdruck  l\"asst sich folgenderma\ss en interpretieren:
 Bei dem Prozess wird festgestellt, dass sich das System im Zustand $|\phi\rangle$ befindet und es wird
-der Zustand $|\psi\rangle$ erzeugt bzw.\ pr\"apariert. 
+der Zustand $|\psi\rangle$ erzeugt bzw.\ pr\"apariert. Der Faktor in einer solchen Linearkombination 
+ist eine (Wahrscheinlichkeits-)Amplitude, die diesem speziellen Prozess zugeordnet wird.
 
 Im Folgenden betrachten wir ganz speziell den unit\"aren Prozess, der durch einen Strahlteiler
 bei Photonen gegeben ist. 
 
 \subsection{Der Strahlteiler}
 
-Ein Strahlteiler teilt einen Lichtstrahl in zwei gleiche Anteile auf. Es handelt sich dabei oft
+Ein Strahlteiler\index{Strahlteiler} 
+teilt einen Lichtstrahl in zwei gleiche Anteile auf. Es handelt sich dabei oft
 um einen Glasw\"urfel, der aus zwei Prismen zusammengesetzt ist, die an ihrer Grenzfl\"ache, wo
 sie aufeinanderliegen, eine besondere Beschichtung haben. Wir betrachten im Folgenden
 polarisationsunabh\"angige Strahlteiler. Typischerweise besitzen diese Strahlteiler zwei
@@ -532,7 +547,7 @@ einfallenden oder ausfallenden Teilstrahlen kompensieren.}
             \left( \begin{array}{cc} {\rm e}^{{\rm i} \delta} & {\rm e}^{{\rm i} \alpha} \\
             -{\rm e}^{-{\rm i} \alpha} & {\rm e}^{- {\rm i} \delta}  \end{array} \right) \, .
 \end{equation}
-Wir k\"onnen den Strahlteiler immer so bauen, dass die beiden
+Wir k\"onnen den Strahlteiler immer so bauen, dass die beiden\index{Strahlteiler!Darstellung durch unit\"are Matrix}
 geradeaus durchgelassenen Strahlen in ihrer Phase unver\"andert bleiben ($\delta=0$) und
 die beiden abgelenkten Strahlen jeweils die gleiche Phase erhalten ($\alpha=\pi/2$). Dies l\"asst uns nur die
 Matrix
@@ -557,7 +572,7 @@ Strahlteiler eintritt, er \glqq misst den Eingangszustand\grqq, und der Ket-Teil
 durch welche Seite das Photon aus dem Strahlteiler austritt, d.h., in welchem Strahl das
 Photon pr\"apariert wurde. Die \glqq + \grqq-Zeichen bedeuten wieder Alternativen.
 
-\begin{figure}[hb]
+\begin{figure}[htb]
 %     Bild 1
 \begin{picture}(100,90)(0,0)
 \put(30,30){\line(1,0){40}}
@@ -614,7 +629,6 @@ Photon pr\"apariert wurde. Die \glqq + \grqq-Zeichen bedeuten wieder Alternative
 \put(15,50){\line(1,0){35}}
 \put(50,50){\vector(0,1){35}}
 \end{picture}
-
 \caption{\label{fig_BK_Uvier}%
 Jeder Weg eines Photons durch den Strahlteiler entspricht einem Ket-Bra-Term. Bei einer Reflektion
 an der diagonalen Trennlinie wird die Phase der Photonwelle um $90^\circ$ verschoben, was einem
@@ -648,7 +662,8 @@ was in der Bra-Ket-Notation folgenderma\ss en geschrieben wird:
 \subsection{Das Mach-Zehnder-Interferometer}
 
 Mit dem beschriebenen Formalismus k\"onnen wir nun das Mach-Zehnder-Interferometer
-behandeln. Es besteht aus zwei Strahlteilern: Der erste teilt einen Lichtstrahl in zwei Anteile,
+behandeln.\index{Mach-Zehnder-Interferometer} 
+Es besteht aus zwei Strahlteilern: Der erste teilt einen Lichtstrahl in zwei Anteile,
 der zweite f\"uhrt die beiden Strahlg\"ange wieder zusammen
 und bringt sie zur Interferenz (siehe Abb.\ \ref{fig_BK_MZ}). Es entspricht im Prinzip einem Doppelspalt, 
 allerdings k\"onnen die beiden \glqq Spalte\grqq\ nun nahezu beliebig weit auseinander gebracht 
@@ -774,7 +789,8 @@ F\"ur die Wahrscheinlichkeiten dieser Prozesse folgt:
 \end{equation}
 
 
-F\"ur das \glqq Knallerexperiment\grqq\ m\"ussen wir den Operator $\big(|1\rangle \langle 1| + 0\cdot |2\rangle \langle 2| \big)$
+F\"ur das \glqq Knallerexperiment\grqq\ m\"ussen\index{Knallerexperiment} 
+wir den Operator $\big(|1\rangle \langle 1| + 0\cdot |2\rangle \langle 2| \big)$
 dazwischenschieben. Dies bedeutet, dass ein Photon, welches sich in Strahl 2 befindet, absorbiert wird
 (weil es auf die Bombe getroffen ist). Dies ist kein unit\"arer Operator mehr sondern ein Projektionsoperator auf
 den Zustand $|1\rangle$. Die Bombe hat also einen \"ahnlichen Effekt, wie ein Filter: Befindet sich das Photon
@@ -785,7 +801,8 @@ der Wahrscheinlichkeit $1/2$ wurde es von der Bombe absorbiert.
 \section{Erwartungswerte}
 
 Letztendlich ist das Ziel in der Quantentheorie (und allgemeiner in der Physik) immer
-die Vorhersage f\"ur das Eintreffen bestimmter Ereignisse. In der Quantentheorie besteht
+die Vorhersage f\"ur das Eintreffen bestimmter Ereignisse. 
+In der Quantentheorie besteht\index{Erwartungswerte}
 diese Vorhersage meist in einer Wahrscheinlichkeitsaussage. Bisher haben wir die Bra-Ket-Notation
 verwendet, um Prozesse zu beschreiben und wir haben gesehen, wie man f\"ur einen Prozess eine
 Wahrscheinlichkeitsamplitude und damit schlie\ss lich eine Wahrscheinlichkeit berechnen kann.
@@ -806,7 +823,7 @@ absorbierende Prozesse beschreiben, bei denen das physikalische Systeme durch
 einen Filter tritt, andererseits aber auch als Observable aufgefasst werden k\"onnen.
 
 Eine Observable ${\cal A}$, definiert durch ein Messprotokoll, wird in der Quantentheorie 
-durch einen selbstadjungierten Operator $A$
+durch einen selbstadjungierten Operator $A$\index{Observable}
 dargestellt. Aus der Mathematik ist bekannt, dass ein selbstadjungierter Operator immer
 reelle Eigenwerte hat und dass die Eigenr\"aume zu verschiedenen Eigenwerten
 orthogonal sind. Au\ss erdem sind die Eigenr\"aume vollst\"andig, d.h., sie spannen den gesamten
@@ -833,7 +850,7 @@ zu verschiedenen Eigenwerten orthogonal sind, bedeutet
                  \left\{ \begin{array}{ll}  1 & m=n \\ 0 & \mbox{sonst}  \end{array} \right.  \, . 
 \end{equation}
 Die symbolische Interpretation dieser Bedingung ist, dass ein System, das in einem Zustand
-$|\lambda_n\rangle$ pr\"apariert wurde, unmittelbar nach dieserr Pr\"aparation mit Sicherheit 
+$|\lambda_n\rangle$ pr\"apariert wurde, unmittelbar nach dieser Pr\"aparation mit Sicherheit 
 nicht im Zustand $|\lambda_m\rangle$
 gemessen wird, sofern $m\neq n$, und mit Sicherheit in diesem Zustand gemessen wird, sofern
 $m=n$. 
@@ -847,9 +864,10 @@ darstellen:
 Zum Beweis \"uberzeuge man sich, dass dieser Operator die Eigenwertgleichungen erf\"ullt, und
 da die Eigenvektoren den Vektorraum aufspannen, ist damit die Gleichheit der linearen Operatoren
 gezeigt. Diese Darstelllung bezeichnet man auch als die Spektralzerlegung eines selbst-adjungierten
-Operators.
+Operators.\index{Spektralzerlegung}
 
-Der Ausdruck $\langle \psi |A| \psi \rangle$ ist Erwartungswert von ${\cal A}$, d.h., wenn die Observable
+Der Ausdruck $\langle \psi |A| \psi \rangle$ ist der Erwartungswert von ${\cal A}$
+im Zustand $\psi$, d.h., wenn die Observable
 ${\cal A}$ an sehr vielen Systemen, die alle im Zustand $\psi$ pr\"apariert wurden, gemessen wird,
 erh\"alt man als Erwartungswert f\"ur die Messwerte diese Gr\"o\ss e:
 \begin{equation}
@@ -864,7 +882,7 @@ Wir k\"onnen diese \"Uberlegungen auch umkehren: Wenn ein Operator $A$ die Eigen
 haben soll, dass f\"ur jeden beliebigen Zustand $\psi$ der Ausdruck $\langle \psi |A| \psi \rangle$
 der Erwartungswert f\"ur die zugeh\"orige Observable ${\cal A}$ ist, dann muss $A$ die Form in 
 Gl.\ \ref{eq_Spektralzerlegung} haben.  
-
+\index{Bra-Ket-Notation|)}
 
 
 
@@ -919,5 +937,5 @@ $2\times 2$ unit\"are
 Matrix durch einen Strahlteiler realisieren.
 
 
-\end{document}
+%\end{document}
 

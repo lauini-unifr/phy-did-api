@@ -1,19 +1,21 @@
-\documentclass[german,10pt]{book}      \input{preambel}         \begin{document}  \setcounter{chapter}{3}
+%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{3}
 
 
 \chapter{Zeitsysteme}
 % Kap 4
 \label{chap_Zeitsysteme}
 
-
+\info{Thomas Filk}{28.03.2024}%
 Seit 1967 ist die Sekunde\index{Sekunde} 
 durch die Frequenz $\Delta \nu_{\rm Cs}$ des Hyperfeinstruktur\"ubergangs\index{Hyperfeinstruktur\"ubergang}
 in 133-C\"asium im Grundzustand definiert. Es gilt:
 \begin{equation}
                1\,{\rm s}  =  9\,192\,631\,770 \, T = 9\,192\,631\,770 \, \frac{1}{\Delta \nu_{\rm Cs}} \, .
 \end{equation}  
+$T$ ist die Periodenl\"ange einer Schwingung zu diesem \"Ubergang.
 Die Definition der Sekunde \"uber den Hyperfeinstruktur\"ubergang in 133-C\"asium l\"oste 1967 die 
-Ephemeridensekunde ab, die \"uber die Position der Erde relativ zur Sonne definiert war. 
+Ephemeridensekunde ab, die \"uber die Position der Erde relativ zur Sonne definiert 
+war.\index{Zeitsysteme|(} 
 
 Man k\"onnte meinen, dass mit der Definition der SI-Sekunde und der Konstruktion von
 Uhren, die diese Sekunde genau genug messen k\"onnen, das Problem der Zeitmessung
@@ -97,7 +99,7 @@ Damit hat der 1.\ Januar 2000, 12 Uhr mittags, den Wert: ${\rm MJD}= 51\,544,5$.
 Die\index{Ephemeridenzeit} 
 Sekunde als der 1/86\,400-ste Teil eines Tages ist erst seit dem Mittelalter in Gebrauch
 und bis 1956 war die Sekunde als der 1/86\,400-ste Teil eines mittleren Sonnentages definiert. 
-Man wusste zu diesem Zeitpunkt allerdings, dass auch der mittlere Sonnentag nicht wirklich
+Man wusste zu diesem Zeitpunkt allerdings schon, dass auch der mittlere Sonnentag nicht wirklich
 vollkommen gleichm\"a\ss ig verl\"auft bzw.\ dass der mittlere Sonnentag davon abh\"angt, \"uber
 welchen Zeitraum genau gemittelt wird. Daher verwendete man schon seit l\"angerem die Stellung
 der Erde relativ zur Sonne zur Definition einer Sekunde. So war in der Zeit zwischen 1956 und 1968
@@ -231,7 +233,7 @@ ber\"ucksichtigt.
 Wir haben nun zwei realisierte Zeitsysteme (d.h., Zeitsysteme, die durch Messungen an realen physikalischen Systemen bestimmt werden): 
 Die TAI, die \"uber Atomuhren bestimmt wird, die m\"oglichst nahe an der SI-Sekunde
 arbeiten, und UT1, die \"uber die Lage der Erde relativ zur Sonne bestimmt wird. UT1 hat den Vorteil, dass 12 Uhr
-mittags mit unserer Vorstellung von \glqq Sonnenh\"ochststand\grqq\ zusammef\"allt, wohingegen TAI auf einer
+mittags mit unserer Vorstellung von \glqq Sonnenh\"ochststand\grqq\ zusammenf\"allt, wohingegen TAI auf einer
 m\"oglichst genauen und gleichm\"a\ss igen Realisierung einer Sekunde beruht. Damit entsteht das Problem:
 An welches Zeitsystem sollen wir uns halten, wenn diese beiden Zeitsysteme auseinanderlaufen. UT1 hat den Vorteil,
 unseren Vorstellung von Tag und Nacht zu entsprechen, TAI hat den Vorteil, dass die Sekunden immer gleich
@@ -260,7 +262,7 @@ noch nie eine Schaltsekunde entfernt wurde, gibt es gewisse Bedenken, ob alle Co
 solchen Schritt zurecht kommen. Da auch beim Einf\"ugen von Schaltsekunden in der Vergangenheit immer
 wieder Probleme mit verschiedenen digitalen Systemen auftraten, wurde in j\"ungerer Zeit \"uberlegt, die
 Definition von UTC nochmals zu \"andern. Es wird angestrebt, bis 2035 eine neue Definition zu finden, bei
-der nur alle paar Jahrhunderte eine Korrektur notwendig wird. Beispielsweise k\"onnte man die Differenz
+der nur alle paar Jahrhunderte eine Korrektur notwendig wird \cite{BIPM2022}. Beispielsweise k\"onnte man die Differenz
 zwischen UT1 und TAI auf mehrere Minuten anwachsen lassen, bevor Korrekturen vorgenommen werden.
 Rein subjektiv werden wir als Menschen die langsame Verschiebung der Mittagsstunde ohnehin erst
 bemerken, wenn sich die Differenz auf die Gr\"o\ss enordnung einer Stunde summiert hat. 
@@ -287,7 +289,7 @@ richtet sich nach dem Nullmeridian durch Greenwich, d.h.\ nach dem L\"angengrad,
 mittags um 12 Uhr die Sonne ihren H\"ochststand hat. Damit man an nahezu allen Orten um die Mittagszeit
 den Sonnenh\"ochststand hat, wurde die Erde in Zeitzonen eingeteilt, die einseits von L\"angengraden,
 andererseits aber auch von L\"andergrenzen berandet sind. Die meisten Zeitzonen unterscheiden sich
-von der Zeitzone von Greenwich um eine volle Stunde. Alle 15 L\"angengrade beginnt also rein rechnerisch
+von der Zeitzone von Greenwich um ein Vielfaches einer vollen Stunde. Alle 15 L\"angengrade beginnt also rein rechnerisch
 eine neue Zeitzone, wobei die meisten L\"ander (Ausnahmen sind die USA, Kanada, Russland und
 Australien) nur eine Zeitzone haben, was z.B.\ f\"ur China bedeutet, dass es sich rechnerisch \"uber 
 fast vier Zeitzonen erstreckt aber im gesamten Land dieselbe Zeitzone gilt. 
@@ -403,11 +405,13 @@ angegeben, dass ein unterschiedliches Datum innerhalb eines Landes zu Problemen 
 Angelegenheiten f\"uhre. Inoffiziell wurde allerdings auch nie bestritten, dass ein wirtschaftlicher Grund dahinter
 steckte: Auf diese Weise wurden die Line Islands die ersten Gebiete, die zum Millenium ins neue Jahrtausend
 wechselten. Man erhoffte sich dadurch als touristische Attraktion das erste Land der Welt zu sein, in dem der
-Sonnenaufgang im neuen Jahrtausend beobachtet werden konnte.   
+Sonnenaufgang im neuen Jahrtausend beobachtet werden konnte.  
+\index{Zeitsysteme|)} 
 
-%\begin{thebibliography}{99}
-%\bibitem{Sobel} Dava Sobel; \textit{Longitude}, Fourth Estate, Second Printing 1995.        
-%\end{thebibliography}
+\begin{thebibliography}{99}
+\bibitem{BIPM2022} Resolution 4 of the 27th CGPM (General Conference on Weights and Measures) 2022
+\url{https://www.bipm.org/en/cgpm-2022/resolution-4}
+\end{thebibliography}
 
 %\end{document}
 

@@ -1,11 +1,12 @@
-\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{9}
-
+%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{9}
 
 \chapter{Interferometer}
 % Kap x
 \label{chap_Interferometer}
 
-Interferometer spielen \"uberall in der Optik eine wichtige Rolle. Sie sind eines
+\info{Thomas Filk}{31.03.2024}%; BP 3.6.5.\ (4); 3.4.6. (4); 3.6.6. (4) \& (6)}% 
+Interferometer spielen \"uberall in der Optik eine wichtige Rolle. 
+Sie sind eines\index{Interferometer|(}
 der zentralen Instrumente der Experimentalphysik f\"ur optische und quantenoptische Versuche. Verwendet man
 Laserlicht, zeigen Interferometer unter anderem die Wellennatur des Lichts. Mit Einzelphotonen
 lassen sich jedoch vollkommen neuartige und interessante Effekte erzielen. 
@@ -50,7 +51,8 @@ kurzen Beschreibung der mathematischen Darstellung eines Strahlteilers.
 
 \section{Strahlteiler}
 
-Strahlteiler sind die wesentlichen Elemente eines Mach-Zehnder- bzw.\ Michelson-Interferometers.
+Strahlteiler sind die wesentlichen\index{Strahltteiler}\index{polarisationsabh\"angige Strahlteiler} 
+Elemente eines Mach-Zehnder- bzw.\ Michelson-Interferometers.
 Es gibt polarisationsabh\"angige Strahlteiler, bei denen ein einfallender Lichtstrahl in zwei
 Teilstrahlen mit zueinander orthogonalen Polarisationszust\"anden aufgespalten wird. H\"aufiger
 verwendet man jedoch nicht polarisationsabh\"angige Strahlteiler, d.h., der einfallende Strahl wird koh\"arent
@@ -65,7 +67,7 @@ Wir k\"onnen die Wirkung eines Strahlteilers
 durch eine unit\"are Matrix beschreiben (unit\"ar, weil zumindest in der Theorie keine Intensit\"at 
 verloren geht, d.h.,\ alle Photonen, die in den Strahlteiler eindringen, kommen auch wieder heraus). 
 Diese Matrix ergibt sich auch direkt aus der \"Uberlegung, wie zwei einfallende Strahlen am
-Strahlteiler aufgeteilt werden. Diese beiden Vorschriften sind:
+Strahlteiler aufgeteilt werden. Diese beiden Vorschriften sind:\index{Strahlteiler!Beschreibung durch unit\"are Matrix}
 \begin{equation}
 \label{eq_ST1}
        |  1 \rangle_{\rm i}  \longrightarrow  \frac{1}{\sqrt{2}} \big( |1 \rangle_{\rm f} + {\rm i} | 2 \rangle_{\rm f} \big)
@@ -128,7 +130,8 @@ Licht an einem Halbe-Halbe-Strahlteiler beschreibt:
 \end{equation}
 
 Man kann noch relative optische Wegl\"angen\"anderungen (Phasen) vor- bzw.\ nachschalten.
-Diese werden durch eine Diagonalmatrix mit reinen Phasen beschrieben. Auf diese Weise erhalten
+Diese werden durch eine Diagonalmatrix mit reinen Phasen beschrieben. 
+Auf diese Weise erhalten\index{Phasenschieber}
 wir eine allgemeine Darstellung f\"ur $S$ in der Form:
 \begin{equation}
         S(\alpha,\beta) = \frac{1}{\sqrt{2}} 
@@ -155,7 +158,8 @@ wohingegen die obige Erkl\"arung einsichtiger ist und auf dasselbe Ergebnis f\"u
 
 \section{Das Mach-Zehnder-Interferometer}
 
-Beim Mach-Zehnder-Interferometer trifft ein Lichtstrahl zun\"achst auf einen Strahlteiler.
+Beim Mach-Zehnder-Interferometer\index{Mach-Zehnder-Interferometer}\index{Interferometer!Mach-Zehnder} 
+trifft ein Lichtstrahl zun\"achst auf einen Strahlteiler.
 Ein Teil des Lichtstrahls wird abgelenkt, der andere Teil durchgelassen. \"Uber zwei Spiegel,
 an denen die Lichtstrahlen um jeweils $90^\circ$ reflektiert werden, treffen beide
 Strahlen von verschiedenen Seiten auf einen zweiten Strahlteiler, wo sie wieder
@@ -213,7 +217,7 @@ von denen einer einmal um $90^\circ$ reflektiert wurde und der andere dreimal. D
 Reflektion um $90^\circ$ eine Phasenverschiebung von $90^\circ$ zur Folge hat 
 ergibt sich zwischen den beiden Strahlen eine relative Phasenverschiebung
 von $180^\circ$ und somit destruktive Interferenz. Bei Ausgang $C$ treffen zwei Strahlen
-aufeinander, die jeweils einmal reflektiert wurden und somit in Phase sind; es kommt also zu
+aufeinander, die jeweils zweimal reflektiert wurden und somit in Phase sind; es kommt also zu
 konstruktiver Interferenz. 
 
 Im mathematischen Formalismus f\"ur Einzelphotonen k\"onnen wir dies folgenderma\ss en
@@ -253,7 +257,8 @@ hat oder nicht, erhalten wir einen weiteren Faktor i.
 \end{eqnarray}
 Das \"ubliche Interferenzmuster im Sinne von \glqq alternierenden Helligkeitsstreifen\grqq\ erh\"alt man
 hier, wenn man die optische Wegl\"ange eines der beiden Teilstrahlen beispielsweise durch eine
-Verschiebung des reflektierenden Spiegels \"andert. Man erhalt so alternierend mal den Ausgang C und
+Verschiebung des reflektierenden Spiegels \"andert.\index{Interferenz!am Mach-Zehnder-Interferometer} 
+Man erh\"alt so alternierend mal den Ausgang C und
 mal den Ausgang D als den Ausgang maximaler Helligkeit, wobei der jeweils andere Ausgang dunkel ist.  
   
 In der Praxis, beispielsweise bei der Verwendung von sichtbarem Licht, l\"asst sich die optische Wegl\"ange 
@@ -263,9 +268,14 @@ optischen Elemente so anpassen, dass man beispielsweise hinter einem der Ausg\"a
 (destruktive Interferenz) und entsprechend hinter dem anderen Ausgange volle Helligkeit (konstruktive
 Interferenz) findet. 
 
+Verwendet man Schablonen hinter den beiden Ausg\"angen, beobachtet man komplement\"are
+Interferenzringe. An denen Stellen, wo auf dem einen Schirm die Minima liegen (dunkle Kreise),
+liegen bei dem anderen Schirm die Maxima (helle Kreise).
+
 \section{Feynman's Summation \"uber alle Wege}
 
-Richard Feynman hat eine sehr eing\"angige Darstellung f\"ur die Bestimmung einer
+Richard Feynman (1918--1988)\index{Feynman, Richard}\index{Summation \"uber Wege}
+hat eine sehr eing\"angige Darstellung f\"ur die Bestimmung einer
 Amplitude $\langle b | a \rangle$ gefunden. Formal kann man schreiben:
 \begin{equation}
        \langle b | a \rangle = \sum_{\mbox{\tiny Wege $a \rightarrow b$}}  A(\mbox{Weg}) \, ,
@@ -326,7 +336,8 @@ aus der Summation \"uber Wege ein sogenanntes Funktionalintegral. Die Idee hinte
 Darstellung beruht auf folgender \"Uberlegung: Ein physikalischer Prozess wird in der Quantentheorie
 durch den sogenannten Zeitentwicklungsoperator $\exp \big( \frac{\rm i}{\hbar} H t\big) $ (oder, wie
 beispielsweise beim Mach-Zehnder-Interferometer, durch einen \"aquivalenten unit\"aren Operator)
-beschrieben. Diesen unit\"aren Operator kann man als Produkt von Operatoren zu einzelnen
+beschrieben.\index{Zeitentwicklungsoperator} 
+Diesen unit\"aren Operator kann man als Produkt von Operatoren zu einzelnen
 Abschnitten der Wege (oder sehr kurzen Zeitabschnitten) schreiben. Die Matrixmultiplikation entspricht
 aber einer \glqq Summation \"uber alle Wege im Indexraum\grqq. Um das zu verdeutlichen, betrachten
 wir der Einfachheit halber das Produkt von drei Matrizen $A$, $B$ und $C$, wobei wir die Bra-Ket-Notation
@@ -350,7 +361,8 @@ den zweiten Strahlteiler.
 
 \section{Das Michelson-Interferometer}
 
-Beim Michelson-Interferometer trifft ein einfallender Strahl bzw.\ der Zustand eines einfallenden
+Beim Michelson-Interferometer\index{Michelson-Interferometer}\index{Interferometer!Michelson} 
+trifft ein einfallender Strahl bzw.\ der Zustand eines einfallenden
 Photons auf einen Strahlteiler und wird dort in zwei Anteile aufgespalten, die sich entlang
 unterschiedlicher Wege ausbreiten. Beide Teilstrahlen werden an Spiegel totalreflektiert und
 laufen wieder zur\"uck. Sie treffen schlie\ss lich wieder
@@ -419,7 +431,8 @@ Detektoren stehen k\"onnen.
 
 \section{Das \glqq Knallerexperiment\grqq}
 
-Das sogenannte \glqq Knallerexperiment\grqq\ geht auf eine Arbeit von Avshalom Elitzur und
+Das sogenannte \glqq Knallerexperiment\grqq\ geht\index{Knallerexperiment}\index{Wechselwirkungsfreie Messung} 
+auf eine Arbeit von Avshalom Elitzur und\index{Elitzur, Avshalom}\index{Vaidman, Lev}
 Lev Vaidman aus dem Jahr 1993 mit dem Titel ``Quantum mechanical interaction-free measurements'' 
 zur\"uck \cite{Elitzur}.
 Sie beschreiben darin die M\"oglichkeit, eine Superbombe auf ihre Funktionsf\"ahigkeit zu testen, ohne
@@ -428,10 +441,11 @@ ein \glqq Knaller\grqq.
 
 Hier ist allerdings zu erw\"ahnen, dass die Ideen von Elitzur und Vaidman nicht neu waren, sie
 haben sie lediglich in einen \glqq werbewirksamen\grqq\ Rahmen gepackt. Schon 1960 hat 
-Mauritius Renninger in einem Artikel \glqq Messung ohne St\"orung des Messobjekts\grqq\ auf diese
+Mauritius Renninger\index{Renninger, Mauritius} 
+in einem Artikel \glqq Messung ohne St\"orung des Messobjekts\grqq\ auf diese
 M\"oglichkeit in der Quantentheorie aufmerksam gemacht \cite{Renninger}. Und schon 1934 schreibt 
 Schr\"odinger in einem Artikel: \textit{\"Ubrigens ist es auch an sich nichts weniger als einleuchtend,
-da\ss\ das Me\ss instrument ohne Wechselwirkung keine Aussagge \"uber das Objekt machen kann.
+da\ss\ das Me\ss instrument ohne Wechselwirkung keine Aussage \"uber das Objekt machen kann.
 Eine Zielscheibe, die nicht getroffen wird, schlie\ss t zumindest gewisse Flugbahnen des Projektils
 aus. Und wenn die Scheibe den Sch\"utzen als Hohlkugel umgibt, die blo\ss\ ein kleines Loch hat,
 so gibt sie, ungetroffen, sehr genauen Aufschlu\ss\ \"uber die Flugbahn} \cite{Schroedinger}. Damit
@@ -522,7 +536,7 @@ aber auch das Photon hinter dem Ausgang C durch entsprechende Spiegel wieder in 
 Mach-Zehnder-Interferometer leiten und w\"urde feststellen, dass ein Photon \glqq immer im Kreis l\"auft\grqq.
 Dies w\"are das Zeichen f\"ur eine defekte Bombe.
 
-Bei einer intakten Bombe befindet sich ein Hinternis in einem Strahlengang. In rund der H\"alfte der F\"alle
+Bei einer intakten Bombe befindet sich ein Hindernis in einem Strahlengang. In rund der H\"alfte der F\"alle
 wird ein Photon auf die Bombe treffen und diese ausl\"osen. In der anderen H\"alfte der F\"alle 
 kann man sich vorstellen, dass das Photon den anderen Strahlengang nimmt und dort hinter
 dem zweiten Strahlteiler entweder in Detektor C oder Detektor D abgelenkt wird. Landet das Photon
@@ -629,7 +643,7 @@ Der untere Detektor zeigt an, ob das Hindernis getroffen wurde.}
 \label{fig:MZ3}
 \end{figure}
 
-
+\index{Interferometer|)}
 
 
 \begin{thebibliography}{99}
@@ -643,5 +657,5 @@ Der untere Detektor zeigt an, ob das Hindernis getroffen wurde.}
         31 (1934) 518--520.                 
 \end{thebibliography}
 
-\end{document}
+%\end{document}
 

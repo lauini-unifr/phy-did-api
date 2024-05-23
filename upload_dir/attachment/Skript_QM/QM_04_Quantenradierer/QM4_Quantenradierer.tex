@@ -1,15 +1,19 @@
-\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
+%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
 
 
 \chapter{Quantenradierer}
 % Kap x
 \label{chap_Quantenradierer}
 
-Quantenradierer z\"ahlen zu der Gruppe der sogenannten \glqq versp\"atete Wahl\grqq-Experimenten
-(delayed choice), bei denen die Entscheidung, welche von zwei komplement\"aren Gr\"o\ss en
+\info{Thomas Filk}{27.03.2024}%
+Quantenradierer\index{Quantenradierer|(} 
+z\"ahlen zu der Gruppe der sogenannten \glqq verz\"ogerte Wahl\grqq-Experimenten
+(delayed choice),\index{delayed choice}\index{verz\"ogerte Wahl, Experimente} 
+bei denen die Entscheidung, welche von zwei komplement\"aren Gr\"o\ss en
 gemessen werden soll, erst gef\"allt wird, nachdem die entscheidende Wechselwirkung zwischen dem
 Quantensystem und einem Element seiner Umgebung bereits stattgefunden hat. In den meisten
-F\"allen handelt es sich bei Quantenradierern um Abwandlungen des Doppelspaltexperiments, bei 
+F\"allen handelt es sich bei Quantenradierern um Abwandlungen des 
+Doppelspaltexperiments, bei\index{Doppelspaltexperiment}\index{Welcher Weg-Information|(} 
 denen die \glqq Welcher-Weg\grqq-Information zun\"achst vorhanden ist, dann aber durch
 einen weiteren Quanteneffekt unwiderruflich wieder gel\"oscht werden kann. Die Entscheidung,
 ob man die \glqq Welcher-Weg\grqq-Information abrufen oder sie endg\"ultig l\"oschen m\"ochte,
@@ -29,12 +33,13 @@ getroffen sind. Da zumindest
 im Prinzip die \glqq Welcher-Weg\grqq-Information vorhanden ist, sieht man zun\"achst kein
 Interferenzmuster. Man kann anschlie\ss end jedoch entscheiden, ob man die 
 \glqq Welcher-Weg\grqq-Information l\"oschen m\"ochte oder nicht. Entscheidet man sich,
-im Rahmen einer Messung die \glqq Welcher-Weg\grqq-Information endg\"ultig zu l\"oschen, erh\"alt man 
-als Ergebnis dieser Messung eine andere Information, mit deren Hilfe man eine Postselektion 
+im Rahmen einer Messung die \glqq Welcher-Weg\grqq-Information endg\"ultig zu l\"oschen, kann man 
+als Ergebnis dieser Messung eine andere Information erhalten, mit deren Hilfe man eine Postselektion 
 der Photonenspuren auf dem Schirm vornehmen kann, sodass Interferenzmuster sichtbar werden.
 
 W\"ahrend Einzelphoton-Experimente auf absehbare Zeit f\"ur Schulen noch zu kostspielig sind,
-eignen sich die verschiedenen Einzelphoton-Quantenradierer sehr gut, um bei Sch\"uler*innen
+eignen sich die verschiedenen Einzelphoton-Quantenradierer als Gedankenexperimente 
+sehr gut, um bei Sch\"uler*innen
 das Gesp\"ur, wann \glqq Welcher-Weg\grqq-Information vorliegt und wann nicht, zu st\"arken.
 F\"ur die Polarisationszust\"ande von Licht oder Einzelphotonen verwenden wir folgende
 Darstellung:
@@ -44,11 +49,25 @@ Darstellung:
    \mbox{rechts- bzw.\ linkszirkulare Polariation} & & |R\rangle , |L \rangle \, .
 \end{eqnarray}
 
-\section{Der "klassische" Quantenradierer}
+Eine Anmerkung zur Sprechweise: Sehr oft findet man bei Strahlteilern die Sprechweise
+\glqq f\"ur das Photon gibt es nun zwei m\"ogliche Wege\grqq\ oder so \"ahnlich. Eigentlich
+sollte man eher sagen \glqq der quantenmechanische Zustand, durch den das Photon hinter 
+dem Strahlteiler beschrieben wird, hat nun zwei Anteile ...\grqq. Die Sprechweise von den
+zwei m\"oglichen Wegen beruht auf der Darstellung quantenmechanischer Prozesse
+als Summe \"uber alle M\"oglichkeiten 
+(Feynman's Summation \"uber Wege),\index{Feynman's Summation \"uber Wege}
+wobei jeder M\"oglichkeit eine Amplitude zugeschrieben wird und zur Berechnung der
+Wahrscheinlichkeit das Absolutquadrat der Summe \"uber alle Amplituden zu nehmen ist. 
+Wenn man die Regeln f\"ur die Bestimmung solcher Amplituden beachtet, kann die
+Sprechweise bzw.\ die Darstellung als Summe \"uber alle M\"oglichkeiten sehr anschaulich
+und hilfreich sein, aber man sollte sich des Feynman'schen Modells im Hintergrund bewusst sein.
+
+
+\section{Der \glqq klassische\grqq\ Quantenradierer}
 
 Das einfachste Modell eines Quantenradierers l\"asst sich sowohl mit Laserlicht als auch
 mit Einzelphotonen durchf\"uhren. Au\ss erdem kann man den Effekt sowohl im 
-Rahmen einer klassischen Wellentheorie
+Rahmen einer klassischen Wellentheorie\index{Quantenradierer!klassischer}
 des Lichts und seiner Polarisationseigenschaften erkl\"aren als auch im Rahmen einer
 quantentheoretischen Beschreibung von Einzelphotonen. Interessant und relevant ist in diesem
 Zusammenhang, dass sich koh\"ahentes Laserlicht in mehrfacher Hinsicht sehr \"ahnlich verh\"alt
@@ -201,7 +220,7 @@ man eine Phasenverschiebung von $90^\circ$).
 
 Da man im Prinzip den Filter, den man zus\"atzlich vor den Schirm bringt, w\"ahlen kann, nachdem
 das Licht durch den Doppelspalt getreten ist, spricht man von einem ``delayed choice'' Experiment. 
-Allerdings wird in diesem Fall die Information gel\"oscht, bevor das Licht auf den Schirm tritt. 
+Allerdings wird in diesem Fall die Information gel\"oscht, bevor das Licht auf den Schirm trifft. 
 
 \subsection{Der klassische Quantenradierer mit Einzelphotonen}
 
@@ -236,7 +255,7 @@ Intensit\"atsdichte $I$ ersetzt werden. Eine $x$-Abh\"angigkeit steckt lediglich
 Phasendifferenz $\delta(x)$. Da jedoch die Zust\"ande $|+\rangle$ und $|-\rangle$
 orthogonal sind, erhalten wir f\"ur die Wahrscheinlichkeitsdichte ein Photon bei $x$ aufzutreffen:
 \begin{equation}
-  | \langle x | \gamma \rangle |^2 =  \frac{1}{2}  I  \big| 1 +1 \big|^2  = I \, .
+  | \langle x | \gamma \rangle |^2 =  \frac{1}{2}  I  \big| 1^2 +1^2 \big|  = I \, .
 \end{equation}
 Es gibt keine Interferenzterme und keine $x$-Abh\"angigkeit, d.h., wir erhalten auf dem Schirm eine 
 konstante Intensit\"atsverteilung. Wird ein Filter bez\"uglich der $+$- oder
@@ -261,7 +280,7 @@ Ein $h$-Polfilter eliminiert die Terme zur vertikalen Polarisation und wir erhal
           |\gamma \rangle \longrightarrow  \mbox{$h$-Polfilter}
         \longrightarrow
           \frac{1}{2} \big( |h , r\rangle   + {\rm e}^{{\rm i}\delta(x)} | h , l\rangle  \big)
-          =    \frac{1}{2}  |h \rangle \otimes \big( |r \rangle   - {\rm e}^{{\rm i}\delta(x)} | l\rangle  \big)  \, .  
+          =    \frac{1}{2}  |h \rangle \otimes \big( |r \rangle   + {\rm e}^{{\rm i}\delta(x)} | l\rangle  \big)  \, .  
 \end{equation}
 Die Information \"uber den Spalt, durch welchen das Photon getreten ist, ist nun nicht mehr
 mit der Polarisation verschr\"ankt. Es handelt sich um einen separierbaren Zustand. F\"ur die
@@ -280,14 +299,15 @@ der klassischen \"Uberlegung.
 \section{Quantenradierer nach Scully}
 \label{sec_Scully}
 
-Die Idee eines Quantenradierers geht auf Marlan O.\,Scully zur\"uck \cite{Scully}.
-Das Experiment in seiner urspr\"unglichen Version wurde 1999 von einer Gruppe um Scully
+Die Idee eines Quantenradierers geht auf Marlan O.\,Scully zur\"uck \cite{Scully}.\index{Quantenradierer!nach Scully}
+Das Experiment in seiner urspr\"unglichen Version wurde 1999 
+von einer Gruppe um Scully\index{Scully, Marlan}
 durchgef\"uhrt \cite{Kim}. Die Idee besteht darin, dass ein Photon von einem Doppelspalt
 auf einen Schirm bzw.\ Detektor trifft. Ist keine \glqq Welcher Weg\grqq-Information vorhanden,
 sollten die Signale dort ein Interferenzmuster zeigen. Ist jedoch \glqq Welcher Weg\grqq-Information
 vorhanden, sollte eine breite Verteilung der Photonen resultieren. Die Entscheidung, ob man
 die \glqq Welcher Weg\grqq-Information auswertet oder sie unwiederbringlich l\"oscht wird
-in diesem Experiment erst gef\"allt, nachdem das Photon auf dem Schirm aufgetroffen ist. 
+in diesem Experiment erst gef\"allt, nachdem das Photon auf den Schirm getroffen ist. 
 Da zun\"achst die \glqq Welcher Weg\grqq-Information im Prinzip vorhanden ist, sieht man
 kein Interferenzmuster. L\"oscht man jedoch durch eine quantenmechanische
 Wechselwirkung (Messung einer zur \glqq Welche Weg\grqq-Information komplement\"aren
@@ -386,7 +406,7 @@ der $x$-Achse verschoben werden kann. Das andere Photon folgt entweder Weg 1 ode
 Strahlteiler ${\rm ST}_1$ bzw.\ ${\rm ST}_2$. Dort wird es entweder in Detektor 3 oder 4 abgelenkt oder
 von einem Spiegel auf einen zweiten Strahlteiler ${\rm ST}_3$ gelenkt, hinter dem es entweder in
 Detektor 1 oder 2 landet. Ein Koinzidenzz\"ahler vergleicht, welche Ereignisse bei $D_0$ mit welchen
-Ereignissen bei $D_1-D_4$ zusammenfallen. Bei $D_3$ und $D_4$ ist die Weginformation bekannt, bei
+Ereignissen bei $D_1$ bis $D_4$ zusammenfallen. Bei $D_3$ und $D_4$ ist die Weginformation bekannt, bei
 Detektor $D_1$ und $D_2$ wurde die Weginformation bei ${\rm ST}_3$ ausgel\"oscht.}
 \end{figure}
 
@@ -409,7 +429,7 @@ beiden Interferenzmuster um eine Phase von $180^\circ$ gegeneinander verschoben.
 
 In der Version von Scully werden alle Informationen bzw.\ Situationen in demselben Experiment
 erfasst. Der Aufbau ist so, dass die Photonen bei $D_0$ etwas fr\"uher (8 Nanosekunden)
-eintreffen als die anderen Photonen bei den Detektoren $D_1-D_4$. Mit anderen Worten, die
+eintreffen als die anderen Photonen bei den Detektoren $D_1$ bis $D_4$. Mit anderen Worten, die
 Photonen bei $D_0$ k\"onnen nicht wissen, ob letztendlich \glqq Welcher Weg\grqq-Information
 vorhanden sein wird oder nicht. 
 
@@ -423,17 +443,21 @@ f\"allen, wenn das erste Photon schon in Detektor $D_0$ registriert wurde.
 \section{Quantenradierer nach Walborn}
 \label{sec_Walborn}
 
-Die folgende Darstellung eines Quantenradierers folgt \cite{Walborn} und ist
+Die folgende Darstellung eines Quantenradierers folgt \cite{Walborn} und ist\index{Quantenradierer!nach Walborn}
 teilweise \cite{Filk} entnommen. \"Ahnlich wie bei dem Quantenradierer in Abschnitt
-\ref{sec_Scully} werden verschr\"ankte Photonen verwendet, sodass man an einem Photon
-Information \"uber das andere erhalten kann. Allerdings steckt die \glqq Welcher-Weg\grqq-Information
+\ref{sec_Scully} werden verschr\"ankte Photonen verwendet, sodass man an einem der beiden Photonen
+Information \"uber das jeweils andere Photon erhalten kann. Allerdings steckt die \glqq Welcher-Weg\grqq-Information
 nun im Polarisationsfreiheitsgrad der Photonen.  
 
  Abbildung \ref{fig_Eraser} zeigt die experimentelle Anordnung dieses Quantenradiers. 
  Aus einer Photonenquelle treffen Photonen auf einen
- BBO-Kristall, an dem durch
+ BBO-Kristall, an dem durch\index{down-conversion}
  Down-Conversion zwei in einem EPR-Zustand verschr\"ankte Photonen der halben Energie
- erzeugt werden. Eines der Photonen (in der Abbildung oben)
+ erzeugt werden.\footnote{H\"aufig wird kein antikorrelierter EPR-Zustand sondern eher
+ der korrelierte Zustand $\frac{1}{\sqrt{2}}(|h,h\rangle + |v,v\rangle)$ verwendet, der zumindest
+ f\"ur lineare Polarisationen forminvariant -- d.h., f\"ur alle linearen Polarisationen korreliert -- ist.
+ Das spielt f\"ur die folgende Argumentation aber keine wesentliche Rolle.} 
+ Eines der Photonen (in der Abbildung oben)
  trifft auf einen Polarisationsdetektor (1), d.h.\ einen Polarisationsstrahlteiler,
  hinter dessen beiden Strahlg\"angen Detektoren stehen, sodass wir
  die Polarisation des Photons bez\"uglich einer voreingestellten
@@ -473,8 +497,8 @@ nun im Polarisationsfreiheitsgrad der Photonen.
 \put(215,165){\line(2,1){20}}
 \put(225,145){\line(2,1){20}}
 \put(235,175){\line(1,-2){10}}
-\put(280,170){\makebox(0,0){\footnotesize Polarisationsdetektor 1}}
-\put(280,160){\makebox(0,0){\footnotesize ($|{\rm h/v}\rangle$ oder $|\pm\rangle$)}}
+\put(282,170){\makebox(0,0){\footnotesize Polarisationsdetektor 1}}
+\put(282,160){\makebox(0,0){\footnotesize ($|{\rm h/v}\rangle$ oder $|\pm\rangle$)}}
 %
 %\thicklines
 \put(169,43){\line(1,2){6}}
@@ -581,7 +605,7 @@ vor ihrem Eintritt in den Doppelspalt
  gewonnenen Information in zwei Klassen). F\"ur jede der
  so gewonnenen Klassen finden wir nun das Inter\-ferenz\-mus\-ter,
  denn f\"ur jede dieser Klassen ist die 
- \glq Welcher-Weg\grq-Information\index{Welcher-Weg-Information}
+ \glq Welcher-Weg\grq-Information
  gel\"oscht. Auf diese Weise k\"onnen wir nachtr\"aglich
  die Interferenzmuster sichtbar machen. Da die beiden
  Interferenzmuster zu den beiden Klassen von Ereignissen
@@ -609,7 +633,7 @@ vor dem Spalt eine $h$-Polarisation und wurde es
 nach dem Spalt mit einer $R$-Polarisation
 gemessen, wissen wir, dass das entsprechende
 Photon durch den rechten Spalt
-getreten ist (entsprechend bei einer$L$-Polarisation
+getreten ist (entsprechend bei einer $L$-Polarisation
 durch den linken Spalt). War es vorher $v$-polarisiert,
 ist die Situation umgekehrt (Abb.\ \ref{fig_qeraser}\,\textbf{c}). 
 Man beachte, dass erst beide Informationen
@@ -926,9 +950,11 @@ eine interferenzfreie Verteilung haben.
  
 \section{Quantenradierer nach K\"ublbeck}
 
-Josef K\"ublbeck hat zusammen mit Rainer M\"uller ein Buch geschrieben \glqq Die Wesensz\"uge
-der Quantenphysik - Modelle, Bilder und Experimente\grqq\ \cite{Kueblbeck}, das sich in erster
-Linie an Physiklehrkr\"afte richtet. Kapitel 5 behandelt Experimente am Mach-Zehnder-Interferometer,
+Josef K\"ublbeck\index{Kueblbeck@K\"ublbeck, Josef}\index{Mueller@M\"uller, Rainer} 
+und Rainer M\"uller haben zusammen ein Buch geschrieben, \glqq Die Wesensz\"uge
+der Quantenphysik -- Modelle, Bilder und Experimente\grqq\ \cite{Kueblbeck}, das sich in erster
+Linie an Physiklehrkr\"afte richtet.\index{Quantenradierer!nach K\"ublbeck und M\"uller} 
+Kapitel 5 behandelt Experimente am Mach-Zehnder-Interferometer,
 unter anderem auch eine Version des Quantenradierers, die auf eine Arbeit von
 Ou, Wang, Zou und Mandel zur\"uckgeht \cite{Ou}. K\"ublbeck hat auch Unterrichtsmateralien zum
 Quantenradierer erstellt.\footnote{Ich danke Herrn K\"ublbeck, dass er mir diese Materialien
@@ -1037,7 +1063,7 @@ Die Information, welcher der beiden Detektoren $D_3$ oder $D_4$ das Photon nachg
 hat, kann man nun nutzen um die bei $D_1$ und $D_2$ nachgewiesenen Photonen in zwei Gruppen
 zu unterteilen, die jeweils ein Interferenzmuster zeigen (und umgekehrt). 
 Die beiden Interferenzmuster sind wieder um $180^\circ$ gegeneinander verschoben.   
-
+\index{Quantenradierer|)}\index{Welcher Weg-Information|)}
 
 \begin{thebibliography}{99}
 \bibitem{Filk} T.\,Filk; \textit{Quantenmechanik (nicht nur) f\"ur Lehramtsstudierende};
@@ -1054,5 +1080,5 @@ Die beiden Interferenzmuster sind wieder um $180^\circ$ gegeneinander verschoben
 \bibitem{Walborn} S.\,P.\,Walborn, M.\,O.\,Terra Cunha, S.\ P\'{a}dua, C.\,H.\,Monken;
          \textit{Double-slit quantum eraser}; Phys.\ Rev.\ A 65 (2002) 033818.
 \end{thebibliography}
-\end{document}
+%\end{document}
 
