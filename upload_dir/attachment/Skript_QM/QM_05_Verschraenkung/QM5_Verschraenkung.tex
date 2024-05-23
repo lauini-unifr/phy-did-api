@@ -1,11 +1,11 @@
-\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
-
+%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
 
 \chapter{Verschr\"ankung}
 % Kap x
 \label{chap_Entanglement}
 
-M\"ochte man in der Quantentheorie Systeme beschreiben, die aus
+\info{Thomas Filk}{01.04.2024}%; BP 3.6.6 (8) \& (9)}%
+M\"ochte man in der Quantentheorie Systeme beschreiben, die aus\index{Verschr\"ankung|(}
 mehreren Teilsystemen, beispielsweise mehreren Teilchen, bestehen, so ergeben
 sich zwei Besonderheiten: (1) Der Zusammenhang zwischen dem Spin
 von Teilchen und ihrer Statistik (das Spin-Statistik-Theorem) f\"ur
@@ -24,12 +24,12 @@ der Verschr\"ankung.
 \section{Das Ph\"anomen der Verschr\"ankung}
 
 Eine Voraussetzung, um \"uberhaupt von Verschr\"ankung sprechen zu k\"onnen,
-sind zwei Systeme unabh\"angiger Freiheitsgrade. Nur dann ist es sinnvoll von Zust\"anden
-zu sprechen, f\"ur die diese beiden Freiheitsgrade miteinander verschr\"ankt sind. 
+sind unabh\"angige Freiheitsgrade. Nur dann ist es sinnvoll von Zust\"anden
+zu sprechen, f\"ur die diese Freiheitsgrade miteinander verschr\"ankt sind. 
 \glqq Unabh\"angig\grqq\ bedeutet hier,
-dass s\"amtliche Observablen des einen Sys\-tems von Freiheitsgraden mit allen Observablen 
-des anderen Systems kommutieren, d.h., je zwei Observablen, von denen sich 
-eine auf das eine System und die andere auf das andere System beziehen, lassen sich gleichzeitig
+dass s\"amtliche Observablen der einen Gruppe von Freiheitsgraden mit allen Observablen 
+der anderen Gruppe kommutieren, d.h., je zwei Observablen, von denen sich 
+eine auf die eine Gruppe und die andere auf die andere Gruppe beziehen, lassen sich gleichzeitig
 messen.
 
 Das typische Beispiel sind die Freiheitsgrade zu zwei verschiedenen Teilchen: 
@@ -63,7 +63,9 @@ Wahrscheinlichkeiten f\"ur ein Ereignis an einem Teilchen abh\"angig von dem
 Ereignis, das an dem anderen Teilchen gemessen wurde, \emph{und} handelt es sich
 um einen \emph{reinen} Zustand der beiden Teilchen, dann liegt eine Verschr\"ankung vor. 
 
-Das Ph\"anomen konditionierter Wahrscheinlichkeiten gibt es auch in der klassischen
+Das Ph\"anomen konditionierter 
+Wahrscheinlichkeiten\index{Konditionierte Wahrscheinlichkeit}\index{Wahrscheinlichkeit!konditionierte} 
+gibt es auch in der klassischen
 Physik. Man denke an folgende Situation: Jeden Tag werden an zwei Personen zwei Emails
 verschickt, die einen identischen Inhalt haben -- der Einfachheit halber nur
 entweder die Zahl $+1$ oder die Zahl $-1$. Sobald eine Person 
@@ -175,9 +177,9 @@ $d_1$ bzw.\ $d_2$, so hat ${\cal H}_1\otimes {\cal H}_2$
 die Dimension $d_1 \cdot d_2$. 
 
 Man unterscheide zwischen dem
-Tensorprodukt von zwei Vektorr\"aumen und dem kartesischen
-Produkt der Vektorr\"aume (das man auch als direkte Summe
-${\cal H}_1 \oplus{\cal H}_2$ schreibt). Das kartesische Produkt
+Tensorprodukt von zwei Vektorr\"aumen und dem kartesischen\index{kartesisches Produkt}\index{Vektorraum!Tensorprodukt}
+Produkt der Vektorr\"aume (das man auch als direkte Summe\index{Vektorraum!kartesisches Produkt}
+${\cal H}_1 \oplus{\cal H}_2$ schreibt). Das kartesische Produkt\index{direkte Summe von Vektorr\"aumen}
 besteht aus allen Paaren $(x,y)$ von Vektoren $x\in {\cal H}_1$ 
 und $y\in {\cal H}_2$ mit komponentenweiser
 Addition und hat die Dimension $d_1+d_2$. F\"ur eine Basis $\{|e_i\rangle\}$ von
@@ -259,7 +261,7 @@ d.h.
 \end{equation}
 
 Nun wird auch die Bra-Ket-Notation f\"ur Operatoren einsichtiger:
-Lineare Abbildungen von einem Vektorraum
+Lineare Abbildungen von einem Vektorraum\index{Bra-Ket-Notation}
 $V$ in einen Vektorraum $W$ kann man abstrakt
 als Elemente von $W\otimes V^*$ auffassen,
 wobei $V^*$ der Dualraum von $V$ ist. Ein solches
@@ -483,7 +485,8 @@ die physikalisch im Allgemeinen nicht sinnvoll sind.
 
 \subsection{Der Messprozess}
 
-Eine besondere Form der Verschr\"ankung, die ebenfalls immer noch Anlass zu Diskussionen
+Eine besondere Form der Verschr\"ankung,\index{Messprozess} 
+die ebenfalls immer noch Anlass zu Diskussionen
 gibt, ist der Messprozess. Gegeben sei ein Quantensystem $S$, an dem mit einem Messinstrument $M$
 eine Messung vorgenommen werden soll. Man kann dies als ein Gesamtsystem ($Q+M$) auffassen,
 das in nat\"urlicher Weise in zwei Teilsysteme $Q$ und $M$ partitioniert werden kann. Vor der
@@ -681,7 +684,7 @@ Auf die beiden Zust\"ande des Gemischs wirkt die Drehung in der Form
     &=& \big( b^2 |\pmb{e}_1 \rangle \otimes | \pmb{e}_1 \rangle - ba |\pmb{e}_1 \rangle \otimes |\pmb{e}_2 \rangle -
                    -ab | \pmb{e}_2 \rangle \otimes | \pmb{e}_1 \rangle + a^2 |\pmb{e}_2 \rangle \otimes |\pmb{e}_2 \rangle  
 \end{eqnarray}
-Man erkennt, dass in beiden F\"allen auch antikorrelierte Ergebnisse m\"oglich sind.
+Man erkennt, dass in beiden F\"allen auch antikorrelierte Ergebnisse m\"oglich sind.\index{Verschr\"ankung|)}
 
 \begin{thebibliography}{99}
 \bibitem{Horodecki} Horodecki, R., Horodecki, P., Horodecki, M.,
@@ -690,5 +693,5 @@ Man erkennt, dass in beiden F\"allen auch antikorrelierte Ergebnisse m\"oglich s
 \end{thebibliography}
 
 
-\end{document}
+%\end{document}
 

@@ -1,20 +1,21 @@
-\documentclass[german,10pt]{book}      \input{preambel}         \begin{document}  \setcounter{chapter}{9}
-
+%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{9}
 
 \chapter{Landkarten und der metrische Tensor}
 % Kap 10
 \label{chap_Landkarte}
 
+\info{Thomas Filk}{28.03.2024}%
 Die fundamentale dynamische Gr\"o\ss e in der Allgemeinen Relativit\"atstheorie
 ist die Metrik bzw.\ der metrische Tensor, oft geschrieben als $g_{\mu \nu}(x)$, wobei
 $x$ die Punkte der Raumzeit parametrisiert. 
 In der Mathematik, insbesondere der Differentialgeometrie, geht der
 Definition dieses Feldtensors
-eine von einer Einbettung unabh\"angige Definition einer Mannigfaltigkeit voran.
-Dies wird hier umgangen, auch wenn die Begriffe der Karte und des Atlas einer
+eine von einer Einbettung unabh\"angige Definition einer Mannigfaltigkeit voraus.
+Dies wird hier umgangen, auch wenn das Konzept der Karte und des Atlas einer
 solchen Beschreibung schon sehr nahe kommen.  
 
-In diesem Kapitel wird der Begriff des metrischen Feldtensors anhand von Landkarten
+In diesem Kapitel wird der Begriff des metrischen Feldtensors anhand von 
+Landkarten\index{Landkarten|(}
 veranschaulicht. Landkarten sind L\"osungen des Problems, Ausschnitte einer Kugeloberfl\"ache
 in einer Ebene darzustellen. Das ist mit l\"angentreuen Darstellungen, die gr\"o\ss ere Bereiche der
 Erdoberfl\"ache wiedergeben, nicht m\"oglich. Besonders deutlich wird dies an Weltkarten. 
@@ -31,10 +32,10 @@ hinzu.\index{Koordinatensingularit\"at}
 Dabei handelt es sich um singul\"are Punkte oder Linien (typischerweise am Rand der
 Karte, z.B.\ an den Polen), bei denen die Bijektivit\"at zwischen der Karte und dem dargestellten
 Gebiet verloren geht. Solche Koordinatensingularit\"aten treten immer dann auf, wenn die
-Topologie der darzustellenden Mannigfaltigkeit - hier der Kugeloberfl\"ache - nicht mit der 
-Topologie der darstellenden Mannigfaltigkeit - hier dem zusammenh\"angenden Ausschnitt einer euklidischen
-Ebene - \"ubereinstimmt. Das Gebiet selbst hat nat\"urlich keine Singularit\"at - die Oberfl\"ache einer
-Kugel ist glatt - sondern nur die Karte. In der Allgemeinen Relativit\"atstheorie treten solche
+Topologie der darzustellenden Mannigfaltigkeit -- hier der Kugeloberfl\"ache -- nicht mit der 
+Topologie der darstellenden Mannigfaltigkeit -- hier dem zusammenh\"angenden Ausschnitt einer euklidischen
+Ebene -- \"ubereinstimmt. Das Gebiet selbst hat nat\"urlich keine Singularit\"at -- die Oberfl\"ache einer
+Kugel ist glatt -- sondern nur die Karte. In der Allgemeinen Relativit\"atstheorie treten solche
 Koordinatensingularit\"aten ebenfalls auf (z.B.\ ist der Horizont eines Schwarzen Lochs in der
 \"ublichen Darstellung der Schwarzschild-Koordinaten eine Koordinatensingularit\"at). Allerdings
 gibt es auch L\"osungen der Einstein'schen Gleichungen mit wirklichen (physikalischen) Singularit\"aten,
@@ -70,7 +71,7 @@ Abstand verringert sich mit dem Breitengrad $\theta$ (vom \"Aquator aus gerechne
 $\cos \theta$, betr\"agt also am 60.\ Breitengrad (das entspricht der H\"ohe von Helsinki) nur noch die H\"alfte.   
 
 \begin{SCfigure}[30][htb]
-\includegraphics[trim= 0cm 1.0cm 0.3cm 1.0cm,clip,scale=0.6]{./Bilder/Zylinderprojektion.jpg}
+\includegraphics[trim= 0cm 1.0cm 0.3cm 1.0cm,clip,width=0.55\textwidth]{./Bilder/Zylinderprojektion.jpg}
 \caption{\label{fig_Zylinder}%
 Eine Weltkarte in rechteckiger Form. Gleiche Breiten- und
 L\"angengrade entsprechen gleichen Abst\"anden auf der Karte. Es ist offensichtlich, dass sich
@@ -90,18 +91,18 @@ als Funktion vom Breitengrad.\index{Laengengrad@L\"angengrad}\index{Breitengrad}
 In dieser Darstellung wirken somit L\"ander am n\"ordlichen Rand oder auch
 die Antarktis am s\"udlichen Rand sehr in die Breite gestreckt. Andere Darstellungen versuchen
 diese Problematik zu beheben: Beispielsweise findet man bei der\index{Mercator-Projektion} 
-Mercator-Projektion (Abschnitt \ref{sec_Mercator}) 
+Mercator-Projektion (Abschnitt \ref{sec_Mercator}, Abb.\ \ref{fig_Mercator}) 
 dieselbe Streckung auch in Nord-S\"ud-Richtung, sodass die Proportionen in der Form wieder stimmen,
 allerdings wirken nun Gebiete in Poln\"ahe wesentlich gr\"o\ss er als in \"Aquatorn\"ahe, d.h.\ diese
 Karten skalieren die Fl\"achen ungleich. Andere Projektionen, beispielsweise die\index{Lambert-Projektion} 
-Lambert-Projektion (Abschnitt \ref{sec_Lambert}),
+Lambert-Projektion (Abschnitt \ref{sec_Lambert}, Abb.\ \ref{fig_Lambert}),
 behalten die Fl\"acheninhalte bei, sie stauchen aber zus\"atzlich die Abst\"ande  in Nord-S\"ud-Richtung,
 sodass die Gebiete noch flacher aussehen. Wir behandeln diese Darstellungen in den
 sp\"ateren Abschnitten. Hier soll als wesentlicher Punkt festgehalten werden, dass bei Landkarten
 die Ma\ss st\"abe (a) vom Ort abh\"angen k\"onnen und (b) richtungsabh\"angig sein k\"onnen. 
 Au\ss erdem muss die Streckung bzw.\ Stauchung nicht in Ost-West- oder Nord-S\"udrichtung erfolgen,
 sondern kann auch \glqq schr\"ag\grqq\ verlaufen. Der folgende Abschnitt beschreibt, wie man
-diese Art von Verzerrung lokal beschreiben kann und wie der Ma\ss stab mit dem metrischen
+diese Art von Verzerrung lokal beschreiben kann und wie der Kartenma\ss stab mit dem metrischen
 Tensor zusammenh\"angt. 
 
 \section{Beschreibung einer Ellipse} 
@@ -167,10 +168,10 @@ Wir erkennen somit: Gleichung \ref{eq_Ellipse4} l\"asst sich in der Form
 \end{equation}
 schreiben, wobei Gl.\ \ref{eq_Ellipse6} zum Ausdruck bringt, dass die Matrix $g$ die
 Eigenwerte $\lambda_1=1/a^2$ und $\lambda_2=1/b^2$ hat (in Gl.\ \ref{eq_Ellipse6} steht links
-die Spur - also die Summe der Eigenwerte - und rechts die Determinante von $g$ - also das
+die Spur -- also die Summe der Eigenwerte -- und rechts die Determinante von $g$ -- also das
 Produkt der Eigenwerte). Die Bilinearform in Gl.\ \ref{eq_Ellipse3} bzw.\ \ref{eq_Ellipse4} wird durch
-eine Drehung um $-\alpha$ diagonalisiert und auf die Form in Gl.\ \ref{eq_Ellipse1} gebracht - da
-kam sie schlie\ss lich einmal her. 
+eine Drehung um $-\alpha$ diagonalisiert und auf die Form in Gl.\ \ref{eq_Ellipse1} gebracht (da
+kam sie auch schlie\ss lich einmal her). 
 
 \section{Tissot-Indikatrix und die Metrik} 
 \label{sec_Tissot}
@@ -186,7 +187,7 @@ Parameter $g_{ij}$ angeben, die nach Gl.\ \ref{eq_Ellipse4} eine Ellipse charakt
 dies ist aber der metrische Feldtensor. Das soll in diesem Abschnitt erl\"autert werden. 
 
 \begin{figure}[htb]
-\includegraphics[scale=0.17]{./Bilder/Tissot_rectangle.png}
+\includegraphics[width=\textwidth]{./Bilder/Tissot_rectangle.png}
 \caption{\label{fig_Tissot1}\index{Tissot'sche Indikatrix}%
 Tissot'sche Indikatrix zur quadratischen Zylinderprojektion. Die Ellipsen entsprechen den
 Darstellungen von Kreisen auf der Kugeloberfl\"ache in der Karte (Quelle \cite{WikiTissot}).}
@@ -216,19 +217,21 @@ bezeichnet man als metrischen Feldtensor.\index{Feldtensor, metrischer}
 Objekt die Ma\ss st\"abe zur Bestimmung von Entfernungen kodiert, \glqq Feld-\grqq\ bedeutet,
 dass dieses Objekt an jedem Ort definiert und von Ort zu Ort verschieden sein kann, und 
 \glqq Tensor\grqq\ bedeutet, dass es sich um eine Matrix handelt, die die Richtungsabh\"angigkeit
-angibt. 
+angibt.\footnote{Streng genommen bezieht sich \glqq Tensor\grqq\ darauf, wie sich die Elemente von
+$g_{ij}$ unter Koordinatentransformationen ver\"andern, das soll hier aber nicht weiter
+vertieft werden.} 
 
 Zur Bestimmung der Parameter $a$ und $b$ k\"onnen wir folgenderma\ss en vorgehen (ein
 allgemeines Verfahren, wie man aus einer Parameterdarstellung der Kugeloberfl\"ache diese
 Parameter gewinnt, beschreiben wir
-in Abschnitt \ref{sec_Parameter}). Die Karte habe eine Breite $B$ (hier ungef\"ahr $B=150$\,mm)
+in Abschnitt \ref{sec_Parameter}). Die Karte habe eine Breite $B$ (hier ungef\"ahr $B=154$\,mm)
 und eine H\"ohe $H=B/2$ (da die Ost-West-Richtung in 360 Grade, die Nord-S\"ud-Richtung
 aber nur in 180 Grade unterteilt ist, und beide Richtungen dieselbe Skala haben sollen). 
 Der Erdumfang am \"Aquator betr\"agt $U=40\,000$\,km 
 (wir gehen hier von einer idealen Kugel mit dieser L\"ange eines Gro\ss kreises aus).
 Allgemein: Wenn eine Strecke auf einer Kugel (hier der Umfang) die L\"ange $U$ hat und auf einer Karte 
 im Abstand $B$ (hier der Breite der Karte) dargestellt wird, 
-dann hat die Karte einen Ma\ss stab von $1:U/B$. 
+dann hat die Karte einen Ma\ss stab von $1:U/B$, hier ungef\"ahr $1:260\,000\,000$.  
 
 Entfernt man sich nun vom \"Aquator in Richtung der Pole \"andert sich
 dieser Ma\ss stab in Ost-West-Richtung (d.h.\ f\"ur Punkte auf demselben Breitengrad) 
@@ -236,11 +239,11 @@ und der Abstand zwischen zwei L\"angengraden bei einem Breitengrad $\theta$ wird
 um den Faktor $\cos \theta$ k\"urzer. Wir erhalten also f\"ur den Ma\ss stab in Ost-West-Richtung am
 Breitengrad $\theta$ den Wert $(U/B) \cos \theta$. Damit folgt:
 \begin{equation}
-           a(\theta,\varphi) = \frac{B}{U\cos \theta} \approx \frac{1}{266\,666\,667 \cos \theta} \hspace{1cm} {\rm und}
-           \hspace{1cm}  b(\theta,\varphi) = \frac{B}{U} \approx \frac{1}{266\,666\,667}  \, .  
+           a(\theta,\varphi) = \frac{B}{U\cos \theta} \approx \frac{1}{260\,000\,000 \cos \theta} \hspace{1cm} {\rm und}
+           \hspace{1cm}  b(\theta,\varphi) = \frac{B}{U} \approx \frac{1}{260\,000\,000}  \, .  
 \end{equation}
 Diese Parameter h\"angen nicht von $\varphi$ (dem L\"angengrad) ab sondern nur vom Breitengrad.
-Der Ma\ss stab am \"Aquator f\"ur obige Karte (mit der Breite 150\,mm) w\"are somit $1:266\,666\,667$. 
+Der Ma\ss stab am \"Aquator f\"ur obige Karte (mit der Breite 154\,mm) w\"are somit $1:260\,000\,000$. 
 Der metrische Feldtensor w\"are
 \begin{equation}
                g = \left( \begin{array}{cc}   \left( \frac{U}{B} \right)^2  \cos^2 \theta & 0 \\ 0 & \left( \frac{U}{B} \right)^2
@@ -254,11 +257,11 @@ abgebildet wird. Der Nord- bzw.\ S\"udpol sind auf der Kugel nat\"urlich vollkom
 Punkte. 
 
 \begin{SCfigure}[30][htb]
-\includegraphics[trim= 0cm 1.0cm 0.3cm 1.0cm,clip,scale=0.6]{./Bilder/Zylinderprojektion.jpg}
+\includegraphics[trim= 0cm 1.0cm 0.3cm 1.0cm,clip,width=0.6\textwidth]{./Bilder/Zylinderprojektion.jpg}
 \thicklines
-\begin{picture}(0,0)(215,-70)
-\qbezier(20,20)(65,55)(100,27)
-\qbezier(20,20)(60,23.5)(100,27)
+\begin{picture}(0,0)(250,-50)
+\qbezier(33,50)(80,85)(123,57)
+\qbezier(33,50)(78,53.5)(123,57)
 \end{picture}
 \caption{\label{fig_Zylinder2}%
 Die k\"urzeste Verbindung auf der Kugeloberfl\"ache zwischen zwei Punkten (z.B.\ Frankfurt und
@@ -462,8 +465,8 @@ Zylinderprojektion ($a\mapsto A'$) wird der L\"angenggrad \glqq abgerollt\grqq.}
 \end{figure}
 
 
-Der Nachteil einer solchen Karte ist, dass die Umrisse von Fl\"achen verzerrt werden - die Fl\"achen erscheinen
-an den Polen in die Breite gezogen - und dass die Fl\"achen zu den Polen hin gr\"o\ss er erscheinen.
+Der Nachteil einer solchen Karte ist, dass die Umrisse von Fl\"achen verzerrt werden -- die Fl\"achen erscheinen
+an den Polen in die Breite gezogen -- und dass die Fl\"achen zu den Polen hin gr\"o\ss er erscheinen.
 Beide \glqq Fehler\grqq\ lassen sich nicht gleichzeitig beheben. Es gibt aber zwei bekannte Zylinderprojektionen,
 bei denen die Fehler einzeln behoben werden: Die Mercator-Projektion ist 
 \glqq formtreu\grqq\ oder auch\index{Mercator-Projektion}\index{konform}
@@ -506,7 +509,7 @@ gleiche Fl\"achen auf der Karte wiedergegeben. In diesem Sinne sagt man, die Lam
 ist fl\"achenerhaltend oder fl\"achentreu.
 
 \begin{figure}[htb]
-\includegraphics[scale=0.49]{./Bilder/Lambert.png}
+\includegraphics[width=\textwidth]{./Bilder/Lambert.png}
 \caption{\label{fig_Lambert}%
 Tissot-Darstellung der zylindrischen Lambert-Projektion. (Abbildunsquelle \cite{WikiLambert})}
 \end{figure}
@@ -543,7 +546,7 @@ Gro\ss kreise (die die k\"urzeste Verbindung darstellen) werden auf Mercator-Kar
 Geraden dargestellt. 
 
 \begin{SCfigure}[30][htb]
-\includegraphics[trim= 0cm 1.0cm 0.3cm 1.0cm,clip,scale=0.3]{./Bilder/Mercator-proj.png}
+\includegraphics[trim= 0cm 1.0cm 0.3cm 1.0cm,clip,width=0.45\textwidth]{./Bilder/Mercator-proj.png}
 \caption{\label{fig_Mercator}%
 Eine Weltkarte in Mercator-Darstellung. In \"Aquatorn\"ahe gleicht diese Karte der
 quadratischen Zylinderprojektion (Abb.\ \ref{fig_Zylinder}). Allerdings wird der Ma\ss stab in
@@ -578,7 +581,7 @@ Mit einer Partialbruchzerlegung,
 $\frac{1}{(1-\sin^2 \theta')} = \frac{1}{2} (\frac{1}{1-\sin \theta'} + \frac{1}{1+\sin \theta'})$
 kann man das Integral leicht l\"osen. 
 
-F\"ur kleine Werte von $\theta$, also in Poln\"ahe, verh\"alt sich obige Beziehung wie in Gl.\ \ref{eq_Beztheta_z1},
+F\"ur kleine Werte von $\theta$, also in \"Aquatorn\"ahe, verh\"alt sich obige Beziehung wie in Gl.\ \ref{eq_Beztheta_z1},
 aber f\"ur $\theta \rightarrow \frac{\pi}{2}$ divergiert dieser Ausdruck, d.h., der Nord- bzw.\ S\"udpol sind auf einer
 Mercator-Karte im Unendlichen. Daher h\"oren die meisten Mercator-Karten auch etwas oberhalb des
 $80$.\ Breitengrads auf (Abb.\ \ref{fig_Mercator} endet ungef\"ahr beim 83.\ Breitengrad) 
@@ -586,7 +589,7 @@ $80$.\ Breitengrads auf (Abb.\ \ref{fig_Mercator} endet ungef\"ahr beim 83.\ Bre
 \section{Das UNO-Emblem}
 
 \begin{SCfigure}[30][htb]
-\includegraphics[trim= 0cm 1.0cm 0cm 1.0cm,clip,scale=0.1]{./Bilder/un_PNG20.png}
+\includegraphics[trim= 0cm 1.0cm 0cm 1.0cm,clip,width=0.35\textwidth]{./Bilder/un_PNG20.png}
 \caption{\label{fig_UN}%
 Das Logo der Vereinten Nationen. In diesem Fall handelt es sich um eine sogenannte
 Azimutalprojektion. Es wird eine Ebene an einen Punkt der Kugel gelegt (in diesem Fall
@@ -693,8 +696,8 @@ Kegelmantelfl\"achen, die zeitartigen \glqq Hyperbeln konstanter Eigenzeiten\grq
 
 \subsection{Die Lambert-Karte und ein Theorem von Archimedes}
 
-Eines der drei bekannten mathematischen Probleme der Antike war die geometrische Konstruktion -
-nur mit Zirkel und Lineal - eines Quadrats mit derselben Fl\"ache wie ein vorgegebener Kreis
+Eines der drei bekannten mathematischen Probleme der Antike war die geometrische Konstruktion --
+nur mit Zirkel und Lineal -- eines Quadrats mit derselben Fl\"ache wie ein vorgegebener Kreis
 bzw.\ letztendlich die Konstruktion der Zahl $\pi$ aus einer Einheitsl\"ange. Der Beweis, dass
 dies nicht m\"oglich ist, erfolgte erst 1882 durch\index{Lindemann, Ferdinand} 
 Ferdinand Lindemann. Genauer hat Lindemann
@@ -809,7 +812,7 @@ Zylinderachse rotiert, dann ist die \"uberstrichene Fl\"ache gleich $2\pi R h$.
 Die entsprechende Fl\"ache f\"ur das Streckenst\"uck $h'$ ist $2\pi h' R'$. Doch wegen
 $h/h'=R'/R$ folgt, dass diese beiden Fl\"achen gleich sind. Diese Aussage gilt
 nicht nur f\"ur den vollen Rotationsk\"orper, sondern auch f\"ur die \"uberstrichenen
-Fl\"achen bei beliebig kleinen Rotationswinkel.  
+Fl\"achen bei beliebig kleinen Rotationswinkel.\index{Landkarten|)}  
 
 
 \begin{thebibliography}{99}
@@ -826,5 +829,5 @@ Fl\"achen bei beliebig kleinen Rotationswinkel.
 
 \end{thebibliography}
 
-\end{document}
+%\end{document}
 

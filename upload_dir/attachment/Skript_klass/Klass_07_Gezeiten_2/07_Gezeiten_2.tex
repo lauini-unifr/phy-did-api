@@ -1,16 +1,34 @@
-
-\documentclass[german,10pt]{book}      \input{preambel}    \begin{document}  \setcounter{chapter}{6}
+%\documentclass[german,10pt]{book}      \input{../preambel}    \begin{document}  \setcounter{chapter}{6}
 
 \chapter{Gezeiten und Tagesl\"ange}
 \index{Gezeiten}% Kap 7
 \label{chap_Gezeiten2}
  
+ \info{Thomas Filk}{28.03.2024}%
 In diesem Kapitel wird das Ph\"anomen der Gezeiten (typischerweise zwei Flutberge
 und zwei Ebbesenken am Tag, vornehmlich in Richtung des Mondes) und ihre
-Entstehung vorausgesetzt. Es wird gezeigt, wie dieses Ph\"anomen zu einer Verlangsamung
+Entstehung vorausgesetzt (siehe hierzu den Kurztext \glqq\hyperref[chap_Gezeiten1]{Die Gezeiten -- Ebbe und Flut}\grqq). 
+Es wird gezeigt, wie dieses Ph\"anomen zu einer Verlangsamung
 der Erddrehung und damit zu einer Verl\"angerung der Tage f\"uhrt, und dass dies
 zur Folge hat, dass sich der Mond langsam von der Erde entfernt. 
- 
+
+Die folgende Tabelle gibt einige Parameter an, die in diesem Kurztext ben\"otigt werden: 
+\begin{table}[htb]
+\begin{tabular}{r|l}
+Gravitationskonstante & $G= 6,67 \cdot 10^{-11}\,{\rm \frac{m^3}{kg\cdot s^2}}$  \\  
+Masse der Erde & $M_{\rm Erde} = 5,97\cdot 10^{24}$\,kg  \\ 
+Masse des Monds &  $ M_{\rm Mond} =7,35 \cdot 10^{22}$\,kg  \\
+Abstand Erde-Mond &  $R_{EM} = 380\,000$\,km  \\[-0.2cm] 
+ & (zwischen $363\,000$ und $405\,500$\,km) \\
+Erdradius &   $R_{\rm Erde} =  6\,375$\, km \\
+\end{tabular}
+\caption{\label{tab_Tide2}%
+Einige wichtige physikalische Gr\"o\ss en im Zusammenhang mit den Gezeiten.
+Da in diesem Abschnitt nur grobe Absch\"atzungen vorgenommen werden, sind die 
+Werte gerundet bzw.\ gemittelt.}
+\end{table}
+\index{Erdmasse}\index{Mondmasse}\index{Abstand!Erde-Mond}\index{Erdradius}%
+\index{Neigung der Erdachse}\index{Gravitationskonstante}
 
 \section{Die Tage werden l\"anger}
 \label{sec_EMWW}
@@ -52,17 +70,17 @@ Durch die Eigendrehung der Erde relativ zu den Flutbergen kommt es zu einer
 \glqq Reibung\grqq, bei der die Erde abgebremst wird, wodurch die Tage 
 l\"anger werden. Andererseits haben die voreilenden Flutberge eine beschleunigende
 Wirkung auf den Mond, der
-dadurch an Energie gewinnt und sich von der Erde entfernt. Der Drehimpuls - vorher
-in der Eigenrotation der Erde, nachher in der Bewegung des Monds - bleibt erhalten.}
+dadurch an Energie gewinnt und sich von der Erde entfernt. Der Drehimpuls -- vorher
+in der Eigenrotation der Erde, nachher in der Bewegung des Monds -- bleibt erhalten.}
 \end{figure}
 
 Durch die raschere Drehung der Erde werden die Wasserberge der Flut etwas
 vorangetrieben, sodass diese nicht mehr auf der Verbindungslinie zwischen Erde und
 Mond liegen, sondern etwas davor (siehe Abb.\ \ref{fig_Bremsen}). Auf der einen Seite
 bewirkt nun die Anziehungskraft des Monds auf diese Wasserberge das Abbremsen
-der Erdumdrehung, auf der anderen Seite - im Gegenzug - wird der Mond durch die
+der Erdumdrehung, auf der anderen Seite -- im Gegenzug -- wird der Mond durch die
 Anziehungskraft der Wasserberge etwas beschleunigt. Das hat einerseits den Effekt, dass
-die Tage auf der Erde l\"anger werden (die Erde dreht sich langsamer - das macht in hundert
+die Tage auf der Erde l\"anger werden (die Erde dreht sich langsamer -- das macht in hundert
 Jahren rund 2 Millisekunden pro Tag aus, d.h.\ die Dauer eines Tages hat in den letzten 150-200
 Millionen Jahren um rund eine Stunde zugenommen), andererseits\index{Tagesl\"ange, Zunahme}
 nimmt der Abstand des Monds von der Erde zu. Im Jahr sind das derzeit rund 3,8 Zentimeter. 
@@ -89,7 +107,8 @@ sich nach\index{Drehimpuls}
 ($m$ die Masse des Objekts, $r$ der Abstand Schwerpunkt-Mittelpunkt des Objekts, $v$ die 
 Geschwindigkeit des Objekts, $\omega$ die zugeh\"orige Winkelgeschwindigkeit).\footnote{
 Das Verh\"altnis der Drehimpulse von Erd- zu Mondbahn l\"asst sich einfacher absch\"atzen:
-Nach Gl.\ \ref{eq_Schwerpunkt} ist $m_{\rm Erde} R_{\rm Erde-D}=m_{\rm Mond} R_{\rm Mond-D}$,
+F\"ur den Schwerpunkt des Erde-Mond-Systems gilt 
+$m_{\rm Erde} R_{\rm Erde-D}=m_{\rm Mond} R_{\rm Mond-D}$,
 wobei $R_{\rm X-D}$ der Abstand des Mittelpunkts des K\"orpers $X$ zum gemeinsamen Schwerpunkt
 $D$ ist. Die Winkelgeschwindigkeit ist f\"ur die beiden K\"orper im Erde-Mond-System dieselbe, also
 erhalten wir die Gleichung\index{Drehimpuls!Erde-Mond-System}
@@ -121,9 +140,11 @@ Erdbahn um Schwerpunkt & $  3,4 \cdot 10^{32}\, {\rm kg\cdot m^2/s} $ & $1$\%\\
 Eigendrehung Erde &  $ 7,06 \cdot 10^{33}\, {\rm kg\cdot m^2/s} $ & $19,9$\% \\
 Eigendrehung Mond &  $ 2,4 \cdot 10^{29} \, {\rm kg\cdot m^2/s}  $ & $<0,001$\% \\
 \end{tabular}
+\index{Mondbahn!Drehimpuls}\index{Drehimpuls!Mondbahn}\index{Erdbahn!Drehimpuls}\index{Drehimpuls!Erdbahn}%
+\index{Erde!Drehimpuls}\index{Mond!Drehimpuls}%
 \caption{\label{tab_Drehimpuls}%
 Gr\"o\ss enordnung der Drehimpulse im Erde-Mond-System. Die Zahlen sind wiederum nur
-ungef\"ahre Angaben und wurden aus den Parametern in Tab.\ \ref{tab_Tide} berechnet. 
+ungef\"ahre Angaben und wurden aus den Parametern in Tab.\ \ref{tab_Tide2} berechnet. 
 Unsicherheiten liegen in der Annahme einer Kreisbahn f\"ur den
 Mond sowie in der Formel f\"ur die Eigendrehimpulse, die eine konstante Masseverteilung
 voraussetzt. Insbesondere ist der Eigendrehimpuls der Erde etwas kleiner (ungef\"ahr 
@@ -147,14 +168,15 @@ den Abstand Erde-Mond und wissen, dass der Abstand des Monds im Laufe eines Jahr
 um rund 3,8\,cm zunimmt. Bevor wir diesen Wert in Gl.\ \ref{eq_Bahndrehimpuls} einsetzen
 m\"ussen wir ber\"ucksichtigen, dass eine \"Anderung des Abstands (bzw.\ des Bahnradius)
 auch eine \"Anderung der Umlaufzeit zur Folge hat. Aus der Bedingung \glqq Gravitationskraft = Fliehkraft\grqq\
-folgt:
+(korrekterweise sollte man nat\"urlich sagen \glqq Gravitationskraft = Impuls\"anderung bei einer
+Kreisbewegung \grqq) folgt:
 \begin{equation}
          G \frac{m_{\rm Erde} m_{\rm Mond}}{R_{EM}^2} = m_{\rm Mond} R_{\rm EM} \left( \frac{2\pi}{T} \right)^2  
           \hspace{0.8cm} \Longrightarrow \hspace{0.8cm}
           T =2 \pi  \left(  \frac{R_{\rm EM}^3}{G m_{\rm Erde}}   \right)^{1/2} \, .
 \end{equation}
 Dies ist das ber\"uhmte dritte Kepler'sche Gesetz: Die Quadrate der Umlaufzeiten verhalten sich wie
-die Kuben der Halbachsen. Setzen wir diese Beziehung 
+die Kuben der Halbachsen. Setzen wir diese Beziehung\index{Kepler'sche Gesetze!drittes} 
 in Gl.\ \ref{eq_Bahndrehimpuls} ein, erhalten wir den Drehimpuls der Mondumlaufbahn
 als Funktion des Abstands (sowie weiterer Konstanten):
 \begin{equation}
@@ -214,14 +236,15 @@ $0,002$\,s.
 
 Die Frage nach dem Alter des Monds ist f\"ur viele Bereiche von Bedeutung.\index{Mondalter} 
 Die Vermutung
-ist, dass der Mond von rund 4 Milliarden Jahren, also kurz nach der Entstehung der Erde, durch
-einen riesigen Meteoriteneinschlag in die Erde entstanden ist. Wenn wir ganz naiv die 3,8\,cm 
+ist, dass der Mond vor rund 4,5 Milliarden Jahren, also kurz nach der Entstehung der Erde, durch
+einen Zusammensto\ss\ mit einem kleineren Planeten entstanden ist. 
+Wenn wir ganz naiv die 3,8\,cm 
 pro Jahr, um die die Entfernung des Monds von der Erde zunimmt, extrapolieren, kommen wir
 bei 4 Milliarden Jahren auf eine Entfernung von rund $1,52 \cdot 10^8$\,m oder $152\,000$\,km. 
 Diese Entfernung ist deutlich zu gro\ss. Vermutlich hatte der Mond kurz nach seiner Entstehung
 eine Entfernung von der Erde, die knapp \"uber der Grenze lag, bei welcher der Mond aufgrund
 der Gezeitenkr\"afte auseinandergerissen worden w\"are (diese Grenze bezeichnet man auch als
-Roche-Grenze), das sind rund 15\,000-20\,000\,km. 
+Roche-Grenze), das sind rund 15\,000-20\,000\,km.\index{Roche-Grenze} 
 
 Es ist offensichtlich, weshalb die naive Extrapolation der 3,8\,cm pro Jahr f\"ur die Zunahme
 der Erde-Mond-Entfernung nicht korrekt ist. Mehrere Gr\"unde spielen hier eine wichtige Rolle.
@@ -246,17 +269,17 @@ h\"aufigeren Fluten (unabh\"angig von ihrer St\"arke) h\"oher.
 \end{enumerate} 
 Ber\"ucksichtigt man all diese Effekte, so hat sich der Mond insbesondere zu Beginn deutlich
 schneller von der Erde entfernt, als es unsere naive Extrapolation angibt. Eine Rechnung, die
-all diese Effekte ber\"ucksichtigt, kommt auf ein Alter des Monds von rund 1,3 Milliarden 
-Jahren (siehe \cite{??}).
+all diese Effekte ber\"ucksichtigt, kommt auf ein Alter des Monds von rund 1,37 Milliarden 
+Jahren (siehe \cite{DeYoung}).
 
 Dies wiederum ist eine zu kurze Zeitdauer. Dieses Ergebnis wird gelegentlich von Creationisten
 (Anh\"angern einer auf der Darstellung der Bibel basierenden Sch\"opfungsgeschichte, nach der
 Gott die Welt von etwas \"uber 6000 Jahren erschaffen hat) angef\"uhrt um zu argumentieren, dass
 die sogenannten wissenschaftlichen Berechnungen f\"ur das Alter der Erde (und des Monds), die 
-auf 4 Milliarden Jahre deuten, falsch sein m\"ussen. 
+auf etwas \"uber 4,5 Milliarden Jahre deuten, falsch sein m\"ussen. 
 Sie sehen hierin einen Widerspruch zu den beobachteten Tatsachen.
 
-W\"are das Ergebnis von 1,3 Milliarden Jahren f\"ur das Alter des Monds korrekt, w\"are das
+W\"are das Ergebnis von 1,37 Milliarden Jahren f\"ur das Alter des Monds korrekt, w\"are das
 tats\"achlich ein Problem f\"ur die \"ubliche wissenschaftliche Theorie \"uber das Alter der Erde.
 Der wesentliche Unsicherheitsfaktor f\"ur die obige Berechnung ist jedoch der Einfluss der um einen
 Faktor 10--1000 (als Gr\"o\ss enordnung) st\"arkeren Gezeitenkr\"afte auf Ebbe und Flut und die 
@@ -276,12 +299,15 @@ entfernen. Die Monate werden dadurch ebenfalls l\"anger. Ist der derzeitige Eige
 (siehe Tab.\ \ref{tab_Drehimpuls}) der Erde \glqq aufgebraucht\grqq\ und ganz auf den Mond \"ubergegangen,
 wird der Mond einen Bahndrehimpuls von rund $3,54\cdot 10^{34}$\,km$\cdot$m/s${}^2$ haben.
 Nach Gl.\ \ref{eq_BahnMond} bedeutet dies einen Abstand Erde-Mond von etwas \"uber 
-$R_{\rm EM}=425\,000\,{\rm km}$ haben und der Monat wird rund 33 (heutige) Sonnentage dauern.   
+$R_{\rm EM}=425\,000\,{\rm km}$ und der Monat wird rund 33 (heutige) Sonnentage dauern.   
 Die Rotation der Erde ist dann an den Mond gebunden, so wie jetzt schon die Rotation des
 Monds gebunden ist, d.h.\ der Mond zeigt der Erde immer dieselbe Seite. Daher dauert ein Monat
 dann nur einen Sonnentag. 
 
-\newpage
+\begin{thebibliography}{9}
+\bibitem{DeYoung} DeYoung, D.B.; \textit{The Earth-Moon System}, in The Proceedings of the
+          International Conference on Creationism; Vol.\ 2:II; p. 79--84.  
+\end{thebibliography}
 
 \section{Herleitung einiger Gleichungen}
 
@@ -292,7 +318,7 @@ Der direkte Weg, aus
 \begin{equation}
         L_{\rm Mond/Bahn}(R_{\rm EM}) = m_{\rm Mond} \sqrt{G m_{\rm Erde} R_{\rm EM}} 
 \end{equation}
-das Differenzial zu $L$ abzuleiten ist die Taylor-Entwicklung bzw.\ die erste Ableitung:
+das Differenzial zu $L$ abzuleiten, ist die Taylor-Entwicklung bzw.\ die erste Ableitung:
 \begin{equation}
        \frac{{\rm d} L_{\rm Mond/Bahn}(R_{\rm EM})}{{\rm d}R_{\rm EM}} = 
           \frac{1}{2} m_{\rm Mond} \sqrt{\frac{G m_{\rm Erde}}{R_{\rm EM}}} 
@@ -327,4 +353,4 @@ und erhalten:
         =\frac{1}{2} m_{\rm Mond} \sqrt{\frac{G m_{\rm Erde}}{R_{\rm EM}}} ~   \Delta R \, .
 \end{equation}
 
-\end{document}
+%\end{document}

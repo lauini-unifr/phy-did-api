@@ -1,9 +1,10 @@
-\documentclass[german,10pt]{book}      \input{preambel.tex}         \begin{document}  \setcounter{chapter}{2}
+%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{2}
 
 \chapter{Die Zeitgleichung}
 % Kap 3
 \label{chap_Zeitgleichung}
 
+\info{Thomas Filk}{28.03.2024}%
 Die sogenannten \textit{wahren Sonnentage},\index{wahrer Sonnentag}\index{Tag!wahrer Sonnentag} 
 hier ist die Zeitdauer von Sonnenh\"ochststand bis zum n\"achsten Sonnenh\"ochststand
 gemeint, sind nicht immer gleich lang. Daf\"ur sind in erster Linie zwei Einfl\"usse verantwortlich:
@@ -17,7 +18,7 @@ nicht mehr die wahre Ortszeit ist, sondern einer Zeitzone zugeteilt wurde. Je na
 dem sich ein Ort befindet, muss zur lokalen Zeit entsprechend der Zeitzone noch ein Korrekturterm
 hinzugef\"ugt werden werden. Diese Korrektur wird in Abschnitt \ref{sec_wahrerSonnentag} kurz 
 erw\"ahnt und ansonsten nicht ber\"ucksichtigt.}
-Diese Differenz, die sogenannte Zeitgleichung,\index{Zeitgleichung} 
+Diese Differenz, die sogenannte Zeitgleichung,\index{Zeitgleichung|(} 
 war schon im Altertum bekannt. Die Zeitgleichung ${\rm ZG}(t)$ gibt an, wie viele Minuten man zur gemessenen 
 wahren Ortszeit addieren muss, um die gemittelte Ortszeit zu erhalten:
 \begin{equation}
@@ -81,7 +82,7 @@ auch als \glqq Mitteleurop\"aische Zeit (MEZ)\grqq, da\index{MEZ, mitteleurop\"a
 sie in den meisten europ\"aischen L\"andern gilt.\index{Zeitzone!MEZ} 
 
 \begin{figure}[htb]
-\includegraphics[scale=0.18]{./Bilder/World_Time_Zones_Map.png}
+\includegraphics[width=\textwidth]{./Bilder/World_Time_Zones_Map.png}
 \caption{\label{fig_Zeitzonen}%
 Die Zeitzonen der verschiedenen L\"ander. (aus \cite{Wikipedia_Zeitzone})}
 \end{figure}
@@ -106,10 +107,11 @@ Unabh\"angig von den bisher erw\"ahnten Korrekturen, die zur Bestimmung der loka
 Ortszeit notwendig sind, kann der wahre Sonnentag, also die Zeitdauer zwischen zwei 
 Sonnenh\"ochstst\"anden an einem Ort, im Laufe eines Jahres um bis zu fast einer halben Minute
 schwanken, was sich zu manchen Zeiten kumulativ bis zu einer Viertelstunde aufaddieren kann. 
-Die beiden Hauptursachen daf\"ur - die elliptische Bahn der Erde und die Neigung der Erdachse 
-relativ zur Ekliptik - werden in den Abschnitten \ref{sec_Ellipse} und \ref{sec_Neigung} besprochen. 
-Aus diesem Grund definiert man einen mittleren Sonnentag\index{Sonnentag!wahrer} 
-als die Dauer eines Tages, sodass ein Jahr\index{Sonnentag!mittlerer}
+Die beiden Hauptursachen daf\"ur -- die elliptische Bahn der Erde und die Neigung der Erdachse 
+relativ zur Ekliptik -- werden in den Abschnitten \ref{sec_Ellipse} und \ref{sec_Neigung} besprochen. 
+Aus diesem Grund definiert man die Dauer eines Tages auch als einen mittleren 
+Sonnentag,\index{Sonnentag!wahrer} 
+sodass ein Jahr\index{Sonnentag!mittlerer}
 genau $365,2422$ mittlere Sonnentage hat. Dies hat jedoch zur Folge, dass eine
 Uhr, welche die Uhrzeit nach dem mittleren Sonnentag anzeigt, nicht mit einer Uhr \"ubereinstimmt,
 welche die wahre Sonnenzeit anzeigt, also z.B.\ eine Sonnenuhr.\index{Sonnenuhr} 
@@ -294,7 +296,7 @@ folgenden Ansatz machen
 \label{eq_alphat}
                 \alpha(t) = \alpha_0 \left( 1 + A \cos \left( \frac{2\pi}{T} t \right) \right)  \, , 
 \end{equation} 
-wobei $T$ die Periodendauer der Erdbahn um die Sonne ist - also ein Jahr -
+wobei $T$ die Periodendauer der Erdbahn um die Sonne ist -- also ein Jahr --
 und die Zeit $t$ am Perihel beginnen soll (also $\alpha(t=0)=\alpha_{\rm max}$). 
 Nach Gl.\ \ref{eq_maxzumin} besteht folgende Beziehung zwischen der Amplitude $A$ und
 der Exzentrizit\"at $\epsilon$: 
@@ -379,7 +381,7 @@ das bez\"uglich des Fr\"uhlingspunkts fest ist. Dies ist auch das Koordinatensys
 in der Astronomie h\"aufig verwendet. 
 
 \begin{SCfigure}[30][htb]
-\includegraphics[scale=0.3]{./Bilder/Ecliptic.png}
+\includegraphics[width=0.37\textwidth]{./Bilder/Ecliptic.png}
 \caption{\label{fig_Ekliptik}%
 \"Aquatorebene und Ekliptik sind um $23,44^\circ$ gegeneinander geneigt (hier mit
 $\varepsilon$ bezeichnet). Eine
@@ -401,7 +403,7 @@ Zur Berechnung dieses Effekts f\"ur die Zeitgleichung
 muss man einen gleichm\"a\ss ig unterteilten Vollkreis, der unter $23,44^\circ$ geneigt ist,
 entlang der L\"angengrade auf die \"Aquatorebene projizieren. 
 Die auf der Ekliptik gleichen\index{Sommersonnenwende}\index{Wintersonnenwende}
-Bogenl\"angen werden auf der \"Aquatorebene ungleich - etwas dichter am Fr\"uhlingspunkt (derzeit
+Bogenl\"angen werden auf der \"Aquatorebene ungleich -- etwas dichter am Fr\"uhlingspunkt (derzeit
 21.3.) und Herbstpunkt (derzeit 23.9.) und etwas weniger dicht bei der Sommersonnenwende
 (derzeit 21.6.) und der Wintersonnenwende 
 (derzeit 21.12).\index{Fruehlingspunkt@Fr\"uhlingspunkt}\index{Herbstpunkt}      
@@ -450,7 +452,7 @@ Projektionen von der Ekliptik auf die \"Aquatorebene in der N\"ahe der \"Aquinok
 zwischen \"Aquator und Ekliptik; links) und der Sommer- bzw.\ Wintersonnenwende (rechts). Zwei Punkte,
 die entlang der Ekliptik eine Bogenl\"ange $a$ haben, werden entlang der L\"angengrade auf zwei
 Punkte auf dem \"Aquator projiziert, die dort eine Bogenl\"ange $a'$ haben. Man vergleiche diese
-Abbildung auch mit Abb.\ \ref{fig_Hondius1} und \ref{fig_Hondius2}.}
+Abbildung auch mit den Abb.\ \ref{fig_Hondius}, unten.}
 \end{figure}   
    
 Die folgende Herleitung dieses Beitrags geht davon aus, dass sich der Effekt wieder als
@@ -500,7 +502,7 @@ des Jahres, und die Periode f\"ur den zweiten Anteil (Neigung der Erdachse zur E
 Abb.\ \ref{fig_Zeitgleichung} zeigt die Summe der beiden Beitr\"age.
 
 \begin{SCfigure}[30][htb]
-\includegraphics[scale=0.36]{./Bilder/Zeitgleichung.jpg}
+\includegraphics[width=0.63\textwidth]{./Bilder/Zeitgleichung.jpg}
 \caption{\label{fig_Zeitgleichung}%
 Die Zeitgleichung. Im Verlaufe eines Jahres kann die wahre Ortszeit von der mittleren Ortszeit
 um \"uber eine Viertelstunde abweichen. Da sich das Perihel langsam verschiebt (in rund 21\,000 Jahren
@@ -525,9 +527,9 @@ Hendrik Hondius aus dem
 Jahr 1630 (Abb.\ \ref{fig_Hondius}, oben).
 
 \begin{figure}[p]
-\includegraphics[scale=0.44]{./Bilder/Hondius_gesamt.png}\\[0.2cm]
-\includegraphics[scale=0.2]{./Bilder/Hondius_00.jpg} \hfill
-\includegraphics[scale=0.31]{./Bilder/Hondius_90.jpg}
+\includegraphics[width=\textwidth]{./Bilder/Hondius_gesamt.png}\\[0.2cm]
+\includegraphics[width=0.4\textwidth]{./Bilder/Hondius_00.jpg} \hfill
+\includegraphics[width=0.58\textwidth]{./Bilder/Hondius_90.jpg}
 \caption{\label{fig_Hondius}%
 (Oben) Weltkarte von Hendrik Hondius aus dem Jahr 1630. Deutlich erkennbar neben der
 \"Aquatorlinie ist die Projektion der Ekliptik. (Unten)
@@ -565,15 +567,15 @@ ist eine achtf\"ormige Figur, die ungef\"ahr den Schattenverlauf der Spitze
 eines Stabes (z.B.\ eines Obelisken oder der Spitze des Zeigers einer Sonnenuhr) zur
 selben mittleren Ortszeit (z.B.\ um 12 Uhr mittags) im Verlauf eines Jahres beschreibt (siehe
 Abb.\ \ref{fig_Analemma}, links). 
-Die beiden Koordinaten dieser Figur entsprechen einmal dem unterschiedlichen H\"ochstand
+Die beiden Koordinaten dieser Figur entsprechen einmal dem unterschiedlichen H\"ochststand
 der Sonne im Sommer und Winter: Im Winter steht die Sonne auch zur Mittagszeit sehr tief
 und somit ist der Schatten vergleichsweise lang, im Sommer steht die Sonne hoch am
 Himmel und daher ist der Schatten entsprechend kurz. 
 
 \begin{figure}[htb]
-\includegraphics[scale=0.28]{./Bilder/Analemma.jpg} 
+\includegraphics[width=0.3\textwidth]{./Bilder/Analemma.jpg} 
 \hfill
-\includegraphics[scale=0.24]{./Bilder/Munich_Altes_Rathaus_Sundial.jpg}
+\includegraphics[width=0.7\textwidth]{./Bilder/Munich_Altes_Rathaus_Sundial.jpg}
 \caption{\label{fig_Analemma}%
 Das Analemma. (links) Die derzeitige Figur des Analemmas. Die obere Spitze der 8
 beschreibt den Sonnenstand im Sommer, wenn die Sonne hoch steht und der Schatten
@@ -609,7 +611,7 @@ man einen Schattenstab f\"ur die erste und einen anderen Schattenstab f\"ur die 
 Jahresh\"alfte.   
 
 \begin{SCfigure}[30][h]
-\includegraphics[scale=0.2]{./Bilder/Bernhardt.jpg}
+\includegraphics[width=0.5\textwidth]{./Bilder/Bernhardt.jpg}
 \caption{\label{fig_Bernhardt}%
 Sonnenuhr mit Bernhardt'scher Winterwalze. (aus \cite{Wikipedia_Sonnenuhr})}
 \end{SCfigure}
@@ -644,13 +646,14 @@ Der l\"angste Tag mit
 liegt um den 16./17.\ Juni (gegen 5:18), der sp\"ateste Sonnenuntergang um den 25./25.\ Juni (gegen
 21:32). Genaue Zeiten f\"ur die Tagesl\"ange, Sonnenauf- und Untergang sowie weitere
 interessante Daten f\"ur jeden beliebigen Ort der Erde findet man auf der Webseite \cite{timeanddate}.
+\index{Zeitgleichung|)}
 
 \section{Anhang}
 \subsection{\"Aquivalenz des zweiten Kepler'schen Gesetzes und der Drehimpulserhaltung}
 \label{sec_Zeitgleichung_A}
 
-Sei $\pmb{r}$ der Verbindungsvektor von einem Brennpunkt der Ellipse - dem Brennpunkt, in 
-dem sich die Sonne befindet - zu einem Punkt auf der Ellipse (dem Ort eines Planeten)
+Sei $\pmb{r}$ der Verbindungsvektor von einem Brennpunkt der Ellipse -- dem Brennpunkt, in 
+dem sich die Sonne befindet -- zu einem Punkt auf der Ellipse (dem Ort eines Planeten)
 und $\Delta \pmb{r}$ die in der Zeit $\Delta t$ zur\"uckgelegte Strecke in tangentialer
 Richtung. Das zweite Kepler'sche Gesetz\index{Kepler'sches Gesetz!zweites} 
 besagt, dass die in dem Zeitraum $\Delta t$ (f\"ur $\Delta t\rightarrow 0$)
@@ -683,5 +686,5 @@ Drehimpulserhaltung folgt das zweite Kepler'sche Gesetz.
 \end{thebibliography}
 
 
-\end{document}
+%\end{document}
 

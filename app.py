@@ -1,4 +1,3 @@
-import os
 import secrets
 
 from flask import Flask, render_template, request, redirect, jsonify, send_file
@@ -35,7 +34,8 @@ CHAPTER_VARS = { ### "label" : "item_id"
     "chap_Kalender": ["4", "Kalendersysteme"], ### not in use
     "chap_Zeitgleichung": ["5", "Die Zeitgleichung"],
     "chap_Uhren": ["6", "Zeitmessung"],
-    "chap_Gezeiten": ["7", "Die Gezeiten - Ebbe und Flut"],
+    "chap_Gezeiten1": ["7", "Die Gezeiten - Ebbe und Flut"],
+    #"chap_Gezeiten": ["7", "Die Gezeiten - Ebbe und Flut"],
     "eq_Schwerpunkt": ["7", "8 Kap. Die Gezeiten - Ebbe und Flut"],
     "tab_Tide": ["7", "1 Kap. Die Gezeiten - Ebbe und Flut"],
     "chap_Gezeiten2": ["8", r"Gezeiten und Tagesl\"ange"],
@@ -164,15 +164,16 @@ def create_app(db_url=None):
                 tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
                 os.makedirs(tmpdirname + '/Bilder')
 
-                # Deckblatt
-                copy_files("upload_dir/attachment/Deckblatt/Bilder", tmpdirname + '/Bilder')
-                with open("upload_dir/attachment/Deckblatt/deckblatt_clean.tex") as f_in:
-                    for line in f_in:
-                        texdoc.append(line)
+                if len(item_ids) > 1:
+                    # Deckblatt
+                    copy_files("upload_dir/attachment/Deckblatt/Bilder", tmpdirname + '/Bilder')
+                    with open("upload_dir/attachment/Deckblatt/deckblatt_clean.tex") as f_in:
+                        for line in f_in:
+                            texdoc.append(line)
 
-                # Table of contents
-                table_of_contents = r'{\let\cleardoublepage\clearpage\tableofcontents}'
-                texdoc.append(table_of_contents)
+                    # Table of contents
+                    table_of_contents = r'{\let\cleardoublepage\clearpage\tableofcontents}'
+                    texdoc.append(table_of_contents)
 
                 for item_id in item_ids:
                     item = ItemModel.query.get_or_404(int(item_id))
@@ -191,6 +192,30 @@ def create_app(db_url=None):
 
                         src = "upload_dir/attachment/" + topic_folder_name + "/" + item.name + "/" + item.file_name
                         with open(src) as f_in:
+                            if len(item_ids) == 1:
+                                date = False
+                                for line in f_in:
+                                    if "\chapter{" in line:
+                                        title = line.split("{")[1].split("}")[0]
+                                    if "\info{" in line:
+                                        date = line.split("}{")[1].split("}")[0]
+                                    
+                                # Deckblatt
+                                copy_files("upload_dir/attachment/Deckblatt/Bilder", tmpdirname + '/Bilder')
+                                with open("upload_dir/attachment/Deckblatt/deckblatt_clean.tex") as f_in:
+                                    for line in f_in:
+                                        if "today" in line and date:
+                                            texdoc.append(date)
+                                        elif "Kapitel" in line:
+                                            texdoc.append(r"\textbf{"+title+r"} \\")
+                                        else:
+                                            texdoc.append(line)
+
+                                # Table of contents
+                                table_of_contents = r'{\let\cleardoublepage\clearpage\tableofcontents}'
+                                texdoc.append(table_of_contents)        
+
+                        with open(src) as f_in:
                             for line in f_in:
                                 if '\documentclass[german,10pt]' not in line and '\end{document}' not in line:
                                     if 'ref' in line:
@@ -198,8 +223,14 @@ def create_app(db_url=None):
                                         for chapter, index in CHAPTER_VARS.items():
                                             if chapter in line and index[0] not in item_ids:
                                                 hit = True
-                                                newline = line.replace('ref','href')
-                                                newline = newline.replace(chapter+'}','https://physikdidaktik.uni-freiburg.de/kurztexte/}{'+index[1]+'}')
+                                                if "hyperref" in line:
+                                                    newline = line.replace('hyperref','href')
+                                                else:
+                                                    newline = line.replace('ref','href')
+                                                if chapter+'}' in newline:
+                                                    newline = newline.replace(chapter+'}','https://physikdidaktik.uni-freiburg.de/kurztexte/}{'+index[1]+'}')
+                                                else:
+                                                    newline = newline.replace('['+chapter+']','{https://physikdidaktik.uni-freiburg.de/kurztexte/}')
                                                 texdoc.append(newline)
                                         if not hit:
                                             texdoc.append(line)
@@ -216,6 +247,7 @@ def create_app(db_url=None):
                                         "Klass_05_Uhren",
                                         "Klass_08_Nachthimmel",
                                         "Klass_10_Landkarten",
+                                        "Klass_11_Hebelgesetze",
                                         "QM_01_QuBit",
                                         "SRT_03_Kette",
                                         "Thermo_01_Prozess",
@@ -229,8 +261,18 @@ def create_app(db_url=None):
                     for i in range(len(texdoc)):
                         f_out.write(texdoc[i])
 
-
                 output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', 'final.tex'])
+                
+                shutil.copy(tmpdirname+"/file.idx", "./file.idx")
+                index_output = subprocess.call(["makeindex","./file.idx"])
+                shutil.move("./file.ind", tmpdirname+"/file.ind")
+
+                # Clean up .idx and .ilg files from the script directory
+                if os.path.exists("./file.idx"):
+                    os.remove("./file.idx")
+                if os.path.exists("./file.ilg"):
+                    os.remove("./file.ilg")
+                
                 output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', 'final.tex'])
 
                 path = Path(tmpdirname + "/file.pdf").resolve()

@@ -1,16 +1,19 @@
-\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
-
+%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
 
 \chapter{BB84 - Quantenkryptographie}
 % Kap x
 \label{chap_BB84}
 
+\info{Thomas Filk}{27.03.2024}%
+
 \section*{Kurzzusammenfassung}
 
-Eine gesicherte Nachrichten\"ubertragung ist mit einem Schl\"ussel m\"oglich, der
+Eine\index{BB84|(}\index{Quantenkryptographie|(} 
+gesicherte Nachrichten\"ubertragung ist mit einem Schl\"ussel m\"oglich, der
 aus einer Zufallsfolge von Bits (0 und 1) besteht, der dieselbe L\"ange wie die zu
 \"ubertragende Nachricht hat und der nur ein einziges Mal verwendet wird. Dieses
-Protokoll bezeichnet man als One-Time Pad. Die meisten Verfahren der Quantenkryptographie, 
+Protokoll bezeichnet man als One-Time Pad.
+Die meisten Verfahren der Quantenkryptographie, 
 insbesondere auch das sogenannte BB84-Protokoll, verwenden die Quantentheorie
 lediglich zur sicheren Erzeugung eines solchen Schl\"ussels (also einer Zufallsfolge
 aus 0 und 1), von dem \"uberpr\"uft werden kann, dass nur der Sender und der
@@ -49,19 +52,20 @@ wurde.
 Quantenkryptographie ist eine der vielen faszinierenden Anwendungen der Quanteninformation.
 Die M\"oglichkeit, Nachrichten austauschen zu k\"onnen, ohne dass diese Nachrichten
 von dritter Seite abgeh\"ort oder entschl\"usselt werden k\"onnen, bietet viele Anwendungen,
-die - wie immer in solchen F\"allen - nat\"urlich auch missbraucht werden k\"onnen. 
+die -- wie immer in solchen F\"allen -- nat\"urlich auch missbraucht werden k\"onnen. 
 
 Bei den meisten Protokollen zur Quantenkryptographie, unter anderem auch bei dem
-Protokoll BB84 (benannt nach Charles Bennett und Gilles Brassard, die es 1984 entwickelten \cite{Bennett}), 
-geht es allerdings nur darum, einen idealen Schl\"ussel - in diesem Fall eine Zufallsfolge von 
-Bits - aus\-zu\-tauschen, der sp\"ater sowohl f\"ur die Verschl\"usselung als auch f\"ur die
+Protokoll BB84 (benannt nach\index{Bennett, Charles}\index{Brassard, Gilles} 
+Charles Bennett und Gilles Brassard, die es 1984 entwickelten \cite{Bennett}), 
+geht es allerdings nur darum, einen idealen Schl\"ussel -- in diesem Fall eine Zufallsfolge von 
+Bits -- aus\-zu\-tauschen, der sp\"ater sowohl f\"ur die Verschl\"usselung als auch f\"ur die
 Entschl\"usselung der Nachricht verwendet werden kann. Wichtig ist, dass man \"uberpr\"ufen kann, 
 ob der Schl\"ussel au\ss er den beiden Teilnehmern (Sender und Empf\"anger der Nachricht) tats\"achlich 
 niemandem bekannt ist. Genau das leistet das BB84 Protokoll. Die eigentliche Nachricht wird nach
 klassischen Verfahren ver- und entschl\"usselt und auch in klassischer Form verschickt.
 
-Um nicht immer von einer Senderin oder einem Sender $A$ und einer Senderin oder
-einem Sender $B$ zu sprechen, haben sich in der Informationstheorie die Bezeichnungen 
+Um nicht immer von einer Senderin oder einem Sender $A$ und einer Empf\"angerin oder
+einem Empf\"anger $B$ zu sprechen, haben sich in der Informationstheorie die Bezeichnungen 
 \glqq Alice\grqq\ f\"ur die Senderin der
 Nachricht und \glqq Bob\grqq\ f\"ur den Empf\"anger der Nachricht etabliert. Den Lauscher bzw.\ die
 Lauscherin bezeichnet man meist als \glqq Eve\grqq, abgeleitet von der englischen Bezeichnung
@@ -84,14 +88,15 @@ Entschl\"usselung verwendet wird. Anschlie\ss end wird beschrieben, wie man mit
 Verfahren der Quantentheorie einen solchen Schl\"ussel austauschen und gleichzeitig sicherstellen kann,
 dass au\ss er Alice und Bob niemand den Schl\"ussel kennt.
 
-\section{Klassische Kryptographie - das One-Time-Pad}
+\section{Klassische Kryptographie -- das One-Time-Pad}
 
-Ein One-Time-Pad ist spezielles Protokoll der klassischen Kryptographie, bei dem eine Nachricht
+Ein\index{One-Time-Pad} 
+One-Time-Pad ist spezielles Protokoll der klassischen Kryptographie, bei dem eine Nachricht
 mit Hilfe einer Zufallsfolge von Bits vom Sender verschl\"usselt und vom Empf\"anger entschl\"usselt
 werden kann. Sender und Empf\"anger m\"ussen diese Zufallsfolge kennen,
 allerdings sollte niemand sonst Informationen \"uber diese Folge haben. Es gibt auch One-Time-Pads, bei denen dezimale 
 Zahlenfolgen oder Buchstabenfolgen verwendet werden, doch sofern es
-sich in allen F\"allen um wirkliche Zufallsfolgen handelt, sind
+sich in allen F\"allen um wirkliche Zufallsfolgen handelt sind
 diese nicht sicherer als eine bin\"are Bitfolge. Man ben\"otigt allerdings bei
 einer bin\"aren Nachrichten\"ubertragung mehr Zeichen. Au\ss erdem muss die zu verschl\"usselnde Nachricht
 ebenfalls als Bitfolge vorliegen, was sich aber immer erreichen l\"asst. 
@@ -127,12 +132,14 @@ au\ss er den Teilnehmern die Bitfolge kennt, insbesondere, wenn diese Bitfolge \
 \"offentlichen bzw.\ abh\"orbaren Kanal ausgetauscht wurde? Wir werden sehen, dass sowohl Bedingung
 2 als auch Bedingung 4 im Rahmen der Quantenkryptographie erf\"ullt werden k\"onnen. 
 
-Ist eine Zufallsbitfolge gegeben, erfolgt die Verschl\"usselung durch eine XOR-Operation, also
-eine Addition modulo 2, mit der zu verschl\"usselnden Nachricht. Die Rechenregeln sind:
+Ist eine Zufallsbitfolge gegeben, erfolgt die Verschl\"usselung durch eine XOR-Operation, also\index{Verschl\"usselung}
+eine Addition modulo 2, mit der zu verschl\"usselnden Nachricht. Die Rechenregeln sind:\footnote{Man beachte, dass es
+sich hier nicht um eine bin\"are Addition im arithmetischen Sinne handelt. Die Summe $1+1=0$ f\"uhrt nicht zu einem
+\"Ubertrag in die nebenstehende Spalte.} 
 \begin{equation}
      0+0=1+1=0 \hspace{1cm} 0+1=1+0=1 \, .
 \end{equation} 
-Die daraus entstandene Bitfolge ist unabh\"angig von der darin
+Die daraus entstandene Bitfolge ist unabh\"angig von der darin\index{XOR-Operation}
 enthaltenen Nachricht nach allen detektierbaren Kriterien ebenfalls wieder eine Zufallsfolge und kann
 \"uber einen \"offentlichen Kanal verschickt werden. Der Empf\"anger kann diese verschl\"usselte Nachricht 
 entziffern, indem er mit demselben Schl\"ussel nochmals eine XOR Operation durchf\"uhrt. Da sowohl
@@ -174,11 +181,12 @@ Wichtig f\"ur das Verst\"andnis der Quantenkryptographie im Allgemeinen wie auch
 f\"ur dass BB84-Protokoll sind folgende Tatsachen:
 \begin{enumerate}
 \item
-Ein unbekannter Polarisationszustand eines Einzelphotons kann nicht durch Messungen bestimmt werden. 
+Ein unbekannter\index{No-cloning Theorem} 
+Polarisationszustand eines Einzelphotons kann nicht durch Messungen bestimmt werden. 
 Ein polarisationsabh\"angiger Strahlteiler oder auch ein Polarisationsfilter hat immer eine
 bestimmte Orientierung. Dadurch wird eine Basis aus zwei orthogonalen Polarisationszust\"anden 
 ausgezeichnet. Eine \glqq Messung\grqq\ findet immer in Bezug auf diese Basis statt
-und man erh\"alt einen der beiden m\"oglichen Basiszust\"ande als Ergebnis. 
+und man erh\"alt einen der beiden m\"oglichen Basiszust\"ande als Ergebnis.\index{Messung} 
 Ob diese Polarisation auch vorher schon vorlag, ist dabei nicht bekannt. 
 \item 
 Quantenzust\"ande kann man nicht clonen, d.h., man kann keine Kopien
@@ -242,9 +250,9 @@ einer der beiden Polarisationsorientierungen haben, d.h.\ die zuf\"allig eine de
 $h$, $v$, $+$ oder $-$ haben. Das kann z.B.\ folgenderma\ss en geschehen (es geht
 hier nur um ein Prinzip, nicht um die in der Praxis verwendete Realisierung): Es gibt nicht-lineare Kristalle
 (z.B.\ Bariumborat, oft mit BBO abgek\"urzt), bei denen ein einfallendes 
-Photon einer bestimmten Energie in zwei Photonen
+Photon einer bestimmten Energie in zwei Photonen\index{Down-conversion}
 von jeweils der halben Energie (doppelte Wellenl\"ange) umgewandelt wird. Eines dieser Photonen dient
-als Signalphoton - es zeigt an, dass ein zweites Photon (das sogenannte Idler-Photon) in diesem Moment in eine 
+als Signalphoton -- es zeigt an, dass ein zweites Photon (das sogenannte Idler-Photon) in diesem Moment in eine 
 bestimmte Richtung emittiert wird. Gew\"ohnlich hat dieses zweite Photon eine wohldefinierte
 Polarisation, die Alice in eine der vier genannten Polarisationen drehen kann. Sie kennt also den genauen 
 Polarisationszustand des Photons, das sie an Bob schickt. Alice sollte die Orientierungen, bez\"uglich der sie die 
@@ -438,7 +446,7 @@ Polarisation entspricht.
 \item
 Bob entscheidet mit einem W\"urfel, bez\"uglich welcher Basis er das Laserlicht von Alice
 messen m\"ochte. Er w\"ahlt nun diese Basis f\"ur die Polarisationsfilter, auf die er das Laserlicht
-von Alice schickt. Bei manchen Aufbauten kann Alice ihr Laserlicht durch einen Strahlteiler
+von Alice lenkt. Bei manchen Aufbauten kann Alice ihr Laserlicht durch einen Strahlteiler
 aufspalten und dann gleichzeitig auf die beiden orthogonal eingestellten Filter von Bob lenken.
 Nun gibt es zwei M\"oglichkeiten: (1) Alice und Bob haben dieselbe Basis gew\"ahlt. Dann hat das
 Laserlicht von Alice eine Polarisation, die nur von einem Filter bei Bob durchgelassen wird. 
@@ -478,6 +486,7 @@ Doppelstunde mit diesem Protokoll ben\"otigt wird. Andererseits macht es auch Sp
 am Ende die Bits vergleicht und feststellt, ob bzw.\ dass Eve eingegriffen hat. Nach dem Austausch
 von vier oder f\"unf \glqq Photonen\grqq\ kommt auch eine gewisse Routine hinzu und es geht schneller.
 Au\ss erdem kann man auf diese Weise den Ablauf des Protokolls wirklich miterleben und begreifen.
+\index{BB84|)}\index{Quantenkryptographie|)}
 
 \section{Fragen}
 
@@ -497,8 +506,22 @@ Eve. Bei den Photonen, bei denen die Orientierungen von Eve und Bob sich von den
 unterscheden, k\"onnen die Messwerte verschieden sein, doch diese Bits werden verworfen. Bei den
 Bits, die behalten werden, stimmen Eve, Bob und Alice \"uberein. Alice und Bob werden also nicht
 bemerken, dass sie belauscht wurden.}
+\item
+Hat Eve einen Vorteil, wenn sie ihre Basiseinstellungen zuf\"allig w\"ahlt, oder k\"onnte sie
+auch durchweg immer die Basis $h/v$ verwenden?
 
-
+\solution{Rein statistisch hat Eve keinen Vorteil, wenn sie die Basis zuf\"allig w\"ahlt. Eine
+Regelm\"a\ss igkeit k\"onnte jedoch auffallen: Wenn sie immer nur die Basis $h/v$ w\"ahlt, sind die
+Bits in der $h/v$-Basis bei Alice und Bob und immer korrekt, wohingegen sie bei den Bits
+in der $+/-$-Basis Fehler feststellen werden. Getreu dem Grundsatz, dass man \"uberhaupt keine
+Information \"uber sich preisgeben soll, noch nicht einmal eine Vorliebe f\"ur Regelm\"a\ss igkeiten,
+sollte Eve ihre Basis eher zuf\"allig w\"ahlen. Ein weiterer Grund ist, dass immer wieder Fehler
+in der \"Ubertragung auftreten werden. Mit solchen Fehlern m\"ussen Alice und Bob rechnen. 
+Falls also einige wenige Bits nicht \"ubereinstimmen, kann es auch an solchen Fehlern liegen. In einem
+solchen Fall ist es f\"ur Eve g\"unstiger, wenn sie keine Regelm\"a\ss igkeiten in ihren Basiseinstellungen
+gew\"ahlt hat, weil Alice und Bob dann eher glauben werden, dass die Unstimmigkeiten auf einer
+fehlerhaften \"Ubertragung beruhen. Das gilt aber nur, wenn Alice und Bob nicht ausreichend viele Bits
+als Test vergleichen.}
 
 \end{enumerate}
 
@@ -510,5 +533,5 @@ bemerken, dass sie belauscht wurden.}
 \end{thebibliography}
 
 
-\end{document}
+%\end{document}
 
