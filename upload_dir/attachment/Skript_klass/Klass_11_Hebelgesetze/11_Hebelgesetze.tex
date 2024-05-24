@@ -1,11 +1,11 @@
-%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{10}
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{10}
 
 
 \chapter{Hebelgesetze --\\von Archimedes bis Mach}
 % Kap 11
 \label{chap_Hebel}
 
-\info{Thomas Filk}{26.03.2024}%; Bildungsplan BW 2022: 3.2.7 (9) (Klasse 7/8)}%
+\info{Thomas Filk}{12.05.2024}%Bildungsplan BW 2022: 3.2.7 (9) (Klasse 7/8)}%
 Kaum ein Gesetz bzw.\ eine Gruppe von Gesetzen erscheint zun\"achst\index{Hebel|(}
 selbstverst\"andlicher als das Hebelgesetz: Kraft $\times$ Kraftarm = Last $\times$ Lastarm.
 In Form einer Gleichgewichtsbedingung f\"ur eine allgemeine Waage kann man\index{Hebelgesetz}\index{Waage}
@@ -93,8 +93,8 @@ Waage ist das Produkt aus den Gewichten ($G_i$) multipliziert mit den zugeh\"ori
 Obwohl dieses Gesetz an sich schon sehr einfach ist, kann man dar\"uber diskutieren, ob 
 es sich auf einen noch einfacheren
 Fall zur\"uckf\"uhren l\"asst. So gibt es \glqq Beweise\grqq\ von Archimedes, Galileo, Huygens und
-anderen, die den allgemeinen Fall des Hebelgesetzes auf den speziellen symmetrischen
-Fall -- Lastarm = Kraftarm und Last = Kraft -- zur\"uckf\"uhren wollen. Der symmetrische Fall ist
+anderen, bei denen der allgemeine Fall des Hebelgesetzes auf den speziellen symmetrischen
+Fall -- Lastarm = Kraftarm und Last = Kraft -- zur\"uckgef\"uhrt wird. Der symmetrische Fall ist
 unmittelbar einsichtig und kann als Folge des \glqq Prinzips vom hinreichenden Grund\grqq\ angesehen
 werden: Wenn die beiden Hebelarme\index{Prinzip vom hinreichenden Grund}\index{Hebel!symmetrischer Fall}
 gleich sind und die beiden Gewichte ebenfalls gleich sind, gibt es keinen Grund, weshalb das
@@ -110,7 +110,8 @@ $G_1=G_2$ und $l_1=l_2$ erf\"ullt. Insofern kann es nach Mach nicht m\"oglich se
 allgemeine Hebelgesetz aus seiner symmetrischen Form abzuleiten. 
 
 Trotzdem ist es interessant zu untersuchen, an welchen Stellen Archimedes und seine Nachfolger
-weitere, teilweise versteckte Annahmen hineinstecken, wenn sie glauben, das allgemeine Gesetz ableiten
+weitere, teilweise versteckte Annahmen hineinstecken, wenn sie glauben, das allgemeine Gesetz 
+aus dem speziellen ableiten
 zu k\"onnen. W\"ahrend Ernst Mach argumentiert, dass die allgemeine Form des Hebelgesetzes
 in versteckter Form bei diesen Beweisen verwendet wird, erscheinen mir andere Annahmen gemacht
 zu werden, die dann zwar das Hebelgesetz zur Folge haben, aber physikalisch begr\"undeter sind. 
@@ -144,11 +145,11 @@ zu der doppelten Masse, also $2G$ (siehe Abb.\ \ref{fig_Hebel2}).
 \put(30,10){\line(0,1){20}}
 %
 \put(80,100){\circle{20}}
-\put(80,100){\circle{5}}
+\put(80,100){\makebox(0,0){$\bullet$}}
+\put(160,100){\makebox(0,0){$\bullet$}}
 \put(70,62){\line(0,1){38}}
 \put(80,110){\line(1,0){80}}
 \put(160,100){\circle{20}}
-\put(160,100){\circle{5}}
 \put(170,33){\line(0,1){67}}
 %
 \put(157,33){\line(1,0){26}}
@@ -525,7 +526,7 @@ Fall um die Achse $CD$ vor, daher sollte um diese Achse Gleichgewicht herrschen.
 \end{figure}
 
 Huygens argumentiert nun folgenderma\ss en: Wenn es einen Schwerpunkt $S$ gibt, muss
-dieser aus Symmetriegr\"unden auf der Verbindungslinie der Mittelpunkte liegen. Wenn
+dieser aus Symmetriegr\"unden auf der Verbindungslinie $MN$ der Mittelpunkte liegen. Wenn
 die Massenanordnung in ihrem Schwerpunkt im Gleichgewicht ist, muss sie auch auf
 jeder Geraden durch den Schwerpunkt im Gleichgewicht sein. Wir k\"onnen die (masselos gedachte)
 Ebene mit den beiden massiven Balken somit auf eine scharfe Kante durch den Schwerpunkt legen und
@@ -653,7 +654,7 @@ Au\ss erdem bilden die Kr\"afte (1) und (3) sowie die
 zugeh\"origen Hebelarme einen linearen Hebel, sodass das allgemeine Hebelgesetz gilt.}
 \end{figure}
 
-In einem zweiten Schritte betrachtet Mach eine allgemeine Situation (Abb.\ \ref{fig_Hebel_Allg}, mitte). 
+In einem zweiten Schritte betrachtet Mach eine allgemeine Situation (Abb.\ \ref{fig_Hebel_Allg}, Mitte). 
 Die beiden fest miteinander verbundenen Kreisscheiben (Mach spricht hier von einem Wellrad) haben
 unterschiedliche Radien $l_1$ und $l_2$ und die Kr\"afte $F_1$ und $F_2$ wirken in unterschiedliche
 Richtungen. Das allgemeine Hebelgesetz verlangt f\"ur das Gleichgewicht $F_1\cdot l_1=F_2\cdot l_2$.  
@@ -673,6 +674,516 @@ Annahmen die Kr\"afte (1) und (3) sowie die Kr\"afte (2) und (4) jeweils im Glei
 ist die gesamte Situation im Gleichgewicht und damit gilt auch das allgemeine schiefwinklige
 Hebelgesetz.\index{Hebel|)}
 
+\section{Arbeit und das Prinzip der virtuellen Verr\"uckungen}
+
+Bisher haben wir die Hebelgesetze \"uber die Ausgeglichenheit von Drehmomenten
+formuliert:\index{Virtuelle Verr\"uckungen}\index{Prinzip der virtuellen Verr\"uckungen}
+\begin{equation}
+           \mbox{Kraft} \times \mbox{Kraftarm} = \mbox{Last} \times \mbox{Lastarm}.
+\end{equation}            
+Galilio (und zum Teil schon Stevin vor ihm) erkannte aber, dass dieses Gesetz gleichbedeutend
+ist zu der Bedingung
+\begin{equation} 
+     \mbox{Kraft} \times \mbox{virtuelle Kraftverschiebung} +
+             \mbox{Last} \times \mbox{virtuelle Lastverschiebung} =0
+\end{equation}
+bzw.
+\begin{equation}
+\label{eq_Hebel_Arbeit}
+               G_1\cdot \delta h_1 + G_2 \cdot \delta h_2=0
+\end{equation}
+(siehe Abb.\ \ref{fig_Hebel_Arbeit}). Hierbei ist die virtuelle H\"ohen\"anderung $\delta h$
+eine infinitesimale H\"ohen\"anderung bei einer infinitesimalen \"Anderung des Zustands
+des System unter Ber\"ucksichtigung aller Zwangsbedingungen. W\"ahrend bei den Drehmomenten
+die Kraft mit der senkrechten Komponete des Hebelarms zu multiplizieren ist, was allgemein
+einem Kreuzprodukt $\pmb{F} \times \pmb{l}$ ($\pmb{F}$ die Kraft und $\pmb{l}$ die Verbindung
+zwischen Drehpunkt bzw.\ Aufh\"angepunkt und Kraftansatz) entspricht, ist bei der zweiten
+Formulierung des Gesetzes das Skalarprodukt von Kraft $\pmb{F}$ und virtueller Verschiebung $\delta \pmb{h}$
+zu nehmen: $\pmb{F} \cdot \delta \pmb{h}$.\index{Drehmoment}\index{Arbeit} 
+Dieses Produkt definiert in der Mechanik das
+Konzept der Arbeit. Gleichung \ref{eq_Hebel_Arbeit} bedeutet daher, dass sich die Lage des
+Schwerpunkts nicht \"andert (bzw.\ das der Schwerpunkt keine H\"ohen\"anderung erf\"ahrt), und das
+bedeutet wiederum, dass keine mechanische Arbeit verrichtet wird.
+
+\begin{figure}[htb]
+\begin{picture}(200,100)(0,-5)
+\put(10,78){\line(1,0){160}}
+\put(10,82){\line(1,0){160}}
+\put(10,78){\line(0,1){4}}
+\put(170,78){\line(0,1){4}}
+\put(170,30){\line(0,1){48}}
+\put(10,30){\line(0,1){48}}
+%
+\put(160,30){\line(1,0){20}}
+\put(160,10){\line(1,0){20}}
+\put(160,10){\line(0,1){20}}
+\put(180,10){\line(0,1){20}}
+%
+\put(100,58){\line(1,0){20}}
+\put(100,58){\line(1,2){10}}
+\put(120,58){\line(-1,2){10}}
+%
+\put(2,30){\line(1,0){16}}
+\put(2,14){\line(1,0){16}}
+\put(2,14){\line(0,1){16}}
+\put(18,14){\line(0,1){16}}
+%
+\put(10,47){\line(0,1){6}}
+\put(10,50){\line(1,0){40}}
+\put(70,50){\line(1,0){40}}
+\put(110,47){\line(0,1){6}}
+\put(60,50){\makebox(0,0){$l_1$}}
+\put(110,50){\line(1,0){20}}
+\put(150,50){\line(1,0){20}}
+\put(140,50){\makebox(0,0){$l_2$}}
+\put(10,21){\makebox(0,0){$G_1$}}
+\put(170,20){\makebox(0,0){$G_2$}}
+\end{picture}
+\hfill
+%%%%
+\begin{picture}(200,100)(0,-5)
+\put(10,62){\line(6,1){160}}
+\put(10,66){\line(6,1){160}}
+\put(170,41){\line(0,1){52}}
+\put(10,14){\line(0,1){68}}
+%
+\put(160,41){\line(1,0){20}}
+\put(160,21){\line(1,0){20}}
+\put(160,21){\line(0,1){20}}
+\put(180,21){\line(0,1){20}}
+%
+\put(100,58){\line(1,0){20}}
+\put(100,58){\line(1,2){10}}
+\put(120,58){\line(-1,2){10}}
+%
+\put(2,14){\line(1,0){16}}
+\put(2,-2){\line(1,0){16}}
+\put(2,-2){\line(0,1){16}}
+\put(18,-2){\line(0,1){16}}
+%
+\multiput(12,82)(5,0){32}{\makebox(0,0){-}}
+\put(10,47){\line(0,1){6}}
+\put(10,50){\line(1,0){40}}
+\put(70,50){\line(1,0){40}}
+\put(110,47){\line(0,1){6}}
+\put(60,50){\makebox(0,0){$l_1$}}
+\put(110,50){\line(1,0){20}}
+\put(150,50){\line(1,0){20}}
+\put(140,50){\makebox(0,0){$l_2$}}
+\put(10,4){\makebox(0,0){$G_1$}}
+\put(170,31){\makebox(0,0){$G_2$}}
+\put(0,72){\makebox(0,0){$\delta h_1$}}
+\put(180,85){\makebox(0,0){$\delta h_2$}}
+\end{picture}
+\caption{\label{fig_Hebel_Arbeit}%
+Eine infinitesimale Verr\"uckung bzw.\ Verschiebung des Hebels -- z.B.\ von Massen im
+Gravitationsfeld der Erde, sodass wir die Kr\"afte in Form von Gewichten realisiert haben --
+f\"uhrt auf einer Seite zu einer vertikalen Ver\"anderung $\delta h_1$, die proportional zur
+Hebelarml\"ande $l_1$ ist, und auf der gegen\"uberliegenden Seite zu einer entgegengesetzen
+vertikalen Verschiebung $\delta h_2$ proportional zu $l_2$. Damit erh\"alt das Hebelgesetz
+die Formulierung, dass in der Gleichgewichtslage bei einer infinitesimalen Verr\"uckung der Schwerpunkt
+in seiner Lage bleibt.}
+\end{figure}
+
+Die alternative Formulierung des Hebelgesetzes lautet daher: In einer Gleichgewichtslage
+verschwindet die Summe an virtueller Arbeit, die das System leistet oder an ihm geleistet wird,
+sofern eine infinitesimale Verr\"uckung an dem System vorgenommen wird. 
+Wir erhalten so zwei Formulierungen des Hebelgesetzes: einmal \"uber die Drehmomente und
+einmal \"uber die virtuelle Arbeit bei infinitesimalen Verr\"uckungen. 
+Die Dimensionen bzw.\ physikalischen Einheiten von Drehmoment
+und Arbeit sind gleich (eine Kraft multipliziert mit einer L\"ange), trotzdem handelt es sich 
+zun\"achst um verschiedene Konzepte.  
+
+Mach untersucht nun, ob man das allgemeine Gesetz der virtuellen Verr\"uckungen
+nicht aus dem Spezialfall $G_1=G_2$ und $\delta h_1=-\delta h_2$, der aus Symmetriegr\"unden
+als Gleichgewichtszustand unmittelbar einsichtig ist, ableiten kann. Dazu betrachtet er eine
+Situation aus mehreren Gewichten, die hier durch zwei Gewichte im Verh\"altnis von $2:1$
+gegeben sein soll (Mach betrachtet das Verh\"altnis $4:3$). Vorab versuchen wir jedoch zu
+kl\"aren, welche Annahmen Mach in seinen Beweis einflie\ss en l\"asst.
+
+\begin{figure}[htb]
+\begin{picture}(130,150)(0,20)  % 1 
+\put(50,130){\circle{40}}
+\put(50,130){\makebox(0,0){$\bullet$}}
+\put(30,80){\line(0,1){50}}
+\put(70,30){\line(0,1){100}}
+%
+\put(25,80){\line(1,0){10}}
+\put(25,70){\line(1,0){10}}
+\put(25,70){\line(0,1){10}}
+\put(35,70){\line(0,1){10}}
+\put(65,30){\line(1,0){10}}
+\put(65,20){\line(1,0){10}}
+\put(65,20){\line(0,1){10}}
+\put(75,20){\line(0,1){10}}
+\put(30,75){\makebox(0,0){$G$}}
+\put(70,25){\makebox(0,0){$G$}}
+\put(47,75){\makebox(0,0){$\delta h \uparrow$}}
+\put(53,25){\makebox(0,0){$\delta h \downarrow$}}
+\put(20,160){\makebox(0,0){(a)}}
+\thicklines
+\put(21,70){\line(1,0){18}}
+\put(61,20){\line(1,0){18}}
+\end{picture}
+%
+\begin{picture}(140,150)(0,20)  %  2
+\put(50,130){\circle{40}}
+\put(50,130){\makebox(0,0){$\bullet$}}
+\put(30,55){\line(0,1){75}}
+\put(70,55){\line(0,1){75}}
+%
+\put(25,55){\line(1,0){10}}
+\put(25,45){\line(1,0){10}}
+\put(25,45){\line(0,1){10}}
+\put(35,45){\line(0,1){10}}
+\put(65,55){\line(1,0){10}}
+\put(65,45){\line(1,0){10}}
+\put(65,45){\line(0,1){10}}
+\put(75,45){\line(0,1){10}}
+\put(30,50){\makebox(0,0){$G$}}
+\put(70,50){\makebox(0,0){$G$}}
+\put(15,50){\makebox(0,0){$\leftarrow$}}
+\put(85,50){\makebox(0,0){$\rightarrow$}}
+\put(20,160){\makebox(0,0){(b)}}
+\thicklines
+\put(21,45){\line(1,0){18}}
+\put(0,45){\line(1,0){18}}
+\put(61,45){\line(1,0){18}}
+\put(82,45){\line(1,0){18}}
+\end{picture}
+%
+\begin{picture}(120,150)(0,20)  %  3
+\put(50,130){\circle{40}}
+\put(50,130){\makebox(0,0){$\bullet$}}
+\put(30,45){\line(0,1){85}}
+\put(70,59){\line(0,1){71}}
+%
+\put(15,55){\line(1,0){10}}
+\put(15,45){\line(1,0){10}}
+\put(15,45){\line(0,1){10}}
+\put(25,45){\line(0,1){10}}
+\put(35,55){\line(1,0){10}}
+\put(35,45){\line(1,0){10}}
+\put(35,45){\line(0,1){10}}
+\put(45,45){\line(0,1){10}}
+%
+\put(63,59){\line(1,0){14}}
+\put(63,45){\line(1,0){14}}
+\put(63,45){\line(0,1){14}}
+\put(77,45){\line(0,1){14}}
+\put(20,50){\makebox(0,0){$G$}}
+\put(40,50){\makebox(0,0){$G$}}
+\put(70,53){\makebox(0,0){$2G$}}
+\put(20,160){\makebox(0,0){(c)}}
+%\put(15,50){\makebox(0,0){$\leftarrow$}}
+%\put(85,50){\makebox(0,0){$\rightarrow$}}
+\thicklines
+\put(10,45){\line(1,0){40}}
+\put(55,45){\line(1,0){30}}
+\end{picture}
+\caption{\label{fig_Hebel_Arbeit2}%
+Drei F\"alle, bei denen keine Arbeit verrichtet wird und die daher ohne Aufwand 
+durchf\"uhrbar sein sollten.
+(a) Werde gleiche Gewichte um gleiche H\"ohen verschoben, befindet sich das System
+im Gleichgewicht. (b) Gewichte k\"onnen ohne Aufwand an der Maschine befestigt
+und wieder gel\"ost werden. (c) Statt eines Gewichts kann man auch zweimal das halbe
+Gewicht nehmen.}
+\end{figure}
+
+Wir nehmen dazu eine Rolle an, \"uber die ein als masselos angenommenes Seil gelegt ist,
+an dem Massen h\"angen, die als Gewichte fungieren. Eine Annahme ist, dass zwei gleiche
+Massen an gegen\"uberliegenden Enden im Gleichgewicht sind, unabh\"angig von ihrer
+H\"ohe (siehe Abb.\ \ref{fig_Hebel_Arbeit2}(a)). Eine virtuelle Verr\"uckung hebt die eine Masse
+um denselben Anteil $\delta h$ hoch, um den die andere Masse herabsinkt, sodass der
+Schwerpunkt unver\"andert bleibt. Eine weitere Annahme ist, dass die 
+Massen ohne Arbeitsaufwand waagerecht verschoben und auf diese Weise mit dem Seil
+verbunden oder von ihm gel\"ost werden k\"onnen (Abb.\ \ref{fig_Hebel_Arbeit2}(b)). 
+Und als dritte Annahme soll es kein Unterschied sein, ob wir eine Masse als ganzen K\"orper
+belassen oder sie in verschiedene Teile aufteilen (Abb.\ \ref{fig_Hebel_Arbeit2}(c)). 
+
+Wir k\"onnen nun unter Ausnutzung dieser Gleichgewichtsf\"alle ohne Arbeitsaufwand 
+ein Gewicht zur Masse $2m$
+um eine H\"ohe $h$ angeben, sofern gleichzeitig ein Gewicht zur Masse $m$ um die H\"ohe
+$2h$ herabgelassen wird. F\"ur die verrichtete Arbeit mit diesen Gewichten gilt offenbar 
+$(2G)h + G(-2h)=0$ (siehe Abb.\ \ref{fig_Hebel_Arbeit3}).
+
+\begin{figure}[hbt]
+\begin{picture}(100,150)(0,0)  % 1 
+\put(40,130){\circle{30}}
+\put(40,130){\makebox(0,0){$\bullet$}}
+\put(24,80){\line(0,1){50}}
+\put(56,80){\line(0,1){50}}
+\put(24,40){\line(0,1){30}}
+\put(56,40){\line(0,1){30}}
+\multiput(0,70)(5,0){20}{\makebox(0,0){-}}
+%
+\put(19,80){\line(1,0){10}}
+\put(19,70){\line(1,0){10}}
+\put(19,70){\line(0,1){10}}
+\put(29,70){\line(0,1){10}}
+\put(51,80){\line(1,0){10}}
+\put(51,70){\line(1,0){10}}
+\put(51,70){\line(0,1){10}}
+\put(61,70){\line(0,1){10}}
+\put(72,80){\line(1,0){10}}
+\put(72,70){\line(1,0){10}}
+\put(72,70){\line(0,1){10}}
+\put(82,70){\line(0,1){10}}
+\put(24,75){\makebox(0,0){$G$}}
+\put(56,75){\makebox(0,0){$G$}}
+\put(77,75){\makebox(0,0){$G$}}
+\put(20,150){\makebox(0,0){(a)}}
+\thicklines
+\put(15,70){\line(1,0){18}}
+\put(47,70){\line(1,0){18}}
+\put(68,70){\line(1,0){18}}
+\put(68,90){\line(1,0){18}}
+\put(15,50){\line(1,0){18}}
+\put(47,50){\line(1,0){18}}
+\end{picture}
+%
+\begin{picture}(100,150)(0,0)  % 2 
+\put(40,130){\circle{30}}
+\put(40,130){\makebox(0,0){$\bullet$}}
+\put(24,60){\line(0,1){70}}
+\put(56,100){\line(0,1){30}}
+\put(24,20){\line(0,1){30}}
+\put(56,60){\line(0,1){30}}
+\multiput(0,70)(5,0){20}{\makebox(0,0){-}}
+%
+\put(19,60){\line(1,0){10}}
+\put(19,50){\line(1,0){10}}
+\put(19,50){\line(0,1){10}}
+\put(29,50){\line(0,1){10}}
+\put(51,100){\line(1,0){10}}
+\put(51,90){\line(1,0){10}}
+\put(51,90){\line(0,1){10}}
+\put(61,90){\line(0,1){10}}
+\put(72,80){\line(1,0){10}}
+\put(72,70){\line(1,0){10}}
+\put(72,70){\line(0,1){10}}
+\put(82,70){\line(0,1){10}}
+\put(24,55){\makebox(0,0){$G$}}
+\put(56,95){\makebox(0,0){$G$}}
+\put(77,75){\makebox(0,0){$G$}}
+\put(20,150){\makebox(0,0){(b)}}
+\thicklines
+\put(15,50){\line(1,0){18}}
+\put(47,70){\line(1,0){18}}
+\put(47,90){\line(1,0){18}}
+\put(68,90){\line(1,0){18}}
+\put(15,30){\line(1,0){18}}
+\put(68,70){\line(1,0){18}}
+\end{picture}
+%
+\begin{picture}(100,150)(0,0)  % 3 
+\put(40,130){\circle{30}}
+\put(40,130){\makebox(0,0){$\bullet$}}
+\put(24,60){\line(0,1){70}}
+\put(56,80){\line(0,1){50}}
+\put(24,20){\line(0,1){30}}
+\put(56,60){\line(0,1){10}}
+\multiput(0,70)(5,0){20}{\makebox(0,0){-}}
+%
+\put(19,60){\line(1,0){10}}
+\put(19,50){\line(1,0){10}}
+\put(19,50){\line(0,1){10}}
+\put(29,50){\line(0,1){10}}
+\put(51,80){\line(1,0){10}}
+\put(51,70){\line(1,0){10}}
+\put(51,70){\line(0,1){10}}
+\put(61,70){\line(0,1){10}}
+\put(72,100){\line(1,0){10}}
+\put(72,90){\line(1,0){10}}
+\put(72,90){\line(0,1){10}}
+\put(82,90){\line(0,1){10}}
+\put(24,55){\makebox(0,0){$G$}}
+\put(56,75){\makebox(0,0){$G$}}
+\put(77,95){\makebox(0,0){$G$}}
+\put(20,150){\makebox(0,0){(c)}}
+\thicklines
+\put(15,50){\line(1,0){18}}
+\put(47,70){\line(1,0){18}}
+\put(47,90){\line(1,0){18}}
+\put(68,90){\line(1,0){18}}
+\put(15,30){\line(1,0){18}}
+\put(68,70){\line(1,0){18}}
+\end{picture}
+%
+\begin{picture}(100,150)(0,0)  % 4 
+\put(40,130){\circle{30}}
+\put(40,130){\makebox(0,0){$\bullet$}}
+\put(24,40){\line(0,1){90}}
+\put(56,100){\line(0,1){30}}
+\put(24,0){\line(0,1){30}}
+\put(56,80){\line(0,1){10}}
+\multiput(0,70)(5,0){20}{\makebox(0,0){-}}
+%
+\put(19,40){\line(1,0){10}}
+\put(19,30){\line(1,0){10}}
+\put(19,30){\line(0,1){10}}
+\put(29,30){\line(0,1){10}}
+\put(51,100){\line(1,0){10}}
+\put(51,90){\line(1,0){10}}
+\put(51,90){\line(0,1){10}}
+\put(61,90){\line(0,1){10}}
+\put(72,100){\line(1,0){10}}
+\put(72,90){\line(1,0){10}}
+\put(72,90){\line(0,1){10}}
+\put(82,90){\line(0,1){10}}
+\put(24,35){\makebox(0,0){$G$}}
+\put(56,95){\makebox(0,0){$G$}}
+\put(77,95){\makebox(0,0){$G$}}
+\put(20,150){\makebox(0,0){(d)}}
+\put(75,80){\makebox(0,0){$h$}}
+\put(75,50){\makebox(0,0){$2h$}}
+\put(75,30){\makebox(0,0){$-$}}
+\thicklines
+\put(15,30){\line(1,0){18}}
+\put(47,90){\line(1,0){18}}
+\put(47,110){\line(1,0){18}}
+\put(68,90){\line(1,0){18}}
+\put(15,10){\line(1,0){18}}
+\put(68,70){\line(1,0){18}}
+\end{picture}
+%
+\caption{\label{fig_Hebel_Arbeit3}%
+Lediglich unter Ausnutzung der symmetrischen F\"alle sowie der im Text erw\"ahnten
+allgemeinen Annahmen l\"asst sich ein Gewicht von $2G$ ohne Arbeit um die H\"ohe $h$ anheben,
+sofern ein Gewicht $G$ um die H\"ohe $2h$ herabgelassen wird.}
+\end{figure}
+
+Die Argumentation kann nun folgenderma\ss en abgeschlossen werden: Jede reversibel
+arbeitende Maschine (also eine Maschine, die ohne Arbeit zu verrichten bzw.\ ohne
+Arbeitsaufwand in beide Richtungen betrieben werden kann), 
+bei der ein Gewicht $2G$ um die H\"ohe $h$ angehoben und gleichzeitig
+ein Gewicht $G$ um die H\"ohe $-2h$ herabgelassen wird, muss st\"andig im Gleichgewicht
+sein und muss somit ohne Aufwand betreibbar sein. W\"urde es eine Maschine geben, die
+dieses Prinzip verletzt, 
+d.h., w\"urde diese Maschine in die eine Richtung Aufwand ben\"otigen, bzw.\ in die umgekehrte
+Richtung spontan ablaufen, so k\"onnte man die beiden Maschinen so hintereinanderschalten,
+dass spontan Massen beliebig angehoben werden k\"onnen. Dies widerspricht aber
+vollkommen der Alltagserfahrung.    
+
+\begin{SCfigure}[50][htb]
+\begin{picture}(90,120)(0,0)
+\put(60,90){\circle{40}}
+\put(60,90){\circle{20}}
+\put(60,90){\makebox(0,0){$\bullet$}}
+\put(40,24){\line(0,1){66}}
+\put(70,30){\line(0,1){60}}
+
+\put(33,24){\line(1,0){14}}
+\put(33,10){\line(1,0){14}}
+\put(33,10){\line(0,1){14}}
+\put(47,10){\line(0,1){14}}
+\put(60,30){\line(1,0){20}}
+\put(60,10){\line(1,0){20}}
+\put(60,10){\line(0,1){20}}
+\put(80,10){\line(0,1){20}}
+\put(40,17){\makebox(0,0){$G$}}
+\put(70,20){\makebox(0,0){$2G$}}
+\put(60,90){\line(1,0){10}}
+\put(60,90){\line(-2,1){18}}
+\put(64,87){\makebox(0,0){${\scriptstyle r}$}}
+\put(49,100){\makebox(0,0){${\scriptstyle R}$}}
+\end{picture}
+\caption{\label{fig_Hebel_Wellrad}%
+Ein Wellrad mit Innenradius $r$ und Au\ss enradius $R=2r$ befindet sich 
+im Gleichgewicht, wenn sich die Kr\"afte wie 2:1 verhalten (das doppelte Gewicht
+am kleineren Radius). Bei einer virtuellen Verr\"uckung wird sich die H\"ohe des Gewichts an
+dem kleineren Durchmesser im Verh\"altnis zu dem Gewicht an dem gr\"o\ss eren 
+Durchmesser im Verh\"altnis 1:2 ver\"andern. Somit gilt $(2G)\cdot \delta h = G\cdot (2\,\delta h)$.
+Der Schwerpunkt bleibt unver\"andert und daher befindet sich das System im
+Gleichgewicht.}
+\end{SCfigure}
+
+Damit k\"onnte man begr\"unden, weshalb ein Wellrad mit Au\ss enradius $R=2r$ und Innenradius
+$r$, bei dem am Au\ss enradius das Gewicht $G$ und am Innenradius das Gewicht $2G$
+h\"angt, im Gleichgewicht ist (siehe Abb.\ \ref{fig_Hebel_Wellrad}): 
+Eine virtuelle Verr\"uckung der Gewichte erfordert keine Arbeit und setzt auch keine Arbeit frei. 
+Man kann sich leicht \"uberlegen, dass man s\"amtliche Argumente f\"ur beliebige Gewichtsverh\"altnisse
+$G_1:G_2$ und entsprechende Radien des Wellrads $R_1$ und $R_2$, sodass
+$G_1/G_2=R_2/R_1$, verallgemeinern kann.
+
+Damit hat es den Anschein, als ob man das allgemeine Hebelgesetz doch aus dem
+symmetrischen Fall ableiten kann. Mach argumentiert jedoch, dass schon das
+Prinzip der virtuellen Verr\"uckung an sich (d.h., dass Gleichgewicht herrscht, wenn
+bei einer virtuellen Verr\"uckung keine Arbeit verrichtet wird) eine Zusatzannahme ist,
+die sich nicht rein mathematisch beweisen l\"asst. Insofern ist das Prinzip der virtuellen
+Verr\"uckung zwar anschaulich und eine Erfahrungstatsache, aber keine mathematisch
+notwendige Folgerung aus dem symmetrischen Fall. 
+
+\begin{SCfigure}[50][htb]
+\begin{picture}(205,135)(0,0)
+\put(50,10){\line(1,0){100}}
+\put(50,10){\line(0,1){10}}
+\put(50,20){\line(1,0){45}}
+\put(105,20){\line(1,0){45}}
+\put(150,10){\line(0,1){10}}
+%
+\put(95,20){\line(0,1){34}}
+\put(105,20){\line(0,1){36}}
+\put(95,62){\line(0,1){42}}
+\put(105,64){\line(0,1){42}}
+\put(95,112){\line(0,1){17}}
+\put(105,114){\line(0,1){15}}
+\put(95,129){\line(1,0){10}}
+%
+\put(50,47){\line(6,1){100}}
+\put(50,55){\line(6,1){100}}
+\put(50,97){\line(6,1){100}}
+\put(50,105){\line(6,1){100}}
+\put(50,47){\line(0,1){26}}
+\put(50,79){\line(0,1){26}}
+\put(0,73){\line(1,0){50}}
+\put(0,79){\line(1,0){50}}
+\put(0,73){\line(0,1){6}}
+\put(58,56.5){\line(0,1){42}}
+\put(142,70.5){\line(0,1){42}}
+\put(150,64){\line(0,1){26}}
+\put(150,96){\line(0,1){26}}
+\put(150,90){\line(1,0){50}}
+\put(150,96){\line(1,0){50}}
+\put(200,90){\line(0,1){6}}
+%
+\put(35,50){\line(1,0){10}}
+\put(35,50){\line(0,1){10}}
+\put(35,60){\line(1,0){10}}
+\put(45,50){\line(0,1){10}}
+\put(40,60){\line(0,1){19}}
+%
+\put(190,67){\line(1,0){10}}
+\put(190,67){\line(0,1){10}}
+\put(190,77){\line(1,0){10}}
+\put(200,67){\line(0,1){10}}
+\put(195,77){\line(0,1){19}}
+%
+\put(100,59){\makebox(0,0){$\bullet$}}
+\put(100,109){\makebox(0,0){$\bullet$}}
+\put(54,51){\makebox(0,0){$\bullet$}}
+\put(54,101){\makebox(0,0){$\bullet$}}
+\put(146,67){\makebox(0,0){$\bullet$}}
+\put(146,117){\makebox(0,0){$\bullet$}}
+\put(40,55){\makebox(0,0){$G$}}
+\put(195,72){\makebox(0,0){$G$}}
+\end{picture}
+\caption{\label{fig_Hebel_Roberval}%
+Die  Roberval'sche Waage. Die Waage ist im Gleichgewicht,
+wenn die Gewichte gleich sind. Dies ist unabhh\"angig davon, an welcher Stelle der beiden
+Arme sie aufgeh\"angt sind.}
+\end{SCfigure}
+
+Eine interessante Anwendung des Prinzips der virtuellen Verr\"uckung ist die
+sogenannte Roberval'sche Waage (benannt nach dem franz\"osischen Mathematiker
+Gilles Personne de Roberval (1602--1675)), 
+siehe Abb.\ \ref{fig_Hebel_Roberval}.\index{Roberval, Gilles Personne de}\index{Roberval'sche Waage}
+Das Prinzip der virtuellen Verr\"uckung l\"asst unmittelbar einsehen, dass die
+Waage im Gleichgewicht ist, wenn die Gewichts gleich sind, unabh\"angig davon, wo an
+den beiden Lastarmen die Gewichte h\"angen. Das Hebelgesetz l\"asst dies wesentlich
+schwieriger erkennen. 
+
+
   
 \begin{thebibliography}{9}
 \bibitem{Mach} Mach, Ernst; \textit{Die Mechanik in ihrer Entwicklung: historisch-kritisch dargestellt};
@@ -680,5 +1191,5 @@ Hebelgesetz.\index{Hebel|)}
                 Leipzig.
 \end{thebibliography}
 
-%\end{document}
+\end{document}
 

@@ -1,0 +1,729 @@
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{11}
+
+\chapter{Die Legendre-Transformation}
+% Kap 12
+\label{chap_Legendre}
+
+\info{Thomas Filk}{11.05.2024}%
+Legendre-Transformationen treten in der Physik in verschiedenen Zusammenh\"angen auf.
+Die bekanntesten Beispiele sind die Transformation zwischen 
+der Lagrange-Funktion (als Funktion von Ort und Geschwindigkeit)
+und der Hamilton-Funktion (als Funktion von Ort und Impuls) in
+der klassischen Mechanik, sowie die Transformationen zwischen
+verschiedenen thermodynamischen Potentialen (freie Energie,
+Enthalpie, gro\ss kanonische Freie Energie, etc.) in der
+Thermodynamik bzw.\ statistischen Mechanik. Trotz ihrer gro\ss en Bedeutung
+in der Physik, bleibt die Legendre-Transformation oft etwas R\"atselhaftes,
+von dem man nicht so ganz versteht, worin ihre besondere Bedeutung liegt.
+
+In der Physik beschreibt die Legendre-Transformation h\"aufig den 
+Zusammenhang zwischen zwei durch verschiedene Funktionen ausgedr\"uckten 
+Extremalbedingungen, die sich allerdings auf dasselbe Sys\-tem beziehen.
+In der Mechanik beschreiben die L\"osungen der
+Euler-Lagrange-Gleichungen, ausgedr\"uckt durch die Lagrange-Funktion, dieselben
+Bahnkurven wie die Hamilton'schen Bewegungsgleichungen. In der
+Thermodynamik soll in Abh\"angigkeit von den kontrollierten Parametern eines Ensembles
+ein thermodynamisches Potential extremal werden: die Entropie im mikrokanonischen --
+vollkommen abgeschlossenen --
+Ensemble, die freie Energie im kanonischen Ensemble, bei dem ein W\"armeaustausch
+mit der Umgebung erlaubt ist, oder auch die Enthalpie bzw.\
+die freie Enthalpie, falls statt des Volumens der Druck kontrolliert wird. In allen
+F\"allen wird die Ableitung der einen Funktion zur
+Variablen der transformierten Funktion. 
+
+Was oftmals verloren geht, ist die geometrische
+Bedeutung der Legendre-Transformation als einer
+\glqq Ber\"uhrungstransformation\grqq\ oder
+\glqq Transformation von Linienelementen\grqq. Dieser
+Zugang stand historisch im Vordergrund (wobei es
+immer schon darum ging, Bedingungen f\"ur die L\"osbarkeit
+bestimmter Differentialgleichungen zu formulieren).
+In diesem Abschnitt soll dieser Aspekt n\"aher
+beleuchtet werden. Viele \"Uberlegungen stammen aus
+dem klassischen Buch von Sophus Lie 
+\glqq Geometrie der Ber\"uhrungstransformationen\grqq\ \cite{Lie},
+das zwar in etwas veralteter Sprache geschrieben ist,
+aber trotzdem interessante geometrische Einblicke
+liefert.
+
+
+\section{Konvexe und konkave Funktionen}
+
+Wir bezeichnen eine Teilmenge $K$ eines Vektorraums $V$ als konvex, wenn
+die gerade Verbindungslinie zwischen zwei beliebigen Punkten 
+$\pmb{x}_1, \pmb{x}_2 \in K$, d.h.\ die Menge der Punkte
+\begin{equation}
+      \pmb{y} = \pmb{x}_1 + \alpha (\pmb{x}_2-\pmb{x}_1) \hspace{1cm} 0 \leq \alpha \leq 1
+\end{equation}
+ganz in $K$ liegt. Insbesondere hei\ss t ein Gebiet in der Ebene konvex, wenn die
+geradlinige Verbindungslinie zwischen je zwei Punkten dieses Gebiets ganz in dem
+Gebiet verl\"auft. 
+
+Das Konzept des Vektorraums l\"asst sich in diesem Fall auch auf
+einen affinen Raum verallgemeinern. Auch auf Riemann'schen Mannigfaltigkeiten
+kann man von konvexen Mengen sprechen, sofern die Bedingung 
+\glqq gerade Verbindungslinie\grqq\ durch \glqq k\"urzeste Verbindungslinie\grqq\ ersetzt wird. 
+
+Der Graph einer Funktion $f:U\in \mathbb{R}^n \rightarrow \mathbb{R}$ bezeichnet die
+Menge der Punkte  $(\pmb{x},f(\pmb{x}))\in \mathbb{R}^{n+1}; x\in U$.
+Eine Funktion $f:U\in \mathbb{R}^n \rightarrow \mathbb{R}$ hei\ss t konvex, 
+wenn die Punkte oberhalb des Graphen dieser Funktion,
+das sind die Punkte $(\pmb{x},y)$, f\"ur
+die gilt $y\geq f(\pmb{x})$, eine konvexe Menge bilden (siehe Abb.\ \ref{fig_Leg_0} (links)). 
+Die Menge der Punkte oberhalb des Graphen einer Funktion bezeichnet man auch 
+als ihren Epigraph. 
+
+Eine Funktion $f(\pmb{x})$ hei\ss t konkav, wenn die Punktemenge unterhalb des Graphen
+dieser Funktion -- der sogenannte Hypograph, also die Menge der Punkte
+$(\pmb{x},y)$ mit $y\leq f(\pmb{x})$ -- eine konvexe Menge bildet (siehe Abb.\ \ref{fig_Leg_0} (rechts)).
+
+\begin{figure}[htb]
+\begin{picture}(200,150)(0,0)
+\put(10,20){\vector(1,0){180}}
+\put(20,10){\vector(0,1){130}}
+\qbezier(30,140)(50,30)(100,30)
+\qbezier(100,30)(150,30)(170,140)
+\put(70,60){\makebox(0,0){$\bullet$}}
+\put(145,85){\makebox(0,0){$\bullet$}}
+\put(70,60){\line(3,1){75}}
+\put(190,13){\makebox(0,0){$x$}}
+\put(30,147){\makebox(0,0){$f(x)$}}
+\put(70,67){\makebox(0,0){$\pmb{x}_1$}}
+\put(145,92){\makebox(0,0){$\pmb{x}_2$}}
+\end{picture}
+\hfill
+\begin{picture}(200,150)(0,0)
+\put(10,20){\vector(1,0){180}}
+\put(20,10){\vector(0,1){130}}
+\qbezier(40,30)(60,130)(110,130)
+\qbezier(110,130)(160,130)(180,30)
+\put(70,60){\makebox(0,0){$\bullet$}}
+\put(145,85){\makebox(0,0){$\bullet$}}
+\put(70,60){\line(3,1){75}}
+\put(190,13){\makebox(0,0){$x$}}
+\put(30,147){\makebox(0,0){$f(x)$}}
+\put(70,67){\makebox(0,0){$\pmb{x}_1$}}
+\put(145,92){\makebox(0,0){$\pmb{x}_2$}}
+\end{picture}
+\caption{\label{fig_Leg_0}%
+Konvexe und konkave Funktionen. (links) Bei einer konvexen Funktion bildet die Menge oberhalb
+des Graphen der Funktion eine konvexe Menge, d.h., die Verbindungslinie zweier beliebiger
+Punkte aus dieser Menge liegt ebenfalls in dieser Menge. (rechts) Bei einer konkaven Funktion
+ist die Menge unterhalb des Graphen dieser Funktion konvex.}
+\end{figure} 
+
+Eine \"aquivalente Definition von konvexer Funktion $f$ lautet, dass f\"ur zwei beliebige
+Punkte $\pmb{x}_1$ und $\pmb{x}_2$ aus dem Definitionsbereich die Ungleichung 
+\begin{equation}
+          f ( \alpha \pmb{x}_1 + (1-\alpha) \pmb{x}_2) \leq  \alpha f (\pmb{x}_1) + (1-\alpha) f(\pmb{x}_2)
+\end{equation}
+gilt. Bei konvexen Funktionen handelt es sich somit um Verallgemeinerungen von linearen
+Funktionen, f\"ur die das Gleichheitszeichen gilt. Bei streng konvexen Funktionen gilt immer
+die Ungleichheit. Falls die Funktionen zweimal stetig differenzierbar sind, ist in diesem F\"allen 
+die Hesse-Matrix der zweiten Ableitungen $\partial^2 f(x)/\partial x_i \partial x_j$ 
+immer positiv definit.  
+
+Im Folgenden beschr\"anken wir uns meist auf den Fall $n=1$, d.h., wir betrachten Funktionen
+$f:U\in \mathbb{R} \rightarrow \mathbb{R}$. Au\ss erdem beschr\"anken wir uns auf streng konvexe
+Funktionen. Die Verallgemeinerungen auf $n>1$ und konkave Funktionen ist in den meisten F\"allen
+offensichtlich. Bei konkaven Funktionen vertauschen h\"aufig die Beziehungen zwischen Maxima und Minima.  
+
+\section{Verschiedene Definitionen der Legendre-Transformation}
+
+In den folgenden Abschnitten gehen wir auf unterschiedliche
+Definitionen der Legendre-Transformation ein, vermeiden jedoch
+vorl\"aufig noch die geometrische Bedeutung als Ber\"uhrungstransformation.
+
+\subsection{Definition aus einem Extremalprinzip}
+
+{\em Definition}:
+Gegeben sei eine konvexe Funktion $f:U\subset \mathbb{R} \rightarrow \mathbb{R}$. 
+Die Legendre-Transformierte von $f$ ist die Funktion
+\begin{equation}
+\label{eq_Leg_1}
+     g(p) = {\rm max}_x \{  p \cdot x - f(x)\} \, . 
+\end{equation}
+
+Ist $f(x)$ einmal stetig differenzierbar, wird der gesuchte Extremalwert bei dem Punkt $x$
+angenommen, der sich aus folgender Bedingung ergibt:
+\begin{equation}
+   \frac{{\rm d}}{{\rm d}x} (p \cdot x - f(x) )\Big|_{x(p)} = 0  ~~~{\rm bzw.}~~~
+         p = \frac{{\rm d}f(x)}{{\rm d}x}\Big|_{x(p)} \, . 
+\end{equation}
+$x(p)$ kann auch als Umkehrabbildung zu
+\begin{equation}
+               p(x) =  \frac{{\rm d}f(x)}{{\rm d}x}
+\end{equation}
+aufgefasst werden. Der gesuchte Maximalwert ist dann
+\begin{equation}
+      g(p) = p \cdot x(p) - f(x(p)) \, .
+\end{equation}     
+
+\begin{figure}[htb]
+\begin{picture}(200,200)(0,0)
+\put(10,60){\vector(1,0){180}}
+\put(50,0){\vector(0,1){200}}
+\put(125,60){\line(0,1){76}}
+\put(50,119){\line(1,0){75}}
+\put(125,50){\makebox(0,0){$x(p)$}}
+\put(155,190){\makebox(0,0){$f(x)$}}
+\put(145,128){\makebox(0,0){$g(p)$}}
+\put(128,128){\makebox(0,0){$\big\}$}}
+\put(30,119){\makebox(0,0){$f(x(p))$}}
+\put(30,22){\makebox(0,0){$y=px$}}
+\thicklines
+\put(20,30){\line(1,1){170}}
+\qbezier(10,80)(120,70)(170,190)
+\end{picture}
+%
+\hfill
+\begin{picture}(200,200)(0,0)
+\put(10,60){\vector(1,0){180}}
+\put(50,0){\vector(0,1){200}}
+\put(125,60){\line(0,1){60}}
+\put(50,119){\line(1,0){75}}
+\put(125,50){\makebox(0,0){$x(p)$}}
+\put(150,180){\makebox(0,0){$f(x)$}}
+\put(30,52){\makebox(0,0){$g(p)$}}
+\put(46,52){\makebox(0,0){$\big\{$}}
+\put(30,119){\makebox(0,0){$f(x(p))$}}
+\put(180,150){\makebox(0,0){$y(x)=$}}
+\put(175,135){\makebox(0,0){$px-g(p)$}}
+\thicklines
+\put(20,14){\line(1,1){170}}
+\qbezier(10,80)(120,70)(170,190)
+\end{picture}
+\caption{\label{fig_Leg_1}%
+Legendre-Transformation. (links) Wir k\"onnen durch den Ursprung eine Gerade
+mit der Steigung $p$ legen, also $y=px$. Die Legendre-Transformierte $g(p)$ ist dann der
+extremale Abstand zwischen dieser Geraden und der Funktion $f(x)$. Dieser befindet sich 
+an der Stelle $x$, die durch die Bedingung $p=\frac{{\rm d}f(x)}{{\rm d}x}$ gegeben ist. 
+(rechts) Zu einer gegebenen Funktion $f(x)$ k\"onnen wir an einen Punkt
+$x$ eine Tangente mit der Steigung $p=\frac{{\rm d}f(x)}{{\rm d}x}$ legen. Der Schnittpunkt
+dieser Tangente mit der $y$-Achse ist $-g(p)$.}
+\end{figure}         
+
+Anschaulich handelt es sich bei der Extremalbedingung f\"ur
+$px-f(x)$ um die Differenz zwischen der Funktion $f(x)$ und 
+der Funktion $px$, also einer Geraden durch den Ursprung 
+mit Steigung $p$ (siehe Abb.\ \ref{fig_Leg_1} (rechts)). 
+Diese Differenz wird an dem Punkt $x(p)$
+extremal, wo die Steigung von $f$ gleich der Steigung
+$p$ der Geraden ist, also $f'(x(p))=p$. Die Differenz zwischen beiden
+Kurven an dieser Stelle ist gerade der Wert $g(p)$, um den
+die Gerade nach oben oder unten verschoben werden muss, damit
+sie zu einer Tangente an $f(x)$ wird.
+
+\subsubsection{Anmerkungen}
+\begin{enumerate}
+\item
+In mehr als einer Dimension wird aus Gl.\ \ref{eq_Leg_1}
+\begin{equation}
+           g(\pmb{p}) = {\rm max}_{\pmb{x}} \{  \langle \pmb{p}, \pmb{x} \rangle - f(\pmb{x}) \}  \, ,
+\end{equation}
+wobei $\langle \cdot , \cdot \rangle$ die nat\"urliche Paarung zwischen einem Element des
+dualen Vektorraums, $\pmb{p} \in \mathbb{R}^{n\,*}$, und einem Element des Vektorraums
+$\pmb{x} \in \mathbb{R}^n$ ist. Manchmal schreibt man auch 
+$ \langle \pmb{p}, \pmb{x} \rangle = \pmb{p}^T \cdot \pmb{x}$. Streng genommen ist $g(\pmb{p})$
+daher eine Funktion auf dem dualen Vektorraum. Dies wird in der Mechanik deutlich, wo
+die Geschwindigkeit
+$\pmb{v}=\dot{\pmb{x}}$ ein Element des Tangentialraums an die Mannigfaltigkeit des
+Konfigurationsraums ist, wohingegen der Impuls $\pmb{p}$ ein Element des Kotangentialraums ist.
+\item
+Das Vorzeichen f\"ur die Legendre-Transformation ist Konvention. Manchmal definiert man auch
+\begin{equation}
+     g(p) = {\rm min}_x \{ f(x) -  p \cdot x \} \, . 
+\end{equation}
+\item
+Es handelt sich bei dieser Definition um eine Verallgemeinerung der Suche nach
+Extremalpunkten. Ein Extremalpunkt $x_0$ einer Funktion $f$ liegt vor, wenn der Abstand 
+eines Funktionswertes von $f$ von der $x$-Achse, also der Geraden $y=0$, extremal 
+(maximal oder minimal) wird. Dieser Abstand ist gleich $f(x_0)$. 
+ 
+Dies wird nun verallgemeinert zu der Fragestellung: Gesucht ist ein Punkt $x(p)$,
+f\"ur den der Abstand einer Funktion $f$ von der Geraden $y=px$ extremal wird.
+Dieser Abstand ist dann durch $g(p)=p x(p)-f(x(p))$, also der Legendre-Transformation von 
+$f(x)$ gegeben.  
+\end{enumerate}
+
+\subsection{Analytische Definition der Legendre-Transformation}
+
+{\em Definition}:
+Gegeben sei eine konvexe Funktion $f:U \subset \mathbb{R} \rightarrow \mathbb{R}$
+mit $x \mapsto f(x)$. Wir definieren eine zweite
+Funktion $g:\mathbb{R} \rightarrow \mathbb{R}$ mit
+$p \mapsto g(p)$ nach der Vorschrift:
+\begin{equation}
+  g(p) = p \cdot  x(p)  - f(x(p))  \, . 
+\end{equation}
+Hierbei ist $x(p)$ die Umkehrabbildung zu
+\begin{equation}
+     p(x) := \frac{{\rm d}f(x)}{{\rm d}x} \, . 
+\end{equation}     
+Die geometrische Konstruktionsvorschrift dieser Funktion 
+$g(p)$ zu einer gegebenen Funktion $f(x)$ ist die
+Folgende:
+
+Gegeben $p\in \mathbb{R}$. Wir suchen zun\"achst den Punkt
+$x\in \mathbb{R}$, bei dem die Steigung der Funktion $f$
+gleich $p$ ist: 
+\begin{equation}
+              p=\left. \frac{{\rm d} f(x)}{{\rm d} x} \right|_{x=x(p)} \, .
+\end{equation}      
+Nun legen wir an diesen Punkt
+$(x(p),f(x(p)))\in \mathbb{R}^2$ die Tangente: 
+\begin{equation}
+                    y(x)= p (x-x(p)) +f(x(p)) \,  ,
+\end{equation}                    
+(siehe Abb.\ \ref{fig_Leg_1}(rechts)). 
+Der Schnittpunkt dieser Tangente mit der $x=0$-Achse
+ergibt $-g(p)$:
+\begin{equation}
+      - g(p) = y(x)\Big|_{x=0} = - p x(p)  + f(x(p)) \, .
+\end{equation}     
+
+\subsection{Bezug zur Laplace-Transformation}
+
+Der Bezug der Legendre-Transformation zur Laplace-Transformation wird aus
+folgender \"Uberlegung deutlich. Sei
+\begin{equation}
+      F(x) = e^{-f(x)}    
+\end{equation}     
+eine (positive) Funktion, wobei $f$ konvex sein soll (d.h.\ $f''(x)>0$) und sich
+f\"ur $x\rightarrow \pm \infty$ so verhalten soll, dass die folgenden Integrale existieren. 
+Dann ist die Laplace-Transformierte:
+\begin{equation}
+      G(p) = \int_0^{\infty} F(x) \, e^{-px}\,{\rm d}x
+    = \int_0^{\infty} e^{-f(x)-px}\, {\rm d}x \, . 
+\end{equation}     
+Wenn nun, wie es in der statistischen Mechanik der
+Fall ist, die Funktion $e^{-f(x)-px}$ ein sehr scharfes
+Maximum an einer Stelle $x_0$ hat, kann man 
+um dieses Maximum entwickeln und erh\"alt
+$y=x-x_0$ als neue Integrationsvarialbe:
+\begin{equation}
+    G(p) = \int e^{-f(x_0)-px_0 - f''(x_0)y^2 \pm ...}
+     \, {\rm d}y = e^{-f(x_0)-px_0} \int e^{-f''(x_0)y^2 + ...}
+         {\rm d}y \, . 
+\end{equation}     
+F\"ur den Logarithmus von $G(p)$ folgt:
+\begin{equation}
+  g(p) = \log G(u) = - f(x_0) - p x_0 + ... 
+\end{equation}     
+Von den h\"oheren Termen kann man zeigen, dass sie
+im thermodynamischen Grenzfall verschwinden,
+sodass n\"aherungsweise:
+\begin{equation}
+    g(p) \approx - f(x_0) - p x_0  
+\end{equation}     
+gilt. $x_0$ ist dabei als L\"osung aus der Extremalbedingung
+\begin{equation}
+   (-f(x)-px)'=0 
+\end{equation}     
+zu bestimmen. Das abge\"anderte Vorzeichen im Vergleich zur \glqq normalen\grqq\
+Legendre-Transformation ist in der Thermodynamik \"ublich.    
+
+\subsection{Definition \"uber die Ableitungen als Umkehrfunktionen}
+\label{sec_Leg_Umkehr}
+
+Wir k\"onnen die Legendre-Transformation auch \"uber
+folgende Bedingung einf\"uhren:
+
+Gesucht ist die Beziehung zwischen zwei Funktionen $f(x)$  
+und $g(p)$, so dass die ersten Ableitungen dieser
+beiden Funktionen jeweils Umkehrabbildungen voneinander
+sind. Etwas anders ausgedr\"uckt: Gegeben sei eine Funktion $f(x)$ mit
+$f'(x)=p(x)$. Die Umkehrabbildung von $p(x)$ sei $x(p)$. Gesucht ist die
+Funktion $g(p)$, sodass $g'(p)=x(p)$. 
+
+Wir zeigen, dass die Legendre-Transformierte $g(p)=px(p) -f(x(p))$ von 
+$f(x)$ diese Bedingung erf\"ullt. Es gilt:
+\begin{eqnarray*}
+   \frac{{\rm d}g}{{\rm d}p} &=& 
+         \frac{{\rm d}}{{\rm d}p} (px(p) - f(x(p))) \\[0.3cm]
+   &=&  x(p) + p \frac{{\rm d}x(p)}{{\rm d}p} -
+        \frac{{\rm d}f(x)}{{\rm d} x}\Big|_{x=x(p)}
+         \frac{{\rm d}x(p)}{{\rm d}p} \\[0.3cm]
+         & =& x(p) + p x'(p) - p x'(p) =
+            x(p) \, .
+\end{eqnarray*}
+Bei gegebenem $f(x)$ ist die Funktion $g(p)$ durch
+diese Bedingung nur bis auf eine Konstante
+festgelegt. Diese Konstante kann durch die
+Bedingung
+\begin{equation}
+    g(p) + f(x) =  p x 
+\end{equation}     
+festgelegt werden, wobei man in dieser Gleichung sowohl
+$x$ als Funktion von $p$ auffassen kann, $x=x(p)$,
+oder auch $p$ als Funktion von $x$: $p=p(x)$.
+
+\subsection{Eine geometrische Sichtweise}
+
+Wir k\"onnen die Sichtweise des letzten Abschnitts \ref{sec_Leg_Umkehr} noch
+etwas weiter treiben und geometrisch veranschaulichen (dieser Abschnitt verwendet
+Ideen aus \cite{Wouter}).
+
+Gegeben seien die beiden Funktionen $x(p)$ und $p(x)$, die Umkehrfunktionen
+voneinander sein sollen. Das setzt voraus, dass beide Funktionen in ihrem Definitionsbereich
+monoton sind. In einem $px$-Diagramm lassen sich die Graphen durch dieselbe Linie
+darstellen: $(p,x(p))$ und $(p(x),x)$, je nachdem, ob man die Abszisse oder die Ordinate als
+unabh\"angige Variable auffasst (siehe Abb.\ \ref{fig_Leg_Umkehr}).  
+
+\begin{SCfigure}[50][htb]
+\begin{picture}(170,170)(0,0)
+\put(20,0){\vector(0,1){160}}
+\put(0,20){\vector(1,0){160}}
+\put(13,160){\makebox(0,0){$x'$}}
+\put(160,13){\makebox(0,0){$p'$}}
+\put(137,150){\makebox(0,0){$x(p')$}}
+\put(157,138){\makebox(0,0){$p(x')$}}
+\put(140,13){\makebox(0,0){$p$}}
+\put(13,130){\makebox(0,0){$x$}}
+\put(90,50){\makebox(0,0){$g(p)$}}
+\put(50,95){\makebox(0,0){$f(x)$}}
+\multiput(20,130)(3,0){41}{\makebox(0,0){$\cdot$}}
+\multiput(140,20)(0,3){37}{\makebox(0,0){$\cdot$}}
+\thicklines
+\qbezier(20,20)(55,80)(90,90)
+\qbezier(90,90)(130,100)(150,150)
+\end{picture}
+\caption{\label{fig_Leg_Umkehr}%
+Die Integrale \"uber eine Funktion $x(p')$ und ihre Umkehrfunktion $p(x')$, die jeweils
+denselben Graphen $(p(x'),x')$ und $(p',x(p'))$ haben, spannen
+bei geeignet gew\"ahlten Integrationsgrenzen $x$ und $p$ ein Rechteck der Fl\"ache $px$ auf. 
+Die Stammfunktionen $f(x)$ und $g(p)$, die jeweils die Fl\"achen unter den Kurven angeben, 
+erf\"ullen daher die Gleichung
+$f(x)+g(p)=px$.}
+\end{SCfigure}
+
+Die zugeh\"origen Stammfunktionen $f(x)$ und $g(p)$ lassen sich geometrisch
+als Fl\"achen unter den Kurven interpretieren und als Integrale \"uber ihre Ableitungen
+schreiben:
+\begin{equation}
+      f(x) = \int_0^x p(x') \,{\rm d}x'  \hspace{1cm} {\rm und} \hspace{1cm}
+      g(p) = \int_0^p x(p')\, {\rm d}p' \, . 
+\end{equation}
+Sind die Punkte $x$ und $p$ so gew\"ahlt, dass $x(p)=x$ und $p(x)=p$, ist die
+Gesamtfl\"ache unter beiden Kurven gleich der Fl\"ache des Rechtecks $px$.
+Somit gilt:
+\begin{equation}
+                  f(x) + g(p) = px  \, . 
+\end{equation}
+
+
+\subsection{Die Legendre-Transformation als Beziehung zwischen totalen Differentialen}
+
+Gegeben sei eine Funktion $f(x)$ mit dem totalen Differential
+\begin{equation}
+            {\rm d} f(x) = \frac{\partial f(x)}{\partial x} {\rm d}x = p(x) \, {\rm d}x \, .
+\end{equation}
+Gesucht ist eine Funktion $g(p)$ mit der Eigenschaft, dass die Umkehrfunktion
+von $p(x)$, d.h.\ die Funktion $x(p)$, als Ableitung im totalen Differential auftritt.
+Es soll also gelten: ${\rm d}g = x\,{\rm d}p$. 
+(Dies ist die Formulierung der Beziehungen aus Abschnitt \ref{sec_Leg_Umkehr}
+durch Differentialformen.)
+
+Der \"ubliche Trick ist, ${\rm d}f(x)$ um $0=x\,{\rm d}p  - x\, {\rm d}p$ zu
+erweitern und die Terme umzuordnen:
+\begin{equation}
+       {\rm d}f = p\, {\rm d} x = p\,{\rm d}x + x\, {\rm d}p - x\,{\rm d}p
+                =  {\rm d} (px) - x \,{\rm d}p  \, .
+\end{equation}
+Daraus ergibt sich
+\begin{equation}
+      x \,  {\rm d}p 
+                =  {\rm d} (px) -  {\rm d}f = {\rm d} \big( px-f \big)  \, .
+\end{equation}
+Das totale Differential von $g(p)=px-f(x)$, wobei $x$ als Funktion von $p$ aufzufassen ist,
+ist somit gleich $x\,{\rm d}p$. 
+
+
+\subsection{Legendre-Transformation und Einh\"ullende}
+
+Die Legendre-Transformation l\"asst sich auch als eine Transformation von einer
+Funktion $f(x)$ zu einer Funktion $g(p)$ auffassen, wobei $g(p)$ die Tangenten
+an $f$ charakterisieren. Auf diese Weise kann man die Funktion $f(x)$ als
+Einh\"ullende zu ihrer Tangentenschar auffassen. In dieser Interpretation wird das
+Konzept der Ber\"uhrungstransformation schon angedeutet.
+
+Sei allgemein eine Kurvenschar $h(x,p)$ gegeben, wobei $h$ als Funktion von $x$
+zu einem festen Parameter $p$ eine Kurve beschreibt. $p$ parametrisiert die
+verschiedenen Kurven. Wir nehmen nun an, dass diese Kurvenschar eine Einh\"ullende definiert, d.h., 
+es gibt eine Funktion, die von jeder Kurve in genau einem Punkt ber\"uhrt wird.
+Es sei $x(p)$ dieser Punkt, bei dem f\"ur ein festes $p$ diese Ber\"uhrung
+stattfindet. Dann ist in einer gen\"ugend kleinen Umgebung von $p$ (sofern die Einh\"ullende 
+dort konvex ist)
+\begin{equation}
+               h(x(p),p\pm{\rm d}p) \leq h(x(p),p) 
+\end{equation}
+und damit
+\begin{equation}
+               \left. \frac{\partial h(x,p)}{\partial p}\right|_{x=x(p)} = 0 \, .
+\end{equation}
+In Abb.\ \ref{fig_Leg_envelope} ist dieser Fall f\"ur $h(x,p)=xp-g(p)$ dargestellt. 
+F\"ur einen festgehaltenen Wert von $p$ beschreibt $h(x,p)$ als Funktion von $x$ eine Gerade in der 
+$x,y$-Ebene mit einer Steigung $p$ und einem Schnittpunkt $-g(p)$ mit der $y$-Achse.
+Offenbar haben diese Geraden eine Einh\"ullende $f(x)$, d.h.\ jede Gerade ist tangential zu
+$f(x)$ in einem bestimmten Punkt $x(p)$ (Abb.\ \ref{fig_Leg_envelope} (links)). 
+Der Funktionswert $f(x(p))=h(x(p),p)$ ist (sofern 
+$f(x)$ in einer Umgebung von $x(p)$ konvex ist) ein Maximum von $h(x(p),p')$ als Funktion von $p'$
+(Abb.\ \ref{fig_Leg_envelope} (rechts)).  
+Damit erhalten wir als Bedingung f\"ur den Ber\"uhrungspunkt $x(p)$:
+\begin{equation}
+             \frac{\partial h(x,p)}{\partial p} = x - \frac{\partial g(p)}{\partial p} = 0
+             \hspace{1cm} {\rm oder} \hspace{1cm} x(p) = \frac{\partial g(p)}{\partial p}  \, .
+\end{equation} 
+Diese Gleichung l\"asst sich zu $p(x)$ aufl\"osen.
+Die Einh\"ullende $f(x)$ ergibt sich damit zu
+\begin{equation}
+                  f(x) = h(x,p(x)) = xp(x) - g(p(x))  \, . 
+\end{equation}
+Diese Einh\"ullende $f(x)$ ist somit die Legendre-Transformierte von $g(p)$. 
+
+\begin{figure}[htb]
+\begin{picture}(210,220)(-10,0)
+\put(20,10){\vector(0,1){200}}
+\put(10,70){\vector(1,0){180}}
+
+\put(103,75){\line(3,5){80}}
+\put(100,91.5){\line(4,5){90}}
+\put(15,16.8){\line(1,1){170}}
+\put(90,102){\line(4,3){100}}
+\put(80,105){\line(2,1){100}}
+\put(75,109.3){\line(3,1){110}}
+\put(70,113){\line(5,1){120}}
+\put(60,119.5){\line(1,0){120}}
+\put(40,130.8){\line(5,-1){120}}
+\put(30,141){\line(3,-1){120}}
+\put(20,155){\line(2,-1){120}}
+\put(10,177){\line(4,-3){120}}
+\put(10,192){\line(1,-1){120}}
+\put(10,205){\line(4,-5){90}}
+\put(10,221){\line(3,-5){80}}
+
+\put(10,45){\makebox(0,0){$g(p)$}}
+\put(190,63){\makebox(0,0){$x$}}
+\put(45,190){\makebox(0,0){$f(x)$}}
+\put(26,210){\makebox(0,0){$y$}}
+\put(30,15){\makebox(0,0){$1$}}
+\put(45,30){\makebox(0,0){$p$}}
+
+\put(20,22){\line(1,0){20}}
+\put(40,22){\line(0,1){20}}
+
+\thicklines
+\qbezier(30,190)(100,50)(170,190)
+\end{picture}
+%
+\begin{picture}(200,190)(-30,0)
+\put(20,10){\vector(0,1){200}}
+\put(10,70){\vector(1,0){180}}
+
+\put(112.2,75){\line(3,5){80}}
+\put(85,75){\line(1,1){105}}
+\put(45,75){\line(3,1){130}}
+
+\put(190,63){\makebox(0,0){$x$}}
+\put(45,190){\makebox(0,0){$f(x)$}}
+\put(26,210){\makebox(0,0){$y$}}
+%\put(30,15){\makebox(0,0){$1$}}
+\put(130,64){\makebox(0,0){${\scriptstyle x(p)}$}}
+\put(170,64){\makebox(0,0){${\scriptstyle x(p+{\rm d}p)}$}}
+\put(65,64){\makebox(0,0){${\scriptstyle x(p-{\rm d}p)}$}}
+\put(130,120){\makebox(0,0){${\scriptstyle \bullet}$}}
+\put(170,172){\makebox(0,0){${\scriptstyle \bullet}$}}
+\put(78,87){\makebox(0,0){${\scriptstyle \bullet}$}}
+\put(130,105.5){\makebox(0,0){${\scriptstyle \bullet}$}}
+\put(130,103){\makebox(0,0){${\scriptstyle \bullet}$}}
+\put(-6,107.6){\makebox(0,0){${\scriptstyle h(x(p),p+{\rm d}p))}$}}
+\put(3,120){\makebox(0,0){${\scriptstyle h(x(p),p)}$}}
+\put(-6,101.9){\makebox(0,0){${\scriptstyle h(x(p),p-{\rm d}p))}$}}
+
+\put(170,70){\line(0,1){102}}
+\put(130,70){\line(0,1){50}}
+\put(78,70){\line(0,1){17}}
+\put(20,120){\line(1,0){110}}
+\put(20,105.5){\line(1,0){92}}
+\put(20,103){\line(1,0){88}}
+
+\thicklines
+\qbezier(40,80)(120,80)(180,190)
+
+\end{picture}
+\caption{\label{fig_Leg_envelope}%
+(links) Die Funktion $f(x)$ als Einh\"ullende ihrer Tangenten. Die Funktionenschar $h(x,p)=px-g(p)$, 
+aufgefasst als Funktionen von $x$, definieren Geraden mit einer Steigung $p$. 
+$g(p)$ ist der Schnittpunkt der Geraden mit der $y$-Achse. (rechts) Wenn $h(x(p))$ der
+Funktionswert von $h(x,p)$ an der Stelle ist, wo die Funktion $h(x,p)$ bei festgehaltenem $p$ 
+als Funktion von $x$ die Steigung $p$ hat, dann handelt
+es sich um einen Extremwert, d.h., die Tangenten zur infinitesimal benachbarten $p$-Werten haben
+bei $x(p)$ einen kleineren Funktionswert als $h(x(p))$.}
+\end{figure}
+
+\section{Ber\"uhrungstransformationen}
+
+Die Legendre-Transformation ordnet einer Funktion $f(x)$ mit
+Argument $x$ eine neue Funktion $g(p)$ mit Argument $p$ zu.
+\"Ahnlich wie viele Integraltransformationen (z.B. die Fourier-Transformation)
+folgt auch die Legendre-Transformation {\em nicht} aus einer
+Punkttransformation (oder Koordinatentransformation) der Ebene
+$(x,y)$, in der der Graph der Funktion definiert ist. Allerdings 
+handelt es sich um eine einfache Erweiterung einer solchen
+Punkttransformation. Bevor wir die so genannten Ber\"uhrungstransformationen
+untersuchen, betrachten wir nochmals kurz die Punkttransformationen
+und ihre Eigenschaften.
+
+\subsection{Punkttransformationen}
+
+Die folgenden \"Uberlegungen gelten f\"ur Punkt- oder
+Koordinatentransformationen in beliebigen Dimensionen, wir
+betrachten jedoch immer nur den Fall $d=2$.
+
+Sei $U\subset {\bf R}^2$ ein Teilgebiet der Ebene, parametrisiert
+durch $(x,y)$. Eine Punkt- oder Koordinatentransformation besteht
+aus einer (2-komponentigen) Abbildung:
+\begin{equation}
+     (X,Y):  U\subset {\bf R}^2 \rightarrow U'\subset {\bf R}^2
+     ~~~{\mit} ~~~ (x,y) \mapsto  (X(x,y),Y(x,y)) \, . 
+\end{equation}     
+Die Abbildung $(X,Y)$ soll injektiv sein. 
+
+Oft betrachtet man nun das Transformationsverhalten von
+Funktionen $v:U\rightarrow {\bf R}$ mit $(x,y) \mapsto v(x,y)$ unter
+den Koordinatentransformationen. Wir erhalten eine neue Funktion
+$V:U' \rightarrow {\bf R}$ mit $(X,Y) \mapsto V(X,Y)$, die durch die
+Bedingung:
+\begin{equation}
+   v(x,y) = V(X(x,y),Y(x,y))   
+\end{equation}     
+gegeben ist. 
+
+F\"ur das Folgende sind wir jedoch an dem Transformationsverhalten
+von Abbildungen $f:{\bf R} \rightarrow {\bf R}$ mit $x\mapsto f(x)$
+bzw.\ deren Graphen $(x,f(x)) \in U$ unter der Transformation
+interessiert. Der neue Graph ist durch die Parameterdarstellung
+$(X(x,f(x)),Y(x,f(x)))$ gegeben. Durch Aufl\"osung von $X(x)=X(x,f(x))$ nach
+$x(X)$ und Einsetzen in den zweiten Term erhalten wir eine
+Darstellung der Kurve in der Form $Y=F(X)$, bzw. des Graphen in der
+Form $(X,F(X))$. 
+
+Wir behaupten nun, dass unter einer Punkt- bzw. Koordinatentransformation
+zwei Kurven $(x,f_1(x))$ und $(x,f_2(x))$, die sich in einem Punkt $(x_0,y_0)$
+{\em ber\"uhren}, in zwei Kurven $(X,F_1(X))$ und
+$(X,F_2(X))$ abgebildet werden, die sich in dem Punkt $(X_0,Y_0)=
+(X(x_0,y_0),Y(x_0,y_0))$ ber\"uhren. (In der passiven Interpretation einer
+Koordinatentransformation ist das trivial, aber auch in der aktiven 
+Interpretation, bei der eine Kurve mittransformiert wird, ist es
+offensichtlich.) 
+
+Hinter dieser Bedingung steckt auch die Definition
+f\"ur das Transformationsverhalten von Vektoren auf Mannigfaltigkeiten.
+Ein Vektor an einem Punkt $(x_0,y_0)$ ist dort durch \"Aquivalenzklassen 
+von Kurven durch  diesen Punkt definiert, wobei zwei Kurven 
+\"aquivalent sind, wenn die Richtungsableitungen aller Funktionen
+auf der Mannigfaltigkeit entlang der beiden Kurven an diesem Punkt gleich
+sind. Das bedeutet, die beiden Kurven haben in diesem Punkt dieselben
+Tangentialvektoren. 
+
+Zum Beweis bilden wir die Ableitung von $(X(x,f(x)),Y(x,f(x)))$ am Punkte
+$x_0$:
+\begin{equation}
+ \frac{{\rm d}}{{\rm d}x} (X(x,f(x)),Y(x,f(x))) =
+   ( \partial_1 X + \partial_2 X\cdot f'(x)~, \partial_1Y + 
+                                 \partial_2Y \cdot f'(x)) \, .
+\end{equation}     
+Hierbei sind:
+\begin{equation}
+  \partial_1X = \frac{\partial X}{\partial x}~,~~                                 
+ \partial_2X = \frac{\partial X}{\partial y}~,~~
+  \partial_1Y = \frac{\partial Y}{\partial x}~,~
+   \partial_2Y = \frac{\partial Y}{\partial y} \, .
+\end{equation}      
+Der Tangentialvektor h\"angt also nur von den partiellen Ableitungen von $X$ und
+$Y$ nach ihren Argumenten an dem Punkt $x$ und $y$ ab, die
+sind aber an demselben Punkt immer gleich, und von der
+Ableitung $f'(x)$ and dem betreffenden Punkt. Wenn aber zwei
+Funktionen an einem Punkt dieselbe Ableitung haben, sind diese
+Ausdr\"ucke ebenfalls gleich.
+
+Diese Eigenschaft -- Kurven, die sich in einem Punkt ber\"uhren, gehen wieder
+in Kurven \"uber, die sich ber\"uhren -- wird bei Ber\"uhrungstransformationen
+verallgemeinert.
+
+\subsection{Linienelemente und Ber\"uhrungstransformationen}
+ 
+Ein {\em Linienelement} kann man sich als einen
+\glqq infinitesimalen\grqq\ Abschnitt einer Geraden vorstellen.
+Es ist spezifiziert durch die Vorgabe eines Punktes $(x,y)$, an dem 
+das Linienelement anliegt, und einer Steigung $p=y'$, die das 
+Linienelement hat. Ein Linienelement besteht also aus dem
+Tripel $(x,y,p)$. Man beachte, dass $p$ hier nicht als die
+Ableitung einer Kurve zu verstehen ist, sondern einfach als die
+Vorgabe einer Steigung.
+
+Eine {\em Ber\"uhrungstransformation} ist eine Punkttransformation
+auf den Linienelementen. Formal handelt es sich einfach um eine
+Punkttransformation auf dem ${\bf R}^3$:
+\begin{equation}
+    (x,y,y') \mapsto  (\, p(x,y,y') ~,~g(x,y,y')~,~g'(x,y,y')\,) \, . 
+\end{equation}      
+
+Anmerkungen:
+\begin{enumerate}
+\item
+Offenbar definiert eine Punkttransformation auf einer Ebene
+eine spezielle Ber\"uhrungstransformation. In diesem Fall gilt:
+\begin{eqnarray*}
+    p(x,y,y') &=& X(x,y) ~,~~g(x,y,y')=Y(x,y) ~, \\[0.3cm]
+    g'(x,y,y') &=&
+  \frac{\partial_1Y(x,y) + \partial_2Y(x,y) \cdot y'}{\partial_1 X(x,y)
+      + \partial_2 X(x,y) \cdot y'} \, .
+\end{eqnarray*} 
+In den ersten beiden Koordinaten handelt es sich um eine
+gew\"ohnliche Punkttransformation der Ebene, und die
+dritte Koordinate (die Steigung) ist die durch die
+Punkttransformation induzierte transformierte Steigung einer
+Kurve, die nach dem oben Erw\"ahnten nicht von der
+speziellen Wahl der Kurve abh\"angt, sondern nur von ihrer
+Steigung in dem betreffenden Punkt.
+\item
+Eine Legendre-Transformation l\"asst sich in folgender Form
+als Ber\"uhrungstransformation auffassen:
+\begin{equation}
+  p(x,y,y')= y' ~,~~g(x,y,y')= xy'-y ~,~~g'(x,y,y')= x \, . 
+\end{equation}     
+Man beachte, dass in diesem Fall die Legendre-Transformation
+nicht als Transformation einer Kurve aufgefasst wird, sondern
+als eine Transformation auf der Menge der Linienelemente in
+einer Ebene. Zu der herk\"ommlichen Transformation von
+Funktionen wird diese Ber\"uhrungstransformation erst, wenn
+wir die Wirkung dieser Transformation auf eine Kurve in der
+Ebene zusammen mit ihren Linienelementen an jedem Punkt
+(ihrer Ableitung) betrachten. 
+\end{enumerate}
+Jede Funktion $x\mapsto f(x)$ definiert in der Ebene einen
+Graphen (eine Kurve) der Form $(x,f(x))$, und sie definiert im
+Raum der Linienelemente ebenfalls eine Kurve:
+$(x,f(x),f'(x))$. Wenn sich zwei Kurven in einem Punkt
+ber\"uhren, d.h., f\"ur einen speziellen Wert $x_0$ gilt
+$(x_0,f(x_0),f'(x_0)) = (x_0,g(x_0), g'(x_0))$, dann sind
+auch die Bilder dieser beiden Linienelemente gleich.
+
+
+\begin{thebibliography}{9}
+\bibitem{Lie} Lie, Sophus \& Scheffers, Georg; \textit{Geometrie der Ber\"uhrungstransformationen}
+              Verlag B.\,G.\ Teubner, Leipzig, 1986.
+\bibitem{Wouter}  Wouter (\url{https://physics.stackexchange.com/users/16660/wouter}), 
+           Physical meaning of Legendre transformation, 
+           URL (version: 2014-04-01): \url{https://physics.stackexchange.com/q/69374} \\
+           Normalerweise w\"urde ich solche Referenzen nicht verwenden, aber dies ist mal
+           eine originelle Ausnahme.
+\end{thebibliography}
+
+
+
+\end{document}
+
+
+
