@@ -1,6 +1,9 @@
-\documentclass[german,10pt]{book}         \input{../preambel}         \begin{document}  \setcounter{chapter}{4}
+\documentclass[german,10pt]{book}         \input{../preambel}         \begin{document}  \setcounter{chapter}{5}
 
 \chapter{Schwarze L\"ocher}
+\label{chap_Schwarzschild}
+
+\info{Thomas Filk}{16.05.2026}
 
 Die wohl spektakul\"arsten Vorhersagen der
 Einstein'schen Feldgleichungen beziehen sich
@@ -17,7 +20,8 @@ Au\ss erdem gibt es L\"osungen der
 Einstein'schen Feldgleichungen, die 
 kosmologische Modelle beschreiben -- die
 bekannteste L\"osung ist in diesem Fall
-die Friedman-L\"osung bzw.\ Robertson-Walker-Metrik. 
+die Friedman-L\"osung bzw.\ Robertson-Walker-Metrik
+(auf diese L\"osung geht der Kurztext \glqq\hyperref[chap_Kosmos]{ART-Kosmologie}\grqq\ ein). 
 
 \section{Isotrope, statische L\"osungen}
 \label{sec_IsoStat}
@@ -37,7 +41,7 @@ und statischen Metrik}
 Neben \glqq isotrop und statisch\grqq\ verlangen wir noch, 
 dass die L\"osung
 asymptotisch f\"ur sehr gro\ss e Werte der Koordinate
-$r$ (die eine r\"aumlich radiale Achse vom Zentrum der L\"osung
+$r$ (die in diesem Fall eine r\"aumlich radiale Achse vom Zentrum der L\"osung
 parametrisiert) gegen die Minkowski-Metrik gehen soll, also
 in Kugelkoordinaten:
 \begin{equation}
@@ -127,7 +131,7 @@ in der Newton'schen Mechanik, wo das Gravitationspotenzial
 zu einer Punktmasse bei $r=0$ nicht definiert ist, aber au\ss erhalb
 von $r=0$ eine L\"osung der Vakuumgleichungen ist.
 Die \glqq St\"arke der Singularit\"at\grqq\ bei $r=0$ definiert
-den Massenparameter.) 
+den Massenparameter. 
 
 Wir nehmen nun an, dass f\"ur gro\ss e Abst\"ande
 vom Zentrum der Verteilung nur dieser eine
@@ -142,10 +146,8 @@ schreiben:
 (Die seltsame Kombination der Parameter $\alpha, \beta,
 \gamma$ hat historische Gr\"unde.) 
 Diese Entwicklung bezeichnet man
-als {\em Robertson-Entwicklung}.\index{Robertson-Entwicklung}.  
-Wie wir schon in Abschnitt \ref{sec_NewtonGrenzfall}
-gesehen haben, gilt f\"ur den Newton'schen
-Grenzfall:
+als {\em Robertson-Entwicklung}.\index{Robertson-Entwicklung}  
+F\"ur den Newton'schen Grenzfall gilt:
 \begin{equation}
 \label{eq_betagammaNewton}
   \mbox{Newton:  } ~ \alpha = 1~, ~~ \beta= \gamma = 0 \, .
@@ -157,10 +159,9 @@ Werte liefert:
 \label{eq_betagammaART}
   \mbox{ART:  } ~ \alpha = \beta= \gamma = 1 \, .
 \end{equation}
-Diese Parameter haben wir auch schon im 
-Zusammenhang mit der Lichtablenkung (Abschnitt
-\ref{sec_Lichtablenkung}) und der Periheldrehung
-(Abschnitt \ref{sec_Perihel}) betrachtet.
+Diese Parameter haben wurden in dem 
+Kurztext \glqq\hyperref[chap_klassisch]{Die drei klassischen Effekte der ART}\grqq\ im 
+Zusammenhang mit der Lichtablenkung und der Periheldrehung betrachtet.
 
 \subsection{Der Ricci-Tensor als Funktion von $A(r)$ und $B(r)$}
 
@@ -174,7 +175,7 @@ dass die Metrik mit oben stehenden Indizes das Inverse
 der\index{Metrik!inverse} 
 normalen Metrik ist, also
 \begin{equation}
-      g_{\mu \nu} = {\rm diag} ~
+      g^{\mu \nu} = {\rm diag} ~
       \left( \frac{1}{B(r)} , - \frac{1}{A(r)} , -\frac{1}{r^2} , -\frac{1}{r^2 \sin^2 \theta} \right) \, .
 \end{equation}
 Die Rechnung ist in \cite{Fliessbach} durchgef\"uhrt. Hier beschr\"anke
@@ -292,15 +293,15 @@ gleich seinem Schwarzschild-Radius ist.}
 
 \subsection{Herleitung der Schwarzschild-L\"osung}
 
-Wie wir im letzten Kapitel gesehen haben (vgl.\
-Gl.\ \ref{eq_RiccigleichNull}), lassen sich
-die Einstein'schen Feldgleichungen ohne Materie
-(also f\"ur $T_{\mu \nu} = 0$) 
+Die Einstein'schen Feldgleichungen ohne Materie
+(also f\"ur $T_{\mu \nu} = 0$) lassen sich 
 in der Form\index{Einstein'sche Gleichungen!ohne Materie}
 \begin{equation}
        R_{\mu \nu} = 0  
 \end{equation} 
-schreiben. Wir verwenden nun die Komponenten
+schreiben (eine Herleitung findet man in dem Kurztext
+\glqq\hyperref[chap_ART]{Grundlagen der ART}\grqq). 
+Wir verwenden nun die Komponenten
 des Ricci-Tensors f\"ur die Standardform der isotropen,
 statischen L\"osung (Gl.\ \ref{eq_RicciAB1}--\ref{eq_RicciAB2}), 
 um eine L\"osung zu finden. Auch hierbei halte ich mich eng
@@ -356,7 +357,7 @@ Aus dieser Gleichung folgt $rB=r -2a$, wobei wir die
 freie Integrationskonstante mit $-2a$ bezeichnet haben. 
 Damit erhalten wir als L\"osungen:
 \begin{equation}
-     B(r) = 1 - \frac{2a}{r} \hspace{1cm} {\rm und}
+     B(r) = 1 - \frac{2a}{r} \hspace{1cm} {\rm und} \hspace{0.3cm}
      A(r) = \frac{1}{1 - 2a/r}  \, .
 \end{equation}
 Die Minkowski-Metrik $A(r)=B(r)=1$ ergibt sich aus dem
@@ -364,8 +365,8 @@ Spezialfall $a=0$.
 
 Die physikalische Bedeutung der Integrationskonstanten
 $a$ ergibt sich aus einem Vergleich mit der Newton'schen
-N\"aherung (siehe Abschnitt \ref{sec_NewtonGrenzfall}, 
-Gl.\ \ref{eq_gnnNewton}). F\"ur gro\ss e Werte von $r$ sollte
+N\"aherung (siehe z.B.\ den Kurztext \glqq\hyperref[chap_Newton]{Gravitationswellen und
+Newton'sche N\"aherung}\grqq). F\"ur gro\ss e Werte von $r$ sollte
 die L\"osung dem Newton'schen Grenzfall entsprechen, und 
 damit erhalten wir 
 \begin{equation} 
@@ -376,7 +377,7 @@ damit erhalten wir
 
 Wie wir im letzten Abschnitt gesehen haben, l\"asst sich die 
 Schwarzschild-Metrik als statische und 
-rotationssymmetrische L\"osung schreiben, d.h.\ sie h\"angt in diesem
+rotationssymmetrische L\"osung schreiben, d.h., sie h\"angt in diesem
 Fall nur von einer Koordinate ab -- dem Radius $r$ vom Zentrum der 
 L\"osung:
 \begin{equation}
@@ -392,20 +393,20 @@ $r\rightarrow \infty$ einem Newton'schen Gravitationspotential
 einer Masse $M$ im Abstand $r$ entspricht. 
 
 Der winkelabh\"angige (letzte) Term der Metrik entspricht
-gew\"ohnlichen Kugelkoordinaten (vgl.\ Gl.\ \ref{eq_Kugelmetrik}). 
+gew\"ohnlichen Kugelkoordinaten. 
 Die ersten beiden Terme werden bei 
 \begin{equation}
             R_{\rm S} = \frac{2 G M}{c^2}
 \end{equation}
 singul\"ar. $R_{\rm S}$ bezeichnet man auch als
 Schwarzschild-Radius\index{Schwarzschild-Radius}. 
-Vergleichen wir die Art der Singularit\"at dieser
-beiden Elemente der Metrik mit der speziellen
-Kugelprojektion in Gl.\ \ref{eq_Kugelsingularitaet},
-so entdeckt man (bis auf das relative Vorzeichen,
-das durch die Minkowski-Struktur hereinkommt)
-eine deutliche \"Ahnlichkeit, was die Vermutung
-nahelegt, dass es sich hierbei nur um eine
+Im Kurztext \glqq\hyperref[chap_DiffGeometry]{Differentialgeometrische Grundlagen der ART}\grqq\
+haben wir eine senkrechte Projektion einer Kugeloberfl\"ache auf eine Zylinderwand
+betrachtet und (bis auf das relative Vorzeichen, das durch die Minkowski-Struktur hereinkommt) 
+eine \"ahnliche Singularit\"at in der Metrik gefunden wie bei der
+Schwarzschildmetrik (Gl.\ \ref{eq_Kugelsingularitaet} in dem genannten Text).
+Das legt die Vermutung
+nahe, dass es sich hierbei nur um eine
 Koordinatensingularit\"at handelt. 
 
 Obwohl Eddington
@@ -438,10 +439,12 @@ Wir suchen nun eine \glqq H\"ohenfunktion\grqq $f(r)$ \"uber der
 von $r$ und $\varphi$ parametrisierten Ebene, sodass die
 Projektion der Fl\"ache $(r,\varphi,f(r))$ im $\mathbb{R}^3$
 auf die Ebene $(r,\varphi)$ die oben angegebene Metrik
-liefert. Nach den \"Uberlegungen aus Abschnitt \ref{sec_InduzMet} 
-wird die $rr$-Komponente der Metrik (alle
+liefert. Ganz allgemein gilt bei einer isometrischen Einbettung, dass man
+die Metrik aus dem Skalarprodukt der Tangentialvektoren zu den
+entsprechenden Koordinaten erh\"alt. Die
+$rr$-Komponente der Metrik (alle
 anderen Komponenten werden nicht beeinflusst, da $f$ nicht
-vom Winkel abh\"angen soll) zu
+vom Winkel abh\"angen soll) ist daher
 \begin{equation}
      g_{rr} = \frac{\partial (r,\varphi,f(r))}{\partial r} \cdot
      \frac{\partial (r,\varphi,f(r))}{\partial r} = (1,0,f'(r)) \cdot (1,0,f'(r)) 
@@ -477,15 +480,20 @@ Paraboloid.\index{Flamm'scher Paraboloid}
 \qbezier(90,20)(90,65)(50,110)
 \put(100,20){\line(0,1){90}}
 %
-\qbezier(80,20)(80,25)(100,25)
-\qbezier(100,25)(120,25)(120,20)
 \qbezier(0,110)(0,115)(100,115)
 \qbezier(100,115)(200,115)(200,110)
+\qbezier(30,92)(30,97)(100,97)
+\qbezier(100,97)(170,97)(170,92)
 \qbezier(50,75)(50,80)(100,80)
 \qbezier(100,80)(150,80)(150,75)
-\qbezier(70,52)(70,57)(100,57)
-\qbezier(100,57)(130,57)(130,52)
+\qbezier(65,58)(65,63)(100,63)
+\qbezier(100,63)(135,63)(135,58)
+\qbezier(76,40)(76,45)(100,45)
+\qbezier(100,45)(124,45)(124,40)
+
 \thicklines
+\qbezier(80,20)(80,25)(100,25)
+\qbezier(100,25)(120,25)(120,20)
 \qbezier(120,20)(120,65)(200,110)
 \qbezier(80,20)(80,65)(0,110)
 \end{picture}
@@ -614,7 +622,7 @@ Schwarzschild-Metrik au\ss erhalb des Schwarz\-schild-Radius.
 Physikalisch gleiche r\"aumliche
 Abst\"ande werden in der Karte durch immer k\"urzere
 Abst\"ande dargestellt, wenn $r$ sich dem Schwarzschild-Radius
-n\"ahert. Andererseits entsprechen physikalisch gleiche 
+n\"ahert. Andererseits entsprechen physikalisch gleichen 
 Eigenzeitintervalle in $t$-Richtung
 immer gr\"o\ss ere Intervallen in der Karte.}
 \end{SCfigure}
@@ -628,12 +636,14 @@ In der Karte entsprechen diesen Distanzen immer
 k\"urzere Abst\"ande. Man vergleiche dieses Verhalten
 mit den Abst\"anden der Breitengraden auf einer Kugeloberfl\"ache
 in einer senkrechten Zylinderprojektion auf die $z$-Achse
-(Abb.\ \ref{fig_karte}). Umgekehrt werden gleiche Eigenzeiten in $t$-Richtung
+(Kurztext \glqq\hyperref[chap_DiffGeometry]{Differentialgeometrische Grundlagen der ART}\grqq). 
+Umgekehrt werden gleiche Eigenzeiten in $t$-Richtung
 in der Karte durch immer gr\"o\ss ere Abst\"ande wiedergegeben
 (die Punkte auf der durchgezogenen Kurve haben von der
 $r$-Achse immer denselben senkrechten Abstand $\Delta \tau$).    
 Dies entspricht den Verh\"altnissen f\"ur horizontale Abst\"ande
-(entlang von Breitengraden) in Abb.\ \ref{fig_karte}. Dieselbe physikalische
+(entlang von Breitengraden) in der senkrechten Zylinderprojektion einer Kugel. 
+Dieselbe physikalische
 Distanz auf der Kugeloberfl\"ache wird in der Karte durch
 immer gr\"o\ss ere Abst\"ande in horizontaler Richtung 
 wiedergegeben, wenn man sich den Polen n\"ahert. 
@@ -641,7 +651,7 @@ wiedergegeben, wenn man sich den Polen n\"ahert.
 \subsubsection{Weltlinien von Beobachtern}
 
 
-\begin{SCfigure}[50][ht]
+\begin{SCfigure}[50][h!]
 \begin{picture}(260,230)(0,0)
 \thinlines
 \put(120,20){\line(0,1){200}}
@@ -713,7 +723,22 @@ Faktor null. Die senkrechte Linie an diesem Punkt entspricht
 einer \glqq Null-Linie\grqq, d.h.\ zwei Punkte auf dieser Linie haben 
 den Minkowski-Abstand Null. 
 
-\begin{SCfigure}[50][ht]
+F\"ur einen Beobachter $B$, der sich von
+$A$ trennt und \glqq frei\grqq\ auf das schwarze Loch zuf\"allt,
+werden die Intervalle gleicher Eigenzeit durch immer gr\"o\ss ere
+Abst\"ande wiedergegeben. 
+Dies wird durch die Markierungen in Abb.~\ref{figschwarz}
+symbolisiert. Integriert man die L\"ange der Weltlinie von $B$ bis zum
+Wert $t=\infty$ (d.h.\ unendlicher Eigenzeit des Beobachters $A$)
+auf, so findet man einen endlichen Wert. Beobachter $B$ erreicht somit
+den Schwarzschild-Radius nach einer f\"ur ihn endlichen Eigenzeit. Sein
+weiteres Schicksal wird aus dieser Darstellung zun\"achst
+nicht deutlich. Man kann jedoch seine Geod\"ate vervollst\"andigen
+und erh\"alt dabei eine Trajektorie $C$ innerhalb des Schwarzschild-Radius,
+die in den angegebenen Kooridanten \glqq von oben\grqq\ kommt
+und in der Singularit\"at bei $r=0$ endet. 
+
+\begin{SCfigure}[50][h!]
 \begin{picture}(260,230)(0,0)
 \thinlines
 \put(120,20){\line(0,1){200}}
@@ -802,22 +827,6 @@ haben $r$ und $t$ ihre Rollen als \glqq r\"aumliche\grqq\
 und \glqq zeitliche\grqq\ Koordinaten vertauscht.}
 \end{SCfigure}
 
-
-F\"ur einen Beobachter $B$, der sich von
-$A$ trennt und \glqq frei\grqq\ auf das schwarze Loch zuf\"allt,
-werden die Intervalle gleicher Eigenzeit durch immer gr\"o\ss ere
-Abst\"ande wiedergegeben. 
-Dies wird durch die Markierungen in Abb.~\ref{figschwarz}
-symbolisiert. Integriert man die L\"ange der Weltlinie von $B$ bis zum
-Wert $t=\infty$ (d.h.\ unendlicher Eigenzeit des Beobachters $A$)
-auf, so findet man einen endlichen Wert. Beobachter $B$ erreicht somit
-den Schwarzschild-Radius nach einer f\"ur ihn endlichen Eigenzeit. Sein
-weiteres Schicksal wird aus dieser Darstellung zun\"achst
-nicht deutlich. Man kann jedoch seine Geod\"ate vervollst\"andigen
-und erh\"alt dabei eine Trajektorie $C$ innerhalb des Schwarzschild-Radius,
-die in den angegebenen Kooridanten \glqq von oben\grqq\ kommt
-und in der Singularit\"at bei $r=0$ endet. 
-
 F\"ur $r<R_{\rm S}$ haben die Koeffizienten von ${\rm d}t$ und ${\rm d}r$
 ihre Vorzeichen gewechselt, d.h.\ innerhalb des Schwarzschild-Radius
 sind die Verh\"altniss von 
@@ -836,7 +845,18 @@ allerdings bleibt $B$ f\"ur alle Zeiten von $A$ au\ss erhalb dieses
 Bereichs. Er verschwindet f\"ur $A$ im infraroten Bereich des
 Spektrums. 
 
-\begin{figure}[ht]
+Eine interessante\index{Schwarzes Loch!Kruskal-Szekeres-Karte} 
+Darstellung der Verh\"altnisse an einem schwarzen
+Loch, die insbesondere das Schicksal von Beobachter $B$ deutlich macht,
+fanden 1960 Martin Kruskal\index{Kruskal, Martin David} und unabh\"angig 
+von ihm George Szekeres\index{Szekeres, George} (vgl.\ Abb.~\ref{figkruskal}).
+Der Darstellung \ref{figschwarz} entsprechen dabei zun\"achst nur die
+Bereiche I und II. Die Bereiche III und IV sind eine Erweiterung der
+Schwarzschild-Metrik zu einem geod\"atisch vollst\"andigen 
+Universum:\index{Geod\"atisch Vollst\"andig}
+Geod\"aten enden entweder an einer Singulari\"at oder im Unendlichen.
+
+\begin{figure}[h!]
 \begin{picture}(360,250)(0,0)
 \put(160,70){\vector(0,1){100}}
 \put(60,120){\vector(1,0){240}}
@@ -874,20 +894,10 @@ den Horizont in Bereich II dringen. Er trifft dann unweigerlich auf
 die Zukunftssingularit\"at. Bereich II ist f\"ur $A$ ein schwarzes Loch.}
 \end{figure}
 
-Eine interessante\index{Schwarzes Loch!Kruskal-Szekeres-Karte} 
-Darstellung der Verh\"altnisse an einem schwarzen
-Loch, die insbesondere das Schicksal von Beobachter $B$ deutlich macht,
-fanden 1960 Martin Kruskal\index{Kruskal, Martin David} und unabh\"angig 
-von ihm George Szekeres\index{Szekeres, George} (vgl.\ Abb.~\ref{figkruskal}).
-Der Darstellung \ref{figschwarz} entsprechen dabei zun\"achst nur die
-Bereiche I und II. Die Bereiche III und IV sind eine Erweiterung der
-Schwarzschild-Metrik zu einem geod\"atisch vollst\"andigen 
-Universum:\index{Geod\"atisch Vollst\"andig}
-Geod\"aten enden entweder an einer Singulari\"at oder im Unendlichen.
-
 Der wesentliche qualitative Unterschied zwischen Abb.~\ref{figkruskal} 
-und der Darstellung des Rindler-Universums,
-Abb.~\ref{figrindler}, liegt in der Existenz einer Zukunfts- und
+und der Darstellung des Rindler-Universums (siehe Kurztext
+\glqq\hyperref[SRT_Beschleunigung]{Beschleunigte Systeme und das Rindler-Universum}\grqq)
+liegt in der Existenz einer Zukunfts- und
 Vergangenheitssingularit\"at. Dort wird die Kr\"ummung singul\"ar,
 d.h.\ nach unserem klassischen Verst\"andnis enden dort Raum und Zeit.
 Ein weiterer Unterschied zum Rindler-Universum ist die
@@ -898,7 +908,7 @@ Loch ein Kegel ist.
 
 Bereich I entspricht einem \"au\ss eren Beobachter $A$ des schwarzen Loches.
 Er muss eine Kraft aufwenden, um sich dem Einfluss des schwarzen
-Loches entziehen zu k\"onnen, und sp\"urt somit das Gravitationsfeld. 
+Loches entziehen zu k\"onnen und sp\"urt somit das Gravitationsfeld. 
 Aus Bereich IV kann Strahlung in seine Welt dringen, nichts aus seiner
 Welt kann aber in diesen Bereich hinein. Man bezeichnet diesen Bereich
 manchmal auch als \glqq wei\ss es Loch\grqq\index{Wei\ss es Loch}. 
@@ -914,11 +924,11 @@ Bereich III ist wiederum von Bereich I kausal getrennt. F\"ur eine
 geod\"atisch vollst\"andige L\"osung -- d.h.\ eine L\"osung, f\"ur die
 jede Geod\"ate entweder fortgesetzt werden kann oder an einer
 Singularit\"at endet -- ist dieser Bereich jedoch notwendig. Er ist
-wie ein zweites Universum - ebenfalls au\ss erhalb des schwarzen Loches -
+wie ein zweites Universum -- ebenfalls au\ss erhalb des schwarzen Loches --
 aber trotzdem mit I durch keine zeitartige Linie verbunden.
 
 Eine ebenfalls elegante Darstellung von L\"osungen 
-der Einstein-Gleichungen sind so genannte 
+der Einstein-Gleichungen sind sogenannte 
 Penrose-Diagramme.\index{Penrose-Diagramm}
 Hierbei handelt es sich um eine konforme Koordinatentransformation,
 d.h.\ Winkel werden getreu dargestellt, allerdings sind L\"angen
@@ -1019,11 +1029,11 @@ Besonders interessant sind einige Eigenschaften
 rotierender\index{Schwarzes Loch!rotierendes} 
 Schwarzer L\"ocher, die ich
 qualitativ kurz ansprechen m\"ochte, da sie
-einerseits bei Sch\"ulern auf
+einerseits bei Sch\"ulerinnen und Sch\"ulern auf
 gro\ss es Interesse sto\ss en d\"urften und
 andererseits mit gro\ss er Wahrscheinlichkeit die
 riesigen Schwarzen L\"ocher in den Zentren
-von Galaxien sehr rasch rotieren werden, diese
+von Galaxien sehr rasch rotieren, diese
 L\"osungen also wichtig sind.
 
 \begin{SCfigure}[50][htb]
@@ -1103,7 +1113,7 @@ oft wiederholt werden kann.
 Allgemein sind die Eigenschaften der L\"osungen zu rotierenden 
 bzw.\ geladenen Schwarzen L\"o\-chern wesentlich 
 komplizierter als bei der Schwarzschild-L\"osung. 
-Abbildung \ref{fig_Penrose2}) zeigt das 
+Abbildung \ref{fig_Penrose2} zeigt das 
 Penrose-Diagramm\index{Penrose-Diagramm}
 zur geod\"atisch vervollst\"andigten L\"osung. Man erkennt
 die beiden Horizonte, den inneren und \"au\ss eren Horizont.
@@ -1113,7 +1123,7 @@ es bei diesen Schwarzen L\"ochern tats\"ahlich m\"oglich
 ist, dem Inneren wieder zu entkommen, allerdings in
 einen anderen Teil des Universums.
 
-\begin{SCfigure}[50][htb]
+\begin{SCfigure}[50][ht]
 \begin{picture}(220,350)(0,0)
 \put(160,120){\line(0,1){100}}
 \put(60,120){\line(0,1){100}}
@@ -1233,9 +1243,9 @@ auf eine Singularit\"at zu treffen.}
 %\bibitem{Fierz} Markus Fierz; {\it \"Uber den Ursprung und die Bedeutung
 %        der Lehre Isaac Newtons vom absoluten Raum}; Gesnerus, 
 %        11.\ Jahrgang (1954), S.\,62--120.
-%\bibitem{Fliessbach} Torsten Flie\ss bach; {\it Allgemeine 
-%        Relativit\"atstheorie}; BI-Wissenschaftsverlag, Mannheim, Wien
-%        Z\"urich, 1990. 
+\bibitem{Fliessbach} Torsten Flie\ss bach; {\it Allgemeine 
+        Relativit\"atstheorie}; BI-Wissenschaftsverlag, Mannheim, Wien
+        Z\"urich, 1990. 
 %\bibitem{Galilei} Galilei; {\it Dialog \"uber die beiden haupts\"achlichen
 %        Weltsysteme, das ptolem\"aische und das kopernikanische}; 
 %        Teubner Stuttgart, 1982; aus dem Italienischen \"ubersetzt von

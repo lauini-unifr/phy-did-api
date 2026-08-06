@@ -77,8 +77,17 @@ def create_app(db_url=None):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     # Logging
-    logging.basicConfig(filename='app.log', level=logging.INFO)
-    app.logger.addHandler(logging.StreamHandler())
+    formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+    file_handler = logging.FileHandler('app.log')
+    file_handler.setFormatter(formatter)
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(formatter)
+
+    root_logger = logging.getLogger()
+    root_logger.setLevel(logging.INFO)
+    root_logger.addHandler(file_handler)
+    root_logger.addHandler(stream_handler)
+    app.logger.setLevel(logging.INFO)
 
     db.init_app(app)
     migrate = Migrate(app,db,render_as_batch=True)
@@ -155,6 +164,8 @@ def create_app(db_url=None):
 
 
     def generate_pdf(item_ids):
+        app.logger.info("...")
+        print("hu")
         if item_ids:
             try:
                 texdoc = []  # a list of string representing the latex document in python
@@ -174,11 +185,11 @@ def create_app(db_url=None):
                     # Table of contents
                     table_of_contents = r'{\let\cleardoublepage\clearpage\tableofcontents}'
                     texdoc.append(table_of_contents)
-
+                
                 for item_id in item_ids:
                     item = ItemModel.query.get_or_404(int(item_id))
                     if item.file_name:
-
+                        
                         if item.topic.name == "Klimaphysik":
                             topic_folder_name = "Skript_Klima"
                         elif item.topic.name == "Klassische Systeme":
@@ -186,20 +197,30 @@ def create_app(db_url=None):
                         elif item.topic.name == "Quantenphysik":
                             topic_folder_name = "Skript_QM"
                         elif item.topic.name == "Relativitätstheorie":
-                            topic_folder_name = "Skript_SRT"    
+                            if "ART" in item.name:
+                                topic_folder_name = "Skript_ART"   
+                                print("hu")
+                            else:
+                                topic_folder_name = "Skript_SRT"    
+                                print("ha")
                         elif item.topic.name == "Thermodynamik":
                             topic_folder_name = "Skript_Thermo"  
 
                         src = "upload_dir/attachment/" + topic_folder_name + "/" + item.name + "/" + item.file_name
+                        print(item_ids)
+                        print(src)
                         with open(src) as f_in:
+                            
                             if len(item_ids) == 1:
+                                
                                 date = False
                                 for line in f_in:
+                                    print(line)
                                     if "\chapter{" in line:
                                         title = line.split("{")[1].split("}")[0]
                                     if "\info{" in line:
                                         date = line.split("}{")[1].split("}")[0]
-                                    
+                                
                                 # Deckblatt
                                 copy_files("upload_dir/attachment/Deckblatt/Bilder", tmpdirname + '/Bilder')
                                 with open("upload_dir/attachment/Deckblatt/deckblatt_clean.tex") as f_in:
@@ -215,6 +236,7 @@ def create_app(db_url=None):
                                 table_of_contents = r'{\let\cleardoublepage\clearpage\tableofcontents}'
                                 texdoc.append(table_of_contents)        
 
+                        
                         with open(src) as f_in:
                             for line in f_in:
                                 if '\documentclass[german,10pt]' not in line and '\end{document}' not in line:
@@ -253,6 +275,13 @@ def create_app(db_url=None):
                                         "Thermo_01_Prozess",
                                         "Thermo_03_Entropie"]:
                             copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder') 
+                        elif item.name in ["ART_02_Grundlagen",
+                                           "ART_05_GravWellen"]:
+                            try: 
+                                os.makedirs(tmpdirname + '/Bilder_ART')
+                            except:
+                                pass
+                            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder_ART')
                     
                 texdoc.append('\printindex\n\end{document}')
 
@@ -315,6 +344,6 @@ def create_app(db_url=None):
 
 
     if __name__ == "__main__":
-        app.run(host='0.0.0.0')
+        app.run(host='0.0.0.0', debug=True)
 
     return app

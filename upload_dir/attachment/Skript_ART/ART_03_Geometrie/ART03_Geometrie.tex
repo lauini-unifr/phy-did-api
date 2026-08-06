@@ -1,9 +1,10 @@
-\documentclass[german,10pt]{book}   \input{../preambel}      \begin{document}   \setcounter{chapter}{1} 
+\documentclass[german,10pt]{book}   \input{../preambel}      \begin{document}   \setcounter{chapter}{2} 
  
-\chapter{Differentialgeometrische\\ 
-Grundlagen der ART}
+\chapter{Differentialgeometrische Grundlagen der ART}
+\label{chap_DiffGeometry}
 
-In diesem Kapitel behandeln wir die mathematischen
+\info{Thomas Filk}{15.05.2026}
+In diesem Text behandeln wir die mathematischen
 Grundlagen der allgemeinen Relativit\"atstheorie. Damit
 sind insbesondere die differentialgeometrischen
 Konzepte gemeint, die in die Einstein'schen
@@ -12,7 +13,7 @@ der Theorie ben\"otigt werden. Es geht mir dabei weder
 um mathematische Vollst\"andigkeit noch um
 mathematische Strenge. Der Schwerpunkt
 soll in einer Veranschaulichung der Konzepte
-bestehen. Wie so oft, ist gerade der Einstieg
+bestehen. Wie so oft ist gerade der Einstieg
 -- das bedeutet die Definition von Mannigfaltigkeiten
 und ihren Tangentialr\"aumen, insbesondere wenn
 man keinen Bezug auf eine Einbettung dieser
@@ -94,7 +95,7 @@ beliebig oft ableitbar.%
 schr\"ankt man den Grad der Ableitbarkeit manchmal
 ein und verlangt nur $r$-mal stetig differenzierbar etc.
 Umgekehrt kann man noch st\"arker auch Formen von
-Analytizit\"at fordern, beispielsweise dass sich die 
+Analytizit\"at fordern, beispielsweise, dass sich die 
 Abbildungen beliebig genau durch ihre Taylor-Reihen 
 ann\"ahern lassen. Im
 Folgenden setzen wir immer alle notwendigen 
@@ -1356,119 +1357,6 @@ Oberfl\"{a}che der Kugel:
     C_d r^{d-1} \left\{ 1 + \frac{R}{6} \frac{r^2}{d}
          + \ldots \right\}\;.  \]
          
-\section{Die Einstein'schen Feldgleichungen}
-\label{sec_EinsteinGl}
-         
-Damit haben wir die rein geometrischen Bausteine der Allgemeinen
-Relativit\"atstheorie. Es fehlt noch der Anteil der Materie, ausgedr\"uckt
-durch den\index{Energie-Impuls-Tensor} 
-Energie-Impuls-Tensor $T_{\mu \nu}$. L\"asst sich die Materie 
-in einer durch den metrischen Tensor $g_{\mu \nu}$ beschriebenen Raum-Zeit
-durch eine Wirkung $S[g;...]$ beschreiben, so gilt formal:
-\[     T_{\mu \nu} ~=~ \frac{\delta S}{\delta g^{\mu \nu}} \;.  \]
-Diese Formel ist besonders n\"utzlich, wenn die Materie durch Felder
-repr\"asentiert wird, beispielsweise im Fall der Maxwell-Theorie (in
-einer gekr\"ummten Raumzeit), der Dirac- oder der Klein-Gordon-Theorie.
-
-Die Einstein'schen Feldgleichungen\index{Einstein'sche Gleichungen} 
-lauten nun:
-\begin{equation}
-\label{EinsteinGl}
-   R_{\mu \nu} - \frac{1}{2} g_{\mu \nu} R 
-     ~=~ - \frac{8 \pi G}{c^4} T_{\mu \nu}   \;. 
-\end{equation}     
-($G$ ist Newtons Gravitationskonstante.) Die linke Seite dieser Gleichung
-enth\"alt rein geometrische Gr\"o\ss en der Raumzeit; die rechte Seite
-den Materieanteil in der Raumzeit. Der Energie-Impuls-Tensor h\"angt 
-im Allgemeinen ebenfalls von der Metrik ab. Diese Gleichung ist allerdings
-nur eine H\"alfte des vollst\"andigen Gleichungssystems der Allgemeinen
-Relativit\"atstheorie. Es fehlt noch die Bewegungsgleichung der Materie.
-L\"asst sich die Materie durch eine Wirkung beschreiben, so erh\"alt
-man diese Bewegungsgleichungen durch Variation der Wirkung nach den
-entsprechenden Freiheitsgraden. F\"ur Punktteilchen ist die 
-Geod\"atengleichung \ref{geodaete} die Bewegungsgleichung eines Teilchens
-in einer gekr\"ummten Raum-Zeit.
-
-Die Einstein'schen Feldgleichungen lassen sich auch
-als Euler-Lagrange-Glei\-chungen aus einer Wirkung ableiten.
-Dazu betrachten wir folgenden Ausdruck, die so genannte
-{\em Einstein-Hilbert-Wirkung}:\index{Einstein-Hilbert-Wirkung}
-\begin{equation}
-\label{eq_EinsteinHilbert}
-           S = \kappa \int {\rm d}^4x \sqrt{-g} R + S[g_{\mu \nu};\varphi, \psi, ...]
-\end{equation}
-Der erste Term beschreibt ein 4-dimensionales Volumenintegral
-\"uber die skalare Kr\"um\-mung. Der Faktor $\sqrt{-g}$ ist die
-Quadratwurzel aus der Determinante des metrischen Tensors.
-Das Minuszeichen macht diesen Ausdruck positiv,
-da in der \"ublichen Signatur die Determinante der
-Pseudo-Riemann'schen Metrik negativ ist. Die Kombination
-${\rm d}^4 x\sqrt{-g}$ ist das invariante Volumenma\ss. Die
-Konstante $\kappa$ h\"angt \"uber
-\begin{equation}
-          \kappa = \frac{c^3}{16 \pi G}
-\end{equation}
-mit der Newton'schen Gravitationskonstante $G$ zusammen.
-
-Der zweite Term ist die Wirkung der Materie. Handelt es sich
-um Felder (Skalarfelder $\varphi$ oder Dirac-Felder $\psi$) ist
-dies die \"ubliche Klein-Gordon-Wirkung bzw.\ Dirac-Wirkung,
-allerdings koppeln diese Felder nun (minimal) an die
-Metrik. Wie schon erw\"ahnt, liefert die Funktionalableitung dieser
-Wirkung nach der Metrik den Energie-Impuls-Tensor der
-Materie und damit den rechten Teil der Einstein'schen Gleichungen.
-Die Funktionalableitung des Kr\"ummungsskalars nach der
-Metrik liefert die linke Seite der Einstein'schen Gleicnungen.
-
-Manchmal addiert man zu der angegebenen Wirkung noch
-einen Term
-\begin{equation}
-          S_\Lambda = - 2\kappa \Lambda \int {\rm d}^4x \, \sqrt{-g} \, ,
-\end{equation}
-wobei $\Lambda$ die so genannte {\em kosmologische Konstante}
-ist.\index{Kosmologische Konstante} 
-Dieser Teil der Wirkung besteht also einfach aus einem 
-Volumenintegral. Die Einstein-Gleichungen werden damit zu
-\begin{equation}
-\label{EinsteinLambda}
-   R_{\mu \nu} - \frac{1}{2} g_{\mu \nu} R + \Lambda g_{\mu \nu} 
-     ~=~  \frac{8 \pi G}{c^4} T_{\mu \nu}   \;. 
-\end{equation}     
-
-Den noch fehlenden zweiten Anteil der Bewegungsgleichungen
--- die Bewegungsgleichungen f\"ur die Materie -- erh\"alt
-man aus der Wirkung (Gl.\ \ref{eq_EinsteinHilbert}) durch
-die Variation nach den Feldern. Betrachtet man freie
-Punktteilchen, so ist ihre Wirkung durch das L\"angenfunktional
-(Gl.\ \ref{eq_freieTeilchen}) gegeben und die zweite
-Bewegungsgleichung ist die Geod\"atengleichung.
-
-Abschlie\ss end wollen wir die Einstein'schen Feldgleichungen
-noch etwas umformen, was die L\"osung insbesondere f\"ur
-den Fall $T_{\mu \nu}=0$ einfacher macht. Bilden wir auf beiden
-Seiten der Gleichung \ref{EinsteinGl} die Spur (genauer, ziehen
-einen der Indizes mit der Metrik hoch und bilden dann die Spur)
-so erhalten wir
-\begin{equation}
-       R = \frac{8 \pi G}{c^4} T  \, .
-\end{equation}
-Wir k\"onnen daher den Term mit der skalaren Kr\"ummung auf die
-andere Seite der Gleichung bringen:
-\begin{equation}
-   R_{\mu \nu} 
-     ~=~ - \frac{8 \pi G}{c^4} 
-\left( T_{\mu \nu} - \frac{1}{2} g_{\mu \nu} T \right)   \;. 
-\end{equation}
-Man erkennt an dieser Form sofort, dass die L\"osungen
-der Einstein-Gleichungen\index{Einstein'sche Gleichungen!im Vakuum} 
-im Vakuum (also f\"ur $T_{\mu \nu}=0$)
-durch
-\begin{equation}
-\label{eq_RiccigleichNull}
-        R_{\mu \nu}=0
-\end{equation}
-gegeben sind. Der Ricci-Tensor (und damit nat\"urlich auch die
-skalare Kr\"ummung) verschwinden im materiefreien Raum.
 
 \begin{thebibliography}{99}
 %\addcontentsline{toc}{chapter}{Literaturangaben}

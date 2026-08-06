@@ -1,11 +1,17 @@
-\documentclass[german,10pt]{book}     \input{../preambel}             \begin{document}     \setcounter{chapter}{3}
+\documentclass[german,10pt]{book}     \input{../preambel}             \begin{document}     \setcounter{chapter}{4}
 
 \chapter{Gravitationswellen und Newton'sche N\"aherung}
+\label{chap_Newton}
 
-Ebenfalls kurz ansprechen werde ich die Beschreibung 
-von Gravitationswellen, den Newton'schen
+\info{Thomas Filk}{16.05.2026}
+In diesem Kurztext soll die Beschreibung 
+von Gravitationswellen angesprochen werden. Au\ss erdem geht es
+um den Newton'schen
 Grenzfall sowie das Verhalten
-von Drehimpuls bzw.\ Spin im Gravitationsfeld.
+von Drehimpuls bzw.\ Spin im Gravitationsfeld. Die differentialgeometrischen
+Grundlagen, die teilweise in diesem Kurztext vorausgesetzt werden, findet
+man beispielsweise in dem Kurztext 
+\glqq\hyperref[chap_DiffGeometry]{Differentialgeometrische Grundlagen der ART}\grqq.
 
 \section{Gravitationswellen}
 \label{Graviton}
@@ -23,7 +29,7 @@ sich die Aufspaltung
 \end{equation}
 an.\index{Einstein'sche Gleichungen!linearisierte} 
 Man interessiert sich nun f\"ur die sogenannten linearisierten
-Einstein-Gleichungen\index{Linearisierte Einstein-Gleichungen}, d.h.\
+Einstein-Gleichungen\index{Linearisierte Einstein-Gleichungen}, d.h.,
 es werden nur Terme in linearer Ordnung in $\epsilon$ ber\"ucksichtigt.
 
 In dieser N\"ahrung ergibt sich f\"ur die 
@@ -44,8 +50,8 @@ erhalten wir:\index{Riemann-Christoffel-Kr\"ummungstensor}
   \partial^2_{\mu \nu} h_{\kappa \gamma} -
   \partial^2_{\kappa \gamma} h_{\mu \nu}  \right)  \, .  
 \end{equation}
-(Hier ergeben die in den Christoffel-Symbolen quadratischen
-Terme in der linearen N\"aherung keinen Beitrag.)
+Hier ergeben die in den Christoffel-Symbolen quadratischen
+Terme in der linearen N\"aherung keinen Beitrag.
 Die Verk\"urzung \"uber den mittleren unteren Index mit dem oberen
 f\"uhrt auf den Ricci-Tensor:\index{Ricci-Tensor}
 \begin{equation}
@@ -56,9 +62,8 @@ f\"uhrt auf den Ricci-Tensor:\index{Ricci-Tensor}
    \frac{\partial^2 h_{\lambda \kappa}}{\partial x^\mu \partial x^\nu} \right) \, .     
 \end{equation}
 
-Wie in Abschnitt \ref{sec_EinsteinGl} gezeigt wurde, muss f\"ur eine 
-L\"osung der Einstein'schen Feldgleichungen im Vakuum der Ricci-Tensor 
-verschwinden. 
+F\"ur eine  L\"osung der Einstein'schen Feldgleichungen im Vakuum muss
+der Ricci-Tensor verschwinden (siehe den Kurztext \glqq\hyperref[chap_ART]{Grundlagen der ART}\grqq). 
 Man erh\"alt so eine lineare Differentialgleichung f\"ur $h_{\mu \nu}$:
 \begin{equation} 
      \Box h_{\mu \nu} 
@@ -119,18 +124,22 @@ die Werte $h=0,\pm 1,\pm 2$ auf, was Gravitonen als Spin-2-Teilchen
 kennzeichnet. Die Helizit\"aten zu $h=0$ und $h=\pm 1$ gibt es jedoch
 nicht (\"ahnlich, wie es auch die Helizit\"at $m=0$ f\"ur
 das Photon als Spin-1-Teilchen nicht gibt -- da das Photon keine
-Masse hat, gibt es auch keine transversalen Freiheitsgrade). 
+Masse hat, gibt es auch keine longitudinalen Freiheitsgrade). 
 Lediglich die Helizit\"aten $h=\pm 2$ entsprechen daher der physikalischen
 Polarisation einer Gravitationswelle bzw.\ dem Zustand eines Gravitons
 (vgl.\ \cite{Fliessbach}, Kap.~29 und 38).
 
-Man versucht heute mit Hilfe von Laserinterferenzexperimenten
+Man kann heute mit Hilfe von Laserinterferenzexperimenten
 (im Wesentlichen riesige Michelson-Morley-Interferometer) 
-Gravitationswellen nachzuweisen. Bisher ist ein direkter Nachweis
-noch nicht gegl\"uckt, allerdings gibt es indirekte Hinweise auf
+Gravitationswellen nachweisen. 2015 gelang der erste direkte Nachweis und
+seitdem wurden mehrere hundert Ereignisse beobachtet. Es gab jedoch
+schon seit 1974 indirekte Hinweise auf
 Gravitationswellen:\index{PSR 1913+16} 
 An Doppelpulsarsystemen (das bekannteste
-ist das System PSR 1913+16) beobachtet man \"uber die Jahre
+ist das Sys\-tem PSR 1913+16)\footnote{PSR ist die Abk\"urzung f\"ur \glqq Pulsar\grqq,
+1913 steht f\"ur die Rektazension $19^{\rm h}13^{\rm m}$ und 16 f\"ur die Deklination $16^\circ$;
+dieses System befindet sich im Sternbild Aquila oder Adler.}
+beobachtete man \"uber die Jahre
 hinweg eine Verk\"urzung der Umlaufzeiten (Abb.\ \ref{fig_PSR}). 
 Diese beruht auf
 einem Energieverlust, der nach der ART berechnet werden kann
@@ -141,7 +150,7 @@ besteht.
 \includegraphics[width=0.5\linewidth, height=0.5\linewidth,%
 trim=0 0 0 0,clip]{./Bilder_ART/PSR1913}
 \caption{\label{fig_PSR}%
-Periodenverk\"urzung des Periastrons (der Punkt, bei dem ein
+Periodenverk\"urzung des Perias\-trons (der Punkt, bei dem ein
 Stern eines Doppelstern-Systems seinem Partner am
 n\"achsten ist) bei dem Doppelstern-System PSR 1913+16.
 Die Verk\"urzung beruht im Wesentlichen auf einer
@@ -151,8 +160,9 @@ Abstrahlung von Gravitationswellen. (Aus \cite{Weisberg})}
 \section{Die Newton'sche N\"aherung}
 \label{sec_NewtonGrenzfall}
 
-Die Geod\"atengleichung (\ref{geodaete}) entspricht
-der Bewegungsgleichung f\"ur ein Teilchen unter
+Die Geod\"atengleichung 
+(siehe der Kurztext \glqq \hyperref[chap_DiffGeometry]{Differentialgeometrische Grundlagen der ART}\grqq) 
+entspricht der Bewegungsgleichung f\"ur ein Teilchen unter
 dem Einfluss des Gravitationsfeldes. In der Newton'schen
 N\"aherung\index{Newton'sche N\"aherung der ART} 
 sollte diese Gleichung somit in
@@ -240,7 +250,7 @@ Messung der Raumkr\"ummung in der N\"ahe der
 Erde war.\index{Gravity B-Probe} 
 Das als \glqq Gravity B Probe\grqq\ bekannte 
 Experiment
-wurden in der Zeit bis Ende 2005 durchgef\"uhrt, die
+wurde in der Zeit bis Ende 2005 durchgef\"uhrt, die
 Auswertung der Daten dauerte mehrere Jahre.
 Zur Ausmessung der Raumkr\"ummung bediente man
 sich mehrerer hoch empfindlicher Gyroskope. 
@@ -272,9 +282,9 @@ messen:
 \item
 Die Raumkr\"ummung durch die Masse der Erde, wie sie
 sich beispielsweise aus einer Schwarzschild-Metrik
-(siehe n\"achstes Kapitel) f\"ur gro\ss e Abst\"ande vom
-Horizont ergibt. Der zu erwartende Effekt aufgrund dieses
-Einflusses war pro Jahr rund 6600 Millibogensekunden, 
+(siehe den Kurztext \glqq\hyperref[chap_Schwarzschild]{Schwarze L\"ocher}\grqq) 
+f\"ur gro\ss e Abst\"ande vom Horizont ergibt. Der zu erwartende Effekt 
+aufgrund dieses Einflusses war pro Jahr rund 6600 Millibogensekunden, 
 um den die Drehachse verschoben wird.
 \item
 Den so genannten {\em Lense-Thirring-Effekt},
@@ -284,8 +294,9 @@ rotierenden K\"orpers von diesem \glqq mitgezogen\grqq\
 wird, was zu einer schwachen Verdrillung der
 Raumzeit in der Umgebung eines rotierenden
 K\"orpers f\"uhrt. Man kann diesen Effekt z.B.\
-aus der Kerr-L\"osung (siehe ebenfalls n\"achstes
-Kapitel) f\"ur ein rotierendes
+aus der Kerr-L\"osung 
+(siehe ebenfalls den Kurztext \glqq\hyperref[chap_Schwarzschild]{Schwarze L\"ocher}\grqq) 
+f\"ur ein rotierendes
 Schwarzes Loch in gro\ss em Abstand erhalten.
 Hier betrug der zu erwartende Effekt
 rund 40 Millibogensekunden pro Jahr.
@@ -335,9 +346,9 @@ Genauigkeit nachgewiesen werden.
 %\bibitem{Fierz} Markus Fierz; {\it \"Uber den Ursprung und die Bedeutung
 %        der Lehre Isaac Newtons vom absoluten Raum}; Gesnerus, 
 %        11.\ Jahrgang (1954), S.\,62--120.
-%\bibitem{Fliessbach} Torsten Flie\ss bach; {\it Allgemeine 
-%        Relativit\"atstheorie}; BI-Wissenschaftsverlag, Mannheim, Wien
-%        Z\"urich, 1990. 
+\bibitem{Fliessbach} Torsten Flie\ss bach; {\it Allgemeine 
+        Relativit\"atstheorie}; BI-Wissenschaftsverlag, Mannheim, Wien
+        Z\"urich, 1990. 
 %\bibitem{Galilei} Galilei; {\it Dialog \"uber die beiden haupts\"achlichen
 %        Weltsysteme, das ptolem\"aische und das kopernikanische}; 
 %        Teubner Stuttgart, 1982; aus dem Italienischen \"ubersetzt von
@@ -407,9 +418,9 @@ Genauigkeit nachgewiesen werden.
 %\bibitem{Simonyi}
 %       K\'aroly Simonyi; {\it Kulturgeschichte der Physik}; Verlag
 %       Harri Deutsch, Thun, Frankfurt am Main, 1990.
-%\bibitem{Weisberg} Weisberg, J.M., Taylor, J.H.; {\em Relativistic Binary Pulsar
-%          B1913+16: Thirty Years of Observations and Analysis}; 
-%          \verb+arXiv:astro-ph/0407149v1+; 2004. 
+\bibitem{Weisberg} Weisberg, J.M., Taylor, J.H.; {\em Relativistic Binary Pulsar
+          B1913+16: Thirty Years of Observations and Analysis}; 
+          \verb+arXiv:astro-ph/0407149v1+; 2004. 
 %\bibitem{Thomson} James Thomson; {\it On the Law of Inertia; the
 %       Principle of Chronometry; and the Principle of Absolute Clinural
 %       Rest, and of Absolute Rotation}; Proc.\ Roy.\ Soc.\ (Edinburgh),
