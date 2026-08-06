@@ -219,7 +219,11 @@ def create_app(db_url=None):
                                     if "\chapter{" in line:
                                         title = line.split("{")[1].split("}")[0]
                                     if "\info{" in line:
-                                        date = line.split("}{")[1].split("}")[0]
+                                        if "}{" in line:
+                                            
+                                            date = line.split("}{")[1].split("}")[0]
+                                        else:
+                                            date = line.split(";")[1].split("}")[0]
                                 
                                 # Deckblatt
                                 copy_files("upload_dir/attachment/Deckblatt/Bilder", tmpdirname + '/Bilder')
@@ -271,7 +275,6 @@ def create_app(db_url=None):
                                         "Klass_10_Landkarten",
                                         "Klass_11_Hebelgesetze",
                                         "QM_01_QuBit",
-                                        "SRT_03_Kette",
                                         "Thermo_01_Prozess",
                                         "Thermo_03_Entropie"]:
                             copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder') 
@@ -282,6 +285,12 @@ def create_app(db_url=None):
                             except:
                                 pass
                             copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder_ART')
+                        elif item.name in ["SRT_03_Kette"]:
+                            try: 
+                                os.makedirs(tmpdirname + '/Bilder_SRT')
+                            except:
+                                pass
+                            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder_SRT')
                     
                 texdoc.append('\printindex\n\end{document}')
 
