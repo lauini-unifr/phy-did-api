@@ -1,15 +1,17 @@
-%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
 
 \chapter{Verschr\"ankung}
 % Kap x
 \label{chap_Entanglement}
 
-\info{Thomas Filk}{01.04.2024}%; BP 3.6.6 (8) \& (9)}%
+\info{Thomas Filk}{15.06.2024}
+\infoBP{BP 3.6.6 (8) \& (9)}%
 M\"ochte man in der Quantentheorie Systeme beschreiben, die aus\index{Verschr\"ankung|(}
-mehreren Teilsystemen, beispielsweise mehreren Teilchen, bestehen, so ergeben
+mehreren Teilsystemen bestehen, beispielsweise mehreren Teilchen, so ergeben
 sich zwei Besonderheiten: (1) Der Zusammenhang zwischen dem Spin
-von Teilchen und ihrer Statistik (das Spin-Statistik-Theorem) f\"ur
-Systeme aus identischen Teilchen, was beispielsweise f\"ur Elektronen das Pauli'sche
+von Teilchen und ihrer Statistik (das sogenannte Spin-Statistik-Theorem) f\"ur
+Sys\-teme aus identischen Teilchen, was beispielsweise f\"ur Elektronen 
+in Atomen das Pauli'sche
 Ausschlie\ss ungsprinzip impliziert, und
 (2) die sogenannten Quantenkorrelationen von verschr\"ankten
 Systemen. Gerade die M\"oglichkeit solcher neuartiger
@@ -21,9 +23,120 @@ Diskussionen. Auf das Spin-Statistik-Theorem wird an anderer Stelle
 eingegangen. In diesem Kurztext geht es in erster Linie um das Konzept
 der Verschr\"ankung. 
 
-\section{Das Ph\"anomen der Verschr\"ankung}
+\section{Als Einstieg: Beispiele}
 
-Eine Voraussetzung, um \"uberhaupt von Verschr\"ankung sprechen zu k\"onnen,
+Verschr\"ankung ist zun\"achst ein rein mathematischer Begriff aus der Theorie
+der Vektorr\"aume. Wenn ein Tensorprodukt (mehr dazu in
+Abschnitt \ref{sec_Tensorprodukt}) von zwei (oder mehr) Vektorr\"aumen gegeben ist, 
+kann man von Vektoren bzw.\ Unterr\"aumen in diesem Produktraum
+sagen, ob sie verschr\"ankt sind oder nicht. 
+
+\subsection{Funktionenr\"aume}
+\label{sec_Verschr_Funktionen}
+
+Wir betrachten zun\"achst eine ganz
+spezielle Klassen von Beispielen aus der Theorie von Funktionen. Funktionen k\"onnen
+einen Vektorraum bilden und das Tensorprodukt von Funktionenr\"aumen in jeweils
+einem Argument $x$ bzw.\ einem Argument $y$ besteht aus Funktionen von beiden Argumenten, $f(x,y)$.
+
+Gegeben eine Funktion $f$ von zwei Variablen $x$ und $y$, also $f(x,y)$. Diese Funktion
+hei\ss t separabel oder separierbar\index{separabel} 
+(bez\"uglich der Variablen $x$ und $y$), sofern es Funktionen $g(x)$ und
+$h(y)$ gibt, sodass $f(x,y)=g(x) h(y)$. Gibt es keine solche Funktionen $g$ und $h$, hei\ss t
+$f$ verschr\"ankt. 
+
+Dazu betrachten wir jetzt eine Reihe von Beispielen:
+\begin{enumerate}
+\item
+$f(x,y)=x^2y^3$: Diese Funktion ist offensichtlich separabel, also nicht verschr\"ankt. Man
+kann beispielsweise $g(x)=x^2$ und $h(y)=y^3$ w\"ahlen. Man kann aber auch
+$g(x) = \frac{1}{2}x^2$ und $h(x)=2y^3$ w\"ahlen, d.h., die Zerlegung von $f$ als Produkt
+ist nicht ganz eindeutig, sondern nur bis auf einen Faktor bestimmt. 
+\item
+$f(x,y)=1 + (x+y)+xy$. Diese Funktion ist ebenfalls separabel, da sich $f$ in der Form 
+$f(x,y)=(1+x)(1+y)$ schreiben l\"asst. 
+Allerdings ist $f(x,y)=1+2(x+y)+xy$ nicht separabel, also verschr\"ankt.
+\item
+Allgemeiner ist $f(x,y)=\alpha + \beta x + \gamma y + \delta xy$ nur dann separabel, wenn 
+$\alpha \delta =\beta \gamma$. In diesem Fall gibt es Zahlen $a,b,c,d$, sodass 
+$f(x,y)= (a +bx)(c+dy)$.
+\item
+$f(x,y)= {\rm e}^{-(x^2+y^2)}$ ist separierbar: $f(x,y)={\rm e}^{-x^2}{\rm e}^{-y^2}$.
+\item
+$f(x,y)=\cos(x-y)$ ist nicht separierbar, ist also verschr\"ankt. $f(x,y)=\cos x \cos y + \sin x \sin y$
+l\"asst sich nicht als reines Produkt schreiben.
+\item
+$f(x,y)=\cos(x-y)+\cos(x+y)$ ist separierbar: $f(x,y)=2 \cos x \cos y$.
+\item
+$f(x,y)=x^2-y^2$ ist verschr\"ankt, also nicht separierbar. Es gilt zwar $f(x,y)=(x+y)(x-y)$, aber
+das ist keine Separation bez\"uglich $x$ und $y$. In diesem Fall ist $f$ separierbar
+bez\"uglich der Variablen $x+y$ und $x-y$. Dieses Beispiel zeigt, dass immer angegeben werden
+muss, bez\"uglich welcher Variablen die Funktion separierbar bzw.\ verschr\"ankt sein soll.
+\item
+$f(x,y)=(x+y)^2-(x-y)^2$ ist separierbar: $f(x,y)=4xy$. 
+\end{enumerate}
+Manche dieser Beispiele zeigen, dass es nicht immer leicht ist zu entscheiden, ob eine
+gegebene Funktion separierbar ist oder nicht. 
+
+Der Bezug zur Physik und den folgenden Abschnitten wird deutlich, wenn man bedenkt,
+dass sich viele physikalische Systeme durch Wellenfunktionen $\psi(x)$ beschreiben
+lassen. Und wenn man zwei Systeme beschreiben m\"ochte, handelt es sich um Wellenfunktionen
+$\psi(x,y)$, wobei sich die Variable (oder auch eventuell die Variablen) $x$ auf das
+eine System und die Variable(n) $y$ auf das andere System beziehen. Die Wahrscheinlichkeiten
+bzw.\ Wahrscheinlichkeitsdichten,
+bei Messungen f\"ur die $x$- oder $y$-Variablen bestimmte Werte zu finden, sind dann durch
+$w(x,y)=| \psi(x,y)|^2$ gegeben. Wenn $\psi(x,y)$ separierbar ist, faktorisiert auch $w(x,y)=w_1(x)w_2(y)$
+und die beiden Variablen $x$ und $y$ haben unabh\"angige Verteilungen.
+
+\subsection{Endlich dimensionale Vektorr\"aume}
+
+Sind zwei Vektorr\"aume gegeben, in denen man die Vektoren durch ihre
+Komponenten ausdr\"uckt, z.B., $\pmb{a}=(a_1,...,a_m)$ in dem einen Vektorraum und
+$\pmb{b}=(b_1,...,b_n)$ in dem anderen Vektorraum, dann kann man -- \"ahnlich wie bei
+den Funktionen -- die Elemente des Tensorprodukts dieser beiden Vektorr\"aume in der
+Form $\pmb{c}=\{c_{ij} \}_{i=1,...,m;j=1,...,n} = (c_{11},...,c_{mn})$ schreiben. Es gilt
+wieder: Ein Vektor $\pmb{c}=\{c_{ij}\}$ hei\ss t separierbar, wenn es Vektoren $\pmb{a} =
+\{a_i\}$ und $\pmb{b}=\{b_j\}$ gibt, sodass $c_{ij}=a_ib_j$. In diesem Fall schreibt man 
+auch $\pmb{c}=\pmb{a} \otimes \pmb{b}$.   
+
+Schreibt man einen Vektor im Tensproduktraum von zwei zweidimensionalen Vektorr\"aumen
+in der Form $\pmb{c}=(c_{11},c_{12},c_{21},c_{22})$, dann ist dieser Vektor separierbar
+wenn $c_{11}c_{22}=c_{12}c_{21}$. Beispielsweise sind die Vektoren
+\begin{equation}
+         \pmb{c}_2 = (1,2,1,2) = (1,1) \otimes (1,2)  \hspace{0.5cm} {\rm und} \hspace{0.5cm}
+                  \pmb{c}_3 = (1,1,0,0) =(1,0) \otimes (1,1)
+\end{equation}
+separierbar, wohingegen
+\begin{equation}
+         \pmb{c}_3 = (1,0,0,1)  \hspace{0.5cm} , \hspace{0.5cm}
+         \pmb{c}_4 = (1,2,2,1)   \hspace{0.5cm} {\rm und} \hspace{0.5cm}
+                  \pmb{c}_5 = (0,1,1,0) 
+\end{equation}
+nicht separierbar sind; diese Vektoren sind verschr\"ankt.  
+
+Oftmals erscheint in diesem Zusammenhang das Beispiel der Funktionen
+einfacher als das Beispiel der Vektoren. Daher k\"onnte es hilfreich sein,
+das Beispiel von Vektoren auf das von Funktionen zur\"uckzuf\"uhren.
+Es sei eine Funktion in zwei Variablen $x$ und $y$ gegeben, die in $x$ ein
+Polynom $m-1$.ster Ordnung und in $y$ ein Polynom $(n-1)$.ster Ordnung
+ist. Sie hat also folgende Form:
+\begin{eqnarray}
+       f(x,y) &=& c_{00} + c_{10} x + c_{01} y + c_{20} x^2 + c_{11}xy + c_{02} y^2 + ... +
+          c_{mn} x^{m-1} y^{n-1} \\
+          &=& \sum_{k=0}^{m-1} \sum_{l=0}^{n-1} c_{kl} \, x^k y^l
+\end{eqnarray} 
+Dann hei\ss t diese Funktion separierbar, wenn es zwei Funktionen
+\begin{eqnarray}
+          g(x) &=& a_0 + a_1x + a_2 x^2 + ... + a_{m-1}x^{m-1} = \sum_{k=0}^{m-1} a_k x^k\\
+          {\rm und} \hspace{1.0cm} h(y)  &=& b_0 + b_1y + b_2 y^2 + ... + a_{n-1}y^{n-1}
+          = \sum_{l=0}^{n-1} b_l y^l  
+\end{eqnarray}
+gibt, sodass $f(x,y)=g(x)h(y)$. 
+
+\section{Das physikalische Ph\"anomen der Verschr\"ankung}
+
+Eine Voraussetzung, um bei einem physikalischen System 
+\"uberhaupt von Verschr\"ankung sprechen zu k\"onnen,
 sind unabh\"angige Freiheitsgrade. Nur dann ist es sinnvoll von Zust\"anden
 zu sprechen, f\"ur die diese Freiheitsgrade miteinander verschr\"ankt sind. 
 \glqq Unabh\"angig\grqq\ bedeutet hier,
@@ -70,7 +183,7 @@ Physik. Man denke an folgende Situation: Jeden Tag werden an zwei Personen zwei 
 verschickt, die einen identischen Inhalt haben -- der Einfachheit halber nur
 entweder die Zahl $+1$ oder die Zahl $-1$. Sobald eine Person 
 ihre Email liest und somit die Zahl in ihrer Email kennt, wei\ss\ sie, was die andere
-Person liest oder lesen wird. Das Lesen einer Email
+Person liest oder lesen wird. Die Kenntnisnahme einer Email
 erlaubt eine neue Vorhersage f\"ur den Inhalt der anderen Email. 
 
 Allerdings handelt es sich hier um ein Gemisch von Emailpaaren: ein Gemisch aus 
@@ -633,6 +746,42 @@ Gesamtsystems in mehr als zwei Teilsysteme. Ein guter
 \"Ubersichtsartikel zu Verschr\"ankungsma\ss en ist
 \cite{Horodecki}. 
 
+\section{Verschr\"ankung als Eigenschaft von Strahlen}
+
+Bei dem ersten Beispiel eines separablen Systems von Funktionen 
+(Abschnitt \ref{sec_Verschr_Funktionen}) haben
+wir gesehen, dass bei separablen Vektoren die Zerlegung in ein Tensorprodukt
+von Vektoren nicht eindeutig ist. Wenn sich ein Vektor $\pmb{c}$ in einem
+Tensorproduktraum als Produkt schreiben l\"asst, also $\pmb{c}=\pmb{a}\otimes \pmb{b}$,
+dann kann man einen beliebigen komplexen Faktor $\alpha$ w\"ahlen, sodass auch
+$\pmb{c}=(\alpha \pmb{a}) \otimes (\frac{1}{\alpha}\pmb{b})$ gilt. 
+
+Weiterhin gilt: Wenn $\pmb{c}$ separabel ist, dann ist auch $\alpha \pmb{c}$ separabel. 
+Ist beispielsweise $\pmb{c}=\pmb{a}\otimes \pmb{b}$, dann gilt auch
+z.B.\ $\alpha \pmb{c}=(\alpha \pmb{a})\otimes \pmb{b}$. Die Eigenschaft, separabel zu
+sein, gilt also nicht nur f\"ur einen Vektor, sondern f\"ur den gesamten 1-dimensionalen
+Unterraum, der sich als Vielfache dieses Vektors darstellen l\"asst. Separabilit\"at ist
+somit eine Eigenschaft von 1-dimensionalen Unterr\"aumen in einem Tensorproduktraum.
+Dadurch wird Separabilit\"at -- und somit auch Verschr\"ankung als das Gegenteil von
+Separabilit\"at -- eine Eigenschaft von physikalischen Zust\"anden in einem Produkt-Hilbert-Raum.
+Denn physikalische Zust\"ande entsprechen nicht den Vektoren in diesem Hilbert-Raum,
+sondern den 1-dimensionalen Unterr\"aumen zu diesen Vektoren.
+
+Der Vorteil, wenn man bei der Separabilit\"at bzw.\ der Verschr\"ankung nicht an
+Vektoren sondern an die von diesen Vektoren aufgespannten 1-dimensionalen
+Vektorr\"aume senken, ist, dass die Separation in zwei Unterr\"aume eindeutig ist,
+wohingegen bei der Aufspaltung in Vektoren diese nur bis auf einen beliebigen Faktor
+eindeutig ist.  
+
+Wird andererseits ein physikalischer Zustand durch einen normierten Vektor $\pmb{c}$
+repr\"asentiert, gilt also $|\pmb{c}|=1$, und ist $\pmb{c}=\pmb{a}\otimes \pmb{b}$, dann
+kann man auch die Vektoren $\pmb{a}$ und $\pmb{b}$ also normiert w\"ahlen. Und da
+bei $\pmb{c}$ dieser normierte Vektor durch den Zustand nur bis auf eine Phase bestimmt ist, 
+gilt dies auch f\"ur $\pmb{a}$ und $\pmb{b}$.  
+
+
+
+
 \section*{Anmerkungen}
 \subsection*{Die Richtungsunabh\"angigkeit des $\Phi^+$-Zustands (Herleitung)}
 \label{sec_Entanglement_A}
@@ -673,16 +822,16 @@ F\"ur den korrelierten verschr\"ankten Zustand $\Phi^+$ (ausgedr\"uckt in der $\
 
 Auf die beiden Zust\"ande des Gemischs wirkt die Drehung in der Form
 \begin{eqnarray}
-    | \pmb{f}_1 \otimes |\pmb{f}_1\rangle &=&
+    | \pmb{f}_1 \rangle \otimes |\pmb{f}_1\rangle &=&
     = \big( a | \pmb{e}_1 \rangle + b |\pmb{e}_2 \rangle \big) \otimes
                      ( a | \pmb{e}_1 \rangle + b |\pmb{e}_2 \rangle \big)  \\
     &=& \big( a^2 | \pmb{e}_1 \rangle \otimes | \pmb{e}_1 \rangle + ab | \pmb{e}_1 \rangle \otimes | \pmb{e}_2 \rangle +
-                   ba | \pmb{e}_2 \rangle \otimes | \pmb{e}_1 \rangle + b^2 | \pmb{e}_2 \rangle \otimes | \pmb{e}_2 \rangle  \\
-    | \pmb{f}_2 \otimes |\pmb{f}_2\rangle &=&
+                   ba | \pmb{e}_2 \rangle \otimes | \pmb{e}_1 \rangle + b^2 | \pmb{e}_2 \rangle \otimes | \pmb{e}_2 \rangle \big) \\
+    | \pmb{f}_2 \rangle\otimes |\pmb{f}_2\rangle &=&
     = \big( -b | \pmb{e}_1 \rangle + a |\pmb{e}_2 \rangle \big) \otimes
                      ( -b | \pmb{e}_1 \rangle + a |\pmb{e}_2 \rangle \big)  \\
     &=& \big( b^2 |\pmb{e}_1 \rangle \otimes | \pmb{e}_1 \rangle - ba |\pmb{e}_1 \rangle \otimes |\pmb{e}_2 \rangle -
-                   -ab | \pmb{e}_2 \rangle \otimes | \pmb{e}_1 \rangle + a^2 |\pmb{e}_2 \rangle \otimes |\pmb{e}_2 \rangle  
+                   ab | \pmb{e}_2 \rangle \otimes | \pmb{e}_1 \rangle + a^2 |\pmb{e}_2 \rangle \otimes |\pmb{e}_2 \rangle  \big)
 \end{eqnarray}
 Man erkennt, dass in beiden F\"allen auch antikorrelierte Ergebnisse m\"oglich sind.\index{Verschr\"ankung|)}
 
@@ -693,5 +842,5 @@ Man erkennt, dass in beiden F\"allen auch antikorrelierte Ergebnisse m\"oglich s
 \end{thebibliography}
 
 
-%\end{document}
+\end{document}
 

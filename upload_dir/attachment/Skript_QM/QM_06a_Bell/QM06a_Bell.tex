@@ -1,0 +1,151 @@
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{0}
+
+\chapter{Bell'sche Ungleichungen und Quantenkontextualit\"at}
+% Kap x
+\label{chap_Bell}
+
+\info{Thomas Filk}{6.10.2024}%
+Dies ist ein zweiter Kurztext zu Bell'schen Ungleichungen (vgl.\ \hyperref[chap_EPR]{EPR -- Bell -- CHSH}),
+bei dem die Herleitung und die Schlussfolgerungen aus einer anderen Perspektive betrachtet
+werden. In diese Betrachtung k\"onnen auch das Kochen-Specker Theorem und das
+magische Quadrat von Peres und Mermin einbezogen werden.
+
+Der allgemeine Formalismus besteht aus drei Schritten:
+\begin{enumerate}
+\item
+Die Aufstellung einer Tabelle mit s\"amtlichen klassisch m\"oglichen Ergebnissen f\"ur
+alle Observablen, die bei dem Problem betrachtet werden.
+\item
+Die \"Uberpr\"ufung einer Ungleichung oder Einschr\"ankung, die in allen erlaubten F\"allen
+in der Tabelle g\"ultig ist. Unter der Annahme der Realit\"at muss diese Ungleichung bzw.\
+Einschr\"ankung also f\"ur jedes System erf\"ullt sein.
+\item
+Der Nachweis, dass es Quantensysteme gibt, bei denen die Ungleichung bzw.\ die
+Einschr\"ankungen verletzt sind. 
+\end{enumerate}
+Diese drei Schritte werden zun\"achst an einem Beispiel beschrieben. Anschlie\ss end erfolgt eine 
+ausf\"uhrlichere allgemeine Beschreibung. Die sp\"ateren Abschnitte enthalten weitere
+Beispiele. 
+
+\section{Ein Beispiel: CHSH}
+
+Die CHSH-Ungleichung bezieht sich auf ein System, das aus zwei Teilsystemen besteht.
+Als Quantensystem betrachtet man meist zwei (in einem EPR-Zustand) verschr\"ankte Photonen, die sich
+in gro\ss em Abstand befinden. An diesen beiden Photonen k\"onnen die Polarisationen unter
+verschiedenen Winkeln gemessen werden. 
+
+Bei der CHSH-Ungleichung, die auch von Alain Aspect experimentell getestet
+wurde, handelt es sich um vier Observablen $\{A_1, A_2, B_1, B_2\}$, von denen $A_1$ und $A_2$ nicht
+gleichzeitig gemessen werden k\"onnen (sie geh\"oren zu verschiedenen Polarisationsrichtungen an einem
+Photon, die relativ zueinander um $45^\circ$ gedreht sind) und ebenso sind $B_1$ und $B_2$ nicht 
+kompatibel. Das bedeutet, nur die vier paarweisen Kombinationen $(A_i,B_j)$ ($i,j=1,2$) k\"onnen gleichzeitig, 
+gemessen werden. Au\ss erdem k\"onnen die Ergebnisse f\"ur jede Observable nur $+1$ oder $-1$ sein. 
+
+\subsection{Die Realit\"atsannahme  -- Die klassische Tabelle}
+
+F\"ur vier Observable, die nur jeweils zwei Werte ($+1$ und $-1$) annehmen k\"onnen, gibt es insgesamt
+$2^4=16$ M\"oglichkeiten, die in Tabelle \ref{tab_CHSH} zusammengefasst werden. Unter der Annahme
+der Realit\"at muss f\"ur jedes einzelne System eine dieser 16 M\"oglichkeiten realisiert sein. 
+
+\begin{SCtable}[50][htb]
+\begin{tabular}{cccc|c||}
+$A_1$ & $A_2$ & $B_1$ & $B_2$ & $S$ \\ \hline
+$+1$ & $+1$ & $+1$ & $+1$ &  $+2$ \\
+$+1$ & $+1$ & $+1$ & $-1$ &  $+2$ \\
+$+1$ & $+1$ & $-1$ & $+1$ &  $-2$ \\
+$+1$ & $+1$ & $-1$ & $-1$ &  $-2$ \\
+$+1$ & $-1$ & $+1$ & $+1$ &  $+2$ \\
+$+1$ & $-1$ & $+1$ & $-1$ &  $-2$ \\
+$+1$ & $-1$ & $-1$ & $+1$ &  $+2$ \\
+$+1$ & $-1$ & $-1$ & $-1$ &  $-2$ \\
+\end{tabular}
+\begin{tabular}{cccc|c}
+$A_1$ & $A_2$ & $B_1$ & $B_2$ & $S$ \\ \hline
+$-1$ & $+1$ & $+1$ & $+1$ &  $-2$ \\
+$-1$ & $+1$ & $+1$ & $-1$ &  $+2$ \\
+$-1$ & $+1$ & $-1$ & $+1$ &  $-2$ \\
+$-1$ & $+1$ & $-1$ & $-1$ &  $+2$ \\
+$-1$ & $-1$ & $+1$ & $+1$ &  $-2$ \\
+$-1$ & $-1$ & $+1$ & $-1$ &  $-2$ \\
+$-1$ & $-1$ & $-1$ & $+1$ &  $+2$ \\
+$-1$ & $-1$ & $-1$ & $-1$ &  $+2$ 
+\end{tabular}
+\caption{\label{tab_CHSH}%
+F\"ur die vier Observable $A_1,A_2,B_1,B_2$ sind nur die angegebenen 16 Kombinationen
+m\"oglich. In allen 16 F\"allen hat die Gr\"o\ss e $S=a_1b_1+a_1b_2+a_2b_1-a_2b_2$
+den Wert $+2$ oder $-2$. F\"ur ein beliebiges Ensemble aus den angegebenen M\"oglichkeiten
+muss der Erwartungswert von $S$ daher immer zwischen $+2$ und $-2$ liegen bzw.\
+$|\langle S \rangle | \leq 2$. }
+\end{SCtable}
+
+\subsection{Die Ungleichung}
+
+
+
+
+
+\section{Der allgemeine Formalismus}
+
+
+\subsection{Die Annahme der Realit\"at}
+
+Ausgangspunkt ist eine Menge von Observablen $\{A,B,C,...\}$, die nicht alle gleichzeitig
+gemessen werden k\"onnen, d.h., die nicht alle miteinander kommutieren. Es gibt jedoch bestimmte
+Teilmengen von Observablen, die miteinander kompatibel sind und somit gleichzeitig gemessen
+werden k\"onnen. Jede der Observablen kann nur bestimmte Werte annehmen -- in den meisten 
+F\"allen handelt es sich um bin\"are Werte, d.h., eine Messung der Observablen kann nur einen
+von zwei m\"oglichen Messwerten ergeben. 
+
+Bei der CHSH-Ungleichung, die auch von Alain Aspect experimentell getestet
+wurde, handelt es sich um vier Observable $\{A_1, A_2, B_1, B_2\}$, von denen $A_1$ und $A_2$ nicht
+gleichzeitig gemessen werden k\"onnen (sie geh\"oren zu verschiedenen Polarisationsrichtungen,
+die relativ zueinander um $45^\circ$ gedreht sind) und ebenso sind $B_1$ und $B_2$ nicht kompatibel.
+Das bedeutet, nur die paarweisen Kombinationen $(A_i,B_j)$ ($i,j=1,2$) k\"onnen gleichzeitig, gemessen
+werden. Au\ss erdem k\"onnen die Ergebnisse f\"ur jede Observable nur $+1$ oder $-1$ sein. 
+
+Man kann nun eine Tabelle erstellen, in der alle m\"oglichen Messwerte von allen Observablen
+aufgelistet sind. Diese Tabelle entspricht einer \glqq Realit\"atsannahme\grqq: Es wird angenommen,
+dass jeder Observablen unabh\"angig davon, ob sie gemessen wird oder nicht, ein Wert zukommt,
+der bei einer Messung auch ihrem Messwert entspricht. Unter dieser Annahme muss ein gegebenes
+System einer der M\"oglichkeiten in der Tabelle entsprechen. Eventuell unterliegen die Observablen
+gewissen einschr\"ankenden Bedingungen: Bei einem EPR-Zustand muss die Messung einer Observablen
+an einem der Teilsysteme immer das entgegengesetzte Ergebnis von der Messung der entsprechenden
+Observablen am anderen Teilsystem ergeben. Das bedeutet, die M\"oglichen Messwerte zu den
+entsprechenden Observablen an den Teilsystemen m\"ussen immer entgegengesetzt sein. 
+L\"asst man insgesamt sechs Observable zu -- $\{A_1,B_1,C_1,A_2,B_2,C_2\}$, wobei sich $A_1,B_1,C_1$ auf
+die Messung der Polarisationsrichtung an Photon 1 unter bestimmten Winkeln beziehen und entsprechend
+$A_2,B_2,C_2$ auf die Messungen derselben Polarisationsrichtungen an Photon 2 -- dann sind die
+Werte in der Tabelle bez\"uglich gleicher Messungen immer antikorreliert. Von den zun\"achst $2^6=64$
+M\"oglichkeiten, bei sechs Observablen jeweils die Messwerte $+1$ oder $-1$ zu finden, bleiben nur
+$2^3=8$ M\"oglichkeiten \"ubrig, da die Messwerte von $A_2.B_2,C_2$ bereits durch die Messwerte von
+$A_1,B_1,C_1$ festgelegt sind. 
+
+\subsection{Die Ungleichung}
+
+Die schwierige Aufgabe besteht darin, eine Bedingung an bestimmte Korrelationen
+in der Tabelle zu finden, die von allen erlaubten M\"oglichkeiten erf\"ullt werden, zu denen es
+aber in der Quantentheorie Systeme gibt, bei denen diese Bedingungen verletzt sind. 
+
+In vielen F\"allen handelt es sich um eine Ungleichung, die von einer bestimmten
+Kombination von Korrelationen erf\"ullt ist. In manchen F\"allen, beispielsweise beim magischen
+Quadrat von Peres und Mermin, l\"asst sich eine bestimmte Bedingung klassisch \"uberhaupt nicht
+erf\"ullen, wohingegen die Korrelationen an verschr\"ankten Quantensystemen die
+Bedingungen erf\"ullen. Es gibt in vielen F\"allen keine Regel, nach der eine solche
+Bedingung gefunden werden kann, doch in den meisten F\"allen ist diese Regel bekannt
+und man muss sich nur anhand der Tabelle \"uberzeugen, dass die Regel in allen F\"allen
+erf\"ullt ist.
+
+\subsection{Die Verletzung durch ein Quantensystem}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+

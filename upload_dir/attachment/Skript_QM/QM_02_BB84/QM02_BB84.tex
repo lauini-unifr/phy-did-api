@@ -1,10 +1,10 @@
-%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
 
 \chapter{BB84 - Quantenkryptographie}
 % Kap x
 \label{chap_BB84}
 
-\info{Thomas Filk}{27.03.2024}%
+\info{Thomas Filk}{15.10.2024}%
 
 \section*{Kurzzusammenfassung}
 
@@ -270,7 +270,7 @@ Tabelle wie in Tab.\ \ref{tab_Alice1}.
 Photon & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13  \\
 Basis & $+/-$ & $+/-$ & $h/v$ & $+/-$ & $h/v$ & $h/v$ & $h/v$ & $+/-$ & $+/-$ & $h/v$ & $+/-$ & $+/-$  & $+/-$  \\
 Zustand & $+$ & $-$ & $h$ & $+$ & $h$ & $h$ & $h$ & $-$ & $+$ & $h$ & $+$ & $+$ & $-$ \\
-Bit & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 0       
+Bit & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1       
 \end{tabular}
 \caption{\label{tab_Alice1}%
 Tabelle von Alice. Diese Tabelle enth\"alt die Polarisationszust\"ande der Photonen, die Alice an Bob verschickt.}         
@@ -292,7 +292,7 @@ Photon & 1 & \underline{2} & \underline{3} & 4 & 5 & 6 & \underline{7} & 8 & \un
                 \underline{10} & 11 & 12 & \underline{13}  \\
 Basis & $h/v$ & $+/-$ & $h/v$ & $h/v$ & $+/-$ & $+/-$ & $h/v$ & $h/v$ & $+/-$ & $h/v$ & $h/v$ & $h/v$ & $+/-$   \\
 Zustand & $v$ & $-$ & $h$ & $h$ & $+$ & $-$ & $h$ & $h$ & $+$ & $h$ & $h$ & $v$ & $-$   \\
-Bit & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0       
+Bit & 1 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 1       
 \end{tabular}
 \caption{\label{tab_Bob1}%
 Tabelle von Bob. Sie enth\"alt die Polarisationszust\"ande, die Bob an den Photonen von Alice gemessen hat. 
@@ -344,7 +344,7 @@ Photon & 1 & 2 & 3 & \underline{4} & \underline{5} & 6 & \underline{7} & 8 & 9 &
                         \underline{11} & 12 & \underline{13}  \\
 Basis & $h/v$ & $h/v$ & $+/-$ & $+/-$ & $h/v$ & $+/-$ & $h/v$ &$h/v$ &$h/v$ & $+/-$ & $+/-$ & $h/v$ & $+/-$ \\
 Zustand & $v$ & $v$ & $-$ & $+$ & $h$ & $-$ & $h$ &$v$ &$h$ & $-$ & $+$ & $h$ & $-$ \\
-Bit & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0       
+Bit & 1 & 1 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 1       
 \end{tabular}
 \caption{\label{tab_Eve1}%
 Tabelle von Eve der Photonenzust\"ande, die sie an den Photonen von Alice gemessen hat. Stimmt die Basis
@@ -371,19 +371,19 @@ Photonen abgefangen und durch Messungen manipuliert wurden.
 {\small Alice Basis} & ${\scriptstyle +/-}$ & ${\scriptstyle +/-}$ & ${\scriptstyle h/v}$ & ${\scriptstyle +/-}$ & ${\scriptstyle h/v}$ & ${\scriptstyle h/v}$ 
           & ${\scriptstyle h/v}$ & ${\scriptstyle +/-}$ & ${\scriptstyle +/-}$ & ${\scriptstyle h/v}$ & ${\scriptstyle +/-}$ 
           & ${\scriptstyle +/-}$  & ${\scriptstyle +/-}$  \\
-{\small Bit} & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 0 \\ \hline      
+{\small Bit} & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 \\ \hline      
 {\small Bob Basis (oE)} & ${\scriptstyle h/v}$ & ${\scriptstyle +/-}$ & ${\scriptstyle h/v}$ & ${\scriptstyle h/v}$ & ${\scriptstyle +/-}$ & ${\scriptstyle +/-}$ 
           & ${\scriptstyle h/v}$ & ${\scriptstyle h/v}$ & ${\scriptstyle +/-}$ & ${\scriptstyle h/v}$ & ${\scriptstyle h/v}$ & ${\scriptstyle h/v}$ 
           & ${\scriptstyle +/-}$   \\
-{\small Bit} & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0   \\    \hline
+{\small Bit} & 1 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 1   \\    \hline
 {\small Eve Basis}  & ${\scriptstyle h/v}$ & ${\scriptstyle h/v}$ & ${\scriptstyle +/-}$ & ${\scriptstyle +/-}$ & ${\scriptstyle h/v}$ & ${\scriptstyle +/-}$ 
          & ${\scriptstyle h/v}$ &${\scriptstyle h/v}$ &${\scriptstyle h/v}$ & ${\scriptstyle +/-}$ & ${\scriptstyle +/-}$ & ${\scriptstyle h/v}$ 
          & ${\scriptstyle +/-}$ \\
-{\small Bit} & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0  \\ \hline     
+{\small Bit} & 1 & 1 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 1  \\ \hline     
 {\small Bob Basis (mE)} & ${\scriptstyle h/v}$ & ${\scriptstyle +/-}$ & ${\scriptstyle h/v}$ & ${\scriptstyle h/v}$ & ${\scriptstyle +/-}$ 
          & ${\scriptstyle +/-}$ & ${\scriptstyle h/v}$ & ${\scriptstyle h/v}$ & ${\scriptstyle +/-}$ & ${\scriptstyle h/v}$ & ${\scriptstyle h/v}$ 
          & ${\scriptstyle h/v}$ & ${\scriptstyle +/-}$   \\
-{\small Bit} & 1 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0   \\    \hline
+{\small Bit} & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 1   \\    \hline
 \end{tabular}
 \caption{\label{tab_QKgesamt}%
 Die gesamte Tabelle des BB84-Protokolls. Die erste Doppelzeile gibt die Basis und die Bits an, in
@@ -533,5 +533,5 @@ als Test vergleichen.}
 \end{thebibliography}
 
 
-%\end{document}
+\end{document}
 

@@ -1,0 +1,586 @@
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{0}
+
+\chapter{Der Deutsch-Jozsa-Algorithmus und das Penny-Flip-Spiel}
+% Kap x
+\label{chap_Deutsch}
+
+\info{Thomas Filk}{15.12.2025}%
+Der Deutsch-Jozsa-Algorithmus ist ein vergleichsweise einfacher Quantenalgorithmus,
+mit dem man in einer Abfrage entscheiden kann, ob eine Bit-wertige Funktion auf $N$-Bit-Folgen
+konstant ist (also allen Folgen entweder den konstanten Wert 0 oder allen Folgen den Wert 1 zuweist)
+oder balanciert (in diesem Fall ordnet die Funktion der H\"alfte der Folgen den Wert 0 und
+der anderen H\"alfte den Wert 1 zu). M\"ochte man dieses Problem mit einem klassischen
+Algorithmus entscheiden, ben\"otigt man im ung\"unstigsten Fall f\"ur eine eindeutige Antwort 
+$2^{N-1}+1$ Abfragen. Mit einem 
+Quantencomputer kann man zun\"achst s\"amtliche $2^N$ Folgen als Superposition in einem
+Zustand kodieren und die gesuchte Funktion -- die man auch als Oracle bezeichnet -- so
+auf diesen Zustand anwenden, dass man anschlie\ss end mit einer einzigen Abfrage
+entscheiden kann, ob eine konstante oder balancierte Funktion vorliegt. 
+
+Benannt ist der Deutsch-Jozsa-Algorithmus nach David Deutsch und Richard Jozsa, die
+die wesentlichen Grundlagen dieses Algorithmus' entwickelt haben \cite{Deutsch,DJ}
+(siehe auch \cite{Ekert}). Die mit diesem Algorithmus
+gel\"oste Aufgabe ist zwar von keiner praktischen Relevanz, aber das Beispiel zeigt, dass
+ein Quantencomputer manche Probleme in wesentlich weniger Schritten l\"osen kann als
+ein klassischer Computer, im vorliegenden Fall sind es sogar exponentiell weniger Schritte.
+
+In diesem Kurztext wird auch das Penny-Flip-Spiel beschrieben, da es dem Deutsch-Algorithmus
+sehr \"ahnlich ist. Man kann diesen Abschnitt aber auch lesen, ohne vorher den Deutsch-Algorithmus
+gelesen zu haben.
+
+\section{Konstante und balancierte Funktionen}
+ 
+Jeder Folge $(b_0,b_1,...,b_{N-1})$ ($b_i\in \{0,1\}$) von $N$ Bits kann man eine 
+nat\"urliche Zahl $x$ zwischen 0 und 
+$2^N-1$ zuordnen, indem man die Bitfolge als bin\"are Darstellung dieser Zahl interpretiert:
+\[                   x = \sum_{i=0}^{N-1} b_i 2^i   \, . \]
+Betrachten wir nun Bit-wertige Funktionen $f$ auf solchen Folgen, k\"onnen wir ihre Urbildmenge
+als $\{0,1\}^N$ oder $[0,2^N-1]$ ansehen:
+\[          f: \{0,1\}^N \rightarrow \{0,1\}  \hspace{1cm} \mbox{bzw.} \hspace{1cm}  f: [0,2^N-1] \rightarrow \{0,1\} \, . \]
+$\{0,1\}^N$ bezeichnet das $N$-fache kartesische Produkt der Menge $\{0,1\}$.
+
+Eine konstante Funktion ordnet allen Elementen dasselbe Element
+ihrer Bildmenge zu. Im vorliegenden Fall gibt es nur zwei konstante Funktionen, unabh\"angig
+von $N$: die Funktion, die allen Elementen die 0 zuordnet, und die Funktion, die allen
+Elementen die 1 zuordnet. Man bezeichnet eine Funktion als balanciert (oder auch
+ausgeglichen), wenn jedes
+Element der Bildmenge gleich h\"aufig als Funktionswert auftritt. Bei einer Bit-wertigen
+Funktion wird also der H\"alfte der F\"alle die 0 zugeordnet und der H\"alfte der F\"alle
+die 1. 
+
+Insgesamt gibt es $2^{(2^N)}$ Bit-wertige Funktionen auf der Menge der 
+$N$-Bit-Folgen.\footnote{Allgemein
+gibt es $|B|^{|\Omega|}$ Funktionen auf einer Urbildmenge $\Omega$ mit $|\Omega|$ Elementen
+und einer Bildmenge $B$ mit $|B|$ Elementen} Davon sind zwei Funktionen konstant. Von den
+balancierten Funktionen gibt es sehr viele (es sind $2^N!/(2^{N-1}!)^2$); die Anzahl ist 
+jedoch nicht relevant. Wichtig ist jedoch,
+dass man von den $2^N$ Bit-Folgen mit einem klassischen Algorithmus im ung\"unstigsten Fall
+$2^{N-1}+1$ (also eine Folge mehr als die H\"alfte aller Folgen) \"uberpr\"ufen muss, um sicher
+unterscheiden zu k\"onnen, ob es sich um eine konstante oder eine balancierte Funktion handelt. 
+Im g\"unstigsten Fall reichen zwar auch zwei Auswertungen, doch f\"ur eine eindeutige 
+Unterscheidung m\"ussen als Funktion von $N$ exponentiell viele F\"alle untersucht werden.
+Da mit dem Deutsch-Jozsa-Algorithmus nur eine einzige Auswertung auf einem 
+Quantencomputer notwendig ist, ist der Quantencomputer 
+exponentiell schneller als der klassische Computer. 
+
+Im Folgenden betrachten wir zun\"achst den Fall $N=1$, d.h.\ die Bit-wertige Funktion ordnet einem
+einzelnen Bit wieder ein Bit zu. Von diesen Funktionen gibt es insgesamt vier:
+\begin{eqnarray*}
+         f_1(0)=0 \hspace{1cm} f_1(1)=0  \hspace{1cm} \mathrm{kurz} & &   f_1(x)=0 \\
+         f_2(0)=1 \hspace{1cm} f_2(1)=1  \hspace{1cm} \mathrm{kurz} & &   f_2(x)=1 \\
+         f_3(0)=0 \hspace{1cm} f_3(1)=1  \hspace{1cm} \mathrm{kurz} & &   f_3(x)=x \\
+         f_4(0)=1 \hspace{1cm} f_1(1)=0  \hspace{1cm} \mathrm{kurz} & &   f_4(x)=1-x =\neg x=x\oplus 1
+\end{eqnarray*}
+Die ersten beiden Funktionen sind die konstanten Funktionen, die anderen beiden
+Funktionen sind balanciert. Die Aufgabe besteht darin, mit m\"oglichst wenigen Abfragen 
+an eine unbekannte Funktion -- dem Oracle -- zu entscheiden, ob es sich
+bei der unbekannten Funktion um eine konstante Funktion handelt, also um $f_1$ oder $f_2$,
+oder um eine balancierte Funktion ($f_3$ oder $f_4$). Klassisch muss man die unbekannte
+Funktion auf beiden Bitwerten testen, also zwei Abfragen vornehmen, 
+um diese Unterscheidung treffen zu k\"onnen.
+
+\section{Der Deutsch-Algorithmus f\"ur $N=1$}
+
+F\"ur den einfachsten Fall $N=1$ betrachtet man
+als Ausgangszustand den 2-Qubit-Zustand $|\psi_1\rangle = |0\rangle \otimes |1\rangle$.
+Dieser Zustand wird in jedem seiner beiden Anteile einer Hadamard-Transformation unterworfen,
+die wir in diesem Fall durch
+\begin{equation}      
+      H= \frac{1}{\sqrt{2}} \left( \begin{array}{cc}  1 & 1 \\  1 & -1 \end{array} \right) 
+\end{equation}
+darstellen. Wir erhalten somit folgenden Zustand 
+\begin{equation}
+    |\psi_1\rangle =  |0\rangle \otimes |1\rangle ~~ \Longrightarrow ~~  |\psi_2\rangle = 
+    H |0\rangle \otimes H |1\rangle =
+        \frac{1}{2} \big( |0\rangle + |1 \rangle \big) \otimes \big( |0 \rangle - |1 \rangle \big)  \, . 
+\end{equation} 
+Diesen Zustand kann man auch in folgender Form schreiben:
+\begin{equation}
+         |\psi_2\rangle = \frac{1}{2} \left( \sum_{x=0}^1 |x\rangle \right) \otimes \big(|0\rangle - |1\rangle \big) \, .
+\end{equation}
+Der n\"achste Schritt besteht in einer unit\"aren Implementierung des Oracles, also der
+unbekannten Funktion $f$. Wir definieren f\"ur diese Implementierung $U_f$ die Transformation
+\begin{equation}
+             U_f | \psi_2\rangle = |\psi_3 \rangle = \frac{1}{2} \left( \sum_{x=0}^1 |x\rangle \right) \otimes
+                          \big( |0 \oplus f(x)\rangle - |1 \oplus f(x) \rangle \big)  \, ,
+\end{equation}
+wobei $\oplus$ im Sinne einer Addition modulo 2 (bzw.\ einer XOR-Operation) zu verstehen
+ist. Im Anhang \ref{sec_Deutsch_Anhang1} werden die vier
+vier unit\"aren Matrizen $U_i$, die die Funktionen $f_i$ repr\"asentieren, abgeleitet:
+\begin{equation}
+      U_1 =  \mathbf{1} \otimes \mathbf{1} \hspace{0.8cm}  U_2= \mathbf{1} \otimes \sigma_x
+      \hspace{0.8cm}  U_3= \mathrm{CNOT} \hspace{0.8cm} U_4=(\mathbf{1} \otimes \sigma_x) \mathrm{CNOT}
+\end{equation}
+Hierbei sind $\mathbf{1}$ die $2\times2$-Identit\"atsmatrix, 
+ $\sigma_x$ die $2\times 2$ Pauli-Matrix (hier spricht man auch von einer Pauli-X-Operation),
+ \begin{equation}
+                \sigma_x = \left( \begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array} \right) ~, 
+ \end{equation}
+und CNOT die $4\times 4$ unit\"are \glqq controlled NOT\grqq-Matrix, die
+das zweite Bit unver\"andert l\"asst, wenn das erste Bit 0 ist, andernfalls wird das zweite Bit
+invertiert:
+\begin{equation}
+                \mathrm{CNOT} = \left( \begin{array}{cccc} 
+       1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{array} \right) ~ . 
+\end{equation} 
+In Matrix-Schreibweise folgt f\"ur die unit\"aren Implementationen der vier m\"oglichen Oracles:
+\begin{equation}
+      U_1 = \left(  \begin{array}{cccc} 
+       1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)  \hspace{0.3cm}
+      U_2 = \left(  \begin{array}{cccc} 
+       0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{array} \right)  \hspace{0.3cm}
+      U_3 = \left(  \begin{array}{cccc} 
+       1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{array} \right)  \hspace{0.3cm}
+      U_4 = \left(  \begin{array}{cccc} 
+       0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)  
+\end{equation}
+Wann immer $f(x)=0$ ist, \"andert sich an dem Zustand nichts. Ist $f(x)=1$, werden die Rollen
+von $|0\rangle$ und $|1\rangle$ im zweiten Bit vertauscht, was aber insgesamt nur ein
+Minuszeichen bewirkt, da
+\begin{equation}
+        |0\rangle - |1\rangle ~~  \Longrightarrow ~~  |1\rangle - |0\rangle = - \big( |0\rangle - |1\rangle \big) \, .
+\end{equation}
+Somit k\"onnen wir f\"ur $|\psi_3\rangle$ auch schreiben:
+\begin{equation}
+      |\psi_3\rangle = \frac{1}{2} \left( \sum_{x=0}^1 (-1)^{f(x)} |x\rangle \right) \otimes \big( |0\rangle - |1\rangle \big) \, .  
+\end{equation}
+Das zweite Qubit ist nun unabh\"angig von der Funktion $f$ und wird im Folgenden nicht mehr
+ben\"otigt, sodass wir es weglassen (einschlie\ss lich eines Normierungsfaktors $1/\sqrt{2}$). 
+Zust\"ande, bei denen wir das letzte Qubit weglassen, kennzeichnen wir durch einen $'$, z.B.\
+$|\psi_3' \rangle$. Das erste Qubit repr\"asentiert den Zustand 
+\begin{equation}
+               |\psi_3' \rangle =  \frac{1}{\sqrt{2}} \left( (-1)^{f(0)} |0\rangle + (-1)^{f(1)} |1\rangle \right) =
+               \frac{1}{\sqrt{2}} (-1)^{f(0)} \left(  |0\rangle + (-1)^{f(0)\oplus f(1)} |1\rangle \right) \, .
+\end{equation}
+Hierbei wurde benutzt, dass $f(0)\oplus f(0)=0$, wir somit immer um diese Summe erweitern
+k\"onnen. Nun gilt: 
+\begin{equation}
+             f(0)\oplus f(1)=\sigma (f) = \left\{ \begin{array}{ll} 0 & \mbox{falls $f$ konstant} \\
+                   1 & \mbox{falls $f$ balanciert} \end{array} \right. 
+\end{equation}
+Wir erhalten
+also letztendlich f\"ur das erste Qubit den Zustand
+\begin{equation}
+       |\psi_3'\rangle  = \left\{ \begin{array}{ll}
+       {\displaystyle \frac{1}{\sqrt{2}} \big(|0\rangle + |1\rangle \big) = |+\rangle} & 
+                \mbox{falls $f$ eine konstante Funktion ist} \\[0.5cm]
+       {\displaystyle \frac{1}{\sqrt{2}} \big(|0\rangle - |1\rangle \big) = |- \rangle} &
+       \mbox{falls $f$ balanciert ist}  \end{array} \right.  \, .
+\end{equation}
+Wenden wir auf diesen Zustand nochmals eine
+Hadamard-Transformation an, erhalten wir f\"ur das erste Qubit den Zustand $|0\rangle$,
+sofern $f$ eine konstante Funktion ist, und $|1\rangle$, sofern $f$ eine balancierte Funktion ist:
+\begin{equation}
+    |\psi_3' \rangle ~~  \Longrightarrow ~~ |\psi_4'\rangle = H|\psi_3'\rangle = \left\{ \begin{array}{ll}
+              |0\rangle & \mbox{falls $f$ konstant} \\  |1\rangle & \mbox{falls $f$ balanciert}
+              \end{array}  \right.  
+\end{equation}
+Wir m\"ussen also nur das erste Qubit bez\"uglich der Standardbasis $|0\rangle$ und $|1\rangle$
+messen und erhalten als Ergebnis die gesuchte Antwort auf die Frage, ob es sich bei dem
+Oracle um eine konstante oder balancierte Funktion handelt.
+
+Graphisch dr\"uckt man diesen Prozess h\"aufig aus wie in Abb.\ \ref{fig_Deutsch1}.
+
+\begin{SCfigure}[50][h!]
+\begin{picture}(250,80)(-20,20)
+\put(10,80){\makebox(0,0){$|0\rangle$}}
+\put(10,40){\makebox(0,0){$|1\rangle$}}
+\put(50,80){\makebox(0,0){$H$}}
+\put(50,40){\makebox(0,0){$H$}}
+\put(170,80){\makebox(0,0){$H$}}
+\put(210,80){\makebox(0,0){$M$}}
+\put(110,60){\makebox(0,0){\Large $U_f$}}
+\put(10,20){\makebox(0,0){$|\psi_1\rangle$}}
+\put(70,20){\makebox(0,0){$|\psi_2\rangle$}}
+\put(150,20){\makebox(0,0){$|\psi_3\rangle$}}
+\put(190,20){\makebox(0,0){$|\psi_4\rangle$}}
+\put(190,60){\makebox(0,0){$|\psi_4'\rangle$}}
+\thicklines
+\put(20,80){\line(1,0){20}}   % obere Linie
+\put(40,70){\line(1,0){20}}   % obere H-Box
+\put(40,90){\line(1,0){20}}
+\put(40,70){\line(0,1){20}}
+\put(60,70){\line(0,1){20}}
+\put(20,40){\line(1,0){20}}   % untere Linie
+\put(40,30){\line(1,0){20}}   % untere H-Box
+\put(40,50){\line(1,0){20}}
+\put(40,30){\line(0,1){20}}
+\put(60,30){\line(0,1){20}}
+\put(60,80){\line(1,0){20}}   % obere Linie
+\put(60,40){\line(1,0){20}}   % untere Linie
+\put(80,30){\line(1,0){60}}   % gro�e Box
+\put(80,90){\line(1,0){60}}
+\put(80,30){\line(0,1){60}}
+\put(140,30){\line(0,1){60}}
+\put(140,80){\line(1,0){20}}   % obere Linie
+\put(140,40){\line(1,0){80}}   % untere (leere) Linie
+\put(160,70){\line(1,0){20}}   % obere H-Box
+\put(160,90){\line(1,0){20}}
+\put(160,70){\line(0,1){20}}
+\put(180,70){\line(0,1){20}}
+\put(180,80){\line(1,0){20}}   % obere Linie
+\put(200,70){\line(1,0){20}}   % M-Box
+\put(200,90){\line(1,0){20}}
+\put(200,70){\line(0,1){20}}
+\put(220,70){\line(0,1){20}}
+\end{picture}
+\caption{\label{fig_Deutsch1}%
+Graphische Darstellung des Deutsch-Algorithmus f\"ur $N=1$. $H$ bezeichnet
+Hadamard-Gatter, $U_f$ die Implementierung des Oracles $f$ und $M$ die
+abschlie\ss ende Messung.}
+\end{SCfigure}
+
+\section{Der Deutsch-Jozsa-Algorithmus f\"ur $N>1$}
+
+In diesem Abschnitt werden die Verallgemeinerungen behandelt, die bei
+einem Oracle, das auf einer Folge von $N$ Qubits definiert ist, auftreten. Die unit\"are
+Implementation des Oracles wird allerdings nicht explizit angegeben. Sie ist eine Verallgemeinerung
+der unit\"aren Operatoren des letzten Abschnitts.
+
+Als Ausgangszustand w\"ahlt man nun
+\begin{equation}
+         | \psi_1\rangle = |0\rangle \otimes |0\rangle \otimes \cdots \otimes |0\rangle \otimes |1 \rangle 
+         =  |0\rangle^{\otimes N} \otimes |1\rangle  \, ,
+\end{equation}
+wobei $|0\rangle^{\otimes N}$ das $N$-fache Tensorprodukt des Zustands $|0\rangle$ bezeichnet. 
+In einem ersten Schritt wendet man auf jedes Qubit eine Hadamard-Transformation an:
+\begin{eqnarray}
+   |\psi_2\rangle &=& H^{\otimes N+1} |\psi_1\rangle =
+        H|0\rangle \otimes \cdots \otimes H|0\rangle \otimes H|1\rangle  \\
+        &=&  \frac{1}{\sqrt{2^{N+1}}} \Big( \big( |0\rangle + |1\rangle \big) \otimes \big( |0\rangle + |1\rangle \big)
+            \otimes \ldots \otimes \big( |0\rangle + |1\rangle \big) \Big) \otimes \big( |0\rangle - |1\rangle \big)  \, .
+\end{eqnarray} 
+Diesen Zustand kann man auch folgenderma\ss en schreiben, wenn man das $N$-fache
+Tensorprodukt der $H|0\rangle$-Zust\"ande ausmultipliziert:
+\begin{equation}
+\label{eq_Deutsch1}
+   |\psi_2\rangle = \frac{1}{\sqrt{2^{N+1}}} \left( \sum_{x=0}^{2^N-1} |x\rangle \right) 
+                 \otimes \big( |0\rangle - |1\rangle \big)  \, .
+\end{equation} 
+Man erkennt an dieser Darstellung deutlich, dass dieser Zustand eine Superposition aus
+Zust\"anden zu allen $N$-Bit-Folgen bzw.\ ihren Darstellungen durch nat\"urliche Zahlen $x$ ist. 
+Man kann somit alle zu testenden F\"alle in einem einzigen Zustand kodieren. 
+
+Die explizite unit\"are Implementierung der Oracle-Funktionen ist nun etwas komplizierter. Aber
+das Ergebnis soll folgende Form haben:
+\begin{equation}
+        |\psi_3\rangle =   U_f |\psi_2\rangle =   \frac{1}{\sqrt{2^{N+1}}} 
+        \left( \sum_{x=0}^{2^N-1} |x\rangle \right) \otimes \Big( |0\oplus f(x) \rangle - |1\oplus f(x) \rangle \Big)  \, .   
+\end{equation}
+Wiederum ist offensichtlich, dass sich f\"ur den Fall $f(x)=0$ an dem Zustand \"uberhaupt nichts
+\"andert, und f\"ur den Fall $f(x)=1$ werden im letzten Qubit wiederum $|0\rangle$ und
+$|1\rangle$ ausgetauscht, was denselben Zustand aber mit einem Minuszeichen liefert.
+Technisch gesprochen ist $|x\rangle \otimes \big( |0\rangle - |1\rangle \big)$ ein Eigenzustand zu
+allen $U_f$ mit dem Eigenwert $(-1)^{f(x)}$ f\"ur $x\in [0,2^N-1]$:
+\begin{equation}
+       U_f |x\rangle \otimes \big( |0\rangle - |1\rangle \big) 
+                 = |x\rangle \otimes \big( |0\oplus f(x)\rangle - |1\oplus f(x) \rangle \big) 
+                     = (-1)^{f(x)} |x \rangle \otimes \big( |0\rangle - |1\rangle \big) \, .
+\end{equation} 
+Damit k\"onnen wir $|\psi_3 \rangle$ auch in folgender Form schreiben:
+\begin{equation}
+        | \psi_3 \rangle =   \frac{1}{\sqrt{2^{N+1}}} 
+        \left( \sum_{x=0}^{2^N-1} (-1)^{f(x)}  |x\rangle \right) \otimes \big( |0 \rangle - |1  \rangle \big)  \, .
+\end{equation}
+Das letzte Qubit ist von dem Oracle unabh\"angig und kann weggelassen werden.
+F\"ur die ersten $N$ Qubits gilt: Ist $f(x)=f$ eine konstante Funktion, \"andert sich der Zustand nicht,
+der Zustandsvektor wird lediglich mit $(-1)^f$ multipliziert:
+\begin{equation}
+       |\psi_3' \rangle = \frac{1}{\sqrt{2^{N}}} (-1)^{f}  \left( \sum_{x=0}^{2^N-1}  |x\rangle \right) 
+       \hspace{0.8cm} \mbox{($f$ konstant)}\, .
+\end{equation}
+Durch eine abschlie\ss ende Hadamard-Transformation auf jedem Qubit wird aus diesem
+Zustand bis auf den Faktor $(-1)^f$ wieder der Ausgangszustand:
+\begin{equation}
+      | \psi_4' \rangle = H^{\otimes N} |\psi_3'\rangle =  (-1)^f | 0 \rangle^{\otimes N}
+\end{equation}
+Wir zeigen nun allgemeiner die folgende Aussage:
+\begin{equation}
+          \langle \psi_4' | 0 \rangle^{\otimes N}  = \left\{ \begin{array}{ll}
+          (-1)^f  & \mbox{falls $f$ konstant} \\
+          0 & \mbox{falls $f$ balanciert} \end{array} \right.  \, .
+\end{equation}
+Daraus folgt: Die Wahrscheinlichkeit $w(|0\rangle^{\otimes N})$, am Ausgang unseres
+Quantencomputers den Zustand $|0\rangle^{\otimes N}$ zu messen -- alle $N$ Messger\"ate an
+den jeweiligen Ausg\"angen messen den Zustand $|0\rangle$ -- ist gegeben durch:
+\begin{equation}
+  w(|0\rangle^{\otimes N}) = \left\{  \begin{array}{ll}
+            1 & \mbox{falls $f$ konstant} \\ 0 & \mbox{falls $f$ balanciert} \end{array} \right. \, .
+\end{equation}
+Zum Beweis betrachten wir das Skalarprodukt von $|\psi_4'\rangle = H^{\otimes N}|\psi_3' \rangle$
+mit dem Zustand $|0\rangle^{\otimes N}$, wenden die Hadamard-Transformation nun
+aber auf $|0\rangle^{\otimes N}$ an. Dies liefert wie schon in Gl.\ \ref{eq_Deutsch1} eine
+Summe \"uber alle nat\"urlichen Zahlen von 0 bis $2^N-1$ im Bin\"arcode:
+\begin{equation}
+        \langle \psi_4' | 0\rangle^{\otimes N}  = \frac{1}{\sqrt{2^N}}
+      \sum_{x=0}^{2^N-1} (-1)^{f(x)} \langle x |H^{\otimes N}| 0 \rangle^{\otimes N}  
+      = \frac{1}{2^N} \sum_{x,y=0}^{2^N-1} (-1)^{f(x)} \langle x |y \rangle \, .
+\end{equation}
+Da Zust\"ande zu verschiedenen Bitfolgen orthogonal sind, gilt
+$\langle x|y\rangle = \delta_{xy}$, wir erhalten also nur einen Beitrag f\"ur $x=y$:
+\begin{equation}
+      \langle \psi_4' | 0\rangle^{\otimes N}  = \frac{1}{2^N}
+      \sum_{x=0}^{2^N-1} (-1)^{f(x)} \, .
+\end{equation}
+Ist $f$ konstant, k\"onnen wir den Faktor $(-1)^f$ vor die Summe ziehen und erhalten als
+Ergebnis 1. Ist $f$ balanciert, erhalten wir eine Summe von $+1$ und $-1$, wobei beide
+Zahlen gleich h\"aufig auftreten. Insgesamt ist in diesem Fall das Ergebnis daher 0.
+Damit ist unsere obige Behauptung bewiesen. 
+Zur graphischen Darstellung des Deutsch-Jozsa-Algorithmus f\"ur beliebige $N$, 
+siehe Abb.\ \ref{fig_Deutsch2}.
+
+\begin{SCfigure}[50][h!]
+\begin{picture}(250,120)(-10,20)
+\put(10,120){\makebox(0,0){$|0\rangle$}}
+\put(10,80){\makebox(0,0){$|0\rangle$}}
+\put(10,40){\makebox(0,0){$|1\rangle$}}
+\put(50,120){\makebox(0,0){$H$}}
+\put(50,80){\makebox(0,0){$H$}}
+\put(50,40){\makebox(0,0){$H$}}
+\put(170,120){\makebox(0,0){$H$}}
+\put(220,120){\makebox(0,0){$M$}}
+\put(170,80){\makebox(0,0){$H$}}
+\put(220,80){\makebox(0,0){$M$}}
+\put(110,80){\makebox(0,0){\Large $U_f$}}
+\put(10,20){\makebox(0,0){$|\psi_1\rangle$}}
+\put(70,20){\makebox(0,0){$|\psi_2\rangle$}}
+\put(150,20){\makebox(0,0){$|\psi_3\rangle$}}
+\put(195,20){\makebox(0,0){$|\psi_4\rangle$}}
+\put(195,65){\makebox(0,0){$|\psi_4'\rangle$}}
+\put(5,103){\makebox(0,0){$\vdots$}}
+\put(50,103){\makebox(0,0){$\vdots$}}
+\put(165,103){\makebox(0,0){$\vdots$}}
+\put(220,103){\makebox(0,0){$\vdots$}}
+\put(15,100){\makebox(0,0){$\otimes N$}}
+\put(175,100){\makebox(0,0){$\otimes N$}}
+\thicklines
+\put(20,120){\line(1,0){20}}   % obere Linie
+\put(40,110){\line(1,0){20}}   % obere H-Box
+\put(40,130){\line(1,0){20}}
+\put(40,110){\line(0,1){20}}
+\put(60,110){\line(0,1){20}}
+\put(20,80){\line(1,0){20}}   % mittlere Linie
+\put(40,70){\line(1,0){20}}   % mittlere H-Box
+\put(40,90){\line(1,0){20}}
+\put(40,70){\line(0,1){20}}
+\put(60,70){\line(0,1){20}}
+\put(20,40){\line(1,0){20}}   % untere Linie
+\put(40,30){\line(1,0){20}}   % untere H-Box
+\put(40,50){\line(1,0){20}}
+\put(40,30){\line(0,1){20}}
+\put(60,30){\line(0,1){20}}
+\put(60,120){\line(1,0){20}}   % obere Linie
+\put(60,80){\line(1,0){20}}   % mittlere Linie
+\put(60,40){\line(1,0){20}}   % untere Linie
+\put(80,30){\line(1,0){60}}   % gro�e Box
+\put(80,130){\line(1,0){60}}
+\put(80,30){\line(0,1){100}}
+\put(140,30){\line(0,1){100}}
+\put(140,120){\line(1,0){20}}   % obere Linie
+\put(140,40){\line(1,0){90}}   % untere (leere) Linie
+\put(160,110){\line(1,0){20}}   % obere H-Box
+\put(160,130){\line(1,0){20}}
+\put(160,110){\line(0,1){20}}
+\put(180,110){\line(0,1){20}}
+\put(180,120){\line(1,0){30}}   % obere Linie
+\put(210,110){\line(1,0){20}}   % M-Box
+\put(210,130){\line(1,0){20}}
+\put(210,110){\line(0,1){20}}
+\put(230,110){\line(0,1){20}}
+
+\put(140,80){\line(1,0){20}}   % obere Linie
+\put(160,70){\line(1,0){20}}   % obere H-Box
+\put(160,90){\line(1,0){20}}
+\put(160,70){\line(0,1){20}}
+\put(180,70){\line(0,1){20}}
+\put(180,80){\line(1,0){30}}   % obere Linie
+\put(210,70){\line(1,0){20}}   % M-Box
+\put(210,90){\line(1,0){20}}
+\put(210,70){\line(0,1){20}}
+\put(230,70){\line(0,1){20}}
+\end{picture}
+\caption{\label{fig_Deutsch2}%
+Graphische Darstellung des Deutsch-Algorithmus f\"ur $N>1$. Die oberen $N$ Qubits
+kodieren nach dem Hadamard-Gatter s\"amtliche $N$-Bit-Folgen. $U_f$ bezeichnet wieder
+die Implementierung des Oracles und $M$ die abschlie\ss enden Messungen an jedem
+Qubit.}
+\end{SCfigure}
+
+Man kann daher mit diesem Algorithmus
+mit einer einzige Abfrage des Oracles die Information erhalten, ob die unbekannte Funktion
+konstant oder balanciert ist. 
+
+%Man beachte, dass bei keinem Schritt dieses Quantenalgorithmus' ein verschr\"ankter
+%Zustand auftritt. 
+
+\section{Das Penny-Flip-Spiel}
+
+Das Penny-Flip-Spiel von David Meyer ist eine vereinfachte Version des Deutsch-Algorithmus 
+f\"ur $N=1$, bei dem die Quantenversion eine Gewinnstrategie bei einem einfachen Spiel
+erm\"oglicht, die klassisch nicht m\"oglich ist \cite{Meyer,Greinert}.
+
+Die klassischen Spielregeln sind folgende: Alice darf eine M\"unze auf den Tisch legen,
+so dass \glqq Kopf\grqq\ oder \glqq Zahl\grqq\ oben liegen. Anschlie\ss end darf Bob die 
+M\"unze von Alice entweder umdrehen oder so liegen lassen, wie Alice sie hingelegt hat. Alice sieht
+dabei nicht, was Bob getan hat. Alice darf nun die M\"unze (ohne diese anzuschauen oder
+abzutasten, d.h.,
+sie wei\ss\ nicht, ob Bob die M\"unze gedreht hat oder nicht) nochmals drehen oder auch
+belassen, wie sie ist. Alice hat gewonnen, wenn die M\"unze abschlie\ss end \glqq Kopf\grqq\
+zeigt, Bob hat gewonnen, wenn die M\"unze \glqq Zahl\grqq\ zeigt. Gibt es f\"ur Alice
+eine Gewinnstrategie?
+
+Offensichtlich gibt es bei dieser klassischen Version des Spiels f\"ur Alice keine
+Gewinnstrategie, da sie nicht wissen kann, ob Bob die M\"unze gedreht hat oder nicht.
+In einer Quantenversion dieses Spiels hat Alice jedoch eine 100\%-ige Gewinnchance.
+In der Quantenversion kann Alice die M\"unze in einem Superpositionszustand aus
+\glqq Kopf\grqq\ und \glqq Zahl\grqq\ pr\"aparieren. Sie kann beispielsweise die M\"unze
+in dem Zustand
+\begin{equation}
+         |\psi_2\rangle = H | \mbox{Kopf} \rangle = \frac{1}{\sqrt{2}} ( |\mbox{Kopf} + | \mbox{Zahl}\rangle )
+\end{equation}
+pr\"aparieren, wobei $H$ wieder ein Hadamard-Gatter f\"ur den Zustand der M\"unze
+darstellt.
+
+Bob darf nun eine von zwei Transformationen durchf\"uhren: Entweder er l\"asst die M\"unze
+unver\"andert, also 
+\begin{equation}
+     | \mbox{Zahl} \rangle ~~\Longrightarrow ~~| \mbox{Zahl} \rangle 
+      \hspace{0.8cm}  \mbox{und} \hspace{0.8cm} 
+           | \mbox{Kopf} \rangle ~~\Longrightarrow ~~| \mbox{Kopf} \rangle  \, ,
+\end{equation}
+oder er dreht die M\"unze:
+\begin{equation}            
+     | \mbox{Zahl} \rangle ~~\Longrightarrow ~~| \mbox{Kopf} \rangle 
+      \hspace{0.8cm}  \mbox{und} \hspace{0.8cm} 
+           | \mbox{Kopf} \rangle ~~\Longrightarrow ~~| \mbox{Zahl} \rangle \, .
+\end{equation}
+Hier wird ausgenutzt, dass der von Alice pr\"aparierte Superpositionszustand ein
+Eigenzustand sowohl zur Identit\"atstransformation als auch zur Vertauschungsoperation
+(Pauli-X) ist:
+\begin{equation}
+     \left( \begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array} \right)
+     \frac{1}{\sqrt{2}}  \left( \begin{array}{c} 1 \\ 1 \end{array} \right)  =
+          \frac{1}{\sqrt{2}}  \left( \begin{array}{c} 1 \\ 1 \end{array} \right)  \hspace{1.5cm}
+     \left( \begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array} \right)
+     \frac{1}{\sqrt{2}}  \left( \begin{array}{c} 1 \\ 1 \end{array} \right)  =
+          \frac{1}{\sqrt{2}}  \left( \begin{array}{c} 1 \\ 1 \end{array} \right)  ~~. 
+\end{equation}
+Egal f\"ur welche der beiden Operationen sich Bob entscheidet,
+der Zustand wird durch seine Operation nicht ver\"andert. Abschlie\ss end
+kann Alice nochmals eine Hadamard-Transformation auf den Zustand anwenden und
+erh\"alt mit Sicherheit den Zustand $|\mbox{Kopf}\rangle$, unabh\"angig davon, was Bob
+gemacht hat. Insofern hat Alice immer gewonnen.
+
+\section{Anhang}
+
+\subsection{Die unit\"are Implementation des Oracles}
+\label{sec_Deutsch_Anhang1}
+
+In diesem Anhang soll gezeigt werden, wie man f\"ur den Fall $N=1$ zu den Oracle-Funktionen die
+unit\"aren Matrizen konstruiert und wie diese durch Quantengatter realisiert werden
+k\"onnen.
+
+Die Funktion $f$ soll durch folgende Vorschrift realisiert werden:
+\begin{equation}
+         f : | x \rangle \otimes |y \rangle ~ \longrightarrow ~ |x \rangle \otimes |y \oplus f(x) \rangle \, ,
+\end{equation}
+wobei $x,y\in \{0,1\}$ und die $\oplus$-Operation als \glqq Addition modulo 2\grqq\ oder
+XOR-Operation zu verstehen sind. Als 4-Vektor wird $|x\rangle \otimes |y\rangle$ folgenderma\ss en
+repr\"asentiert:
+\begin{equation}
+    |0\rangle \otimes |0\rangle = \left( \begin{array}{c} 1 \\ 0 \\ 0 \\ 0 \end{array} \right) \hspace{0.5cm}
+    |0\rangle \otimes |1\rangle = \left( \begin{array}{c} 0 \\ 1 \\ 0 \\ 0 \end{array} \right) \hspace{0.5cm}
+    |1\rangle \otimes |0\rangle = \left( \begin{array}{c} 0 \\ 0 \\ 1 \\ 0 \end{array} \right) \hspace{0.5cm}
+    |1\rangle \otimes |1\rangle = \left( \begin{array}{c} 0 \\ 0 \\ 0 \\ 1 \end{array} \right)     
+\end{equation}
+Dies folgt den allgemeinen Konventionen:
+\begin{equation}
+   |0\rangle = \left( \begin{array}{c} 1 \\ 0 \end{array} \right) \hspace{0.5cm}
+   |1\rangle = \left( \begin{array}{c} 0 \\ 1 \end{array} \right) \hspace{0.5cm} \mbox{und} \hspace{0.5cm}
+   \left( \begin{array}{c} x_1 \\ x_2 \end{array} \right) \otimes   \left( \begin{array}{c} y_1 \\ y_2 \end{array} \right)
+        =  \left( \begin{array}{c} x_1 y_1 \\ x_1 y_2 \\ x_2 y_1 \\ x_2 y_2 \end{array} \right) \, . 
+\end{equation}
+Wir konstruieren nun die Darstellungen der vier Oracles zu $N=1$. Man beachte dabei, dass
+sich das erste Qubit nie \"andert, sondern nur das zweite Qubit -- eventuell in Abh\"angigkeit von dem
+Zustand des ersten Qubits. Der Einfachheit schreibe ich im Folgenden $|x,y\rangle$ statt
+$|x\rangle \otimes |y \rangle$. 
+
+\subsubsection{$f_1$}
+
+Die Funktion $f_1$ hat immer
+den Wert $f_1(x)=0$ und \"andert den Zustand daher nicht. Sie wird durch die $4\times 4$-Identit\"atsmatrix
+repr\"asentiert:
+\begin{equation}
+         U_1 = 
+          \left(  \begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)
+           = {\bf 1} \otimes {\bf 1} \, .
+\end{equation}
+
+\subsubsection{$f_2$}
+
+Die Funktion $f_2$ hat immer den Wert $f_2(x)=1$ und tauscht daher im zweiten Qubit die
+Werte von $0$ und $1$ aus. Das bedeutet:
+\begin{equation}
+    |0,0\rangle \mapsto |0,1\rangle \hspace{0.8cm}  |0,1\rangle \mapsto |0,0\rangle \hspace{0.8cm}
+    |1,0\rangle \mapsto |1,1\rangle \hspace{0.8cm}  |1,1\rangle \mapsto |0,1\rangle \, .       
+\end{equation} 
+Die Matrix zu dieser Abbildung ist
+\begin{equation}
+      U_2 = \left(  \begin{array}{cccc} 
+       0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{array} \right) 
+          = {\bf 1} \otimes \sigma_x   \, . 
+\end{equation}
+
+\subsubsection{$f_3$}
+
+Die Abbildung $f_3(x)=x$ l\"asst das zweite Qubit unver\"andert, wenn $x=0$ ist, und ersetzt
+es durch seine Negation, wenn $x=1$ ist. Das bedeutet f\"ur die Standardbasisvektoren:
+\begin{equation}
+    |0,0\rangle \mapsto |0,0\rangle \hspace{0.8cm}  |0,1\rangle \mapsto |0,1\rangle \hspace{0.8cm}
+    |1,0\rangle \mapsto |1,1\rangle \hspace{0.8cm}  |1,1\rangle \mapsto |1,0\rangle \, .       
+\end{equation} 
+Diese Transformation wird durch folgende Matrix repr\"asentiert:
+\begin{equation}
+      U_3 = \left(  \begin{array}{cccc} 
+       1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{array} \right) = \mbox{CNOT} \, .
+\end{equation}
+Man bezeichnet diese Matrix als \glqq Controlled NOT\grqq, da die NOT-Operation auf dem
+zweiten Qubit durch das erste Qubit kontrolliert wird.
+
+\subsection{$f_4$} 
+
+Die vierte Abbildung $f_4(x)= \neg x$ \"andert das zweite Qubit, sofern das erste sich im
+Zustand $|0\rangle$ befindet. Es handelt sich daher bei der Implementierung ebenfalls 
+um ein CNOT-Gatter, allerdings ist der Control-Parameter nun vertauscht. F\"ur die Basis
+bedeutet dies: 
+\begin{equation}
+    |0,0\rangle \mapsto |0,1\rangle \hspace{0.8cm}  |0,1\rangle \mapsto |0,0\rangle \hspace{0.8cm}
+    |1,0\rangle \mapsto |1,0\rangle \hspace{0.8cm}  |1,1\rangle \mapsto |1,1\rangle \, .       
+\end{equation} 
+Die zugeh\"orige Transformationsmatrix ist:
+\begin{equation}
+      U_4 = \left(  \begin{array}{cccc} 
+       0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right) = 
+       ({\bf 1} \otimes \sigma_3) \mbox{CNOT} \, .
+\end{equation}
+
+Alle vier Oracles lassen sich somit durch geeignete Hintereinanderschaltung der beiden
+Gatter Pauli-X und CNOT darstellen.
+
+
+\begin{thebibliography}{99}
+\bibitem{Deutsch} Deutsch, David (1985); \textit{Quantum Theory, the Church-Turing Principle and the
+       Universal Quantum Computer}; Proceedings of the Royal Society of London A.\ 400 (1818):
+       97--117.
+\bibitem{DJ} Deutsch, David, Jozsa, Richard (1992); \textit{Rapid solutions of problems by quantum
+         computation}. Proceedings of the Royal Society of London A.\ 439 (1907): 553--558.
+\bibitem{Ekert} Cleve, R., Ekert, A, Macchiavello, C., Mosca, M, (1998); \textit{Quantum algorithms revisited};
+       Proceedings of the Royal Society of London A.\ 454 (1969): 339--354.
+\bibitem{Meyer} Meyer, David A. (1999); \textit{Quantum Strategies}; Phys.\ Rev.\ Lett.\ 82, 1052       
+\bibitem{Greinert} M\"uller, Rainer; Greinert, Franziska (2023); \textit{Quantum Penny Flip -- Spielen
+         mit dem Quantencomputer}; plusLucis 2/2023 Quantenphysik. \textit{Playing with a Quantum
+         Computer}, arXiv: 2108.06271.                           
+\end{thebibliography}
+
+\end{document}
+

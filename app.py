@@ -164,8 +164,6 @@ def create_app(db_url=None):
 
 
     def generate_pdf(item_ids):
-        app.logger.info("...")
-        print("hu")
         if item_ids:
             try:
                 texdoc = []  # a list of string representing the latex document in python
@@ -199,32 +197,22 @@ def create_app(db_url=None):
                         elif item.topic.name == "Relativitätstheorie":
                             if "ART" in item.name:
                                 topic_folder_name = "Skript_ART"   
-                                print("hu")
                             else:
                                 topic_folder_name = "Skript_SRT"    
-                                print("ha")
                         elif item.topic.name == "Thermodynamik":
                             topic_folder_name = "Skript_Thermo"  
 
                         src = "upload_dir/attachment/" + topic_folder_name + "/" + item.name + "/" + item.file_name
-                        print(item_ids)
-                        print(src)
                         with open(src) as f_in:
                             
                             if len(item_ids) == 1:
-                                
                                 date = False
                                 for line in f_in:
-                                    print(line)
                                     if "\chapter{" in line:
                                         title = line.split("{")[1].split("}")[0]
                                     if "\info{" in line:
-                                        if "}{" in line:
-                                            
-                                            date = line.split("}{")[1].split("}")[0]
-                                        else:
-                                            date = line.split(";")[1].split("}")[0]
-                                
+                                        date = line.split("}{")[1].split("}")[0]
+                                        
                                 # Deckblatt
                                 copy_files("upload_dir/attachment/Deckblatt/Bilder", tmpdirname + '/Bilder')
                                 with open("upload_dir/attachment/Deckblatt/deckblatt_clean.tex") as f_in:
@@ -274,7 +262,6 @@ def create_app(db_url=None):
                                         "Klass_08_Nachthimmel",
                                         "Klass_10_Landkarten",
                                         "Klass_11_Hebelgesetze",
-                                        "QM_01_QuBit",
                                         "Thermo_01_Prozess",
                                         "Thermo_03_Entropie"]:
                             copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder') 
@@ -291,6 +278,13 @@ def create_app(db_url=None):
                             except:
                                 pass
                             copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder_SRT')
+                        elif item.name in ["QM_01_QuBit",
+                                           "QM_06_EPR_Bell_CHSH"]:
+                            try: 
+                                os.makedirs(tmpdirname + '/Bilder_QM')
+                            except:
+                                pass
+                            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder_QM')
                     
                 texdoc.append('\printindex\n\end{document}')
 
@@ -353,6 +347,6 @@ def create_app(db_url=None):
 
 
     if __name__ == "__main__":
-        app.run(host='0.0.0.0', debug=True)
+        app.run(host='0.0.0.0')
 
     return app
