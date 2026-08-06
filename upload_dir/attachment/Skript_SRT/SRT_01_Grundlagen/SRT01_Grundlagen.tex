@@ -1,8 +1,9 @@
 \documentclass[german,10pt]{book}     \input{../preambel}             \begin{document}  \setcounter{chapter}{0}
 
-\chapter{SRT - Grundlagen}   %  Kap. 1
+\chapter{SRT -- Grundlagen}   %  Kap. 1
 \label{chap_Grundlagen}
 
+\info{Thomas Filk}{17.05.2026}%
 Gegen Ende des 19.\ Jahrhunderts mehrten sich die
 Anzeichen, dass irgendetwas im Weltbild der Physik
 nicht stimmen konnte. Die Newton'sche Mechanik war
@@ -11,21 +12,23 @@ von materiellen K\"orpern, insbesondere den Bewegungen der Planeten. Andererseit
 Theorie Maxwell's ebenso erfolgreich bei der 
 Beschreibung der Ph\"anomene im Zusammenhang mit
 elektrischen und magnetischen Feldern. Doch die beiden Theorien passten nicht zusammen:
-Die Newton'sche Theorie ist fundamental Galilei-invariant, d.h.\ mit jeder Bahnkurve $x(t)$, 
+Die Newton'sche Theorie ist fundamental Galilei-invariant,\index{Galilei-Invarianz} 
+d.h.\ mit jeder Bahnkurve $x(t)$, 
 die eine L\"osung der Bewegungsgleichungen ist, ist auch eine Galilei-transformierte Bahnkurve, 
-$\hat{x}(t)= x(t)+vt+a$, eine L\"osung der Bewegungsgleichungen. Hierbei ist $v$ eine konstante
-Geschwindigkeit und $a$ eine konstante Verschiebung. $x(t)$ kann sich auch auf mehrere Komponenten
+$\hat{x}(t)= x(t)+vt+a$, eine L\"osung der Bewegungsgleichungen. Hierbei ist $v$ eine beliebige konstante
+Geschwindigkeit und $a$ eine beliebige konstante Verschiebung. $x(t)$ kann sich auch auf mehrere Komponenten
 und mehrere Objekte beziehen. 
   
-Die Maxwell'sche Theorie enth\"alt jedoch als Parameter eine Geschwindigkeit (die 
-Lichtgeschwindigkeit im Vakuum) und scheint somit ein
-spezielles Ruhesystem auszuzeichnen. Dieses Ruhesystem dachte man sich gleichzeitig als
+Die Maxwell'schen Gleichungen enthalten jedoch als Parameter eine Geschwindigkeit (die 
+Lichtgeschwindigkeit im Vakuum) und scheinen somit ein
+spezielles Ruhesystem auszuzeichnen.
+Dieses Ruhesystem dachte man sich gleichzeitig als
 Ruhesystem eines \"Athers, dessen oszillatorische Anregungen den elektromagnetischen Wellen
 entsprechen sollten, \"ahnlich wie die Schwingungen von Luft den Schallwellen entsprechen. Das
 Experiment von Michelson und Morley (siehe Abschnitt \ref{sec_Michelson}) war dazu gedacht, 
 dieses Ruhesystem experimentell zu bestimmen. 
 
-Oftmals wird der Ausgang des Michelson-Morley-Experiments
+Oftmals wird der Ausgang des Michelson-Morley-Experiments\index{Michelson-Morley-Experiment}
 als Beweis daf\"ur gewertet, dass es den \"Ather bzw.\
 das ausgezeichnete Ruhesystem nicht gibt. Das ist
 streng genommen nicht richtig: Die dynamischen
@@ -42,16 +45,16 @@ Lorentz-invariante Theorie \textit{per definitionem}
 auch die Interpretation von Lorentz und Fitzgerald
 zul\"asst. Experimentell l\"asst sich zwischen diesen
 beiden Interpretationen nicht unterscheiden 
-(N\"aheres siehe Kapitel \ref{chap_Philosophie}).
+(N\"aheres siehe den Kurztext \glqq\hyperref[chap_Philosophie]{Philosophischer Hintergrund der SRT}\grqq).
 Die Einstein'sche Interpretation hat lediglich den
 Vorteil, auf unbeobachtbare Entit\"aten wie das Ruhesystem eines \"Athers und den \"Ather selbst
 verzichten zu k\"onnen.
 
 Heute verbindet man die spezielle Relativit\"atstheorie in erster Linie
 mit dem Namen Albert Einsteins, doch man sollte
-nicht vergessen, dass insbesondere Hendrik Antoon
+nicht vergessen, dass insbesondere Hendrik Antoon\index{Lorentz, Hendrik Antoon}
 Lorentz (1853--1928) und Jules Henri Poincar\'e 
-\index{Poincare@Poincar\'e, Jules Henri}\index{Einstein, Albert}
+\index{Poincar\'e, Jules Henri}\index{Einstein, Albert}
 (1854--1912) wesentliche Vorarbeiten geliefert haben. Was die 
 entscheidenden Schritte zur speziellen Relativit\"atstheorie betrifft, so werden
 heute meist drei Arbeiten zitiert (aus \cite{Pauli}, S.~2 und 
@@ -82,11 +85,11 @@ schon im Altertum. Bei den Griechen bezog sich dieser Begriff
 je nach Autor auf eine \glqq leuchtende
 Substanz\grqq, \glqq Sitz der G\"otter\grqq, \glqq Urmaterie und Quintessence 
 (f\"unftes
-Element neben den vier bekannten Elementen)\grqq\ etc.\ [Brockhaus].  
+Element neben den vier bekannten Elementen)\grqq\ etc. %\ \cite{Brockhaus}.  
 Eine konkretere Wiederbelebung erfuhr der \"Ather bei Descartes zur
 Erkl\"arung der Planetenbahnen (allgemeiner zur Erkl\"arung der
 Gravitation) \cite{Descartes} und bei Huygens als Tr\"ager der Lichtwellen.
-Newton setzte sich in seiner Optik (\cite{Newton2}, Frage 18ff, besonders
+Newton setzte sich in seiner Optik (\cite{Newton3}, Frage 18ff, besonders
 Frage 22: \glqq ... \"Ather (denn so will ich ihn nennen) ...\grqq) mit der
 \"Atherhypothese auseinander. 
 
@@ -96,14 +99,16 @@ ihm zugesprochenen Eigenschaften oft gewandelt haben. Meist verstand
 man aber unter \"Ather eine \glqq schwerelose, durchsichtige, reibungslose, 
 chemisch oder physikalisch nicht nachweisbare und alle Materie und den 
 gesamten Raum durchdringende Substanz\grqq\ (\cite{Britannica}; Stichwort 
-`Ether'). Manchmal schienen die oben genannten Eigenschaften
+`Ether'). 
+
+Manchmal schienen die oben genannten Eigenschaften
 jedoch auch im Widerspruch zu den Beobachtungen zu stehen.
 Um den gro\ss en Wert der Lichtgeschwindigkeit erkl\"aren
 zu k\"onnen, musste man beispielsweise eine
-sehr hohe Dichte des \"Athers annehmen. 1816 zeigten 
+sehr hohe Dichte des \"Athers annehmen. 1816 zeigten\index{Fresnel, Augustin Jean}\index{Arago, Fran\c{c}ois} 
 Augustin Jean Fresnel (1788--1827) und Fran\c{c}ois Arago
 (1786--1853), dass zwei senkrecht zueinander polarisierte Strahlen
-nicht interferieren und 1817 erkl\"arte Thomas Young 
+nicht interferieren und 1817 erkl\"arte Thomas Young\index{Young, Thomas} 
 (1773--1829) diese Erscheinung durch
 die Annahme transversaler Schwingungen. 
 
@@ -217,7 +222,7 @@ Erde relativ zum \"Ather -- und damit relativ zum absoluten Raum --
 bestimmbar sein. Auf diese M\"oglichkeit hatte auch bereits Maxwell 
 hingewiesen. Da die von Maxwell, Hertz und Lorentz
 entwickelte Theorie des Elektromagnetismus die Lichtgeschwindigkeit
-$c$ als Konstante enthielt, galt es als sicher, dass die
+$c$ als Konstante enth\"alt, galt es als sicher, dass die
 Maxwell'schen Gleichungen nur in dem Bezugssystem gelten, in dem Licht
 diese Geschwindigkeit hat, d.h.\ dem System, in dem der \"Ather als
 Tr\"ager der Lichtwellen ruht.
@@ -230,7 +235,7 @@ Morley (1838--1923) werden. Der entsprechende Versuch wurde 1881
 von Michelson, dann 1887 nochmals von ihm gemeinsam mit Morley 
 durchgef\"uhrt. Mit Hilfe eines Interferometers (Abb.\ \ref{fig_Michelson}(a))
 wurde die
-Laufzeit von Licht entlang zweier aufeinander senkrecht stehender
+Laufzeit von Licht entlang zweier zueinander senkrecht stehender
 Richtungen $l_{\rm l}$ und $l_{\rm t}$ verglichen. $l_{\rm l}$ bezeichnet
 dabei die Distanz in longitudinaler Richtung, d.h.\ der Richtung der
 vermuteten Erdbewegung relativ zum \"Ather, und $l_{\rm t}$ eine dazu
@@ -405,7 +410,7 @@ die Annahmen, die zur Herleitung der speziellen
 Relativit\"atstheorie f\"uhren, auf ein Minimum zu reduzieren. 
 Man kann zeigen, dass die folgenden drei Axiome bereits die 
 Struktur der speziellen Relativit\"atstheorie -- und damit auch die
-Lorentz-Invarianz der fundamentalen Gleichungen -- implizieren:
+Lorentz-Invarianz der fundamentalen Gleichungen -- implizieren:\index{Axiome der SRT}
 
 \begin{enumerate}
 \item
@@ -465,7 +470,7 @@ Feinheiten.
 \item
 Aus dem Relativit\"atsprinzip (Axiom 2) 
 folgt insbesondere, dass geradlinige
-Bewegungen wieder in geradelinige 
+Bewegungen wieder in geradlinige 
 Bewegungen \"ubergehen m\"ussen,
 also Geraden in der Raum-Zeit in Geraden 
 transformiert werden. Diese Aussage
@@ -473,9 +478,9 @@ bedeutet, dass der \"Ubergang von einem
 Koordinaten\-sys\-tem zu einem anderen nur
 durch eine lineare Transformation gegeben
 sein kann:
-\[   \left( \begin{array}{c} ct' \\ \pmb{x}^{\, \prime} 
+\[   \left( \begin{array}{c} c\,\Delta t' \\ \Delta \pmb{x}^{\, \prime} 
          \end{array} \right) = \Lambda(\pmb{v}) 
-         \left( \begin{array}{c} ct \\ \pmb{x} 
+         \left( \begin{array}{c} c\, \Delta t \\ \Delta \pmb{x} 
          \end{array} \right)  \, ,   \]
 wobei $\Lambda(\pmb{v})$ eine $4\times4$
 Matrix ist, die von der relativen Geschwindigkeit
@@ -495,30 +500,27 @@ diesen Ursprung invariant lassen.
 Dieser Schritt ist \"ubrigens mathematisch
 am schwierigsten zu beweisen.
 \item
-Da die Lichtegschwindigkeit in jedem
-Intertialsystem dieselbe sein soll (Axiom 3),
-folgt aus $|\pmb{x}|/t=\pm c$ auch $|\pmb{x}^{\,\prime}|/t'=\pm c$, 
+Da die Lichtgeschwindigkeit in jedem
+Inertialsystem dieselbe sein soll (Axiom 3),
+folgt aus $|\Delta \pmb{x}|/\Delta t=\pm c$ auch $|\Delta \pmb{x}^{\,\prime}|/\Delta t'=\pm c$, 
 bzw.\
 \begin{equation}
 \label{eq_lc}
-   (ct)^2 - (\pmb{x})^2 = 0 ~~ \Longleftrightarrow
-   ~~ (ct')^2 - (\pmb{x}^{\,\prime})^2=0   \, .
+   (c\,\Delta t)^2 - (\Delta \pmb{x})^2 = 0 ~~ \Longleftrightarrow
+   ~~ (c\,\Delta t')^2 - (\Delta \pmb{x}^{\,\prime})^2=0   \, .
 \end{equation}  
 Hierbei stellen wir uns vor, dass bei dem
 Ereigniss O  (das f\"ur beide Koordinatensysteme
 dasselbe ist) ein Lichtsignal ausgesandt wurde.
 In Gl.\ \ref{eq_lc} sollen sich 
-$(t,\pmb{x})$ bzw.\ $(t',\pmb{x}^{\,\prime})$ auf
-ein Ereignis A beziehen, das von diesem
+$(\Delta t,\Delta \pmb{x})$ bzw.\ $(\Delta t',\Delta \pmb{x}^{\,\prime})$ auf
+ein Ereignis A (relativ zu einem Ereignis O) beziehen, das von diesem
 Lichtsignal \glqq getroffen\grqq\ 
-wird (siehe Abb.\ \ref{fig_Lorentz}).\footnote{Man beachte, dass es sich bei
-$t,t'$ bzw.\ $\pmb{x}$ und $\pmb{x}'$ um
-{\em Differenzen} handelt, die sich auf 
-zwei Ereignisse beziehen: das Ereignis
-A und das
-Referenzereignis O. Trotzdem werde ich
-die umst\"andlichere Notation $\Delta t$,
-$\Delta \pmb{x}$ etc.\ vermeiden.}
+wird (siehe Abb.\ \ref{fig_Lorentz}; hier wurde das $\Delta$ weggelassen, da sich alle
+Zeit- und Raumkoordinaten auf das Ereignis $O$ beziehen).
+%\footnote{Man beachte, dass es sich bei $t,t'$ bzw.\ $\pmb{x}$ und $\pmb{x}'$ um {\em Differenzen} handelt, die sich auf 
+%zwei Ereignisse beziehen: das Ereignis A und das Referenzereignis O. Trotzdem werde ich die umst\"andlichere Notation $\Delta t$,
+%$\Delta \pmb{x}$ etc.\ vermeiden.}
 
 \begin{SCfigure}[30][htb]
 \begin{picture}(170,150)(0,0)
@@ -557,8 +559,8 @@ so folgt zusammen mit der Linearit\"at der
 Transformation, dass sich die beiden
 Ausdr\"ucke nur um einen Faktor 
 unterscheiden k\"onnen:
-\[   (ct)^2 - (\pmb{x})^2 = \alpha 
-            \Big( (ct')^2 - (\pmb{x}^{\,\prime})^2 \Big) \, . \]
+\[   (c\,\Delta t)^2 - (\Delta \pmb{x})^2 = \alpha 
+            \Big( (c\,\Delta t')^2 - (\Delta \pmb{x}^{\,\prime})^2 \Big) \, . \]
 \item
 Der Faktor $\alpha$ kann noch von 
 der Geschwindigkeit $\pmb{v}$ abh\"angen, mit
@@ -576,23 +578,23 @@ der Stetigkeit als Funktion von $\pmb{v}$
 (sowie $\alpha(0)=1$) k\"onnen wir
 schlie\ss en: $\alpha(\pmb{v})=1$ oder
 \begin{equation}
-   (ct)^2 - (\pmb{x})^2 = (ct')^2 - (\pmb{x}^{\,\prime})^2  \, .
+   (c\,\Delta t)^2 - (\Delta \pmb{x})^2 = (c\,\Delta t')^2 - (\Delta \pmb{x}^{\,\prime})^2  \, .
 \end{equation}
 \item
 Gesucht sind also alle linearen 
 Transformationen $\Lambda$,
-welche die Kombination $(ct)^2 - \pmb{x}^{\,2}$
+welche die Kombination $(c\,\Delta t)^2 - (\Delta \pmb{x})^{\,2}$
 invariant lassen. 
 \end{enumerate}
 
 \section{Lorentz-Transformationen}
 \label{sec_Lorentz}
 
-Wie allgemein \"ublich f\"uhren wir nun 
+Wie allgemein \"ublich f\"uhren wir nun\index{Lorentz-Transformation} 
 die 4-Koordinaten $x^0=ct$ und $x^i$
-ein und bezeichnen mit $x$ (ohne Vektorpfeil)
-einen 4-Vektor: $x=(x^0,x^1,x^2,x^3)$, wobei
-$\pmb{x}=(x^1,x^2,x^3)$.
+ein und bezeichnen mit $x$ (ohne Vektorpfeil bzw.\ nicht in \textit{boldface})
+einen 4-Vektor: $x=(x^0,x^1,x^2,x^3)$, wobei die drei Raumkomponenten
+$\pmb{x}=(x^1,x^2,x^3)$ sind.
 Die Komponenten eines 4-Vektors
 bezeichnen wir mit griechischen
 Buchstaben ($\mu$, $\nu$, etc.) und sie
@@ -603,18 +605,18 @@ weiterhin lateinische Buchstaben.
 Dass die Indizes f\"ur die Komponenten
 von Vektoren hochgestellt sind, ist eine
 Konvention. Wir bezeichnen damit die
-Koordinaten von Vektoren. Wie aus der
-Linearen Algebra bekannt, gibt es zu
+Koordinaten von Vektoren. Aus der
+Linearen Algebra ist bekannt, dass es zu 
 jedem Vektorraum auch einen
 Dualraum (der Raum der linearen 
 Abbildungen von dem Vektorraum in
-den jeweiligen Zahlenk\"orper). Die
+den jeweiligen Zahlenk\"orper) gibt. Die
 Komponenten von Elementen des
 Dualraums kennzeichnen wir durch
 untenstehende Indizes. Au\ss erdem
 verwenden wir im Folgenden noch
 die {\em Einstein'sche Summenkonvention}:
-\"Uber doppelt auftretende Indizes,
+\"Uber doppelt auftretende Indizes,\index{Summenkonvention von Einstein}
 einmal oben und einmal unten, auf einer
 Seite einer Gleichung wird summiert.
 Diese Konvention macht viele
@@ -629,11 +631,11 @@ von zeitartigen Vektoren mit sich selbst positiv.}
       (x,y) :=  \eta_{\mu \nu} x^\mu y^\nu
       = x^0 y^0 - \sum_{i,j=1}^3 x^i y^i  \, .
 \end{equation}
-Wir bezeichnen dieses Produkt manchmal
+Man bezeichnet dieses Produkt meist
 als Skalarprodukt, obwohl es nicht
 positiv definit und damit in der \"ublichen 
 mathematischen Sprechweise
-kein Skalarprodukt ist. Oft nennen wir es auch
+kein Skalarprodukt ist. Oft nennt man es auch
 Minkowski-Produkt. Dieses Produkt ist 
 nicht-entartet, d.h., es gibt keine nicht-verschwindenden
 Vektoren $y$, sodass $(x,y)$ f\"ur alle Vektoren
@@ -646,14 +648,14 @@ $x$ gleich null ist. Die Matrix
        0 & 0 & -1 &  0 \\
        0 & 0 & 0 &  -1  \end{array} \right) 
 \end{equation}
-bezeichnen wir manchmal als
-Minkoswki-Metrik. Auch dieser Ausdruck
+bezeichnet man meist als\index{Minkowski-Metrik}
+Minkowski-Metrik. Auch dieser Ausdruck
 ist strenggenommen irref\"uhrend, da
 von einer Metrik \"ublicherweise verlangt wird,
 dass Abst\"ande nie negativ werden
 k\"onnen, was hier aber nicht der Fall ist.
 Daher spricht man manchmal auch von
-einer {\em Pseudo-Metrik}. 
+einer {\em Pseudo-Metrik}.\index{Pseudometrik} 
 
 Durch die Bilinearform $\eta$ k\"onnen wir
 jedem Vektor mit Komponenten $\{x^\mu\}$ einen dualen Vektor
@@ -709,7 +711,7 @@ Parametrisierung dieser L\"osungen ist:
       A = D = \cosh \phi ~~~~  B = C = \sinh \phi \, .
 \end{equation}
 Man bezeichnet $\phi$ auch manchmal als
-Rapidit\"at. 
+Rapidit\"at.\index{Rapidit\"at} 
 
 Wir k\"onnen aber auch eine
 anschaulichere Parametrisierung w\"ahlen,
@@ -740,7 +742,7 @@ in einer Raumdimension:
 \end{equation}
 F\"ur die weiteren \"Uberlegungen wird meist diese
 Form der Lorentz-Transformation ausreichen.
-Man bezeichnet sie auch als \glqq Boost\grqq.
+Man bezeichnet sie auch als \glqq Boost\grqq.\index{Lorentz-Boost}
 Die Matrixdarstellung eines allgemeinen Boosts 
 (f\"ur eine beliebige dreidimensionale 
 Geschwindigkeit $\pmb{v}$) erh\"alt man am
@@ -771,7 +773,7 @@ $R\in {\rm SO}(3)$ lassen die Minkowski-Metrik
 ebenfalls invariant. Erst die Boosts zusammen mit
 den Drehungen bilden eine (sechsparametrige) Gruppe, die 
 Lorentz-Gruppe SO(1,3).\footnote{Zur Notation: Die
-Gruppe ${\rm SO}(n,m)$ ist die Gruppe aller
+Gruppe ${\rm SO}(n,m)$ ist die Gruppe aller\index{SO(m,n)}
 reellen linearen Transformationen mit Determinante 1,
 welche die $(n+m)\times (n+m)$ Matrix 
 $\eta={\rm diag}(1,...,1,-1,...,-1)$
@@ -785,7 +787,7 @@ und die zeitliche Umkehr $t\rightarrow -t$ erweitern.
 Da der Minkowski-Raum ein affiner Raum ohne
 ausgezeichneten Raum-Zeit-Ursprung ist, erh\"alt man
 insgesamt als Invarianzgruppe der Speziellen
-Relativit\"atstheorie die
+Relativit\"atstheorie die\index{Poincar\'{e}-Gruppe}
 Poincar\'{e}-Gruppe, bestehend aus den
 Transformationen $\tilde{\Lambda}+\pmb{a}$
 wobei $\tilde{\Lambda}$ eine Lorentz-Transformation
@@ -793,8 +795,8 @@ wobei $\tilde{\Lambda}$ eine Lorentz-Transformation
 Zeitumkehr) ist und $\pmb{a}$ ein beliebiger
 4-dimensionaler Translationsvektor.   
 
-Abschlie\ss end soll noch das
-Geschwindigkeitadditionstheorem in seiner
+Abschlie\ss end soll noch das\index{Additionstheorem f\"ur Geschwindigkeiten}
+Additionstheorem f\"ur Geschwindigen in seiner
 einfachsten Form (parallele Geschwindigkeiten)
 abgeleitet werden. Dazu betrachten wir einfach
 das Produkt zweier Lorentz-Boosts, f\"ur
@@ -868,7 +870,7 @@ auf ihm definiert wird.
 Abgesehen von r\"aumlichen und zeitlichen Translationen
 ist der Newton'sche Raum
 invariant unter Galilei-Transformationen: dreidimensionale
-Rotationen sowie die speziellen Galilei-Transformationen
+Rotationen sowie die speziellen Galilei-Transformationen\index{Galilei-Transformation}
 \begin{equation}
      t \longrightarrow t'=t ~~~ {\rm und} ~~~ 
      \pmb{x} \longrightarrow  \pmb{x}^{\,\prime}= \pmb{x} + \pmb{v} t  \, .
@@ -904,18 +906,18 @@ beschrieben. Dann gilt
 Durch diese Invariante wird zwei Ereignissen ein
 \glqq Abstand\grqq\ zugeschrieben, der nicht vom
 Koordinatensystem abh\"angt. Diesen Abstand werden
-wir sp\"ater nutzen, um Linien (insbesondere 
+wir in anderen Kurztexten nutzen, um Linien (insbesondere 
 Weltlinien) eine \glqq L\"ange\grqq\ zuzuschreiben
 und Geometrie zu betreiben.
 Diese Minkowski-Geometrie ist zun\"achst etwas
-ungewohnt, sodass ich einige Aspekte betonen m\"ochte.
+ungewohnt, sodass hier einige Aspekte betont werden sollen.
 
 \subsection{Darstellung des Minkowski-Raums}
 
-Im Folgenden werden wir sehr oft Gebrauch von
+In anderen Kurztexten werden wir sehr oft Gebrauch von
 geometrischen Konstruktionen machen. Wir stellen
 dabei die Raumzeit meist vereinfacht durch eine
-Ebene dar, die einer
+Ebene dar, die einer\index{Minkowski-Geometrie}
 Raum- und einer Zeitdimension entspricht.
 Die Punkte dieser Ebene repr\"asentieren 
 Ereignisse und damit physikalische Tatsachen,
@@ -990,20 +992,19 @@ sind. Auch wenn der Zeiger einer Uhr auf
 12 zeigt, schneiden sich im Prinzip zwei
 Weltlinien: die Weltlinie der Zeigerspitze und
 die Weltlinie der Markierung f\"ur die 12.
-Die Weltlinien von Objekten, auf die keine
+Die Weltlinien von Objekten, auf die keine\index{Minkowski-Diagramme}
 Kr\"afte wirken, werden in Minkowski-Diagrammen
 durch Geraden dargestellt. Insbesondere
-verl\"auft der r\"aumliche Ursprung eines Inertialsystems
+verl\"auft der r\"aumliche Ursprung eines Inertialsystems, ausgedr\"uckt
+in einem zweiten Inertialsystem,
 entlang einer geraden Weltlinie. (Dies wird
-bei allgemeinen Raumzeit-Diagrammen 
-und in
-der Allgemeinen Relativit\"atstheorie nicht
-immer der Fall sein.)
+bei allgemeinen Raumzeit-Diagrammen und in
+der Allgemeinen Relativit\"atstheorie nicht immer der Fall sein.)
 
 \subsection{Die kausale Struktur}
 
-Zu jedem Ereignis k\"onnen wir den 
-Zukunfts- und den Vergangenheitslichtkegel 
+Zu jedem Ereignis k\"onnen wir den\index{kausale Struktur}\index{Zukunftslichtkegel} 
+Zukunfts- und den Vergangenheitslichtkegel\index{Vergangenheitslichtkegel} 
 angeben. Der Zukunftslichtkegel besteht 
 aus allen Ereignissen, die von einem 
 Lichtblitz, der bei dem betreffenden
@@ -1067,7 +1068,7 @@ allen Ereignissen, die sowohl in der Zukunft von $x$ als
 auch in der Vergangenheit von $y$ liegen. Er definiert 
 zwei raumartige Ereignisse $a$ und $b$, die
 \glqq gerade eben noch\grqq\ im Diamanten 
-liegen. Bis auf ein Vorzeichen ist der Abstand
+liegen. Bis auf ein Vorzeichen ist der Minkowski-Abstand
 $\overline{xy}$ gleich dem Abstand 
 $\overline{ab}$ (f\"ur $c=1$);
 damit lassen sich die Messungen r\"aumlicher Abst\"ande auf die
@@ -1088,13 +1089,13 @@ durch einen Lichtstrahl verbunden
 werden k\"onnen, also auf
 dem Lichtkegel des jeweils anderen
 Ereignisses liegen, bezeichnet man als
-{\em lichtartig}. In Abb.\ \ref{fig_lightcone}
-sind O und L lichtartig. 
+{\em lichtartig}. In Abb.\ \ref{fig_lightcone} (links)
+sind O und L lichtartig.\index{lichtartig} 
 
 F\"ur Ereignisse innerhalb des
 Zukunfts- oder Vergangenheitslichtkegels 
 gilt $(ct)^2 - \pmb{x}^{\,2}>0$. Solche
-Ereignispaare bezeichnet man als
+Ereignispaare bezeichnet man als\index{zeitartig}\index{raumartig}
 {\em zeitartig}. Die Ereignisse A und
 B sind zeitartig zu O. Ereignisse
 au\ss erhalb des Lichtkegels (z.B.\
@@ -1133,7 +1134,7 @@ kausal beeinflussen.
 
 Die beiden Lichtkegel (meist spricht
 man einfach von {\em dem} Lichtkegel)
-zu einem
+zu einem\index{Lichtkegel}
 Ereignis O unterteilen also die Menge
 aller Ereignisse in drei Klassen: (1) die
 Menge der zuk\"unftigen Ereignisse,
@@ -1149,9 +1150,30 @@ sinnvolle Relation \glqq gleichzeitig\grqq\ gibt
 es in der Relativit\"atstheorie nicht mehr
 in einem absoluten Sinne.
 
+Abbildung \ref{fig_lightcone}(rechts) zeigt einen sogenannten Diamanten
+zu zwei zeitartigen Ereignissen $x$ und $y$ (wobei $y>x$ gelten soll).
+Dabei handelt es sich um alle Ereignisse in oder auf dem Zukunftslichtkegel
+von $x$, die gleichzeitig in oder auf dem Vergangenheitslichtkegel von
+$y$ liegen. In der 1+1-dimensionalen Darstellung dieser Abbildung schneiden
+sich die beiden Lichtkegel in zwei Punkten $a$ und $b$. Bei einer 2+1-dimensionalen
+Darstellung (eine Zeit- und zwei Raumdimensionen) schneiden sich die Lichtkegel
+in einer Ellipse und in 3+1-Dimensionen handelt es sich um ein Ellipsoid.  F\"ur einen Beobachter, 
+der sich auf der inertialen Weltgeraden von $x$ nach $y$ bewegt, sind die Ereignisse
+$a$ und $b$ gleichzeitig (ebenso wie in 3+1-Dimensionen f\"ur ihn alle Ereignisse auf diesem
+Ellipsoid gleichzeitig sind), au\ss erdem sind sie gleich weit von seiner Weltlinie 
+entfernt, d.h., f\"ur ihn erscheint dieser Ellisoid als Kugel. 
+Der invariante \glqq Abstand\grqq\ von $a$ und $b$ (bzw.\ von zwei diametral gegen\"uber
+liegenden Punkten auf dieser Kugel) ist f\"ur eine Wahl der Einheiten, bei
+denen $c$ den Wert 1 annimmt, bis auf das Vorzeichen derselbe der invariante Abstand
+zwischen $x$ und $y$, also die Eigenzeit der inertialen Weltlinie zwischen $x$ und $y$. 
+Zur Messung des invarianten Abstands von $a$ und $b$ kann man also auch den
+invarianten Abstand zwischen $x$ und $y$ messen (und umgekehrt). So lassen sich die
+Abstandsmessungen von r\"aumartigen Ereignissen auf die Abstandsmessungen von
+zeitartigen Ereignissen zur\"uckf\"uhren. 
+
 \subsection{Inertialsysteme}
 
-In einem Inertialsystem werden 
+In einem Inertialsystem werden\index{Inertialsystem} 
 alle kr\"aftefreien Bewegungen (im Sinne
 der speziellen Relativit\"atstheorie --
 wir werden in der allgemeinen Relativit\"atstheorie
@@ -1160,8 +1182,8 @@ in gekr\"ummten Raumzeiten als
 kr\"aftefreie Bahnkurven ansehen) durch
 Geraden dargestellt. Damit bewegt
 sich auch der r\"aumliche Ursprung
-eines Intertialsys\-tems entlang einer 
-Geraden. Die Koordinate entlang
+eines Intertialsys\-tems, ausgedr\"uckt in einem anderen Inertialsystem, 
+entlang einer Geraden. Die Koordinate entlang
 dieser Geraden bezeichnen wir als
 Zeitkoordinate. Sie wird realisiert
 durch die Weltline einer idealen Uhr 
@@ -1174,11 +1196,12 @@ solchen Inertialsystem die Koordinaten
 $(t,\pmb{x})$ zuordnen, ist damit operational 
 Folgendes gemeint: Wir denken uns den gesamten
 Raum des Inertialsystems mit Uhren
-ausgepflastert, die alle synchronisiert
+ausgepflastert, die alle synchronisiert\index{Synchronisation von Uhren}
 sind. (Auf die Problematik der Synchronisation
-von Uhren werden wir in Abschnitt
-\ref{sec_Synch} n\"aher eingehen, in einer
-speziellen Form schon im n\"achsten Abschnitt.  
+von Uhren geht der Kurztext
+\glqq\hyperref[chap_Philosophie]{Philosophischer Hintergrund der SRT}\grqq\  
+n\"aher ein, in einer speziellen Form auch der Kurztext
+\glqq\hyperref[chap_Geometrie]{SRT -- geometrische Konstruktionen}\grqq.)  
 An dieser Stelle soll gen\"ugen, dass eine
 solche globale Synchronisation m\"oglich
 ist und dass sie beispielsweise durch den
@@ -1186,8 +1209,9 @@ langsamen Transport von Uhren --
 alle Uhren wurden in der fernen Vergangenheit
 im Ursprung auf dieselbe Zeit eingestellt und dann
 langsam an ihren Platz gebracht --
-realisiert werden kann.\footnote{Sp\"ater 
-werden wir zeigen, dass die so genannte
+realisiert werden kann.\footnote{Im Kurztext \glqq\hyperref[chap_Philosophie]{Philosophischer
+Hintergrund der SRT}\grqq\
+werden wir zeigen, dass die sogenannte
 Einstein-Synchronisation, bei der Uhren durch
 Austausch von Lichtsignalen synchronisiert
 werden, zu dieser Vorschrift identisch ist.}) 
@@ -1270,6 +1294,7 @@ werden und umgekehrt.
 \bibitem{Born} Max Born; {\it Optik}; Springer-Verlag, Berlin, Heidelberg,
         1972.
 \bibitem{Britannica} Encyclopaedia Britannica; 15.th edition, 1988.
+%\bibitem{Brockhaus} Brockhaus
 \bibitem{Descartes} Ren\'e Descartes; {\it Die Prinzipien der
         Philosophie}; Felix Meiner Verlag, Hamburg, 1992; \"ubersetzt
         von Artur Buchenau.
@@ -1284,13 +1309,13 @@ werden und umgekehrt.
 \bibitem{Lorentz} Hendrik Antoon Lorentz; {\it Electromagnetic phenomena 
          in a system moving with any velocity smaller than that of light}; 
          Proc.\ Acad.\ Sci., Amsterdam, 6 [1904], S.\ 809.
-\bibitem{Mittelstaedt} Peter Mittelstaedt; {\it Der Zeitbegriff in der
-        Physik}; BI-Wissenschaftsverlag, 1989.        
-\bibitem{Mittelstaedt2} Peter Mittelstaedt; {\it Philosophische Probleme
-        der modernen Physik}; BI-Wissenschaftsverlag, 1989.        
-\bibitem{Newton2} Isaac Newton; {\it \"Uber die Gravitation...};
-       Klostermann Texte Philosophie; Vittorio Klostermann, Frankfurt,
-      1988; \"ubersetzt von Gernot B\"ohme.
+%\bibitem{Mittelstaedt} Peter Mittelstaedt; {\it Der Zeitbegriff in der
+%        Physik}; BI-Wissenschaftsverlag, 1989.        
+%\bibitem{Mittelstaedt2} Peter Mittelstaedt; {\it Philosophische Probleme
+%        der modernen Physik}; BI-Wissenschaftsverlag, 1989.        
+%\bibitem{Newton2} Isaac Newton; {\it \"Uber die Gravitation...};
+%       Klostermann Texte Philosophie; Vittorio Klostermann, Frankfurt,
+%      1988; \"ubersetzt von Gernot B\"ohme.
 \bibitem{Newton3} Isaac Newton; {\it Optik oder Abhandlung \"uber
       Spiegelungen, Brechungen, Beugungen und Farben des Lichts};
       I., II.\ und III.\ Buch (1704); aus dem Englischen \"ubersetzt

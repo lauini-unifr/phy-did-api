@@ -1,12 +1,14 @@
-\documentclass[german,10pt]{book}     \input{../preambel}             \begin{document}     \setcounter{chapter}{2}
+\documentclass[german,10pt]{book}     \input{../preambel}             \begin{document}     \setcounter{chapter}{3}
 
 \chapter{Die drei klassischen Effekte der ART}
+\label{chap_klassisch}
 
-Nachdem wir die mathematischen Grundlagen 
-behandelt und die Einstein'schen Gleichungen
-angegeben haben, betrachten wir nun erste
+\info{Thomas Filk}{15.05.2026}
+In diesem Kurztext betrachten wir
 Anwendungen bzw.\ Konsequenzen der 
-Allgemeinen Relativit\"atstheorie. 
+Allgemeinen Relativit\"atstheorie f\"ur schwache Gravitationsfelder. Dies sind
+die F\"alle, auf welche die Allgemeine Relativit\"atstheorie zuerst angewandt
+wurde und durch die sie ihre ersten Tests erfahren hat.  
 
 Sehr viele Effekte der Allgemeinen Relativit\"atstheorie --
 dazu geh\"oren alle Effekte, die sich innerhalb
@@ -116,8 +118,8 @@ werden.
 Wir betrachten nun die Ablenkung des
 Lichts an einem Stern wie der Sonne.
 Wenn das \"Aquivalenzprinzip gilt,
-sollte der Winkel der Ablenkung nur von
-der Anfangsgeschwindigkeit und dem
+sollte der Winkel der Ablenkung $\Delta \varphi$ nur von
+der Anfangsgeschwindigkeit $v$ und dem
 Sto\ss parameter abh\"angen, nicht aber von
 der Masse eines Teilchens. F\"ur sehr
 kleine Ablenkungswinkel (bei denen alle
@@ -126,7 +128,7 @@ Ordnung\index{Streuung am Kepler-Potenzial}
 vernachl\"assigt werden) ergibt sich in der klassischen
 Mechanik f\"ur die Streuung am Kepler-Potenzial:
 \begin{equation}
-     \Delta \phi = 2 \frac{GM}{v^2 r_0} \, ,
+     \Delta \varphi = 2 \frac{GM}{v^2 r_0} \, ,
 \end{equation}
 wobei $r_0$ der Minimalabstand der Bahnkurve
 vom Sonnenmittelpunkt ist (vgl.\ Abb.\ \ref{fig_sonne}),
@@ -137,7 +139,7 @@ Wenn wir (etwas naiv, da nicht-relativistisch
 gerechnet) f\"ur die Geschwindigkeit
 $c$ einsetzen, erhalten wir:
 \begin{equation}
-     \Delta \phi = 2 \frac{GM}{c^2 r_0} \, ,
+     \Delta \varphi = 2 \frac{GM}{c^2 r_0} \, ,
 \end{equation}
 Dies war das Ergebnis, das Einstein zun\"achst
 vermutet hatte.
@@ -155,7 +157,7 @@ vermutet hatte.
 \put(0,90){\makebox(0,0){$S'$}}
 \put(0,40){\makebox(0,0){$\bullet$}}
 \put(0,78){\makebox(0,0){$\bullet$}}
-\put(125,59){\makebox(0,0){${\scriptstyle \Delta \phi}$}}
+\put(125,59){\makebox(0,0){${\scriptstyle \Delta \varphi}$}}
 \put(101,25){\makebox(0,0){${\scriptstyle r_0}$}}
 \multiput(0,78.5)(15,-3){13}{\line(5,-1){10}}
 \multiput(0,40)(15,3){13}{\line(5,1){10}}
@@ -167,27 +169,28 @@ $S$ wird an
 der Sonne abgelenkt. F\"ur einen Beobachter auf der
 Erde $E$ erscheint der Stern scheinbar an einer
 anderen Position $S'$. Als Ablenkungswinkel
-bezeichnet man den Winkel $\Delta \phi$.}
+bezeichnet man den Winkel $\Delta \varphi$.}
 \end{SCfigure}
 
-Wie schon erw\"ahnt (S.\ \pageref{p_solareclipse})
-wurde der Effekt der Lichtablenkung an der Sonne
+Dieser Effekt der Lichtablenkung an der Sonne wurde
 1919 gemessen und damit die Vorhersage der
-ART best\"atigt. Einstein hatte urspr\"unglich nur
+ART best\"atigt. Einstein hatte urspr\"unglich allerdings nur
 die oben skizzierte Form des \"Aquivalenzprinzips
 f\"ur seine Vorhersage verwendet. Eine genauere
-Rechnung, die m\"oglich wurde, nachdem 1916 die
-Schwarz\-schild-L\"osung bekannt war, ergab diese f\"ur
+Rechnung jedoch, die m\"oglich wurde, nachdem 1916 die
+Schwarz\-schild-L\"osung bekannt war, ergab f\"ur
 den Ablenkungswinkel
 \begin{equation}
-     \Delta \phi =  4 \frac{GM}{c^2 r_0} \frac{1 + \gamma}{2} \, .
+     \Delta \varphi =  4 \frac{GM}{c^2 r_0} \frac{1 + \gamma}{2} \, .
 \end{equation}
-Hierbei ist $\gamma$ einer der Parameter der 
+Hierbei ist $\gamma$ einer der Parameter der sogenannten
 Robertson-Entwicklung\index{Robertson-Entwicklung}
-(siehe Abschnitt \ref{sec_IsoStat}) und f\"ur die 
+%(siehe Abschnitt \ref{sec_IsoStat}) 
+und f\"ur die 
 Schwarzschild-L\"osung gilt 
-$\gamma = 1$ (siehe Gl.\ \ref{eq_betagammaART}), 
-wohingegen in der Newton'schen N\"aherung $\gamma=0$
+$\gamma = 1$% 
+%(siehe Gl.\ \ref{eq_betagammaART})
+, wohingegen in der Newton'schen N\"aherung $\gamma=0$
 folgt. Die tats\"achliche Ablenkung eines Lichtstrahls 
 an der Sonne f\"allt also im Rahmen der ART doppelt
 so stark aus, wie urspr\"unglich vermutet.
@@ -204,14 +207,14 @@ Uhren -- genauer mit der L\"ange von Weltlinien --
 
 \subsection{Uhren im Gravitationsfeld}
 
-Wir haben gesehen, dass wir f\"ur raumartige Abst\"ande die Metrik
-durch starre K\"orper ausmessen k\"onnen. F\"ur zeitartige
+F\"ur raumartige Abst\"ande k\"onnen wir die Metrik
+durch starre K\"orper ausmessen. F\"ur zeitartige
 Wege k\"onnen wir die L\"ange immer durch die Eigenzeit
 einer mittransportieren Uhr\index{Eigenzeit!im Gravitationsfeld} ausmessen. 
 
-Grunds\"atzlich gilt in diesem Fall das Gleiche, wie schon bei der 
-Geometrisierung des Raumes. Es ist eine Definition, die Eigenzeit und 
-damit die zeitartige Metrik
+Grunds\"atzlich gilt in diesem Fall das Gleiche, wie bei der 
+Geometrisierung des Raumes (siehe Kurztext \ref{chap_Philosophie}): 
+Es ist eine Definition, die Eigenzeit und damit die zeitartige Metrik
 \"uber den Lauf guter Uhren zu bestimmen. Universelle Einfl\"usse sind
 solche, die den Lauf aller Uhren -- d.h.\ aller physikalischen Systeme
 mit einer charakteristischen Zeitskala --
@@ -272,7 +275,8 @@ sei in einem konstanten Gravitationsfeld \glqq in Ruhe\grqq; er h\"alt
 beispielsweise seinen Abstand zur Quelle des Gravitationsfeldes 
 (der Erdoberfl\"ache) unter Ausnutzung einer anderen Kraft 
 (beispielsweise der elektromagnetischen Kraft, die in einem 
-Raketenantrieb wirksam ist) konstant. Beobachter 2 hingegeben bewegt sich 
+Raketenantrieb wirksam ist; oder auch, indem er einfach auf der
+Erdoberfl\"ache steht) konstant. Beobachter 2 hingegeben bewegt sich 
 auf einer inertialen Bahnkurve, zum Beispiel in einem mit gro\ss er
 Geschwindigkeit abgeschossenen und dann frei fallenden Satelliten.
 Der Moment der Trennung der beiden Beobachter sei Ereignis $A$, der
@@ -284,17 +288,18 @@ Dieses Problem l\"asst sich mit Hilfe des \"Aquivalenzprinzips
 \index{Aequivalenzprinzip@\"Aquivalenzprinzip}
 besonders einfach auf ein Problem der speziellen Relativit\"atstheorie
 zur\"uckf\"uhren. Wir k\"onnen n\"amlich auch sagen, dass sich
-Beobachter 2 entlang einer Geod\"aten bewegt hat (in seinem System gelten
+Beobachter 2 entlang einer Geod\"aten bewegt (in seinem System gelten
 die physikalischen Gesetze eines Inertialsystems), im Minkowski-Raum
-also entlang einer geraden Linie, und Beobachter 1 wurde konstant
+also entlang einer geraden Linie, und Beobachter 1 wird konstant
 beschleunigt. Er entfernt sich zun\"achst bei Ereignis $A$ mit gro\ss er 
-Geschwindigkeit von Beobachter 1, aber seine Beschleunigung lie\ss\ 
-ihn immer langsamer werden, bis sich seine Geschwindigkeit umkehrte  
+Geschwindigkeit von Beobachter 1, aber seine Beschleunigung l\"asst 
+ihn immer langsamer werden, bis sich seine Geschwindigkeit umkehrt  
 und er schlie\ss lich bei Ereignis $B$ wieder mit Beobachter 1 
-zusammentraf. Nun wissen wir in der speziellen Relativit\"atstheorie,
+zusammentrifft. Nun wissen wir in der speziellen Relativit\"atstheorie,
 dass  die Eigenzeit von Beobachter 2 l\"anger ist als die Eigenzeit 
 von Beobachter 1. 
-Die Situation entspricht genau dem Beispiel des Zwillingsparadoxons,
+Die Situation entspricht genau dem Beispiel des Zwillingsparadoxons
+(siehe Kurztext \ref{chap_Zwilling}),
 wobei 1 der \glqq reisende Astronaut\grqq\ ist und 2 der rascher alternde
 Zwilling, der zu Hause zur\"uckbleibt. 
 
@@ -313,7 +318,7 @@ Vergleich bzw.\ einer Referenz -- langsamer im Vergleich zu
 was? Gemeint ist hier der Vergleich zu der Uhr, die sich
 nicht im Gravitationsfeld befindet (bzw.\ einer Beschleunigung
 unterliegt). Wir k\"onnen jedoch nicht einfach das Gravitationsfeld
-abschalten (das war eine der Forderungen an eine
+abschalten (das ist eine der Forderungen an eine
 \glqq universelle Kraft\grqq). In dem oben diskutierten 
 Beispiel ist offensichtlich, welche zwei Uhren wir miteinander
 vergleichen. Diese Uhren haben aber unterschiedliche
@@ -335,7 +340,8 @@ die Rotverschiebung von Licht im Gravitationsfeld verstehen.
 Beobachter $S$ (der Sender) befinde sich 
 in einem Gravitationsfeld, Beobachter
 $E$ (Empf\"anger) sei au\ss erhalb dieses 
-Gravitationsfeldes. Beide Beobachter halten
+Gravitationsfeldes bzw.\ in einem Bereich, wo das Gravitationsfeld
+schw\"acher ist. Beide Beobachter halten
 konstanten Abstand. Beobachter $S$ benutzt 
 nun eine Referenzfrequenz, beispielsweise 
 die Frequenz einer bestimmten Spektrallinie eines
@@ -381,13 +387,11 @@ als der Eigenzeitabstand $\Delta t$ beim Empf\"anger $E$.
 Daher sieht $E$ die Farbe von Licht rotverschoben.}
 \end{SCfigure}
 
-Wir werden im n\"achsten Kapitel sehen, dass
-die $g_{00}$-Komponente der Metrik
-von der Form
+Die $g_{00}$-Komponente der Metrik ist von der Form
 \begin{equation}
         g_{00} = 1 - 2 \frac{\phi(x)}{c^2}
 \end{equation}
-ist (vgl.\ Gleichung \ref{eq_gnnNewton}), 
+%ist (vgl.\ Gleichung \ref{eq_gnnNewton}), 
 wobei $\phi(x)=GM/r$ das klassische Newton'sche
 Potenzial einer kugelsymmetrischen 
 Gravitationsquelle der Masse $M$ (noch
@@ -401,7 +405,7 @@ Damit folgt als Beziehung zwischen den Eigenzeiten:
 \label{sec_Perihel}
 
 Nach der Newton'schen Gravitationstheorie
-ist die Ellipsenbahn eines einzelnen um eine
+ist die Ellipsenbahn eines einzelnen, um eine
 schwere Masse (z.B.\ die Sonne) rotierenden 
 K\"orpers in einem
 Inertialsystem konstant, d.h., die Lage der
@@ -440,13 +444,13 @@ k\"onnte. Mitte des 19.\ Jahrhunderts gab es
 daher Vorschl\"age, einen weiteren Planeten
 -- Vulkan -- zu postulieren, der sich so nah
 an der Sonne befinden sollte, dass man ihn
-(mit damaligen Mitteln) nicht beobachten kann. 
+(mit damaligen Mitteln) nicht beobachten konnte. 
 
 Eine genauere Rechnung (siehe z.B.\ \cite{Fliessbach}, Kap.\ 27)
 ergibt f\"ur die Periheldrehung pro Umlauf:
 \begin{equation}
 \label{eq_Perihel}
-       \Delta \phi = \frac{6 \pi GM}{c^2 p} \frac{2 - \beta + 2\gamma}{3} \, .
+       \Delta \varphi = \frac{6 \pi GM}{c^2 p} \frac{2 - \beta + 2\gamma}{3} \, .
 \end{equation} 
 Hierbei ist $p$ der harmonische
 Mittelwert der beiden Halbachsen -- f\"ur die Merkurbahn gilt
@@ -455,14 +459,15 @@ $p=55 \cdot 10^6$\,km -- und somit ein fester Ellipsenparameter:
        \frac{2}{p} = \frac{1}{r_+} + \frac{1}{r_-}  \, , 
 \end{equation}
 und $\beta$ und $\gamma$ sind zwei Parameter der
-Robertson-Entwicklung\index{Robertson-Entwicklung}
-(siehe Abschnitt \ref{sec_IsoStat}), die sich f\"ur die
+Robertson-Entwicklung\index{Robertson-Entwicklung}%
+%(siehe Abschnitt \ref{sec_IsoStat})
+, die sich f\"ur die
 Schwarzschild-L\"osung zu $\beta=\gamma=1$ ergeben
-(Gl.\ \ref{eq_betagammaART}).
+(siehe Kurztext \ref{chap_Schwarzschild}).
 Setzt man Werte ein, so erh\"alt man pro Umlauf
-$\Delta \phi = 0,104$ Bogensekunden oder im Jahrhundert (der Merkur
+$\Delta \varphi = 0,104$ Bogensekunden oder im Jahrhundert (der Merkur
 hat in einem Jahrhundert 415 Sonnenuml\"aufe):
-$\Delta \phi = 43,0$ Bogensekunden. 
+$\Delta \varphi = 43,0$ Bogensekunden. 
 
 Erstaunen mag zun\"achst, dass f\"ur $\beta = \gamma =0$,
 also in der Newton'schen N\"aherung der Schwarzschild-L\"osung,

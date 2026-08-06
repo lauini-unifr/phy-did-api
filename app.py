@@ -77,8 +77,17 @@ def create_app(db_url=None):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     # Logging
-    logging.basicConfig(filename='app.log', level=logging.INFO)
-    app.logger.addHandler(logging.StreamHandler())
+    formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+    file_handler = logging.FileHandler('app.log')
+    file_handler.setFormatter(formatter)
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(formatter)
+
+    root_logger = logging.getLogger()
+    root_logger.setLevel(logging.INFO)
+    root_logger.addHandler(file_handler)
+    root_logger.addHandler(stream_handler)
+    app.logger.setLevel(logging.INFO)
 
     db.init_app(app)
     migrate = Migrate(app,db,render_as_batch=True)
@@ -174,11 +183,11 @@ def create_app(db_url=None):
                     # Table of contents
                     table_of_contents = r'{\let\cleardoublepage\clearpage\tableofcontents}'
                     texdoc.append(table_of_contents)
-
+                
                 for item_id in item_ids:
                     item = ItemModel.query.get_or_404(int(item_id))
                     if item.file_name:
-
+                        
                         if item.topic.name == "Klimaphysik":
                             topic_folder_name = "Skript_Klima"
                         elif item.topic.name == "Klassische Systeme":
@@ -186,12 +195,16 @@ def create_app(db_url=None):
                         elif item.topic.name == "Quantenphysik":
                             topic_folder_name = "Skript_QM"
                         elif item.topic.name == "Relativitätstheorie":
-                            topic_folder_name = "Skript_SRT"    
+                            if "ART" in item.name:
+                                topic_folder_name = "Skript_ART"   
+                            else:
+                                topic_folder_name = "Skript_SRT"    
                         elif item.topic.name == "Thermodynamik":
                             topic_folder_name = "Skript_Thermo"  
 
                         src = "upload_dir/attachment/" + topic_folder_name + "/" + item.name + "/" + item.file_name
                         with open(src) as f_in:
+                            
                             if len(item_ids) == 1:
                                 date = False
                                 for line in f_in:
@@ -199,7 +212,7 @@ def create_app(db_url=None):
                                         title = line.split("{")[1].split("}")[0]
                                     if "\info{" in line:
                                         date = line.split("}{")[1].split("}")[0]
-                                    
+                                        
                                 # Deckblatt
                                 copy_files("upload_dir/attachment/Deckblatt/Bilder", tmpdirname + '/Bilder')
                                 with open("upload_dir/attachment/Deckblatt/deckblatt_clean.tex") as f_in:
@@ -215,6 +228,7 @@ def create_app(db_url=None):
                                 table_of_contents = r'{\let\cleardoublepage\clearpage\tableofcontents}'
                                 texdoc.append(table_of_contents)        
 
+                        
                         with open(src) as f_in:
                             for line in f_in:
                                 if '\documentclass[german,10pt]' not in line and '\end{document}' not in line:
@@ -248,11 +262,29 @@ def create_app(db_url=None):
                                         "Klass_08_Nachthimmel",
                                         "Klass_10_Landkarten",
                                         "Klass_11_Hebelgesetze",
-                                        "QM_01_QuBit",
-                                        "SRT_03_Kette",
                                         "Thermo_01_Prozess",
                                         "Thermo_03_Entropie"]:
                             copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder') 
+                        elif item.name in ["ART_02_Grundlagen",
+                                           "ART_05_GravWellen"]:
+                            try: 
+                                os.makedirs(tmpdirname + '/Bilder_ART')
+                            except:
+                                pass
+                            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder_ART')
+                        elif item.name in ["SRT_03_Kette"]:
+                            try: 
+                                os.makedirs(tmpdirname + '/Bilder_SRT')
+                            except:
+                                pass
+                            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder_SRT')
+                        elif item.name in ["QM_01_QuBit",
+                                           "QM_06_EPR_Bell_CHSH"]:
+                            try: 
+                                os.makedirs(tmpdirname + '/Bilder_QM')
+                            except:
+                                pass
+                            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder_QM')
                     
                 texdoc.append('\printindex\n\end{document}')
 

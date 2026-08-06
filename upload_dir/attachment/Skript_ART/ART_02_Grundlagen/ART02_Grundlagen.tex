@@ -1,10 +1,11 @@
-\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{1}
 
 
 \chapter{Grundlagen der ART}
 % Kap x
 \label{chap_ART}
 
+\info{Thomas Filk}{15.05.2026}
 Einige der Kurztexte im Rahmen dieser Reihe beziehen sich auf die Allgemeine
 Relativit\"atstheorie. Es gibt einen Kurztext zu Schwarzen L\"ochern, einen
 Kurztext zu Gravitationswellen und einen Kurztext zu Kosmologischen Modellen.
@@ -25,18 +26,18 @@ geschehen soll. Die Einstein'schen Gleichungen lassen sich zwar nicht herleiten,
 sie folgen aus einfachen Annahmen. 
 
 Die L\"osung der Einstein'schen Gleichungen besteht in einem tensorwertigen Feld
-(eine symmetrische $4\times 4$ Matrix an jedem Punkt der Raumzeit), $g_{\mu \nu}(x)$,
+(eine symmetrische $4\times 4$ Matrix an jedem Punkt der Raum-Zeit), $g_{\mu \nu}(x)$,
 dem sogenannten metrischen Feldtensor.
 Dieses Feld kann als ein vom Ort abh\"angiger Ma\ss stab auf einer Karte interpretiert
 werden und gibt Aufschluss \"uber die lokalen geometrischen Eigenschaften der
-Raumzeit. Daher wird in diesem Kapitel auch angedeutet, wie man solche Karten mit
+Raum-Zeit. Daher wird in diesem Kapitel auch angedeutet, wie man solche Karten mit
 einer Metrik interpretieren kann. 
 
 \section{Vorbemerkungen und Definitionen}
 
-In der Allgemeinen Relativit\"atstheorie betrachten wir eine 4-dimensionale Raumzeit mit einer Zeit- und 
+In der Allgemeinen Relativit\"atstheorie betrachten wir eine 4-dimensionale Raum-Zeit mit einer Zeit- und 
 drei Raumdimensionen.
-Die Elemente der Raumzeit bezeichnen wir als \textit{Ereignisse}: Dabei handelt es sich um
+Die Elemente der Raum-Zeit bezeichnen wir als \textit{Ereignisse}: Dabei handelt es sich um
 zeitlich und r\"aumlich lokalisierte physikalische Prozesse wie beispielsweise das
 Ein- oder Ausschalten einer punktf\"ormigen Lichtquelle, die Zeigerstellung einer Uhr in Richtung
 einer bestimmten Zahl, das Zusammentreffen zweier Weltlinien von Objekten, etc. 
@@ -44,7 +45,7 @@ Jedes Ereignis kann durch die Angabe von vier Zahlen, die durch ein lokales Koor
 festgelegt sind, charakterisiert werden: Eine dieser Koordinaten bezieht sich auf den Zeitpunkt,
 die anderen drei Koordinaten dienen der r\"aumlichen Festlegung des Ereignisses. In diesem
 Kapitel verwenden wir oft euklidische R\"aume zur Veranschaulichung von geometrischen
-Eigenschaften oder auch 2- und 3-dimensionale Raumzeiten zur Vereinfachung der Darstellungen. 
+Eigenschaften oder auch 2- und 3-dimensionale Raum-Zeiten zur Vereinfachung der Darstellungen. 
 
 \begin{SCfigure}[30][htb]
 \begin{tikzpicture}
@@ -132,8 +133,7 @@ Die beiden Bilinearformen $g^{ij}$ und $g_{ij}$ sind invers zueinander:
 \end{equation}
 
 
-
-\section{Elementare Differentialgeometrie - von der Metrik zur Kr\"ummung}
+\section{Elementare Differentialgeometrie --\\von der Metrik zur Kr\"ummung}
 
 In der Differentialgeometrie betrachtet man meist sogenannte Riemann'sche Mannigfaltigkeiten,
 bei denen an jedem Punkt eine positiv definite Metrik vorgegeben ist, die lokal eine Abstandsfunktion zwischen
@@ -149,9 +149,9 @@ der Riemann'schen Mannigfaltigkeiten und der Pseudo-Riemann'schen Mannigfaltigke
 Hinsicht kaum, sodass die differentialgeometrischen Grundlagen anhand der Riemann'schen
 Geometrie veranschaulicht werden k\"onnen. 
 
-Die Allgemeine Relativit\"atstheorie ist eine geometrische Theorie der Raumzeit. Um Geometrie
+Die Allgemeine Relativit\"atstheorie ist eine geometrische Theorie der Raum-Zeit. Um Geometrie
 betreiben zu k\"onnen, muss man zun\"achst festlegen, auf was f\"ur Objekten man Geometrie
-betreiben m\"ochte - das sind in der Differentialgeometrie sogenannte Mannigfaltigkeiten - und
+betreiben m\"ochte -- das sind in der Differentialgeometrie sogenannte Mannigfaltigkeiten -- und
 man muss wissen, wie man die L\"ange von Wegen bestimmen kann bzw.\ wie man f\"ur 
 infinitesimal benachbarte Punkte deren Abstand bestimmen kann (dann kann man die L\"ange
 von Wegen durch Integration \"uber infinitesimale Abschnitte bestimmen). Die wichtigsten Schritte von
@@ -166,7 +166,7 @@ als einen Atlas. Diese Terminologie darf man w\"ortlich nehmen: Eine
 Mannigfaltigkeit ist definiert durch den Atlas ihrer Karten. Wenn zwei Karten Ausschnitte desselben
 Gebiets der Mannigfaltigkeit darstellen, sollen diese Gebiete nat\"urlich isomorph sein (wenn man in
 einem Weltatlas zwei Karten findet, auf denen Deutschland dargestellt ist, sollten die beiden
-dargestellten Gebiete in ihren topologischen Eigenschaften gleich sein). Man verlangt von diesen
+dargestellten Gebiete in ihren topografischen Eigenschaften gleich sein). Man verlangt von diesen
 Abbildungen von einer Karte zu einer anderen Karte mindestens, dass sie differenzierbar sind, meist
 verlangt man sogar, dass sie unendlich oft differenzierbar sind. Man sagt dann, dass der Atlas mit
 seinen Karten auf der Mannigfaltigkeit eine differenzierbare Struktur definiert. W\"ahrend man auf der
@@ -198,7 +198,7 @@ wohingegen die Singularit\"at bei $r=0$ physikalisch ist; dort wird die Kr\"ummu
 
 \subsection{Tangentialr\"aume}
 
-Man stellt sich eine Tangentialebene an eine gekr\"ummte Fl\"ache gerne als einen euklidische Ebene vor, die
+Man stellt sich eine Tangentialebene an eine gekr\"ummte Fl\"ache gerne als eine euklidische Ebene vor, die
 an einem Punkt die Fl\"ache gerade ber\"uhrt, ohne sie zu schneiden. Diese Vorstellung geht
 von einer Einbettung aus (siehe Abschnitt \ref{sec_ART_Grundzuege})
 und die Tangentialebene ist dann in denselben Raum eingebettet wie auch
@@ -217,15 +217,15 @@ zwar auf der Mannigfaltigkeit selbst keine Ableitungen bilden (sie ist nur ein t
 k\"onnen auf den Karten ableiten und wenn diese Karten in einem Punkt regul\"ar sind, sind zwei
 Wege, die in obigem Sinne in einer Karte \"aquivalent sind, in allen Karten \"aquivalent. Insofern handelt
 es sich um eine Eigenschaft der Wege auf der Mannigfaltigkeit. Mit der Definition einer Addition und einer
-skalaren Multiplikation auf diesen \"Aquivalentklassen von Wegen - dem Raum der Geschwindigkeiten - wird 
+skalaren Multiplikation auf diesen \"Aquivalentklassen von Wegen -- dem Raum der Geschwindigkeiten -- wird 
 dieser Raum zu einem
 Vektorraum. Diesen Vektorraum bezeichnet man als den Tangentialraum an eine Fl\"ache im Punkte $p$. 
 Diese Definition l\"asst sich auch sofort auf beliebige Mannigfaltigkeiten erweitern und \"ahnlich
 wie bei eingebetteten R\"aumen hat der Tangentialraum in einem Punkte $p$ dieselbe Dimension wie
 die Mannigfaltigkeit selbst. 
 
-Die kausale Struktur der ART, die wir lokal f\"ur eine Raumzeit definiert haben, \"ubertr\"agt sich auf den
-Tangentialraum. Eine physikalische Weltlinie ist eine parametrisiert Kurve in der Raumzeit, bei der an jedem
+Die kausale Struktur der ART, die wir lokal f\"ur eine Raum-Zeit definiert haben, \"ubertr\"agt sich auf den
+Tangentialraum. Eine physikalische Weltlinie ist eine parametrisiert Kurve in der Raum-Zeit, bei der an jedem
 Punkt der Geschwindigkeitsvektor zeitartig ist, also innerhalb des positiven Lichtkegels liegt. F\"ur
 masselose Objekten wird die Definition der Weltlinie auch auf lichtartige Weltlinien (mit
 lichtartigen Tangentialvektoren) erweitert. 
@@ -242,7 +242,7 @@ Information muss vorhanden sein. In zwei Dimensionen reichen daf\"ur drei Zahlen
 symmetrischen $2\times2$-Matrix $g_{ij}$ zusammengefasst werden. Diese drei Zahlen geben an, wie
 ein Kreis vom Radius $r$ \glqq in der Wirklichkeit\grqq\ auf der Karte wiedergegeben wird: Dort
 erscheint dieser Kreis im Allgemeinen als Ellipse und man muss die beiden Halbachsen sowie einen Winkel f\"ur die
-Orientierung dieser Ellipse kennen. (Siehe Kapitel \ref{chap_Metrik}, wo die Analogie zwischen dem
+Orientierung dieser Ellipse kennen. (Siehe Kapitel \ref{chap_Landkarte}, wo die Analogie zwischen dem
 metrischen Feldtensor und Ma\ss st\"aben bei Landkarten ausf\"uhrlicher behandelt wird.)
 
 Seien $p$ und $p'$ zwei eng benachtbarte Punkte auf der Mannigfaltigkeit und $\{x^i\}$ bzw.\ $\{x^{\prime i}\}$
@@ -265,9 +265,9 @@ Matrix $g$ vom Punkte $x$ ab, d.h., die Ma\ss st\"abe k\"onnen an jedem Punkt an
 aber stetig von $x$ abh\"angen (siehe Abb.\ \ref{fig_ART_Tissot}).
 
 \begin{figure}[htb]
-\includegraphics[scale=0.18]{./Bilder/Tissot_orthographic.jpg}
+\includegraphics[scale=0.18]{./Bilder_ART/Tissot_orthographic.jpg}
 \hfill
-\includegraphics[scale=0.11]{./Bilder/Tissot_rectangle.png}
+\includegraphics[scale=0.11]{./Bilder_ART/Tissot_rectangle.png}
 \caption{\label{fig_ART_Tissot}%
 Zwei Darstellungen einer Kugeloberfl\"ache mit Tissot-Indikatrix. (links) Hier kann man sich
 eine dreidimensionale Einbettung der Kugel vorstellen mit eingezeichneten Kreisen (aus \cite{Tissot}). 
@@ -357,7 +357,7 @@ die Zeitachse zu drehen.
 \draw[thick] (0,1) .. controls (0.5,2.4) and (0.5,3.6) .. (0,5); 
 \end{tikzpicture}
 \caption{\label{fig_ART_Schablone}%
-(links) Im der euklidischen Ebene bilden Punkten mit einem festen Abstand zu einem vorgegebenen Punkt Kreise.
+(links) In der euklidischen Ebene bilden Punkten mit einem festen Abstand zu einem vorgegebenen Punkt Kreise.
 Die Punkte $A$ und $B$ im euklidischen Raum (links) haben einen Abstand 5: $A$ liegt im Zentrum und 
 $B$ auf dem Kreis mit der Markierung $5$. 
 (rechts) Im Minkowski-Raum bilden Punkte (Ereignisse) mit einem konstanten Abstand von einem
@@ -384,9 +384,9 @@ Damit k\"onnen wir die k\"urzesten
 Verbindungslinien zwischen zwei Punkten bestimmen; solche Linien bezeichnet man als Geod\"aten. 
 
 Streng genommen handelt es sich bei dem metrischen Tensor um eine Bilinearform im Tangentenraum 
-an die Mannigfaltigkeit in einem Punkt. D.h., dieser Tensor ist auf Vektoren - Elemente des Tangentenraums - 
+an die Mannigfaltigkeit in einem Punkt. D.h., dieser Tensor ist auf Vektoren -- Elemente des Tangentenraums -- 
 anzuwenden. Dies entspricht dem Skalarprodukt in krummlinigen Koordinaten. 
-Jeder parametrisierte Weg hat jedoch in einem Punkt eine Tangente - seine Geschwindigkeit -
+Jeder parametrisierte Weg hat jedoch in einem Punkt eine Tangente -- seine Geschwindigkeit --
 und das zeitliche Integral \"uber den Betrag der Geschwindigkeiten ergibt die zur\"uckgelegte Wegstrecke. 
 Genau dies besagt Gl.\ \ref{eq_ART_Laenge}: Die Ableitung von $x$ nach $t$ ist die Geschwindigkeit und
 die Wurzel in Gl.\ \ref{eq_ART_Laenge} ist der Betrag der Geschwindigkeit, der dann \"uber $t$ integriert wird.
@@ -396,7 +396,7 @@ die Wurzel in Gl.\ \ref{eq_ART_Laenge} ist der Betrag der Geschwindigkeit, der d
 F\"ur eine Geod\"ate k\"onnen wir angeben, wie ein Vektor entlang dieser Geod\"aten 
 parallel zu verschieben ist: Seine L\"ange sowie sein Winkel relativ zur Tangente der
 Geod\"aten bleiben gleich. Damit ist aber auch bekannt, wie man einen Vektor entlang eines
-beliebigen Wegs parallel verschiebt: Man approximiert den Weg lokal durch Geod\"atenabschnitte,
+beliebigen Wegs parallel verschiebt: Man approximiert den Weg lokal durch Geod\"atenabschnitte,-
 bestimmt die Parallelverschiebung f\"ur diese und bildet das Integral. 
 
 Allgemein bezeichnet man in der Differentialgeometrie eine Vorschrift, wie man Vektoren entlang
@@ -406,15 +406,17 @@ man als Levi-Civita-Zusammenhang oder auch kovariante Ableitung.
 
 Sind zwei Vektorr\"aume derselben Dimension gegeben, kann man zun\"achst nicht sagen, welcher
 Vektor in dem einen Vektorraum welchem Vektor in dem anderen Vektorraum entsprechen soll.
-Dazu muss ein Isomorphismus zwischen diesen Vektorrr\"aumen definiert sein. Hat man mehrer
+Dazu muss ein Isomorphismus zwischen diesen Vektorr\"aumen definiert sein, der angibt, welche
+zwei Vektoren in den beiden Vektorr\"aumen einander entsprechen sollen. 
+Hat man mehrere
 Vektorr\"aume, kann man Konsistenzbedingungen solcher Isomorphismen \"uberpr\"ufen:
-Definieren die \"Aquivalenzen zwischen $V_1$ und $V_2$ sowie zwischen $V_2$ und $V_3$
-dieselben \"Aquivalenz wie der Isomorphismus zwischen $V_1$ und $V_3$, etc. 
+Die \"Aquivalenzen zwischen $V_1$ und $V_2$ sowie die zwischen $V_2$ und $V_3$ m\"ussen 
+dieselben \"Aquivalenzen wie der Isomorphismus zwischen $V_1$ und $V_3$ definieren. 
 Ist das nicht der Fall, spricht man von einer Kr\"ummung. Bei Mannigfaltigkeiten mit ihren
 Tangentialr\"aumen gibt es zwar eine sinnvolle Vorschrift, wie man solche Isomorphismen
 zwischen verschiedenen Tangentialr\"aumen definiert, doch diese h\"angen im Allgemeinen
 von einem Weg ab, entlang dem man diese Isomorphismen zun\"achst f\"ur infinitesimal
-benachbarte Tangentialr\"aume definiert - dies macht der Zusammenhang - und dann kann
+benachbarte Tangentialr\"aume definiert -- dies macht der Zusammenhang -- und dann kann
 man diese entlang eines Weges aufintegrieren und erh\"alt einen sogenannten Paralleltransporter:
 Einen vom Weg abh\"angigen Isomorphismus zwischen verschiedenen Tangentialr\"aumen.
 
@@ -473,7 +475,7 @@ Die kovariante Zeitableitung ist:
                  \nabla_t \pmb{v} = \frac{{\rm d}\pmb{v}}{{\rm d}t} + \pmb{\omega}\times \pmb{v} \, .
 \end{equation}
 
-\subsection{Parallelverschiebung entlang geschlossener Wege - \\der Kr\"ummungstensor}
+\subsection{Parallelverschiebung entlang geschlossener Wege -- \\der Kr\"ummungstensor}
 
 Ist bekannt, wie man Vektoren parallel verschieben kann, kann man auch berechnen, wie sich
 Vektoren ver\"andern, wenn sie entlang eines geschlossenen Weges parallel verschoben werden. 
@@ -501,7 +503,7 @@ $\delta v^\mu$ gibt an, wie sich die $\mu$-te Komponente des Vektors $v$ bei ein
 um die Fl\"ache $\delta \sigma^{\alpha \beta}$ als Linearkombination der Komponenten $\{v^\nu\}$ (es ist in der
 Gleichung \"uber $\nu$ zu summieren) ver\"andert hat. $\delta \sigma^{\alpha \beta}$ ist ein infinitesimales
 Fl\"achenelement, das von dem Weg umrundet wird, und das von den beiden Richtungen zur
-$\mu$-ten und $\nu$-ten Koordinate aufgespannt wird. Der Betrag von $\delta \sigma^{\alpha \beta}$ ist der
+$\alpha$-ten und $\beta$-ten Koordinate aufgespannt wird. Der Betrag von $\delta \sigma^{\alpha \beta}$ ist der
 Fl\"acheninhalt. 
 
 \subsection{Ricci-Tensor und skalare Kr\"ummung}
@@ -530,18 +532,18 @@ Die Geod\"aten, d.h.\ die k\"urzesten Verbindungslinien auf einer Mannigfaltigke
  Verallgemeinerungen. In der euklidischen Ebene sind die k\"urzesten Verbindungen die Geraden,
  auf einer Kugeloberfl\"ache sind es Ausschnitte von Gro\ss kreisen. Wegen des relativen Vorzeichens
  zwischen der Zeitkoordinate und den r\"aumlichen Koordinaten handelt es sich in einer
- Raumzeit bei den zeitartigen Geod\"aten nicht um die k\"urzesten sondern die l\"angsten Weltlinien
+ Raum-Zeit bei den zeitartigen Geod\"aten nicht um die k\"urzesten sondern die l\"angsten Weltlinien
  zwischen zwei Ereignissen. Die L\"ange entspricht der Eigenzeit entlang der Weltlinie.
 Raumartigen Geod\"aten sind wie gewohnt die k\"urzesten Verbindungen zwischen zwei Ereignissen.
  
 Fr\"uher oder sp\"ater wird in jeder Diskussion \"uber die Allgemeine Relativit\"atstheorie die
 Frage auftauchen, ob ein gekr\"ummter Raum nicht \glqq in einer h\"oheren Dimension gekr\"ummt sein
-m\"usse\grqq\ - so wie wir uns eine zweidimensionale Kugeloberfl\"ache meist eingebettet in einen 
+m\"usse\grqq\ -- so wie wir uns eine zweidimensionale Kugeloberfl\"ache meist eingebettet in einen 
 dreidimensionalen Raum vorstellen. 
  
 Wenn wir von einer Einbettung eines gekr\"ummten Raums in einen h\"oher dimensionalen
 euklidischen Raum sprechen, meinen wir meist eine sogenannte \glqq isometrische\grqq\ Einbettung:
-Dabei ist der gekr\"ummte Raum eine Untermannigfaltigkeit des einbettenden Raums, sodass
+Dabei ist der gekr\"ummte Raum eine Untermannigfaltigkeit des einbettenden Raums, sodass-
 die L\"angen von Wegen auf dem gekr\"ummten Raum gleich den L\"angen der Wege, aufgefasst 
 als Wege im einbettenden euklidischen Raum sind. Dies ist bei einer Kugeloberfl\"ache der 
 Fall. Isometrische Einbettungen sind immer m\"oglich, allerdings muss man manchmal die einbettende
@@ -549,7 +551,7 @@ Dimension deutlich gr\"o\ss er w\"ahlen als die Dimension der Mannigfaltigkeit s
 stellen wir uns einen zweidimensionalen Torus oft im 
 dreidimensionalen Raum als Oberfl\"ache eines Donuts vor. Diese Oberfl\"ache hat jedoch Bereiche 
 positiver Kr\"ummung am Au\ss enrand und Bereiche negativer Kr\"ummung am Innenrand. Ein normaler
-zweidimensionaler Torus - als Rechteck, bei dem gegen\"uberliegende Seiten zu identifizieren sind -
+zweidimensionaler Torus -- als Rechteck, bei dem gegen\"uberliegende Seiten zu identifizieren sind --
 ist aber lokal ein flacher Raum. Ein solcher Torus kann isometrisch nur in einem vierdimensionalen
 euklidischen Raum eingebettet werden, \"ahnlich wie ein Kreis, der ebenfalls flach ist, in zwei
 Dimensionen eingebettet werden kann. Die Oberfl\"ache eines Donuts ist somit keine isometrische
@@ -563,15 +565,15 @@ der Umfang ist kleiner als $2\pi r$. Diese Eigenschaften lassen sich ausmessen u
 dass man die gekr\"ummte Fl\"ache verlassen muss.
  Wenn wir ein Blatt Papier zu einem Zylinder zusammenrollen,
 erscheint dieser Zylinder in seiner Einbettung in den dreidimensionalen Raum zwar gekr\"ummt,
-aber das l\"asst sind intrinsisch nicht feststellen: Ein Blatt Papier bleibt intrinsisch immer flach,
+aber das l\"asst sich intrinsisch nicht feststellen: Ein Blatt Papier bleibt intrinsisch immer flach,
 zumindest solange wir es nicht zerrei\ss en. Die scheinbare Kr\"ummung ist extrinsisch und eine
 Folge der Einbettung. In der Physik interessieren wir uns nur f\"ur die intrinsischen
-geometrischen Eigenschaften unserer Raumzeit.
+geometrischen Eigenschaften unserer Raum-Zeit.
 
 Die mathematische
 Definition einer Riemann'schen Mannigfaltigkeit verlangt keine Einbettung. Der Atlas der Karten, die
 dieselbe Dimension wie die Mannigfaltigkeit haben, und die auf diesen Karten definierte Metrik
-sind ausreichend. Ob unsere physikalische Raumzeit in eine h\"oherdimensionale Minkowski-Raumzeit
+sind ausreichend. Ob unsere physikalische Raum-Zeit in eine h\"oherdimensionale Minkowski-Raum-Zeit
 eingebettet ist, k\"onnen wir nicht entscheiden, es sei denn, die zus\"atzlichen Dimensionen sind
 f\"ur Teile unserer Materie zug\"anglich. Es gibt zwar entsprechende Theorien, doch derzeit gibt
 es keinerlei Anhaltspunkte daf\"ur.  
@@ -585,6 +587,7 @@ Energiedichte (die $T_{00}$-Komponente), eine Energiestromdichte (die $T_{0i}$-K
 eine Impulsdichte (die $T_{i0}$-Komponenten) und eine Impulsstromdichte (die $T_{ij}$-Komponenten)
 zusammenfasst. Die Einstein'schen Feldgleichungen lauten:
 \begin{equation}
+\label{eq_EinsteinGl}
             G_{\mu \nu} + \Lambda g_{\mu \nu} = \kappa T_{\mu \nu}
 \end{equation}
 mit
@@ -619,17 +622,17 @@ sogar fest.
 Ein wesentlicher Unterschied zu den Maxwell-Gleichung besteht darin, dass die Einstein'schen
 Feldgleichungen nicht linear in $g_{\mu \nu}$ sind. Damit gilt auch kein Superpositionsprinzip:
 Hat man die L\"osungen zu zwei verschiedenen Energie-Impuls-Tensoren gefunden, erh\"alt
-man die L\"osung zu der Summe der beiden Energie-Impuls-Verteilungen sind als Summe
-der L\"osungen. Insbesondere erh\"alt man die L\"osung beispielsweise zu zwei Schwarzen L\"ochern nicht
+man die L\"osung zu der Summe der beiden Energie-Impuls-Verteilungen nicht als Summe
+der Einzell\"osungen. Insbesondere erh\"alt man die L\"osung beispielsweise zu zwei Schwarzen L\"ochern nicht
 als Summe der L\"osungen zu einem Schwarzen Loch an verschiedenen Orten. Damit ist auch
-das Verfahren der Green'schen Funktion - man bestimme die L\"osung zur Delta-Verteilung und
-integriere die L\"osung \"uber die Ladungsdichte - hier nicht anwendbar. 
+das Verfahren der Green'schen Funktion -- man bestimme die L\"osung zur Delta-Verteilung und
+integriere die L\"osung \"uber die Ladungsdichte -- hier nicht anwendbar. 
 
 \"Ahnlich wie in der Maxwell-Theorie, wo zu den Maxwell-Gleichungen noch die Lorentz-Gleichungen
-hinzukommen - sie bestimmen die zeitliche Ver\"anderung von Ladungen und Str\"omen bei
-gegebenen Feldern - muss man in der Relativit\"atstheorie noch die dynamischen Bewegungsgleichungen
+hinzukommen -- sie bestimmen die zeitliche Ver\"anderung von Ladungen und Str\"omen bei
+gegebenen Feldern -- muss man in der Relativit\"atstheorie noch die dynamischen Bewegungsgleichungen
 der Materie ber\"ucksichtigen. Ohne andere Kr\"afte bewegen sich Punktteilchen entlang von
-Geod\"aten. Diese Gleichung - die sogenannte Geod\"atengleichung - hat folgende Form:
+Geod\"aten. Diese Gleichung -- die sogenannte Geod\"atengleichung -- hat folgende Form:
 \begin{equation}
           \frac{{\rm d}^2 x(t)^\mu}{{\rm d}t^2} = - 
           \Gamma^\mu_{\alpha \beta} \frac{{\rm d}x^\alpha}{{\rm d}t} \frac{{\rm d}x^\beta}{{\rm d}t} \, ,
@@ -641,7 +644,32 @@ Parallelverschiebung in Richtung der Geod\"aten ihn wieder zu einem Tangentenvek
 Geod\"ate macht. Mit anderen Worten: Die kovariante Ableitung der Geschwindigkeit in Richtung der Geod\"aten
 verschwindet. Man vergleiche dies mit Gl.\ \ref{eq_ART_Christoffel}.
 
-
+Abschlie\ss end wollen wir die Einstein'schen Feldgleichungen
+noch etwas umformen, was die L\"osung insbesondere f\"ur
+den Fall $T_{\mu \nu}=0$ einfacher macht. Bilden wir auf beiden
+Seiten der Gleichung \ref{eq_EinsteinGl} die Spur (genauer, ziehen
+einen der Indizes mit der Metrik hoch und bilden dann die Spur)
+so erhalten wir
+\begin{equation}
+       R = \frac{8 \pi G}{c^4} T  \, .
+\end{equation}
+Wir k\"onnen daher den Term mit der skalaren Kr\"ummung auf die
+andere Seite der Gleichung bringen:
+\begin{equation}
+   R_{\mu \nu} 
+     ~=~ - \frac{8 \pi G}{c^4} 
+\left( T_{\mu \nu} - \frac{1}{2} g_{\mu \nu} T \right)   \;. 
+\end{equation}
+Man erkennt an dieser Form sofort, dass die L\"osungen
+der Einstein-Gleichungen\index{Einstein'sche Gleichungen!im Vakuum} 
+im Vakuum (also f\"ur $T_{\mu \nu}=0$)
+durch
+\begin{equation}
+\label{eq_RiccigleichNull}
+        R_{\mu \nu}=0
+\end{equation}
+gegeben sind. Der Ricci-Tensor (und damit nat\"urlich auch die
+skalare Kr\"ummung) verschwinden im materiefreien Raum.
 
 \begin{thebibliography}{99}
 \bibitem{Tissot} Abbildung von {\small \verb+https://map-projections.net/img/figs/orthographic-tissot-big.jpg+}. 

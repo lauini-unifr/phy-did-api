@@ -3,19 +3,20 @@
 \chapter{SRT - Geometrische Konstruktionen}   %  Kap. 2
 \label{chap_Geometrie}
 
-In Kapitel \ref{chap_Grundlagen} wurden die Lorentz-Transformationen
+\info{Thomas Filk}{17.05.2026}
+W\"ahrend In dem Kurztext \glqq\hyperref[chap_Grundlagen]{SRT -- Grundlagen} die Lorentz-Transformationen
 aus den Axiomen der Speziellen Relativit\"atstheorie auf algebraischen Weg 
-hergeleitet. In diesem Kapitel sollen die wesentlichen Eigenschaften dieser
+hergeleitet wurden, werden in dem vorliegenden Text die wesentlichen Eigenschaften dieser
 Transformationen sowie insbesondere die Gleichzeitigkeitsfl\"achen und die
 Hyperboloide zu gleichen Zeitdauern bzw.\ gleichen r\"aumlichen Abst\"anden
-nochmals geometrisch hergeleitet werden. Die Einstein-Minkowski'sche Interpretation
+nochmals geometrisch hergeleitet. Die Einstein-Minkowski'sche Interpretation
 der Speziellen Relativit\"atstheorie versteht die Lorentz-Invarianz der Theorie
 als eine geometrische Eigenschaft der Raumzeit, aus der dann die Effekte
 der Speziellen Relativit\"atstheorie abgeleitet werden k\"onnen. 
 
 Die zugrundeliegenden Axiome bzw.\ Postulate der Speziellen Relativit\"tstheorie
-sind:
-begin{enumerate}
+sind:\index{Axiome der SRT}
+\begin{enumerate}
 \item
 Der Raum ist homogen und isotrop.
 \item
@@ -32,7 +33,10 @@ der Raumzeit herzuleiten.
 Wir beginnen mit der geometrischen Konstruktion der Ereignismengen, die nach den
 Axiomen der speziellen Relativit\"atstheorie von einem gegebenen Inertialsystem als gleichzeitig 
 eingestuft werden. In einem vierdimensionalen Minkowski-Raum handelt es sich dabei um dreidimensionale
-affine Unterr\"aume. In einer zweidimensionalen Darstellung handelt es sich um Geraden.
+affine Unterr\"aume.\footnote{Ein affiner Raum ist im Wesentlichen ein Vektorraum, bei dem aber kein
+Ursprung ausgezeichnet ist. Affine R\"aume erh\"alt man beispielsweise als Unterr\"aume von Vektorr\"aumen, 
+die aber nicht durch den Ursprung verlaufen.} 
+In einer zweidimensionalen Darstellung handelt es sich um Geraden.
 
 \begin{figure}[ht]
 \setlength{\unitlength}{1.4pt}
@@ -47,7 +51,7 @@ affine Unterr\"aume. In einer zweidimensionalen Darstellung handelt es sich um G
 \put(60,80){\makebox(0,0){$B$}}
 \put(30,80){\makebox(0,0){$A$}}
 \put(103,80){\makebox(0,0){$C$}}
-\put(71,31){\makebox(0,0){$O$}}
+\put(67,28){\makebox(0,0){$O$}}
 \put(149,29){\makebox(0,0){$x$}}
 \put(50,110){\makebox(0,0){$x^0=ct$}}
 \put(68,100){\makebox(0,0){1}}
@@ -65,7 +69,7 @@ affine Unterr\"aume. In einer zweidimensionalen Darstellung handelt es sich um G
 \put(46,61){\makebox(0,0){$A'$}}
 \put(71,69){\makebox(0,0){$B'$}}
 \put(101,78){\makebox(0,0){$C'$}}
-\put(71,31){\makebox(0,0){$O$}}
+\put(66,29){\makebox(0,0){$O$}}
 \put(15,45){\line(3,1){130}}
 \put(6,15){\vector(3,1){144}}
 \put(149,58){\makebox(0,0){$x'$}}
@@ -76,8 +80,9 @@ affine Unterr\"aume. In einer zweidimensionalen Darstellung handelt es sich um G
 \put(95,5){\line(-1,1){86}}
 \end{picture}
 \caption{\label{fig_gleichzeitig}%
-Die gleichzeitigen Ereignisse f\"ur einen ruhenden
-(links, Weltlinie 1) und einen relativ dazu bewegten 
+Die gleichzeitigen Ereignisse f\"ur einen Beobachter, der als ruhend
+definiert wird
+(links, Weltlinie 1), und einen relativ dazu bewegten 
 Beobachter (rechts, Weltlinie 2) ergeben
 sich aus der Forderung, dass f\"ur beide der Lichtkegel
 zentriert ist, d.h.\ die Distanz $AB$ ($A'B'$) 
@@ -115,6 +120,82 @@ Offensichtlich sind die Ereignisse $A',B',C'$
 f\"ur Beobachter 1 nicht gleichzeitig, umgekehrt
 die Ereignisse $A,B,C$ nicht f\"ur Beobachter 2.
 
+In Abbildung \ref{fig_diamant} ist in einer
+2+1-dimensionalen Perspektive die Konstruktion der Gleichzeitigkeitsfl\"ache
+f\"ur zwei verschiedene Beobachter dargestellt. Die Weltlinien durch die
+jeweiligen Punkte $A$ und $B$ liegen im Zentrum eines Diamanten, der
+aus allen Ereignissen innerhalb und auf dem Zukunftslichtkegel von $A$ und
+allen Ereignissen innerhalb und auf dem Vergangenheitslichtkegel von $B$
+besteht. Die beiden Lichtkegel schneiden sich entlang einer geschlossenen Kurve,
+die f\"ur einen Beobachter auf der inertialen Weltlinien zwischen $A$ und $B$ als 
+Kreis erscheint. Alle Ereignisse auf diesem Kreis sind gleichzeitig und haben 
+von dem Ereignis $O$, das ebenfalls zu diesen Punkten gleichzeitig ist, denselben
+r\"aumlichen Abstand. In 3+1-Dimensionen schneiden sich die Lichtkegel auf
+einer Kugeloberfl\"ache. Der Punkt $O$ befindet sich jeweils in der Mitte auf
+der Weltlinie zwischen $A$ und $B$, d.h., die Eigenzeit zwischen $A$ und $O$
+bzw.\ $O$ und $B$ ist dieselbe, wie der r\"aumliche Abstand zwischen $O$ und
+$C$ bzw.\ $D$ (sofern die Einheiten so gew\"ahlt sind, dass die Lichtgeschwindigkeit
+$c$ den Wert 1 annimmt). 
+
+\begin{figure}[ht]
+\setlength{\unitlength}{1.20pt}
+\begin{picture}(170,150)(0,10)
+\put(80,0){\vector(0,1){160}}
+\put(80,75){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(80,5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(80,145){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(10,75){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(150,75){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(73,3){\makebox(0,0){$A$}}
+\put(86,147){\makebox(0,0){$B$}}
+\put(10,82){\makebox(0,0){$C$}}
+\put(150,82){\makebox(0,0){$D$}}
+\put(85,80){\makebox(0,0){$O$}}
+\put(10,75){\line(1,0){140}}
+\qbezier(10,75)(15,85)(80,85)
+\qbezier(80,85)(145,85)(150,75)
+\qbezier(10,75)(15,65)(80,65)
+\qbezier(80,65)(145,65)(150,75)
+\thicklines
+\put(80,5){\line(1,1){80}}
+\put(80,5){\line(-1,1){80}}
+\put(80,145){\line(1,-1){80}}
+\put(80,145){\line(-1,-1){80}}
+\end{picture}
+%
+\begin{picture}(190,150)(0,10)
+\put(68.4,0){\vector(1,3){55}}
+\put(95,80){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(70,5){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(120,155){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(20,55){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(170,105){\makebox(0,0){{\footnotesize $\bullet$}}}
+\put(73,3){\makebox(0,0){$A$}}
+\put(114,156){\makebox(0,0){$B$}}
+\put(101,78){\makebox(0,0){$O$}}
+\put(20,62){\makebox(0,0){$C$}}
+\put(170,112){\makebox(0,0){$D$}}
+\put(20,55){\line(3,1){150}}
+\qbezier(20,55)(30,65)(95,90)
+\qbezier(95,90)(140,105)(170,105)
+\qbezier(20,55)(50,55)(95,70)
+\qbezier(95,70)(160,95)(170,105)
+\thicklines
+\put(70,5){\line(1,1){110}}
+\put(70,5){\line(-1,1){60}}
+\put(120,155){\line(1,-1){60}}
+\put(120,155){\line(-1,-1){110}}
+\end{picture}
+\caption{\label{fig_diamant}%
+Ein Diamant zu den Ereignissen $A$ und $B$ auf der Weltlinie eines Beobachters.
+Der Zukunftslichtkegel zu $A$ und der Vergangenheitslichtkegel zu $B$
+schneiden sich entlang einer geschlossenen Linie, die f\"ur den jeweiligen Beobachter 
+auf der inertialen (geraden) Weltlinie zwischen $A$ und $B$ als
+Kreis erscheint: Alle Punkte auf diesem Kreis sind gleichzeitige Ereignisse und sie
+haben von der Weltlinie alle denselben r\"aumlichen Abstand.
+}
+\end{figure}
+
 \section{Die Einstein-Synchronisation und Lichtuhren}
 
 Auf dem genannten Verfahren beruht auch die
@@ -124,7 +205,7 @@ dieselbe Ausbreitungsgeschwindigkeit hat, k\"onnen zwei
 entferne Beobachter in konstantem Abstand 
 (beide bewegen sich auf parallelen Weltlinien)
 ihre Uhren dadurch synchronisieren, dass sie
-ein Lichtsignal austauschen (vgl.\ Abb.\ \ref{fig_ES}): 
+ein Lichtsignal austauschen (vgl.\ Abb.\ \ref{fig_SRT_Lichtuhr} (links)): 
 Beobachter 1 sendet
 bei Ereignis A das Signal zu Beobachter 2, der es 
 sofort reflektiert (Ereignis B) und zu Beobachter 1 
@@ -136,7 +217,7 @@ Uhr von Beobachter 1 also dieselbe
 Zeit angezeigt haben (Ereignis D), wie die
 Uhr von Beobachter 2 bei Ereignis B.  
 
-\begin{SCfigure}[50][htb]
+\begin{figure}[h!]
 \setlength{\unitlength}{1.7pt}
 \begin{picture}(125,95)(-10,0)
 \put(40,0){\vector(1,3){31}}
@@ -165,12 +246,49 @@ Uhr von Beobachter 2 bei Ereignis B.
 %\put(30,20){\line(1,1){130}}
 %\put(140,20){\line(-1,1){130}}
 \end{picture}
-\caption{\label{fig_ES}%
-Die Einstein-Synchroni\-sation. Durch 
-Austausch von Lichtsignalen k\"onnen die
-Beobachter 2 und 3 ihre Uhren mit
-der von Beobachter 1 synchronisieren.}
-\end{SCfigure}
+\hfill
+\setlength{\unitlength}{1.0pt}
+\begin{picture}(180,180)(0,0)
+\put(0,4){\line(1,0){150}}
+\put(0,24){\line(1,0){150}}
+\put(0,44){\line(1,0){150}}
+\put(0,64){\line(1,0){150}}
+\put(0,84){\line(1,0){150}}
+\put(0,104){\line(1,0){150}}
+\put(0,124){\line(1,0){150}}
+\put(7,0){\line(3,2){160}}
+\put(7,16.7){\line(3,2){160}}
+\put(7,33.4){\line(3,2){160}}
+\put(7,50.1){\line(3,2){160}}
+\put(7,66.8){\line(3,2){160}}
+%\put(0,48){\line(2,1){150}}
+\thicklines
+\put(10,0){\line(0,1){170}}
+\put(30,0){\line(0,1){170}}
+\put(10,4){\line(1,1){20}}
+\put(30,24){\line(-1,1){20}}
+\put(10,44){\line(1,1){20}}
+\put(30,64){\line(-1,1){20}}
+\put(10,84){\line(1,1){20}}
+\put(30,104){\line(-1,1){20}}
+\put(10,124){\line(1,1){20}}
+%
+\put(35,0){\line(2,3){120}}
+\put(52.5,0){\line(2,3){120}}
+\put(38,4){\line(1,1){50}}
+\put(88,54){\line(-1,1){10}}
+\put(78,64){\line(1,1){50}}
+\put(128,114){\line(-1,1){10}}
+\put(118,124){\line(1,1){50}}
+\end{picture}
+\caption{\label{fig_SRT_Lichtuhr}%
+(links) Die Einstein-Synchroni\-sation. Durch Austausch von Lichtsignalen k\"onnen die
+Beobachter 2 und 3 ihre Uhren mit der von Beobachter 1 synchronisieren.
+(rechts) Prinzip der Lichtuhr. Die fetten zeitartigen Linien sind die Weltlinien von jeweils zwei Spiegeln,
+zwischen denen das Licht hin und her reflektiert wird. Dargestellt sind auch die Gleichzeitigkeitslinien
+in den beiden Systemen, in denen die Uhren jeweils in Ruhe sind. Die relativen Skalen entsprechen
+einer Geschwindigkeit von $v=\frac{2}{3}c$.} 
+\end{figure}
 
 Das gleiche Verfahren erlaubt auch
 eine Synchronisation der Uhren in
@@ -181,6 +299,23 @@ gleichzeitig ist. Man beachte, dass
 die gleichzeitigen Ereignisse $B'$, 
 $D$ und $B$ auf einer Geraden liegen.
 
+Auf dem Prinzip der Einstein-Synchronisation beruht auch die Idee
+von Lichtuhren, die eher ein theoretisches Konstrukt als
+praktikable Zeitmessger\"ate darstellen. Gegeben sind zwei Spiegel,
+die sich planparallel gegen\"uber stehen. Zwischen diesen Spiegeln
+wird ein kurzes Lichtsignal hin- und her reflektiert. Man z\"ahlt zwischen den Zeiten
+zu zwei Ereignissen die Anzahl der Reflexionen zwischen den beiden Spiegeln 
+(siehe Abb.\ \ref{fig_SRT_Lichtuhr} (rechts)). 
+
+Man erkennt in der Abbildung, dass in einem Inertialsystem, in dem eine Lichtuhr ruht,
+eine sich relativ dazu bewegte Lichtuhr scheinbar langsamer geht, da die Strecke,
+die das Licht f\"ur eine bestimmte Anzahl an Reflexionen zur\"ucklegen muss, f\"ur
+die ruhende Lichtuhr am k\"urzesten ist. Andererseits gilt das Gleiche aber auch
+umgekehrt, wenn man die Gleichzeitigkeitslinien der bewegten Uhr ber\"ucksichtigt.
+Au\ss erdem erscheint in dem ruhenden System der Abstand der Spiegel der
+bewegten Uhr k\"urzer, als der Abstand der ruhenden Uhr; dies entspricht der
+Lorentz-Kontraktion. Auch dies gilt umgekehrt in Bezug auf die Gleichzeitigkeitslinien
+der bewegten Uhr.
 
 \section{Die relativen Skalen in verschiedenen Inertialsystemen}
 
@@ -393,56 +528,14 @@ und da $x_{\rm B} =v t_{\rm B}$ folgt
 oder 
 \[       t_{\rm D} ~=~ \frac{1}{\sqrt{1-v^2}} t_{\rm B}  \;. \]
 Dieses Verfahren setzt voraus, dass Ereignisse mit einem konstanten
-Abstand vom Ursprung in gewisser Hinsicht \glqq stetig\grqq\ sind, und da\ss\
+Abstand vom Ursprung in gewisser Hinsicht \glqq stetig\grqq\ sind, und dass
 wir infinitesimal annehmen k\"onnen, dass solche Ereignisse f\"ur
 einen Beobachter, der sich gleichf\"ormig vom Ursprung zu einem dieser
 Ereignisse bewegt, lokal gleichzeitig sind.
 
 
-
-\begin{thebibliography}{99}
-\addcontentsline{toc}{chapter}{Literaturangaben}
-\bibitem{Aichelburg} Peter C.\ Aichelburg (Hrsg.); {\it Zeit im 
-       Wandel der Zeit}; Verlag Vieweg, Braunschweig, Wiesbaden, 1988.
-\bibitem{Born} Max Born; {\it Optik}; Springer-Verlag, Berlin, Heidelberg,
-        1972.
-\bibitem{Britannica} Encyclopaedia Britannica; 15.th edition, 1988.
-\bibitem{Descartes} Ren\'e Descartes; {\it Die Prinzipien der
-        Philosophie}; Felix Meiner Verlag, Hamburg, 1992; \"ubersetzt
-        von Artur Buchenau.
-\bibitem{Einstein1} Albert Einstein; {\it Zur Elektrodynamik bewegter 
-        K\"orper}; Annalen der Physik, Leipzig, 17 (1905) 891. 
-\bibitem{Helmholtz2} Hermann von Helmholtz; {\em \"Uber Wirbelbewegungen,
-        \"Uber Fl\"ussigkeitsbewegungen}, 1858; in Ostwalds Klassiker der 
-       exakten Wissenschaften Bd.\ 1; Verlag Harri Deutsch, Frankfurt, 
-       1996.                   
-\bibitem{Laue} Max von Laue; {\it Geschichte der Physik}; 
-         Universit\"ats-Verlag Bonn, 1947.
-\bibitem{Lorentz} Hendrik Antoon Lorentz; {\it Electromagnetic phenomena 
-         in a system moving with any velocity smaller than that of light}; 
-         Proc.\ Acad.\ Sci., Amsterdam, 6 [1904], S.\ 809.
-\bibitem{Mittelstaedt} Peter Mittelstaedt; {\it Der Zeitbegriff in der
-        Physik}; BI-Wissenschaftsverlag, 1989.        
-\bibitem{Mittelstaedt2} Peter Mittelstaedt; {\it Philosophische Probleme
-        der modernen Physik}; BI-Wissenschaftsverlag, 1989.        
-\bibitem{Newton2} Isaac Newton; {\it \"Uber die Gravitation...};
-       Klostermann Texte Philosophie; Vittorio Klostermann, Frankfurt,
-      1988; \"ubersetzt von Gernot B\"ohme.
-\bibitem{Newton3} Isaac Newton; {\it Optik oder Abhandlung \"uber
-      Spiegelungen, Brechungen, Beugungen und Farben des Lichts};
-      I., II.\ und III.\ Buch (1704); aus dem Englischen \"ubersetzt
-      von W.\ Abendroth; Ostwalds Klassiker der exakten Wissenschaften,
-      Verlag Harri Deutsch 1998.   
-\bibitem{Pauli} Wolfgang Pauli; {\it Theory of Relativity}; Dover
-      Publications, New York, 1981.      
-\bibitem{Poincare} Jules Henri Poincar\'e; {\it Sur la dynamique de 
-     l'\'electron}, C.R.\ Acad.\ Sci., Paris, 140 (1905) S.~1504; und 
-      Rendiconti del Circolo Matematico di Palermo, Bd.~21 (1906) S.~129.
-\bibitem{Sexl} Roman U.\ Sexl, Helmuth K.\ Urbantke; {\it Relativit\"at,
-      Gruppen, Teilchen}; Springer-Verlag, Wien, New York, 1992.
-\bibitem{Simonyi}
-      K\'aroly Simonyi; {\it Kulturgeschichte der Physik}; Verlag
-       Harri Deutsch, Thun, Frankfurt am Main, 1990.
-\end{thebibliography}
+%\begin{thebibliography}{99}
+%\addcontentsline{toc}{chapter}{Literaturangaben}
+%\end{thebibliography}
 
 \end{document}

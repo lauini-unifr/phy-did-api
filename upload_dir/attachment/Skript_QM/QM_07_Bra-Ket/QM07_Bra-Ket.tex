@@ -1,10 +1,10 @@
-%\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
+\documentclass[german,10pt]{book}      \input{../preambel}         \begin{document}  \setcounter{chapter}{6}
 
 \chapter{Die Bra-Ket-Notation}
 % Kap x
 \label{chap_BraKet}
 
-\info{Thomas Filk}{27.03.2024}%
+\info{Thomas Filk}{15.06.2024}%
 Die Bra-Ket-Notation von Paul Adrien Maurice Dirac (1902--1984) \cite{Dirac} hat\index{Bra-Ket-Notation|(} 
 sich mittlerweile in der Quantentheorie\index{Dirac, Paul}
 als au\ss erordentlich hilfreich etabliert. Ihre N\"utzlichkeit erweist sich besonders dann,
@@ -15,9 +15,12 @@ Quanteninformatik, sind solche Basiswechsel wichtig.
 Physikalisch repr\"asentiert ein Ket-Vektor $| \psi \rangle$ einen Zustand
 (wobei der Buchstabe $\psi$ zun\"achst rein symbolisch den Zustand beschreibt oder charakterisiert),
 mathematisch repr\"ansentiert $|\psi \rangle$ einen normierten
-Vektor in einem Hilbert-Raum (d.h.\ einem komplexen Vektorraum mit einem Skalarprodukt). 
+Vektor in einem Hilbert-Raum (d.h.\ einem komplexen Vektorraum mit einem Skalarprodukt).\footnote{Damit
+ein Vektorraum mit Skalarprodukt ein Hilbert-Raum ist, muss dieser Vektorraum noch vollst\"andig
+sein, d.h.\ Cauchy-konvergente Folgen m\"ussen ihren Grenzwert in diesem Hilbert-Raum haben. Auf
+solche Feinheiten soll hier aber nicht eingegangen werden.} 
 Der zugeh\"orige Bra-Vektor $\langle \psi |$ ist ein Element des Dualraums, dem
-wegen des Skalarprodukts einem Element des Vektorraums zugeordnet werden kann:
+wegen des Skalarprodukts ein Element des Vektorraums zugeordnet werden kann:
 Sei $|\psi \rangle$ ein Vektor im Hilbert-Raum und $g(\cdot, \cdot)$ das Skalarprodukt auf
 diesem Hilbert-Raum (wobei $\cdot$ jeweils durch einen Vektor zu ersetzen ist), dann ist
 $\langle \psi| = g(| \psi \rangle, \cdot)$ der zugeh\"orige Vektor im Dualraum.
@@ -26,11 +29,13 @@ Diese rein mathematischen Beziehungen sind vielen Lehrkr\"aften nicht sehr vertr
 einen, weil sie in der Schule keine Verwendung finden und daher nie ben\"otigt werden,
 zum anderen aber auch, weil sie in Physikvorlesungen, besonders in fr\"uheren Zeiten,
 nicht sehr pr\"azise verwendet oder eingef\"uhrt wurden. Konzepte wie der Dualraum eines
-Vektorraums sind ohnehin vielen Studierenden der Physik eher \glqq suspekt\grqq. 
+Vektorraums sind ohnehin vielen Studierenden der Physik eher fremd. Da in der Physik sehr
+selten zwischen einem Vektorraum und seinem Dualraum unterschieden werden muss, 
+wird dieses Konzept eher als mathematische Spitzfindigkeit eingestuft. 
 
-Die Bra-Ket-Notation kann aber auch symbolisch f\"ur verschiedene physikalische Operationen
-verstanden werden -- unabh\"angig von ihrer mathematischen Bedeutung in der linearen
-Algebra. Dabei sind meist nur sehr wenige und einfache Regeln zu beachten, denen man au\ss erdem
+Die Bra-Ket-Notation kann aber auch -- unabh\"angig von ihrer mathematischen Bedeutung in der 
+linearen Algebra -- symbolisch f\"ur verschiedene physikalische Operationen verstanden werden. 
+Dabei sind meist nur sehr wenige und einfache Regeln zu beachten, denen man au\ss erdem
 eine anschauliche Deutung geben kann. Um diese symbolische Bedeutung soll es in diesem 
 Kurztext gehen. 
 
@@ -43,7 +48,7 @@ Ensemble von Systemen zu unterscheiden (siehe auch den Kurztext
 \glqq \hyperref[chap_Axiom]{Axiomatischer Zugang zur Physik})\grqq. 
 Da im Folgenden viel von Wahrscheinlichkeiten
 die Rede ist, repr\"asentiert $|\psi\rangle$ (sofern nicht explizit anders erw\"ahnt) in diesem Kurztext
-immer ein Einzelsystem, das in dem Zustand $\psi$ pr\"apariert wurde.
+immer ein Einzelsystem, das so pr\"apariert wurde, dass wir es durch den Zustand $\psi$ beschreiben.
 
 \"Ahnliches gilt f\"ur den Begriff der Observablen.\index{Observable} 
 Hier unterscheide ich zwischen der physikalischen
@@ -56,8 +61,9 @@ zugeh\"origen normierten Vektor.
 \section{Ket- und Bra- als \glqq Pr\"aparation\grqq\ und \glqq Messung\grqq}
 
 Rein symbolisch kann ein normierter Ket-Vektor $|\psi\rangle$ folgenderma\ss en interpretiert werden:
-Ein physikalisches System wird in dem Zustand $\psi$ pr\"apariert und wird nun durch diesen
-Zustand beschrieben. Der Ket-Vektor $|\psi\rangle$ repr\"asentiert somit die Pr\"aparation eines Systems in einem
+Ein physikalisches System wird in dem Zustand $\psi$ pr\"apariert und wird nun durch ein mathematisches
+Objekt, das diesem Zustand entspricht, beschrieben. 
+Der Ket-Vektor $|\psi\rangle$ repr\"asentiert somit die Pr\"aparation eines Systems in einem
 bestimmten Zustand $\psi$.\index{Ket-Vektor} 
 
 Entsprechend repr\"asentiert ein normierter Bra-Vektor $\langle \phi|$ die\index{Bra-Vektor}
@@ -75,7 +81,7 @@ dann entspricht dem Bra-Vektor der Zeilenvektor mit den jeweils komplex konjugie
 \begin{equation}
 \label{eq_BK_Komponenten}
           |\psi\rangle \simeq \left( \begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array} \right)
-          \hspace{1cm} \langle \psi | \simeq (x_1^* , x_2^*, \cdots , x_n^* ) \, .
+          \hspace{1cm} \langle \psi | \simeq (x_1^*~ ,~ x_2^*~ , ~\cdots ,  x_n^* ) \, .
 \end{equation}
 Aus der linearen Algebra ist vermutlich die Notation $\pmb{x}$ f\"ur den Spaltenvektor und
 $\pmb{\bar{x}}^T$ f\"ur den komplex konjugierten Zeilenvektor vertrauter. Mathematisch haben 
@@ -83,8 +89,8 @@ Ket- und Bra-Vektoren die gleiche Bedeutung.
 
 Die Hintereinanderausf\"uhrung dieser beiden Operationen -- Pr\"aparation und Messung -- 
 liefert eine komplexe Zahl, die man als Wahrscheinlichkeitsamplitude zu
-diesem Prozess -- System wurde im Zustand $\psi$ pr\"apariert und anschlie\ss end im
-Zustand $\phi$ gemessen -- interpretiert. Das Absolutquadrat dieser Wahrscheinlichkeitsamplitude
+diesem Prozess -- \glqq System wurde im Zustand $\psi$ pr\"apariert und anschlie\ss end im
+Zustand $\phi$ gemessen\grqq\ -- interpretiert. Das Absolutquadrat dieser Wahrscheinlichkeitsamplitude
 ist die Wahrscheinlichkeit $w(\psi \rightarrow \phi)$, dass dieser Prozess auftritt. Dies ist
 die Born'sche Regel:\index{Born'sche Regel}
 \begin{equation}
@@ -937,5 +943,5 @@ $2\times 2$ unit\"are
 Matrix durch einen Strahlteiler realisieren.
 
 
-%\end{document}
+\end{document}
 
