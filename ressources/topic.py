@@ -2,12 +2,14 @@ import uuid
 from flask import request
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
+from flask_jwt_extended import jwt_required
 
 from sqlalchemy.exc import SQLAlchemyError, IntegrityError
 
 from db import db
 from models import TopicModel
 from schemas import TopicSchema, TopicUpdateSchema
+from topic_folders import is_known_topic_name, remove_item_attachment
 
 blp = Blueprint("topics", __name__, description="Operations on topics")
 
@@ -18,35 +20,51 @@ class Topic(MethodView):
         topic = TopicModel.query.get_or_404(topic_id)
         return topic
 
+    @jwt_required()
     def delete(self, topic_id):
         topic = TopicModel.query.get_or_404(topic_id)
+        for item in topic.items:
+            remove_item_attachment(item)
         db.session.delete(topic)
         db.session.commit()
         return {"message": "Topic deleted"}
 
+    @jwt_required()
     @blp.arguments(TopicUpdateSchema)
     @blp.response(200, TopicSchema)
     def put(self, topic_data, topic_id):
-        topic = TopicModel.query.get(topic_id)
-        if topic:
-            topic.name = topic_data["name"]
-        else:
-            topic = TopicModel(id=topic_id, **topic_data)
-        
-        db.session.add(topic)
-        db.session.commit()
+        topic = TopicModel.query.get_or_404(topic_id)
+        new_name = topic_data.get("name", topic.name)
+
+        if new_name != topic.name:
+            has_attachments = any(item.file_name for item in topic.items)
+            if has_attachments and not is_known_topic_name(new_name):
+                abort(400, message="Für diesen Themennamen gibt es kein Ordner-Mapping. Bestehende Kurztexte mit Anhang würden beim PDF-Export fehlschlagen.")
+            topic.name = new_name
+        topic.sort_order = topic_data.get("sort_order", topic.sort_order)
+
+        try:
+            db.session.add(topic)
+            db.session.commit()
+        except IntegrityError:
+            abort(400, message="A topic with that name already exists.")
+
         return topic
-        
+
 
 @blp.route("/topic")
 class TopicList(MethodView):
     @blp.response(200, TopicSchema(many=True))
     def get(self):
-        return TopicModel.query.all()
-    
+        return TopicModel.query.order_by(TopicModel.sort_order, TopicModel.id).all()
+
+    @jwt_required()
     @blp.arguments(TopicSchema)
     @blp.response(201, TopicSchema)
     def post(self, topic_data):
+        if "sort_order" not in topic_data:
+            current = db.session.query(db.func.max(TopicModel.sort_order)).scalar()
+            topic_data["sort_order"] = (current or 0) + 1
         topic = TopicModel(**topic_data)
         try:
             db.session.add(topic)
