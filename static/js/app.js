@@ -330,37 +330,50 @@ function buildWordpressSnippet(topics) {
 const WORDPRESS_LOADER_SCRIPT = `<script>
 (function () {
   var API_BASE = __API_BASE__;
-  var select = document.getElementById("text_select");
-  if (!select || !window.fetch) return;
-  fetch(API_BASE + "/topic")
-    .then(function (response) {
-      if (!response.ok) throw new Error("HTTP " + response.status);
-      return response.json();
-    })
-    .then(function (topics) {
-      var fragment = document.createDocumentFragment();
-      topics.forEach(function (topic) {
-        var items = (topic.items || []).filter(function (item) { return item.file_name; });
-        if (!items.length) return;
-        var group = document.createElement("optgroup");
-        group.label = topic.name;
-        items.forEach(function (item) {
-          var option = document.createElement("option");
-          option.value = item.id;
-          option.textContent = item.display_title || item.name;
-          group.appendChild(option);
+
+  function loadKurztexte() {
+    var select = document.getElementById("text_select");
+    if (!select || !window.fetch) {
+      console.warn("Kurztexte: Auswahlliste #text_select nicht gefunden.");
+      return;
+    }
+    fetch(API_BASE + "/topic", { cache: "no-store" })
+      .then(function (response) {
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        return response.json();
+      })
+      .then(function (topics) {
+        var fragment = document.createDocumentFragment();
+        topics.forEach(function (topic) {
+          var items = (topic.items || []).filter(function (item) { return item.file_name; });
+          if (!items.length) return;
+          var group = document.createElement("optgroup");
+          group.label = topic.name;
+          items.forEach(function (item) {
+            var option = document.createElement("option");
+            option.value = item.id;
+            option.textContent = item.display_title || item.name;
+            group.appendChild(option);
+          });
+          fragment.appendChild(group);
         });
-        fragment.appendChild(group);
+        if (!fragment.childNodes.length) return;
+        select.innerHTML = "";
+        select.appendChild(fragment);
+        if (window.jQuery) window.jQuery(select).trigger("chosen:updated");
+        select.dispatchEvent(new CustomEvent("kurztexte:loaded", { bubbles: true }));
+      })
+      .catch(function (error) {
+        console.warn("Kurztexte konnten nicht live geladen werden, die eingebaute Liste bleibt aktiv.", error);
       });
-      if (!fragment.childNodes.length) return;
-      select.innerHTML = "";
-      select.appendChild(fragment);
-      if (window.jQuery) window.jQuery(select).trigger("chosen:updated");
-      select.dispatchEvent(new CustomEvent("kurztexte:loaded", { bubbles: true }));
-    })
-    .catch(function (error) {
-      console.warn("Kurztexte konnten nicht live geladen werden, die eingebaute Liste bleibt aktiv.", error);
-    });
+  }
+
+  // The script may be placed before the <select> (e.g. as widget/page JS), so wait for the DOM.
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", loadKurztexte);
+  } else {
+    loadKurztexte();
+  }
 })();
 </script>`;
 
