@@ -1,0 +1,427 @@
+\documentclass[german,10pt]{book}      \input{preambel}         \begin{document}  \setcounter{chapter}{0}
+
+\chapter{Superposition}
+% Kap x
+\label{chap_Superposition}
+
+\info{Thomas Filk}{5.10.2025}%
+
+Die Superposition ist ein zentraler Begriff der Quantentheorie. Er bezeichnet
+die Eigenschaft, dass zu je zwei realisierbaren Zust\"anden in der Quantentheorie
+auch Linearkombinationen dieser beiden Zust\"ande wiederum realisierbaren
+Zust\"anden entsprechen. Da Zust\"ande in der Quantentheorie oft durch einen
+normierten Vektor dargestellt werden -- wobei auch eine (quadrat-)normierte Wellenfunktion als
+Vektor (in einem Vektorraum von Funktionen) interpretiert werden kann -- vergleicht man 
+die Superposition von Zust\"anden insbesondere in der Schule gerne mit der vektoriellen 
+Summe von Vektoren, wie sie beispielsweise
+aus der klassischen Mechanik f\"ur Geschwindigkeiten oder Kr\"afte bekannt ist. 
+Dies ist nicht immer unproblematisch, da es sich streng genommen bei
+der mathematischen Darstellung quantenmechanischer Zust\"ande nicht um
+Vektoren sondern um Strahlen bzw.\ 1-dimensionale Unterr\"aume eines Vektorraums
+handelt. F\"ur diese hat die Superposition eine etwas andere Bedeutung als f\"ur
+Vektoren.
+
+\section{Zust\"ande werden durch Strahlen repr\"asentiert}
+
+Die Schr\"odinger-Gleichung ist eine lineare Differenzialgleichung f\"ur
+Wellenfunktionen:
+\begin{equation}
+     {\rm i} \hbar \frac{\partial}{\partial t} \psi(x,t) = \left(- \frac{\hbar^2}{2m} \Delta + V(x) \right) \psi(x,t)  \, .
+\end{equation}
+In etwas abstrakterer Notation handelt es sich um eine Differentialgleichung f\"ur
+Vektoren in einem Hilbert-Raum (also -- etwas vereinfacht -- einem Vektorraum mit einem Skalarprodukt),
+\begin{equation}
+     {\rm i} \hbar \frac{\partial}{\partial t} | \psi(t) \rangle =  H | \psi(t) \rangle  \, . 
+\end{equation}
+$\psi(x,t) = \langle x | \psi(t) \rangle$ ist die Wellenfunktion
+im Ortsraum zu einem zeitabh\"angigen Zustandsvektor $|\psi(t)\rangle$ und $H$ ist der Hamilton-Operator
+$H=P^2/2m + V(Q)$, wobei in der Ortsraumdarstellung der Operator $Q$ einfach der Multiplikation
+mit $x$ und der Operator $P$ dem Operator $-{\rm i}\hbar\nabla$ entspricht.
+
+Die Linearit\"at der Schr\"odinger-Gleichung bedeutet, dass f\"ur zwei L\"osungen
+$\psi_1(x,t)$ und $\psi_2(x,t)$ der Gleichung auch eine beliebige Linearkombination
+$\psi(x,t)=\alpha \psi_1(x,t) + \beta \psi_2(x,t)$ ($\alpha,\beta \in \mathbb{C}$) eine
+L\"osung der Gleichung ist. Zus\"atzlich zu der Eigenschaft, eine L\"osung der 
+Schr\"odinger-Gleichung zu sein, fordern wir in der Physik noch
+eine Normierungsbedingung, meist in der Form
+\begin{equation}
+              \int_{\mathbb{R}^n} |\psi(x,t) |^2 {\rm d}^n x = 1  \, .
+\end{equation}
+Der Grund, dass \"uberhaupt eine solche Normierungsbedingung zus\"atzlich gefordert
+werden kann, liegt darin, dass zwei Wellenfunktionen $\psi_1(x)$ und $\psi_2(x)$, die sich 
+nur multiplikativ um eine komplexe Zahl unterscheiden -- f\"ur die also 
+$\psi_2(x)=\alpha \psi_1(x)~ (\alpha \in \mathbb{C}/\{0\})$ gilt --, 
+denselben physikalischen Zustand definieren. Die mathematische
+Repr\"asentation eines physikalischen Zustands entsprich also dem Strahl (bzw.\
+1-dimensionalen Vektorraum) der durch einen Vektor $|\psi\rangle$ bzw.\ eine
+Wellenfunktion $\psi(x)$ gegeben ist und aus allen Vielfachen $\alpha |\psi\rangle$ bzw.\
+$\alpha \psi(x)$ besteht. (Die Zeitabh\"angigkeit spielt f\"ur das Folgende keine Rolle, daher
+ber\"ucksichtigen wir sie nicht weiter.)
+
+Ein Quantenzustand l\"asst sich mathematisch auch als
+Projektionsoperator auf einen 1-dimensionalen Vektorraum (d.h.\ die Spur des Projektionsoperators
+ist 1) darstellen. Dabei handelt es sich um den Vektorraum, der durch den Vektor $|\psi\rangle$ bzw.\
+die Wellenfunktion $\psi(x)$ aufgespannt wird. Wurde $|\psi\rangle$ normiert -- gilt also
+$\langle \psi|\psi \rangle =1$ --, ist der Projektionsoperator auf diesen Strahl 
+\begin{equation}
+                P_\psi = | \psi \rangle \langle \psi |   \, .
+\end{equation}
+(Wird der Zustand durch eine normierte Wellenfunktion $\psi(x)$ dargestellt, ist der Projektionsoperator
+der Integrationskern $P(x,y)= \psi(x) \psi(y)^*$, und seine Anwendung auf eine beliebige andere
+Wellenfunktion $\phi(x)$ ist durch $\int P(x,y) \phi(y)\, {\rm d}^n y$ gegeben.)
+
+Der Projektionsoperator repr\"asentiert direkt den Zustand, d.h., eine freie Phase im Zustandsvektor
+bzw.\ der Wellenfunktion f\"allt heraus. Es besteht also eine \glqq 1\,zu\,1\grqq-Beziehung zwischen der
+Menge aller Quantenzust\"ande, die in einem Hilbert-Raum dargestellt werden k\"onnen, 
+und der Menge der Projektionsoperatoren
+mit der Spur 1. Definiert ist ein solcher Projektionsoperator durch folgende Bedingungen:
+\begin{equation}
+     P^\dagger = P  \hspace{1cm}  P^2= P \hspace{1cm}  {\rm Spur}\,P = 1  \, .
+\end{equation}
+$P^\dagger = P$ bedeutet, dass $P$ selbstadjungiert ist und somit reelle Eigenwerte
+und (zu verschiedenen Eigenwerten) orthogonale Eigenr\"aume besitzt. Geometrisch
+bedeutet diese Bedingung, dass die Projektion eines Vektors auf den durch $P$ beschriebenen
+Strahl orthogonal zu diesem Strahl erfolgt, daher spricht man auch schon mal von einem
+orthogonalen Projektionsoperator. $P^2=P$ ist die definierende Eigenschaft eines Projektionsoperators:
+Wurde eine Projektion durchgef\"uhrt, hat eine weitere Projektion keine Wirkung; der projizierte
+Vektor befindet sich schon in dem Strahl. Spur\,$P=1$ bedeutet, dass es sich um einen
+Projektionsoperator auf einen 1-dimensionalen Vektorraum handelt. Im Allgemeinen gibt die
+Spur die Dimension des Unterraums an, auf den $P$ projiziert.
+
+\section{Superposition von Strahlen}
+
+Projektionsoperatoren bzw.\ die 1-dimensionalen Unterr\"aume eines Hilbert-Raums
+bilden selbst keinen Vektorraum. Und da quantenmechanische Zust\"ande durch
+die 1-dimensionalen Unterr\"aume eines Hilbert-Raums dargestellt werden, gilt
+f\"ur sie ebenfalls, dass sie keinen Vektorraum bilden und dass man sie im Allgemeinen
+nicht addieren kann. Die Summe von zwei Projektionsoperatoren ist zwar wieder ein
+linearer Operator, aber im Allgemeinen kein Projektionsoperator. Spurerhaltende positive
+Linearkombinationen von zwei Projektionsoperatoren, d.h.\ $\alpha P_1 + (1-\alpha)P_2$
+f\"ur $0 < \alpha < 1$, sind Dichtematrizen, die zwar auch physikalische Zust\"ande
+beschreiben, allerdings keine reinen Zust\"ande sondern sogenannte gemischte
+Zust\"ande. Diese gemischten Zust\"anden sollte man auf keinen Fall mit den reinen Zust\"anden
+verwechseln, die man aus der Superposition von zwei Zustandsvektoren erh\"alt (siehe
+auch Abschnitt \ref{Superposition_Gemisch}). 
+
+Das Superpositionsprinzip hat f\"ur quantenmechanische Zust\"ande eine etwas andere
+Bedeutung als f\"ur Vektoren: Zwei linear unabh\"angige 1-dimensionale Vektorr\"aume
+definieren eine sogenannte lineare H\"ulle dieser beiden Vektorr\"aume. Allgemein besteht
+die lineare H\"ulle zu einer Menge von Vektoren aus allen Vektoren, die sich als
+Linearkombination dieser Vektoren schreiben lassen. Sind nun zwei (linear unabh\"angige) 
+1-dimensionale Vektorr\"aume gegeben, kann man s\"amtliche Linearkombinationen aus 
+den Vektoren dieser beiden Vektorr\"aume betrachten und diese bilden offensichtlich einen
+2-dimensionalen Vektorraum. Jeder 1-dimensionale Unterraum dieser 2-dimensionalen
+H\"ulle von zwei Quantenzust\"anden l\"asst sich als Superposition der beiden Quantenzust\"ande
+interpretieren. 
+
+Im Folgenden seien die beiden Vektorr\"aume, die Quantenzust\"ande darstellen sollen und
+von denen wir Linearkombinationen betrachten wollen,
+orthogonal. Das bedeutet, jeder Vektor aus dem einen Vektorraum ist orthogonal zu jedem
+Vektor aus dem anderen Vektorraum. Das ist zwar nicht notwendig und viele der folgenden
+\"Uberlegungen lassen sich auch auf nicht-orthogonale Vektorr\"aume verallgemeinern,
+doch in nahezu allen F\"allen, die eine Schulrelevanz haben, ist diese Situation gegeben.
+Der Grund ist, dass zwei Eigenzust\"ande zu einer quantenmechanischen Observablen
+(repr\"asentiert durch einen selbstadjungierten Operator) immer orthogonal sind, sofern
+die zugeh\"origen Eigenwerte, also die Messwerte der Observablen zu diesen Zust\"anden,
+verschieden sind. Wenn also Superpositionen von \glqq echten Alternativen\grqq\ betrachtet
+werden, werden diese Alternativen immer durch orthogonale Zustandsvektoren dargestellt.  
+
+Wenn zwei orthogonale, normierte Vektoren (als Repr\"asentanten eines Quantenzustands) $|\psi_1\rangle$ 
+und $|\psi_2\rangle$ gegeben sind
+und wir eine normierte Linearkombination dieser beiden Vektoren betrachten, 
+\begin{equation}
+         |\psi \rangle = \alpha |\psi_1 \rangle + \beta |\psi_2 \rangle  \hspace{1cm}
+           | \alpha |^2 + | \beta |^2 = 1 \, ,
+\end{equation}
+dann sind die Wahrscheinlichkeiten, bei einem System, das im Zustand $|\psi\rangle$
+pr\"apariert wurde, bei einer Messung den Zustand $|\psi_1 \rangle$ bzw.\ den Zustand
+$|\psi_2\rangle$ zu finden, durch $|\alpha|^2 = |\langle \psi_1|\psi \rangle|^2$ 
+bzw.\ $|\beta|^2 =  |\langle \psi_2|\psi \rangle|^2$ gegeben. Dies ist die Born'sche Regel. 
+Diese Wahrscheinlichkeiten entsprechen dem Kosinusquadrat des Winkels zwischen den
+beiden Vektoren und damit dem Kosinusquadrat des Winkels zwischen den zugeh\"origen
+Strahlen. Das bedeutet, sie h\"angen nicht von einem Repr\"asentanten (einem Vektor) auf
+diesen Strahlen ab. Somit sind diese Wahrscheinlichkeiten f\"ur die Strahlen wohl definiert. 
+Insbesondere h\"angen diese Wahrscheinlichkeiten nicht von der relativen Phase
+zwischen der Linearkombination von zwei Vektoren ab, d.h., die Wahrscheinlichkeiten
+sind f\"ur die Linearkombination
+\begin{equation}
+          | \psi \rangle =  \alpha |\psi_1\rangle + \beta {\rm e}^{{\rm i}\delta} |\psi_2 \rangle
+\end{equation}
+unabh\"angig von dem Winkel $\delta$, obwohl es sich f\"ur verschiedene Werte von $\delta$
+nicht nur um verschiedene Vektoren $|\psi\rangle$ handelt sondern auch um verschiedene
+Strahlen und damit verschiedene Zust\"ande. 
+
+\section{Die Polarisation von Photonen als Beispiel}
+
+Die Polarisation von Licht bzw.\ von einzelnen Photonen ist ein sch\"ones Beispiel
+f\"ur einen Zustandsraum, der den Strahlen in einem Vektorraum entspricht.
+Insbesondere die linearen Polarisationen, bei denen es keine Phasenverschiebung
+zwischen den beiden Komponenten des elektrischen Feldst\"arkevektors gibt, lassen
+sich als Strahlen in einem 2-dimensionalen reellen Vektorraum darstellen. Wenn
+wir einen normierten Vektor $\vec{A}$ entlang einer Polarisationsrichtung als 
+Repr\"asentanten der Polarisation w\"ahlen, entsprechen $\vec{A}$ und $-\vec{A}$
+derselben Polarisation. 
+
+\begin{figure}[htb]
+\begin{picture}(80,60)(0,0)
+\thicklines
+\put(40,30){\makebox(0,0){$\bullet$}}
+\put(10,30){\line(1,0){60}}
+\end{picture}
+\begin{picture}(80,60)(0,0)
+\thicklines
+\put(40,30){\makebox(0,0){$\bullet$}}
+\put(40,0){\line(0,1){60}}
+\end{picture}
+\begin{picture}(80,60)(0,0)
+\thicklines
+\put(40,30){\makebox(0,0){$\bullet$}}
+\put(20,10){\line(1,1){40}}
+\end{picture}
+\begin{picture}(80,60)(0,0)
+\thicklines
+\put(40,30){\makebox(0,0){$\bullet$}}
+\put(60,10){\line(-1,1){40}}
+\end{picture}
+\begin{picture}(80,60)(0,0)
+\multiput(10,30)(6,0){11}{\line(1,0){4}}
+\put(57,34){\makebox(0,0){${\scriptsize \alpha}$}}
+\thicklines
+\put(40,30){\makebox(0,0){$\bullet$}}
+\put(12,16){\line(2,1){58}}
+\end{picture}
+\caption{\label{fig_Superposition_1}%
+Die vier linearen Polarisationen $h$ (horizontal), $v$ (vertikal), $+$ (positiv diagonal) 
+und $-$ (negativ diagonal). Au\ss erdem ist eine allgemeine Polarisationsrichtung, gekennzeichnet
+durch ihren Winkel $\alpha$ zwischen der Polarisationsrichtung und der Horizontalen, wiedergegeben.}
+\end{figure}
+
+Abbildung \ref{fig_Superposition_1} zeigt f\"unf lineare Polarisationen: $h$ steht f\"ur horizontale
+Polarisation, $v$ f\"ur vertikale Polarisation, $+$ f\"ur positiv diagonale Polarisation (d.h., die
+Polarisationsrichtung verl\"auft unter einem Winkel von $+45^\circ$ relativ zur horizontalen Achse 
+entlang einer Diagonalen mit positiver Steigung) und $-$ f\"ur eine negativ
+diagonale Polarisation (die Polarisationsrichtung verl\"auft unter einem Winkel von $-45^\circ$
+entlang einer Diagonalen mit negativer
+Steigung). Eine allgemeine Polarisationsrichtung k\"onnen wir durch ihren Winkel $\alpha$ relativ zur
+horizontalen Richtung kennzeichnen. In der Bra-Ket-Schreibweise dr\"ucken wir formal diese Polarisationen durch
+normierte Vektoren aus:
+\begin{equation}
+  |h\rangle = \left(\!\!  \begin{array}{c} 1 \\ 0 \end{array} \!\! \right) \hspace{0.6cm}
+  |v\rangle = \left( \!\! \begin{array}{c} 0 \\ 1 \end{array} \!\! \right) \hspace{0.6cm}
+  |+\rangle = \frac{1}{\sqrt{2}} \left(\!\!  \begin{array}{c} 1 \\ 1 \end{array} \!\! \right) \hspace{0.6cm}
+  |-\rangle =  \frac{1}{\sqrt{2}} \left( \!\! \begin{array}{c} 1 \\ -1 \end{array} \!\! \right) \hspace{0.6cm}
+  |\alpha\rangle = \left( \!\! \begin{array}{c} \cos \alpha \\ \sin \alpha \end{array} \!\! \right)
+\end{equation}
+Diese Vektoren sind jedoch nur Repr\"asentanten der Strahlen. Au\ss erdem wurden in diesem Fall
+die Polarisationen $h$ und $v$ ausgezeichnet, indem $|h\rangle$ und $|v\rangle$ als die Basisvektoren
+gew\"ahlt wurden.\footnote{Einfache Buchstaben oder Symbole wie $h$, $v$ oder $\psi$ beschreiben
+allgemein einen quantenmechanischen Zustand; ein Ket-Vektor $|h\rangle, |v\rangle, |\psi\rangle$
+bezeichnet einen normierten Vektor, der den Zustand im Hilbert-Raum repr\"asentiert.}
+
+F\"ur diese Vektoren gilt:
+\begin{equation}
+        |+\rangle = \frac{1}{\sqrt{2}} \big( |h\rangle + |v \rangle \big)  \hspace{1cm} {\rm und} \hspace{1cm}
+        |-\rangle = \frac{1}{\sqrt{2}} \big( |h\rangle - |v \rangle \big) 
+\end{equation}
+Umgekehrt gilt aber auch:
+\begin{equation}
+        |h\rangle = \frac{1}{\sqrt{2}} \big( |+\rangle + |- \rangle \big)  \hspace{1cm} {\rm und} \hspace{1cm}
+        |v\rangle = \frac{1}{\sqrt{2}} \big( |+\rangle - |- \rangle \big) 
+\end{equation}
+F\"ur eine allgemeine Polarisation erhalten wir:
+\begin{equation}
+        |\alpha \rangle = \big( \cos \alpha |h\rangle + \sin \alpha |v \rangle \big) =
+           \frac{1}{\sqrt{2}} \Big( \big( \cos \alpha + \sin \alpha \big) |+\rangle + 
+                  \big( \cos \alpha - \sin \alpha \big) |- \rangle \Big) \, .
+\end{equation}
+Ein Vorteil der Bra-Ket-Schreibweise ist, dass sie unabh\"angig von der Wahl eines Koordinatensystems
+ist. Die obigen Beziehungen zwischen verschiedenen Polarisationsrichtungen gelten in allen 
+Koordinatensystemen, wohingegen die Darstellung durch Spaltenvektoren die Wahl einer Basis 
+voraussetzt. 
+
+Die Born'sche Regel wird bei Polarisationszust\"anden zu dem Gesetz von Malus:
+\begin{equation}
+          |  \langle \beta | \alpha \rangle |^2 = \cos^2 (\beta-\alpha) \, .
+\end{equation}
+
+\section{Superposition und Gemisch}
+\label{Superposition_Gemisch}
+
+Zwei wichtige Konzepte, die leider oft verwechselt werden, beziehen sich auf den
+Unterschied zwischen Superposition und Gemisch. Sind zwei reine Zust\"ande
+gegeben, so ist eine Superposition wieder ein reiner Zustand. Wenn die reinen (orthogonalen)
+Zust\"ande $\psi_1$ und $\psi_2$ durch die normierten Vektoren $|\psi_1\rangle$
+und $|\psi_2\rangle$ repr\"asentiert werden, dann repr\"asentiert auch der
+Vektor
+\begin{equation}
+       | \psi \rangle = a |\psi_1\rangle + b| \psi_2\rangle  \hspace{1cm}
+              {\rm mit} ~~  |a|^2 + |b|^2 = 1  
+\end{equation}
+wieder einen reinen Zustand. Die Koeffizienten $a$ und $b$ k\"onnen dabei bis auf
+ihre Normierung beliebig sein und kennzeichnen verschiedene Superpositionen
+von $|\psi_1\rangle$ und $|\psi_2\rangle$. Messungen, die zwischen $\psi_1$ und
+$\psi_2$ unterscheiden, liefern mit einer Wahrscheinlichkeit (oder relativen H\"aufigkeit) 
+$|a|^2$ den Zustand $\psi_1$ und mit der Wahrscheinlichkeit (bzw.\ relativen H\"aufigkeit) $|b|^2$
+den Zustand $\psi_2$. Findet man jedoch eine Messvorschrift, sodass die
+Superposition $| \psi \rangle = a |\psi_1\rangle + b| \psi_2\rangle$ ein Eigenzustand des
+zugeh\"origen selbstadjungierten Operators ist, dann findet man dieses Ergebnis
+auch bei jeder einzelnen Messung.
+
+Man kann die Zust\"ande $\psi_1$ und $\psi_2$ auch durch ihre Projektionsoperatoren
+darstellen: $P_1=|\psi_1\rangle \langle \psi_1|$ und $P_2=|\psi_2\rangle \langle \psi_2|$.
+Bildet man nun eine Linearkombination der Form
+\begin{equation}
+         \rho = p_1 P_1 + p_2 P_2  \hspace{1cm} {\rm mit} ~~ p_1+p_2=1 ~~(p_i > 0) \, ,
+\end{equation}
+so beschreibt $\rho$ ein Gemisch aus den beiden Zust\"anden $\psi_1$ und $\psi_2$. 
+In einem Ensemble von physikalischen Systemen, das dieses Gemisch repr\"asentiert, sind Systeme 
+im Zustand $\psi_1$
+mit einer relativen H\"aufigkeit $p_1$ und Systeme im Zustand $\psi_2$ mit der
+relativen H\"aufigkeit $p_2$ vertreten. Messungen, die zwischen $\psi_1$ und
+$\psi_2$ unterscheiden, liefern mit einer Wahrscheinlichkeit (oder relativen H\"aufigkeit) 
+$p_1$ den Zustand $\psi_1$ und mit der Wahrscheinlichkeit (bzw.\ relativen H\"aufigkeit) $p_2$
+den Zustand $\psi_2$. Solche Messungen, k\"onnen also nicht zwischen einem Gemisch
+und einer Superposition unterscheiden. In diesem Fall gibt es jedoch keine Messung,
+bei der immer dasselbe Ergebnis herauskommt. $\rho$ ist kein Objekt, das man als
+Eigenzustand zu einem selbstadjungierten Operator interpretieren kann. Das Fehlen eines
+solchen Operators bzw.\ das Fehlen einer entsprechenden Messvorschrift ist das
+charakteristische Zeichen f\"ur ein Gemisch. 
+
+Betrachten wir hierzu nochmals das Beispiel der Polarisation von Photonen. Eine
+Superposition eines Zustands, der ein Photon mit der Polarisation $|h\rangle$
+beschreibt, mit einem Zustand, der ein Photon mit der Polarisation $|v\rangle$
+beschreibt, ergibt
+\begin{equation}
+            |+\rangle = \frac{1}{\sqrt{2}}\big( |h\rangle + |v\rangle  \big) 
+\end{equation}
+(hier wurde die spezielle Superposition zu $a=b=1/\sqrt{2}$ gew\"ahlt). Dieser Vektor
+beschreibt den Zustand eines Photons mit der Polarisation $+$, also eine unter $+45^\circ$
+geneigte Polarisation. In einem Mach-Zehnder-Interferometer mit polarisierenden
+Strahlteilern kann man diese Gleichung experimentell realisieren: Ein Photon im
+Zustand $|+\rangle$ wird am ersten Strahlteiler, der die Achsen $|h\rangle$ und $|v\rangle$
+haben soll, in die beiden Bestandteile $|h\rangle$ und $|v\rangle$ entsprechend der
+obigen Formel aufgespalten. Am zweiten Strahlteiler k\"onnen diese beiden Anteile
+bei exakt gleicher optischer Wellenl\"ange der beiden Wege innerhalb des 
+Mach-Zehnder-Interferometers wieder in Superposition gebracht werden und man
+erh\"alt hinter dem zweiten Strahlteiler wieder ein diagonal polarisiertes Photon.
+
+Man kann zur Demonstration auch die koh\"arente \"Uberlagerung von zwei 
+Laserstrahlen verwenden. Wenn die Phasen der beiden Laser richtig abgestimmt sind,
+kann man die Strahlen mit einem geeigneten polarisationsabh\"angigen Strahlteiler
+so \"uberlagern, dass man einen diagonal polarisierten Strahl (der doppelten Intensit\"at)
+erh\"alt. 
+
+Misst man die Photonen (oder den Laserstrahl) mit einem Polarisationsstrahlteiler
+zu den Achsen $h$ und $v$, erh\"alt man bei den Photonen in der H\"alfte der 
+F\"alle $h$ und in der H\"alfte der F\"alle $v$, beim Laserstrahl erh\"alt man in beide
+Richtungen jeweils die halbe Intensit\"at. Stellt man jedoch den Polarisationsstrahlteiler
+auf $+$- bzw.\ $-$-diagonal, findet man alle Photonen (bzw.\ die gesamte Laserintensit\"at)
+in der $+$-Richtung. Dies ist das Zeichen, dass eine reine Polarisation $+$ vorliegt.
+
+Ein gemischter Zustand von Photonen, die zur H\"alfte die Polarisation $h$ und
+zur H\"alfte die Polarisation $v$ haben, wird bei einem $h/v$-orientierten Strahlteiler
+ebenfalls zur H\"alfte das Ergebnis $h$ und zur H\"alfte das Ergebnis $v$ liefern.
+Dasselbe gilt aber auch, wenn man den Strahlteiler in eine beliebige andere
+Richtung orientiert. Es gibt keine Position, bei der alle Photonen in dieselbe
+Richtung abgelenkt werden. Dies ist wieder das Signal f\"ur einen gemischten
+Zustand. (Streng genommen m\"usste man bei diesem Test auch auf zirkulare
+Polarisation testen, die bei linearen Polarisationsstrahlteilern ebenfalls f\"ur
+alle Richtungen ein 50\% -50\%--Ergebnis liefern w\"urde.) 
+
+\section{Vergleich: Superposition und Vektoraddition}
+
+Offenbar haben Superposition und Vektoraddition vieles gemein. Insbesondere l\"asst sich die
+Superposition als \glqq Vektoraddition von Repr\"asentanten\grqq\ darstellen. F\"ur einen besseren
+Vergleich betrachten wir daher nochmals das Paradebeispiel aus der Physik, bei dem die
+Vektoraddition Anwendung findet: das Kr\"afteparallelogramm.
+
+Zu zwei Kr\"aften $\vec{F}_1$ und $\vec{F}_2$, die am selben Punkt eines K\"orpers angreifen,
+k\"onnen wir eine resultierende Kraft $\vec{F}=\vec{F}_1 + \vec{F}_2$ definieren, die sich als
+die vektorielle Summe der beiden Kr\"afte darstellen l\"asst (in der Schule spricht man 
+h\"aufig vom \glqq Parallelogrammgesetz\grqq). Die physikalische Wirkung, die diese Kraft
+$\vec{F}$ auf den K\"orper aus\"ubt, ist dieselbe, wie die physikalische Wirkung der beiden
+Kr\"afte $\vec{F}_1$ und $\vec{F}_2$. Aus der Beobachtung der Bewegung des K\"orpers
+alleine lassen sich die beiden F\"alle nicht unterscheiden.
+
+Umgekehrt k\"onnen wir eine gegebene Kraft $\vec{F}$ immer nach zwei vorgegebenen
+(linear unabh\"angigen) Richtungen zerlegen und erhalten auf diese Weise zwei
+Kr\"afte $\vec{F}_1$ und $\vec{F}_2$, die entlang der vorgegebenen Richtungen zeigen
+und deren vektorielle Summe gleich der Kraft $\vec{F}$ ist.\footnote{Der Einfachheit halber
+betrachten wir hier Kr\"afte in einer Ebene. Ansonsten m\"ussen die beiden Richtungen so
+gew\"ahlt werden, dass die Kraft $\vec{F}$ in der von ihnen aufgespannten Ebene liegen.}
+Da diese beiden Richtungen
+(bis auf die lineare Unabh\"angigkeit) beliebig gew\"ahlt werden k\"onnen, l\"asst sich jede
+beliebige Kraft auf unendlich viele verschiedenen Weisen als Summe von zwei anderen
+Kr\"aften schreiben. 
+
+Vieles davon l\"asst sich auf die Superposition von Zust\"anden \"ubertragen: Jeder
+beliebige Zustand l\"asst sich auf unendlich viele verschiedene Weisen als 
+Superposition von anderen Zust\"anden schreiben. Allerdings lassen sich zu je zwei
+Zust\"anden auch unendlich viele Zust\"ande als Superposition dieser beiden Zust\"ande
+schreiben. Eindeutig wird die Superposition erst, wenn wir zu den beiden Zust\"anden
+Einheitsvektoren als Repr\"asentanten w\"ahlen und die Koeffizienten der Linearkombination
+festlegen. 
+
+Andererseits gibt es aber auch wichtige Unterschiede, die gerade bei Sch\"ulerinnen und
+Sch\"ulern leicht zu Fehlvorstellungen f\"uhren k\"onnen. So gibt es beispielsweise zu
+jedem Vektor den entsprechenden negativen Vektor, und die vektorielle Summe dieser
+beiden Vektoren ergibt den Nullvektor. Dies spielt eine wichtige Rollen, wenn wir
+Systeme im Kr\"aftegleichgewicht betrachten. W\"ahlen wir jedoch einen Vektor
+als Repr\"asentanten eines Zustands, dann ist der dazu negative Vektor ebenfalls ein
+Repr\"asentant desselben Zustands. In diesem Fall ist es sinnlos, eine Superposition
+dieser beiden Vektoren zu betrachten. 
+
+Ein weiterer wichtiger Unterschied zwischen Superposition und vektorieller Summe
+besteht in der Normierung. Wenn wir zwei Vektoren, beispielsweise Kr\"afte, addieren,
+beschreibt die Summe einen Vektor, dessen L\"ange sich nach dem Parallelogrammgesetz
+bestimmt. Diese L\"ange ist wesentlich, ansonsten beschreibt die vektorielle Summe
+keine Kraft, welche die urspr\"unglichen beiden Kr\"afte ersetzen kann. Bei der
+Repr\"asentation der Superposition von Zust\"anden als vektorielle Summe muss jedoch
+der resultierende Vektor wieder auf die L\"ange 1 normiert werden. Ansonsten beschreibt
+er (im \"ublichen Sinne) keinen Zustand. Etwas anders ausgedr\"uckt: W\"ahrend bei
+Vektoren, z.B.\ bei Kr\"aften, die L\"ange der Vektoren wesentlich ist, ist beim Zustand
+(und der Superposition von Zust\"anden) eigentlich nur der Winkel zwischen den
+Vektoren relevant. Vektoren, die sich in ihrer L\"ange unterscheiden, beschreiben
+denselben Zustand.
+
+\section{H\"aufige Fehlvorstellungen zur Superposition}
+
+Man h\"ort sehr oft, dass ein bestimmter Zustand ein \glqq Superpositionszustand\grqq\ sei.
+Das klingt so, als ob es auch Zust\"ande g\"abe, die keine Superpositionszust\"ande sind.
+Hinter dieser Sprechweise steckt meist die implizite Annahme, dass gewisse Zust\"ande
+ausgezeichnet sind. Diese Sprechweise wird beispielsweise oft verwendet, wenn man 
+\"uber die Superposition von Zust\"anden mit klassischen Eigenschaften spricht.
+Beispielsweise im Zusammenhang mit Schr\"odingers Katze bezeichnet man die
+Zust\"ande $|{\rm tot}\rangle$ und $|{\rm lebendig}\rangle$ als klassisch realisierbare
+Zust\"ande, wohingegen eine Superposition von $|{\rm tot}\rangle$ und $|{\rm lebendig}\rangle$
+als Superpositionszustand bezeichnet wird. Ebenso spricht man im Zusammenhang mit
+dem Messproblem gerne von einem Superpositionszustand, wenn man die Superposition
+von zwei Zeigerstellungen des Messinstruments betrachtet (die typischerweise nie
+beobachtet wird). 
+
+Ein anderes Beispiel, bei dem gerne von Superpositionszust\"anden gesprochen wird, ist
+die Quanteninformation. Die Zust\"ande $|0\rangle$ und $|1\rangle$ sind ausgezeichnet,
+weil sie in der Quanteninformation die typischen Basiszust\"ande sind und weil
+abschlie\ss ende Messungen an einem Quantenzustand sich auf diese Basis beziehen.
+Superpositionszust\"ande sind dann Zust\"ande, die nicht diesen beiden ausgezeichneten
+Basiszust\"anden entsprechen. 
+
+Ohne die Angabe einer ausgezeichneten Basis (oder einer ausgezeichneten Observablen,
+die eine solche Basis definiert) ist es sinnlos, von einem Superpositionszustand zu
+sprechen oder gar einen Zustand als \glqq keine Superposition\grqq\ zu bezeichnen. In
+diesem Zusammenhang ist es sogar ein Fehler, von reinen und gemischten
+Zust\"anden zu sprechen: Auch die Superpositionszust\"ande zu einer ausgezeichneten
+Basis sind reine Zust\"ande.
+
+Eine weitere verbreitete Fehlvorstellung liegt in der Verwechslung von Superposition
+und Gemisch. Hierbei handelt es sich um zwei vollkommen verschiedene Konzepte:
+Eine Superposition von zwei reinen Zust\"anden ist wieder ein reiner Zustand und
+entspricht einem Strahl in einem Hilbert-Raum. Ein Gemisch von zwei Zust\"anden
+ist kein reiner Zustand und l\"asst sich nicht als Strahl in einem Hilbert-Raum darstellen,
+sondern wird meist durch eine Dichtematix dargestellt. In diesem Fall liegen physikalisch
+(mindestens) zwei verschiedene Zust\"ande vor und die Eigenwerte der Dichtematrix
+geben an, mit welcher Wahrscheinlichkeit diese Zust\"ande bei einer willk\"urlichen
+Wahl aus einem Ensemble physikalischer Systeme, das diesem Gemisch entspricht, gezogen werden.
+
+\end{document}
+

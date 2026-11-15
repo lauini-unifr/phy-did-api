@@ -6,7 +6,7 @@ from flask_jwt_extended import create_access_token, create_refresh_token, get_jw
 from db import db
 from blocklist import BLOCKLIST
 from models import UserModel
-from schemas import UserSchema
+from schemas import UserSchema, PendingUserSchema
 
 
 blp = Blueprint("users", "users", description="Operations on users")
@@ -21,13 +21,14 @@ class UserRegister(MethodView):
 
         user = UserModel(
             username=user_data["username"],
-            password=pbkdf2_sha256.hash(user_data["password"])
+            password=pbkdf2_sha256.hash(user_data["password"]),
+            is_approved=False,
         )
         db.session.add(user)
         db.session.commit()
 
-        return {"message": "User created successfully."}, 201
-    
+        return {"message": "User created successfully. An existing user must approve this account before you can log in."}, 201
+
 @blp.route("/login")
 class UserLogin(MethodView):
     @blp.arguments(UserSchema)
@@ -35,11 +36,32 @@ class UserLogin(MethodView):
         user = UserModel.query.filter(UserModel.username == user_data["username"]).first()
 
         if user and pbkdf2_sha256.verify(user_data["password"], user.password):
+            if not user.is_approved:
+                abort(403, message="This account has not been approved yet.")
             access_token = create_access_token(identity=user.id, fresh=True)
             refresh_token = create_refresh_token(identity=user.id)
             return {"access_token": access_token, "refresh_token": refresh_token}
-        
+
         abort(401, message="Invalid credentials.")
+
+
+@blp.route("/user/pending")
+class PendingUsers(MethodView):
+    @jwt_required()
+    @blp.response(200, PendingUserSchema(many=True))
+    def get(self):
+        return UserModel.query.filter_by(is_approved=False).all()
+
+
+@blp.route("/user/<int:user_id>/approve")
+class ApproveUser(MethodView):
+    @jwt_required()
+    def post(self, user_id):
+        user = UserModel.query.get_or_404(user_id)
+        user.is_approved = True
+        db.session.add(user)
+        db.session.commit()
+        return {"message": "User approved."}
 
 
 @blp.route("/refresh")
@@ -66,6 +88,7 @@ class User(MethodView):
         user = UserModel.query.get_or_404(user_id)
         return user
     
+    @jwt_required()
     def delete(self, user_id):
         user = UserModel.query.get_or_404(user_id)
         db.session.delete(user)

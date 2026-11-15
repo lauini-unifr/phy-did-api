@@ -11,53 +11,45 @@ from db import db
 from sqlalchemy_file.storage import StorageManager
 from libcloud.storage.drivers.local import LocalStorageDriver
 from blocklist import BLOCKLIST
+from topic_folders import get_topic_folder_name
 
 from models import ItemModel
 
-import subprocess
 import tempfile
 from pathlib import Path
-import shutil
 import os
 import time
 import logging
+import uuid
+
+from werkzeug.exceptions import HTTPException
 
 from ressources.item import blp as ItemBlueprint
 from ressources.topic import blp as TopicBlueprint
 from ressources.tag import blp as TagBlueprint
 from ressources.user import blp as UserBlueprint
+from chapter_labels import load_label_lookup, rewrite_external_refs, sync_chapter_labels
+from latex_build import (ATTACHMENT_DIR, BEGIN_DOCUMENT, BUILD_TIMEOUT, LatexError, build_pdf,
+                         copy_dir_files, copy_item_assets, is_wrapper_line)
 
-CHAPTER_VARS = { ### "label" : "item_id" 
-    "chap_Klima1": ["1", "Solarkonstante und Paleoklima"],
-    "chap_Klima3": ["2", "Klimamodelle"],
-    "chap_SI": ["3", "SI-Einheiten"],
-    "chap_Kalender": ["4", "Kalendersysteme"], ### not in use
-    "chap_Zeitgleichung": ["5", "Die Zeitgleichung"],
-    "chap_Uhren": ["6", "Zeitmessung"],
-    "chap_Gezeiten1": ["7", "Die Gezeiten - Ebbe und Flut"],
-    #"chap_Gezeiten": ["7", "Die Gezeiten - Ebbe und Flut"],
-    "eq_Schwerpunkt": ["7", "8 Kap. Die Gezeiten - Ebbe und Flut"],
-    "tab_Tide": ["7", "1 Kap. Die Gezeiten - Ebbe und Flut"],
-    "chap_Gezeiten2": ["8", r"Gezeiten und Tagesl\"ange"],
-    "sec_EMWW": ["8", r"Gezeiten und Tagesl\"ange"],
-    "chap_Nachthimmel": ["9", "Der Nachthimmel"],
-    "chap_Kosm_Entfernung": ["10", "Die Kosmische Entfernungsleiter"],
-    "chap_Landkarte": ["11", "Landkarten und der metrische Tensor"],
-    "chap_QuBit": ["12", "Das QuBit"],
-    "chap_Interferometer": ["13", "Interferometer"],
-    "chap_BB84": ["14", "BB84 - Quantenkryptographie"],
-    "chap_Quantenradierer": ["15", "Quantenradierer"],
-    "chap_Grundlagen": ["16", "Grundlagen der SRT"],
-    "eq_vadd": ["16", "21 des Kapitels Grundlagen der SRT"],
-    "chap_Philosophie": ["17", "Philosphischer Hintergrund der SRT"],
-    "chap_SpezRel": ["17", "Philosphischer Hintergrund der SRT"],
-    "sec_Synch": ["17", "3 des Kapitels Philosphischer Hintergrund der SRT"],
-    "chap_SRT-Effekte": ["18", "SRT – Effekte"],
-    "chap_Zwilling": ["19", "Das Zwillingsparadoxon"],
-    "SRT_Beschleunigung": ["20", "Beschleunigte Systeme und das Rindler-Universum"],
-    "chap_Entanglement": ["21", r"Verschr\"ankung"],
-    "chap_EPR": ["22", "EPR-Bell-CHSH"]
-}
+PDF_JOB_MAX_WAIT = 2 * BUILD_TIMEOUT + 60
+
+# deckblatt_clean.tex names Thomas Filk with his title; that line is kept for
+# his texts and replaced by the actual author(s) otherwise.
+COVER_AUTHOR_MARKER = "Professor Dr. Thomas Filk"
+DEFAULT_AUTHOR = "Thomas Filk"
+
+
+def cover_author_line(authors):
+    """Replacement for the cover page author line, or None to keep it."""
+    authors = sorted({a for a in authors if a})
+    if not authors or authors == [DEFAULT_AUTHOR]:
+        return None
+    if len(authors) == 1:
+        joined = authors[0]
+    else:
+        joined = ", ".join(authors[:-1]) + " und " + authors[-1]
+    return "\\textbf{" + joined + "}\n"
 
 
 
@@ -151,197 +143,173 @@ def create_app(db_url=None):
     def home():
         return render_template('index.html')
 
-    def copy_files(src, trg):
-        files=os.listdir(src)
-
-        # iterating over all the files in
-        # the source directory
-        for fname in files:
-            
-            # copying the files to the
-            # destination directory
-            shutil.copy2(os.path.join(src,fname), trg)
-
+    @app.cli.command("sync-chapter-labels")
+    def sync_chapter_labels_command():
+        """Rebuild chapter_labels from every item's .tex file on disk."""
+        synced = 0
+        for item in ItemModel.query.order_by(ItemModel.id).all():
+            if not item.file_name or not item.file_name.lower().endswith(".tex"):
+                continue
+            folder = get_topic_folder_name(item.topic.name, item.name)
+            if not folder:
+                print(f"  Übersprungen (kein Ordner-Mapping): {item.name}")
+                continue
+            path = os.path.join("./upload_dir/attachment", folder, item.name, item.file_name)
+            if not os.path.exists(path):
+                print(f"  Übersprungen (Datei fehlt): {path}")
+                continue
+            sync_chapter_labels(item, path)
+            synced += 1
+        db.session.commit()
+        print(f"Labels für {synced} Texte synchronisiert.")
 
     def generate_pdf(item_ids):
-        if item_ids:
-            try:
-                texdoc = []  # a list of string representing the latex document in python
-                begin = r'\documentclass[german,10pt]{book}      \input{preambel.tex}         \begin{document}  \setcounter{chapter}{0}'
-                texdoc.append(begin)
+        label_lookup = load_label_lookup()
+        chapter_info = {}
+        multiple_authors = False
+        chapter_starts = []
 
-                tmpdirname = tempfile.mkdtemp(prefix="pre_",suffix="_suf")
-                os.makedirs(tmpdirname + '/Bilder')
+        texdoc = [BEGIN_DOCUMENT + "\n"]
+        tmpdirname = tempfile.mkdtemp(prefix="pre_", suffix="_suf")
+        os.makedirs(os.path.join(tmpdirname, "Bilder"))
 
-                if len(item_ids) > 1:
-                    # Deckblatt
-                    copy_files("upload_dir/attachment/Deckblatt/Bilder", tmpdirname + '/Bilder')
-                    with open("upload_dir/attachment/Deckblatt/deckblatt_clean.tex") as f_in:
-                        for line in f_in:
+        def chapter_source(item):
+            topic_folder_name = get_topic_folder_name(item.topic.name, item.name)
+            if not topic_folder_name:
+                raise ValueError(f"No folder mapping known for topic '{item.topic.name}'.")
+            return topic_folder_name, os.path.join(ATTACHMENT_DIR, topic_folder_name, item.name, item.file_name)
+
+        if len(item_ids) > 1:
+            # Pre-scan every chapter's title/author so the cover page and
+            # table of contents can be adapted if more than one author is involved.
+            for item_id in item_ids:
+                item = ItemModel.query.get_or_404(int(item_id))
+                if not item.file_name:
+                    continue
+                _, src = chapter_source(item)
+                title, author = None, None
+                with open(src) as f_in:
+                    for line in f_in:
+                        if "\\chapter{" in line and title is None:
+                            title = line.split("{")[1].split("}")[0]
+                        if "\\info{" in line and author is None:
+                            author = line.split("{")[1].split("}")[0]
+                chapter_info[item_id] = {"title": title, "author": author}
+
+            authors = [info["author"] for info in chapter_info.values()]
+            multiple_authors = len({a for a in authors if a}) > 1
+            author_line = cover_author_line(authors)
+
+            # Deckblatt
+            copy_dir_files(os.path.join(ATTACHMENT_DIR, "Deckblatt", "Bilder"), os.path.join(tmpdirname, "Bilder"))
+            with open(os.path.join(ATTACHMENT_DIR, "Deckblatt", "deckblatt_clean.tex")) as f_in:
+                for line in f_in:
+                    if author_line and COVER_AUTHOR_MARKER in line:
+                        texdoc.append(author_line)
+                    else:
+                        texdoc.append(line)
+
+            # Table of contents
+            texdoc.append(r'{\let\cleardoublepage\clearpage\tableofcontents}')
+
+        for item_id in item_ids:
+            item = ItemModel.query.get_or_404(int(item_id))
+            if not item.file_name:
+                continue
+            topic_folder_name, src = chapter_source(item)
+
+            if len(item_ids) == 1:
+                date = False
+                author = None
+                with open(src) as f_in:
+                    for line in f_in:
+                        if "\\chapter{" in line:
+                            title = line.split("{")[1].split("}")[0]
+                        if "\\info{" in line:
+                            date = line.split("}{")[1].split("}")[0]
+                            author = author or line.split("{")[1].split("}")[0]
+                author_line = cover_author_line([author])
+
+                # Deckblatt
+                copy_dir_files(os.path.join(ATTACHMENT_DIR, "Deckblatt", "Bilder"), os.path.join(tmpdirname, "Bilder"))
+                with open(os.path.join(ATTACHMENT_DIR, "Deckblatt", "deckblatt_clean.tex")) as f_in:
+                    for line in f_in:
+                        if "today" in line and date:
+                            texdoc.append(date)
+                        elif "Kapitel" in line:
+                            texdoc.append(r"\textbf{"+title+r"} \\")
+                        elif author_line and COVER_AUTHOR_MARKER in line:
+                            texdoc.append(author_line)
+                        else:
                             texdoc.append(line)
 
-                    # Table of contents
-                    table_of_contents = r'{\let\cleardoublepage\clearpage\tableofcontents}'
-                    texdoc.append(table_of_contents)
-                
-                for item_id in item_ids:
-                    item = ItemModel.query.get_or_404(int(item_id))
-                    if item.file_name:
-                        
-                        if item.topic.name == "Klimaphysik":
-                            topic_folder_name = "Skript_Klima"
-                        elif item.topic.name == "Klassische Systeme":
-                            topic_folder_name = "Skript_klass"
-                        elif item.topic.name == "Quantenphysik":
-                            topic_folder_name = "Skript_QM"
-                        elif item.topic.name == "Relativitätstheorie":
-                            if "ART" in item.name:
-                                topic_folder_name = "Skript_ART"   
-                            else:
-                                topic_folder_name = "Skript_SRT"    
-                        elif item.topic.name == "Thermodynamik":
-                            topic_folder_name = "Skript_Thermo"  
+                # Table of contents
+                texdoc.append(r'{\let\cleardoublepage\clearpage\tableofcontents}')
 
-                        src = "upload_dir/attachment/" + topic_folder_name + "/" + item.name + "/" + item.file_name
-                        with open(src) as f_in:
-                            
-                            if len(item_ids) == 1:
-                                date = False
-                                for line in f_in:
-                                    if "\chapter{" in line:
-                                        title = line.split("{")[1].split("}")[0]
-                                    if "\info{" in line:
-                                        date = line.split("}{")[1].split("}")[0]
-                                        
-                                # Deckblatt
-                                copy_files("upload_dir/attachment/Deckblatt/Bilder", tmpdirname + '/Bilder')
-                                with open("upload_dir/attachment/Deckblatt/deckblatt_clean.tex") as f_in:
-                                    for line in f_in:
-                                        if "today" in line and date:
-                                            texdoc.append(date)
-                                        elif "Kapitel" in line:
-                                            texdoc.append(r"\textbf{"+title+r"} \\")
-                                        else:
-                                            texdoc.append(line)
+            chapter_starts.append(("".join(texdoc).count("\n") + 1, item.name))
+            with open(src) as f_in:
+                for line in f_in:
+                    if is_wrapper_line(line):
+                        continue
+                    chapter_author = chapter_info.get(item_id, {}).get("author") if multiple_authors else None
+                    if chapter_author and "\\chapter{" in line:
+                        chapter_title = chapter_info[item_id]["title"] or line.split("{")[1].split("}")[0]
+                        texdoc.append("\\chapter[" + chapter_title + " - " + chapter_author + "]{" + chapter_title + "}\n")
+                    elif 'ref' in line:
+                        texdoc.append(rewrite_external_refs(line, label_lookup, item_ids))
+                    else:
+                        texdoc.append(line)
 
-                                # Table of contents
-                                table_of_contents = r'{\let\cleardoublepage\clearpage\tableofcontents}'
-                                texdoc.append(table_of_contents)        
+            copy_item_assets(tmpdirname, item.name, topic_folder_name)
 
-                        
-                        with open(src) as f_in:
-                            for line in f_in:
-                                if '\documentclass[german,10pt]' not in line and '\end{document}' not in line:
-                                    if 'ref' in line:
-                                        hit = False
-                                        for chapter, index in CHAPTER_VARS.items():
-                                            if chapter in line and index[0] not in item_ids:
-                                                hit = True
-                                                if "hyperref" in line:
-                                                    newline = line.replace('hyperref','href')
-                                                else:
-                                                    newline = line.replace('ref','href')
-                                                if chapter+'}' in newline:
-                                                    newline = newline.replace(chapter+'}','https://physikdidaktik.uni-freiburg.de/kurztexte/}{'+index[1]+'}')
-                                                else:
-                                                    newline = newline.replace('['+chapter+']','{https://physikdidaktik.uni-freiburg.de/kurztexte/}')
-                                                texdoc.append(newline)
-                                        if not hit:
-                                            texdoc.append(line)
-                                    else:
-                                        texdoc.append(line)
+        texdoc.append("\n\\printindex\n\\end{document}\n")
+        with open(os.path.join(tmpdirname, 'final.tex'), 'w') as f_out:
+            f_out.write("".join(texdoc))
 
-                        src_pic = "upload_dir/attachment/Bilder"
-                        
-                        #copy_files(src, tmpdirname)
-                        copy_files("upload_dir/attachment/Preambel", tmpdirname)
-                        copy_files(src_pic, tmpdirname + '/Bilder')
+        pdf_path, errors = build_pdf(tmpdirname, chapter_starts)
+        if errors:
+            app.logger.warning(f"PDF für {item_ids} mit LaTeX-Fehlern erzeugt: {errors}")
+        return Path(pdf_path).resolve()
 
-                        if item.name in ["Klass_03_Zeitgleichung",
-                                        "Klass_05_Uhren",
-                                        "Klass_08_Nachthimmel",
-                                        "Klass_10_Landkarten",
-                                        "Klass_11_Hebelgesetze",
-                                        "Thermo_01_Prozess",
-                                        "Thermo_03_Entropie"]:
-                            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder') 
-                        elif item.name in ["ART_02_Grundlagen",
-                                           "ART_05_GravWellen"]:
-                            try: 
-                                os.makedirs(tmpdirname + '/Bilder_ART')
-                            except:
-                                pass
-                            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder_ART')
-                        elif item.name in ["SRT_03_Kette"]:
-                            try: 
-                                os.makedirs(tmpdirname + '/Bilder_SRT')
-                            except:
-                                pass
-                            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder_SRT')
-                        elif item.name in ["QM_01_QuBit",
-                                           "QM_06_EPR_Bell_CHSH"]:
-                            try: 
-                                os.makedirs(tmpdirname + '/Bilder_QM')
-                            except:
-                                pass
-                            copy_files("upload_dir/attachment/" + topic_folder_name + "/Bilder", tmpdirname + '/Bilder_QM')
-                    
-                texdoc.append('\printindex\n\end{document}')
-
-                # write back the new document
-                with open(os.path.join(tmpdirname, 'final.tex')  , 'w') as f_out:
-                    for i in range(len(texdoc)):
-                        f_out.write(texdoc[i])
-
-                output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', 'final.tex'])
-                
-                shutil.copy(tmpdirname+"/file.idx", "./file.idx")
-                index_output = subprocess.call(["makeindex","./file.idx"])
-                shutil.move("./file.ind", tmpdirname+"/file.ind")
-
-                # Clean up .idx and .ilg files from the script directory
-                if os.path.exists("./file.idx"):
-                    os.remove("./file.idx")
-                if os.path.exists("./file.ilg"):
-                    os.remove("./file.ilg")
-                
-                output = subprocess.call(["pdflatex", "-output-directory", tmpdirname, "-jobname", 'file', 'final.tex'])
-
-                path = Path(tmpdirname + "/file.pdf").resolve()
-            except Exception as e:
-                    app.logger.error(f"Fehler in some_route: {str(e)}")
-                    abort(500, message="An error occurred while compiling the pdf.")
-
-            return path
-                    
-            #except:
-            # abort(500, message="An error occurred while compiling the pdf.")
-
-        
-        else:
-            abort(401, message="No ids in request.")
-    
+    def run_pdf_job(item_ids):
+        # Runs in the executor thread; turn every failure into a clean HTTP error
+        # so the waiting /get-pdf request always gets an answer.
+        try:
+            return generate_pdf(item_ids)
+        except LatexError as e:
+            app.logger.error(f"LaTeX-Fehler beim PDF-Export {item_ids}: {e.errors}")
+            message = "PDF konnte nicht erzeugt werden:\n" + "\n".join(e.errors)
+        except HTTPException:
+            raise
+        except Exception as e:
+            app.logger.exception(f"Fehler beim PDF-Export {item_ids}: {e}")
+            message = "Beim Erzeugen des PDFs ist ein Fehler aufgetreten."
+        abort(500, message=message)
 
     @app.route('/download/<item_ids_as_str>', methods=['GET'])
     def download_files(item_ids_as_str):
-        item_ids = item_ids_as_str.split("+")
-        
-        executor.submit_stored('pdf_ready', generate_pdf, item_ids)
+        item_ids = [i for i in item_ids_as_str.split("+") if i]
+        if not item_ids:
+            abort(400, message="No ids in request.")
+        job_id = uuid.uuid4().hex
+        executor.submit_stored(job_id, run_pdf_job, item_ids)
+        return redirect(f"/get-pdf/{job_id}")
 
-        time.sleep(5)
-
-        return redirect("/get-pdf")
-
-
-        #abort(401, message="No file in request.")
-
-
-    @app.route('/get-pdf')
-    def get_result():
-        while not executor.futures.done('pdf_ready'):
-            time.sleep(5)
-        future = executor.futures.pop('pdf_ready')
-        response = send_file(future.result(), as_attachment=True, mimetype="application/pdf")
+    @app.route('/get-pdf/<job_id>')
+    def get_result(job_id):
+        # FutureCollection.done() returns None for unknown keys (`in` checks values, not keys).
+        if executor.futures.done(job_id) is None:
+            abort(404, message="Unknown or expired PDF job.")
+        deadline = time.monotonic() + PDF_JOB_MAX_WAIT
+        try:
+            while not executor.futures.done(job_id):
+                if time.monotonic() > deadline:
+                    abort(504, message="Die PDF-Erzeugung hat zu lange gedauert.")
+                time.sleep(0.5)
+            pdf_path = executor.futures.result(job_id)
+        finally:
+            executor.futures.pop(job_id)
+        response = send_file(pdf_path, as_attachment=True, mimetype="application/pdf")
         response.headers.add('Access-Control-Allow-Origin', '*')
         return response
 

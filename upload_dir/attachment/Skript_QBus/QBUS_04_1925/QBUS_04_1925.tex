@@ -1,0 +1,683 @@
+\documentclass[german,10pt]{book}      \input{preambel}         \begin{document}  \setcounter{chapter}{3}
+
+\chapter{Die Jahre 1925 und 1926}
+% Kap x
+\label{chap_1925}
+
+\begin{picture}(0,0)(0,0)
+\put(400,150){\makebox(0,0){
+\includegraphics[scale=0.5]{./Bilder/bmftr.png}}}
+\put(337,185){\makebox(0,0){\footnotesize Kurztext erstellt im Rahmen von \glqq Quanten auf Reisen\grqq}}
+\end{picture}
+\info{Thomas Filk}{13.08.2026}
+
+\noindent
+Im Sommer 1925 erschien die ber\"uhmte \glqq Umdeutungsarbeit\grqq\ von 
+Werner Heisenberg, in welcher er den Grundstein f\"ur die sogenannte
+Matrizenmechanik legte \cite{Heisenberg}. Noch im selben Jahr folgten zwei weitere Arbeiten, einmal
+von Max Born und Pascual Jordan \cite{BornJordan}, und dann die 
+bekannte \glqq Drei M\"anner Arbeit\grqq\ von Born, Jordan
+und Heisenberg \cite{DreiMann}. In diesen Arbeiten wurde die Matrizenmechanik
+nahezu in ihrer heutigen Form formuliert. Insbesondere findet man schon in der
+Arbeit von Born und Jordan die kanonischen Vertauschungsrelationen f\"ur die
+\glqq Matrizen\grqq\ zum Orts- und Impulsoperator, die in der fr\"uheren
+Arbeit von Heisenberg nur andeutungsweise auftauchen. Noch im November
+1925 schrieb Paul Dirac einen Artikel zu den \glqq Grundgleichungen der Quantentheorie\grqq, 
+in dem er sich auf Heisenberg bezog. Im Januar 1926 konnte Wolfgang
+Pauli das Spektrum des Wasserstoffatoms aus der
+Matrizenalgebra ableiten. 
+
+Anfang 1926 erschien dann die erste von insgesamt
+vier \glqq Mitteilungen\grqq\ von Erwin Schr\"odinger mit dem Titel \glqq Quantisierung
+als Eigenwertproblem\grqq, in welcher Schr\"odinger seine Wellenmechanik 
+formulierte \cite{Schroedinger1bis4}. Schon sehr bald (April 1926) erschien eine weitere Arbeit von 
+Schr\"odinger, in der er die \"Aquivalenz zwischen dem Formalismus von Heisenberg
+und seiner Wellenmechanik zeigen konnte \cite{Schroedinger26}. 
+
+Auch wenn wir heute die Quantenmechanik in einer ausgereifteren Form
+lehren und verwenden, lohnt es sich, einen Blick in die Originalarbeiten zu werfen und
+die Gedankeng\"ange von Heisenberg und Schr\"odinger nachzuvollziehen. 
+
+\section{Die Matrizenmechanik von 1925}
+
+Schon das sehr kurze Abstract der Heisenberg'schen Umdeutungsarbeit deutet die Absicht 
+Heisenbergs an, eine neue Theorie der Mechanik ausschlie\ss lich auf beobachtbare
+Gr\"o\ss en aufzubauen:
+\vspace{0.3cm}
+
+\noindent
+\textit{In der Arbeit soll versucht werden, Grundlagen zu gewinnen f\"ur eine quantentheoretische
+Mechanik, die ausschlie\ss lich auf Beziehungen zwischen prinzipiell beobachtbaren Gr\"o\ss en
+basiert.} 
+\vspace{0.3cm}
+
+\noindent
+Die Gr\"unde f\"ur diesen Ansatz lagen in der \"alteren Atomphysik, auf die wir kurz eingehen.
+
+\subsection{Die Bohr-Sommerfeld'schen Atommodelle}
+
+1913 hatte Niels Bohr ein Modell f\"ur das Wasserstoffatom vorgeschlagen, bei dem
+sich ein Elektron auf einer Kreisbahn um einen positiv geladenen Atomkern bewegt \cite{Bohr1}.
+Dies entsprach auch dem zwei Jahre zuvor entwickelten 
+Atommodell von Rutherford. Allerdings hatte Bohr eine einschr\"ankende
+Bedingung an die Kreisbahnen postuliert, in der die Konstante $h$, das Planck'sche
+Wirkungsquantum, auftauchte. Insofern kann man das Bohr'sche Atommodell als
+erstes Quantenmodell des Atoms auffassen. 
+
+F\"ur Kreisbahnen ist die Bohr'sche Quantisierungsbedingung \"aquivalent zu
+folgender Bedingung an den Drehimpuls $L$ des Elektrons:
+\begin{equation}
+              L = r_n \cdot p_n = n \hbar \, ,
+\end{equation} 
+wobei $r_n$ und $p_n$ der Radius und der zugeh\"orige Impuls der Kreisbahn zu
+einer Quantenzahl $n$ sind. Erlaubte Kreisbahnen sind somit solche, bei denen der
+Bahndrehimpuls ein ganzzahliges Vielfaches von $\hbar$ ist.
+Zusammen mit der klassischen Bedingung, dass bei einer Kreisbahn die
+Impuls\"anderung (manchmal spricht man auch von der Fliehkraft) $\dot{p}=mv^2/r=p^2/mr$ gleich der
+Coulomb-Kraft sein muss, also
+\begin{equation}
+                \frac{p^2}{mr} = \frac{e^2}{4\pi \epsilon_0} \frac{1}{r^2}
+\end{equation}
+($m$ Elektronenmasse, $e$ Elektronenladung, $\epsilon_0$ elektrische Feldkonstante),
+erhalten wir zwei Bedingungen zwischen $p_n$ und $r_n$, sodass wir beide Gr\"o\ss en
+als Funktion der Quantenzahl $n$ ausdr\"ucken k\"onnen:
+\begin{equation}
+         p_n = \frac{e^2 m}{4\pi \epsilon_0 \hbar} \frac{1}{n}  \hspace{1cm} \text{und} \hspace{1cm}
+         r_n = \frac{4 \pi \epsilon_0 \hbar^2}{e^2 m} n^2\, . 
+\end{equation}
+Hier wurde angenommen, dass der Atomkern wesentlich schwerer ist als die Masse der
+Elektronen. M\"ochte man die endliche Masse des Atomkerns ber\"ucksichtigen, muss man in
+den folgenden Gleichungen die Elektronenmasse $m$ durch die reduzierte Masse
+$\mu = m M/(m+M)$ ($M$ die Kernmasse) ersetzen.
+
+Setzt man diese Beziehungen in die klassische Formel f\"ur die Energie ein,
+\begin{equation}
+                 E = \frac{p^2}{2m} - \frac{e^2}{4\pi \epsilon_0} \frac{1}{r} \, ,
+\end{equation}
+erhalten wir die nach der Quantisierungsbedingung erlaubten Energien  
+in einem Wasserstoffatom:
+\begin{equation}
+                 E_n  = - \frac{e^4 m}{8 \epsilon_0^2 h^2} \frac{1}{n^2}  \, .
+\end{equation}
+
+Eine zweite wichtige Annahme von Bohr war, dass die beobachteten Frequenzen
+der emittierten oder absorbierten Strahlung von einem Atom nicht den Energien der
+m\"oglichen Zust\"ande entsprechen, sondern den \"Uberg\"angen zwischen zwei
+m\"oglichen Energien in einem Atom. Das bedeutet, wenn ein Elektron von einem
+erlaubten Zustand $E_n$ zu einem erlaubten Zustand $E_m$ springt, wird eine
+Energie $\Delta E = E_m - E_n$ von dem Elektron in Form von Strahlung aufgenommen
+bzw.\ abgegeben. Schlie\ss ich war die dritte Annahme von Bohr, dass diese
+Energiedifferenz, die als Strahlung absorbiert bzw.\ emittiert wird, \"uber die
+Formel von Planck und Einstein, $\Delta E = h \cdot \nu$, mit der
+beobachteten Frequenz $\nu$ der Strahlung -- bzw.\ der beobachteten
+Wellenl\"ande $\lambda = c/\nu$ -- in Beziehung steht. Damit waren nach dem
+Bohr'schen Atommodell die folgenden Frequenzen als Absorptions- bzw.\
+Emissionslinien erlaubt:
+\begin{equation}
+                 \nu(n,m) = \frac{1}{h} (E_n - E_m) = \frac{e^4 m}{8 \epsilon_0^2 h^3} 
+                          \left( \frac{1}{n^2} - \frac{1}{m^2} \right)  \hspace{1cm} (m,n=1,2,3,...) \, .
+\end{equation}
+
+Sommerfeld konnte dieses Modell auf elliptische
+Bahnkurven erweitern und damit das Verhalten von Wasserstoff in einem magnetischen
+oder auch einem elektrischen Feld erkl\"aren. Doch schon f\"ur das Heliumatom schlugen
+alle Erkl\"arungsans\"atze fehl. Und auch f\"ur die Atome mit mehreren Elektronen konnten
+keine Bahnkurven f\"ur die Elektronen konstruiert werden. Es zeigte sich, dass die
+Ans\"atze zur Konstruktion von erlaubten Bahnkurven f\"ur die Elektronen nur f\"ur integrable
+Modelle funktionierten, bei denen die Bahnkurven periodisch sind. 
+
+\subsection{Heisenbergs Umdeutung -- Juli 1925}
+
+Wie schon erw\"ahnt, versucht Heisenberg, die neue Quantenmechanik ausschlie\ss lich
+auf beobachtbare Gr\"o\ss en zu bauen. Darunter versteht er in erster Linie die Intensit\"aten
+und die Frequenzen der Emissions- und Absorptionslinien. Er verbindet mit den klassischen
+Variablen $x$ und $p$ (Ort und Impuls) neue Gr\"o\ss en $X$ und $P$, die direkt
+mit diesen beobachtbaren Intensit\"aten und Frequenzen zusammenh\"angen sollen.  
+
+Heisenberg m\"ochte in seiner Arbeit vom Juli 1925 zun\"achst eine vergleichsweise 
+harmlose Frage kl\"aren: Wenn ein klassisches Objekt $x$ durch ein quantenmechanisches
+Objekt $X$ ersetzt wird, durch welches quantenmechanische Objekt wird dann $x^2$
+ersetzt? Zur Kl\"arung dieser Frage betrachtet er zun\"achst eine Bahnkurve $x(t)$ aus 
+der klassischen Physik. Wir beschr\"anken uns hier auf periodische Bahnkurven (Heisenberg
+betrachtet auch den aperiodischen Fall, allerdings ist dieser etwas problematisch), sodass
+wir f\"ur die Zeitabh\"angigkeit dieser Kurve eine Fourier-Zerlegung ansetzen k\"onnen:
+\begin{equation}
+           x(t) = \sum_m x(m) {\rm e}^{2\pi {\rm i} m \nu t}  \, .
+\end{equation}
+(Die Summation erstreckt sich \"uber alle $m\in \mathbb{Z}$, wobei aus der Realit\"at von
+$x(t)$ die Einschr\"ankung $x(-m)=x^*(m)$ folgt.)
+$\nu$ ist die Grundfrequenz und $m \nu$ sind die (harmonischen) Oberfrequenzen. F\"ur
+einen besseren  Vergleich zwischen der klassischen Mechanik und den \glqq umgedeuteten\grqq\
+quantenmechanischen Gr\"o\ss en kennzeichnet Heisenberg eine solche Trajektorie noch
+durch ihren Drehimpuls $J$, wobei er $J=n\hbar$ schreibt und den Index $n$ f\"ur eine
+klassische Trajektorie noch kontinuierlich l\"asst. Damit erh\"alt er
+\begin{equation}
+           x(n;t) = \sum_m x(n,m) {\rm e}^{2\pi {\rm i} m \nu(n) t}  \, .
+\end{equation}
+Bildet man das Quadrat dieser Funktion, erh\"alt man:
+\begin{equation}
+           x(n;t)^2 = \sum_{m,k} x(n,m) x(n,k) {\rm e}^{2\pi {\rm i} (m+k) \nu(n) t} 
+           = \sum_{m} \left( \sum_k x(n,m-k) x(n,k) \right) {\rm e}^{2\pi {\rm i} m \nu(n) t}  \, .
+\end{equation}
+Heisenberg leitet daraus ein klassisches Multiplikationsgesetz f\"ur
+die Objekte $x(n,m)$ ab: $x^2(n,m)=\sum_k x(n,m-k) x(n,k)$. Dies entspricht einer
+diskreten Faltung im zweiten Index. 
+
+Heisenberg m\"ochte nun die klassischen Objekte $x(n,m)$ (die Amplituden) und $\nu(n)$ (die
+Frequenzen) durch die quantenmechanisch beobachtbaren Gr\"o\ss en $X(n,m)$ und 
+$\nu(n,m)$ ersetzen, die er mit den Intensit\"aten und Frequenzen zu einem \"Ubergang von einem 
+Zustand $m$ in einen Zustand $n$ in Verbindung bringt. Die Frequenzen sollen dabei dem
+Ritz'schen Kombinationsprinzip gen\"ugen, d.h., zu $\nu(n,m)$ soll es Frequenzen
+$\nu(n)$ und $\nu(m)$ geben, sodass $\nu(n,m)=\nu(n)-\nu(m)$. F\"ur die Gr\"o\ss en $X(n,m)$ 
+postuliert Heisenberg aus rein physikalischen \"Uberlegungen zur Kombination der \"Uberg\"ange 
+zwischen den Zust\"anden die Regel:
+\begin{equation}
+\label{eq_1925_XX}
+              X^2(n,m)= \sum_k X(n,k) X(k,m)  \, . 
+\end{equation}
+Er dr\"uckt diese Gleichung allerdings etwas anders aus (im Wesentlichen ist $m$ f\"ur ihn
+die Differenz zwischen Anfangs- und Endzustand) und erkennt vermutlich nicht, dass
+es sich hierbei um eine einfache Matrizenmultiplikation handelt. Matrizen geh\"orten damals
+nicht zur Standardausbildung in der Physik. 
+
+Heisenberg nutzt nun diese Multiplikationsregel, um beispielsweise die Korrekturen
+zum anharmonischen Oszillator (also einem Oszillator, bei dem in
+der ansonsten linearen Bewegungsgleichung ein Term proportional zu $x^2$ auftritt)
+zu berechnen
+und vergleicht diese mit bekannten Korrekturtermen.
+
+Heisenberg formuliert f\"ur seine \glqq Umdeutungsvariablen\grqq\ $X$ das Programm:
+Man bestimme zun\"achst L\"osungen der Bewegungsgleihungen f\"ur $X$, d.h., wenn die
+klassischen Bewegungsgleichungen f\"ur die Trajektorien die Form
+\begin{equation}
+               \ddot{x} + f(x) = 0  
+\end{equation} 
+haben, dann sollen f\"ur $X$ dieselben Bewegungsgleichungen gelten. Er begr\"undet dies mit dem
+Korrespondenzprinzip zwischen klassischen und quantenmechanischen Gr\"o\ss en.
+
+Au\ss erdem soll $X$ eine Quantisierungsbedingung auferlegt werden, die -- ebenfalls
+nach dem Korrespondenzprinzip -- das Analogon zur klassischen Quantisierungsbedingung
+\begin{equation}
+                   \oint p\,{\rm d}q=nh
+\end{equation}
+sein soll. Er ben\"otigt dazu das Produkt von $X$ mit $P$, den quantenmechanischen Gegenst\"ucken
+zum Ort $x$ und zum Impuls $p$. Er stellt fest, dass das Produkt Gl.\ \ref{eq_1925_XX} f\"ur 
+verschiedene Matrizen nicht kommutiert, also $XP$ nicht
+dasselbe ist wie $PX$. Daher postuliert er f\"ur das Produkt eine Symmetriesierung:
+$(XP+PX)/2$.
+Er leitet dann speziell f\"ur den harmonischen Oszillator
+(bei dem die klassischen Bahnkurven periodisch sind) eine Beziehung ab, die in
+versteckter Form schon die kanonischen Vertauschungsrelationen enth\"alt. Klar
+herausgearbeitet werden diese allerdings erst in der Arbeit von Born und Jordan.
+
+\subsection{Born und Jordan -- September 1925}
+
+Max Born hatte Mathematik und Physik studiert und war seit 1921 Professor f\"ur theoretische
+Physik in G\"ottingen. Pascual Jordan war 1925 sein Assistent. Beide
+kannten Matrizen und erkannten in den Multiplikationsgesetzen der quantenmechanischen
+Objekte von Heisenberg die Matrixmultiplikation. Sie hatten die Ideen von
+Heisenberg auch im \textit{statu nascendi} (wie sie selbst schreiben) kennengelernt.
+
+Ihre Arbeit beginnt mit einer ausf\"uhrlichen Einf\"uhrung in die Theorie der
+Matrizen. Sie formulieren die heute als Heisenberg'schen Bewegungsgleichungen
+bekannten Gleichungen. Dazu erl\"autern sie zun\"achst, wie die Ableitung einer
+Funktion einer Matrix $X$, also $f(X)$, nach der Matrix $X$ zu interpretieren ist. Dann
+fordern Sie als Teil des sogenannten Korrespondenzprinzips, dass f\"ur eine
+Hamilton-Matrix $H$, aufgefasst als Funktion von $X$ (dem Quantenanalogon zur kartesischen 
+Koordinate) und $P$  (dem Quantenanalogon zum Impuls $p$), die Matrizen $X$ und $P$ 
+die Gleichungen
+\begin{equation}
+       \dot{X} =  \frac{\partial H(X,P)}{\partial P} \hspace{1cm} {\rm und} \hspace{1cm} 
+              \dot{P} = - \frac{\partial H(X,P)}{\partial X}  
+\end{equation}
+erf\"ullen sollen. Das sind genau die Bewegungsgleichungen, die wir heute als
+Heisenberg'sche Bewegungsgleichungen bezeichnen.
+
+Von besonderer Bedeutung ist, dass sie die
+\glqq alte\grqq\ Quantisierungsbedingung
+\begin{equation}
+              \oint p \,{\rm d}q = n h
+\end{equation}
+durch eine neue, den Matrizen $P$ und $X$ angepasste Bedingung 
+ersetzen, von der sie dann zeigen, dass sie \"aquivalent ist zu
+\begin{equation}
+              \sum_k \big( P(n,k) X(k,m) - X(n,k) P(k,m) \big) =  \frac{h}{2\pi {\rm i}} \, ,  
+\end{equation}
+also dem, was wir heute als die kanonischen Vertauschungsrelationen bezeichnen.
+Heisenberg hatte diese Beziehung nur an einem Spezialfall (dem harmonischen Oszillator)
+in versteckter Form erhalten.
+
+Sie berechnen in ihrer Arbeit auch das Spektrum des Hamilton-Operators f\"ur
+den harmonischen Oszillator. Au\ss erdem zeigen Sie, dass die Quadrate der
+Matrixelemente $| X(n,m)|^2$ mit den Wahrscheinlichkeiten f\"ur einen durch
+die Koordinate $x$ (einen Dipol) induzierten \"Ubergang
+vom Energiezustand zu der Frequenz $\nu(m)$ zur Energie zu der Frequenz $\nu(m)$
+zusammenh\"angt. 
+
+Gelegentlich wurde spekuliert, weshalb Born und Jordan ihre Arbeit nicht zusammen
+mit Heisenberg geschrieben haben. Hierzu sollte man wissen, dass Heisenberg Mitte Juni 
+nach seiner R\"uckkehr aus Helgoland, wo er wichtige Rechnungen zu seinen
+neuen Gr\"o\ss en vorgenommen hatte, ein Exemplar seiner Arbeit Born gegeben
+und diesen gebeten hatte, die Arbeit einzureichen, sofern er den Inhalt als
+interessant erachtete. Anschlie\ss end fuhr Heisenberg bis Ende September in Urlaub
+und hatte mit Born nicht mehr gesprochen. Born hatte sich die Arbeit von Heisenberg zusammen
+mit Jordan genauer angeschaut und diese dann auch eingereicht. Erst in diesem Zusammenhang
+erkannten Born und Jordan, dass Heisenberg im Wesentliche eine Matrixmultiplikation
+f\"ur seine Gr\"o\ss en formuliert hatte. Die Ende September eingereichte Arbeit von Born und
+Jordan beruhte daher auf keinen weiteren Diskussionen mit Heisenberg und erschien deshalb
+wohl ohne ihn als Koautor. Erst nach Heisenbergs R\"uckkehr arbeiteten alle drei an der
+allgemeinen Formulierung zusammen und ver\"offentlichten diese Ergebnisse in der
+\glqq Drei-M\"anner-Arbeit\grqq.
+
+\subsection{Dirac -- November 1925}
+
+Offenbar hatte Max Born ein Exemplar der Arbeit von Heisenberg auch an Ralph Fowler
+geschickt, der gerade zum Fellow of the Royal Society ernannt worden war, und dieser
+hatte es an Dirac weitergegeben, dessen Betreuer er war. Offenbar kannte Dirac die
+sp\"atere Arbeit von Born und Jordan noch nicht, denn er bezieht sich ausschlie\ss lich
+auf die Arbeit von Heisenberg, kommt aber im Wesentlichen zu den gleichen Ergebnissen
+wie Born und Jordan. 
+
+Sein Schwerpunkt war die nicht-kommutative Algebra, die
+sich aus den Heisenberg'schen Multiplikationsregeln ergab. Anscheinend erkannte auch er
+nicht, dass es sich um ein Matrixprodukt handelt, sondern bezeichnet die neue
+Multiplikationsregel als \glqq Heisenberg-Produkt\grqq. Auch Dirac leitet zun\"achst wichtige
+Regeln f\"ur das Matrixprodukt ab, insbesondere auch Ableitungsregeln. Eine wesentliche
+Einsicht von Dirac ist, dass der Kommutator zweier Operatoren im Grenzfall gro\ss er 
+Quantenzahlen und vergleichsweise kleiner Differenzen von Quantenzahlen bei 
+atomaren \"Uberg\"angen in eine
+klassische Poisson-Klammer \"ubergeht. Bei ihm findet man daher die Quantisierungsregel,
+dass im Quantenformalismus die klassischen Poisson-Klammern durch den Kommutator
+(multipliziert mit $h/2\pi {\rm i}$) zu ersetzen sind. 
+
+Zun\"achst irritierend an seiner Arbeit ist, dass Dirac die Poisson-Klammer mit dem heutigen
+Symbol f\"ur den Kommutator bezeichnet, d.h.\ $[x,y]$ ist die Poisson-Klammer f\"ur die beiden
+Observablen $x$ und $y$. Der Kommutator wird immer explizit ausgeschrieben. Er formuliert
+als Quantisierungsbedingung explizit die kanonischen Vertauschungsrelationen:
+\begin{equation}
+         q_r q_s - q_s q_r = 0   \hspace{1cm}  p_rp_s-p_sp_r=0 \hspace{1cm} 
+         q_r p_s - p_s q_r = \delta_{rs}\, {\rm i} \frac{h}{2\pi}
+\end{equation}
+Dirac verifiziert, dass der Kommutator von zwei Gr\"o\ss en dieselben Beziehungen erf\"ullt
+wie die Poisson-Klammer (insbesondere die Antisymmetrie und die Jacobi-Identit\"at) und
+folgert daraus, dass f\"ur die quantisierten Gr\"o\ss en ganz allgemein dieselben Beziehungen
+gelten m\"ussen wie im klassischen Fall. Schon in seiner Einleitung betont er, was erst in
+der Arbeit abgeleitet wird, dass die Beziehungen zwischen beobachtbaren Gr\"o\ss en in der
+klassischen Physik und in der Quantenphysik dieselben sind, und dass lediglich die
+algebraischen Regeln -- das Multiplikationsgesetz -- f\"ur die quantenmechanischen
+Gr\"o\ss en andere sind. 
+
+\section{Die Wellenmechanik von Schr\"odinger 1926}
+
+Wenn man heute die Schr\"odinger-Gleichung ableitet, geschieht das meist \"uber
+die klassische Energiebeziehung
+\begin{equation}
+             E = \frac{p^2}{2m} + V(x) \, ,
+\end{equation}
+von der man verlangt, dass sie \"uber die de Broglie-Beziehungen $E=\hbar \omega$ und
+$p= \hbar k$ zu einer Dispersionsrelation zwischen der Winkelfrequenz $\omega$ und
+dem Wellenzahlvektor $k$ f\"ur ein Feld $\psi(x,t)$ wird, d.h., $\omega$ erh\"alt man durch
+die Ableitung nach der Zeit $t$ und $k$ durch die Ableitung nach dem Ort $x$. 
+
+Erwin Schr\"odinger hat \glqq seine\grqq\ Gleichung im Jahr 1926 jedoch nicht auf diese
+Weise hergeleitet, sondern ist einen ganz anderen Weg gegangen. 
+In diesem Jahr hat er mehrere Arbeiten zur Quantentheorie ver\"offentlicht, wobei zun\"achst
+von besonderer Bedeutung eine Serie von vier Arbeiten (er nannte
+sie \glqq Mitteilungen\grqq) mit dem Titel \glqq Quantisierung als Eigenwertproblem\grqq\ 
+\cite{Schroedinger1bis4} ist. In diesen Arbeiten entwickelte er seine Idee von einer
+Wellengleichung, die in ihrer zeitunabh\"angigen Form eine Eigenwertgleichung
+f\"ur die m\"oglichen Energien eines Systems darstellt. In einer weiteren Arbeit, die am 18.\ M\"arz 1926
+bei den Annalen der Physik einging, zeigte Schr\"odinger die \"Aquivalenz 
+seiner Formulierung der Quantentheorie mit der Formulierung von Heisenberg.
+
+Schr\"odinger war beeindruckt von der Arbeit von Louis de Broglie und der
+Idee, dass jede Form von Materie nicht nur Teilcheneigenschaften haben soll
+sondern auch Welleneigenschaften. Dies erinnerte ihn an einen Formalismus,
+der urspr\"unglich aus der Optik stammt, der von Hamilton aber auf die Mechanik
+\"ubertragen worden war und als Hamilton-Jacobi-Formalismus bekannt war.
+Dieser Formalismus soll kurz angedeutet werden.
+
+\subsection{Von Fermat und Huygens zu Hamilton und Jacobi} 
+
+In der Optik beschreiben wir die Ausbreitung von Licht oft nach zwei Prinzipien:
+Zum einen verwenden wir in der geometrischen Optik gerne das Fermat'sche Prinzip,
+wonach sich Licht in einer optisch inhomogenen Umgebung zwischen zwei Punkten
+so ausbreitet, dass die Zeit f\"ur die Zur\"ucklegung dieser Wegstrecke minimal wird.
+Das Ergebnis dieses Extremalprinzips sind Trajektorien, die zwei Punkte verbinden.
+Diese Trajektorien bilden die Grundlage der geometrischen Optik.
+
+Zum anderen verwenden wir das Huygens'sche Prinzip, wonach jeder Punkt einer
+Wellenfront zum Ausgangspunkt einer kreisf\"ormigen Elementarwelle wird, sodass die
+Einh\"ullende all dieser Elementarwellen die neue Wellenfront bildet. 
+Auch wenn wir heute das Huygens'sche Prinzip allgemein als ein Prinzip der Ausbreitung 
+von Wellen interpretieren (Huygens stellte sich wohl eher Sto\ss prozesse in einem mit
+winzigen Kugeln angef\"ullten Medium vor), spielt beim Huygens'schen Prinzip die
+Wellenl\"ange keine Rolle; insofern steht das Huygens'sche Prinzip in seiner
+urspr\"unglichen Form noch zwischen der Wellenoptik und der geometrischen Optik. 
+
+\begin{figure}[htb]
+\begin{picture}(200,140)(0,0)
+\put(100,10){\makebox(0,0){$\bullet$}}
+\qbezier(100,10)(50,70)(20,120)
+\qbezier(100,10)(70,70)(50,130)
+\qbezier(100,10)(85,70)(80,135)
+\qbezier(100,10)(100,70)(110,135)
+\qbezier(100,10)(115,70)(150,130)
+\qbezier(100,10)(130,70)(180,120)
+\thicklines
+\qbezier(25,100)(95,152)(170,98)
+\qbezier(37,85)(90,125)(154,85)
+\qbezier(48,65)(95,100)(140,68)
+\put(105,5){\makebox(0,0){$x_0$}}
+\put(20,126){\makebox(0,0){$x_1$}}
+\put(50,136){\makebox(0,0){$x_2$}}
+\put(80,141){\makebox(0,0){$x_3$}}
+\put(110,141){\makebox(0,0){$x_4$}}
+\put(150,136){\makebox(0,0){$x_5$}}
+\put(180,126){\makebox(0,0){$x_6$}}
+\put(20,120){\makebox(0,0){$\bullet$}}
+\put(50,130){\makebox(0,0){$\bullet$}}
+\put(80,135){\makebox(0,0){$\bullet$}}
+\put(110,135){\makebox(0,0){$\bullet$}}
+\put(150,130){\makebox(0,0){$\bullet$}}
+\put(180,120){\makebox(0,0){$\bullet$}}
+\end{picture}
+%
+\hfill
+\begin{picture}(210,140)(0,0)
+\put(40,58.2){\makebox(0,0){$\bullet$}}
+\put(50,60.2){\makebox(0,0){$\bullet$}}
+\put(60,62.2){\makebox(0,0){$\bullet$}}
+\put(70,63.4){\makebox(0,0){$\bullet$}}
+\put(80,64.5){\makebox(0,0){$\bullet$}}
+\put(90,65.0){\makebox(0,0){$\bullet$}}
+\put(100,65.1){\makebox(0,0){$\bullet$}}
+\put(110,65.0){\makebox(0,0){$\bullet$}}
+\put(120,64.5){\makebox(0,0){$\bullet$}}
+\put(130,63.4){\makebox(0,0){$\bullet$}}
+\put(140,62.2){\makebox(0,0){$\bullet$}}
+\put(150,60.2){\makebox(0,0){$\bullet$}}
+\put(160,58.2){\makebox(0,0){$\bullet$}}
+\put(40,58.2){\circle{30}}
+\put(50,60.2){\circle{30}}
+\put(60,62.2){\circle{30}}
+\put(70,63.4){\circle{30}}
+\put(80,64.5){\circle{30}}
+\put(90,65){\circle{30}}
+\put(100,65.1){\circle{30}}
+\put(110,65){\circle{30}}
+\put(120,64.5){\circle{30}}
+\put(130,63.4){\circle{30}}
+\put(140,62.2){\circle{30}}
+\put(150,60.2){\circle{30}}
+\put(160,58.2){\circle{30}}
+\thicklines
+\qbezier(10,50)(100,80)(190,50)
+\qbezier(10,50.5)(100,80.5)(190,50.5)
+\qbezier(10,66.5)(100,96.5)(190,66.5)
+\end{picture}
+\caption{\label{fig_HJ_1}%
+Die Beziehung zwischen dem Fermat'schen Ausbreitungsprinzip und dem
+Huygens'schen Ausbreitungsprinzip von Licht. (links) Nach dem Fermat'schen
+Prinzip breiten sich von einem Punkt $x_0$ die Strahlen zu Punkten $x_i$ so aus,
+dass die ben\"otigte Zeit minimal ist. Man kann nun jedem Punkt $x$ im Raum die Zeitdauer
+$t$ der Trajektorie zuordnen, die das Licht von $x_0$ zu diesem Punkt $x$ ben\"otigt. Die
+Linien konstanter Zeit bilden dann Fl\"achen, die von den Trajektorien senkrecht
+durchsto\ss en werden. (rechts) Nach dem Huygens'schen Prinzip breiten sich von
+jedem Punkt einer Wellenfront (das sind die Fl\"achen konstanter Zeit bei Fermat) 
+kreisf\"ormige Elementarwellen aus, deren Einh\"ullende die neue Wellenfront bildet.}
+\end{figure}
+ 
+Ausgehend vom Fermat'schen Prinzip gelangt man zu den Huygens'schen Wellenfronten,
+indem man ein Feld bestimmt, das zu jedem Raumpunkt $x$ die Zeit angibt, die das
+Licht von einem festen Ausgangspunkt $x_0$ bis zu diesem Punkt $x$ ben\"otigt. Fl\"achen
+konstanter Zeit bilden dann die Huygens'schen Wellenfronten. Da sich die Frequenz von Licht
+w\"ahrend seiner Ausbreitung nicht \"andert (die Wellenl\"ange \"andert sich mit der optischen
+Dichte eines Mediums nach der Gleichung $\nu \lambda(x) = c(x)$), 
+sind Fl\"achen konstanter Zeit auch gleichzeitig Fl\"achen konstanter
+Phase. Umgekehrt kann man
+von dem Feld zu diesen Wellenfronten das Gradientenfeld bilden. Dieses definiert die Tangenten an die
+Fermat'schen Trajektorien.
+
+\subsection{Das Fermat'sche Prinzip}
+
+Die Geschwindigkeit von Licht $c(x)$ an einem Punkt $x$ in einem Medium ist durch die optische 
+Dichte bzw.\ den Brechungsindex $n(x)$ gegeben: $c(x) = c/n(x)$, wobei $c$ die Lichtgeschwindigkeit
+im Vakuum ist. In optisch anisotropen Medien handelt es sich bei $n(x)$ um einen Tensor; diese
+Problematik soll hier aber au\ss er Acht gelassen werden. Die Zeit $t(x)$, die das Licht von einem
+Punkt $x_0$ zu einem Punkt $x$ entlang einer Trajektorie $\gamma=x(t)$ ben\"otigt, ist
+\begin{equation}
+                     T[\gamma](x,x_0) =  \int_{\gamma}  \frac{n(x')}{c}\,{\rm d}x' = \frac{1}{c} \int_{t(x_0)}^{t(x)} 
+                       n(x(\tau))\, \left| \frac{{\rm d}x}{{\rm d}\tau}\right| \, {\rm d \tau} \, .  
+\end{equation}
+Hierbei wurde ausgenutzt, dass f\"ur gen\"ugend kleine Zeitspannen, in denen die
+Geschwindigkeit als konstant angesehen werden kann, ${\rm d}t = {\rm d}s/v$ gilt. 
+
+Nach dem Fermat'schen Prinzip ist die Aufgabe nun folgende: Gesucht ist die Trajektorie
+$x(t)$, die das Funktional $T[x(t)](x,x_0)$ bei festgehaltenem Anfangspunkt $x_0$ und
+festgehaltenem Endpunkt $x$ minimiert. Angenommen, diese Trajektorie ist gefunden --
+dies ist die Trajektorie, die das Licht in der N\"aherung der geometrischen Optik 
+tats\"achlich durchl\"auft --, dann k\"onnen wir jedem Punkt $x$ im Raum diese Zeit
+$T(x,x_0)={\rm min}_{[x(t)]}T[x(t)](x,x_0)$ zuordnen. Die Fl\"achen $T(x,x_0)={\rm const}$
+zu einem festgehaltenen Punkt $x_0$ bilden die Huygens'schen Wellenfronten. 
+
+\subsection{Das Huygens'sche Prinzip}
+   
+Kennt man umgekehrt diese Fl\"achen konstanter Zeit (bzw.\ konstanter Phase), 
+so kann man an jedem Punkt
+die Fl\"achennormale bilden (genauer den Gradienten des Wirkungsfeldes, also $\nabla S(x)$)
+und zu diesem Vektorfeld die Trajektorien konstruieren. Diese Trajektorien sind die
+Fermat'schen Trajektorien. Sie durchsto\ss en die Huygens'schen Wellenfronten
+orthogonal (siehe Abb.\ \ref{fig_HJ_1} (links)).
+
+Das Huygens'sche Prinzip besch\"aftigt sich mit der Ausbreitung dieser Fl\"achen zu konstanten
+Zeiten. Jeder Punkt einer solchen Fl\"ache bildet den Ausgangspunkt f\"ur eine Elementarwelle (siehe
+Abb.\ \ref{fig_HJ_1} (rechts)). Die Einh\"ullende all dieser Elementarwelle (die sich lokal jeweils
+mit der durch die optische Dichte des Mediums gegebenen Lichtgeschwindigkeit ausbreiten)
+bildet dann die n\"achste Fl\"ache konstanter Zeit. Auf diese Weise erh\"alt man die Fl\"achen
+konstanter Zeiten und kann aus den Gradienten zu diesen Fl\"achen wieder das Vektorfeld zu   
+den Trajektorien bestimmen. 
+
+\subsection{Die Hamilton-Jacobi-Gleichung}
+
+Wir beginnen die analytische Mechanik heute gerne mit dem Lagrange-Formalismus,
+aus dem die Bewegungsgleichungen -- die Euler-Lagrange-Gleichungen -- abgeleitet werden.
+Dieser Formalismus hat zwei gro\ss e Vorteile: (1) das Hamilton'sche Prinizip, wonach
+das Integral \"uber die Lagrange-Funktion als Funktional der Bahnkurven f\"ur die realisierte
+Bahnkurve station\"ar wird, ist unabh\"angig vom gew\"ahlten Koordinatensystem. Daher
+gilt es auch f\"ur verallgemeinerte Koordinaten, die den Zwangsbedingungen des Problems
+angepasst sind. (2) Das Prinzip l\"asst sich auch relativistisch invariant formulieren (z.B.\
+in einer Feldtheorie), wohingegen der Hamilton'sche Formalismus die Auszeichnung einer
+Zeitkoordinate erfordert. 
+
+Gegeben sei eine Lagrange-Funktion $L(q,\dot{q},t)$, die oft die Form
+\begin{equation}
+          L(q,\dot{q},t) = T(q(t),\dot{q}(t)) - V(q(t),t)
+\end{equation}    
+annimmt. $T$ ist die kinetische Energie ausgedr\"uckt in den verallgemeinerten Koordinaten
+$q$ und $\dot{q}$ und meist eine quadratische Funktion von $\dot{q}$. $V$ ist die potenzielle
+Energie, die oft nur von $q$ abh\"angt, aber eventuell noch explizit von der Zeit $t$ abh\"angen
+kann. Wir definieren nun das Wirkungsfunktional:
+\begin{equation}
+\label{eq_HJ_S}
+         S[q(t)](q_1,t_1,q_0,t_0) = \int_{t_0}^{t_1} L(q(t),\dot{q}(t), t) \, {\rm d} t  \, .
+\end{equation}
+Das Wirkungsfunktional ist ein Funktional von Wegen $q: [t_0,t_1] \rightarrow \mathbb{R}^n$,
+die alle zum Zeitpunkt $t_0$ an einem Punkt $q_0=q(t_0)$ beginnen und zum Zeitpunkt
+$t_1$ am Punkt $q_1=q(t_1)$ enden. Diese funktionale Abh\"angigkeit wird durch die eckige
+Klammer $[q(t)]$ ausgedr\"uckt. Zur Ableitung der Euler-Lagrange-Gleichungen bestimmt man die 
+erste Variation von $S[q(t)]$ 
+unter den genannten Randbedingungen, Anfangs- und Endpunkt also festgehalten werden. 
+    
+Wir betrachten nun die Wirkung als eine Funktion des Orts $q$ und der Zeit $t$, bei dem eine 
+Trajektorie endet, die bei $q_0$ zum Zeitpunkt $t_0$ beginnt. Bei dieser
+Trajektorie soll es sich um eine L\"osung der Euler-Lagrange-Gleichung handelt. Das bedeutet:
+\begin{equation}
+       S(q,t;q_0,t_0) = {\rm min}_{[q(t)]} S[q(t)](q,t,q_0,t_0) 
+                  = {\rm min}_{[q(t)]}  \int_{t_0}^{t_1} L(q(t),\dot{q}(t), t) \, {\rm d} t  \, .
+\end{equation}
+Wir setzen also in Gl.\ \ref{eq_HJ_S} eine L\"osung der Euler-Lagrange-Gleichung ein und
+betrachten die Wirkung nicht mehr als Funktional von Trajektorien sondern als Funktion
+der Endpunkte f\"ur die physikalisch realisierten Trajektorien. Die Ausgangsdaten, $q_0$ und $t_0$,
+werden festgehalten, sodass die Wirkung zu einem Feld $S(q,t)$ wird. 
+
+Statt nun dieses Feld dadurch zu berechnen, dass man f\"ur jeden Punkt $(q,t)$ die
+L\"osung der Euler-Lagrange-Gleichung bestimmt, diese L\"osung in die
+Lagrange-Funktion einsetzt und das Wirkungsintegral berechnet, kann man direkt eine
+partielle Differentialgleichung f\"ur $S(q,t)$ aufstellen.
+Man erh\"alt diese Differentialgleichung, indem man zun\"achst die Legendre-Transformierte
+$H(q,p,t)$ von $L(q,\dot{q},t)$ bez\"uglich der Variablen $\dot{q}$ bestimmt, also
+\begin{equation}
+        H(q,p,t) = {\rm min}_{\dot{q}} (p \dot{q} - L(q,\dot{q},t)) \, .
+\end{equation}
+Dies ist die Hamilton-Funktion. Ersetzt man nun den Impuls $p$ durch den Gradienten
+von $S$,
+\begin{equation}
+\label{eq_HJ_p}
+        p = \nabla S(q,t) \, ,
+\end{equation}
+und ber\"ucksichtigt, dass die Zeitableitung der Wirkung gleich der Hamilton-Funktion
+ist, erh\"alt man
+\begin{equation}
+        H\left( q, \frac{\partial S}{\partial q},t\right) = - \frac{\partial S}{\partial t} \, . 
+\end{equation}
+Dies ist die Hamilton-Jacobi-Gleichung. Wurde die Funktion $S(q,t)$ gefunden, 
+erh\"alt man daraus eine gew\"ohnliche Differentialgleichung erster Ordnung
+f\"ur die Impulse (Gl.\ \ref{eq_HJ_p}).
+
+\subsection{Der Ansatz von Schr\"odinger}
+
+In seiner ersten Mitteilung vom Januar 1926 l\"ost Schr\"odinger das Wasserstoffproblem
+und zeigt, dass er mit seiner Formulierung, die sich aus einem Extremalprinzip ergibt,
+dieselben Energiewerte erh\"alt wie sie aus der Bohr'schen Quantisierungsbedingung folgen.
+
+Die Idee von Schr\"odinger ist folgende: Ausgangspunkt ist die Hamilton-Jacobi-Gleichung
+(s.o.) f\"ur das Wasserstoffproblem. Das Feld $S(q,t)$ fasst er als (komplexe) Phase einer
+Welle auf, wie es auch bei einer Kurzwellenasymptotik gemacht wird:
+\begin{equation}
+                 \psi(q,t) = \exp \frac{S(q,t)}{K} \, .
+\end{equation} 
+Die Konstante $K$ f\"uhrt er aus Dimensionsgr\"unden ein -- sie muss die Dimension einer
+Wirkung haben -- und setzt sie sp\"ater
+gleich $h/2\pi$, um die volle \"Ubereinstimmung mit den Bohr'schen Energiewerten zu
+erhalten. Au\ss erdem nutzt er aus, dass $\frac{\partial S}{\partial t}=-E$ ist. Mit
+\begin{equation} 
+       \frac{\partial S}{\partial q} =  \frac{K}{\psi(q,t)} \frac{\partial \psi(q,t)}{\partial q} 
+\end{equation}
+ergibt sich f\"ur die Hamilton-Jacobi-Gleichung:
+\begin{equation} 
+       \left( \frac{\partial \psi}{\partial x} \right)^2 +  \left( \frac{\partial \psi}{\partial y} \right)^2 +
+              \left( \frac{\partial \psi}{\partial z} \right)^2
+               -  \frac{2m}{K^2} \left( E + \frac{e^2}{r} \right) \psi(q,t)^2 = 0   \, .
+\end{equation}
+Bisher hat Schr\"odinger nur eine Umformulierung der klassischen Hamilton-Jacobi-Gleichung
+vorgenommen. Nun definiert Schr\"odinger eine \glqq Wirkung\grqq\ zu dieser Feldgleichung,
+indem er einfach das r\"aumliche Integral bildet:
+\begin{equation} 
+   J =   \int \! {\rm d}x\, {\rm d}y\, {\rm d}z \left\{  
+        \left( \frac{\partial \psi}{\partial x} \right)^2 +  \left( \frac{\partial \psi}{\partial y} \right)^2 +
+              \left( \frac{\partial \psi}{\partial z} \right)^2
+               -  \frac{2m}{K^2} \left( E + \frac{e^2}{r} \right) \psi(x,y,z,t)^2 \right\}  \, .
+\end{equation}
+Aus dieser Wirkung formuliert Schr\"odinger eine Quantisierungsbedingung, die darin besteht, dass
+die erste Variation verschwinden soll. Dies f\"uhrt auf die Gleichung
+\begin{equation}
+        \Delta \psi + \frac{2m}{K^2} \left( E + \frac{e^2}{r} \right) \psi = 0
+\end{equation} 
+bzw., mit $K=h/2\pi$:
+\begin{equation}
+     -  \frac{\hbar^2}{2m}  \Delta \psi(q,t)  - \frac{e^2}{r} \psi(q,t) =  E \psi (q,t) \, .
+\end{equation} 
+Dies ist die Schr\"odinger-Gleichung in ihrer heutigen Form. 
+Schr\"odinger erkannte, dass es sich hier um eine Eigenwertgleichung handelt, daher
+postuliert er als Quantisierungsbedingung die L\"osungen dieser Eigenwertgleichung. 
+Er zeigt, dass es f\"ur positive Energien und physikalisch sinnvolle Randbedingungen 
+immer L\"osungen gibt, dass die negativen
+Energien aber diskret sind und mit den Bohr'schen Energien \"ubereinstimmen. 
+
+Der Hamilton-Jacobi-Formalismus enth\"alt keine Wellenl\"ange, ebenso wie
+auch das Huygens'sche Prinzip f\"ur die Optik unabh\"angig von einer Wellenl\"ange
+ist. Schr\"odinger war aber bekannt, dass sich das Huygens'sche Prinzip bzw.\ die
+Eikonalgleichung (die \glqq Hamilton-Jacobi-Gleichung\grqq, die sich aus dem
+Fermat'schen Extremalprinzip ergibt) als
+der f\"uhrende Term einer Kurz\-wellen\-asymp\-totik, also einer N\"aherung f\"ur
+sehr kurze Wellenl\"angen (im Vergleich zu den Abmessungen von optischen
+Hindernissen oder Inhomogenit\"aten), aus den Maxwell-Gleichungen ergibt.
+
+W\"ahrend Schr\"odinger in seiner ersten Mitteilung vom Januar 1925 \glqq seine\grqq\
+Gleichung aus einem Variationsprinzip ableitet, dessen Wirkungsfunktional er mehr oder
+wenige willk\"urlich als
+Interal \"uber die Hamilton-Jacobi-Gleichung schreibt, versucht er in seiner
+zweiten Mitteilung vom 23.\ Februar 1926 seine Feldgleichung aus einer Wellengleichung 
+(mit einem d'Alembert-Operator) abzuleiten. Erst in seiner vierten Mitteilung formuliert
+Schr\"odinger die zeitabh\"angige Version in der Form, wie wir sie heute kennen.
+
+In seiner zweiten Mitteilung geht er auch ausf\"uhrlicher
+auf die Beziehungen zur Optik -- die Beziehung zwischen Fermat'schem und Huygens'schem
+Prinzip -- ein. Au\ss erdem l\"ost er auch das Eigenwertproblem f\"ur den harmonischen
+Oszillator sowie f\"ur den rotierenden K\"orper. 
+
+\section{Die \"Aquivalenz zwischen Schr\"odinger und Heisenberg}
+ 
+Die L\"osungen \glqq seiner\grqq\ Gleichung waren Wellenfunktionen $\psi_n(x)$
+zu den m\"oglichen Energien $E_n$. Die wesentliche Beziehung zwischen
+dem Heisenberg'schen Formalismus, bei dem jeder klassischen Gr\"o\ss e (Ort, Impuls,
+Energie, Drehimpuls, etc.) eine Matrix -- ein mathematisches Objekt mit zwei Indizes -- 
+zugeordnet wurde,\index{Heisenberg-Bild}\index{Matrizenmechanik}
+und seinem Formalismus bestand in der Beziehung
+\begin{equation}
+         F(m,n) = \int_{V} \psi_m(x) f(x,-{\rm i}\hbar \partial/\partial x) \psi_n(x)\, {\rm d}V \, .
+\end{equation}
+Hierbei ist $f(x,p)$ eine klassische beobachtbare Gr\"o\ss e, ausgedr\"uckt als Funktion
+des Orts $x$ und des Impulses $p$. Den Impuls $p$ ersetzt Schr\"odinger durch den
+Operator $-{\rm i}\hbar \partial/\partial x$, wobei er die Beziehung von de Broglie zwischen
+dem Impuls und der Wellenl\"ange ausnutzt. Wenn, nach de Broglie, ein Elektron mit einem
+scharfen Impuls $p$ durch eine Welle mit einer scharfen Wellenl\"ange $\lambda=p/h$
+und damit durch
+\begin{equation} 
+           \psi(x)=\exp  \left(  {\rm i}\frac{px}{h} \right)
+\end{equation}  
+zu beschreiben ist, dann erh\"alt man den Impuls durch die Ableitung nach $x$, multipliziert
+mit $h$ (und der imagin\"aren Einheit i). Schr\"odinger
+diskutiert ausf\"uhrlich, weshalb man die Funktion $f$ in ihren Argumenten $x$ und $p$
+noch symmetrisieren muss, da die Multiplikation mit $x$ und die Ableitung nach $x$ nicht
+vertauschen. Die
+Gr\"o\ss e $F(m,n)$ entspricht dann der Heisenberg'schen Matrix, durch die man die
+klassische Gr\"o\ss e in der Quantentheorie zu ersetzen hat.
+
+Zum Zeitpunkt dieser Publikation kannte Schr\"odinger alle drei Arbeiten von Heisenberg, Born
+und Jordan, und er bezieht sich auch darauf. Er
+hatte erkannt, dass das allgemeine Problem -- bestimme das Spektrum
+des Energieoperators $H= \frac{1}{2m} P^2 + V(Q)$ f\"ur Operatoren $P$ und $Q$, welche
+den kanonischen Vertauschungsrelationen $[Q,P]=-{\rm i}\hbar$ gen\"ugen -- \"aquivalent ist zu
+dem Problem, die Eigenwertgleichung f\"ur den Operator $H=-\frac{\hbar^2}{2m} \Delta
++V(x)$ zu l\"osen. Insbesondere erkannte er, dass die Operatoren \glqq Multiplikation mit $x$\grqq\
+und $-{\rm i}\hbar \partial/\partial x$ die von Born und Jordan gefundenen kanonischen
+Vertauschungsregeln erf\"ullen. 
+
+
+\begin{thebibliography}{99}
+\bibitem{Bohr1} Bohr, N.; \textit{On the Constitution of Atoms and Molecules};
+         Philosophical Magazine {\bf 26},1 (1913).           
+\bibitem{BornJordan} Born, M., Jordan, P.; \textit{Zur Quantenmechanik};
+         Zeitschrift f\"ur Physik Bd.\ 34 (1925) 858--888.           
+\bibitem{DreiMann} Born, M., Heisenberg, W.,
+       Jordan, P.; {\em Zur Quantenmechanik II}; Zeitschrift f.\ Physik 35
+       (1925) 557--615.       
+\bibitem{Dirac} Dirac, P.; \textit{The fundamental equations of quantum mechanics}; Proceedings Royal
+            Society, Band 9, 1925, S.\ 642--653.
+\bibitem{Heisenberg} Heisenberg, W.; \textit{\"Uber quantentheoretische Umdeutung kinematischer
+            und mechanischer Beziehungen}; Zeitschrift f\"ur Physik Bd.\ 33 (1925) 879--893.     
+\bibitem{Pauli} Pauli, W.; \textit{\"Uber das Wasserstoffspektrum vom Standpunkt der neuen
+             Quantenmechanik}; Zeitschrift f\"ur Physik, Band 36 (1926) 336--363.            
+\bibitem{Schroedinger1bis4} Schr\"odinger, E.; \textit{Quantisierung als Eigenwertproblem};
+           Annalen der Physik 1926, 4.\ Folge; Erste Mitteilung, Bd.\ 79, S.\ 361--376 (eingegangen 27.\ Januar 1926),
+           Zweite Mitteilung, Bd.\ 79, S.\ 489--527 (eingegangen 23.\ Februar 1926), Dritte Mitteilung,
+           Bd.\ 80, S.\ 437--490 (eingegangen 10.\ Mai 1926), Vierte Mitteilung, Bd.\ 81, S.\ 109--139 (eingegangen
+           21.\ Juni 1926).
+\bibitem{Schroedinger26} Schr\"odinger, E.; \textit{\"Uber das Verh\"altnis der Heisenberg-Born-Jordanschen
+           Quantenmechanik zu der meinen}; Annalen der Physik 79 (1926) 734--756 (eingegangen 18.\ M\"arz 1925).              
+\end{thebibliography}
+
+\end{document}
+

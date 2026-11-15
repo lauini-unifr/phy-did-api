@@ -1,0 +1,458 @@
+\documentclass[german,10pt]{book}      \input{preambel}         \begin{document}  \setcounter{chapter}{1}
+
+
+\chapter{Observable und Zust\"ande}
+% Kap x
+\label{chap_Observable}
+
+\info{Thomas Filk}{5.10.2025}%
+
+In jeder physikalischen Theorie gibt es zwei Konzepte, auf denen die Theorie beruht:
+(1) das Konzept der Observablen, und (2) das Konzept des Zustands. In der Quantentheorie
+ergeben sich die teilweise erheblichen Unterschiede zwischen den verschiedenen Interpretationen oftmals
+aus den unterschiedlichen Vorstellungen \"uber diese beiden Konzepte, insbesondere dem des
+Zustands. In diesem Kurztext soll zumindest ein grober \"Uberblick \"uber die verschiedenen
+Vorstellungen zum Zustandsbegriff in der Quantentheorie gegeben werden.
+
+\section{Observable}
+
+\textbf{Definition:} \textit{Observable sind physikalische Gr\"o\ss en, 
+die man an einem physikalischen System messen kann. Gelegentlich versteht man unter
+einer Observablen auch die mathematische Repr\"asentation dieser Gr\"o\ss en.}
+\vspace{0.3cm}
+
+\noindent
+John von Neumann
+definiert ein physikalisches System durch die Menge der Observablen, die an diesem
+System beobachtet werden k\"onnen \cite{Neumann}. Welche Observablen das sind,
+ist eine Erfahrungstatsache. Erst durch das Ergebnis des Stern-Gerlach-Experiments 1922
+erkannte man, dass es neben Ort und Impuls noch einen weiteren Freiheitsgrad gibt, den man an einem
+Elektron messen kann, n\"amlich seine Spin\-orien\-tierung entlang einer vorgegebenen Achse. 
+Man kann daher nie behaupten, s\"amtliche an einem System messbaren Observablen zu kennen, bzw.\ es 
+kann nie ausgeschlossen werden, dass in Zukunft noch weitere Observablen bekannt werden.
+Ein allgemeiner physikalischer Formalismus muss f\"ur eine Theorie zun\"achst
+kl\"aren, welche Observablen es gibt bzw.\ bekannt sind und wie diese Observablen mathematisch repr\"asentiert
+werden sollen. Observablen bilden jedoch nicht einfach nur eine strukturlose Menge, sondern es gibt auch 
+Beziehungen zwischen den Observablen, die bekannt sein sollten und sich in der mathematischen Darstellung
+widerspiegeln m\"ussen.
+
+Die physikalische Realisierung einer Observablen erfolgt durch die Angabe des Mess\-proto\-kolls, wie
+eine Messung dieser Observablen durchzuf\"uhren ist. Es ist eine Abfolge von Schritten, die angeben, in
+welcher Form ein System mit einer Messapparatur gekoppelt wird und wie die 
+Ver\"anderungen an der Messapparatur (z.B.\ die Zeigerstellung) abgelesen werden. Aus diesen
+Ver\"anderungen muss sich eine Zahl bestimmen lassen, die man als das Ergebnis der Messung bezeichnet
+und die eine Aussage \"uber den Zustand eines Systems -- wie es pr\"apariert wurde -- macht.
+In diesem Kapitel bezeichne ich die physikalische Observable
+als Messvorschrift in Anlehnung an von Neumann \cite{Neumann} mit kaligraphischen Buchstaben, z.B.\
+${\cal R}$, die zugeh\"orige mathematische Darstellung dieser Observablen kennzeichne ich 
+durch $R$. Sehr oft wird in der Literatur leider nicht zwischen diesen beiden Objekten unterschieden und es wird
+erwartet, dass man im Einzelfall entscheiden kann, ob die physikalische Messvorschrift oder
+die mathematische Darstellung gemeint ist.
+
+Kennt man eine Observable ${\cal R}$, also die Vorschrift, wie man diese Observable an einem System 
+messen kann, so kennt man auch die Observable $f({\cal R})$ f\"ur eine Funktion $f$: Man misst die
+Observable ${\cal R}$ an einem physikalischen System und bildet von dem erhaltenen Messwert $r$ die
+Funktion $f(r)$. Insbesondere ist die Observable $\alpha {\cal R}$ (f\"ur eine beliebige reelle Zahl $\alpha$)
+durch die Messvorschrift von ${\cal R}$ gegeben, wobei jeder gemessene (an einer Zeigerstellung
+abgelesene Messwert) mit $\alpha$ multipliziert wird. Lassen sich zwei Observable ${\cal R}$ und ${\cal S}$
+gleichzeitig an einem System messen (das bedeutet, es gibt ein Protokoll, bei dem man gleichzeitig
+einen Messwert sowohl f\"ur ${\cal R}$ als auch f\"ur ${\cal S}$ erh\"alt -- diese Werte seien $r$ und $s$), 
+dann ist 
+die Observable $f({\cal R},{\cal S})$ definiert als die  Messvorschrift, bei der von den Messwerten die Funktion
+$f(r,s)$ gebildet wird. 
+
+Bei Observablen ${\cal R}$ und ${\cal S}$, die sich nicht gleichzeitig an einem System messen lassen -- solche
+Observablen bezeichnet man als nicht kompatibel --, sind
+allgemeine Funktionen $f({\cal R},{\cal S})$ zun\"achst nicht definiert. Insbesondere sind auch Ausdr\"ucke der Art
+${\cal R}+{\cal S}$ oder ${\cal R}\cdot {\cal S}$ als Messvorschriften nicht definiert.   
+
+Die mathematische Darstellung (Repr\"asentation) einer Observablen h\"angt von der Theorie
+ab, die wir verwenden. In der klassischen Mechanik handelt es sich bei Observablen um 
+Funktionen von Ort und Impuls (bzw.\ Geschwindigkeit), d.h.\ Funktionen auf dem
+Phasenraum. In der Quantenmechanik
+werden Observable durch sogenannte selbstadjungierte bzw.\ hermitesche Operatoren auf einem
+Hilbert-Raum -- einem Vektorraum mit einem Skalarprodukt -- dargestellt. 
+
+An dieser Stelle sollte man betonen,
+dass die mathematische Darstellung einer Observablen nicht den Messprozess repr\"asentiert, also
+den dynamischen Vorgang der Messung, sondern eher die Informationen, die man durch solche
+Messungen erlangen kann: die Menge der m\"oglichen Messwerte sowie die Zust\"ande, die mit
+diesen Messwerten verbunden sind. In diesem Sinne (und in Anlehnung an einen Ausdruck von
+Schr\"odinger \cite{Schroedinger} zum Begriff der Wellenfunktion) 
+kann man von einer Observablen als einem \glqq Katalog von
+m\"oglichen Ergebnissen\grqq\ sprechen. 
+
+\section{Zustand}
+
+\subsection{Zustand als Erwartungswertfunktional}
+
+Auch bei Zust\"anden sollte man zwischen der physikalischen Realisierung und der
+mathematischen Darstellung unterscheiden. Sehr oft, insbesondere in mathematischen Texten
+(z.B.\ dem Buch \glqq Mathematische Grundlagen der Quantenmechanik\grqq\ von John von
+Neumann \cite{Neumann}) definiert man einen Zustand als
+ein \glqq Erwartungswertfunktional auf der Menge der Observablen\grqq. Diese zun\"achst
+mathematische Definition kann man durchaus w\"ortlich interpretieren: Wenn wir ein System
+durch einen Zustand beschreiben, erlaubt es dieser Zustand, jeder Observablen eine Zahl -- ihren
+Erwartungswert in diesem Zustand -- zuzuordnen. Ein Zustand beschreibt also unsere Erwartungen
+in Bezug auf die Ergebnisse, die bei einer Messung an einem System auftreten. 
+Schr\"odinger bezeichnet einen Zustand als einen \glqq Katalog der Erwartung\grqq\ \cite{Schroedinger}. 
+
+Dieser Katalog der Erwartung beruht auf unserem Wissen 
+\"uber die Vergangenheit eines Systems bzw.\ eines Ensembles von Systemen. 
+Im Wesentlichen bezieht sich dieses Wissen auf die Art, wie diese Systeme pr\"apariert wurden. 
+Unsere Erwartungen in Bezug auf m\"ogliche Messergebnisse k\"onnen nur auf diesem Wissen
+beruhen, und wenn uns bewusst ist, dass unser Wissen unvollst\"andig ist, verwenden
+wir sogenannte gemischte Zust\"ande (in der klassischen Mechanik sind das Wahrscheinlichkeitsverteilungen
+\"uber einem Zustandsraum, beispielsweise dem Phasenraum; in der Quantentheorie sind das
+sogenannte Dichtematrizen). Unser Wissen \"uber die Vergangenheit
+eines Sys\-tems muss nicht beliebig weit zur\"uckreichen: Es reicht das Wissen \"uber solche Aspekte, die
+f\"ur die Vorhersagen zuk\"unftiger Messungen von Bedeutung sind. Das sind meist die letzten
+Pr\"aparationen, die an einem System vorgenommen wurden.\footnote{Die Physik ist hier in einer
+gl\"ucklichen Lage. M\"ochte man in der Psychologie den mentalen Zustand einer Person beschreiben,
+k\"onnen beliebig weit zur\"uckliegende Ereignisse oder Erfahrungen f\"ur die Vorhersage des
+zuk\"unftigen Verhaltens wesentlich sein.} Es gibt aber auch physikalische Systeme mit 
+einem \glqq Ged\"achtnis\grqq, beispielsweise Spinglassysteme oder neuronale Netzwerke. 
+
+Wir k\"onnen einen Zustand somit definieren als eine Kodierung unserer Kenntnis \"uber
+die Vergangenheit eines physikalischen Systems, soweit diese Kenntnis es uns erlaubt,
+zumindest statistische Vorhersagen \"uber die Ergebnisse zuk\"unftiger Messungen (von Observablen)
+zu treffen. 
+
+Die physikalische Realisierung eines Zustands erfolgt durch ein im Prinzip beliebig gro\ss es
+Ensemble gleichartig pr\"aparierter Systeme. Gew\"ohnlich f\"uhren wir ein Experiment nicht nur
+einmal durch, sondern nach M\"oglichkeit unter denselben Ausgangsbedingungen gen\"ugend oft,
+sodass wir statistische Auswerteverfahren verwenden k\"onnen. Au\ss erdem k\"onnen wir auf diese
+Weise an demselben Zustand verschiedene Observablen messen, die sich an demselben System
+nicht gleichzeitig bestimmen lassen (beispielsweise Ort und Impuls bei quantenmechanischen
+Systemen oder allgemeiner zwei nicht kompatible Observablen ${\cal R}$ und ${\cal S}$). 
+Man unterteilt dazu das Ensemble gleichartig pr\"aparierter Systeme in zwei
+ebenfalls gro\ss e Teilensembles und misst an dem einen Teilensemble die Observable
+${\cal R}$ und an dem anderen Teilensemble die Observable ${\cal S}$. Auf diese Weise erh\"alt man f\"ur
+einen Zustand -- das Ensemble gleichartig pr\"aparierter Systeme -- die Erwartungswerte von
+nicht kompatiblen Observablen in diesem Zustand.
+
+Gelegentlich wollen wir auch einem Einzelsystem einen Zustand zuschreiben. An diesem
+Punkt unterscheiden sich verschiedene Interpretationen, insbesondere die
+sogenannten Ensemble-Interpretationen von der Kopenhagener Deutung. W\"ahrend
+Ensemble-Interpretationen den Begriff der Wahrscheinlichkeit vermeiden und nur von
+relativen H\"aufigkeiten sprechen -- die Born'sche Regel besagt dann, dass das
+Absolutquadrat eines Skalarprodukts gleich der relativen H\"aufigkeit ist, mit der bei einer
+Messung einer Observablen an einem Ensemble gleichartig pr\"aparierter Zust\"ande ein 
+bestimmtes Resultat erzielt wird --
+verwendet die Kopenhagener Interpretation den Zustandsbegriff auch f\"ur Einzelsys\-teme
+und spricht statt von relativer H\"aufigkeit von Wahrscheinlichkeit. Es gibt aber auch
+Situationen, bei denen der Unterschied relevant wird: Beispielsweise gilt das sogenannte
+No-Cloning Theorem, wonach ein unbekannter Zustand nicht dupliziert werden kann, 
+nicht f\"ur Ensemblezust\"ande. An einem Ensemble kann der Zustand bestimmt und dann
+beliebig oft kopiert werden. Diese Aussage gilt jedoch nicht f\"ur den Zustand, den wir einem
+einzelnen System zuschreiben. 
+
+Man bezeichnet einen Zustand --
+realisiert als Ensemble -- als rein, wenn es keine Unterteilung dieses Ensembles in (f\"ur statistische Auswertungen
+ebenfalls gen\"ugend gro\ss e) Subensembles gibt, die f\"ur eines dieser Subensembles andere
+Erwartungswerte liefert als das gesamte Ensemble. Diese Vorstellung von reinen Zust\"anden entspricht
+auch unserer \"ublichen Vorstellung von reinen
+Zust\"anden als maximale bzw.\ nicht mehr erweiterbare Kenntnis \"uber ein System. Entspricht
+ein Ensemble von Systemen einem Gemisch, so l\"asst es sich in Subensembles aufteilen, die
+weniger gemischten Zust\"anden (oder sogar reinen Zust\"anden) entsprechen. Reine Zust\"ande
+lassen sich nicht mehr in noch reinere Zust\"ande aufteilen. 
+ 
+Mathematisch wird ein Zustand repr\"asentiert durch die Angabe einer Abbildung, die
+jeder Observablen eine Zahl -- ihren Erwartungswert in diesem Zustand -- zuordnet. 
+Ein Zustand ist somit eine mathematische Kodierung unserer Kenntnis \"uber die Art, wie ein
+System pr\"apariert wurde, sodass wir dieses Wissen f\"ur die Vorhersage zuk\"unftiger
+Messungen -- die Vorhersage eines Erwartungswerts f\"ur beliebige Observable -- an diesem 
+System nutzen k\"onnen. 
+
+Elementare Eigenschaften dieser Abbildung sind: 
+\begin{enumerate}
+\item 
+Die Identit\"atsobservable, die immer nur
+den Messwert 1 als Ergebnis liefert, soll den Erwartungswert 1 haben, 
+\item 
+eine positive Observable,
+die immer nur positive Ergebnisse als Messwerte liefert, soll auch einen positiven Erwartungswert
+haben, und 
+\item
+das $\lambda$-fache einer Observablen ${\cal R}$, die immer das $\lambda$-fache eines
+Messwerts von einer Messung von ${\cal R}$ liefert, soll auch das $\lambda$-fache des Erwartungswerts
+haben. 
+\end{enumerate}
+Weitere Eigenschaften h\"angen davon ab, welche Strukturen auf der Menge der
+Observablen definiert sind. 
+
+Oft unterscheidet man (insbesondere in der Quantentheorie) den Zustand von dem Erwartungswertfunktional, 
+das dieser Zustand definiert. Der Zustand wird in der Quantentheorie z.B.\ durch einen normierten
+Vektor $|\psi\rangle$ in einem Hilbert-Raum dargestellt, wohingegen die Abbildung 
+${\cal R} \rightarrow {\rm Erw}({\cal R})$ mathematisch
+durch ${\rm Erw}({\cal R})=\langle \psi|R|\psi\rangle$ gegeben ist. 
+
+\subsection{Reine und gemischte Zust\"ande in der klassischen Mechanik} 
+
+In der klassischen Mechanik der Punktteilchen ist ein reiner Zustand mathematisch durch einen
+Punkt im Phasenraum -- dem Raum der m\"oglichen Orte und Impulse eines oder
+mehrerer Teilchen -- gegeben. Wenn wir von einem Teilchen den Ort und seinen Impuls zu einem
+Zeitpunkt kennen, haben wir das maximale Wissen, das wir \"uber dieses Teilchen haben k\"onnen.
+Ort und Impuls legen als Anfangsbedingung eine Trajektorie im Phasenraum fest (hierf\"ur
+verwendet man meist die Hamilton'sche Formulierung der Bewegungsgleichungen). Die Menge
+der Observablen wird mathematisch durch die Menge der reell-wertigen Funktionen auf dem
+Phasenraum dargestellt. Sei $f(x,p)$ eine Funktion auf dem Phasenraum, dann ist der
+Funktionswert an einer bestimmten Stelle $(x_0,p_0)$ der Erwartungswert, den wir der Funktion
+$f$ im Zustand $(x_0,p_0)$ zuordnen:
+\begin{equation}
+                         {\rm Erw:~} f \mapsto \langle f \rangle_{x_0,p_0} = f(x_0,p_0)  \, .
+\end{equation}
+
+Ein gemischter Zustand entspricht in der klassischen Physik meist einer teilweisen
+Unkenntnis \"uber den Zustand eines Systems und wird mathematisch durch eine
+Wahrscheinlichkeitsdichte $w(x.p)$ auf dem Phasenraum beschrieben. In diesem Fall ist
+der Erwartungswert f\"ur eine Observable $f$ durch
+\begin{equation}
+             {\rm Erw:~} f \mapsto \langle f \rangle_{w} = \int_P f(x,p) w(x,p)\,{\rm d}x\,{\rm d}p   
+\end{equation}
+gegeben. Ein gemischter Zustand ordnet also jedem Punkt im Phasenraum (also jedem reinen
+Zustand) eine gewisse Wahrscheinlichkeit zu und bildet dann den Mittelwert \"uber die Funktionswerte
+an diesen Punkten. 
+
+Ein Beispiel f\"ur einen klassischen Zustand ist die kanonische
+Verteilung in der statistischen Mechanik: Sei $(x,p)$ der Phasenraum f\"ur ein System
+von $N$ Teilchen (d.h., $x$ und $p$ sind jeweils $3N$-Vektoren) und sei $E(x,p)$ die Energie
+dieser Teilchen im Zustand $(x,p)$, dann ist die Wahrscheinlichkeitsdichte des kanonischen
+Zustands durch die Boltzmann-Verteilung
+\begin{equation}
+          w(x,p) = \frac{1}{Z} {\rm e}^{-\beta E(x,p)}
+\end{equation}
+gegeben. Hierbei ist $\beta=1/k_{\rm B}T$ die inverse Temperatur (mit der Boltzmann-Konstanten
+$k_{\rm B}$) und $Z$ die Zustandssumme
+\begin{equation}
+          Z = \int_P {\rm e}^{-\beta E(x,p)}\,{\rm d}x\,{\rm d}p  \, ,
+\end{equation}
+die in diesem Fall die Wahrscheinlichkeitsdichte normiert. (Auf die Problematik, dass wegen der
+Ununterscheidbarkeit gleichartiger Teilchen ein Faktor $N!$ sowie wegen des Ma\ss es 
+im Phasenraum ein Faktor $h^N$ ber\"ucksichtigt werden m\"ussen, gehe ich hier nicht ein.) 
+
+Der reine Zustand ist ein Spezialfall, bei dem die Wahrscheinlichkeitsdichte auf den Punkt
+$(x_0,p_0)$ konzentriert ist: 
+\begin{equation}
+           w(x,p)_{x_0,p_0} = \delta(x-x_0) \delta(p-p_0) \, .
+\end{equation}
+In diesem Fall gilt f\"ur eine Observable $f$:
+\begin{equation}
+             \langle f \rangle = \int_P f(x,p) w(x,p)_{x_0,p_0}\,{\rm d}x\,{\rm d}p = f(x_0,p_0) \, .
+\end{equation}
+
+\subsection{Reine und gemischte Zust\"ande in der Quantenmechanik}
+
+In der Quantenmechanik werden reine Zust\"ande mathematisch durch Strahlen
+(1-dimensionale Untervektorr\"aume) in einem Hilbert-Raum (einem Vektorraum mit
+Skalarprodukt) dargestellt. Meist w\"ahlen wir f\"ur diese Strahlen einen normierten
+Vektor als Repr\"asentanten. In der Quantenmechanik von Punktteilchen ist dieser
+normierte Vektor oft eine Wellenfunktion $\psi(x)$, die einen bestimmten Zustand (z.B.\ einen
+bestimmten Energiezustand oder einen bestimmten Zustand zu anderen Quantenzahlen)
+eines Teilchens beschreibt. Bei Systemen, die nur endlich viele Zust\"ande einnehmen
+k\"onnen -- dazu z\"ahlen die Polarisationsfreiheitsgrade von Photonen oder die
+Spinfreiheitsgrade von Elektonen oder Atomen -- schreiben wir diesen Vektor meist
+als Ket-Vektor $|h\rangle$ (f\"ur ein Photon mit horizontaler Polarisierung), 
+$|\uparrow_z\rangle$ (f\"ur ein Elektron mit Spin \glqq up\grqq\ bez\"uglich der $z$-Richtung) etc. 
+Auch eine Wellenfunktion kann als Ket-Vektor geschrieben werden, allerdings geben
+wir die Wellenfunktion meist durch ihr Argument an einem beliebigen Ort $x$ an, sodass
+wir die Beziehung $\psi(x)= \langle x | \psi\rangle$ erhalten. 
+
+Observable werden in der Quantentheorie mathematisch durch selbstadjungierte
+lineare Operatoren auf dem Hilbert-Raum dargestellt. Handelt es sich bei dem Hilbert-Raum
+um den Raum der quadratintegrierbaren Funktionen, also dem Raum der Wellenfunktionen,
+so handelt es sich bei den selbstadjungierten Operatoren meist um Differentialoperatoren. 
+Sei $A$ ein selbstadjungierter Operator auf einem Hilbert-Raum und $\psi$ ein reiner
+Zustand, beschrieben durch einen normierten Ket-Vektor $|\psi\rangle$, dann ist das
+Erwartungswertfunktional gegeben durch:
+\begin{equation}
+              A \rightarrow \langle A \rangle_\psi = \langle \psi |A| \psi \rangle  \, .
+\end{equation}
+F\"ur Wellenfunktionen $\psi(x)$ und lineare Differentialoperatoren $A(x,-{\rm i}\hbar\nabla)$
+bedeutet dies:
+\begin{equation}
+       A \rightarrow \langle A \rangle_\psi 
+                        = \int_{\mathbb{R}^3} \psi^*(x) A(x,-{\rm i}\hbar \nabla) \psi(x) \,{\rm d}x  \, .
+\end{equation}
+
+Ein reiner Zustand $\psi$ l\"asst sich auch durch einen Projektionsoperator $P_\psi$ auf den
+1-dimensionalen Vektorraum, der diesem Zustand entspricht, darstellen. In diesem Fall
+ist das Erwartungswertfunktional gegeben durch:
+\begin{equation}
+              A \rightarrow \langle A \rangle_\psi = {\rm Spur}\, P_\psi A  \, .
+\end{equation}
+
+Gemischte Zust\"ande werden in der Quantenmechanik ganz analog zur klassischen 
+Mechanik formuliert: Jeder reine Zustand, beschrieben durch einen Projektionsoperator $P_i$, 
+der mit einer Wahrscheinlichkeit $p_i$ in einem Ensemble vertreten ist, wird mit dieser
+Wahrscheinlichkeit gewichtet und es wird \"uber alle reinen Zust\"ande summiert:
+\begin{equation}
+               \rho = \sum_i p_i P_i  \hspace{1cm}~~p_i\geq 0 ~,~ \sum_i p_i=1 \, .
+\end{equation}
+$\rho$ bezeichnet man als Dichtematrix. Ist eine solche Dichtematrix gegeben, ist das
+Erwartungswertfunktional f\"ur einen Operator $A$ gegeben durch:
+\begin{equation}
+              A \rightarrow \langle A \rangle_\rho = {\rm Spur}\, \rho A   = \sum_i p_i \, {\rm Spur}\,P_iA \, .
+\end{equation}
+Auch f\"ur diesen Fall betrachten wir den kanonischen Zustand in der statistischen
+Mechanik. Die Dichtematrix ist gegeben durch ($H$ ist der Hamilton-Operator, also der
+Energieoperator in der Quantentheorie, und $E_i$ sind die Eigenwerte von $H$):
+\begin{equation}
+      \rho = \frac{1}{Z} {\rm e}^{-\beta H}  \hspace{1cm}  Z= {\rm Spur}\,{\rm e}^{-\beta H} =
+                  \sum_i {\rm e}^{-\beta E_i} \, . 
+\end{equation} 
+Der Erwartungswert einer Observablen ist gegeben durch
+\begin{equation}
+               \langle A \rangle_\rho = \frac{1}{Z} {\rm Spur}\, {\rm e}^{-\beta H} A   
+                        = \frac{1}{Z} \sum_i {\rm e}^{-\beta E_i} \, \langle E_i |A| E_i \rangle  \, .
+\end{equation}
+
+\section{Verschiedene Interpretationen des Zustandsbegriffs}
+
+Bisher haben wir einen Zustand als \glqq Kenntnis \"uber ein System zur Vorhersage von 
+Erwartungswerten\grqq\ bezeichnet. Physikalische realisiert ist ein Zustand durch ein Ensemble
+gleichartig pr\"aparierter Systeme, mathematisch wird ein Zustand in der Quantentheorie durch
+eine Dichtematrix -- ein reiner Zustand durch einen eindimensionalen Projektionsoperator bzw.\
+einen Vektor (Wellenfunktion) als Repr\"asentanten -- dargestellt. Dies ist eine sehr \glqq vorsichtige\grqq\
+Interpretation des Zustandsbegriffs, die in etwa der Kopenhagener Deutung entspricht. 
+
+\subsection{Q-Bism -- Quanten-Bayesianismus}
+
+Noch etwas extremer als die Kopenhagener-Deutung
+in Richtung einer subjektiven Interpretation ist der Quanten-Bayesianismus oder kurz QBism 
+(\cite{Fuchs} sowie die dortigen Literaturangaben), 
+der unter einem Zustand ganz konkret \glqq meine Kenntnis\grqq\ \"uber ein System versteht. 
+Damit ist man zwar auf der sicheren Seite, und -- wenn man ehrlich ist -- auf der Seite der
+Praxis, denn mehr als meine Kenntnis kann ich zur Formulierung eines Zustands nicht
+einbringen. Allerdings gibt man auch fast jede Form von Realismus auf. Das wird von den
+Anh\"angern zwar bestritten, sie sprechen gerne von einem \glqq participatory realism\grqq, 
+so wirklich \"uberzeugend ist dieser Realismus nicht. 
+
+QBism f\"uhrt insbesondere zu folgender seltsamer Situation: Alice und Bob befinden sich
+an zwei weit voneinander entfernten Orten und haben jeder in ihrem Labor
+einen Teil eines verschr\"ankten Systems, beispielsweise ein Photon von einem im EPR-Zustand
+verschr\"ankten Photonenpaar. Wenn Alice nun an ihrem Photon eine Messung vornimmt, erh\"alt
+sie ein konkretes Messergebnis und reduziert entsprechend
+den Zustand des Systems in einen separablen Zustand. Sie kann nun
+vorhersagen, was Bob bei einer Messung an diesem Zustand entlang derselben Orientierung
+als Ergebnis erhalten wird. Das bedeutet, Alice beschreibt das System nun durch einen
+anderen Zustand als Bob, der nach wie vor den EPR-Zustand verwendet, solange er keine
+weiteren Informationen hat. 
+
+Damit erhebt sich die Frage, welchen Zustand die beiden Photonen \glqq wirklich\grqq\ haben.
+F\"ur einen QBisten ist diese Frage sinnlos (wie \"ubrigens auch f\"ur andere, sogenannte
+\glqq relative\grqq\ oder auch \glqq relationale\grqq\ Interpretationen). Ein Zustand ist
+immer definiert in Bezug auf einen Beobachter; es handelt sich nicht um ein absolutes 
+Objekt oder etwas, das
+dem Quantensystem unabh\"angig vom Beobachter zugeschrieben werden kann.
+
+\subsection{\glqq Neo-\grqq Kopenhagener Deutung}
+
+W\"ahrend einige \"Au\ss erungen der Entwickler der Quantentheorie (beispielsweise
+Bohr und Sommerfeld) darauf hindeuten, dass auch die urspr\"ungliche Kopenhagener
+Deutung einen sehr subjektiven Zustandsbegriff hatte, denkt man heute bei der
+Kopenhagener Deutung eher an eine objektivere Interpretation: Ein System wird
+durch einen Zustand beschrieben, der sich auf das prinzipiell vorhandene Wissen
+\"uber das System bezieht. Ob tats\"achlich ein Beobachter dieses Wissen hat, ist
+dabei eher nebens\"achlich. Beispielsweise spielt es bei einem Interferenzexperiment
+keine Rolle, ob wir tats\"achlich f\"ur jedes Quantenobjekt die \glqq Welcher Weg\grqq-Information
+haben oder nicht: Wenn diese Information im Prinzip zug\"anglich ist, beobachtet man kein
+Interferenzmuster. Es ist also keine subjektive Unkenntnis, die das Interferenzmuster
+hervorruft, sondern eine prinzipielle Unm\"oglichkeit, die Kenntnis zu erlangen.
+
+W\"ahrend sich im QBism der Zustand ausschlie\ss lich im Bewusstsein des Beobachters
+befindet und keinerlei objektive Bedeutung hat, versucht man in der Neo-Kopenhagener Deutung
+den Zustandsbegriff zu objektivieren und eher dem betrachteten System zuzuschreiben. 
+Die Reduktion des Quantenzustands beruht im QBism ausschlie\ss lich auf dem
+pers\"onlichen ge\"anderten Wissen \"uber ein System, w\"ahrend sie in der Kopenhagener
+Deutung eher damit zusammenh\"angt, ob eine bestimmte Form von Information
+prinzipiell vorhanden ist. 
+
+\subsection{\glqq Viele Welten\grqq-Interpretation}
+
+In der \glqq Viele Welten\grqq-Interpretation (bzw.\ \glqq Many-Worlds\grqq-Interpretation)
+definiert der Quantenzustand $\psi$ die Realit\"at. Diese Realit\"at umfasst s\"amtliche
+Universen, die seit dem Big Bang theoretisch m\"oglich sind. $\psi$ l\"asst sich beschreiben
+als ein Funktional s\"amtlicher Teilchenorte (oder -- in einer Quantenfeldtheorie -- s\"amtlicher
+Feldkonfigurationen) sowie s\"amtlicher Raumgeometrien, die sich aus dem Urknall h\"atten
+entwickeln k\"onnen. Die zeitliche Entwicklung dieses Zustands folgt im Wesentlichen
+einer Schr\"odinger-Gleichung (bzw.\ in einem allgemein relativistischen Rahmen einer
+sogenannten Wheeler-de Witt-Gleichung). Es findet kein Kollaps (bzw.\ keine Reduktion)
+der Wellenfunktion statt. Der Quantenzustand ist eine Superposition aller m\"oglichen
+Anteile, die ein konsistentes Universum beschreiben, und in jedem Augenblick wird aus
+jedem dieser Anteile wiederum eine Superposition von allen M\"oglichkeiten. 
+
+Die Dekoh\"arenz zwischen den verschiedenen Anteilen in dieser Superposition
+bez\"uglich der uns zur Verf\"ugung stehenden Observablen bewirkt, dass wir keine
+Superpositionen oder Interferenzen zwischen den verschiedenen Anteilen wahrnehmen. Es ist
+also unser subjektiver Eindruck, in einer ausgezeichneten Welt zu leben. 
+
+Die Viele-Welten-Interpretation ist sehr verbreitet unter Physikerinnen und Physikern, die
+sich mit Quantenkosmologie besch\"aftigen. Sie geht urspr\"unglich auf den Physiker
+Hugh Everett zur\"uck, der eine Interpretation der Quantentheorie formulieren wollte,
+bei der der Beobachter Teil des Quantensystems sein kann und dass keinen Bezug zu
+einer \"ausseren klassischen Welt ben\"otigt \cite{Everett}. Die Bezeichnung Viele-Welten-Interpretation
+wurde erst sp\"ater von Bryce deWitt gepr\"agt \cite{deWitt}. 
+
+Die Viele-Welten-Interpretation ist eine rein deterministische Interpretation der Quantentheorie,
+da es keinen Kollaps bzw.\ keine Reduktion der Wellenfunktion gibt. Au\ss erdem definiert diese
+Interpretation eine -- wenn auch etwas seltsame -- Ontologie: Die objektive Realit\"at ist die
+Wellenfunktion des Universums, die alle m\"oglichen Universen umfasst. 
+
+\subsection{Bohm'sche Mechanik}
+
+In der Bohm'schen Mechanik gibt es sowohl die Wellenfunktion $\psi(t)$ -- und hier ist
+es von Bedeutung, dass wir von der Wellenfunktion im Ortsraum sprechen, d.h.\ der
+Abbildung $\psi(t):\mathbb{R}^3 \rightarrow \mathbb{C}$ mit $x \mapsto \psi(x,t)$ -- als auch
+das zugeh\"orige Teilchen, beschrieben durch seinen Ort $x(t)$. 
+Das bedeutet, der momentane Zustand eines Systems ist 
+durch das Paar $(\psi(t),x(t))$ gegeben. Der Ort $x(t)$ hat in der herk\"ommlichen 
+Interpretation der Quantenmechanik
+keine Bedeutung und entspricht einem sogenannten \glqq verborgenen Parameter\grqq. 
+
+Das Feld $\psi(x,t)$ ist eine L\"osung der Schr\"odinger-Gleichung. Ist zu einem
+Anfangszeitpunkt $t_0$ die statistische Verteilung der m\"oglichen Orte des Teilchens 
+(d.h., die Wahrscheinlichkeit, das Teilchen bei einer Messung an einem Ort $x$ zu finden)
+durch $|\psi(x,t_0)|^2$ gegeben, so bleibt dies auch f\"ur alle Zeiten so. Simulationen
+solcher Systeme deuten darauf hin, dass eine anf\"angliche von $|\psi(x,t_0)|^2$
+abweichende Verteilung im Allgemeinen sehr schnell gegen diese Verteilung konvergiert. 
+
+In der Bohm'schen Mechanik gibt es keinen Kollaps der Wellenfunktion, aber
+da sich das Teilchen an einem ganz bestimmten Ort befindet, kann man Teile
+der Wellenfunktion, die f\"ur das weitere Verhalten des Teilchens nicht mehr relevant
+sind, \glqq vergessen\grqq. Der genaue ontische Status des Feldes bleibt offen und hier
+gibt es unterschiedliche Auffassungen.
+F\"ur Bohm handelte es sich um ein F\"uhrungsfeld, das die Information dar\"uber
+enth\"alt, wie sich das Teilchen bewegen soll. Manche sehen darin eine Art Potenzial.
+In jedem Fall handelt es sich bei der Wellenfunktion um ein objektives Feld, dessen
+Existenz unabh\"angig von einem Beobachter ist. Auch die Bohm'sche Mechanik
+definiert eine Ontologie, d.h., sie macht keinen Bezug zu einer \glqq klassischen
+Umgebung\grqq\ und der Messprozess kann unabh\"angig von einem Beobachter
+innerhalb der Theorie interpretiert werden.
+
+Einen objektiven Charakter hat allerdings nur die Wellenfunktion des gesamten
+Kosmos. Wellenfunktionen f\"ur einzelne Teilchen, wie man sie oft in Publikationen
+dargestellt sieht (z.B.\ f\"ur das Doppelspaltexperiment) sind Idealisierungen, sofern
+die Teilchen nicht mit anderen Objekten verschr\"ankt sind. 
+
+\begin{thebibliography}{99}
+\bibitem{deWitt} deWitt, B.S., {\em Quantum Mechanics and Reality:
+         Could the solution to the dilemma of indeterminism be a 
+       universe in which all possible outcomes of an experiment
+        actually occur?} Physics Today 23 (1970) 30--40.   
+\bibitem{Everett} Everett, H., {\em Relative State Formulation of
+         Quantum Mechanics}, Rev.\ Mod.\ Phys.\ {\bf 29} (1957) 454--462.\\
+       {\em Theory of the Universal Wavefunction}; Thesis, Princeton
+       University, Princeton (1956).       
+\bibitem{Fuchs} Fuchs, Christopher A., Mermin, N.\ David, Schack, Ruediger; \textit{An Introduction
+            to QBism with an Application to the Locality of Quantum Mechanics}; Am.\ J.\ Phys., Vol.\ 82,
+            No.\ 8, 2014, 749--754.
+\bibitem{Neumann} von Neumann, John; \textit{Mathematische Grundlagen der
+     Quantenmechanik}, Verlag von Julius Springer, Berlin 1935. 
+\bibitem{Schroedinger} Schr\"odinger, E.; {\em Die gegenw\"artige
+        Situation in der Quantenmechanik}; Die Naturwissenschaften 23
+        (1935) 807--812, 823--828,  844-849.      
+\end{thebibliography}
+
+\end{document}
+

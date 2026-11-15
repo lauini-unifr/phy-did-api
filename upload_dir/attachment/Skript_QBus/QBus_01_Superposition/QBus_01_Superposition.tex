@@ -1,25 +1,23 @@
-\documentclass[german,11pt,oneside]{book}
-\input{../preambel}
-% -------------------------------
-% Titel-Informationen hier anpassen
-% -------------------------------
-\title{\Huge \textbf{Superposition}}
-\author{\Large \textbf{Thomas Filk}}
-\input{../title}
-%\begin{document}  \setcounter{chapter}{77}
-\newcommand{\solution}[1]{#1}
-%\newcommand{\solution}[1]{}
+\documentclass[german,10pt]{book}      \input{preambel}         \begin{document}  \setcounter{chapter}{0}
 
 \chapter{Superposition}
 % Kap x
 \label{chap_Superposition}
 
-\info{Thomas Filk}{16.07.2025}%
+\begin{picture}(0,0)(0,0)
+\put(400,150){\makebox(0,0){
+\includegraphics[scale=0.5]{./Bilder/bmftr.png}}}
+\put(337,185){\makebox(0,0){\footnotesize Kurztext erstellt im Rahmen von \glqq Quanten auf Reisen\grqq}}
+\end{picture}
+\info{Thomas Filk}{13.08.2026}
 
-Die Superposition ist ein zentraler Begriff der Quantentheorie. Er bezeichnet
-die Eigenschaft, dass zu je zwei realisierbaren Zust\"anden in der Quantentheorie
-auch Linearkombinationen dieser beiden Zust\"ande wiederum realisierbaren
-Zust\"anden entsprechen. Da Zust\"ande in der Quantentheorie oft durch einen
+\noindent
+Die Superposition ist ein zentraler Begriff der Quantentheorie. Man bezeichnet damit
+die Eigenschaft, dass zu je zwei realisierbaren reinen Zust\"anden in der Quantentheorie
+auch Linearkombinationen dieser beiden Zust\"ande wiederum realisierbaren reinen
+Zust\"anden entsprechen.\footnote{Eine Ausnahme gibt es bei Zust\"anden, die Superauswahlregeln
+unterliegen, beispielsweise Zust\"anden zu verschiedenen elektrischen Ladungen.} 
+Da Zust\"ande in der Quantentheorie oft durch einen
 normierten Vektor dargestellt werden -- wobei auch eine (quadrat-)normierte Wellenfunktion als
 Vektor (in einem Vektorraum von Funktionen) interpretiert werden kann -- vergleicht man 
 die Superposition von Zust\"anden insbesondere in der Schule gerne mit der vektoriellen 
@@ -27,7 +25,7 @@ Summe von Vektoren, wie sie beispielsweise
 aus der klassischen Mechanik f\"ur Geschwindigkeiten oder Kr\"afte bekannt ist. 
 Dies ist nicht immer unproblematisch, da es sich streng genommen bei
 der mathematischen Darstellung quantenmechanischer Zust\"ande nicht um
-Vektoren sondern Strahlen bzw.\ 1-dimensionale Unterr\"aume eines Vektorraums
+Vektoren sondern um Strahlen bzw.\ 1-dimensionale Unterr\"aume eines Vektorraums
 handelt. F\"ur diese hat die Superposition eine etwas andere Bedeutung als f\"ur
 Vektoren.
 
@@ -76,9 +74,13 @@ $\langle \psi|\psi \rangle =1$ --, ist der Projektionsoperator auf diesen Strahl
 \begin{equation}
                 P_\psi = | \psi \rangle \langle \psi |   \, .
 \end{equation}
-(Wird der Zustand durch eine normierte Wellenfunktion $\psi(x)$ dargestellt, ist der Projektionsoperator
+Wird der Zustand durch eine normierte Wellenfunktion $\psi(x)$ dargestellt, ist der Projektionsoperator
 der Integrationskern $P(x,y)= \psi(x) \psi(y)^*$, und seine Anwendung auf eine beliebige andere
-Wellenfunktion $\phi(x)$ ist durch $\int P(x,y) \phi(y)\, {\rm d}^n y$ gegeben.)
+Wellenfunktion $\phi(x)$ ist durch 
+\begin{equation}
+              P\phi(x)=\int P(x,y) \phi(y)\, {\rm d}^n y = \psi(x) \int \psi^*(y) \phi(y)\, {\rm d}^n y
+\end{equation}               
+gegeben.
 
 Der Projektionsoperator repr\"asentiert direkt den Zustand, d.h., eine freie Phase im Zustandsvektor
 bzw.\ der Wellenfunktion f\"allt heraus. Es besteht also eine \glqq 1\,zu\,1\grqq-Beziehung zwischen der
@@ -225,7 +227,7 @@ normierte Vektoren aus:
 Diese Vektoren sind jedoch nur Repr\"asentanten der Strahlen. Au\ss erdem wurden in diesem Fall
 die Polarisationen $h$ und $v$ ausgezeichnet, indem $|h\rangle$ und $|v\rangle$ als die Basisvektoren
 gew\"ahlt wurden.\footnote{Einfache Buchstaben oder Symbole wie $h$, $v$ oder $\psi$ beschreiben
-allgemeinen einen quantenmechanischen Zustand; ein Ket-Vektor $|h\rangle, |v\rangle, |\psi\rangle$
+allgemein einen quantenmechanischen Zustand; ein Ket-Vektor $|h\rangle, |v\rangle, |\psi\rangle$
 bezeichnet einen normierten Vektor, der den Zustand im Hilbert-Raum repr\"asentiert.}
 
 F\"ur diese Vektoren gilt:
@@ -308,7 +310,7 @@ beschreibt, ergibt
 beschreibt den Zustand eines Photons mit der Polarisation $+$, also eine unter $+45^\circ$
 geneigte Polarisation. In einem Mach-Zehnder-Interferometer mit polarisierenden
 Strahlteilern kann man diese Gleichung experimentell realisieren: Ein Photon im
-Zustand $|+\rangle$ wir am ersten Strahlteiler, der die Achsen $|h\rangle$ und $|v\rangle$
+Zustand $|+\rangle$ wird am ersten Strahlteiler, der die Achsen $|h\rangle$ und $|v\rangle$
 haben soll, in die beiden Bestandteile $|h\rangle$ und $|v\rangle$ entsprechend der
 obigen Formel aufgespalten. Am zweiten Strahlteiler k\"onnen diese beiden Anteile
 bei exakt gleicher optischer Wellenl\"ange der beiden Wege innerhalb des 
