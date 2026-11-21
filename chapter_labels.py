@@ -1,6 +1,7 @@
 import re
 
 from db import db
+from latex_build import read_tex
 from models import ChapterLabelModel
 
 KURZTEXTE_URL = "https://physikdidaktik.uni-freiburg.de/kurztexte/"
@@ -36,19 +37,18 @@ def extract_chapter_title_and_labels(path):
     title = None
     chapter_label = None
     labels = []
-    with open(path, encoding="utf-8", errors="replace") as f:
-        for line in f:
-            if line.lstrip().startswith("%"):
-                continue
-            if title is None:
-                match = CHAPTER_RE.search(line)
-                if match:
-                    title = match.group(1)
-            for label in LABEL_RE.findall(line):
-                if title is not None and chapter_label is None:
-                    chapter_label = label
-                if label not in labels:
-                    labels.append(label)
+    for line in read_tex(path).splitlines(keepends=True):
+        if line.lstrip().startswith("%"):
+            continue
+        if title is None:
+            match = CHAPTER_RE.search(line)
+            if match:
+                title = match.group(1)
+        for label in LABEL_RE.findall(line):
+            if title is not None and chapter_label is None:
+                chapter_label = label
+            if label not in labels:
+                labels.append(label)
     return title, chapter_label, labels
 
 

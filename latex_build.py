@@ -29,6 +29,24 @@ class LatexError(Exception):
         self.errors = errors
 
 
+def read_tex(path):
+    """Read a .tex source as text. Files saved by Windows editors are often
+    cp1252/Latin-1 instead of UTF-8, so fall back to that."""
+    with open(path, "rb") as f:
+        data = f.read()
+    try:
+        return data.decode("utf-8-sig")
+    except UnicodeDecodeError:
+        return data.decode("cp1252", errors="replace")
+
+
+def normalize_to_utf8(path):
+    """Rewrite a .tex file as UTF-8 (pdflatex reads UTF-8 by default)."""
+    text = read_tex(path)
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        f.write(text)
+
+
 def copy_dir_files(src, dst):
     if not os.path.isdir(src):
         return
@@ -134,8 +152,7 @@ def precheck_chapter(source_path, item_name, topic_folder_name):
     build_dir = tempfile.mkdtemp(prefix="check_")
     try:
         copy_item_assets(build_dir, item_name, topic_folder_name)
-        with open(source_path, encoding="utf-8", errors="replace") as f_in:
-            lines = f_in.readlines()
+        lines = read_tex(source_path).splitlines(keepends=True)
         with open(os.path.join(build_dir, "check.tex"), "w", encoding="utf-8") as f_out:
             f_out.write(BEGIN_DOCUMENT + "\n")
             for line in lines:

@@ -19,6 +19,7 @@ import tempfile
 from pathlib import Path
 import os
 import time
+import io
 import logging
 import uuid
 
@@ -30,7 +31,7 @@ from ressources.tag import blp as TagBlueprint
 from ressources.user import blp as UserBlueprint
 from chapter_labels import load_label_lookup, rewrite_external_refs, sync_chapter_labels
 from latex_build import (ATTACHMENT_DIR, BEGIN_DOCUMENT, BUILD_TIMEOUT, LatexError, build_pdf,
-                         copy_dir_files, copy_item_assets, is_wrapper_line)
+                         copy_dir_files, copy_item_assets, is_wrapper_line, read_tex)
 
 PDF_JOB_MAX_WAIT = 2 * BUILD_TIMEOUT + 60
 
@@ -188,7 +189,7 @@ def create_app(db_url=None):
                     continue
                 _, src = chapter_source(item)
                 title, author = None, None
-                with open(src) as f_in:
+                with io.StringIO(read_tex(src)) as f_in:
                     for line in f_in:
                         if "\\chapter{" in line and title is None:
                             title = line.split("{")[1].split("}")[0]
@@ -202,7 +203,7 @@ def create_app(db_url=None):
 
             # Deckblatt
             copy_dir_files(os.path.join(ATTACHMENT_DIR, "Deckblatt", "Bilder"), os.path.join(tmpdirname, "Bilder"))
-            with open(os.path.join(ATTACHMENT_DIR, "Deckblatt", "deckblatt_clean.tex")) as f_in:
+            with io.StringIO(read_tex(os.path.join(ATTACHMENT_DIR, "Deckblatt", "deckblatt_clean.tex"))) as f_in:
                 for line in f_in:
                     if author_line and COVER_AUTHOR_MARKER in line:
                         texdoc.append(author_line)
@@ -221,7 +222,7 @@ def create_app(db_url=None):
             if len(item_ids) == 1:
                 date = False
                 author = None
-                with open(src) as f_in:
+                with io.StringIO(read_tex(src)) as f_in:
                     for line in f_in:
                         if "\\chapter{" in line:
                             title = line.split("{")[1].split("}")[0]
@@ -232,7 +233,7 @@ def create_app(db_url=None):
 
                 # Deckblatt
                 copy_dir_files(os.path.join(ATTACHMENT_DIR, "Deckblatt", "Bilder"), os.path.join(tmpdirname, "Bilder"))
-                with open(os.path.join(ATTACHMENT_DIR, "Deckblatt", "deckblatt_clean.tex")) as f_in:
+                with io.StringIO(read_tex(os.path.join(ATTACHMENT_DIR, "Deckblatt", "deckblatt_clean.tex"))) as f_in:
                     for line in f_in:
                         if "today" in line and date:
                             texdoc.append(date)
@@ -247,7 +248,7 @@ def create_app(db_url=None):
                 texdoc.append(r'{\let\cleardoublepage\clearpage\tableofcontents}')
 
             chapter_starts.append(("".join(texdoc).count("\n") + 1, item.name))
-            with open(src) as f_in:
+            with io.StringIO(read_tex(src)) as f_in:
                 for line in f_in:
                     if is_wrapper_line(line):
                         continue
@@ -263,7 +264,7 @@ def create_app(db_url=None):
             copy_item_assets(tmpdirname, item.name, topic_folder_name)
 
         texdoc.append("\n\\printindex\n\\end{document}\n")
-        with open(os.path.join(tmpdirname, 'final.tex'), 'w') as f_out:
+        with open(os.path.join(tmpdirname, 'final.tex'), 'w', encoding='utf-8') as f_out:
             f_out.write("".join(texdoc))
 
         pdf_path, errors = build_pdf(tmpdirname, chapter_starts)
