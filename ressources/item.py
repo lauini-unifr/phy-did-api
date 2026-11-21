@@ -12,7 +12,7 @@ from models import ItemModel, TopicModel
 from schemas import ItemSchema, ItemUpdateSchema
 from topic_folders import get_topic_folder_name, remove_item_attachment
 from chapter_labels import sync_chapter_labels
-from latex_build import ATTACHMENT_DIR, precheck_chapter
+from latex_build import ATTACHMENT_DIR, normalize_to_utf8, precheck_chapter
 
 import tempfile
 from pathlib import Path
@@ -136,6 +136,7 @@ def upload_file():
     try:
         staged_path = os.path.join(staging_dir, secure_name)
         file.save(staged_path)
+        normalize_to_utf8(staged_path)
 
         errors = precheck_chapter(staged_path, item.name, topic_folder_name)
         if errors:
